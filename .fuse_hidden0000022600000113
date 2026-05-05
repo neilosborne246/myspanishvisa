@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- ═══════════════════════════════════════════════════════════════════
+       PAGE-SPECIFIC HEAD — replace block below per page:
+       <title>Blog Is Spain Good Place Retire Pros Cons | My Spanish Visa</title>
+       <meta name="description" content="…">
+       <meta property="og:title" content="…">
+       <meta property="og:description" content="…">
+       <meta property="og:url" content="https://www.myspanishvisa.com/…">
+       <meta property="og:image" content="…">
+       <link rel="canonical" href="https://www.myspanishvisa.com/…">
+       <script type="application/ld+json">…</script>
+       ═══════════════════════════════════════════════════════════════════ -->
+  <title>My Spanish Visa — Spain Visa &amp; Residency Specialists</title>
+  <meta name="description" content="My Spanish Visa helps English-speaking foreigners move to Spain. Expert guidance on Non-Lucrative Visa, Digital Nomad Visa, Student Visa, renewals and more.">
+
+  <!-- Shared Open Graph defaults -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="My Spanish Visa">
+  <meta property="og:image" content="https://www.myspanishvisa.com/assets/images/og/og-myspanishvisa-default.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@myspanishvisa">
+
+  <style>
+/* ═══════════════════════════════════════════════════════════════
+   GLOBAL SHELL — nav + footer only.
+   Page-specific CSS lives inside each fragment's own <style> block.
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── iOS overflow safety ── */
+html, body { max-width: 100%; overflow-x: clip; margin: 0; padding: 0; }
+*, *::before, *::after { box-sizing: border-box; }
+
+/* ── Brand tokens (root-level so all fragments inherit) ── */
+:root {
+  --navy:      #0c1930;
+  --navy-mid:  #1a3a5c;
+  --red:       #be0011;
+  --red-deep:  #8c000d;
+  --yellow:    #facf39;
+  --cream:     #f8f7f4;
+  --white:     #ffffff;
+  --black:     #1a1a1a;
+  --muted:     #5a6478;
+  --border:    #dce3ed;
+  --shadow-sm: 0 2px 8px rgba(12,25,48,0.08);
+  --shadow-md: 0 6px 24px rgba(12,25,48,0.13);
+}
+
+body {
+  font-family: 'Inter', 'Segoe UI', system-ui, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.75;
+  color: var(--black);
+  background: #fff;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   SITE NAV
+   ───────────────────────────────────────────────────────────── */
+.msv-nav {
+  position: sticky;
+  top: 0;
+  z-index: 9000;
+  background: var(--navy);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 2px 12px rgba(12,25,48,0.22);
+}
+.msv-nav__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  gap: 1.5rem;
+}
+
+/* Logo */
+.msv-nav__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+.msv-nav__logo-flag {
+  font-size: 1.3rem;
+  line-height: 1;
+}
+.msv-nav__logo-text {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+.msv-nav__logo-text span {
+  color: var(--yellow);
+}
+
+/* Links */
+.msv-nav__links {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.msv-nav__links > li {
+  position: relative;
+}
+.msv-nav__links > li > a,
+.msv-nav__links > li > button {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.5rem 0.9rem;
+  font-size: 0.87rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.85);
+  text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: color 0.15s, background 0.15s;
+  white-space: nowrap;
+  height: 80px;
+}
+.msv-nav__links > li > a:hover,
+.msv-nav__links > li > button:hover,
+.msv-nav__links > li:focus-within > a,
+.msv-nav__links > li:focus-within > button {
+  color: #fff;
+  background: rgba(255,255,255,0.08);
+}
+.msv-nav__chevron {
+  font-size: 0.65rem;
+  opacity: 0.7;
+  transition: transform 0.2s;
+}
+.msv-nav__links > li:focus-within .msv-nav__chevron,
+.msv-nav__links > li:hover .msv-nav__chevron {
+  transform: rotate(180deg);
+}
+
+/* Dropdown */
+.msv-nav__dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 230px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  box-shadow: var(--shadow-md);
+  padding: 0.5rem 0;
+  z-index: 200;
+}
+.msv-nav__links > li:hover .msv-nav__dropdown,
+.msv-nav__links > li:focus-within .msv-nav__dropdown {
+  display: block;
+}
+.msv-nav__dropdown a {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.6rem 1.1rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--navy);
+  text-decoration: none;
+  transition: background 0.12s;
+}
+.msv-nav__dropdown a:hover {
+  background: var(--cream);
+  color: var(--red);
+}
+.msv-nav__dropdown-icon {
+  width: 24px;
+  height: 24px;
+  background: var(--cream);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+.msv-nav__dropdown-divider {
+  height: 1px;
+  background: var(--border);
+  margin: 0.4rem 0;
+}
+
+/* CTA button */
+.msv-nav__cta {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.55rem 1.2rem;
+  background: var(--red);
+  color: #fff !important;
+  font-size: 0.85rem;
+  font-weight: 700;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.15s, box-shadow 0.15s;
+  white-space: nowrap;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(190,0,17,0.3);
+}
+.msv-nav__cta:hover {
+  background: var(--red-deep);
+  box-shadow: 0 4px 14px rgba(190,0,17,0.4);
+  text-decoration: none;
+}
+
+/* Hamburger */
+.msv-nav__burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.4rem;
+  border-radius: 5px;
+}
+.msv-nav__burger span {
+  width: 22px;
+  height: 2px;
+  background: #fff;
+  border-radius: 2px;
+  transition: transform 0.2s, opacity 0.2s;
+  display: block;
+}
+
+/* Mobile nav */
+.msv-nav__mobile {
+  display: none;
+  flex-direction: column;
+  background: var(--navy-mid);
+  padding: 1rem 1.5rem 1.5rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+.msv-nav__mobile.open { display: flex; }
+.msv-nav__mobile a {
+  padding: 0.65rem 0;
+  color: rgba(255,255,255,0.9);
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+.msv-nav__mobile a:hover { color: var(--yellow); }
+.msv-nav__mobile .msv-nav__mobile-sub {
+  padding-left: 1rem;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: rgba(255,255,255,0.7);
+}
+.msv-nav__mobile-cta {
+  margin-top: 1rem;
+  background: var(--red);
+  color: #fff !important;
+  border-radius: 6px;
+  text-align: center;
+  padding: 0.75rem 1rem !important;
+  border-bottom: none !important;
+}
+
+@media (max-width: 900px) {
+  .msv-nav__links { display: none; }
+  .msv-nav__cta { display: none; }
+  .msv-nav__burger { display: flex; }
+}
+@media (max-width: 480px) {
+  .msv-nav__inner { padding: 0 1rem; }
+}
+
+/* ─────────────────────────────────────────────────────────────
+   SITE FOOTER
+   ───────────────────────────────────────────────────────────── */
+.msv-footer {
+  background: var(--navy);
+  color: rgba(255,255,255,0.75);
+  overflow-x: clip;
+}
+.msv-footer__top {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem 3rem;
+  display: grid;
+  grid-template-columns: 280px 1fr 1fr 1fr;
+  gap: 3rem;
+}
+@media (max-width: 900px) {
+  .msv-footer__top { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
+}
+@media (max-width: 560px) {
+  .msv-footer__top { grid-template-columns: 1fr; gap: 2rem; padding: 3rem 1.2rem 2rem; }
+}
+
+.msv-footer__brand {}
+.msv-footer__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  margin-bottom: 1rem;
+}
+.msv-footer__logo-flag { font-size: 1.3rem; }
+.msv-footer__logo-text {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -0.01em;
+}
+.msv-footer__logo-text span { color: var(--yellow); }
+.msv-footer__tagline {
+  font-size: 0.83rem;
+  color: rgba(255,255,255,0.55);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+.msv-footer__trust {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+.msv-footer__trust-item {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.65);
+}
+.msv-footer__trust-item::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  background: var(--yellow);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.msv-footer__col-title {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.4);
+  margin-bottom: 1rem;
+}
+.msv-footer__links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.msv-footer__links a {
+  font-size: 0.87rem;
+  color: rgba(255,255,255,0.68);
+  text-decoration: none;
+  transition: color 0.15s;
+  display: inline-block;
+}
+.msv-footer__links a:hover {
+  color: var(--yellow);
+  text-decoration: none;
+}
+
+.msv-footer__bottom {
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+.msv-footer__bottom-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 1rem;
+  justify-content: space-between;
+}
+.msv-footer__disclaimer {
+  font-size: 0.73rem;
+  color: rgba(255,255,255,0.35);
+  line-height: 1.65;
+  max-width: 720px;
+}
+.msv-footer__copyright {
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.35);
+  white-space: nowrap;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   MAIN CONTENT AREA
+   ───────────────────────────────────────────────────────────── */
+main {
+  /* Fragments are self-contained; this wrapper just provides flow context */
+  position: relative;
+}
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════
+     SITE NAVIGATION
+     ═══════════════════════════════════════════════════ -->
+<header class="msv-nav" role="banner">
+  <div class="msv-nav__inner">
+
+    <!-- Logo -->
+    <a href="/" class="msv-nav__logo" aria-label="My Spanish Visa — Home"><img src="/assets/images/msv-logo-white.png" alt="My Spanish Visa" height="64" style="display:block;"></a>
+
+    <!-- Desktop links -->
+    <nav aria-label="Main navigation">
+      <ul class="msv-nav__links">
+
+        <li>
+          <button class="msv-nav__dropdown-trigger" aria-haspopup="true" aria-expanded="false">
+            Visas <span class="msv-nav__chevron">▾</span>
+          </button>
+          <div class="msv-nav__dropdown" role="menu">
+            <a href="/nlv-pillar-page.html" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🏖️</span>Non-Lucrative Visa
+            </a>
+            <a href="/dnv-pillar-page.html" role="menuitem">
+              <span class="msv-nav__dropdown-icon">💻</span>Digital Nomad Visa
+            </a>
+            <a href="/student-visa-pillar-page.html" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🎓</span>Student Visa
+            </a>
+            <div class="msv-nav__dropdown-divider"></div>
+            <a href="/spanish-residency-renewal.html" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🔄</span>Visa Renewals
+            </a>
+            <a href="/best-visa-move-to-spain.html" role="menuitem">
+              <span class="msv-nav__dropdown-icon">⚖️</span>Compare All Visas
+            </a>
+          </div>
+        </li>
+
+        <li>
+          <button aria-haspopup="true" aria-expanded="false">
+            Resources <span class="msv-nav__chevron">▾</span>
+          </button>
+          <div class="msv-nav__dropdown" role="menu">
+            <a href="/blog-index.html" role="menuitem">
+              <span class="msv-nav__dropdown-icon">📝</span>Blog &amp; Guides
+            </a>
+            <a href="/spain-visa-options.html" role="menuitem">
+              <span class="msv-nav__dropdown-icon">✅</span>Document Checklists
+            </a>
+            <a href="/move-to-spain.html" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🏠</span>Move to Spain Guide
+            </a>
+            <a href="/visa-eligibility-quiz.html" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🧭</span>Eligibility Quiz
+            </a>
+          </div>
+        </li>
+
+        <li><a href="/about-us.html">About Us</a></li>
+        <li><a href="/testimonials.html">Reviews</a></li>
+        <li><a href="/contact-us.html">Contact</a></li>
+
+      </ul>
+    </nav>
+
+    <!-- Desktop CTA -->
+    <a href="https://dashboard.platinumlegalspain.com/nlv" class="msv-nav__cta">
+      Start My Application →
+    </a>
+
+    <!-- Hamburger (mobile) -->
+    <button class="msv-nav__burger" aria-label="Open menu" aria-expanded="false" onclick="
+      var m=document.querySelector('.msv-nav__mobile');
+      var open=m.classList.toggle('open');
+      this.setAttribute('aria-expanded', open);
+    ">
+      <span></span><span></span><span></span>
+    </button>
+
+  </div><!-- /.msv-nav__inner -->
+
+  <!-- Mobile menu -->
+  <nav class="msv-nav__mobile" aria-label="Mobile navigation">
+    <a href="/nlv-pillar-page.html" class="msv-nav__mobile-sub">Non-Lucrative Visa</a>
+    <a href="/dnv-pillar-page.html" class="msv-nav__mobile-sub">Digital Nomad Visa</a>
+    <a href="/student-visa-pillar-page.html" class="msv-nav__mobile-sub">Student Visa</a>
+    <a href="/spanish-residency-renewal.html">Visa Renewals</a>
+    <a href="/best-visa-move-to-spain.html">Compare All Visas</a>
+    <a href="/blog-index.html">Blog &amp; Guides</a>
+    <a href="/about-us.html">About Us</a>
+    <a href="/testimonials.html">Reviews</a>
+    <a href="/contact-us.html">Contact</a>
+    <a href="https://dashboard.platinumlegalspain.com/nlv" class="msv-nav__mobile-cta">Start My Application →</a>
+  </nav>
+
+</header>
+
+
+<!-- ═══════════════════════════════════════════════════
+     PAGE CONTENT (fragment injected here)
+     ═══════════════════════════════════════════════════ -->
+<main>
+<!-- FRAGMENT_START -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://www.myspanishvisa.com/blog/is-spain-good-place-retire-pros-cons/#blogpost",
+      "headline": "Is Spain a Good Place to Retire? Pros, Cons, and What to Consider",
+      "description": "Is Spain right for retirement? Honest assessment of pros (cost, climate, culture), cons (language, isolation), and key considerations.",
+      "url": "https://www.myspanishvisa.com/blog/is-spain-good-place-retire-pros-cons/",
+      "datePublished": "2026-04-13",
+      "dateModified": "2026-04-13",
+      "inLanguage": "en",
+      "author": {"@type": "Organization", "name": "My Spanish Visa"},
+      "publisher": {
+        "@type": "Organization",
+        "name": "My Spanish Visa",
+        "logo": {"@type": "ImageObject", "url": "https://www.myspanishvisa.com/assets/images/msv-logo.png"}
+      },
+      "isPartOf": {"@id": "https://www.myspanishvisa.com/#website"}
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.myspanishvisa.com/blog/is-spain-good-place-retire-pros-cons/#breadcrumb",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.myspanishvisa.com"},
+        {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.myspanishvisa.com/blog/"},
+        {"@type": "ListItem", "position": 3, "name": "Is Spain a Good Place to Retire? Pros, Cons, and What to Consider", "item": "https://www.myspanishvisa.com/blog/is-spain-good-place-retire-pros-cons/"}
+      ]
+    }
+  ]
+}
+</script>
+<!-- Open Graph / Social -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.myspanishvisa.com/blog/is-spain-good-place-retire-pros-cons/">
+<meta property="og:title" content="My Spanish Visa">
+<meta property="og:description" content="Expert Spain visa guidance for English-speaking expats.">
+<meta property="og:image" content="https://www.myspanishvisa.com/assets/images/og/og-retire-spain.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="My Spanish Visa">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@myspanishvisa">
+<meta name="twitter:title" content="My Spanish Visa">
+<meta name="twitter:description" content="Expert Spain visa guidance for English-speaking expats.">
+<meta name="twitter:image" content="https://www.myspanishvisa.com/assets/images/og/og-retire-spain.jpg">
+<style>
+
+html, body { max-width: 100%; overflow-x: clip; }
+.msv, .msv-nav, .msv-topbar, .msv-footer, .msv-footer-cta,
+.pls-header, .pls-body, .pls-nlv, .pls-dnv, .pls-student {
+  max-width: 100%; overflow-x: clip; position: relative;
+}
+.msv img, .msv video, .msv iframe,
+.msv-footer img, .msv-footer video, .msv-footer iframe { max-width: 100%; height: auto; }
+
+.msv *, .msv *::before, .msv *::after { box-sizing: border-box; margin: 0; padding: 0; }
+.msv {
+  --navy: #0c1930; --navy-mid: #1a3a5c; --red: #be0011; --red-deep: #8c000d;
+  --yellow: #facf39; --cream: #f8f7f4; --white: #ffffff; --black: #1a1a1a;
+  --muted: #5a6478; --border: #dce3ed;
+  --shadow-sm: 0 2px 8px rgba(12,25,48,0.08); --shadow-md: 0 6px 24px rgba(12,25,48,0.13);
+  font-family: 'Inter', 'Segoe UI', system-ui, Arial, sans-serif;
+  font-size: 16px; line-height: 1.75; color: var(--black); width: 100%;
+}
+.msv__container--narrow { max-width: 780px; margin: 0 auto; padding: 0 2rem; }
+@media (max-width: 640px) { .msv__container--narrow { padding: 0 1.2rem; } }
+.msv h1 { font-size: clamp(1.9rem, 4vw, 2.8rem); font-weight: 800; line-height: 1.15; color: var(--white); margin-bottom: 1.2rem; }
+.msv h2 { font-size: clamp(1.2rem, 2.5vw, 1.6rem); font-weight: 700; color: var(--navy); margin-bottom: 0.5rem; position: relative; display: inline-block; padding-bottom: 0.5rem; }
+.msv h2::after { content: ''; position: absolute; bottom: 0; left: 0; width: 44px; height: 3px; background: linear-gradient(90deg, var(--red), #8c000d); }
+.msv h3 { font-size: 1.05rem; font-weight: 700; color: var(--navy); margin-top: 1.5rem; margin-bottom: 0.5rem; }
+.msv p { color: var(--black); margin-bottom: 1rem; font-size: 0.97rem; }
+.msv a { color: var(--red); text-decoration: none; }
+.msv a:hover { text-decoration: underline; }
+.msv ul { list-style: none; padding: 0; margin: 0 0 1rem; }
+.msv ul li { padding: 0.35rem 0 0.35rem 1.4rem; position: relative; font-size: 0.97rem; }
+.msv ul li::before { content: ''; position: absolute; left: 0; top: 0.75rem; width: 7px; height: 7px; background: linear-gradient(135deg, var(--red), #8c000d); border-radius: 50%; }
+.msv__section { padding: 4rem 0; background: var(--white); }
+.msv__section--cream { padding: 4rem 0; background: linear-gradient(180deg, #f8f7f4 0%, #f2f4f8 100%); }
+.msv__section--dark { padding: 4rem 0; background: linear-gradient(135deg, var(--navy) 0%, #0d2240 60%, #0a1d38 100%); }
+.msv .msv__section--dark p, .msv .msv__section--dark li { color: rgba(255,255,255,0.8); }
+.msv .msv__section--dark h2 { color: var(--white); }
+.msv__hero { background: linear-gradient(135deg, #0c1930 0%, #0f2540 40%, #162d50 70%, #1a3560 100%); padding: 5rem 0 4.5rem; position: relative; }
+.msv__hero p { color: rgba(255,255,255,0.78) !important; font-size: clamp(1rem, 2.2vw, 1.15rem); max-width: 640px; margin-bottom: 2rem; }
+.msv__eyebrow { display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(190,0,17,0.15); border: 1px solid rgba(190,0,17,0.4); color: #ff6b7a; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.35rem 0.9rem; border-radius: 100px; margin-bottom: 1.5rem; }
+.msv__shimmer { background: linear-gradient(90deg, #facf39 0%, #e8b820 25%, #be0011 50%, #e8b820 75%, #facf39 100%); background-size: 400px 100%; -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.msv__alert { border-radius: 10px; padding: 1.2rem 1.4rem; display: flex; gap: 1rem; align-items: flex-start; margin-bottom: 2rem; }
+.msv__alert--yellow { background: #fffaed; border: 1px solid #fcd34d; }
+.msv__alert--red { background: #fef2f2; border: 1px solid #fca5a5; }
+.msv__alert p { font-size: 0.9rem; color: var(--black); margin: 0; }
+.msv__cta-box { background: #f0f4f8; border: 2px solid var(--red); border-radius: 12px; padding: 1.8rem 2rem; margin: 2rem 0; }
+.msv__cta-box h3 { margin-top: 0; color: var(--navy); }
+.msv__cta-band { background: linear-gradient(135deg, var(--navy) 0%, #0d2240 60%, #0a1d38 100%); padding: 4.5rem 0; text-align: center; }
+.msv__cta-band h2 { color: var(--white) !important; display: block; }
+.msv__cta-band p { color: rgba(255,255,255,0.75) !important; max-width: 560px; margin: 1rem auto 2rem; }
+.msv__btn-group { display: flex; flex-wrap: wrap; gap: 0.85rem; justify-content: center; }
+.msv__btn { display: inline-block; padding: 0.85rem 2rem; font-size: 0.92rem; font-weight: 700; border-radius: 6px; text-decoration: none !important; cursor: pointer; }
+.msv .msv__btn--primary { background: linear-gradient(135deg, var(--red) 0%, #8c000d 100%); color: #ffffff !important; }
+.msv .msv__btn--outline-white { background: transparent; color: #ffffff !important; border: 1.5px solid rgba(255,255,255,0.5); }
+.msv__disclaimer { background: var(--cream); border-top: 1px solid var(--border); padding: 2rem 0; }
+.msv__disclaimer p { font-size: 0.78rem; color: var(--muted); margin: 0; }
+.msv__faq-item { border-bottom: 1px solid var(--border); padding: 1.4rem 0; }
+.msv__faq-item:last-child { border-bottom: none; }
+.msv__faq-q { font-weight: 700; color: var(--navy); font-size: 0.95rem; margin-bottom: 0.65rem; }
+.msv__faq-a { color: var(--black); font-size: 0.92rem; line-height: 1.7; }
+.msv__trust-bar { background: var(--white); border-bottom: 1px solid var(--border); padding: 0.9rem 0; }
+.msv__trust-bar-inner { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem; }
+.msv__trust-item { display: flex; align-items: center; gap: 0.45rem; font-size: 0.8rem; font-weight: 600; color: var(--navy); }
+.msv__trust-item::before { content: '✓'; color: var(--red); font-weight: 800; }
+.msv__related { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+@media (max-width: 768px) { .msv__related { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 480px) { .msv__related { grid-template-columns: 1fr; } }
+.msv__related-card { background: var(--white); border: 1px solid var(--border); border-radius: 10px; padding: 1.2rem; text-decoration: none !important; display: block; transition: box-shadow 0.2s; }
+.msv__related-card:hover { box-shadow: var(--shadow-md); }
+.msv__related-title { font-size: 0.88rem; font-weight: 700; color: var(--navy); margin-bottom: 0.25rem; }
+.msv__related-url { font-size: 0.78rem; color: var(--muted); }
+.msv__breadcrumb { padding: 0.75rem 0; font-size: 0.8rem; color: var(--muted); }
+.msv__breadcrumb a { color: var(--red); text-decoration: none; }
+.msv__content { margin-bottom: 2rem; }
+.msv__content h2 { margin-top: 2.5rem; margin-bottom: 1rem; }
+.msv__content h3 { margin-top: 1.8rem; }
+
+</style>
+<div class="msv">
+
+  <section class="msv__hero">
+    <div class="msv__container--narrow">
+      <div class="msv__eyebrow">EXPAT GUIDE</div>
+      <h1>Is Spain a Good Place to Retire? Pros, Cons, and What to Consider</h1>
+      <p>Is Spain right for retirement? Honest assessment of pros (cost, climate, culture), cons (language, isolation), and key considerations.</p>
+      <div class="msv__btn-group" style="justify-content:flex-start;">
+        <a href="https://dashboard.platinumlegalspain.com/nlv" class="msv__btn msv__btn--primary">Check My Eligibility — Free</a>
+        <a href="https://dashboard.platinumlegalspain.com/nlv" class="msv__btn msv__btn--outline-white">Book a Consultation</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="msv__trust-bar">
+    <div class="msv__trust-bar-inner">
+      <div class="msv__trust-item">Updated April 2026</div><div class="msv__trust-item">Expert reviewed</div><div class="msv__trust-item">English-speaking specialists</div><div class="msv__trust-item">Specialist guidance</div>
+    </div>
+  </div>
+
+  <section class="msv__section">
+    <div class="msv__container--narrow">
+      <div class="msv__breadcrumb">
+        <a href="/">Home</a> / <a href="/blog-index.html">Blog</a> / Is Spain a Good Place to Retire? Pros, Cons, and What to Consider
+      </div>
+      <div class="msv__content">
+        <p>Spain is a top retirement destination globally. But is it right for you? This honest assessment covers the real pros, cons, and factors to weigh before making a 20-year commitment.</p>
+<h2>The Pros of Retiring in Spain</h2>
+<p>1. Exceptional Value for Money</p>
+<p>Your money stretches far. €2,000-2,500/month covers comfortable living for a couple in most Spanish cities. Rent is 50% cheaper than the US/UK. Healthcare costs are minimal. Food is affordable and fresh. For retirees on fixed income, this is game-changing.</p>
+<p>2. World-Class Healthcare</p>
+<p>Spain ranks top 10 globally for healthcare. Once registered with the public system, care is essentially free. Doctors are well-trained, hospitals are modern, and waiting times are reasonable. This is critical for aging retirees.</p>
+<p>3. Excellent Climate (Mostly)</p>
+<p>Mediterranean coast: sunny year-round, mild winters, warm summers. No extreme cold like Northern Europe or harsh US summers. If you choose the right region, you enjoy pleasant weather every month. Great for outdoor activities and gardening.</p>
+<p>4. Rich Culture &amp; Lifestyle</p>
+<p>Vibrant culture, excellent food, strong social traditions, and a slower pace of life (especially outside major cities). Cafes, plazas, weekly markets, and festivals. Spain encourages a relaxed, community-oriented lifestyle—ideal for retirees.</p>
+<p>5. Active Expat Community</p>
+<p>Established retirement communities in coastal areas (Costa del Sol, Algarve-adjacent), major cities, and smaller expat hotspots. Language classes, social clubs, and expat networks make settling easier. You&#x27;re not alone.</p>
+<p>6. Easy Visa Path</p>
+<p>The Non-Lucrative Visa is straightforward for retirees. No business plan, no employment, just proof of passive income. Processing is faster and more reliable than other visa types. Once approved, renewals are automatic.</p>
+<p>7. Safe &amp; Stable</p>
+<p>Spain is safe, politically stable, and part of the EU. Excellent infrastructure, reliable utilities, and efficient services. Low crime in most areas. A comfortable, predictable environment for retirement.</p>
+<h2>The Cons of Retiring in Spain</h2>
+<p>1. Language Barrier</p>
+<p>You&#x27;ll need Spanish to fully integrate. While major cities have English speakers, daily life—doctors, bureaucracy, local shops—requires language skills. Learning Spanish takes time (6-12 months for conversational). If you&#x27;re not committed to learning, you&#x27;ll struggle.</p>
+<p>2. Distance from Family</p>
+<p>If your family is elsewhere, you&#x27;re thousands of miles away. Visiting home is expensive (€300-800/flight). You miss grandchildren growing up, family events, and daily contact. This is the hardest part for many retirees.</p>
+<p>3. Bureaucracy</p>
+<p>Spain has notoriously slow, opaque bureaucracy. Opening a bank account, registering residency, handling taxes—all take longer than expected, require multiple visits, and involve frustrating red tape. You need patience and persistence.</p>
+<p>4. Initial Isolation</p>
+<p>Your first 6-12 months will be lonely. Building friendships takes time. Language barriers slow relationships. Some retirees struggle with depression or loneliness early on. You need to be proactive socially and emotionally prepared.</p>
+<p>5. Healthcare System Learning Curve</p>
+<p>While excellent, Spain&#x27;s healthcare system works differently than you&#x27;re used to. Finding a doctor, understanding coverage, navigating prescriptions—all require learning. Language barriers complicate this. Plan for frustration initially.</p>
+<p>6. Lifestyle Differences</p>
+<p>Spain&#x27;s rhythm is different. Dinner at 9-10 PM, shops close mid-afternoon, public services follow Spanish schedules, not yours. Some retirees love this; others find it jarring. You must adapt, not expect Spain to adapt to you.</p>
+<p>7. Healthcare Quality Varies by Region</p>
+<p>Major cities have excellent healthcare. Rural areas less so. If you retire to a remote village, you may need to travel for specialists. Research healthcare quality in your chosen area.</p>
+<h2>Critical Factors to Consider</h2>
+<p>1. Your Health &amp; Age</p>
+<p>If you&#x27;re in good health, retiring at 65-70 is ideal. You can travel, explore, build community. If you have serious health issues, Spain&#x27;s healthcare is excellent but learning systems takes energy. Very advanced age (80+) may make early challenges harder.</p>
+<p>2. Your Financial Stability</p>
+<p>You must have predictable, stable income (pension, investments, rental income). If income fluctuates or is uncertain, Spain&#x27;s visa and cost of living won&#x27;t absorb shocks. Stable income is foundational.</p>
+<p>3. Language Ability &amp; Willingness</p>
+<p>Be honest. Can you commit 1-2 hours daily to Spanish for 6-12 months? Can you tolerate not understanding everything initially? If not, consider UK/Ireland (English-speaking) instead.</p>
+<p>4. Social Needs</p>
+<p>Do you need active social life? Spain offers it, but building takes effort. Are you independent, happy alone? Or do you need immediate community? Coastal expat communities offer instant social life; inland villages require you to build it.</p>
+<p>5. Family &amp; Distance</p>
+<p>How important is proximity to family? Can you afford 2-3 trips home yearly? Are grandchildren a regular presence? If family is critical, consider closer options.</p>
+<p>6. Climate Preferences</p>
+<p>Do you need consistent warm weather? Spain delivers. Do you prefer seasons? Interior/Northern Spain offers them. Do you hate rain? Coastal areas are dry; Basque Country is wet. Choose location based on climate needs.</p>
+<h2>The Bottom Line</h2>
+<p>Spain is excellent for retirement IF: you have stable income, you&#x27;re willing to learn Spanish, you don&#x27;t need daily family contact, you enjoy community-building, and you&#x27;re flexible about lifestyle differences. Spain is risky IF: your income is unstable, you refuse to learn Spanish, you need family nearby, you struggle socially, or you&#x27;re very set in your ways.</p>
+<h2>How to Test Before Committing</h2>
+<p>Spend 2-3 months renting in your target area. Live like a local—cook, use public services, make friends. See if the lifestyle fits. This is the best test. Many retirees do this before applying for their visa. Cost: €2,000-3,000 (rent + travel). Worth it for a 20-year decision.</p>
+<p>Ready to Explore Spanish Retirement?</p>
+<p>Let&#x27;s discuss your financial situation, health, family circumstances, and lifestyle goals. A consultation clarifies whether Spain is right for you.</p>
+<p>[Book Your Retirement Assessment]</p>
+<h2>FAQ: Retiring in Spain</h2>
+<p>Do I need to be 65 to retire in Spain?</p>
+<p>No. The Non-Lucrative Visa has no age requirement. You need income (pension, investments, rentals) but not age. People retire to Spain at 55, 60, 70, and older.</p>
+<p>Can I go back home if it doesn&#x27;t work out?</p>
+<p>Yes. Cancel your visa, sell your belongings, and move home. No penalties. Many retirees do this in year 1-2 if it&#x27;s not working.</p>
+<p>Is it too late to learn Spanish at 70?</p>
+<p>Never too late. Language classes for retirees are common. You&#x27;ll learn slower than younger people but can reach conversational level in 12-18 months.</p>
+<p>What if I get very ill or need long-term care?</p>
+<p>Spain&#x27;s public healthcare covers long-term care and nursing homes. They&#x27;re affordable and quality-controlled. This is one of Spain&#x27;s greatest assets for aging retirees.</p>
+      </div>
+    </div>
+  </section>
+
+
+
+  <section class="msv__cta-band">
+    <div class="msv__container--narrow">
+      <h2>Ready to Move to Spain?</h2>
+      <p>Our Spain visa specialists manage every step for you — from eligibility to approval. Everything is handled in English through your secure online portal.</p>
+      <div class="msv__btn-group">
+        <a href="https://dashboard.platinumlegalspain.com/nlv" class="msv__btn msv__btn--primary">Start Free Eligibility Check</a>
+        <a href="https://dashboard.platinumlegalspain.com/nlv" class="msv__btn msv__btn--outline-white">Book a Free Consultation</a>
+      </div>
+    </div>
+  </section>
+  </section>
+
+</div>
+<!-- FRAGMENT_END -->
+</main>
+
+
+<!-- ═══════════════════════════════════════════════════
+     SITE FOOTER
+     ═══════════════════════════════════════════════════ -->
+<footer class="msv-footer" role="contentinfo">
+
+  <div class="msv-footer__top">
+
+    <!-- Brand column -->
+    <div class="msv-footer__brand">
+      <a href="/" class="msv-footer__logo" aria-label="My Spanish Visa"><img src="/assets/images/msv-logo-white.png" alt="My Spanish Visa" height="40" style="display:block;"></a>
+      <p class="msv-footer__tagline">
+        Specialist Spain visa &amp; residency guidance for English-speaking foreigners.
+        A service of Platinum Legal Spain.
+      </p>
+      <div class="msv-footer__trust">
+        <span class="msv-footer__trust-item">All English. No barriers.</span>
+        <span class="msv-footer__trust-item">Solicitors &amp; immigration specialists</span>
+        <span class="msv-footer__trust-item">100% online process</span>
+      </div>
+    </div>
+
+    <!-- Visas column -->
+    <div>
+      <div class="msv-footer__col-title">Visas</div>
+      <ul class="msv-footer__links">
+        <li><a href="/nlv-pillar-page.html">Non-Lucrative Visa</a></li>
+        <li><a href="/dnv-pillar-page.html">Digital Nomad Visa</a></li>
+        <li><a href="/student-visa-pillar-page.html">Student Visa</a></li>
+        <li><a href="/spanish-residency-renewal.html">Visa Renewals</a></li>
+        <li><a href="/best-visa-move-to-spain.html">Compare All Visas</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/nlv">Apply: NLV</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/dnv">Apply: DNV</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/student-visa">Apply: Student Visa</a></li>
+      </ul>
+    </div>
+
+    <!-- Resources column -->
+    <div>
+      <div class="msv-footer__col-title">Resources</div>
+      <ul class="msv-footer__links">
+        <li><a href="/blog-index.html">Blog &amp; Guides</a></li>
+        <li><a href="/move-to-spain.html">Move to Spain Guide</a></li>
+        <li><a href="/visa-eligibility-quiz.html">Eligibility Quiz</a></li>
+        <li><a href="/spain-visa-options.html">Document Checklists</a></li>
+        <li><a href="/spain-visa-options.html">Visa Requirements</a></li>
+        <li><a href="/nie-number-spain.html">NIE Number Guide</a></li>
+        <li><a href="/tie-card-spain.html">TIE Card Guide</a></li>
+      </ul>
+    </div>
+
+    <!-- Company column -->
+    <div>
+      <div class="msv-footer__col-title">Company</div>
+      <ul class="msv-footer__links">
+        <li><a href="/about-us.html">About Us</a></li>
+        <li><a href="/testimonials.html">Client Reviews</a></li>
+        <li><a href="/why-choose-us.html">Why Choose Us</a></li>
+        <li><a href="/contact-us.html">Contact</a></li>
+        <li><a href="https://www.platinumlegalspain.com" rel="noopener">Platinum Legal Spain</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/nlv">Client Portal</a></li>
+      </ul>
+    </div>
+
+  </div><!-- /.msv-footer__top -->
+
+  <div class="msv-footer__bottom">
+    <div class="msv-footer__bottom-inner">
+      <p class="msv-footer__disclaimer">
+        <strong style="color:rgba(255,255,255,0.5);">Disclaimer:</strong>
+        My Spanish Visa provides visa processing support and is not a law firm. Content on this site is for informational purposes only and does not constitute legal advice. Immigration rules change frequently — always verify requirements with official sources or a qualified specialist. My Spanish Visa is a trading name of Platinum Legal Spain.
+      </p>
+      <span class="msv-footer__copyright">© 2026 My Spanish Visa. All rights reserved.</span>
+    </div>
+  </div>
+
+</footer>
+
+</body>
+</html>

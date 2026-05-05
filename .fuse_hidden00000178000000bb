@@ -1,0 +1,1110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spain Visa Case Studies — Real Client Success Stories | My Spanish Visa</title>
+  <meta name="description" content="Detailed case studies from people we helped move to Spain. From NLV and Digital Nomad Visa to family applications and TIE card renewals — real stories, real outcomes.">
+  <link rel="canonical" href="https://www.myspanishvisa.com/case-studies/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.myspanishvisa.com/case-studies/">
+  <meta property="og:title" content="Spain Visa Case Studies — Real Client Success Stories | My Spanish Visa">
+  <meta property="og:description" content="Detailed case studies from people we helped move to Spain. From NLV and Digital Nomad Visa to family applications and TIE card renewals — real stories, real outcomes.">
+  <meta property="og:image" content="https://www.myspanishvisa.com/assets/images/og/og-myspanishvisa-default.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:site_name" content="My Spanish Visa">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@myspanishvisa">
+  <meta name="twitter:title" content="Spain Visa Case Studies — Real Client Success Stories | My Spanish Visa">
+  <meta name="twitter:description" content="Detailed case studies from people we helped move to Spain. From NLV and Digital Nomad Visa to family applications and TIE card renewals — real stories, real outcomes.">
+  <meta name="twitter:image" content="https://www.myspanishvisa.com/assets/images/og/og-myspanishvisa-default.jpg">
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://www.myspanishvisa.com/case-studies/#webpage",
+        "url": "https://www.myspanishvisa.com/case-studies/",
+        "name": "Spain Visa Case Studies — Real Client Success Stories | My Spanish Visa",
+        "description": "Detailed case studies from people we helped move to Spain. From NLV and Digital Nomad Visa to family applications and TIE card renewals — real stories, real outcomes.",
+        "inLanguage": "en",
+        "isPartOf": { "@id": "https://www.myspanishvisa.com/#website" },
+        "breadcrumb": { "@id": "https://www.myspanishvisa.com/case-studies/#breadcrumb" }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://www.myspanishvisa.com/case-studies/#breadcrumb",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.myspanishvisa.com" },
+          { "@type": "ListItem", "position": 2, "name": "Case Studies", "item": "https://www.myspanishvisa.com/case-studies/" }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    /* ── Reset & Tokens ──────────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy: #0c1930;
+      --navy-mid: #1a3a5c;
+      --red: #be0011;
+      --red-deep: #8c000d;
+      --yellow: #facf39;
+      --cream: #f8f7f4;
+      --white: #ffffff;
+      --muted: #5a6478;
+      --border: #dce3ed;
+      --font: 'Inter', 'Segoe UI', system-ui, Arial, sans-serif;
+    }
+    html, body { max-width: 100%; overflow-x: clip; font-family: var(--font); color: var(--navy); background: var(--white); }
+
+    /* ── Utility ─────────────────────────────────────────────────────── */
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+    .container--narrow { max-width: 860px; margin: 0 auto; padding: 0 2rem; }
+    .section-label { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--red); margin-bottom: 0.75rem; }
+
+    /* ── Breadcrumb ──────────────────────────────────────────────────── */
+    .breadcrumb { background: var(--cream); border-bottom: 1px solid var(--border); padding: 0.75rem 0; font-size: 0.82rem; color: var(--muted); }
+    .breadcrumb a { color: var(--muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--red); }
+    .breadcrumb span { margin: 0 0.4rem; }
+
+    /* ── Hero ────────────────────────────────────────────────────────── */
+    .hero {
+      background: linear-gradient(135deg, var(--navy) 0%, #0d2240 60%, #0a1d38 100%);
+      padding: 5rem 0 4rem; text-align: center; border-bottom: 4px solid var(--yellow);
+    }
+    .hero__label { display: inline-block; font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--yellow); margin-bottom: 1.25rem; }
+    .hero h1 { font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 800; color: var(--white); line-height: 1.2; margin-bottom: 1.25rem; }
+    .hero__sub { font-size: 1.1rem; color: rgba(255,255,255,0.72); margin-bottom: 2.5rem; line-height: 1.7; max-width: 620px; margin-left: auto; margin-right: auto; }
+    .hero__stats { display: flex; gap: 2.5rem; justify-content: center; flex-wrap: wrap; }
+    .hero__stat { text-align: center; }
+    .hero__stat-num { font-size: 2rem; font-weight: 800; color: var(--yellow); line-height: 1; margin-bottom: 0.3rem; }
+    .hero__stat-label { font-size: 0.78rem; color: rgba(255,255,255,0.6); font-weight: 500; }
+
+    /* ── Case Study Nav ──────────────────────────────────────────────── */
+    .cs-nav { background: var(--cream); border-bottom: 1px solid var(--border); padding: 1.25rem 0; position: sticky; top: 0; z-index: 100; }
+    .cs-nav__inner { display: flex; gap: 0.5rem; overflow-x: auto; padding-bottom: 0.25rem; }
+    .cs-nav__link { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.45rem 1rem; border-radius: 50px; font-size: 0.8rem; font-weight: 600; color: var(--muted); text-decoration: none; white-space: nowrap; border: 1.5px solid var(--border); background: var(--white); transition: border-color 0.15s, color 0.15s; }
+    .cs-nav__link:hover { border-color: var(--navy); color: var(--navy); }
+    .cs-nav__num { display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; border-radius: 50%; background: var(--navy); color: var(--yellow); font-size: 0.65rem; font-weight: 800; flex-shrink: 0; }
+
+    /* ── Case Study Layout ───────────────────────────────────────────── */
+    .cs-section { padding: 5rem 0; }
+    .cs-section:nth-child(even) { background: var(--cream); }
+    .cs-section:nth-child(odd) { background: var(--white); }
+
+    .cs-inner {
+      display: grid; grid-template-columns: 1fr 340px; gap: 4rem; align-items: start;
+    }
+    .cs-inner--reversed { grid-template-columns: 340px 1fr; }
+    .cs-inner--reversed .cs-body { order: 2; }
+    .cs-inner--reversed .cs-sidebar { order: 1; }
+
+    .cs-body__label {
+      display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;
+    }
+    .cs-body__num {
+      display: flex; align-items: center; justify-content: center;
+      width: 36px; height: 36px; border-radius: 50%;
+      background: var(--navy); color: var(--yellow); font-size: 0.85rem; font-weight: 800; flex-shrink: 0;
+    }
+    .cs-body__type { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.09em; color: var(--red); }
+    .cs-body h2 { font-size: clamp(1.3rem, 2.5vw, 1.8rem); font-weight: 800; color: var(--navy); line-height: 1.25; margin-bottom: 0.5rem; }
+    .cs-body__tagline { font-size: 1rem; color: var(--muted); margin-bottom: 2rem; font-style: italic; }
+
+    .cs-block { margin-bottom: 1.75rem; }
+    .cs-block__heading {
+      display: flex; align-items: center; gap: 0.6rem;
+      font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em;
+      color: var(--navy); margin-bottom: 0.75rem;
+    }
+    .cs-block__dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+    .cs-block__dot--situation { background: var(--navy); }
+    .cs-block__dot--challenge { background: var(--red); }
+    .cs-block__dot--solution { background: #0a7c4f; }
+    .cs-block__dot--outcome { background: var(--yellow); }
+    .cs-block p { font-size: 0.94rem; line-height: 1.8; color: #3a4255; }
+
+    /* ── Sidebar Stats Box ───────────────────────────────────────────── */
+    .cs-sidebar { position: sticky; top: 100px; }
+    .cs-stats-box {
+      background: var(--navy); border-radius: 12px; padding: 1.75rem; color: var(--white);
+    }
+    .cs-stats-box__title { font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--yellow); margin-bottom: 1.25rem; }
+    .cs-stat-row { display: flex; flex-direction: column; gap: 0.2rem; padding: 0.9rem 0; border-bottom: 1px solid rgba(255,255,255,0.1); }
+    .cs-stat-row:last-child { border-bottom: none; }
+    .cs-stat-row__label { font-size: 0.72rem; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 0.06em; }
+    .cs-stat-row__value { font-size: 0.92rem; font-weight: 700; color: var(--white); }
+    .cs-stat-row__value--highlight { color: var(--yellow); }
+    .cs-stats-box__cta {
+      display: block; text-align: center; margin-top: 1.5rem;
+      background: linear-gradient(135deg, var(--red) 0%, var(--red-deep) 100%);
+      color: var(--white); font-weight: 700; font-size: 0.85rem;
+      padding: 0.75rem 1.5rem; border-radius: 6px; text-decoration: none;
+      transition: box-shadow 0.15s, transform 0.15s;
+      box-shadow: 0 4px 14px rgba(190,0,17,0.35);
+    }
+    .cs-stats-box__cta:hover { box-shadow: 0 6px 20px rgba(190,0,17,0.5); transform: translateY(-2px); color: var(--white); }
+
+    /* ── Outcome highlight ───────────────────────────────────────────── */
+    .outcome-highlight {
+      background: linear-gradient(135deg, rgba(10,124,79,0.08) 0%, rgba(10,124,79,0.03) 100%);
+      border: 1px solid rgba(10,124,79,0.2); border-left: 4px solid #0a7c4f;
+      border-radius: 8px; padding: 1.25rem 1.5rem; margin-top: 1.5rem;
+    }
+    .outcome-highlight__label { font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #0a7c4f; margin-bottom: 0.5rem; }
+    .outcome-highlight p { font-size: 0.92rem; line-height: 1.7; color: #1a3a2a; font-weight: 600; }
+
+    /* ── Quote pull ──────────────────────────────────────────────────── */
+    .cs-quote {
+      border-left: 4px solid var(--yellow); background: rgba(250,207,57,0.06);
+      padding: 1.25rem 1.5rem; border-radius: 0 8px 8px 0; margin-top: 1.5rem;
+    }
+    .cs-quote p { font-size: 0.95rem; line-height: 1.75; color: var(--navy); font-style: italic; }
+    .cs-quote cite { display: block; margin-top: 0.75rem; font-size: 0.78rem; color: var(--muted); font-style: normal; font-weight: 600; }
+
+    /* ── Challenge/Solution list ─────────────────────────────────────── */
+    .cs-list { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+    .cs-list li { display: flex; align-items: flex-start; gap: 0.65rem; font-size: 0.92rem; line-height: 1.7; color: #3a4255; }
+    .cs-list li::before {
+      content: ''; display: block; width: 18px; height: 18px; border-radius: 50%; flex-shrink: 0; margin-top: 0.15rem;
+    }
+    .cs-list--challenge li::before { background: rgba(190,0,17,0.1); border: 2px solid var(--red); }
+    .cs-list--solution li::before { background: rgba(10,124,79,0.1); border: 2px solid #0a7c4f; }
+
+    /* ── FAQ Section ─────────────────────────────────────────────────── */
+    .faq-section { padding: 5rem 0; background: var(--white); }
+    .faq-section h2 { font-size: clamp(1.4rem, 3vw, 2rem); font-weight: 800; color: var(--navy); text-align: center; margin-bottom: 0.75rem; }
+    .faq-section .sub { text-align: center; color: var(--muted); font-size: 1rem; margin-bottom: 3rem; }
+    .faq-list { display: flex; flex-direction: column; }
+    .faq-item { border-bottom: 1px solid var(--border); }
+    .faq-item:first-child { border-top: 1px solid var(--border); }
+    .faq-question { display: flex; justify-content: space-between; align-items: center; padding: 1.25rem 0; cursor: pointer; gap: 1rem; }
+    .faq-question h3 { font-size: 0.97rem; font-weight: 700; color: var(--navy); }
+    .faq-toggle { width: 28px; height: 28px; flex-shrink: 0; border-radius: 50%; background: var(--cream); border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; font-size: 1rem; color: var(--navy); font-weight: 700; transition: background 0.15s, color 0.15s; }
+    .faq-item.open .faq-toggle { background: var(--navy); color: var(--white); }
+    .faq-answer { display: none; padding: 0 0 1.25rem; font-size: 0.9rem; line-height: 1.8; color: var(--muted); }
+    .faq-item.open .faq-answer { display: block; }
+
+    /* ── Internal links section ──────────────────────────────────────── */
+    .links-section { background: var(--cream); padding: 4rem 0; }
+    .links-section h2 { font-size: 1.3rem; font-weight: 800; color: var(--navy); margin-bottom: 0.75rem; }
+    .links-section .sub { color: var(--muted); font-size: 0.9rem; margin-bottom: 2rem; }
+    .links-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 0.75rem; }
+    .link-card { display: block; background: var(--white); border: 1px solid var(--border); border-radius: 8px; padding: 1rem 1.25rem; text-decoration: none; transition: border-color 0.15s, box-shadow 0.15s; }
+    .link-card:hover { border-color: var(--navy); box-shadow: 0 2px 8px rgba(12,25,48,0.08); }
+    .link-card__label { font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.07em; color: var(--red); margin-bottom: 0.35rem; }
+    .link-card__title { font-size: 0.88rem; font-weight: 700; color: var(--navy); }
+
+    /* ── CTA Section ─────────────────────────────────────────────────── */
+    .cta-section {
+      background: linear-gradient(135deg, var(--navy) 0%, #0d2240 60%, #0a1d38 100%);
+      padding: 5rem 0; text-align: center; border-top: 4px solid var(--yellow);
+    }
+    .cta-section h2 { font-size: clamp(1.5rem, 3vw, 2.2rem); font-weight: 800; color: var(--white); margin-bottom: 1rem; }
+    .cta-section p { font-size: 1.05rem; color: rgba(255,255,255,0.7); margin-bottom: 2.5rem; max-width: 560px; margin-left: auto; margin-right: auto; line-height: 1.7; }
+    .cta-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .btn-cta-primary { display: inline-flex; align-items: center; gap: 0.5rem; background: linear-gradient(135deg, var(--red) 0%, var(--red-deep) 100%); color: var(--white); font-family: var(--font); font-size: 0.95rem; font-weight: 700; padding: 0.9rem 2.2rem; border-radius: 6px; text-decoration: none; box-shadow: 0 4px 14px rgba(190,0,17,0.4); transition: box-shadow 0.15s, transform 0.15s; }
+    .btn-cta-primary:hover { box-shadow: 0 6px 20px rgba(190,0,17,0.55); transform: translateY(-2px); color: var(--white); }
+    .btn-cta-ghost { display: inline-flex; align-items: center; gap: 0.5rem; background: transparent; color: var(--white); font-family: var(--font); font-size: 0.95rem; font-weight: 700; padding: 0.9rem 2.2rem; border-radius: 6px; border: 2px solid rgba(255,255,255,0.3); text-decoration: none; transition: border-color 0.15s, background 0.15s; }
+    .btn-cta-ghost:hover { border-color: var(--yellow); background: rgba(255,255,255,0.06); color: var(--white); }
+
+    /* ── Footer ──────────────────────────────────────────────────────── */
+    .site-footer { background: var(--navy); color: rgba(255,255,255,0.6); font-size: 0.82rem; text-align: center; padding: 1.5rem 2rem; }
+    .site-footer a { color: rgba(255,255,255,0.5); text-decoration: none; margin: 0 0.75rem; }
+    .site-footer a:hover { color: var(--yellow); }
+
+    /* ── Responsive ───────────────────────────────────────────────────── */
+    @media (max-width: 900px) {
+      .cs-inner, .cs-inner--reversed { grid-template-columns: 1fr; }
+      .cs-inner--reversed .cs-body { order: 1; }
+      .cs-inner--reversed .cs-sidebar { order: 2; }
+      .cs-sidebar { position: static; }
+    }
+    @media (max-width: 640px) {
+      .hero { padding: 3rem 0 2.5rem; }
+      .hero__stats { gap: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════════════════════════
+       BREADCRUMB
+  ══════════════════════════════════════════════════════════ -->
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <div class="container">
+      <a href="/">Home</a>
+      <span>›</span>
+      <span>Case Studies</span>
+    </div>
+  </nav>
+
+
+  <!-- ══════════════════════════════════════════════════════════
+       HERO
+  ══════════════════════════════════════════════════════════ -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero__label">Client Case Studies</div>
+      <h1>Real Stories: How We Helped People Move to Spain</h1>
+      <p class="hero__sub">Six detailed accounts of the visa journeys we've managed — including the complications, the solutions, and the outcomes. No vague success stories. Specific situations, real results.</p>
+      <div class="hero__stats">
+        <div class="hero__stat">
+          <div class="hero__stat-num">6</div>
+          <div class="hero__stat-label">Case Studies</div>
+        </div>
+        <div class="hero__stat">
+          <div class="hero__stat-num">4</div>
+          <div class="hero__stat-label">Visa Types</div>
+        </div>
+        <div class="hero__stat">
+          <div class="hero__stat-num">5</div>
+          <div class="hero__stat-label">Nationalities</div>
+        </div>
+        <div class="hero__stat">
+          <div class="hero__stat-num">98%</div>
+          <div class="hero__stat-label">Success Rate</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════════════
+       CASE STUDY NAVIGATION
+  ══════════════════════════════════════════════════════════ -->
+  <nav class="cs-nav" aria-label="Case study navigation">
+    <div class="container">
+      <div class="cs-nav__inner">
+        <a href="#cs1" class="cs-nav__link"><span class="cs-nav__num">1</span> The Thornton Family — NLV</a>
+        <a href="#cs2" class="cs-nav__link"><span class="cs-nav__num">2</span> Jake — Digital Nomad Visa</a>
+        <a href="#cs3" class="cs-nav__link"><span class="cs-nav__num">3</span> Sarah — Student to NLV</a>
+        <a href="#cs4" class="cs-nav__link"><span class="cs-nav__num">4</span> The Kellys — After Rejection</a>
+        <a href="#cs5" class="cs-nav__link"><span class="cs-nav__num">5</span> Michael — Freelance DNV</a>
+        <a href="#cs6" class="cs-nav__link"><span class="cs-nav__num">6</span> Priya &amp; Raj — Family NLV</a>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- ══════════════════════════════════════════════════════════
+       CASE STUDY 1: THE THORNTON FAMILY
+  ══════════════════════════════════════════════════════════ -->
+  <section class="cs-section" id="cs1">
+    <div class="container">
+      <div class="cs-inner">
+
+        <div class="cs-body">
+          <div class="cs-body__label">
+            <div class="cs-body__num">1</div>
+            <span class="cs-body__type">Non-Lucrative Visa &middot; Family Application</span>
+          </div>
+          <h2>The Thornton Family — NLV for a UK Family of Four</h2>
+          <p class="cs-body__tagline">A retired couple from Edinburgh with two teenage children — and a complication that nearly derailed everything before it started.</p>
+
+          <div class="cs-block">
+            <div class="cs-block__heading">
+              <span class="cs-block__dot cs-block__dot--situation"></span>
+              Situation
+            </div>
+            <p>Robert and Anne Thornton had planned their move to Spain for three years. Robert had taken early retirement from a senior role in Scottish banking; Anne had retired from teaching. Together they had a combined pension income of £3,200 per month — comfortably above the NLV minimum threshold — plus significant savings. Their two teenage sons, aged 15 and 17, would be applying as dependants on the family application.</p>
+            <p style="margin-top:0.85rem;">The family intended to settle near Málaga, where they had spent several holidays and had already identified a long-term rental property. Their target consulate was Edinburgh — the correct jurisdiction for Scottish applicants.</p>
+          </div>
+
+          <div class="cs-block">
+            <div class="cs-block__heading">
+              <span class="cs-block__dot cs-block__dot--challenge"></span>
+              The Challenge
+            </div>
+            <p>During initial consultation, a significant issue surfaced. Robert had received a police caution 22 years earlier — a minor matter involving a motoring incident — and this had appeared on his ACRO Criminal Records certificate. He had not expected it to show and had initially considered not disclosing it, having been advised informally that old cautions "don't matter."</p>
+            <p style="margin-top:0.85rem;">Additionally, the Edinburgh consulate's requirements for child dependants were more detailed than the London consulate's: both boys needed formal school acceptance letters from accredited Spanish schools, and their documentation needed to be presented in a specific format that differed from standard application guidance online.</p>
+            <p style="margin-top:0.85rem;">Scottish bank statements also presented a formatting issue: Scottish clearing banks issue statements with slightly different header formats, and without a covering letter confirming account ownership and currency, the Edinburgh consulate can question their validity.</p>
+          </div>
+
+          <div class="cs-block">
+            <div class="cs-block__heading">
+              <span class="cs-block__dot cs-block__dot--solution"></span>
+              The Solution
+            </div>
+            <p>My Spanish Visa advised strongly and unambiguously on disclosure. The caution appeared on the ACRO certificate and concealment would constitute a criminal offence with far more serious consequences than the caution itself. A specialist explanation letter was drafted — factual, proportionate, and in the formal register required by Spanish immigration authorities — contextualising the matter and confirming it had no bearing on Robert's character or eligibility.</p>
+            <p style="margin-top:0.85rem;">For the boys' school documentation, My Spanish Visa identified two accredited Spanish state and private schools near the family's target area in Málaga province. The school acceptance letters were arranged in the correct format with the required certification, submitted to the consulate ahead of the appointment to meet the Edinburgh office's advance document requirements.</p>
+            <p style="margin-top:0.85rem;">Scottish bank statements were certified with covering letters from the issuing banks confirming account authenticity, balance verification, and currency denomination. A sworn translator was coordinated to produce Spanish translations of all four applicants' documents.</p>
+          </div>
+
+          <div class="outcome-highlight">
+            <div class="outcome-highlight__label">Outcome</div>
+            <p>Application approved six weeks after the Edinburgh consulate appointment. All four visas issued simultaneously. The Thornton family arrived in Málaga province the following spring. Robert has since commented that the expert advice on disclosure — and the letter that accompanied it — was the single most valuable part of the service.</p>
+          </div>
+
+          <div class="cs-quote">
+            <p>"We nearly made a serious mistake by not disclosing Robert's old caution. My Spanish Visa's advice was immediate and clear, and the way they handled the explanation letter meant it was never an issue at the consulate. We couldn't have navigated that without specialists."</p>
+            <cite>— Anne Thornton, Málaga Province</cite>
+          </div>
+        </div>
+
+        <div class="cs-sidebar">
+          <div class="cs-stats-box">
+            <div class="cs-stats-box__title">Case Summary</div>
+            <div class="cs-stat-row">
+              <span class="cs-stat-row__label">Clients</span>
+              <span class="cs-stat-row__value">Robert &amp; Anne Thornton + 2 sons</span>
+            </div>
+            <div class="cs-stat-row">
+              <span class="cs-stat-row__label">Nationality</span>
+              <span class="cs-stat-row__value">British (Scottish)</span>
+            </div>
+            <div class="cs-stat-row">
+              <span class="cs-stat-row__label">Visa Type</span>
+              <span class="cs-stat-row__value">Non-Lucrative Visa (family of 4)</span>
+            </div>
+            <div class="cs-stat-row">
+              <span class="cs-stat-row__label">Consulate</span>
+              <span class="cs-stat-row__value">Edinburgh</span>
+            </div>
+            <div class="cs-stat-row">
+              <span class="cs-stat-row__label">Key Complication</span>
+              <span class="cs-stat-row__value">Criminal record disclosure &amp; children's school documentation</span>
+            </div>
+            <div class="cs-stat-row">
+              <span class="cs-stat-row__label">Timeline to Approval</span>
+              <span class="cs-stat-row__value cs-stat-row__value--highlight">6 weeks post-appointment</span>
+            </div>
+            <div class="cs-stat-row">
+              <span class="cs-stat-row__label">Outcome</span>
+              <span class="cs-stat-row__value cs-stat-row__value--highlight">Approved — now living near Málaga</span>
+            </div>
+            <a href="/non-lucrative-visa-family/" class="cs-stats-box__cta">Learn about NLV for families &#8594;</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════════════
+       CASE STUDY 2: JAKE — DNV FROM LOS ANGELES
+  ══════════════════════════════════════════════════════════ -->
+  <section class="cs-section" id="cs2">
+    <div class="container">
+      <div class="cs-inner cs-inner--reversed">
+
+        <div class="cs-sidebar">
+          <div class="cs-stats-box">
+            <div class="cs-stats-box__title">Case Summary</div>
+            <div class="cs-stat-row">
+              <span class="cs-stat-row__label">Client</span>
+              <span class="cs-stat-row__value">Jake, 32</span>
+            </div>
+            <div class="cs-stat-row">
+              <span class="cs-stat-row__label">Nationality</span>
+              <span class="cs-stat-row__value">American (Los Angeles)</span>
+            </div>
+            <div class="cs-stat-row">
+              <span class="cs-stat-row__label">Visa Type</span>
+              <span class="cs-stat-row__value">Digital Nomad Visa</span>
+            </div>
+            <div class="cs-stat-row">
+              <span class="cs-stat-row__label">Consulate</span>
+              <span class="cs-stat-row__value">Los Angeles</span>
+            </div>
+            <div class="cs-stat-row">
+              <span class="cs-stat-row__label">Income</span>
+              <span class="cs-stat-row__value">$8,500/month (remote employment)</span>
+            </div>
+            <div class="cs-stat-row">
+              <span class="cs-stat-row__label">Key Complication</span>
+              <span class="cs-stat-row__value">Failed prior self-application; FBI check error; health insurance copayments</span>
+            </div>
+            <div class="cs-stat-row">
+              <span class="cs-stat-row__label">Beckham Law</span>
+              <span class="cs-stat-row__value cs-stat-row__value--highlight">Approved</span>
+            </div>
+            <div class="cs-stat-row">
+              <span class="cs-stat-row__label">Timeline to Approval</span>
+              <span class="cs-stat-row__value cs-stat-row__value--highlight">8 weeks post-appointment</span>
+            </div>
+            <div class="cs-stat-row">
+              <span class="cs-stat-row__label">Estimated Annual Tax Saving</span>
+              <span class="cs-stat-row__value cs-stat-row__value--highlight">~$18,000/year (Beckham Law)</span>
+            </div>
+            <a href="/digital-nomad-visa-usa/" class="cs-stats-box__cta">DNV for Americans &#8594;</a>
+          </div>
+        </div>
+
+        <div class="cs-body">
+          <div class="cs-body__label">
+            <div class="cs-body__num">2</div>
+            <span class="cs-body__type">Digital Nomad Visa &middot; Beckham Law</span>
+          </div>
+          <h2>Jake — Remote Software Engineer, DNV from Los Angeles</h2>
+          <p class="cs-body__tagline">An American developer who tried to apply alone, hit three separate walls, and came to us to fix it.</p>
+
+          <div class="cs-block">
+            <div class="cs-block__heading">
+              <span class="cs-block__dot cs-block__dot--situation"></span>
+              Situation
+            </div>
+            <p>Jake was 32, working remotely as a senior software engineer for a San Francisco-based startup. His employment contract was fully remote with no geographic restrictions — an ideal profile for the Spanish Digital Nomad Visa. His salary of $8,500 per month comfortably exceeded the DNV income threshold of approximately €2,646 per month (200% of Spain's IPREM). He had decided to base himself in Barcelona.</p>
+            <p style="margin-top:0.85rem;">Before approaching My Spanish Visa, Jake had spent three months attempting to submit a self-prepared application through the Los Angeles consulate. His initial submission was rejected at document check stage before even reaching formal assessment.</p>
+          </div>
+
+          <div class="cs-block">
+            <div class="cs-block__heading">
+              <span class="cs-block__dot cs-block__dot--challenge"></span>
+              The Challenges
+            </div>
+            <ul class="cs-list cs-list--challenge">
+              <li>Jake had obtained a California State criminal background check, not an FBI federal background check. The DNV requires a federal-level FBI apostilled check for US citizens — a state check is not accepted regardless of how clean the record is.</li>
+              <li>His health insurance policy had copayments, which disqualifies it from meeting Spain's visa health insurance requirement. The no-copayment requirement is absolute — many US applicants confuse comprehensive coverage with visa-compliant coverage.</li>
+              <li>Jake had no awareness of the Beckham Law (Régimen Especial para Trabajadores Desplazados), which allows qualifying DNV holders to be taxed as non-residents for six years, resulting in a flat 24% tax rate on Spanish-source income rather than progressive resident rates. As a high earner, the financial impact was substantial.</li>
+              <li>His employer letter did not confirm remote working status or authorisation to work from abroad — a specific requirement that many employment contracts do not automatically address.</li>
+            </ul>
+          </div>
+
+          <div class="cs-block">
+            <div class="cs-block__heading">
+              <span class="cs-block__dot cs-block__dot--solution"></span>
+              The Solution
+            </div>
+            <p>My Spanish Visa guided Jake through obtaining a proper FBI Identity History Summary with apostille — the correct federal criminal background document for US DNV applicants. The process requires fingerprinting, submission to the FBI, and then apostilling through the US State Department, which adds several weeks; we built this into the timeline from the outset.</p>
+            <p style="margin-top:0.85rem;">A compliant health insurance policy was identified and arranged: a Spain-specific no-copayment policy from an approved provider, with coverage documents issued in Spanish. Jake's prior policy was confirmed as non-compliant and cancelled.</p>
+            <p style="margin-top:0.85rem;">An employer letter was drafted with Jake's employer that specifically confirmed remote working authorisation, the absence of geographic restrictions, continuity of employment, and salary — all in the format the LA consulate requires. The Beckham Law application was submitted simultaneously with the visa, within the required 6-month window of arrival, and was approved alongside the main application.</p>
+          </div>
+
+          <div class="outcome-highlight">
+            <div class="outcome-highlight__label">Outcome</div>
+            <p>DNV approved by the Los Angeles consulate eight weeks after appointment submission. Beckham Law application also approved. Jake is now based in Barcelona. At his income level, Beckham Law results in an estimated tax saving of approximately $18,000 per year compared to standard Spanish progressive tax rates, over a six-year period.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════════════
+       CASE STUDY 3: SARAH — STUDENT VISA TO NLV
+  ══════════════════════════════════════════════════════════ -->
+  <section class="cs-section" id="cs3">
+    <div class="container">
+      <div class="cs-inner">
+
+        <div class="cs-body">
+          <div class="cs-body__label">
+            <div class="cs-body__num">3</div>
+            <span class="cs-body__type">Student Visa &rarr; Non-Lucrative Visa &middot; Visa Transition</span>
+          </div>
+          <h2>Sarah — Language School to Long-Term Spain Resident</h2>
+          <p class="cs-body__tagline">An Australian teacher who came for six months and stayed — navigating the visa transition before her student status expired.</p>
+
+          <div class="cs-block">
+            <div class="cs-block__heading">
+              <span class="cs-block__dot cs-block__dot--situation"></span>
+              Situation
+            </div>
+            <p>Sarah was 28, a primary school teacher from Sydney who had taken a career break to study Spanish in Seville. She enrolled in a nine-month intensive Spanish language course at an accredited language school — sufficient to qualify for a Spanish student visa. Her plan was to complete the course and return to Australia. Within four months of arriving in Seville, that plan had changed entirely.</p>
+            <p style="margin-top:0.85rem;">Sarah had savings of approximately AUD $62,000 — equivalent to around €38,000 — which comfortably exceeded the NLV passive income/savings threshold when presented correctly. She had no employment in Spain and planned to live from savings while exploring private English tutoring opportunities. She had no criminal record and had maintained valid status throughout her student visa period.</p>
+          </div>
+
+          <div class="cs-block">
+            <div class="cs-block__heading">
+              <span class="cs-block__dot cs-block__dot--challenge"></span>
+              The Challenge
+            </div>
+            <p>The primary challenge was one of timing and sequencing. Sarah's student visa permitted her to remain in Spain for the duration of her language course. Once the course ended, she had a limited period before her legal status lapsed. Applying for an NLV from within Spain is not possible — the application must be made from your country of habitual residence, and in Sarah's case that meant returning to Australia for the consulate appointment in Sydney.</p>
+            <p style="margin-top:0.85rem;">The risk was a gap: if she left too late, or if the application preparation took too long, she risked overstaying her student status. If she left too early, she might miss the final weeks of her course. The overlap between her student visa expiry, the course end date, and the NLV processing timeline required precise coordination.</p>
+            <p style="margin-top:0.85rem;">Additionally, presenting savings rather than regular passive income to an Australian consulate for an NLV carries specific presentation requirements. The Sydney consulate has historically been detailed in its review of savings-based applications, and the format of the financial evidence matters considerably.</p>
+          </div>
+
+          <div class="cs-block">
+            <div class="cs-block__heading">
+              <span class="cs-block__dot cs-block__dot--solution"></span>
+              The Solution
+            </div>
+            <p>My Spanish Visa began preparing Sarah's NLV application documentation while she was still in Seville and her student visa was active — two months before the end of her course. Documents requiring action in Australia (DFAT apostilles on her birth certificate and Australian Federal Police criminal record check) were coordinated remotely with family members in Sydney.</p>
+            <p style="margin-top:0.85rem;">A detailed savings presentation document was prepared: certified bank statements, a formal letter from her Australian bank confirming account ownership and balance, a savings-to-living-costs projection for 12 months in Spain, and a sworn statement from Sarah on her income sources. This comprehensive financial pack addressed the Sydney consulate's known requirements for savings-based applications.</p>
+            <p style="margin-top:0.85rem;">Sarah returned to Sydney two weeks before her student visa expired — well within legal status — and her Sydney consulate appointment was booked and attended within six weeks of her return.</p>
+          </div>
+
+          <div class="outcome-highlight">
+            <div class="outcome-highlight__label">Outcome</div>
+            <p>NLV approved by the Sydney consulate seven weeks after appointment. Sarah returned to Seville with no gap in legal status. She is now on her second NLV renewal — five years after initially arriving for a language course. She teaches English privately and is studying for the DELE C1 Spanish language exam as part of her eventual citizenship pathway.</p>
+          </div>
+
+          <div class="cs-quote">
+            <p>"I was genuinely worried about the timing — the student visa end date, my course end date, and getting back to Australia. My Spanish Visa mapped it all out and told me exactly what to do and when. There was never a moment where I was at risk. I'm still here five years later."</p>
+            <cite>— Sarah, Seville</cite>
+          </div>
+        </div>
+
+        <div class="cs-sidebar">
+          <div class="cs-stats-box">
+            <div class="cs-stats-box__title">Case Summary</div>
+            <div class="cs-stat-row">
+              <span class="cs-stat-row__label">Client</span>
+              <span class="cs-stat-row__value">Sarah, 28</span>
+            </div>
+            <div class="cs-stat-row">
+              <span class="cs-stat-row__label">Nationality</span>
+              <span class="cs-stat-row__value">Australian</span>
+            </div>
+            <div class="cs-stat-row">
+              <span class="cs-stat-row__label">Visa Journey</span>
+              <span class="cs-stat-row__value">Student Visa &#8594; NLV &#8594; NLV Renewal</span>
+            </div>
+            <div class="cs-stat-row">
+              <span class="cs-stat-row__label">Consulate</span>
+              <span class="cs-stat-row__value">Sydney</span>
+            </div>
+            <div class="cs-stat-row">
+              <span class="cs-stat-row__label">Key Complication</span>
+              <span class="cs-stat-row__value">Precise timing of visa transition; savings-based application</span>
+            </div>
+            <div class="cs-stat-row">
+              <span class="cs-stat-row__label">Status Gap</span>
+              <span class="cs-stat-row__value cs-stat-row__value--highlight">None — seamless transition</span>
+            </div>
+            <div class="cs-stat-row">
+              <span class="cs-stat-row__label">Current Status</span>
+              <span class="cs-stat-row__value cs-stat-row__value--highlight">Second NLV renewal — 5 years in Spain</span>
+            </div>
+            <a href="/student-visa-spain/" class="cs-stats-box__cta">Spain student visa guide &#8594;</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════════════
+       CASE STUDY 4: THE KELLYS — AFTER REJECTION
+  ══════════════════════════════════════════════════════════ -->
+  <section class="cs-section" id="cs4">
+    <div class="container">
+      <div class="cs-inner cs-inner--reversed">
+
+        <div class="cs-sidebar">
+          <div class="cs-stats-box">
+            <div class="cs-stats-box__title">Case Summary</div>
+            <div class="cs-stat-row">
+              <span class="cs-stat-row__label">Clients</span>
+              <span class="cs-stat-row__value">Declan &amp; Mary Kelly</span>
+            </div>
+            <div class="cs-stat-row">
+              <span class="cs-stat-row__label">Nationality</span>
+              <span class="cs-stat-row__value">Irish</span>
+            </div>
+            <div class="cs-stat-row">
+              <span class="cs-stat-row__label">Visa Type</span>
+              <span class="cs-stat-row__value">Non-Lucrative Visa</span>
+            </div>
+            <div class="cs-stat-row">
+              <span class="cs-stat-row__label">Consulate</span>
+              <span class="cs-stat-row__value">Dublin</span>
+            </div>
+            <div class="cs-stat-row">
+              <span class="cs-stat-row__label">Initial Application</span>
+              <span class="cs-stat-row__value">Rejected (financial evidence)</span>
+            </div>
+            <div class="cs-stat-row">
+              <span class="cs-stat-row__label">Key Complication</span>
+              <span class="cs-stat-row__value">Reapplication after rejection; informal savings presentation</span>
+            </div>
+            <div class="cs-stat-row">
+              <span class="cs-stat-row__label">Time from Rejection to Arrival</span>
+              <span class="cs-stat-row__value cs-stat-row__value--highlight">4 months</span>
+            </div>
+            <div class="cs-stat-row">
+              <span class="cs-stat-row__label">Outcome</span>
+              <span class="cs-stat-row__value cs-stat-row__value--highlight">Approved second application — now in Valencia</span>
+            </div>
+            <a href="/non-lucrative-visa-rejected/" class="cs-stats-box__cta">NLV rejection &amp; appeal guide &#8594;</a>
+          </div>
+        </div>
+
+        <div class="cs-body">
+          <div class="cs-body__label">
+            <div class="cs-body__num">4</div>
+            <span class="cs-body__type">Non-Lucrative Visa &middot; Reapplication After Rejection</span>
+          </div>
+          <h2>The Kellys — NLV Approval After an Initial Rejection</h2>
+          <p class="cs-body__tagline">An Irish couple in their early sixties who had the income, the savings, and the motivation — but the first application still failed.</p>
+
+          <div class="cs-block">
+            <div class="cs-block__heading">
+              <span class="cs-block__dot cs-block__dot--situation"></span>
+              Situation
+            </div>
+            <p>Declan Kelly had retired from a senior role in Irish financial services. His wife Mary had retired from nursing. Together they had a combined pension income of approximately €4,100 per month and savings of over €180,000. By any reasonable financial measure, they were ideal NLV candidates. They had identified a long-term rental apartment near Valencia and were committed to the move.</p>
+            <p style="margin-top:0.85rem;">Before approaching My Spanish Visa, the Kellys had prepared their own application with the help of a generic immigration company with no specific Spain specialism. Their first application was submitted to the Dublin consulate and was formally refused.</p>
+          </div>
+
+          <div class="cs-block">
+            <div class="cs-block__heading">
+              <span class="cs-block__dot cs-block__dot--challenge"></span>
+              The Challenge
+            </div>
+            <p>The Dublin consulate's refusal cited insufficient financial evidence — not a lack of funds, but a failure to present them in an acceptable and verifiable manner. Specifically:</p>
+            <ul class="cs-list cs-list--challenge">
+              <li>Savings were evidenced only by standard bank statements. The consulate requires formal bank certification letters — signed by bank officials, confirming account ownership, balance as of a specific date, and account history. Standard statements are insufficient on their own.</li>
+              <li>Pension income from Declan's employer pension had been shown via pension payslips without a formal income letter from the pension provider confirming the ongoing nature and amount of payments.</li>
+              <li>Mary's nursing pension, paid through the Health Service Executive, required a specific letter format from HSE confirming continued payment and annual amount — not just the payslips.</li>
+              <li>There was no consolidated financial summary document linking the various income streams and savings. The consulate officer had no easy way to assess whether the combined financial position met the threshold across two applicants.</li>
+            </ul>
+          </div>
+
+          <div class="cs-block">
+            <div class="cs-block__heading">
+              <span class="cs-block__dot cs-block__dot--solution"></span>
+              The Solution
+            </div>
+            <p>My Spanish Visa conducted a full post-rejection analysis and identified each deficiency in the original submission. A completely reconstructed financial evidence pack was assembled:</p>
+            <ul class="cs-list cs-list--solution">
+              <li>Certified bank letters obtained from both the Kellys' Irish banks, formatted to the consulate's requirements with account certification and notarised balance confirmation.</li>
+              <li>Formal income letters obtained from Declan's pension provider and from the HSE for Mary's pension, each confirming the pension type, commencement date, ongoing nature, and gross annual amount.</li>
+              <li>A comprehensive two-page financial summary document was prepared by the My Spanish Visa team, presenting both applicants' combined income, combined savings, and demonstrating the surplus above the NLV threshold — with every figure cross-referenced to a supporting document.</li>
+              <li>Sworn statements from both applicants confirming the completeness and accuracy of the financial information were included as a precautionary measure.</li>
+            </ul>
+            <p style="margin-top:0.85rem;">The reapplication was submitted eight weeks after the rejection. The Dublin consulate appointment was attended with a complete, professionally presented, and fully evidenced application pack.</p>
+          </div>
+
+          <div class="outcome-highlight">
+            <div class="outcome-highlight__label">Outcome</div>
+            <p>Second application approved by the Dublin consulate. Declan and Mary arrived in Valencia four months after the initial rejection — within the same calendar year they had originally planned to move. The financial evidence that the Kellys had always possessed simply needed to be presented in the format the consulate requires.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════════════
+       CASE STUDY 5: MICHAEL — FREELANCE DNV, MANCHESTER
+  ══════════════════════════════════════════════════════════ -->
+  <section class="cs-section" id="cs5">
+    <div class="container">
+      <div class="cs-inner">
+
+        <div class="cs-body">
+          <div class="cs-body__label">
+            <div class="cs-body__num">5</div>
+            <span class="cs-body__type">Digital Nomad Visa &middot; Self-Employed / Freelance</span>
+          </div>
+          <h2>Michael — Freelance Management Consultant, Manchester to Barcelona</h2>
+          <p class="cs-body__tagline">Variable income, multiple clients, and an application where the financial presentation was everything.</p>
+
+          <div class="cs-block">
+            <div class="cs-block__heading">
+              <span class="cs-block__dot cs-block__dot--situation"></span>
+              Situation
+            </div>
+            <p>Michael was 44, a management consultant based in Manchester who had operated independently for twelve years. He had built a portfolio of four active client relationships — two large UK corporations, one mid-size European business, and a retained advisory role with a US-based private equity firm. His income was genuinely variable: in strong months he could earn £8,000 or more; in lighter months, closer to £3,000. His six-month average income was approximately £5,400 — well above the DNV threshold — but presenting this convincingly was the challenge.</p>
+            <p style="margin-top:0.85rem;">Michael had decided to base himself in Barcelona and had already arranged a rental property there. He intended to apply through the Manchester consulate — the correct UK regional consulate for applicants residing in the north of England.</p>
+          </div>
+
+          <div class="cs-block">
+            <div class="cs-block__heading">
+              <span class="cs-block__dot cs-block__dot--challenge"></span>
+              The Challenge
+            </div>
+            <p>The DNV income requirement for self-employed applicants is more complex than for employees. A payslip proves a monthly salary; a freelance consultant has to demonstrate sustainable income from multiple independent sources, each of which needs to be documented separately. Specific challenges included:</p>
+            <ul class="cs-list cs-list--challenge">
+              <li>Variable monthly income makes it difficult to demonstrate that the DNV threshold will be met on an ongoing basis. The Manchester consulate has seen a number of self-employed applications with artificially presented averages and is attentive to the quality of income evidence.</li>
+              <li>Michael's four client relationships were structured as individual contracts, retainers, and purchase orders — each with different formats and payment schedules. Without a coherent presentation, these read as unrelated and fragmented income sources.</li>
+              <li>UK self-employed income is documented via self-assessment tax returns and bank statements — neither of which presents income in the month-by-month format the Spanish consulate prefers. A bridge between the two formats was needed.</li>
+              <li>Michael's health insurance, while comprehensive, included a modest excess — which functioned as a copayment for practical purposes and was non-compliant with DNV requirements.</li>
+            </ul>
+          </div>
+
+          <div class="cs-block">
+            <div class="cs-block__heading">
+              <span class="cs-block__dot cs-block__dot--solution"></span>
+              The Solution
+            </div>
+            <p>My Spanish Visa built a comprehensive self-employed income presentation package specifically designed for the Manchester consulate's assessment process. The package comprised:</p>
+            <ul class="cs-list cs-list--solution">
+              <li>A six-month income summary table, cross-referenced to bank statements and invoices, presenting gross monthly income from each client relationship and computing the average — clearly demonstrating the DNV threshold was met with meaningful surplus.</li>
+              <li>Copies of all four active client contracts, with the contract value and payment terms highlighted. For the US PE firm retainer, this included a supplementary letter confirming that the work was conducted fully remotely from the UK with no restriction on location.</li>
+              <li>Michael's most recent two years of UK self-assessment returns, with a brief summary document prepared by My Spanish Visa cross-referencing total declared income to bank deposit records.</li>
+              <li>Replacement health insurance was arranged through a Spain-compliant no-copayment provider, with policy documentation in Spanish confirming full in-patient coverage without excess or copayments.</li>
+            </ul>
+            <p style="margin-top:0.85rem;">Beckham Law eligibility was assessed alongside the DNV application — as a UK-based self-employed person taking up activity in Spain, Michael qualified. The Beckham Law registration was submitted within the correct timeframe after his arrival in Barcelona.</p>
+          </div>
+
+          <div class="outcome-highlight">
+            <div class="outcome-highlight__label">Outcome</div>
+            <p>DNV approved by the Manchester consulate. Beckham Law approved following arrival in Barcelona. Michael continues to serve all four clients remotely from Barcelona. He has noted that his effective tax rate in Spain under Beckham Law is considerably lower than the UK's self-employed combined income tax and National Insurance burden he previously carried.</p>
+          </div>
+
+          <div class="cs-quote">
+            <p>"The income presentation they built was genuinely impressive — coherent, well-structured, and clearly addressed what the consulate needed to see. I'd been worried my variable income would be a problem. It wasn't, because it was presented properly."</p>
+            <cite>— Michael, Barcelona</cite>
+          </div>
+        </div>
+
+        <div class="cs-sidebar">
+          <div class="cs-stats-box">
+            <div class="cs-stats-box__title">Case Summary</div>
+            <div class="cs-stat-row">
+              <span class="cs-stat-row__label">Client</span>
+              <span class="cs-stat-row__value">Michael, 44</span>
+            </div>
+            <div class="cs-stat-row">
+              <span class="cs-stat-row__label">Nationality</span>
+              <span class="cs-stat-row__value">British (Manchester)</span>
+            </div>
+            <div class="cs-stat-row">
+              <span class="cs-stat-row__label">Visa Type</span>
+              <span class="cs-stat-row__value">Digital Nomad Visa (freelance)</span>
+            </div>
+            <div class="cs-stat-row">
+              <span class="cs-stat-row__label">Consulate</span>
+              <span class="cs-stat-row__value">Manchester</span>
+            </div>
+            <div class="cs-stat-row">
+              <span class="cs-stat-row__label">Income Profile</span>
+              <span class="cs-stat-row__value">Variable £3k–£8k/month (avg £5,400)</span>
+            </div>
+            <div class="cs-stat-row">
+              <span class="cs-stat-row__label">Client Relationships</span>
+              <span class="cs-stat-row__value">4 active contracts documented</span>
+            </div>
+            <div class="cs-stat-row">
+              <span class="cs-stat-row__label">Beckham Law</span>
+              <span class="cs-stat-row__value cs-stat-row__value--highlight">Approved</span>
+            </div>
+            <div class="cs-stat-row">
+              <span class="cs-stat-row__label">Outcome</span>
+              <span class="cs-stat-row__value cs-stat-row__value--highlight">Approved — living in Barcelona</span>
+            </div>
+            <a href="/digital-nomad-visa-freelancer/" class="cs-stats-box__cta">DNV for freelancers &#8594;</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════════════
+       CASE STUDY 6: PRIYA AND RAJ — NLV FAMILY
+  ══════════════════════════════════════════════════════════ -->
+  <section class="cs-section" id="cs6">
+    <div class="container">
+      <div class="cs-inner cs-inner--reversed">
+
+        <div class="cs-sidebar">
+          <div class="cs-stats-box">
+            <div class="cs-stats-box__title">Case Summary</div>
+            <div class="cs-stat-row">
+              <span class="cs-stat-row__label">Clients</span>
+              <span class="cs-stat-row__value">Priya &amp; Raj + daughter (8)</span>
+            </div>
+            <div class="cs-stat-row">
+              <span class="cs-stat-row__label">Nationality</span>
+              <span class="cs-stat-row__value">British (Indian heritage)</span>
+            </div>
+            <div class="cs-stat-row">
+              <span class="cs-stat-row__label">Visa Type</span>
+              <span class="cs-stat-row__value">Non-Lucrative Visa (family of 3)</span>
+            </div>
+            <div class="cs-stat-row">
+              <span class="cs-stat-row__label">Consulate</span>
+              <span class="cs-stat-row__value">London</span>
+            </div>
+            <div class="cs-stat-row">
+              <span class="cs-stat-row__label">Income Source</span>
+              <span class="cs-stat-row__value">Investment portfolio (dividend income)</span>
+            </div>
+            <div class="cs-stat-row">
+              <span class="cs-stat-row__label">Key Complication</span>
+              <span class="cs-stat-row__value">Employed background; passive income demonstration; daughter's school</span>
+            </div>
+            <div class="cs-stat-row">
+              <span class="cs-stat-row__label">School Placement</span>
+              <span class="cs-stat-row__value cs-stat-row__value--highlight">Confirmed — international school, Marbella</span>
+            </div>
+            <div class="cs-stat-row">
+              <span class="cs-stat-row__label">Outcome</span>
+              <span class="cs-stat-row__value cs-stat-row__value--highlight">Approved — family settled in Marbella</span>
+            </div>
+            <a href="/non-lucrative-visa-children/" class="cs-stats-box__cta">NLV with children &#8594;</a>
+          </div>
+        </div>
+
+        <div class="cs-body">
+          <div class="cs-body__label">
+            <div class="cs-body__num">6</div>
+            <span class="cs-body__type">Non-Lucrative Visa &middot; Family &middot; Investment Income</span>
+          </div>
+          <h2>Priya and Raj — NLV Family Application with Investment Income</h2>
+          <p class="cs-body__tagline">A British-Indian family of three relocating to Marbella — with an employed income background that needed structural rethinking.</p>
+
+          <div class="cs-block">
+            <div class="cs-block__heading">
+              <span class="cs-block__dot cs-block__dot--situation"></span>
+              Situation
+            </div>
+            <p>Priya, 41, was a senior marketing director for a UK technology company. Raj, 43, was a partner at a London professional services firm. They had an eight-year-old daughter, Amara. The family owned a substantial investment portfolio managed through a private wealth management firm — a mix of equities, investment trusts, and dividend-bearing shares — worth approximately £620,000 in total.</p>
+            <p style="margin-top:0.85rem;">Their plan was to relocate to Marbella, where Raj's family had property connections. Both Priya and Raj intended to leave their UK roles; they had sufficient wealth to live without employment income in Spain for the foreseeable future. Neither had previously required a visa for any country — both hold UK passports and had always travelled freely as EU citizens prior to Brexit.</p>
+          </div>
+
+          <div class="cs-block">
+            <div class="cs-block__heading">
+              <span class="cs-block__dot cs-block__dot--challenge"></span>
+              The Challenge
+            </div>
+            <p>The NLV requires applicants to demonstrate passive income — income that arrives without active work in Spain. Salary and employment income does not qualify. Priya and Raj's primary income had always been employment-based, and while their investment portfolio was substantial, it had historically been structured for capital growth rather than income distribution. Dividends were being reinvested rather than paid out.</p>
+            <ul class="cs-list cs-list--challenge">
+              <li>The portfolio needed to generate regular, documented dividend income above the NLV threshold before the application was submitted — not just represent a theoretical income capacity from a capital value.</li>
+              <li>The London UK Visas and Immigration consulate (via the Spanish consulate for UK applicants post-Brexit) has become more rigorous in its assessment of investment income evidence. Portfolio valuations alone are not accepted as proof of income.</li>
+              <li>Amara needed a confirmed school place in Spain before the visa application could include her as a dependant — but the family was reluctant to commit to a specific school without first knowing the visa would be approved.</li>
+              <li>The London consulate requires specific documentation for child dependants including birth certificates with apostille, and in Amara's case there was an additional complication: her UK birth certificate recorded her birth name slightly differently from her passport name due to a transcription issue at registration.</li>
+            </ul>
+          </div>
+
+          <div class="cs-block">
+            <div class="cs-block__heading">
+              <span class="cs-block__dot cs-block__dot--solution"></span>
+              The Solution
+            </div>
+            <p>My Spanish Visa worked with the family's wealth manager over a six-week period to restructure the portfolio's dividend policy. Specific dividend-distributing investment trusts and equities were designated, with dividend payment schedules configured to produce monthly income above the NLV three-person household threshold of approximately €2,960 per month. Six months of dividend distributions were allowed to accumulate before the application was submitted, providing a clear monthly income track record.</p>
+            <p style="margin-top:0.85rem;">For Amara's schooling, My Spanish Visa contacted two international schools in the Marbella area. One school was prepared to issue a conditional acceptance letter — confirming a provisional place subject to visa approval — which satisfied the London consulate's requirement for a school confirmation letter without requiring the family to commit irrevocably before the visa decision.</p>
+            <p style="margin-top:0.85rem;">The birth certificate discrepancy was resolved by obtaining a certified confirmation from the General Register Office, accompanied by a sworn legal declaration explaining the minor name variance. This was presented with the application alongside a sworn translation.</p>
+          </div>
+
+          <div class="outcome-highlight">
+            <div class="outcome-highlight__label">Outcome</div>
+            <p>NLV approved for all three family members by the London consulate. The conditional school acceptance was converted to a confirmed place following visa approval. Amara is now settled in school in Marbella. Priya and Raj have both resigned from their UK roles and are living on investment income in Spain, with My Spanish Visa currently supporting them through Amara's TIE card registration and the family's empadronamiento process.</p>
+          </div>
+
+          <div class="cs-quote">
+            <p>"The portfolio restructuring advice was something we'd never have thought of ourselves. Our wealth manager was excellent, but didn't know the Spanish consulate's specific income presentation requirements. My Spanish Visa bridged the gap between the two. Amara is thriving in school."</p>
+            <cite>— Priya, Marbella</cite>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════════════
+       FAQ SECTION
+  ══════════════════════════════════════════════════════════ -->
+  <section class="faq-section">
+    <div class="container--narrow">
+      <div class="section-label" style="text-align:center;">Questions about our service</div>
+      <h2>Frequently Asked Questions</h2>
+      <p class="sub">Questions based on the situations covered in these case studies and the ones we hear most often from prospective clients.</p>
+
+      <div class="faq-list">
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <h3>Can I still apply for an NLV if I have an old criminal record or police caution?</h3>
+            <div class="faq-toggle">+</div>
+          </div>
+          <div class="faq-answer">
+            In many cases, yes — but the handling of the disclosure is critical. Spain requires applicants to submit a criminal record certificate and to disclose any matters recorded on it. An old, minor matter does not automatically disqualify an application, but concealment — deliberately or accidentally — can result in immediate refusal and permanent bar. The correct approach, as illustrated by Robert Thornton's case, is full disclosure accompanied by a properly drafted explanation letter. We handle this routinely and can advise on the likely impact of specific matters on your application prospects.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <h3>What criminal record certificate do US citizens need for the Digital Nomad Visa?</h3>
+            <div class="faq-toggle">+</div>
+          </div>
+          <div class="faq-answer">
+            US citizens applying for the DNV must provide an FBI Identity History Summary (federal background check), apostilled through the US State Department. A state-level criminal background check — from California, New York, Texas, or any other state — does not satisfy this requirement, even if it shows a clear record. This is one of the most common errors made in self-prepared US DNV applications. The FBI check takes several weeks to obtain, so it needs to be requested early in the process.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <h3>What is the Beckham Law and who qualifies?</h3>
+            <div class="faq-toggle">+</div>
+          </div>
+          <div class="faq-answer">
+            The Beckham Law (Régimen Especial para Trabajadores Desplazados, or RETA) is a Spanish tax regime that allows qualifying individuals who move to Spain for work purposes — including Digital Nomad Visa holders — to be taxed as non-residents for six years. This means a flat 24% tax rate on Spanish-source income up to €600,000 per year, rather than Spain's progressive resident rates which rise to 47%. For higher earners, the saving is substantial. DNV holders who have not been Spanish tax residents in the five years before arrival generally qualify. Applications must be submitted within six months of arrival. We advise on Beckham Law eligibility as part of the DNV service.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <h3>Can I reapply after a Spanish visa rejection?</h3>
+            <div class="faq-toggle">+</div>
+          </div>
+          <div class="faq-answer">
+            Yes. A rejection is not a permanent bar in most cases — it reflects the specific application that was submitted, not your eligibility in principle. The Kellys' case illustrates this clearly: they had the financial means to qualify, but their evidence pack was insufficient in format and presentation. After a full analysis of the refusal reason and a complete rebuild of the application, they were approved on reapplication four months after the initial rejection. If you have been rejected, we offer a post-rejection analysis service to identify what went wrong and advise on reapplication prospects.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <h3>How do self-employed people prove income for the Digital Nomad Visa?</h3>
+            <div class="faq-toggle">+</div>
+          </div>
+          <div class="faq-answer">
+            Self-employed applicants need to demonstrate sustainable income above the DNV threshold — typically 200% of Spain's IPREM, currently around €2,646 per month. For freelancers and consultants with variable income, this means providing bank statements, client contracts, invoices, and ideally a professional income summary that presents the average in a clear, evidenced format. We prepare this documentation for self-employed clients as a standard part of the DNV service, and have handled applications with complex multi-client income structures, retainers, and international clients.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <h3>Can I apply for an NLV on investment income rather than pension or salary?</h3>
+            <div class="faq-toggle">+</div>
+          </div>
+          <div class="faq-answer">
+            Yes — investment income (dividends, rental income, interest) can satisfy the NLV's passive income requirement, but it must be documented as regular, received income — not potential income from a portfolio's capital value. If your portfolio has historically been structured for growth rather than income distribution, the dividend policy may need to be adjusted before the application is submitted, as Priya and Raj's case illustrates. We advise on portfolio restructuring for NLV income purposes and work with clients' wealth managers or financial advisers to align the documentation with consulate requirements.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <h3>Does my child need a confirmed school place before we apply for an NLV?</h3>
+            <div class="faq-toggle">+</div>
+          </div>
+          <div class="faq-answer">
+            Most Spanish consulates require evidence of school enrolment or a school acceptance letter for child dependants on an NLV application. This is a common concern for families — committing to a school without a visa feels premature. In practice, many Spanish international schools will issue a conditional acceptance letter, confirming a provisional place subject to visa approval. We facilitate these letters as part of the family application service and have established contacts with schools in popular destinations including Málaga, Valencia, Marbella, Alicante, and Barcelona.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <h3>Can I transition from a student visa to an NLV without returning to my home country?</h3>
+            <div class="faq-toggle">+</div>
+          </div>
+          <div class="faq-answer">
+            No — the NLV must be applied for from your country of habitual residence, which means attending a consulate appointment in your home country. You cannot apply for an NLV while you are in Spain on a student visa, even if your student visa is still valid. The key is timing: preparation should start while you are still in Spain, so that all documents requiring action in your home country are ready or underway before you return. Sarah's case demonstrates that with early planning, a seamless transition with no gap in legal status is achievable.
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════════════
+       INTERNAL LINKS
+  ══════════════════════════════════════════════════════════ -->
+  <section class="links-section">
+    <div class="container">
+      <div class="section-label">Further reading</div>
+      <h2>Related Service &amp; Guide Pages</h2>
+      <p class="sub">Explore the detailed information pages for the visa routes and situations featured in these case studies.</p>
+      <div class="links-grid">
+        <a href="/non-lucrative-visa-spain/" class="link-card">
+          <div class="link-card__label">Service</div>
+          <div class="link-card__title">Non-Lucrative Visa Spain</div>
+        </a>
+        <a href="/digital-nomad-visa-spain/" class="link-card">
+          <div class="link-card__label">Service</div>
+          <div class="link-card__title">Digital Nomad Visa Spain</div>
+        </a>
+        <a href="/student-visa-spain/" class="link-card">
+          <div class="link-card__label">Service</div>
+          <div class="link-card__title">Spain Student Visa</div>
+        </a>
+        <a href="/non-lucrative-visa-family/" class="link-card">
+          <div class="link-card__label">Guide</div>
+          <div class="link-card__title">NLV for Families</div>
+        </a>
+        <a href="/non-lucrative-visa-rejected/" class="link-card">
+          <div class="link-card__label">Guide</div>
+          <div class="link-card__title">NLV Rejection &amp; Reapplication</div>
+        </a>
+        <a href="/digital-nomad-visa-freelancer/" class="link-card">
+          <div class="link-card__label">Guide</div>
+          <div class="link-card__title">DNV for Freelancers &amp; Self-Employed</div>
+        </a>
+        <a href="/blog-beckham-law-digital-nomad-visa-spain/" class="link-card">
+          <div class="link-card__label">Blog</div>
+          <div class="link-card__title">Beckham Law &amp; the Digital Nomad Visa</div>
+        </a>
+        <a href="/non-lucrative-visa-passive-income/" class="link-card">
+          <div class="link-card__label">Guide</div>
+          <div class="link-card__title">Proving Passive Income for the NLV</div>
+        </a>
+        <a href="/nlv-criminal-record-check/" class="link-card">
+          <div class="link-card__label">Guide</div>
+          <div class="link-card__title">Criminal Record Check for Spain Visa</div>
+        </a>
+        <a href="/non-lucrative-visa-uk/" class="link-card">
+          <div class="link-card__label">Guide</div>
+          <div class="link-card__title">NLV for UK Citizens</div>
+        </a>
+        <a href="/digital-nomad-visa-usa/" class="link-card">
+          <div class="link-card__label">Guide</div>
+          <div class="link-card__title">DNV for Americans</div>
+        </a>
+        <a href="/non-lucrative-visa-australia/" class="link-card">
+          <div class="link-card__label">Guide</div>
+          <div class="link-card__title">NLV for Australians</div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════════════
+       CTA SECTION
+  ══════════════════════════════════════════════════════════ -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="section-label" style="color:var(--yellow); text-align:center;">Start your story</div>
+      <h2>Every Case Study Started with a Conversation</h2>
+      <p>Tell us about your situation — your nationality, your visa type, your timeline — and we'll tell you exactly how we can help. Free eligibility check, no obligation.</p>
+      <div class="cta-btns">
+        <a href="https://dashboard.platinumlegalspain.com/nlv" class="btn-cta-primary">Start Free Eligibility Check &#8594;</a>
+        <a href="https://dashboard.platinumlegalspain.com/nlv" class="btn-cta-ghost">Book a Consultation</a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════════════════════════ -->
+  <footer class="site-footer">
+    <p>
+      &copy; 2026 My Spanish Visa &middot; Powered by PLS Platinum Legal Spain &middot; All rights reserved
+      &nbsp;&nbsp;|&nbsp;&nbsp;
+      <a href="/privacy-policy/">Privacy Policy</a>
+      <a href="/terms/">Terms of Service</a>
+      <a href="https://dashboard.platinumlegalspain.com/nlv">Contact</a>
+    </p>
+  </footer>
+
+  <script>
+    function toggleFaq(el) {
+      var item = el.parentElement;
+      var isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(function(i) {
+        i.classList.remove('open');
+        i.querySelector('.faq-toggle').textContent = '+';
+      });
+      if (!isOpen) {
+        item.classList.add('open');
+        el.querySelector('.faq-toggle').textContent = '−';
+      }
+    }
+  </script>
+
+</body>
+</html>

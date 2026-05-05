@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Consultation Booked | My Spanish Visa</title>
+  <meta name="description" content="Your Spain visa consultation is confirmed. Here is what to do before your call.">
+  <meta name="robots" content="noindex,follow">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Consultation Booked | My Spanish Visa">
+  <meta property="og:description" content="Your Spain visa consultation is confirmed. Here is what to do before your call.">
+  <meta property="og:image" content="/assets/images/og-myspanishvisa-default.jpg">
+  <meta property="og:site_name" content="My Spanish Visa">
+  <meta name="twitter:card" content="summary_large_image">
+  <style>
+html,body{max-width:100%;overflow-x:clip;margin:0;padding:0}*,*::before,*::after{box-sizing:border-box}
+:root{--navy:#0c1930;--navy-mid:#1a3a5c;--red:#be0011;--red-deep:#8c000d;--yellow:#facf39;--cream:#f8f7f4;--white:#ffffff;--black:#1a1a1a;--muted:#5a6478;--border:#dce3ed;--shadow-sm:0 2px 8px rgba(12,25,48,0.08);--shadow-md:0 6px 24px rgba(12,25,48,0.13)}
+body{font-family:'Inter','Segoe UI',system-ui,Arial,sans-serif;font-size:16px;line-height:1.75;color:var(--black);background:#fff}
+.msv-nav{position:sticky;top:0;z-index:9000;background:var(--navy);border-bottom:1px solid rgba(255,255,255,0.08);box-shadow:0 2px 12px rgba(12,25,48,0.22)}
+.msv-nav__inner{max-width:1200px;margin:0 auto;padding:0 1.5rem;display:flex;align-items:center;justify-content:space-between;height:64px;gap:1.5rem}
+.msv-nav__logo{display:flex;align-items:center;gap:0.55rem;text-decoration:none;flex-shrink:0}
+.msv-nav__logo-flag{font-size:1.3rem;line-height:1}
+.msv-nav__logo-text{font-size:1rem;font-weight:800;color:#fff;letter-spacing:-0.01em;line-height:1.2}
+.msv-nav__logo-text span{color:var(--yellow)}
+.msv-nav__links{display:flex;align-items:center;gap:0;list-style:none;margin:0;padding:0}
+.msv-nav__links>li{position:relative}
+.msv-nav__links>li>a,.msv-nav__links>li>button{display:flex;align-items:center;gap:0.3rem;padding:0.5rem 0.9rem;font-size:0.87rem;font-weight:600;color:rgba(255,255,255,0.85);text-decoration:none;background:none;border:none;cursor:pointer;height:64px}
+.msv-nav__links>li>a:hover,.msv-nav__links>li>button:hover{color:#fff;background:rgba(255,255,255,0.08)}
+.msv-nav__chevron{font-size:0.65rem;opacity:0.7}
+.msv-nav__dropdown{display:none;position:absolute;top:100%;left:0;min-width:220px;background:#fff;border:1px solid var(--border);border-radius:10px;box-shadow:var(--shadow-md);padding:0.5rem 0;z-index:200}
+.msv-nav__links>li:hover .msv-nav__dropdown,.msv-nav__links>li:focus-within .msv-nav__dropdown{display:block}
+.msv-nav__dropdown a{display:flex;align-items:center;gap:0.6rem;padding:0.6rem 1.1rem;font-size:0.85rem;font-weight:600;color:var(--navy);text-decoration:none}
+.msv-nav__dropdown a:hover{background:var(--cream);color:var(--red)}
+.msv-nav__dropdown-icon{width:24px;height:24px;background:var(--cream);border-radius:5px;display:flex;align-items:center;justify-content:center;font-size:0.85rem;flex-shrink:0}
+.msv-nav__dropdown-divider{height:1px;background:var(--border);margin:0.4rem 0}
+.msv-nav__cta{display:inline-flex;align-items:center;padding:0.55rem 1.2rem;background:var(--red);color:#fff !important;font-size:0.85rem;font-weight:700;border-radius:6px;text-decoration:none;white-space:nowrap;flex-shrink:0;box-shadow:0 2px 8px rgba(190,0,17,0.3)}
+.msv-nav__cta:hover{background:var(--red-deep);text-decoration:none}
+.msv-nav__burger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:0.4rem;border-radius:5px}
+.msv-nav__burger span{width:22px;height:2px;background:#fff;border-radius:2px;display:block}
+.msv-nav__mobile{display:none;flex-direction:column;background:var(--navy-mid);padding:1rem 1.5rem 1.5rem;border-top:1px solid rgba(255,255,255,0.1)}
+.msv-nav__mobile.open{display:flex}
+.msv-nav__mobile a{padding:0.65rem 0;color:rgba(255,255,255,0.9);font-size:0.95rem;font-weight:600;text-decoration:none;border-bottom:1px solid rgba(255,255,255,0.07)}
+.msv-nav__mobile a:hover{color:var(--yellow)}
+.msv-nav__mobile-sub{padding-left:1rem !important;font-size:0.88rem !important;color:rgba(255,255,255,0.7) !important}
+.msv-nav__mobile-cta{margin-top:1rem;background:var(--red);color:#fff !important;border-radius:6px;text-align:center;padding:0.75rem 1rem !important;border-bottom:none !important}
+@media(max-width:900px){.msv-nav__links{display:none}.msv-nav__cta{display:none}.msv-nav__burger{display:flex}}
+@media(max-width:480px){.msv-nav__inner{padding:0 1rem}}
+.msv-footer{background:var(--navy);color:rgba(255,255,255,0.75);overflow-x:clip}
+.msv-footer__top{max-width:1200px;margin:0 auto;padding:4rem 1.5rem 3rem;display:grid;grid-template-columns:280px 1fr 1fr 1fr;gap:3rem}
+@media(max-width:900px){.msv-footer__top{grid-template-columns:1fr 1fr;gap:2.5rem}}
+@media(max-width:560px){.msv-footer__top{grid-template-columns:1fr;gap:2rem;padding:3rem 1.2rem 2rem}}
+.msv-footer__logo{display:flex;align-items:center;gap:0.5rem;text-decoration:none;margin-bottom:1rem}
+.msv-footer__logo-text{font-size:1rem;font-weight:800;color:#fff;letter-spacing:-0.01em}
+.msv-footer__logo-text span{color:var(--yellow)}
+.msv-footer__tagline{font-size:0.83rem;color:rgba(255,255,255,0.55);line-height:1.6;margin-bottom:1.5rem}
+.msv-footer__trust{display:flex;flex-direction:column;gap:0.45rem}
+.msv-footer__trust-item{display:flex;align-items:center;gap:0.45rem;font-size:0.78rem;font-weight:600;color:rgba(255,255,255,0.65)}
+.msv-footer__trust-item::before{content:'';width:6px;height:6px;background:var(--yellow);border-radius:50%;flex-shrink:0}
+.msv-footer__col-title{font-size:0.72rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:1rem}
+.msv-footer__links{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:0.5rem}
+.msv-footer__links a{font-size:0.87rem;color:rgba(255,255,255,0.68);text-decoration:none;transition:color 0.15s;display:inline-block}
+.msv-footer__links a:hover{color:var(--yellow)}
+.msv-footer__bottom{border-top:1px solid rgba(255,255,255,0.08)}
+.msv-footer__bottom-inner{max-width:1200px;margin:0 auto;padding:1.5rem;display:flex;flex-wrap:wrap;align-items:flex-start;gap:1rem;justify-content:space-between}
+.msv-footer__disclaimer{font-size:0.73rem;color:rgba(255,255,255,0.35);line-height:1.65;max-width:720px}
+.msv-footer__copyright{font-size:0.78rem;color:rgba(255,255,255,0.35);white-space:nowrap}
+/* PAGE */
+.msv *,.msv *::before,.msv *::after{box-sizing:border-box;margin:0;padding:0}
+.msv{--navy:#0c1930;--navy-mid:#1a3a5c;--red:#be0011;--red-deep:#8c000d;--yellow:#facf39;--cream:#f8f7f4;--white:#ffffff;--black:#1a1a1a;--muted:#5a6478;--border:#dce3ed;--shadow-sm:0 2px 8px rgba(12,25,48,0.08);--shadow-md:0 6px 24px rgba(12,25,48,0.13);font-family:'Inter','Segoe UI',system-ui,Arial,sans-serif;font-size:16px;line-height:1.75;color:var(--black);width:100%}
+.msv__container{max-width:1100px;margin:0 auto;padding:0 2rem}
+.msv__container--narrow{max-width:720px;margin:0 auto;padding:0 2rem}
+@media(max-width:640px){.msv__container,.msv__container--narrow{padding:0 1.2rem}}
+.msv h1{font-size:clamp(2rem,4vw,2.8rem);font-weight:800;line-height:1.15;color:var(--navy);letter-spacing:-0.025em;margin-bottom:1rem}
+.msv h2{font-size:clamp(1.3rem,2.5vw,1.7rem);font-weight:700;color:var(--navy);letter-spacing:-0.01em;margin-bottom:1.25rem}
+.msv p{color:var(--muted);margin-bottom:1rem;font-size:0.97rem}
+.msv a{color:var(--red);text-decoration:none}
+.msv a:hover{text-decoration:underline}
+.msv__section{padding:6rem 0;background:var(--white)}
+.msv__section--cream{padding:6rem 0;background:linear-gradient(180deg,#f8f7f4 0%,#f2f4f8 100%)}
+@media(max-width:640px){.msv__section,.msv__section--cream{padding:3.5rem 0}}
+/* Success hero */
+.msv__success-hero{background:linear-gradient(180deg,#f8f7f4 0%,#fff 100%);padding:5rem 0 4rem;text-align:center;border-bottom:1px solid var(--border)}
+.msv__success-icon{font-size:4rem;margin-bottom:1.5rem;display:block;animation:msv-pop 0.5s cubic-bezier(0.34,1.56,0.64,1) both}
+.msv__success-label{display:inline-flex;align-items:center;gap:0.5rem;background:rgba(26,92,58,0.1);border:1px solid rgba(26,92,58,0.25);color:#1a5c3a;font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;padding:0.35rem 0.9rem;border-radius:100px;margin-bottom:1.4rem}
+.msv__success-label::before{content:'';width:6px;height:6px;background:#1a5c3a;border-radius:50%}
+.msv__success-hero h1{color:var(--navy) !important;margin-bottom:0.75rem}
+.msv__success-hero p{font-size:1.05rem;color:var(--muted);max-width:520px;margin:0 auto 2.5rem;line-height:1.7}
+.msv__btn-group{display:flex;flex-wrap:wrap;gap:0.85rem;justify-content:center}
+.msv__btn{display:inline-block;padding:0.9rem 2rem;font-size:0.93rem;font-weight:700;border-radius:6px;text-decoration:none !important;cursor:pointer;transition:transform 0.15s,box-shadow 0.15s}
+.msv__btn:hover{transform:translateY(-1px);text-decoration:none !important}
+.msv .msv__btn--primary{background:linear-gradient(135deg,var(--red),var(--red-deep));color:#fff !important;box-shadow:0 4px 16px rgba(190,0,17,0.38)}
+.msv .msv__btn--primary:hover{box-shadow:0 6px 22px rgba(190,0,17,0.5);color:#fff !important}
+.msv .msv__btn--outline{background:transparent;color:var(--navy) !important;border:2px solid var(--navy)}
+.msv .msv__btn--outline:hover{background:var(--navy);color:#fff !important}
+/* Cards */
+.msv__card-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.25rem}
+@media(max-width:620px){.msv__card-grid{grid-template-columns:1fr}}
+.msv__card{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:1.6rem;box-shadow:var(--shadow-sm);display:flex;gap:1rem;align-items:flex-start}
+.msv__card-icon{font-size:1.5rem;flex-shrink:0;margin-top:2px}
+.msv__card-body h3{font-size:0.9rem;font-weight:700;color:var(--navy);margin-bottom:0.3rem}
+.msv__card-body p{font-size:0.84rem;color:var(--muted);margin:0;line-height:1.6}
+/* CTA band */
+.msv__cta-band{background:linear-gradient(135deg,var(--red),var(--red-deep));padding:4rem 0;text-align:center}
+.msv__cta-band h2{color:#fff;font-size:clamp(1.4rem,3vw,2rem);margin-bottom:0.75rem;display:block;font-weight:800}
+.msv__cta-band p{color:rgba(255,255,255,0.82);max-width:480px;margin:0 auto 2rem;font-size:0.97rem}
+.msv__cta-band .msv__btn--white{background:#fff;color:var(--red) !important;box-shadow:0 4px 16px rgba(0,0,0,0.15)}
+.msv__cta-band .msv__btn--white:hover{box-shadow:0 6px 22px rgba(0,0,0,0.22);color:var(--red) !important}
+.msv__cta-band .msv__btn--outline-light{background:transparent;color:#fff !important;border:1.5px solid rgba(255,255,255,0.6)}
+.msv__cta-band .msv__btn--outline-light:hover{background:rgba(255,255,255,0.12);color:#fff !important}
+.msv__disclaimer{background:#f2f4f8;border-top:1px solid var(--border);padding:1.5rem 0}
+.msv__disclaimer p{font-size:0.78rem;color:var(--muted);text-align:center;margin:0;line-height:1.7}
+@keyframes msv-pop{0%{opacity:0;transform:scale(0.6)}100%{opacity:1;transform:scale(1)}}
+@keyframes msv-shimmer{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+  </style>
+</head>
+<body>
+<header class="msv-nav" role="banner">
+  <div class="msv-nav__inner">
+    <a href="/" class="msv-nav__logo" aria-label="My Spanish Visa — Home"><img src="/assets/images/msv-logo-white.png" alt="My Spanish Visa" height="80" style="display:block;"></a>
+    <nav aria-label="Main navigation"><ul class="msv-nav__links">
+      <li><button>Visas <span class="msv-nav__chevron">&#9662;</span></button><div class="msv-nav__dropdown"><a href="/non-lucrative-visa-spain/"><span class="msv-nav__dropdown-icon">&#127958;&#65039;</span>Non-Lucrative Visa</a><a href="/digital-nomad-visa-spain/"><span class="msv-nav__dropdown-icon">&#128187;</span>Digital Nomad Visa</a><a href="/student-visa-spain/"><span class="msv-nav__dropdown-icon">&#127891;</span>Student Visa</a><div class="msv-nav__dropdown-divider"></div><a href="/spain-visa-renewal/"><span class="msv-nav__dropdown-icon">&#128260;</span>Visa Renewals</a></div></li>
+      <li><a href="/about-us/">About Us</a></li><li><a href="/contact-us.html">Contact</a></li>
+    </ul></nav>
+    <a href="/get-help.html" class="msv-nav__cta">Get Help &#8594;</a>
+    <button class="msv-nav__burger" aria-label="Open menu" aria-expanded="false" onclick="var m=document.querySelector('.msv-nav__mobile');var open=m.classList.toggle('open');this.setAttribute('aria-expanded',open);"><span></span><span></span><span></span></button>
+  </div>
+  <nav class="msv-nav__mobile" aria-label="Mobile navigation"><a href="/non-lucrative-visa-spain/" class="msv-nav__mobile-sub">Non-Lucrative Visa</a><a href="/digital-nomad-visa-spain/" class="msv-nav__mobile-sub">Digital Nomad Visa</a><a href="/student-visa-spain/" class="msv-nav__mobile-sub">Student Visa</a><a href="/spain-visa-renewal/">Visa Renewals</a><a href="/about-us/">About Us</a><a href="/contact-us.html">Contact</a><a href="/get-help.html" class="msv-nav__mobile-cta">Get Help &#8594;</a></nav>
+</header>
+<main>
+<div class="msv">
+
+  <section class="msv__success-hero">
+    <div class="msv__container--narrow">
+      <span class="msv__success-icon">&#128197;</span>
+      <div class="msv__success-label">Confirmed</div>
+      <h1>Your Consultation Is Confirmed</h1>
+      <p>You are all set. One of our Spain visa specialists will be in touch to confirm your call time. In the meantime, here is how to make the most of it.</p>
+      <div class="msv__btn-group">
+        <a href="https://dashboard.platinumlegalspain.com/nlv" class="msv__btn msv__btn--primary">Go to My Dashboard</a>
+        <a href="/eligibility-check.html" class="msv__btn msv__btn--outline">Check Your Eligibility</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="msv__section--cream">
+    <div class="msv__container">
+      <h2 style="text-align:center;display:block;margin-bottom:0.5rem;">Prepare for Your Call</h2>
+      <p style="text-align:center;max-width:560px;margin:0 auto 2.5rem;">A little preparation makes your consultation much more productive. Here is what to have ready.</p>
+      <div class="msv__card-grid"><div class="msv__card"><div class="msv__card-icon">&#128196;</div><div class="msv__card-body"><h3>Your Passport</h3><p>Have your passport to hand &mdash; your nationality affects which consulate you apply through and what documentation is required.</p></div></div>
+<div class="msv__card"><div class="msv__card-icon">&#128176;</div><div class="msv__card-body"><h3>Your Income Details</h3><p>Think about your monthly income, savings, or investment income. We will use this to confirm whether you meet the financial threshold for your visa.</p></div></div>
+<div class="msv__card"><div class="msv__card-icon">&#128101;</div><div class="msv__card-body"><h3>Your Family Situation</h3><p>Are you applying alone or with dependants? Let us know upfront so we can cover the full picture on the call.</p></div></div>
+<div class="msv__card"><div class="msv__card-icon">&#10067;</div><div class="msv__card-body"><h3>Your Questions</h3><p>Write down anything you are unsure about before the call. No question is too basic &mdash; we cover everything from timelines to translations.</p></div></div></div>
+    </div>
+  </section>
+
+  <div class="msv__cta-band">
+    <div class="msv__container--narrow">
+      <h2>While You Wait &mdash; Start Your Eligibility Check</h2>
+      <p>Register on your visa dashboard now and complete your free eligibility check. It takes five minutes and gives your specialist a head start before your call.</p>
+      <div class="msv__btn-group">
+        <a href="https://dashboard.platinumlegalspain.com/nlv" class="msv__btn msv__btn--white">Start Eligibility Check</a>
+        <a href="/contact-us.html" class="msv__btn msv__btn--outline-light">Contact Our Team</a>
+      </div>
+    </div>
+  </div></div>
+
+</div>
+</main>
+<footer class="msv-footer" role="contentinfo">
+  <div class="msv-footer__top">
+    <div><a href="/" class="msv-footer__logo" aria-label="My Spanish Visa"><img src="/assets/images/msv-logo-white.png" alt="My Spanish Visa" height="40" style="display:block;"></a><p class="msv-footer__tagline">Specialist Spain visa &amp; residency guidance for English-speaking foreigners. A service of Platinum Legal Spain.</p><div class="msv-footer__trust"><span class="msv-footer__trust-item">All English. No barriers.</span><span class="msv-footer__trust-item">Bar-registered solicitors</span><span class="msv-footer__trust-item">100% online process</span></div></div>
+    <div><div class="msv-footer__col-title">Visas</div><ul class="msv-footer__links"><li><a href="/non-lucrative-visa-spain/">Non-Lucrative Visa</a></li><li><a href="/digital-nomad-visa-spain/">Digital Nomad Visa</a></li><li><a href="/student-visa-spain/">Student Visa</a></li><li><a href="/spain-visa-renewal/">Visa Renewals</a></li></ul></div>
+    <div><div class="msv-footer__col-title">Get Started</div><ul class="msv-footer__links"><li><a href="https://dashboard.platinumlegalspain.com/nlv">Apply: NLV</a></li><li><a href="https://dashboard.platinumlegalspain.com/dnv">Apply: DNV</a></li><li><a href="https://dashboard.platinumlegalspain.com/student-visa">Apply: Student Visa</a></li><li><a href="/eligibility-check.html">Eligibility Check</a></li></ul></div>
+    <div><div class="msv-footer__col-title">Company</div><ul class="msv-footer__links"><li><a href="/about-us/">About Us</a></li><li><a href="/testimonials/">Reviews</a></li><li><a href="/contact-us.html">Contact</a></li><li><a href="https://www.platinumlegalspain.com" rel="noopener">Platinum Legal Spain</a></li></ul></div>
+  </div>
+  <div class="msv-footer__bottom"><div class="msv-footer__bottom-inner"><p class="msv-footer__disclaimer"><strong style="color:rgba(255,255,255,0.5);">Disclaimer:</strong> My Spanish Visa provides visa processing support and is not a law firm. Content on this site is for informational purposes only and does not constitute legal advice. My Spanish Visa is a trading name of Platinum Legal Spain.</p><span class="msv-footer__copyright">&copy; 2026 My Spanish Visa. All rights reserved.</span></div></div>
+</footer>
+</body>
+</html>

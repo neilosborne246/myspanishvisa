@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- ═══════════════════════════════════════════════════════════════════
+       PAGE-SPECIFIC HEAD — replace block below per page:
+       <title>Blog Student Visa Spain Language School | My Spanish Visa</title>
+       <meta name="description" content="…">
+       <meta property="og:title" content="…">
+       <meta property="og:description" content="…">
+       <meta property="og:url" content="https://www.myspanishvisa.com/…">
+       <meta property="og:image" content="…">
+       <link rel="canonical" href="https://www.myspanishvisa.com/…">
+       <script type="application/ld+json">…</script>
+       ═══════════════════════════════════════════════════════════════════ -->
+  <title>My Spanish Visa — Spain Visa &amp; Residency Specialists</title>
+  <meta name="description" content="My Spanish Visa helps English-speaking foreigners move to Spain. Expert guidance on Non-Lucrative Visa, Digital Nomad Visa, Student Visa, renewals and more.">
+
+  <!-- Shared Open Graph defaults -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="My Spanish Visa">
+  <meta property="og:image" content="https://www.myspanishvisa.com/assets/images/og/og-myspanishvisa-default.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@myspanishvisa">
+
+  <style>
+/* ═══════════════════════════════════════════════════════════════
+   GLOBAL SHELL — nav + footer only.
+   Page-specific CSS lives inside each fragment's own <style> block.
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── iOS overflow safety ── */
+html, body { max-width: 100%; overflow-x: clip; margin: 0; padding: 0; }
+*, *::before, *::after { box-sizing: border-box; }
+
+/* ── Brand tokens (root-level so all fragments inherit) ── */
+:root {
+  --navy:      #0c1930;
+  --navy-mid:  #1a3a5c;
+  --red:       #be0011;
+  --red-deep:  #8c000d;
+  --yellow:    #facf39;
+  --cream:     #f8f7f4;
+  --white:     #ffffff;
+  --black:     #1a1a1a;
+  --muted:     #5a6478;
+  --border:    #dce3ed;
+  --shadow-sm: 0 2px 8px rgba(12,25,48,0.08);
+  --shadow-md: 0 6px 24px rgba(12,25,48,0.13);
+}
+
+body {
+  font-family: 'Inter', 'Segoe UI', system-ui, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.75;
+  color: var(--black);
+  background: #fff;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   SITE NAV
+   ───────────────────────────────────────────────────────────── */
+.msv-nav {
+  position: sticky;
+  top: 0;
+  z-index: 9000;
+  background: var(--navy);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 2px 12px rgba(12,25,48,0.22);
+}
+.msv-nav__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+  gap: 1.5rem;
+}
+
+/* Logo */
+.msv-nav__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+.msv-nav__logo-flag {
+  font-size: 1.3rem;
+  line-height: 1;
+}
+.msv-nav__logo-text {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+.msv-nav__logo-text span {
+  color: var(--yellow);
+}
+
+/* Links */
+.msv-nav__links {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.msv-nav__links > li {
+  position: relative;
+}
+.msv-nav__links > li > a,
+.msv-nav__links > li > button {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.5rem 0.9rem;
+  font-size: 0.87rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.85);
+  text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: color 0.15s, background 0.15s;
+  white-space: nowrap;
+  height: 64px;
+}
+.msv-nav__links > li > a:hover,
+.msv-nav__links > li > button:hover,
+.msv-nav__links > li:focus-within > a,
+.msv-nav__links > li:focus-within > button {
+  color: #fff;
+  background: rgba(255,255,255,0.08);
+}
+.msv-nav__chevron {
+  font-size: 0.65rem;
+  opacity: 0.7;
+  transition: transform 0.2s;
+}
+.msv-nav__links > li:focus-within .msv-nav__chevron,
+.msv-nav__links > li:hover .msv-nav__chevron {
+  transform: rotate(180deg);
+}
+
+/* Dropdown */
+.msv-nav__dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 230px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  box-shadow: var(--shadow-md);
+  padding: 0.5rem 0;
+  z-index: 200;
+}
+.msv-nav__links > li:hover .msv-nav__dropdown,
+.msv-nav__links > li:focus-within .msv-nav__dropdown {
+  display: block;
+}
+.msv-nav__dropdown a {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.6rem 1.1rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--navy);
+  text-decoration: none;
+  transition: background 0.12s;
+}
+.msv-nav__dropdown a:hover {
+  background: var(--cream);
+  color: var(--red);
+}
+.msv-nav__dropdown-icon {
+  width: 24px;
+  height: 24px;
+  background: var(--cream);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+.msv-nav__dropdown-divider {
+  height: 1px;
+  background: var(--border);
+  margin: 0.4rem 0;
+}
+
+/* CTA button */
+.msv-nav__cta {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.55rem 1.2rem;
+  background: var(--red);
+  color: #fff !important;
+  font-size: 0.85rem;
+  font-weight: 700;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.15s, box-shadow 0.15s;
+  white-space: nowrap;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(190,0,17,0.3);
+}
+.msv-nav__cta:hover {
+  background: var(--red-deep);
+  box-shadow: 0 4px 14px rgba(190,0,17,0.4);
+  text-decoration: none;
+}
+
+/* Hamburger */
+.msv-nav__burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.4rem;
+  border-radius: 5px;
+}
+.msv-nav__burger span {
+  width: 22px;
+  height: 2px;
+  background: #fff;
+  border-radius: 2px;
+  transition: transform 0.2s, opacity 0.2s;
+  display: block;
+}
+
+/* Mobile nav */
+.msv-nav__mobile {
+  display: none;
+  flex-direction: column;
+  background: var(--navy-mid);
+  padding: 1rem 1.5rem 1.5rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+.msv-nav__mobile.open { display: flex; }
+.msv-nav__mobile a {
+  padding: 0.65rem 0;
+  color: rgba(255,255,255,0.9);
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+.msv-nav__mobile a:hover { color: var(--yellow); }
+.msv-nav__mobile .msv-nav__mobile-sub {
+  padding-left: 1rem;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: rgba(255,255,255,0.7);
+}
+.msv-nav__mobile-cta {
+  margin-top: 1rem;
+  background: var(--red);
+  color: #fff !important;
+  border-radius: 6px;
+  text-align: center;
+  padding: 0.75rem 1rem !important;
+  border-bottom: none !important;
+}
+
+@media (max-width: 900px) {
+  .msv-nav__links { display: none; }
+  .msv-nav__cta { display: none; }
+  .msv-nav__burger { display: flex; }
+}
+@media (max-width: 480px) {
+  .msv-nav__inner { padding: 0 1rem; }
+}
+
+/* ─────────────────────────────────────────────────────────────
+   SITE FOOTER
+   ───────────────────────────────────────────────────────────── */
+.msv-footer {
+  background: var(--navy);
+  color: rgba(255,255,255,0.75);
+  overflow-x: clip;
+}
+.msv-footer__top {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem 3rem;
+  display: grid;
+  grid-template-columns: 280px 1fr 1fr 1fr;
+  gap: 3rem;
+}
+@media (max-width: 900px) {
+  .msv-footer__top { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
+}
+@media (max-width: 560px) {
+  .msv-footer__top { grid-template-columns: 1fr; gap: 2rem; padding: 3rem 1.2rem 2rem; }
+}
+
+.msv-footer__brand {}
+.msv-footer__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  margin-bottom: 1rem;
+}
+.msv-footer__logo-flag { font-size: 1.3rem; }
+.msv-footer__logo-text {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -0.01em;
+}
+.msv-footer__logo-text span { color: var(--yellow); }
+.msv-footer__tagline {
+  font-size: 0.83rem;
+  color: rgba(255,255,255,0.55);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+.msv-footer__trust {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+.msv-footer__trust-item {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.65);
+}
+.msv-footer__trust-item::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  background: var(--yellow);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.msv-footer__col-title {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.4);
+  margin-bottom: 1rem;
+}
+.msv-footer__links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.msv-footer__links a {
+  font-size: 0.87rem;
+  color: rgba(255,255,255,0.68);
+  text-decoration: none;
+  transition: color 0.15s;
+  display: inline-block;
+}
+.msv-footer__links a:hover {
+  color: var(--yellow);
+  text-decoration: none;
+}
+
+.msv-footer__bottom {
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+.msv-footer__bottom-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 1rem;
+  justify-content: space-between;
+}
+.msv-footer__disclaimer {
+  font-size: 0.73rem;
+  color: rgba(255,255,255,0.35);
+  line-height: 1.65;
+  max-width: 720px;
+}
+.msv-footer__copyright {
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.35);
+  white-space: nowrap;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   MAIN CONTENT AREA
+   ───────────────────────────────────────────────────────────── */
+main {
+  /* Fragments are self-contained; this wrapper just provides flow context */
+  position: relative;
+}
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════
+     SITE NAVIGATION
+     ═══════════════════════════════════════════════════ -->
+<header class="msv-nav" role="banner">
+  <div class="msv-nav__inner">
+
+    <!-- Logo -->
+    <a href="/" class="msv-nav__logo" aria-label="My Spanish Visa — Home"><img src="/assets/images/msv-logo-white.png" alt="My Spanish Visa" height="40" style="display:block;"></a>
+
+    <!-- Desktop links -->
+    <nav aria-label="Main navigation">
+      <ul class="msv-nav__links">
+
+        <li>
+          <button class="msv-nav__dropdown-trigger" aria-haspopup="true" aria-expanded="false">
+            Visas <span class="msv-nav__chevron">▾</span>
+          </button>
+          <div class="msv-nav__dropdown" role="menu">
+            <a href="/non-lucrative-visa-spain/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🏖️</span>Non-Lucrative Visa
+            </a>
+            <a href="/digital-nomad-visa-spain/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">💻</span>Digital Nomad Visa
+            </a>
+            <a href="/student-visa-spain/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🎓</span>Student Visa
+            </a>
+            <div class="msv-nav__dropdown-divider"></div>
+            <a href="/spain-visa-renewal/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🔄</span>Visa Renewals
+            </a>
+            <a href="/best-visa-move-to-spain/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">⚖️</span>Compare All Visas
+            </a>
+          </div>
+        </li>
+
+        <li>
+          <button aria-haspopup="true" aria-expanded="false">
+            Resources <span class="msv-nav__chevron">▾</span>
+          </button>
+          <div class="msv-nav__dropdown" role="menu">
+            <a href="/blog/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">📝</span>Blog &amp; Guides
+            </a>
+            <a href="/spain-visa-checklist/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">✅</span>Document Checklists
+            </a>
+            <a href="/move-to-spain/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🏠</span>Move to Spain Guide
+            </a>
+            <a href="/visa-eligibility-quiz/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🧭</span>Eligibility Quiz
+            </a>
+          </div>
+        </li>
+
+        <li><a href="/about-us/">About Us</a></li>
+        <li><a href="/testimonials/">Reviews</a></li>
+        <li><a href="/contact-us.html">Contact</a></li>
+
+      </ul>
+    </nav>
+
+    <!-- Desktop CTA -->
+    <a href="https://dashboard.platinumlegalspain.com/student-visa" class="msv-nav__cta">
+      Start My Application →
+    </a>
+
+    <!-- Hamburger (mobile) -->
+    <button class="msv-nav__burger" aria-label="Open menu" aria-expanded="false" onclick="
+      var m=document.querySelector('.msv-nav__mobile');
+      var open=m.classList.toggle('open');
+      this.setAttribute('aria-expanded', open);
+    ">
+      <span></span><span></span><span></span>
+    </button>
+
+  </div><!-- /.msv-nav__inner -->
+
+  <!-- Mobile menu -->
+  <nav class="msv-nav__mobile" aria-label="Mobile navigation">
+    <a href="/non-lucrative-visa-spain/" class="msv-nav__mobile-sub">Non-Lucrative Visa</a>
+    <a href="/digital-nomad-visa-spain/" class="msv-nav__mobile-sub">Digital Nomad Visa</a>
+    <a href="/student-visa-spain/" class="msv-nav__mobile-sub">Student Visa</a>
+    <a href="/spain-visa-renewal/">Visa Renewals</a>
+    <a href="/best-visa-move-to-spain/">Compare All Visas</a>
+    <a href="/blog/">Blog &amp; Guides</a>
+    <a href="/about-us/">About Us</a>
+    <a href="/testimonials/">Reviews</a>
+    <a href="/contact-us.html">Contact</a>
+    <a href="https://dashboard.platinumlegalspain.com/student-visa" class="msv-nav__mobile-cta">Start My Application →</a>
+  </nav>
+
+</header>
+
+
+<!-- ═══════════════════════════════════════════════════
+     PAGE CONTENT (fragment injected here)
+     ═══════════════════════════════════════════════════ -->
+<main>
+<!-- FRAGMENT_START -->
+<!-- Blog Post: Student Visa Language School -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.myspanishvisa.com/blog/student-visa-spain-language-school/",
+      "url": "https://www.myspanishvisa.com/blog/student-visa-spain-language-school/",
+      "name": "Student Visa Spain for Language Schools | Can You Get a Visa? 2026",
+      "description": "Complete guide: can you get a Student Visa for Spanish language schools? Yes—requirements, accreditation, enrollment, financial proof, and how it differs from degree programs.",
+      "inLanguage": "en-US",
+      "isPartOf": { "@id": "https://www.myspanishvisa.com/" },
+      "breadcrumb": { "@id": "https://www.myspanishvisa.com/blog/student-visa-spain-language-school/#breadcrumb" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.myspanishvisa.com/blog/student-visa-spain-language-school/#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.myspanishvisa.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.myspanishvisa.com/blog/" },
+        { "@type": "ListItem", "position": 3, "name": "Language School Visa" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Can you get a Student Visa for a language school in Spain?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes, absolutely. Language schools are eligible for student visas if accredited by the Ministry of Education (Ministerio de Educación) or recognized by official language examination bodies like DELE or SIELE. Short-term language programs (3–6 months) are acceptable." }
+        },
+        {
+          "@type": "Question",
+          "name": "What makes a language school acceptable for visa purposes?",
+          "acceptedAnswer": { "@type": "Answer", "text": "The school must be officially accredited by Spain's Ministry of Education, recognized by DELE/SIELE as a test preparation center, or registered with regional education authorities. Private unaccredited schools will not support visa applications. Always verify your school's accreditation status before enrolling." }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does a language program need to be for a Student Visa?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Most consulates accept programs as short as 6 weeks, but 3–6 months is standard. Programs shorter than 4 weeks may be rejected as not serious study. Longer programs (6+ months) are treated more favorably. Check with your consulate about minimum duration." }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need different documents for a language school Student Visa?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Core requirements are the same: enrollment letter, financial proof, health insurance, criminal record. The key difference: your enrollment letter comes from the language school instead of a university. It must state the program duration, schedule, language level, cost, and start date." }
+        },
+        {
+          "@type": "Question",
+          "name": "Is financial proof different for language school visas?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No, the financial requirement is the same: €1,050–€1,500/month. Show this amount available for your entire program length. Language school costs vary widely (€400–€1,500/month), so combine tuition costs with living costs in your financial planning." }
+        },
+        {
+          "@type": "Question",
+          "name": "Can you work while on a language school Student Visa?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes, with the same 30-hour/week limit as degree students during academic periods. Language school terms vary, so check your program schedule. Full-time work during summer breaks is typically allowed if you're enrolled in a fall program." }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<!-- Open Graph / Social -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.myspanishvisa.com/blog/student-visa-spain-language-school/">
+<meta property="og:title" content="My Spanish Visa">
+<meta property="og:description" content="Expert Spain visa guidance for English-speaking expats.">
+<meta property="og:image" content="https://www.myspanishvisa.com/assets/images/og/og-student-visa-spain.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="My Spanish Visa">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@myspanishvisa">
+<meta name="twitter:title" content="My Spanish Visa">
+<meta name="twitter:description" content="Expert Spain visa guidance for English-speaking expats.">
+<meta name="twitter:image" content="https://www.myspanishvisa.com/assets/images/og/og-student-visa-spain.jpg">
+
+<style>
+/* ── iOS Safari pinch-zoom overflow safety ─────────────────────────── */
+/* Prevents horizontal overflow when users pinch-zoom on iPhone/iPad.   */
+/* Top-level (also paste into theme Custom CSS / Elementor Site Settings) */
+html, body { max-width: 100%; overflow-x: clip; }
+/* Scoped wrapper safety */
+.msv, .msv-nav, .msv-topbar, .msv-footer, .msv-footer-cta,
+.pls-header, .pls-body, .pls-nlv, .pls-dnv, .pls-student {
+  max-width: 100%;
+  overflow-x: clip;
+  position: relative;
+}
+/* Cap all media inside the wrapper */
+.msv img, .msv video, .msv iframe,
+.msv-footer img, .msv-footer video, .msv-footer iframe {
+  max-width: 100%;
+  height: auto;
+}
+/* Never use 100vw — use 100% instead (dev reminder) */
+
+
+.msv *, .msv *::before, .msv *::after { box-sizing: border-box; margin: 0; padding: 0; }
+.msv {
+  --navy: #0c1930; --navy-mid: #1a3a5c; --red: #be0011; --red-deep: #8c000d;
+  --yellow: #facf39; --cream: #f8f7f4; --white: #ffffff; --black: #1a1a1a;
+  --muted: #5a6478; --border: #dce3ed;
+  --shadow-sm: 0 2px 8px rgba(12,25,48,0.08); --shadow-md: 0 6px 24px rgba(12,25,48,0.13);
+  font-family: 'Inter', 'Segoe UI', system-ui, Arial, sans-serif;
+  font-size: 16px; line-height: 1.75; color: var(--black); width: 100%;
+}
+.msv__container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+.msv__container--narrow { max-width: 780px; margin: 0 auto; padding: 0 2rem; }
+@media (max-width: 640px) { .msv__container, .msv__container--narrow { padding: 0 1.2rem; } }
+.msv h1 { font-size: clamp(2rem, 4.5vw, 3rem); font-weight: 800; line-height: 1.12; color: var(--white); letter-spacing: -0.025em; margin-bottom: 1.2rem; }
+.msv h2 { font-size: clamp(1.3rem, 2.5vw, 1.75rem); font-weight: 700; color: var(--navy); letter-spacing: -0.01em; margin-bottom: 0.5rem; position: relative; display: inline-block; padding-bottom: 0.5rem; }
+.msv h2::after { content: ''; position: absolute; bottom: 0; left: 0; width: 44px; height: 3px; background: linear-gradient(90deg, var(--red), var(--red-deep)); border-radius: 2px; }
+.msv h3 { font-size: 1.05rem; font-weight: 700; color: var(--navy); margin-bottom: 0.4rem; }
+.msv p { color: var(--black); margin-bottom: 1rem; font-size: 0.97rem; }
+.msv a { color: var(--red); text-decoration: none; }
+.msv a:hover { text-decoration: underline; }
+.msv ul { list-style: none; padding: 0; margin: 0 0 1rem; }
+.msv ul li { padding: 0.35rem 0 0.35rem 1.4rem; position: relative; font-size: 0.95rem; color: var(--black); }
+.msv ul li::before { content: ''; position: absolute; left: 0; top: 0.75rem; width: 7px; height: 7px; background: linear-gradient(135deg, var(--red), var(--red-deep)); border-radius: 50%; }
+.msv__section { padding: 5rem 0; background: var(--white); }
+.msv__section--cream { padding: 5rem 0; background: linear-gradient(180deg, #f8f7f4 0%, #f2f4f8 100%); }
+.msv__section--dark { padding: 5rem 0; background: linear-gradient(135deg, var(--navy) 0%, #0d2240 55%, #0a1d38 100%); }
+.msv__section--dark h2 { color: var(--white) !important; }
+.msv__section--dark h2::after { background: linear-gradient(90deg, var(--yellow), #e8b820); }
+.msv__section--dark h3 { color: rgba(255,255,255,0.9) !important; }
+.msv .msv__section--dark p, .msv .msv__section--dark li { color: rgba(255,255,255,0.82); }
+.msv__section--dark ul li::before { background: linear-gradient(135deg, var(--yellow), #e8b820); }
+@media (max-width: 640px) { .msv__section, .msv__section--cream, .msv__section--dark { padding: 3.5rem 0; } }
+.msv__section-hd { margin-bottom: 3rem; }
+.msv__section-hd p { color: var(--muted); font-size: 1rem; margin-top: 0.75rem; line-height: 1.7; max-width: 600px; }
+@keyframes msv-fade-up { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes msv-shimmer { 0% { background-position: -400px 0; } 100% { background-position: 400px 0; } }
+.msv__shimmer { background: linear-gradient(90deg, var(--yellow) 0%, #e8b820 25%, var(--red) 50%, #e8b820 75%, var(--yellow) 100%); background-size: 400px 100%; -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; animation: msv-shimmer 3.5s linear infinite; display: inline; }
+.msv__hero { background: linear-gradient(135deg, #0c1930 0%, #0f2540 40%, #162d50 70%, #1a3560 100%); padding: 5.5rem 0 5rem; position: relative; overflow: hidden; }
+.msv__hero::before { content: ''; position: absolute; top: -30%; right: -5%; width: 700px; height: 700px; background: radial-gradient(circle, rgba(190,0,17,0.1) 0%, transparent 65%); pointer-events: none; }
+.msv__hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, rgba(250,207,57,0.4), transparent); }
+.msv__hero-inner { max-width: 780px; animation: msv-fade-up 0.7s ease-out both; }
+.msv__eyebrow { display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(190,0,17,0.15); border: 1px solid rgba(190,0,17,0.4); color: #ff6b7a; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.35rem 0.9rem; border-radius: 100px; margin-bottom: 1.5rem; }
+.msv__eyebrow::before { content: ''; width: 6px; height: 6px; background: var(--red); border-radius: 50%; box-shadow: 0 0 6px var(--red); }
+.msv__hero p { color: rgba(255,255,255,0.78) !important; font-size: clamp(1rem, 2.2vw, 1.15rem); max-width: 640px; margin-bottom: 2.2rem; line-height: 1.75; }
+.msv__trust-bar { background: var(--white); border-bottom: 1px solid var(--border); padding: 1rem 0; box-shadow: var(--shadow-sm); }
+.msv__trust-bar-inner { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.75rem; }
+.msv__trust-item { display: flex; align-items: center; gap: 0.5rem; font-size: 0.82rem; font-weight: 600; color: var(--navy); white-space: nowrap; }
+.msv__trust-item::before { content: ''; width: 7px; height: 7px; background: linear-gradient(135deg, var(--red), var(--red-deep)); border-radius: 50%; flex-shrink: 0; }
+.msv__alert { border-radius: 10px; padding: 1.3rem 1.5rem; display: flex; gap: 1rem; align-items: flex-start; margin-bottom: 2rem; }
+.msv__alert--warn { background: #fffbea; border: 1px solid #f0d060; }
+.msv__alert--info { background: #eef4ff; border: 1px solid #a0bfff; }
+.msv__alert--red { background: #fef2f2; border: 1px solid #fca5a5; }
+.msv__alert--green { background: #f0fdf4; border: 1px solid #86efac; }
+.msv__alert-icon { font-size: 1.4rem; flex-shrink: 0; margin-top: 0.1rem; }
+.msv__alert p { font-size: 0.9rem; color: var(--black); margin: 0; line-height: 1.65; }
+.msv__alert strong { color: var(--navy); }
+.msv__faq-list { display: flex; flex-direction: column; gap: 0; border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+.msv__faq-list details { border-bottom: 1px solid var(--border); background: var(--white); }
+.msv__faq-list details:last-child { border-bottom: none; }
+.msv__faq-list summary { padding: 1.2rem 1.5rem; font-size: 0.97rem; font-weight: 700; color: var(--navy); cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+.msv__faq-list summary::-webkit-details-marker { display: none; }
+.msv__faq-list summary::after { content: '+'; font-size: 1.3rem; font-weight: 400; color: var(--red); flex-shrink: 0; transition: transform 0.2s; }
+.msv__faq-list details[open] summary::after { transform: rotate(45deg); }
+.msv__faq-list details[open] summary { color: var(--red); }
+.msv__faq-answer { padding: 0 1.5rem 1.3rem; font-size: 0.92rem; color: var(--muted); line-height: 1.75; }
+.msv__faq-answer p { color: var(--muted); font-size: 0.92rem; margin-bottom: 0.75rem; }
+.msv__faq-answer p:last-child { margin-bottom: 0; }
+.msv__cta-band { background: linear-gradient(135deg, var(--navy) 0%, #0d2240 60%, #0a1d38 100%); padding: 5rem 0; text-align: center; }
+.msv__cta-band h2 { color: var(--white) !important; display: block; }
+.msv__cta-band h2::after { left: 50%; transform: translateX(-50%); background: linear-gradient(90deg, var(--yellow), #e8b820); }
+.msv__cta-band p { color: rgba(255,255,255,0.75) !important; max-width: 560px; margin: 1rem auto 2.2rem; font-size: 1rem; }
+.msv__cta-band .msv__btn-group { justify-content: center; }
+.msv__btn-group { display: flex; flex-wrap: wrap; gap: 0.85rem; }
+.msv__btn { display: inline-block; padding: 0.85rem 2rem; font-size: 0.92rem; font-weight: 700; border-radius: 6px; text-decoration: none !important; transition: transform 0.15s, box-shadow 0.15s; }
+.msv__btn:hover { transform: translateY(-1px); text-decoration: none !important; }
+.msv .msv__btn--primary { background: linear-gradient(135deg, var(--red) 0%, var(--red-deep) 100%); color: #ffffff !important; box-shadow: 0 4px 16px rgba(190,0,17,0.38); }
+.msv .msv__btn--primary:hover { box-shadow: 0 6px 22px rgba(190,0,17,0.48); color: #ffffff !important; }
+.msv .msv__btn--outline-white { background: transparent; color: #ffffff !important; border: 1.5px solid rgba(255,255,255,0.5); }
+.msv .msv__btn--outline-white:hover { background: rgba(255,255,255,0.1); color: #ffffff !important; }
+.msv__disclaimer { background: var(--cream); border-top: 1px solid var(--border); padding: 2rem 0; }
+.msv__disclaimer p { font-size: 0.78rem; color: var(--muted); margin: 0; line-height: 1.65; }
+.msv__related { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; }
+@media (max-width: 860px) { .msv__related { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 420px) { .msv__related { grid-template-columns: 1fr; } }
+.msv__related-card { background: var(--white); border: 1px solid var(--border); border-radius: 10px; padding: 1.3rem 1.25rem; text-decoration: none !important; transition: box-shadow 0.2s, transform 0.2s; display: block; }
+.msv__related-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); text-decoration: none !important; }
+.msv__related-icon { font-size: 1.5rem; display: block; margin-bottom: 0.6rem; }
+.msv__related-title { font-size: 0.88rem; font-weight: 700; color: var(--navy); display: block; margin-bottom: 0.3rem; }
+.msv__related-desc { font-size: 0.8rem; color: var(--muted); line-height: 1.55; }
+</style>
+
+<div class="msv">
+  <section class="msv__hero">
+    <div class="msv__container--narrow">
+      <div class="msv__hero-inner">
+        <span class="msv__eyebrow">STUDENT VISA</span>
+        <h1>Language Schools & <span class="msv__shimmer">Student Visas</span></h1>
+        <p>Yes, you can get a Student Visa for language school. Learn accreditation requirements, enrollment process, financial proof, and what makes a school visa-eligible.</p>
+        <p style="font-size: 0.85rem; color: rgba(255,255,255,0.65); margin-bottom: 0;">Est. read time: 7 min</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="msv__trust-bar">
+    <div class="msv__trust-bar-inner">
+      <div class="msv__trust-item">Updated April 2026</div>
+      <div class="msv__trust-item">500+ language students</div>
+      <div class="msv__trust-item">All regions covered</div>
+    </div>
+  </div>
+
+  <section class="msv__section">
+    <div class="msv__container--narrow">
+      <div class="msv__section-hd">
+        <h2>The Short Answer: Yes, Absolutely</h2>
+        <p>You can obtain a Student Visa to study Spanish at a language school. Spain welcomes language learners. The key requirement: your school must be officially accredited or recognized by Spanish education authorities.</p>
+      </div>
+
+      <p>Many people mistakenly believe Student Visas only work for university degree programs. False. Language schools, professional certifications, and short-term vocational programs all qualify. Spain's education ministry treats language study seriously—it's a legitimate educational pathway.</p>
+
+      <h2 style="margin-top: 3rem;">What Makes a Language School Visa-Eligible?</h2>
+
+      <p><strong>Official accreditation is key.</strong> Your school must have one of these credentials: (1) Recognized by Spain's Ministry of Education (Ministerio de Educación), (2) Accredited by regional education authorities (different by region), (3) Recognized as a DELE or SIELE test preparation center, (4) Registered with Spain's education system as a private academy offering official language training.</p>
+
+      <p>Check your school's status before enrolling. Ask them directly: "Are you accredited by the Ministry of Education? Can you provide proof?" Reputable schools proudly display their accreditation. If they're evasive, move on.</p>
+
+      <h2 style="margin-top: 3rem;">Difference Between University and Language School Visas</h2>
+
+      <p>Core requirements are identical: enrollment letter, financial proof, health insurance, criminal record. The difference is administrative: university enrollments come from academic departments; language school enrollments come from the school's international office or administration. Both are legitimate.</p>
+
+      <p><strong>Enrollment letter expectations:</strong> From a language school, your enrollment letter should state: program name (e.g., "Spanish A1–B1 Intensive Program"), start and end dates, total program duration, number of class hours per week, language level focus (A1, A2, B1, etc.), school's name and official registration number, signed by authorized school official.</p>
+
+      <h2 style="margin-top: 3rem;">Program Duration: How Long Must It Be?</h2>
+
+      <p>Most consulates accept programs as short as 4–6 weeks, but 3–6 months is standard and looks more favorable. Programs shorter than 4 weeks may be rejected as insufficiently serious. If you want to study only for 2 weeks, a Student Visa may not be suitable—consider a tourist visa instead.</p>
+
+      <p>Longer programs (6+ months, yearlong) are viewed most favorably because they demonstrate serious language commitment. If considering an extended stay for language study, a longer program strengthens your application.</p>
+
+      <h2 style="margin-top: 3rem;">Financial Proof for Language Students</h2>
+
+      <p><strong>Amount required:</strong> Same as degree students: €1,050–€1,500/month. Calculate based on your program length. For a 3-month program, show €3,150–€4,500 available (€1,050–€1,500 × 3 months).</p>
+
+      <p><strong>What to include:</strong> Living costs are the primary consideration. Language school tuition varies: €400–€800/month typical. So for a 3-month program: (€600 living costs + €600 tuition) × 3 months = €3,600 needed minimum. Show at least €4,000–€5,000 to have a buffer.</p>
+
+      <p><strong>Proving funds:</strong> Use the same sources as degree students: personal bank statements (12 months), parental support letters with bank statements, scholarships, employment income. The principle is identical: demonstrate you can live comfortably without becoming dependent on public services.</p>
+
+      <h2 style="margin-top: 3rem;">Work Restrictions for Language Students</h2>
+
+      <p>You can work up to 30 hours/week during your language program, and full-time during official holiday periods. Language programs typically run September–June (academic year) with summers off. Work during summer break is unrestricted if you're enrolled for the following fall program.</p>
+
+      <p>Many language students work part-time while studying to offset living costs. This is normal and expected. Your employer must register you officially.</p>
+
+      <h2 style="margin-top: 3rem;">Key Questions to Ask Your Language School</h2>
+
+      <ul>
+        <li>Are you officially accredited by the Ministry of Education or regional authorities?</li>
+        <li>Can you provide proof of accreditation?</li>
+        <li>Will you issue an official enrollment letter for visa purposes?</li>
+        <li>Do you provide health insurance as part of enrollment, or must I purchase separately?</li>
+        <li>What is the total program cost including tuition and any materials?</li>
+        <li>What are the exact class schedule and number of hours per week?</li>
+        <li>Is attendance mandatory or can I take time off?</li>
+        <li>Will you provide proof of completion or a certificate upon finishing?</li>
+      </ul>
+
+      <div class="msv__alert msv__alert--warn">
+        <span class="msv__alert-icon">⚠️</span>
+        <p><strong>Red flag:</strong> If a language school cannot or will not confirm accreditation status, avoid it. Unaccredited schools won't support visa applications and may result in rejection.</p>
+      </div>
+
+      <h2 style="margin-top: 3rem;">Popular Language School Visa Scenarios</h2>
+
+      <p><strong>Scenario 1: Gap year language study</strong> A US high school graduate wants to spend 6 months studying Spanish before university. She enrolls in a Madrid language academy's 6-month program. The academy provides proof of accreditation and an enrollment letter. She shows €8,000 in personal savings. Financial proof: €8,000 ÷ 6 months = €1,333/month average—meets requirement. She gets approved for a 6-month Student Visa.</p>
+
+      <p><strong>Scenario 2: Pre-university language preparation</strong> A Canadian intending to study engineering at a Spanish university decides to do 3 months of Spanish language training first to improve fluency. Language school provides enrollment letter. University later provides separate acceptance for degree program starting in September. He applies for language school visa first, completes it, then applies for degree Student Visa. This is perfectly acceptable and two sequential visas are normal.</p>
+
+      <p><strong>Scenario 3: Career switcher intensive program</strong> A 35-year-old career-changer enrolls in a 6-month intensive Spanish program combined with tourism industry certification. School is accredited and provides both language and vocational certification. She shows €10,000 in savings plus parental support letter for €500/month. Combined resources exceed requirements. She's approved and can work part-time during the program.</p>
+
+      <h2 style="margin-top: 3rem;">Timeline for Language School Visas</h2>
+
+      <p>Start the process at least 3–4 months before your intended start date. (1) Research and select school (1 month), (2) Enroll and receive enrollment letter (1 month), (3) Gather documents: financial proof, health insurance, criminal record (1 month), (4) Book consulate appointment and submit application (1 month), (5) Wait for approval (4–8 weeks). This ensures you start your program on time.</p>
+
+      <h2 style="margin-top: 3rem;">After Your Language Program: Transitioning to Degree Study</h2>
+
+      <p>If you plan to pursue degree study after language school, coordinate the timing. You can: (1) Complete language school visa, (2) Apply for university while still on language school visa, (3) Transition to Student Visa for degree once approved. Most consulates allow this transition smoothly. Inform both the language school and university of your plans so they coordinate enrollment letters and timelines.</p>
+    </div>
+  </section>
+
+  <section class="msv__section msv__section--cream">
+    <div class="msv__container--narrow">
+      <div class="msv__alert msv__alert--info" style="margin-bottom: 2.5rem;">
+        <span class="msv__alert-icon">🎯</span>
+        <p><strong>Ready to apply?</strong> Verify your language school's accreditation and get all required documents together. Our checklist ensures you don't miss anything. <a href="/visa-eligibility-quiz/">Check Your Requirements</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="msv__section">
+    <div class="msv__container--narrow">
+      <h2 style="margin-bottom: 2rem;">Frequently Asked Questions</h2>
+      <div class="msv__faq-list">
+        <details>
+          <summary>Can you get a Student Visa for a language school in Spain?</summary>
+          <div class="msv__faq-answer">
+            <p>Yes, absolutely. Language schools are eligible for student visas if accredited by the Ministry of Education (Ministerio de Educación) or recognized by official language examination bodies like DELE or SIELE. Short-term language programs (3–6 months) are acceptable.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>What makes a language school acceptable for visa purposes?</summary>
+          <div class="msv__faq-answer">
+            <p>The school must be officially accredited by Spain's Ministry of Education, recognized by DELE/SIELE as a test preparation center, or registered with regional education authorities. Private unaccredited schools will not support visa applications. Always verify your school's accreditation status before enrolling.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>How long does a language program need to be for a Student Visa?</summary>
+          <div class="msv__faq-answer">
+            <p>Most consulates accept programs as short as 6 weeks, but 3–6 months is standard. Programs shorter than 4 weeks may be rejected as not serious study. Longer programs (6+ months) are treated more favorably. Check with your consulate about minimum duration.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Do I need different documents for a language school Student Visa?</summary>
+          <div class="msv__faq-answer">
+            <p>Core requirements are the same: enrollment letter, financial proof, health insurance, criminal record. The key difference: your enrollment letter comes from the language school instead of a university. It must state the program duration, schedule, language level, cost, and start date.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Is financial proof different for language school visas?</summary>
+          <div class="msv__faq-answer">
+            <p>No, the financial requirement is the same: €1,050–€1,500/month. Show this amount available for your entire program length. Language school costs vary widely (€400–€1,500/month), so combine tuition costs with living costs in your financial planning.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Can you work while on a language school Student Visa?</summary>
+          <div class="msv__faq-answer">
+            <p>Yes, with the same 30-hour/week limit as degree students during academic periods. Language school terms vary, so check your program schedule. Full-time work during summer breaks is typically allowed if you're enrolled in a fall program.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="msv__section msv__section--dark">
+    <div class="msv__container--narrow">
+      <h2 style="text-align: center; margin-bottom: 1rem;">Start Your Language Study in Spain</h2>
+      <p style="text-align: center; margin-bottom: 2rem;">Get your Student Visa approved for language school. Our experts guide you through accreditation verification and application.</p>
+      <div class="msv__btn-group" style="justify-content: center;">
+        <a href="/visa-eligibility-quiz/" class="msv__btn msv__btn--primary">Check Eligibility →</a>
+        <a href="https://dashboard.platinumlegalspain.com/student-visa" class="msv__btn msv__btn--outline-white">Book Consultation</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="msv__section">
+    <div class="msv__container--narrow">
+      <h2 style="margin-bottom: 2rem;">Related Student Guides</h2>
+      <div class="msv__related">
+        <a href="/student-visa-pillar-page/" class="msv__related-card">
+          <div class="msv__related-icon">🎓</div>
+          <span class="msv__related-title">Student Visa Overview</span>
+          <span class="msv__related-desc">Complete student visa guide.</span>
+        </a>
+        <a href="/blog/student-visa-spain-requirements-2026/" class="msv__related-card">
+          <div class="msv__related-icon">✓</div>
+          <span class="msv__related-title">Requirements Checklist</span>
+          <span class="msv__related-desc">All documents needed.</span>
+        </a>
+        <a href="/blog/student-visa-spain-financial-proof/" class="msv__related-card">
+          <div class="msv__related-icon">💰</div>
+          <span class="msv__related-title">Financial Proof Guide</span>
+          <span class="msv__related-desc">Proving your funds.</span>
+        </a>
+        <a href="/blog/student-visa-spain-work-hours/" class="msv__related-card">
+          <div class="msv__related-icon">💼</div>
+          <span class="msv__related-title">Work Rights Guide</span>
+          <span class="msv__related-desc">30-hour rule explained.</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="msv__section msv__section--cream">
+    <div class="msv__container--narrow">
+    </div>
+  </section>
+</div>
+
+<!-- FRAGMENT_END -->
+</main>
+
+
+<!-- ═══════════════════════════════════════════════════
+     SITE FOOTER
+     ═══════════════════════════════════════════════════ -->
+<footer class="msv-footer" role="contentinfo">
+
+  <div class="msv-footer__top">
+
+    <!-- Brand column -->
+    <div class="msv-footer__brand">
+      <a href="/" class="msv-footer__logo" aria-label="My Spanish Visa"><img src="/assets/images/msv-logo-white.png" alt="My Spanish Visa" height="40" style="display:block;"></a>
+      <p class="msv-footer__tagline">
+        Specialist Spain visa &amp; residency guidance for English-speaking foreigners.
+        A service of Platinum Legal Spain.
+      </p>
+      <div class="msv-footer__trust">
+        <span class="msv-footer__trust-item">All English. No barriers.</span>
+        <span class="msv-footer__trust-item">Solicitors &amp; immigration specialists</span>
+        <span class="msv-footer__trust-item">100% online process</span>
+      </div>
+    </div>
+
+    <!-- Visas column -->
+    <div>
+      <div class="msv-footer__col-title">Visas</div>
+      <ul class="msv-footer__links">
+        <li><a href="/non-lucrative-visa-spain/">Non-Lucrative Visa</a></li>
+        <li><a href="/digital-nomad-visa-spain/">Digital Nomad Visa</a></li>
+        <li><a href="/student-visa-spain/">Student Visa</a></li>
+        <li><a href="/spain-visa-renewal/">Visa Renewals</a></li>
+        <li><a href="/best-visa-move-to-spain/">Compare All Visas</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/nlv">Apply: NLV</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/dnv">Apply: DNV</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/student-visa">Apply: Student Visa</a></li>
+      </ul>
+    </div>
+
+    <!-- Resources column -->
+    <div>
+      <div class="msv-footer__col-title">Resources</div>
+      <ul class="msv-footer__links">
+        <li><a href="/blog/">Blog &amp; Guides</a></li>
+        <li><a href="/move-to-spain/">Move to Spain Guide</a></li>
+        <li><a href="/visa-eligibility-quiz/">Eligibility Quiz</a></li>
+        <li><a href="/spain-visa-checklist/">Document Checklists</a></li>
+        <li><a href="/spain-visa-requirements/">Visa Requirements</a></li>
+        <li><a href="/spain-nie-number/">NIE Number Guide</a></li>
+        <li><a href="/spain-tie-card/">TIE Card Guide</a></li>
+      </ul>
+    </div>
+
+    <!-- Company column -->
+    <div>
+      <div class="msv-footer__col-title">Company</div>
+      <ul class="msv-footer__links">
+        <li><a href="/about-us/">About Us</a></li>
+        <li><a href="/testimonials/">Client Reviews</a></li>
+        <li><a href="/why-choose-us/">Why Choose Us</a></li>
+        <li><a href="/contact-us.html">Contact</a></li>
+        <li><a href="https://www.platinumlegalspain.com" rel="noopener">Platinum Legal Spain</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/student-visa">Client Portal</a></li>
+      </ul>
+    </div>
+
+  </div><!-- /.msv-footer__top -->
+
+  <div class="msv-footer__bottom">
+    <div class="msv-footer__bottom-inner">
+      <p class="msv-footer__disclaimer">
+        <strong style="color:rgba(255,255,255,0.5);">Disclaimer:</strong>
+        My Spanish Visa provides visa processing support and is not a law firm. Content on this site is for informational purposes only and does not constitute legal advice. Immigration rules change frequently — always verify requirements with official sources or a qualified specialist. My Spanish Visa is a trading name of Platinum Legal Spain.
+      </p>
+      <span class="msv-footer__copyright">© 2026 My Spanish Visa. All rights reserved.</span>
+    </div>
+  </div>
+
+</footer>
+
+</body>
+</html>

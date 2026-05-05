@@ -1,0 +1,1833 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- ═══════════════════════════════════════════════════════════════════
+       PAGE-SPECIFIC HEAD — replace block below per page:
+       <title>Dnv Chicago | My Spanish Visa</title>
+       <meta name="description" content="…">
+       <meta property="og:title" content="…">
+       <meta property="og:description" content="…">
+       <meta property="og:url" content="https://www.myspanishvisa.com/…">
+       <meta property="og:image" content="…">
+       <link rel="canonical" href="https://www.myspanishvisa.com/…">
+       <script type="application/ld+json">…</script>
+       ═══════════════════════════════════════════════════════════════════ -->
+  <title>My Spanish Visa — Spain Visa &amp; Residency Specialists</title>
+  <meta name="description" content="My Spanish Visa helps English-speaking foreigners move to Spain. Expert guidance on Non-Lucrative Visa, Digital Nomad Visa, Student Visa, renewals and more.">
+
+  <!-- Shared Open Graph defaults -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="My Spanish Visa">
+  <meta property="og:image" content="https://www.myspanishvisa.com/assets/images/og/og-myspanishvisa-default.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@myspanishvisa">
+
+  <style>
+/* ═══════════════════════════════════════════════════════════════
+   GLOBAL SHELL — nav + footer only.
+   Page-specific CSS lives inside each fragment's own <style> block.
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── iOS overflow safety ── */
+html, body { max-width: 100%; overflow-x: clip; margin: 0; padding: 0; }
+*, *::before, *::after { box-sizing: border-box; }
+
+/* ── Brand tokens (root-level so all fragments inherit) ── */
+:root {
+  --navy:      #0c1930;
+  --navy-mid:  #1a3a5c;
+  --red:       #be0011;
+  --red-deep:  #8c000d;
+  --yellow:    #facf39;
+  --cream:     #f8f7f4;
+  --white:     #ffffff;
+  --black:     #1a1a1a;
+  --muted:     #5a6478;
+  --border:    #dce3ed;
+  --shadow-sm: 0 2px 8px rgba(12,25,48,0.08);
+  --shadow-md: 0 6px 24px rgba(12,25,48,0.13);
+}
+
+body {
+  font-family: 'Inter', 'Segoe UI', system-ui, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.75;
+  color: var(--black);
+  background: #fff;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   SITE NAV
+   ───────────────────────────────────────────────────────────── */
+.msv-nav {
+  position: sticky;
+  top: 0;
+  z-index: 9000;
+  background: var(--navy);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 2px 12px rgba(12,25,48,0.22);
+}
+.msv-nav__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+  gap: 1.5rem;
+}
+
+/* Logo */
+.msv-nav__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+.msv-nav__logo-flag {
+  font-size: 1.3rem;
+  line-height: 1;
+}
+.msv-nav__logo-text {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+.msv-nav__logo-text span {
+  color: var(--yellow);
+}
+
+/* Links */
+.msv-nav__links {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.msv-nav__links > li {
+  position: relative;
+}
+.msv-nav__links > li > a,
+.msv-nav__links > li > button {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.5rem 0.9rem;
+  font-size: 0.87rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.85);
+  text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: color 0.15s, background 0.15s;
+  white-space: nowrap;
+  height: 64px;
+}
+.msv-nav__links > li > a:hover,
+.msv-nav__links > li > button:hover,
+.msv-nav__links > li:focus-within > a,
+.msv-nav__links > li:focus-within > button {
+  color: #fff;
+  background: rgba(255,255,255,0.08);
+}
+.msv-nav__chevron {
+  font-size: 0.65rem;
+  opacity: 0.7;
+  transition: transform 0.2s;
+}
+.msv-nav__links > li:focus-within .msv-nav__chevron,
+.msv-nav__links > li:hover .msv-nav__chevron {
+  transform: rotate(180deg);
+}
+
+/* Dropdown */
+.msv-nav__dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 230px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  box-shadow: var(--shadow-md);
+  padding: 0.5rem 0;
+  z-index: 200;
+}
+.msv-nav__links > li:hover .msv-nav__dropdown,
+.msv-nav__links > li:focus-within .msv-nav__dropdown {
+  display: block;
+}
+.msv-nav__dropdown a {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.6rem 1.1rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--navy);
+  text-decoration: none;
+  transition: background 0.12s;
+}
+.msv-nav__dropdown a:hover {
+  background: var(--cream);
+  color: var(--red);
+}
+.msv-nav__dropdown-icon {
+  width: 24px;
+  height: 24px;
+  background: var(--cream);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+.msv-nav__dropdown-divider {
+  height: 1px;
+  background: var(--border);
+  margin: 0.4rem 0;
+}
+
+/* CTA button */
+.msv-nav__cta {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.55rem 1.2rem;
+  background: var(--red);
+  color: #fff !important;
+  font-size: 0.85rem;
+  font-weight: 700;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.15s, box-shadow 0.15s;
+  white-space: nowrap;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(190,0,17,0.3);
+}
+.msv-nav__cta:hover {
+  background: var(--red-deep);
+  box-shadow: 0 4px 14px rgba(190,0,17,0.4);
+  text-decoration: none;
+}
+
+/* Hamburger */
+.msv-nav__burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.4rem;
+  border-radius: 5px;
+}
+.msv-nav__burger span {
+  width: 22px;
+  height: 2px;
+  background: #fff;
+  border-radius: 2px;
+  transition: transform 0.2s, opacity 0.2s;
+  display: block;
+}
+
+/* Mobile nav */
+.msv-nav__mobile {
+  display: none;
+  flex-direction: column;
+  background: var(--navy-mid);
+  padding: 1rem 1.5rem 1.5rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+.msv-nav__mobile.open { display: flex; }
+.msv-nav__mobile a {
+  padding: 0.65rem 0;
+  color: rgba(255,255,255,0.9);
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+.msv-nav__mobile a:hover { color: var(--yellow); }
+.msv-nav__mobile .msv-nav__mobile-sub {
+  padding-left: 1rem;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: rgba(255,255,255,0.7);
+}
+.msv-nav__mobile-cta {
+  margin-top: 1rem;
+  background: var(--red);
+  color: #fff !important;
+  border-radius: 6px;
+  text-align: center;
+  padding: 0.75rem 1rem !important;
+  border-bottom: none !important;
+}
+
+@media (max-width: 900px) {
+  .msv-nav__links { display: none; }
+  .msv-nav__cta { display: none; }
+  .msv-nav__burger { display: flex; }
+}
+@media (max-width: 480px) {
+  .msv-nav__inner { padding: 0 1rem; }
+}
+
+/* ─────────────────────────────────────────────────────────────
+   SITE FOOTER
+   ───────────────────────────────────────────────────────────── */
+.msv-footer {
+  background: var(--navy);
+  color: rgba(255,255,255,0.75);
+  overflow-x: clip;
+}
+.msv-footer__top {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem 3rem;
+  display: grid;
+  grid-template-columns: 280px 1fr 1fr 1fr;
+  gap: 3rem;
+}
+@media (max-width: 900px) {
+  .msv-footer__top { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
+}
+@media (max-width: 560px) {
+  .msv-footer__top { grid-template-columns: 1fr; gap: 2rem; padding: 3rem 1.2rem 2rem; }
+}
+
+.msv-footer__brand {}
+.msv-footer__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  margin-bottom: 1rem;
+}
+.msv-footer__logo-flag { font-size: 1.3rem; }
+.msv-footer__logo-text {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -0.01em;
+}
+.msv-footer__logo-text span { color: var(--yellow); }
+.msv-footer__tagline {
+  font-size: 0.83rem;
+  color: rgba(255,255,255,0.55);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+.msv-footer__trust {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+.msv-footer__trust-item {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.65);
+}
+.msv-footer__trust-item::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  background: var(--yellow);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.msv-footer__col-title {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.4);
+  margin-bottom: 1rem;
+}
+.msv-footer__links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.msv-footer__links a {
+  font-size: 0.87rem;
+  color: rgba(255,255,255,0.68);
+  text-decoration: none;
+  transition: color 0.15s;
+  display: inline-block;
+}
+.msv-footer__links a:hover {
+  color: var(--yellow);
+  text-decoration: none;
+}
+
+.msv-footer__bottom {
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+.msv-footer__bottom-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 1rem;
+  justify-content: space-between;
+}
+.msv-footer__disclaimer {
+  font-size: 0.73rem;
+  color: rgba(255,255,255,0.35);
+  line-height: 1.65;
+  max-width: 720px;
+}
+.msv-footer__copyright {
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.35);
+  white-space: nowrap;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   MAIN CONTENT AREA
+   ───────────────────────────────────────────────────────────── */
+main {
+  /* Fragments are self-contained; this wrapper just provides flow context */
+  position: relative;
+}
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════
+     SITE NAVIGATION
+     ═══════════════════════════════════════════════════ -->
+<header class="msv-nav" role="banner">
+  <div class="msv-nav__inner">
+
+    <!-- Logo -->
+    <a href="/" class="msv-nav__logo" aria-label="My Spanish Visa — Home"><img src="/assets/images/msv-logo-white.png" alt="My Spanish Visa" height="40" style="display:block;"></a>
+
+    <!-- Desktop links -->
+    <nav aria-label="Main navigation">
+      <ul class="msv-nav__links">
+
+        <li>
+          <button class="msv-nav__dropdown-trigger" aria-haspopup="true" aria-expanded="false">
+            Visas <span class="msv-nav__chevron">▾</span>
+          </button>
+          <div class="msv-nav__dropdown" role="menu">
+            <a href="/non-lucrative-visa-spain/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🏖️</span>Non-Lucrative Visa
+            </a>
+            <a href="/digital-nomad-visa-spain/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">💻</span>Digital Nomad Visa
+            </a>
+            <a href="/student-visa-spain/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🎓</span>Student Visa
+            </a>
+            <div class="msv-nav__dropdown-divider"></div>
+            <a href="/spain-visa-renewal/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🔄</span>Visa Renewals
+            </a>
+            <a href="/best-visa-move-to-spain/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">⚖️</span>Compare All Visas
+            </a>
+          </div>
+        </li>
+
+        <li>
+          <button aria-haspopup="true" aria-expanded="false">
+            Resources <span class="msv-nav__chevron">▾</span>
+          </button>
+          <div class="msv-nav__dropdown" role="menu">
+            <a href="/blog/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">📝</span>Blog &amp; Guides
+            </a>
+            <a href="/spain-visa-checklist/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">✅</span>Document Checklists
+            </a>
+            <a href="/move-to-spain/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🏠</span>Move to Spain Guide
+            </a>
+            <a href="/visa-eligibility-quiz/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🧭</span>Eligibility Quiz
+            </a>
+          </div>
+        </li>
+
+        <li><a href="/about-us/">About Us</a></li>
+        <li><a href="/testimonials/">Reviews</a></li>
+        <li><a href="/contact-us.html">Contact</a></li>
+
+      </ul>
+    </nav>
+
+    <!-- Desktop CTA -->
+    <a href="https://dashboard.platinumlegalspain.com/dnv" class="msv-nav__cta">
+      Start My Application →
+    </a>
+
+    <!-- Hamburger (mobile) -->
+    <button class="msv-nav__burger" aria-label="Open menu" aria-expanded="false" onclick="
+      var m=document.querySelector('.msv-nav__mobile');
+      var open=m.classList.toggle('open');
+      this.setAttribute('aria-expanded', open);
+    ">
+      <span></span><span></span><span></span>
+    </button>
+
+  </div><!-- /.msv-nav__inner -->
+
+  <!-- Mobile menu -->
+  <nav class="msv-nav__mobile" aria-label="Mobile navigation">
+    <a href="/non-lucrative-visa-spain/" class="msv-nav__mobile-sub">Non-Lucrative Visa</a>
+    <a href="/digital-nomad-visa-spain/" class="msv-nav__mobile-sub">Digital Nomad Visa</a>
+    <a href="/student-visa-spain/" class="msv-nav__mobile-sub">Student Visa</a>
+    <a href="/spain-visa-renewal/">Visa Renewals</a>
+    <a href="/best-visa-move-to-spain/">Compare All Visas</a>
+    <a href="/blog/">Blog &amp; Guides</a>
+    <a href="/about-us/">About Us</a>
+    <a href="/testimonials/">Reviews</a>
+    <a href="/contact-us.html">Contact</a>
+    <a href="https://dashboard.platinumlegalspain.com/dnv" class="msv-nav__mobile-cta">Start My Application →</a>
+  </nav>
+
+</header>
+
+
+<!-- ═══════════════════════════════════════════════════
+     PAGE CONTENT (fragment injected here)
+     ═══════════════════════════════════════════════════ -->
+<main>
+<!-- FRAGMENT_START -->
+<!-- SEO Meta Tags -->
+<!-- title: Spain Digital Nomad Visa from Chicago: Illinois Consulate Guide 2026 | My Spanish Visa -->
+<!-- description: Applying for the Spain Digital Nomad Visa from Chicago — consulate details, Midwest jurisdiction, appointment booking, and what Illinois applicants need to know. -->
+<!-- canonical: https://www.myspanishvisa.com/dnv-chicago/ -->
+<!-- og:title: Spain Digital Nomad Visa from Chicago: Illinois Consulate Guide 2026 -->
+<!-- og:description: Complete guide for IL, IN, IA, KS, KY, MI, MN, MO, NE, ND, OH, SD, WI applicants — Chicago consulate, FBI check, income requirements, step-by-step process. -->
+<!-- og:url: https://www.myspanishvisa.com/dnv-chicago/ -->
+<!-- og:type: article -->
+<!-- article:published_time: 2026-04-23 -->
+<!-- article:modified_time: 2026-04-23 -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.myspanishvisa.com/dnv-chicago/",
+      "url": "https://www.myspanishvisa.com/dnv-chicago/",
+      "name": "Spain Digital Nomad Visa from Chicago: Illinois Consulate Guide 2026 | My Spanish Visa",
+      "description": "Applying for the Spain Digital Nomad Visa from Chicago — consulate details, Midwest jurisdiction, appointment booking, and what Illinois applicants need to know."
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Which consulate covers Chicago for the Spain Digital Nomad Visa?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The Consulate General of Spain in Chicago at 180 N Michigan Avenue covers applicants residing in Illinois, Indiana, Iowa, Kansas, Kentucky, Michigan, Minnesota, Missouri, Nebraska, North Dakota, Ohio, South Dakota, and Wisconsin. You must apply at the consulate covering your state of legal residence."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I book a DNV appointment at the Chicago Spanish consulate?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Appointments are booked through the consulate's website at cgespanachicago.org under the National Visa section. Select the Digital Nomad Visa category. Slots are released periodically. Chicago typically has shorter wait times than the busiest consulates like Miami and Los Angeles — current wait times are often 3 to 8 weeks."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does the Spain Digital Nomad Visa process take from Chicago?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Total timeline is typically 2.5 to 4.5 months from starting your application to arrival in Spain. This includes document preparation (4-8 weeks), appointment wait (3-8 weeks for Chicago), and consulate processing after submission (4-10 weeks). The Chicago consulate's slightly shorter appointment waits can give Midwest applicants an advantage over those in busier cities."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does the Chicago consulate require an FBI check or state police check?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A federal FBI Identity History Summary is required — not an Illinois State Police background check. The FBI check must be apostilled by the US Department of State and accompanied by a sworn Spanish translation. Use an FBI-approved channeler for the fastest results."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I apply at the Chicago consulate if I live in Minnesota or Ohio?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. The Chicago consulate covers a large Midwest jurisdiction including Illinois, Indiana, Iowa, Kansas, Kentucky, Michigan, Minnesota, Missouri, Nebraska, North Dakota, Ohio, South Dakota, and Wisconsin. If you reside in any of these states, the Chicago consulate is your designated point of application."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What income do I need to show for the Spain Digital Nomad Visa?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You must demonstrate a minimum income of approximately €2,646/month (200% of Spain's 2026 minimum wage), roughly equivalent to $2,800/month USD. Evidence includes bank statements for the last 3-6 months, pay stubs or client invoices, W-2 or 1099 forms, and an employer letter. Freelancers should also provide client contracts and an accountant letter."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does the Chicago consulate process DNV applications faster than other US consulates?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Chicago generally has shorter appointment wait times than Miami and Los Angeles because its applicant pool (13 states) has lower digital nomad density compared to California or Florida. Appointment waits of 3-8 weeks are typical versus 4-12 weeks in LA or 6-14 weeks in Miami. Processing times after submission are roughly equivalent across all US Spanish consulates at 4-10 weeks."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I bring my family to Spain on the Digital Nomad Visa?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Your spouse or registered partner and dependent children under 18 can apply as family unit members at the Chicago consulate alongside your main application. Each family member needs their own documents: passport, criminal record check, health insurance, and proof of relationship. Apply simultaneously for the best outcome."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is the Beckham Law available to Midwest applicants holding the DNV?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. The Beckham Law is available to any Digital Nomad Visa holder who becomes tax resident in Spain, regardless of which US consulate they applied through. It offers a flat 24% Spanish income tax rate on income up to €600,000/year for 6 years. Americans should take US/Spain cross-border tax advice before electing it."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I apply for the Spain DNV while I'm already in Spain?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. If you are legally present in Spain as a tourist (within your 90-day Schengen allowance), you can apply through the Unidad de Grandes Empresas (UGE) from within Spain instead of at the Chicago consulate. The UGE route often processes faster and issues a residence permit directly. The same documents are required either way."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Consulate General of Spain in Chicago",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "180 N Michigan Avenue, Suite 1500",
+        "addressLocality": "Chicago",
+        "addressRegion": "IL",
+        "postalCode": "60601",
+        "addressCountry": "US"
+      },
+      "url": "https://www.cgespanachicago.org"
+    }
+  ]
+}
+</script>
+<!-- Open Graph / Social -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.myspanishvisa.com/dnv-chicago/">
+<meta property="og:title" content="My Spanish Visa">
+<meta property="og:description" content="Expert Spain visa guidance for English-speaking expats.">
+<meta property="og:image" content="https://www.myspanishvisa.com/assets/images/og/og-dnv-spain.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="My Spanish Visa">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@myspanishvisa">
+<meta name="twitter:title" content="My Spanish Visa">
+<meta name="twitter:description" content="Expert Spain visa guidance for English-speaking expats.">
+<meta name="twitter:image" content="https://www.myspanishvisa.com/assets/images/og/og-dnv-spain.jpg">
+
+<style>
+:root {
+  --navy: #0c1930;
+  --red: #be0011;
+  --yellow: #facf39;
+  --cream: #f8f7f4;
+  --muted: #5a6478;
+  --border: #dce3ed;
+  --white: #ffffff;
+  --radius: 8px;
+  --radius-lg: 14px;
+  --shadow-sm: 0 2px 8px rgba(12,25,48,0.08);
+  --transition: 0.25s ease;
+}
+.msv { font-family: 'Inter','Helvetica Neue',Arial,sans-serif; color: var(--navy); line-height: 1.7; }
+.msv *, .msv *::before, .msv *::after { box-sizing: border-box; }
+
+.msv .dnv-hero { background: linear-gradient(135deg, var(--navy) 0%, #1a3560 100%); color: var(--white); padding: 72px 24px 64px; text-align: center; position: relative; overflow: hidden; }
+.msv .dnv-hero::before { content: ''; position: absolute; top: -40px; right: -40px; width: 320px; height: 320px; background: var(--yellow); opacity: 0.05; border-radius: 50%; }
+.msv .dnv-hero .breadcrumb { font-size: 0.82rem; color: rgba(255,255,255,0.65); margin-bottom: 20px; }
+.msv .dnv-hero .breadcrumb a { color: var(--yellow); text-decoration: none; }
+.msv .dnv-hero h1 { font-size: clamp(1.75rem,4vw,2.75rem); font-weight: 800; line-height: 1.2; margin: 0 auto 20px; max-width: 820px; }
+.msv .dnv-hero .hero-meta { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 24px; }
+.msv .dnv-hero .hero-badge { background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.2); border-radius: 30px; padding: 6px 16px; font-size: 0.82rem; font-weight: 600; }
+.msv .dnv-hero .hero-badge.accent { background: var(--yellow); color: var(--navy); border-color: var(--yellow); }
+
+.msv .page-container { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
+.msv .content-grid { display: grid; grid-template-columns: 1fr 300px; gap: 40px; padding: 52px 0 60px; }
+@media (max-width: 900px) { .msv .content-grid { grid-template-columns: 1fr; } .msv .sidebar { order: -1; } }
+
+.msv .sidebar-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 24px; margin-bottom: 24px; box-shadow: var(--shadow-sm); }
+.msv .sidebar-card h3 { font-size: 0.95rem; font-weight: 700; color: var(--navy); margin: 0 0 16px; text-transform: uppercase; letter-spacing: 0.06em; }
+.msv .sidebar-card .consulate-detail { margin-bottom: 10px; font-size: 0.88rem; line-height: 1.5; }
+.msv .sidebar-card .consulate-detail strong { color: var(--muted); display: block; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 2px; }
+.msv .quick-links a { display: flex; align-items: center; gap: 8px; padding: 8px 0; font-size: 0.88rem; color: var(--navy); text-decoration: none; border-bottom: 1px solid var(--border); font-weight: 500; transition: color var(--transition); }
+.msv .quick-links a:last-child { border-bottom: none; }
+.msv .quick-links a:hover { color: var(--red); }
+.msv .quick-links a::before { content: '\2192'; color: var(--red); font-weight: 700; }
+
+.msv .timeline-widget { background: var(--cream); border-radius: var(--radius); padding: 18px; }
+.msv .timeline-step { display: flex; gap: 12px; margin-bottom: 14px; align-items: flex-start; }
+.msv .timeline-step:last-child { margin-bottom: 0; }
+.msv .timeline-dot { width: 28px; height: 28px; background: var(--navy); color: var(--white); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.72rem; font-weight: 700; flex-shrink: 0; }
+.msv .timeline-text { font-size: 0.84rem; line-height: 1.5; }
+.msv .timeline-text strong { display: block; font-weight: 700; color: var(--navy); }
+
+.msv .cta-band { background: linear-gradient(135deg, var(--navy) 0%, #1a3560 100%); color: var(--white); padding: 48px 24px; text-align: center; border-radius: var(--radius-lg); margin: 40px 0; }
+.msv .cta-band h2 { font-size: 1.5rem; font-weight: 800; margin: 0 0 10px; border: none; display: block; padding: 0; }
+.msv .cta-band p { margin: 0 auto 24px; max-width: 520px; opacity: 0.85; font-size: 0.95rem; }
+.msv .cta-buttons { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+.msv .btn { display: inline-block; padding: 14px 28px; border-radius: 6px; font-weight: 700; font-size: 0.92rem; text-decoration: none; transition: all var(--transition); cursor: pointer; border: none; }
+.msv .btn-primary { background: var(--yellow); color: var(--navy); }
+.msv .btn-primary:hover { background: #e8bc2a; transform: translateY(-1px); }
+.msv .btn-outline { background: transparent; color: var(--white); border: 2px solid rgba(255,255,255,0.5); }
+.msv .btn-outline:hover { border-color: var(--white); background: rgba(255,255,255,0.1); }
+
+.msv .main-content h2 { font-size: 1.55rem; font-weight: 800; color: var(--navy); margin: 44px 0 16px; padding-bottom: 10px; border-bottom: 3px solid var(--yellow); display: inline-block; }
+.msv .main-content h3 { font-size: 1.1rem; font-weight: 700; color: var(--navy); margin: 28px 0 10px; }
+.msv .main-content h4 { font-size: 1rem; font-weight: 700; color: var(--navy); margin: 20px 0 8px; }
+.msv .main-content p { margin: 0 0 16px; color: #2c3e5a; }
+.msv .main-content ul, .msv .main-content ol { padding-left: 22px; margin: 0 0 16px; color: #2c3e5a; }
+.msv .main-content li { margin-bottom: 7px; }
+.msv .main-content a { color: var(--red); font-weight: 600; }
+
+.msv .info-box { border-radius: var(--radius); padding: 20px 22px; margin: 24px 0; border-left: 4px solid; }
+.msv .info-box.tip { background: #edf6ff; border-color: #3b82f6; }
+.msv .info-box.warning { background: #fff8e6; border-color: var(--yellow); }
+.msv .info-box.danger { background: #fff0f0; border-color: var(--red); }
+.msv .info-box.success { background: #edfdf4; border-color: #10b981; }
+.msv .info-box strong { display: block; margin-bottom: 6px; font-size: 0.88rem; text-transform: uppercase; letter-spacing: 0.05em; }
+.msv .info-box.tip strong { color: #1d4ed8; }
+.msv .info-box.warning strong { color: #b45309; }
+.msv .info-box.danger strong { color: var(--red); }
+.msv .info-box.success strong { color: #065f46; }
+.msv .info-box p { margin: 0; font-size: 0.92rem; color: #2c3e5a; }
+
+.msv .req-table { width: 100%; border-collapse: collapse; margin: 20px 0 28px; font-size: 0.88rem; }
+.msv .req-table th { background: var(--navy); color: var(--white); padding: 11px 14px; text-align: left; font-weight: 600; }
+.msv .req-table td { padding: 10px 14px; border-bottom: 1px solid var(--border); vertical-align: top; color: #2c3e5a; }
+.msv .req-table tr:last-child td { border-bottom: none; }
+.msv .req-table tr:nth-child(even) td { background: var(--cream); }
+
+.msv .step-list { list-style: none; padding: 0; margin: 0 0 24px; }
+.msv .step-item { display: flex; gap: 18px; padding: 18px 0; border-bottom: 1px solid var(--border); align-items: flex-start; }
+.msv .step-item:last-child { border-bottom: none; }
+.msv .step-num { width: 36px; height: 36px; background: var(--red); color: var(--white); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.88rem; font-weight: 800; flex-shrink: 0; }
+.msv .step-content h4 { margin: 0 0 6px; font-size: 1rem; font-weight: 700; color: var(--navy); }
+.msv .step-content p { margin: 0; font-size: 0.9rem; color: var(--muted); }
+
+.msv .faq-section { margin: 40px 0; }
+.msv .faq-item { border: 1px solid var(--border); border-radius: var(--radius); margin-bottom: 10px; overflow: hidden; }
+.msv .faq-question { width: 100%; background: var(--white); border: none; padding: 18px 20px; text-align: left; font-size: 0.97rem; font-weight: 600; color: var(--navy); cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 12px; transition: background var(--transition); font-family: inherit; }
+.msv .faq-question:hover { background: var(--cream); }
+.msv .faq-question .faq-icon { width: 24px; height: 24px; background: var(--navy); color: var(--white); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1rem; line-height: 1; flex-shrink: 0; transition: transform var(--transition), background var(--transition); }
+.msv .faq-item.open .faq-icon { transform: rotate(45deg); background: var(--red); }
+.msv .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; background: var(--cream); }
+.msv .faq-item.open .faq-answer { max-height: 600px; }
+.msv .faq-answer-inner { padding: 18px 20px; font-size: 0.92rem; line-height: 1.75; color: #2c3e5a; }
+.msv .faq-answer-inner a { color: var(--red); font-weight: 600; }
+
+.msv .income-highlight { background: var(--navy); color: var(--white); border-radius: var(--radius-lg); padding: 28px 30px; margin: 24px 0; display: flex; flex-wrap: wrap; gap: 24px; }
+.msv .income-col { flex: 1; min-width: 160px; }
+.msv .income-col .label { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; opacity: 0.65; margin-bottom: 6px; }
+.msv .income-col .value { font-size: 1.6rem; font-weight: 800; color: var(--yellow); }
+.msv .income-col .note { font-size: 0.8rem; opacity: 0.7; margin-top: 4px; }
+
+.msv .checklist { list-style: none; padding: 0; margin: 0 0 20px; }
+.msv .checklist li { display: flex; gap: 10px; padding: 8px 0; border-bottom: 1px solid var(--border); font-size: 0.9rem; align-items: flex-start; color: #2c3e5a; }
+.msv .checklist li:last-child { border-bottom: none; }
+.msv .checklist li::before { content: '\2713'; color: #10b981; font-weight: 700; margin-top: 1px; flex-shrink: 0; }
+
+.msv .jurisdiction-card { background: var(--cream); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px 22px; margin: 20px 0; }
+.msv .jurisdiction-card h3 { margin: 0 0 14px; font-size: 1rem; }
+.msv .state-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.msv .state-chip { background: var(--navy); color: var(--white); font-size: 0.78rem; font-weight: 600; padding: 4px 12px; border-radius: 20px; }
+
+.msv .comparison-bar { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; margin: 20px 0; }
+.msv .comparison-bar table { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
+.msv .comparison-bar th { background: var(--navy); color: var(--white); padding: 10px 14px; text-align: left; font-weight: 600; }
+.msv .comparison-bar td { padding: 10px 14px; border-bottom: 1px solid var(--border); color: #2c3e5a; }
+.msv .comparison-bar tr:last-child td { border-bottom: none; }
+.msv .comparison-bar tr:nth-child(even) td { background: var(--cream); }
+.msv .tag-fast { display: inline-block; background: #d1fae5; color: #065f46; font-size: 0.75rem; font-weight: 700; padding: 2px 8px; border-radius: 10px; }
+.msv .tag-busy { display: inline-block; background: #fee2e2; color: #991b1b; font-size: 0.75rem; font-weight: 700; padding: 2px 8px; border-radius: 10px; }
+.msv .tag-mid { display: inline-block; background: #fef3c7; color: #92400e; font-size: 0.75rem; font-weight: 700; padding: 2px 8px; border-radius: 10px; }
+
+.msv .tip-callout { display: flex; gap: 14px; background: var(--cream); border: 1px solid var(--border); border-radius: var(--radius); padding: 16px 18px; margin: 16px 0; align-items: flex-start; }
+.msv .tip-callout .tip-icon { font-size: 1.3rem; flex-shrink: 0; }
+.msv .tip-callout p { margin: 0; font-size: 0.9rem; color: #2c3e5a; }
+.msv .tip-callout a { color: var(--red); font-weight: 600; }
+
+.msv .related-links { list-style: none; padding: 0; margin: 0; }
+.msv .related-links li { padding: 8px 0; border-bottom: 1px solid var(--border); }
+.msv .related-links li:last-child { border-bottom: none; }
+.msv .related-links a { color: var(--navy); text-decoration: none; font-weight: 600; font-size: 0.92rem; }
+.msv .related-links a:hover { color: var(--red); }
+</style>
+
+<div class="msv">
+
+  <section class="dnv-hero">
+    <div class="page-container">
+      <p class="breadcrumb">
+        <a href="/">Home</a> &rsaquo; <a href="/digital-nomad-visa-spain/">Digital Nomad Visa Spain</a> &rsaquo; Chicago Consulate Guide
+      </p>
+      <h1>Spain Digital Nomad Visa from Chicago: Complete Consulate Guide for Midwest Applicants</h1>
+      <p style="max-width:680px;margin:0 auto;opacity:0.85;font-size:1.05rem;">Everything Illinois, Indiana, Michigan, Ohio, Minnesota, and 8 other Midwest states need to know about applying for Spain's Digital Nomad Visa through the Chicago consulate &mdash; appointments, documents, income requirements, and timelines.</p>
+      <div class="hero-meta">
+        <span class="hero-badge accent">Updated April 2026</span>
+        <span class="hero-badge">Chicago Consulate: 180 N Michigan Ave</span>
+        <span class="hero-badge">Processing: 4&ndash;10 weeks after submission</span>
+        <span class="hero-badge">13 Midwest states covered</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="page-container">
+    <div class="content-grid">
+
+      <main class="main-content">
+
+        <h2>The Chicago Consulate and Its Midwest Jurisdiction</h2>
+        <p>If you live in Illinois or any of the twelve other Midwest and Great Plains states covered by the Chicago consulate, the <strong>Consulate General of Spain in Chicago</strong> is where you will apply for Spain's <a href="/digital-nomad-visa-spain/">Digital Nomad Visa</a>. With jurisdiction over 13 states &mdash; the largest geographic footprint of any Spanish consulate in the US &mdash; the Chicago consulate is a major hub for Spain visa applicants across the American heartland.</p>
+
+        <div class="jurisdiction-card">
+          <h3>States Covered by the Chicago Consulate</h3>
+          <div class="state-chips">
+            <span class="state-chip">Illinois</span>
+            <span class="state-chip">Indiana</span>
+            <span class="state-chip">Iowa</span>
+            <span class="state-chip">Kansas</span>
+            <span class="state-chip">Kentucky</span>
+            <span class="state-chip">Michigan</span>
+            <span class="state-chip">Minnesota</span>
+            <span class="state-chip">Missouri</span>
+            <span class="state-chip">Nebraska</span>
+            <span class="state-chip">North Dakota</span>
+            <span class="state-chip">Ohio</span>
+            <span class="state-chip">South Dakota</span>
+            <span class="state-chip">Wisconsin</span>
+          </div>
+          <p style="margin-top:14px;font-size:0.88rem;color:var(--muted);">You must apply at the consulate covering your state of legal residence. Residents of states not listed here should check which consulate serves their state. Michigan applicants use Chicago, not the New York or Washington DC consulate.</p>
+        </div>
+
+        <p>The consulate is located at <strong>180 N Michigan Avenue, Suite 1500, Chicago, IL 60601</strong>, in the heart of the Chicago Loop. The building is steps from Millennium Park and accessible by multiple CTA lines (Red/Blue line at Washington; Brown/Orange/Green/Purple at Randolph/Wabash). Street parking is limited; the Millennium Park garage and several paid lots are nearby.</p>
+
+        <h2>Appointment Booking at the Chicago Consulate</h2>
+        <p>All Digital Nomad Visa appointments are booked through the consulate's online portal at <strong>cgespanachicago.org</strong>. There is no phone booking. Navigate to the Visa Services section, select National Visa (long-stay), and choose the Digital Nomad category.</p>
+
+        <h3>Chicago Wait Times vs Other US Spanish Consulates</h3>
+        <p>One of the practical advantages of applying through Chicago is appointment availability. Because the digital nomad community in the Midwest is less concentrated than in coastal cities, the Chicago consulate typically has <strong>shorter appointment wait times</strong> than Miami or Los Angeles.</p>
+
+        <div class="comparison-bar">
+          <table>
+            <thead>
+              <tr>
+                <th>Consulate</th>
+                <th>Typical Appointment Wait</th>
+                <th>Demand Level</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Miami</strong></td>
+                <td>6&ndash;14 weeks</td>
+                <td><span class="tag-busy">Very High</span></td>
+              </tr>
+              <tr>
+                <td><strong>Los Angeles</strong></td>
+                <td>4&ndash;12 weeks</td>
+                <td><span class="tag-busy">High</span></td>
+              </tr>
+              <tr>
+                <td><strong>New York</strong></td>
+                <td>4&ndash;10 weeks</td>
+                <td><span class="tag-busy">High</span></td>
+              </tr>
+              <tr>
+                <td><strong>Chicago</strong></td>
+                <td>3&ndash;8 weeks</td>
+                <td><span class="tag-mid">Moderate</span></td>
+              </tr>
+              <tr>
+                <td><strong>Houston</strong></td>
+                <td>2&ndash;6 weeks</td>
+                <td><span class="tag-fast">Lower</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="info-box tip">
+          <strong>Midwest Advantage: Shorter Waits</strong>
+          <p>If you are on a tight timeline, the Chicago consulate's shorter appointment queues can meaningfully reduce your overall application duration. Combined with a typical 4&ndash;10 week processing period after submission, Midwest applicants can sometimes complete the process in 2.5 to 4 months versus the 3&ndash;5 months more typical in LA or Miami.</p>
+        </div>
+
+        <h2>Complete Document Requirements</h2>
+        <p>The <a href="/dnv-documents/">Spain Digital Nomad Visa document list</a> is the same across all US consulates. Every English-language document needs a sworn Spanish translation. Every public document needs an apostille. Bring originals and two complete sets of photocopies to your appointment.</p>
+
+        <table class="req-table">
+          <thead>
+            <tr>
+              <th>Document</th>
+              <th>Details</th>
+              <th>Notes for Midwest Applicants</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Visa Application Form EX-01</strong></td>
+              <td>Completed online at Spanish government portal, printed and signed</td>
+              <td>Print 2 copies; sign in ink</td>
+            </tr>
+            <tr>
+              <td><strong>Valid Passport</strong></td>
+              <td>Min. 1 year validity; 2 blank pages; data page photocopy</td>
+              <td>US passport preferred for US residents</td>
+            </tr>
+            <tr>
+              <td><strong>Passport Photos</strong></td>
+              <td>2 colour photos, white background, 35mm x 45mm</td>
+              <td>Available at most pharmacies and photo studios</td>
+            </tr>
+            <tr>
+              <td><strong>FBI Background Check</strong></td>
+              <td>Federal Identity History Summary; apostilled by US Dept of State; sworn Spanish translation</td>
+              <td>Illinois State Police check is NOT accepted</td>
+            </tr>
+            <tr>
+              <td><strong>Medical Certificate</strong></td>
+              <td>Signed by licensed physician; no contagious disease; sworn Spanish translation</td>
+              <td>Any licensed MD; no specific form required</td>
+            </tr>
+            <tr>
+              <td><strong>Spain-Compliant Health Insurance</strong></td>
+              <td>Valid in Spain; no copayments; min. 12 months; named policy</td>
+              <td>US domestic plans do not qualify; see <a href="/dnv-health-insurance/">health insurance guide</a></td>
+            </tr>
+            <tr>
+              <td><strong>Proof of Income</strong></td>
+              <td>Bank statements 3&ndash;6 months; W-2/1099; pay stubs or invoices; employer letter</td>
+              <td>Must demonstrate min. ~$2,800/month</td>
+            </tr>
+            <tr>
+              <td><strong>Employer Letter or Client Contracts</strong></td>
+              <td>On company letterhead; confirms remote work; salary; non-Spanish employer</td>
+              <td>Freelancers need client contracts + invoices</td>
+            </tr>
+            <tr>
+              <td><strong>Sworn Spanish Translations</strong></td>
+              <td>All English documents require certified sworn translations</td>
+              <td>Certified sworn translators only; no machine translation</td>
+            </tr>
+            <tr>
+              <td><strong>Visa Fee</strong></td>
+              <td>~$140&ndash;$190 USD (verify before appointment)</td>
+              <td>Paid at consulate; check current fee on their website</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Income Requirements for 2026</h2>
+        <p>The minimum income threshold for Spain's <a href="/dnv-income-requirements/">Digital Nomad Visa</a> is 200% of Spain's minimum interprofessional wage (SMI). For 2026 this is approximately <strong>&euro;2,646/month</strong>, equivalent to approximately <strong>$2,800/month</strong> USD.</p>
+
+        <div class="income-highlight">
+          <div class="income-col">
+            <div class="label">Minimum Monthly Income</div>
+            <div class="value">&euro;2,646</div>
+            <div class="note">200% of Spain's 2026 SMI</div>
+          </div>
+          <div class="income-col">
+            <div class="label">USD Equivalent (approx.)</div>
+            <div class="value">~$2,800</div>
+            <div class="note">Based on 2026 exchange rates</div>
+          </div>
+          <div class="income-col">
+            <div class="label">With Spouse Added</div>
+            <div class="value">+&euro;993</div>
+            <div class="note">75% SMI per adult dependent</div>
+          </div>
+          <div class="income-col">
+            <div class="label">Per Child Added</div>
+            <div class="value">+&euro;331</div>
+            <div class="note">25% SMI per minor child</div>
+          </div>
+        </div>
+
+        <h3>Income Evidence: Employees</h3>
+        <ul class="checklist">
+          <li>Employment contract or offer letter showing salary</li>
+          <li>Recent pay stubs (last 3&ndash;6 months)</li>
+          <li>W-2 from most recent tax year</li>
+          <li>Employer letter on company letterhead confirming remote arrangement, salary, and non-Spanish employer</li>
+          <li>Bank statements showing regular salary deposits</li>
+        </ul>
+
+        <h3>Income Evidence: Freelancers and Self-Employed</h3>
+        <ul class="checklist">
+          <li>Active client contracts with ongoing work relationships</li>
+          <li>Invoices issued in the last 3&ndash;6 months</li>
+          <li>1099-NEC or 1099-MISC from prior tax year</li>
+          <li>Schedule C from federal tax return</li>
+          <li>Bank statements showing consistent income deposits over 6+ months</li>
+          <li>Accountant/CPA letter confirming self-employment income and business continuity</li>
+        </ul>
+
+        <div class="info-box tip">
+          <strong>Remote Workers at Major Midwest Employers</strong>
+          <p>Many Chicago-area and Midwest applicants work remotely for large corporations headquartered locally &mdash; tech companies, financial services firms, consultancies. These employers often have structured HR processes. Ask your HR department early whether they have experience with international visa employment letters; many global firms do. A well-formatted letter from a recognisable employer significantly strengthens your application.</p>
+        </div>
+
+        <h2>The FBI Background Check: Getting It Right</h2>
+        <p>US applicants must obtain a <strong>federal FBI Identity History Summary</strong> &mdash; not any state-level police check. An Illinois State Police background check, while useful for domestic purposes, is not accepted for the Spain Digital Nomad Visa.</p>
+
+        <h3>The FBI Check Process</h3>
+        <ol>
+          <li><strong>Choose a channeler (recommended):</strong> FBI-approved channelers process your fingerprints electronically and return results within 1&ndash;3 business days. Find the current list at fbi.gov. Cost is typically $50&ndash;$75 including the FBI fee. Alternatively, submit directly to the FBI (allows 8&ndash;14 weeks).</li>
+          <li><strong>US Department of State Apostille:</strong> Mail your original FBI result to the State Department's Authentications Office with the apostille application form and fee. Standard processing: 6&ndash;8 weeks. Expedited options are available.</li>
+          <li><strong>Sworn Spanish Translation:</strong> The apostilled document must then be translated by a certified sworn translator.</li>
+        </ol>
+
+        <div class="info-box warning">
+          <strong>Start the FBI Check on Day One</strong>
+          <p>The FBI check with apostille is the document with the longest lead time in the entire application &mdash; typically 8&ndash;12 weeks from start to finish. Start it the same day you book your consulate appointment. If you use a channeler and expedited apostille processing, you can compress this to 4&ndash;6 weeks, but plan conservatively.</p>
+        </div>
+
+        <h2>Health Insurance: What Midwest Applicants Need to Know</h2>
+        <p>Spain requires DNV applicants to hold health insurance with no copayments, valid in Spain for the full stay. Most US domestic plans &mdash; including Blue Cross Blue Shield, Aetna, UnitedHealthcare, and similar plans common among Midwest employees &mdash; do not meet Spain's requirements because they include deductibles, co-pays, or do not provide coverage outside the US.</p>
+
+        <p>You will need a dedicated international or Spanish expat health insurance plan. Suitable providers include a leading private insurer, a leading private insurer established private health insurers in Spain Care, a leading private insurer Global, and a leading private insurer. See our full <a href="/dnv-health-insurance/">DNV health insurance guide</a> for a comparison of options and what to look for in a compliant policy.</p>
+
+        <div class="info-box danger">
+          <strong>Policies With Copayments Are Not Accepted</strong>
+          <p>Spain's requirement for &ldquo;no copayments&rdquo; (copago cero) means the insurer covers 100% &mdash; no excess, no deductible, no per-visit charge. This is stricter than most US-based international travel or health insurance products. Always request a certificate explicitly confirming &ldquo;no copayments&rdquo; or &ldquo;sin copago&rdquo; from your insurer before submitting your application.</p>
+        </div>
+
+        <h2>The Employer Letter for Midwest Remote Workers</h2>
+        <p>Your employer letter is a critical document. For employees at Midwest-based corporations or remote workers for companies headquartered in the US:</p>
+        <ul>
+          <li>Print on official company letterhead with registered business address</li>
+          <li>Include your full name, job title, and gross salary (monthly and annual)</li>
+          <li>Explicitly state the work arrangement is fully remote and may be performed from Spain</li>
+          <li>State that the company is incorporated outside Spain and does not have operations in Spain</li>
+          <li>Include your employment start date and contract type</li>
+          <li>Signed by HR director or company officer with full name and title</li>
+          <li>Include company EIN and physical address</li>
+        </ul>
+
+        <p>Freelancers should substitute client contracts and a professional accountant letter. See our <a href="/dnv-documents/">DNV documents guide</a> for templates.</p>
+
+        <h2>Step-by-Step Process for Chicago Consulate Applicants</h2>
+        <ul class="step-list">
+          <li class="step-item">
+            <div class="step-num">1</div>
+            <div class="step-content">
+              <h4>Book Your Appointment at cgespanachicago.org</h4>
+              <p>Book under National Visa &rsaquo; Digital Nomad. Chicago wait times of 3&ndash;8 weeks mean you may get an appointment sooner than expected. Book immediately &mdash; do not wait until documents are ready.</p>
+            </div>
+          </li>
+          <li class="step-item">
+            <div class="step-num">2</div>
+            <div class="step-content">
+              <h4>Start FBI Background Check (Same Day as Booking)</h4>
+              <p>Use an FBI-approved channeler for fastest turnaround. Immediately apply for the US Dept of State apostille once you receive results. This step takes the longest &mdash; 4&ndash;12 weeks depending on method chosen.</p>
+            </div>
+          </li>
+          <li class="step-item">
+            <div class="step-num">3</div>
+            <div class="step-content">
+              <h4>Purchase Spain-Compliant Health Insurance</h4>
+              <p>Research providers and purchase a policy with no copayments valid in Spain for at least 12 months. Obtain a certificate explicitly confirming &ldquo;no copayments.&rdquo;</p>
+            </div>
+          </li>
+          <li class="step-item">
+            <div class="step-num">4</div>
+            <div class="step-content">
+              <h4>Gather Income and Employment Documents</h4>
+              <p>Collect bank statements (6 months recommended), pay stubs, W-2/1099, employer letter, and any supporting business registration documents if self-employed.</p>
+            </div>
+          </li>
+          <li class="step-item">
+            <div class="step-num">5</div>
+            <div class="step-content">
+              <h4>Commission Sworn Spanish Translations</h4>
+              <p>All English documents require certified sworn translations. Allow 5&ndash;10 business days. My Spanish Visa can connect you with vetted translators experienced with Spain visa applications.</p>
+            </div>
+          </li>
+          <li class="step-item">
+            <div class="step-num">6</div>
+            <div class="step-content">
+              <h4>Complete EX-01 Application Form</h4>
+              <p>Download from the Spanish government portal, complete, print, and sign. Bring two copies plus all supporting documents with originals and two sets of photocopies to your appointment.</p>
+            </div>
+          </li>
+          <li class="step-item">
+            <div class="step-num">7</div>
+            <div class="step-content">
+              <h4>Attend Your Appointment at 180 N Michigan Ave</h4>
+              <p>Arrive 10 minutes early. The building security requires photo ID. Bring all documents plus fee (check current amount). Receive your tracking reference number upon submission.</p>
+            </div>
+          </li>
+          <li class="step-item">
+            <div class="step-num">8</div>
+            <div class="step-content">
+              <h4>Wait for Processing (4&ndash;10 Weeks)</h4>
+              <p>The Chicago consulate's processing timeline after submission is broadly similar to other US consulates at 4&ndash;10 weeks. Monitor via your reference number. Do not book non-refundable travel until approval is confirmed.</p>
+            </div>
+          </li>
+          <li class="step-item">
+            <div class="step-num">9</div>
+            <div class="step-content">
+              <h4>Collect Visa and Travel to Spain</h4>
+              <p>Return to the consulate to collect your passport with the visa affixed. Apply for your TIE card at the Oficina de Extranjer&iacute;a within 30 days of arriving in Spain.</p>
+            </div>
+          </li>
+        </ul>
+
+        <div class="cta-band">
+          <h2>Not Sure If You Qualify?</h2>
+          <p>Check your eligibility in under 3 minutes with our free tool &mdash; then speak with a specialist about your Chicago consulate application.</p>
+          <div class="cta-buttons">
+            <a href="/dnv-eligibility/" class="btn btn-primary">Check My Eligibility Free</a>
+            <a href="/contact-us/" class="btn btn-outline">Book a Free Consultation</a>
+          </div>
+        </div>
+
+        <h2>Apostilles from Midwest States</h2>
+        <p>If any of your supporting documents were issued in a Midwest state (such as a birth certificate or marriage certificate for family applications), you will need apostilles from the relevant state Secretary of State:</p>
+        <ul>
+          <li><strong>Illinois:</strong> Illinois Secretary of State, Authentications Division, Springfield or Chicago offices</li>
+          <li><strong>Indiana:</strong> Indiana Secretary of State, Business Services Division</li>
+          <li><strong>Michigan:</strong> Michigan Department of State</li>
+          <li><strong>Ohio:</strong> Ohio Secretary of State</li>
+          <li><strong>Minnesota:</strong> Minnesota Secretary of State</li>
+          <li><strong>Wisconsin:</strong> Wisconsin Secretary of State</li>
+          <li><strong>Iowa:</strong> Iowa Secretary of State</li>
+          <li><strong>Missouri:</strong> Missouri Secretary of State</li>
+        </ul>
+        <p>Remember: the FBI background check apostille must always come from the <strong>US Department of State</strong>, not a state authority, regardless of which state you live in.</p>
+
+        <h2>After Approval: Your First Month in Spain</h2>
+        <p>Once you arrive in Spain on your Digital Nomad Visa, several administrative tasks must be completed promptly:</p>
+        <ul>
+          <li><strong>TIE Card:</strong> Apply at the Oficina de Extranjer&iacute;a within 30 days. This is your physical residency card.</li>
+          <li><strong>Empadronamiento:</strong> Register your address at the local Ayuntamiento. Required for most official processes.</li>
+          <li><strong>Spanish Bank Account:</strong> Open a local account for rent payments and utilities. Bring your passport, NIE/TIE, and empadronamiento certificate.</li>
+          <li><strong>Beckham Law Election:</strong> If you want Spain's special 24% flat income tax rate, apply within 6 months of Social Security registration. See our <a href="/dnv-tax-spain/">DNV tax guide</a> for details.</li>
+          <li><strong>Health Registration:</strong> If you plan to supplement private insurance with public health access after the initial period, understand the requirements for accessing Spain's public healthcare system.</li>
+        </ul>
+
+        <h2>Beckham Law for Midwest Digital Nomads</h2>
+        <p>Spain's Beckham Law (Special Tax Regime for Relocated Workers) is available to all Digital Nomad Visa holders who become tax resident in Spain, including those who applied through the Chicago consulate. It offers a flat 24% income tax rate on Spanish-sourced income up to &euro;600,000/year for up to 6 years of Spanish tax residency.</p>
+
+        <p>For US citizens applying from Midwest states, the same cross-border tax complexity applies as for all Americans: the IRS taxes US citizens on worldwide income regardless of residence. The Foreign Earned Income Exclusion and Foreign Tax Credit mechanisms can offset double taxation, but the interaction with Spain's Beckham Law requires specialist advice. My Spanish Visa can refer you to qualified cross-border tax advisers.</p>
+
+        <h2>Non-US Nationals Living in Midwest States</h2>
+        <p>The Chicago consulate serves not only US citizens but all foreign nationals legally residing in its 13-state jurisdiction. Key notes:</p>
+        <ul>
+          <li><strong>Canadian nationals in the Midwest:</strong> If you are Canadian and reside in, say, Illinois or Michigan, apply at the Chicago consulate. You will need an RCMP criminal record check in addition to (or instead of) a US FBI check. See our <a href="/dnv-canada/">Canada DNV guide</a> for RCMP check details.</li>
+          <li><strong>UK nationals in the Midwest:</strong> Post-Brexit, UK nationals are treated as non-EU for Spanish visa purposes. You'll need an ACRO Police Certificate from the UK plus an FBI check if you've been resident in the US long enough to have a US record to certify.</li>
+          <li><strong>Green Card holders:</strong> Apply at the Chicago consulate if you reside in the 13-state jurisdiction, regardless of your nationality.</li>
+          <li><strong>Recent movers:</strong> Your legal state of residence at the time of application determines your consulate. Ensure your state ID is updated to reflect a current Midwest address before booking.</li>
+        </ul>
+
+        <div class="tip-callout">
+          <span class="tip-icon">&#128205;</span>
+          <p><strong>Moving to Spain from a Midwest Hub:</strong> Chicago's O'Hare International Airport has direct and one-stop connections to Madrid (Barajas), Barcelona (El Prat), and other Spanish cities. Once your visa is approved, you typically have up to 90 days to use it to enter Spain &mdash; though entering closer to your intended residency start date is advisable to ensure your documentation chain stays current.</p>
+        </div>
+
+        <section class="faq-section">
+          <h2>Frequently Asked Questions: Spain DNV from Chicago</h2>
+
+          <div class="faq-item">
+            <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+              Which consulate covers Chicago for the Spain Digital Nomad Visa?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                The Consulate General of Spain in Chicago at 180 N Michigan Avenue, Suite 1500, Chicago, IL 60601, covers applicants residing in Illinois, Indiana, Iowa, Kansas, Kentucky, Michigan, Minnesota, Missouri, Nebraska, North Dakota, Ohio, South Dakota, and Wisconsin. Your legal state of residence determines which consulate you must use.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+              How do I book a DNV appointment at the Chicago Spanish consulate?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Go to cgespanachicago.org, navigate to Visa Services, and select National Visa &rsaquo; Digital Nomad. There is no phone booking. Slots are released periodically throughout the week. Chicago typically has shorter wait times than busier consulates like Miami or LA, with typical waits of 3&ndash;8 weeks in 2026. Book as soon as you decide to apply &mdash; do not wait until all documents are ready.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+              How long does the Spain Digital Nomad Visa process take from Chicago?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Total timeline is typically 2.5 to 4.5 months from starting your application to arriving in Spain. Document preparation including FBI check with apostille: 4&ndash;8 weeks. Appointment wait: 3&ndash;8 weeks (typically shorter than LA or Miami). Consulate processing after submission: 4&ndash;10 weeks. Chicago's shorter appointment waits can give Midwest applicants an advantage over those in busier consulate cities.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+              Does the Chicago consulate require an FBI check or an Illinois state police check?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                A federal FBI Identity History Summary is required &mdash; not an Illinois State Police check. The FBI check must be apostilled by the US Department of State and accompanied by a sworn Spanish translation. Using an FBI-approved channeler is strongly recommended for speed. The Illinois State Police background check is not accepted for Spanish visa purposes.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+              Can I apply at the Chicago consulate if I live in Minnesota or Ohio?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Yes. The Chicago consulate's jurisdiction includes all 13 states listed above. Residents of Minnesota, Ohio, Michigan, Wisconsin, Indiana, Iowa, and all the others in the jurisdiction apply at the Chicago consulate regardless of the distance involved. You do not need to temporarily relocate to Illinois. Your appointment is booked online and you travel to Chicago for the in-person submission.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+              What income do I need to show for the Spain Digital Nomad Visa?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                You must demonstrate a minimum income of approximately &euro;2,646/month (200% of Spain's 2026 SMI), roughly $2,800/month USD. Evidence includes 3&ndash;6 months of bank statements, pay stubs or client invoices, W-2 or 1099 forms from the prior tax year, and an employer letter or client contracts. Freelancers should also include a letter from their accountant. See our full <a href="/dnv-income-requirements/">DNV income requirements guide</a>.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+              Does the Chicago consulate process applications faster than other US consulates?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Chicago typically has shorter appointment wait times than Miami or Los Angeles due to lower digital nomad applicant density in the Midwest. Wait times of 3&ndash;8 weeks are typical versus 4&ndash;12 weeks in LA or 6&ndash;14 weeks in Miami. Processing times after submission (4&ndash;10 weeks) are broadly similar across all US Spanish consulates. So Chicago's advantage is primarily in the appointment queue, not the post-submission processing period.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+              Can I bring my family to Spain on the Digital Nomad Visa?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Yes. Your spouse or registered partner and dependent children under 18 can apply as family unit members at the Chicago consulate alongside your main application. Each family member needs their own passport, criminal record check, health insurance, and proof of relationship (marriage/birth certificates &mdash; apostilled and translated). Apply simultaneously. The main applicant's income threshold increases by 75% of Spain's SMI per adult dependent and 25% per minor child. See our <a href="/dnv-family/">DNV family guide</a>.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+              Is the Beckham Law available to Midwest applicants who hold the Spain DNV?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Yes. The Beckham Law is available to any DNV holder who becomes tax resident in Spain, regardless of which consulate they applied through. It offers a flat 24% income tax rate on Spanish-sourced income up to &euro;600,000/year for up to 6 years. US citizens must also account for US worldwide income taxation &mdash; the interaction with the Spain&ndash;US Tax Treaty requires specialist cross-border tax advice. My Spanish Visa can refer you to qualified advisers.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+              Can I apply for the Spain DNV while I'm already inside Spain?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Yes. If you are legally present in Spain as a tourist (within your 90-day visa-free Schengen allowance), you can apply through the Unidad de Grandes Empresas (UGE) instead of the Chicago consulate. The UGE route often processes faster and issues a residence permit directly, without a separate TIE step. The same documents are required. See our guide to <a href="/dnv-apply-in-spain/">applying for the DNV inside Spain</a> for complete details.
+              </div>
+            </div>
+          </div>
+
+        </section>
+
+        <div class="cta-band">
+          <h2>Ready to Apply from Chicago?</h2>
+          <p>My Spanish Visa's expert team guides Midwest applicants through every step of the Spain Digital Nomad Visa process &mdash; from document preparation to consulate strategy.</p>
+          <div class="cta-buttons">
+            <a href="/contact-us/" class="btn btn-primary">Book a Free Consultation</a>
+            <a href="/dnv-requirements/" class="btn btn-outline">Full DNV Requirements</a>
+          </div>
+        </div>
+
+        <h2>Common Reasons for DNV Rejection: What Midwest Applicants Get Wrong</h2>
+        <p>The most frequent reasons Spain Digital Nomad Visa applications are refused at the Chicago consulate (and US consulates generally) include the following. Review this list carefully before submitting your application:</p>
+
+        <table class="req-table">
+          <thead>
+            <tr>
+              <th>Rejection Reason</th>
+              <th>How to Prevent It</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Insufficient income documentation</strong></td>
+              <td>Provide 6 months of bank statements, not just 3; include employer letter, pay stubs, AND W-2/1099 &mdash; layered evidence is stronger than a single document</td>
+            </tr>
+            <tr>
+              <td><strong>Health insurance with copayments or deductibles</strong></td>
+              <td>Explicitly confirm &ldquo;no copayments&rdquo; (sin copago) with the insurer before purchasing; get a written certificate stating this clearly</td>
+            </tr>
+            <tr>
+              <td><strong>Incorrect apostille on FBI check</strong></td>
+              <td>FBI check must be apostilled by the US Department of State, not an Illinois or other state authority; double-check the issuing body on the apostille</td>
+            </tr>
+            <tr>
+              <td><strong>Translations not sworn/certified</strong></td>
+              <td>Only formally sworn (jurado) translators produce legally valid translations for Spanish visa purposes; general translators and agencies without this accreditation are not accepted</td>
+            </tr>
+            <tr>
+              <td><strong>Employer letter lacking required detail</strong></td>
+              <td>The letter must explicitly state the work can be performed from Spain and that the employer is non-Spanish; generic remote work letters often lack this</td>
+            </tr>
+            <tr>
+              <td><strong>Income is variable month-to-month</strong></td>
+              <td>If your income fluctuates (common for freelancers and commission-based workers), provide a 12-month average with an explanatory note from your accountant</td>
+            </tr>
+            <tr>
+              <td><strong>Missing photocopies at appointment</strong></td>
+              <td>Bring originals plus TWO complete sets of photocopies; the consulate keeps one set; you keep one set plus all originals</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>DNV Renewal: What Happens After Year One</h2>
+        <p>The Spain Digital Nomad Visa is initially valid for 1 year. Before expiry, you can renew for a residence permit of up to 2 years at a time from within Spain, up to a maximum total duration of 5 years. After 5 continuous years of legal residence, long-term EU residency becomes possible; after 10 years, Spanish naturalisation.</p>
+
+        <p>Renewal does not require returning to the Chicago consulate &mdash; it is handled at the Oficina de Extranjer&iacute;a in Spain. You will need updated income evidence, renewed health insurance, and updated criminal background check documents. See our <a href="/dnv-renewal/">DNV renewal guide</a> for the full renewal process and checklist.</p>
+
+        <div class="info-box tip">
+          <strong>Renewal Timeline</strong>
+          <p>Start your renewal process 2&ndash;3 months before your current permit expires. The renewal appointment system in Spain can have significant queues, and updated documents (especially criminal record checks with apostilles) take time to obtain.</p>
+        </div>
+
+        <h2>Why Midwest Remote Workers Are Moving to Spain</h2>
+        <p>Midwesterners are increasingly choosing Spain as their remote work destination. The reasons are practical as well as personal:</p>
+        <ul>
+          <li><strong>Cost of living:</strong> Monthly living costs in many Spanish cities are 30&ndash;50% lower than in major Midwest metros like Chicago. Housing in Valencia, Seville, or Malaga can be strikingly affordable by Chicago standards.</li>
+          <li><strong>Direct flights from Chicago O&rsquo;Hare:</strong> O&rsquo;Hare has one of the most comprehensive European route networks of any US airport, with one-stop connections to Madrid and Barcelona from many Midwest hubs.</li>
+          <li><strong>Time zone:</strong> Central European Time is 7 hours ahead of CST. An 8am CT call is a 3pm Madrid call &mdash; workable for many remote schedules.</li>
+          <li><strong>Healthcare quality:</strong> Spain&rsquo;s public and private healthcare system is consistently ranked among the world&rsquo;s best &mdash; a significant consideration for those coming from a US employer healthcare context.</li>
+          <li><strong>Culture and language:</strong> Many Midwest applicants have Spanish-language skills or Hispanic heritage and find Spain a natural fit. Spain&rsquo;s culture, cuisine, and outdoor lifestyle appeal broadly.</li>
+        </ul>
+
+        <h2>Popular Spanish Destinations for Midwest Applicants</h2>
+        <ul>
+          <li><strong>Madrid:</strong> Spain&rsquo;s capital with the best infrastructure, most international connections, and a large expat community. 1-bedroom apartment: &euro;1,200&ndash;&euro;1,800/month.</li>
+          <li><strong>Barcelona:</strong> The Mediterranean city known for architecture, beach, and a thriving tech and creative sector. 1-bedroom: &euro;1,300&ndash;&euro;2,000/month.</li>
+          <li><strong>Valencia:</strong> Consistently ranked among the best cities for digital nomads in Europe. Affordable, sunny, and with a growing English-speaking expat community. 1-bedroom: &euro;800&ndash;&euro;1,300/month.</li>
+          <li><strong>Seville:</strong> Andalusia&rsquo;s largest city combines deep cultural heritage with relative affordability. 1-bedroom: &euro;700&ndash;&euro;1,100/month.</li>
+          <li><strong>Bilbao / San Sebasti&aacute;n:</strong> Basque Country cities increasingly popular with North American expats for their food culture, safety, and quality of life. Slightly higher costs but outstanding lifestyle quality.</li>
+        </ul>
+
+        <h2>Preparing Your Application: A Pre-Submission Checklist</h2>
+        <p>Before attending your Chicago consulate appointment, run through this final checklist to ensure your application is complete and well-presented:</p>
+
+        <h3>Documents: Completeness Check</h3>
+        <ul class="checklist">
+          <li>EX-01 application form: completed, printed, signed in ink &mdash; 2 copies</li>
+          <li>Passport: valid, 2+ blank pages, data page photocopy</li>
+          <li>2 passport photos: correct size, white background, recent</li>
+          <li>FBI Identity History Summary: original, apostilled by US Dept of State, with sworn Spanish translation</li>
+          <li>Medical certificate: dated within the required window, signed by licensed physician, with sworn translation</li>
+          <li>Health insurance certificate: explicitly states no copayments, covers Spain, 12+ months, in your name</li>
+          <li>Bank statements: last 6 months (not just 3), clearly showing monthly deposits</li>
+          <li>Employer letter: on headed paper, includes all required elements, signed by authorised person</li>
+          <li>Pay stubs / invoices: last 3&ndash;6 months</li>
+          <li>W-2 or 1099: most recent tax year</li>
+          <li>All sworn Spanish translations: by certified jurado translator for every English document</li>
+          <li>If family application: all family members&rsquo; documents, apostilled marriage/birth certificates, sworn translations</li>
+        </ul>
+
+        <h3>Practical Logistics for the Day</h3>
+        <ul class="checklist">
+          <li>Originals of every document in your application bundle</li>
+          <li>Two complete sets of photocopies (in the same order as originals)</li>
+          <li>Cash or acceptable payment method for visa fee (check current requirements)</li>
+          <li>Photo ID for building security at 180 N Michigan Ave</li>
+          <li>Appointment confirmation email or reference number</li>
+          <li>Allow 1&ndash;2 hours for your appointment (queues can occur)</li>
+          <li>Note down the tracking reference number provided after submission</li>
+        </ul>
+
+        <h2>Post-Submission: What to Expect from the Chicago Consulate</h2>
+        <p>Once you have submitted your application, here is what typically happens:</p>
+        <ol>
+          <li><strong>Processing period:</strong> 4&ndash;10 weeks. The consulate reviews your application against Spain&rsquo;s DNV requirements and may contact you if additional documents are needed.</li>
+          <li><strong>Status checks:</strong> You can check the status of your application using the reference number provided at submission via the consulate&rsquo;s online tracking system or by calling the consulate.</li>
+          <li><strong>Decision notification:</strong> The consulate will notify you when a decision has been made. If approved, you will be asked to return to collect your passport with the visa affixed. If a deficiency is identified, you may be asked to submit additional documents &mdash; respond promptly.</li>
+          <li><strong>Visa collection:</strong> Return in person to 180 N Michigan Ave to collect your passport. Bring your appointment confirmation and ID.</li>
+          <li><strong>Visa validity:</strong> Your visa is typically valid for 1 year from the date of issue. You must enter Spain and start the TIE process within that window.</li>
+          <li><strong>After arrival in Spain:</strong> Apply for your TIE card at the Oficina de Extranjer&iacute;a within 30 days. Register your address (empadronamiento) at the Ayuntamiento. Open a Spanish bank account. If electing Beckham Law, apply within 6 months of Social Security registration.</li>
+        </ol>
+
+        <h2>Frequently Overlooked Aspects of the DNV Application</h2>
+        <p>In our experience working with Midwest applicants, these are the elements most often underestimated or overlooked:</p>
+        <ul>
+          <li><strong>The apostille on the FBI check takes longer than most applicants expect.</strong> Between the channeler, the US Department of State, and transit time, allow 4&ndash;8 weeks minimum even with expedited processing. Start this on day one.</li>
+          <li><strong>Health insurance shopping takes more time than it should.</strong> Finding a policy that explicitly certifies &ldquo;no copayments&rdquo; in a format acceptable to the consulate is not always straightforward. Allow at least 1&ndash;2 weeks for research, purchase, and certificate issuance.</li>
+          <li><strong>Sworn translation timelines vary significantly.</strong> Some translators specialising in Spain visa documents can turn around translations in 2&ndash;3 business days; others quote 2&ndash;3 weeks. Commission translations early and confirm your translator&rsquo;s sworn (jurado) status before engaging them.</li>
+          <li><strong>Bank statement presentation matters.</strong> Statements should be official documents from your bank &mdash; not screenshots from a banking app. If your bank provides downloadable PDFs with your name, account number, and bank letterhead, use those. Paper statements are also acceptable.</li>
+          <li><strong>The medical certificate is easy to overlook.</strong> It is a simple document but needs a licensed physician&rsquo;s signature and a sworn Spanish translation. Book your GP appointment early in the process.</li>
+        </ul>
+
+        <h2>Related Guides</h2>
+        <ul class="related-links">
+          <li><a href="/digital-nomad-visa-spain/">Spain Digital Nomad Visa: Complete Overview</a></li>
+          <li><a href="/dnv-requirements/">Digital Nomad Visa Requirements</a></li>
+          <li><a href="/dnv-income-requirements/">DNV Income Requirements</a></li>
+          <li><a href="/dnv-documents/">DNV Document Checklist</a></li>
+          <li><a href="/dnv-health-insurance/">DNV Health Insurance Guide</a></li>
+          <li><a href="/dnv-family/">Bringing Family on the DNV</a></li>
+          <li><a href="/dnv-apply-in-spain/">Apply for the DNV Inside Spain</a></li>
+          <li><a href="/dnv-usa/">Spain Digital Nomad Visa for US Citizens</a></li>
+          <li><a href="/dnv-renewal/">DNV Renewal Guide</a></li>
+          <li><a href="/dnv-tax-spain/">DNV Tax Guide (Beckham Law)</a></li>
+        </ul>
+
+        <h2>Time Zone and Remote Work Schedule: Chicago to Spain</h2>
+        <p>The practical reality of working remotely from Spain for US Midwest-based employers is one of the first questions Chicago applicants ask. Here is what to expect:</p>
+        <ul>
+          <li><strong>Standard time (winter):</strong> Spain is CET (UTC+1); Chicago is CST (UTC-6). Difference: 7 hours. A 9am Chicago call is 4pm Madrid.</li>
+          <li><strong>Summer (daylight saving):</strong> Spain is CEST (UTC+2); Chicago is CDT (UTC-5). Difference: 7 hours year-round during spring/summer.</li>
+          <li><strong>Practical schedule:</strong> A common approach is to start the Spanish workday around noon or 1pm Madrid time, which corresponds to 5&ndash;6am Chicago. By 8&ndash;9pm Madrid time, the full Chicago working day is underway. This is a shifted schedule but manageable for most remote roles.</li>
+          <li><strong>Async advantage:</strong> Roles at companies with strong async cultures (project management, writing, development, design) often work seamlessly from Spain without any schedule change.</li>
+          <li><strong>Client calls:</strong> End-of-day Chicago calls (4&ndash;6pm CST) are 11pm&ndash;1am Madrid &mdash; generally not sustainable long-term. Discuss expectations with clients and employers before committing.</li>
+        </ul>
+
+        <h2>Settling In Spain: First Two Weeks Priorities for Midwest Movers</h2>
+        <p>Once you arrive in Spain on your Digital Nomad Visa, these are the highest-priority administrative tasks for your first two weeks:</p>
+        <ol>
+          <li><strong>Secure your accommodation address.</strong> You need a Spanish address for empadronamiento and the TIE application. If you booked a short-term rental, confirm the exact address before arrival.</li>
+          <li><strong>Register empadronamiento at the Ayuntamiento.</strong> Book an appointment with your local town hall (Ayuntamiento) and bring your passport, visa, and proof of address (rental contract or host letter). You will receive your empadronamiento certificate &mdash; a key document for many subsequent processes.</li>
+          <li><strong>Apply for your TIE card.</strong> Book an appointment at the Oficina de Extranjer&iacute;a (immigration office) with your passport, visa, empadronamiento certificate, passport photos, and completed EX-23 application form. You will also pay a small fee (tasas). TIE cards are typically ready in 4&ndash;6 weeks.</li>
+          <li><strong>Open a Spanish bank account.</strong> Visit a local branch of Santander, BBVA, CaixaBank, or Sabadell. Bring your passport and NIE/TIE (or appointment receipt) and empadronamiento. Some banks can open accounts without a TIE using just your passport and NIE number.</li>
+          <li><strong>Get a Spanish SIM card.</strong> Spanish carriers include Movistar, Vodafone, Orange, and budget options like DIGI, Simyo, and Yoigo. A SIM with data is essential from day one for navigation and communication.</li>
+        </ol>
+
+        <h2>Cost of Living Comparison: Chicago vs Major Spanish Cities</h2>
+        <p>For Midwest applicants, the cost of living differential between Chicago and Spanish cities is one of the most compelling arguments for the move. Rough monthly cost comparisons:</p>
+        <table class="req-table">
+          <thead>
+            <tr>
+              <th>Expense Category</th>
+              <th>Chicago (approx.)</th>
+              <th>Madrid (approx.)</th>
+              <th>Valencia (approx.)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1-bedroom apartment (city centre)</td>
+              <td>$1,800&ndash;$2,800</td>
+              <td>&euro;1,200&ndash;&euro;1,800</td>
+              <td>&euro;800&ndash;&euro;1,300</td>
+            </tr>
+            <tr>
+              <td>Groceries (month)</td>
+              <td>$400&ndash;$600</td>
+              <td>&euro;200&ndash;&euro;350</td>
+              <td>&euro;180&ndash;&euro;300</td>
+            </tr>
+            <tr>
+              <td>Dining out (meal for two)</td>
+              <td>$60&ndash;$120</td>
+              <td>&euro;30&ndash;&euro;60</td>
+              <td>&euro;25&ndash;&euro;50</td>
+            </tr>
+            <tr>
+              <td>Public transport (monthly pass)</td>
+              <td>$105</td>
+              <td>&euro;54</td>
+              <td>&euro;32</td>
+            </tr>
+            <tr>
+              <td>Private health insurance</td>
+              <td>$300&ndash;$700+</td>
+              <td>&euro;80&ndash;&euro;200</td>
+              <td>&euro;80&ndash;&euro;200</td>
+            </tr>
+          </tbody>
+        </table>
+        <p style="font-size:0.85rem;color:var(--muted);margin-top:-10px;">Figures are approximate and based on 2026 estimates. Exchange rates and individual lifestyle affect actual costs.</p>
+
+        <h2>DNV Eligibility: Common Job Types for Midwest Applicants</h2>
+        <p>The Spain Digital Nomad Visa is specifically designed for people working remotely for non-Spanish employers or clients. These are the most common eligible roles among Midwest applicants:</p>
+        <ul>
+          <li><strong>Technology:</strong> Software engineers, data analysts, DevOps engineers, product managers, QA engineers, cybersecurity specialists</li>
+          <li><strong>Finance and accounting:</strong> Remote financial analysts, accountants, CFOs, bookkeepers working for non-Spanish clients or firms</li>
+          <li><strong>Marketing and communications:</strong> Digital marketers, SEO specialists, content strategists, social media managers, PR professionals</li>
+          <li><strong>Creative and design:</strong> Graphic designers, UX/UI designers, video editors, illustrators</li>
+          <li><strong>Consulting:</strong> Management consultants, HR consultants, operations consultants working for non-Spanish firms</li>
+          <li><strong>Education (remote):</strong> Online tutors, instructional designers, e-learning developers</li>
+          <li><strong>Legal (non-Spanish law):</strong> US-qualified lawyers providing advice on US or international law to non-Spanish clients</li>
+          <li><strong>Healthcare technology:</strong> Health tech product managers, medical writers, telemedicine professionals for non-Spanish providers</li>
+        </ul>
+        <p>The DNV is not available for roles requiring a Spanish professional licence or for those primarily working for Spanish clients. If you are unsure about your job type&rsquo;s eligibility, use our <a href="/dnv-eligibility/">free eligibility check</a> or book a consultation.</p>
+
+        <h2>Frequently Missed Details That Make the Difference</h2>
+        <p>Beyond the major document requirements, these smaller details often determine whether an application is smooth or needs supplementation:</p>
+        <ul>
+          <li><strong>Document currency:</strong> Bank statements older than 3 months at the time of your appointment may be questioned. Update them if your appointment date moved significantly from when you initially gathered documents.</li>
+          <li><strong>Health insurance territorial coverage:</strong> Your policy certificate must explicitly state coverage &ldquo;in Spain&rdquo; or &ldquo;in the European Union&rdquo; or &ldquo;worldwide including Spain.&rdquo; Generic global coverage language without Spain specified has caused problems at some consulates.</li>
+          <li><strong>EX-01 form completion:</strong> The form has sections about your intended address in Spain and expected duration of stay. &ldquo;TBD&rdquo; or blank entries raise questions; provide as much information as possible, even if approximate.</li>
+          <li><strong>Photocopies in order:</strong> Organise your photocopies in the same order as your originals. A disorganised application bundle slows the consulate officer and can cause items to be missed.</li>
+          <li><strong>Cover letter (optional but recommended):</strong> A brief cover letter introducing yourself, your employer/clients, your income, and your intended move plan shows preparedness and organisation. Not required but can help frame your application positively.</li>
+        </ul>
+
+
+        <h2>Working Remotely from Spain: Essential Practical Guide</h2>
+        <p>Moving to Spain as a digital nomad involves more than obtaining the right visa. Here are the practical working realities that affect your daily life and productivity:</p>
+
+        <h3>Internet and Connectivity in Spain</h3>
+        <p>Spain has excellent broadband infrastructure in major cities and towns. Fibre optic (fibra &oacute;ptica) is widely available from providers including Movistar (Telef&oacute;nica), Vodafone, Orange, and DIGI. Typical fibre speeds in apartments are 300Mbps&ndash;1Gbps. Rural areas have more limited options but 4G/5G mobile coverage is generally good across the country.</p>
+        <ul>
+          <li><strong>Home broadband:</strong> Most rental agreements include or readily allow broadband installation. Average residential fibre: &euro;30&ndash;&euro;55/month including landline. DIGI offers budget options from around &euro;20/month.</li>
+          <li><strong>Coworking spaces:</strong> Every major Spanish city has a growing network of coworking spaces. Madrid alone has dozens, ranging from budget hotdesks (&euro;150&ndash;&euro;200/month) to premium private offices (&euro;400&ndash;&euro;800/month).</li>
+          <li><strong>Cafes:</strong> Many Spanish cafes offer wifi, though the culture around long cafe working sessions is less established than in some other countries. Coworking spaces are more reliable for full-day work.</li>
+        </ul>
+
+        <h3>Banking for Remote Workers in Spain</h3>
+        <p>Managing finances as a foreign resident in Spain involves several layers:</p>
+        <ul>
+          <li><strong>Spanish bank account:</strong> Essential for rent, utilities, and Spanish transactions. Open as soon as you have your NIE/TIE. CaixaBank, Santander, BBVA, and Sabadell are the most accessible. Some require a full TIE card; others accept an appointment receipt and passport.</li>
+          <li><strong>International transfers:</strong> For receiving income in foreign currency (USD, GBP, CAD), services like Wise (formerly TransferWise), Revolut, and XE offer significantly better exchange rates and lower fees than traditional banks.</li>
+          <li><strong>Currency conversion timing:</strong> If your income is in foreign currency, consider the exchange rate when converting to euros for Spanish expenses. Setting a regular transfer schedule helps reduce volatility impact.</li>
+          <li><strong>Modelo 720:</strong> If you have foreign assets worth more than &euro;50,000, you must file a Modelo 720 declaration with the Spanish Tax Authority (Agencia Tributaria) by March 31 each year. Failure to declare carries significant penalties. Professional tax advice is essential for asset-rich applicants.</li>
+        </ul>
+
+        <h3>Healthcare Access in Spain</h3>
+        <p>Your visa health insurance covers private healthcare from day one. Longer-term options:</p>
+        <ul>
+          <li><strong>Private health insurance (your visa policy):</strong> Covers private consultations and hospital treatment without waiting lists. Spain&rsquo;s private healthcare is high quality and widely available. Private specialists in Madrid and Barcelona are generally excellent.</li>
+          <li><strong>Public healthcare (Sistema Nacional de Salud):</strong> Once you register with Social Security (required if working as aut&oacute;nomo or for a Spanish employer), you gain access to Spain&rsquo;s public health system. This is free at point of use but has longer waiting times for non-urgent care.</li>
+          <li><strong>Private health supplements:</strong> Many Spanish residents hold a supplemental private health insurance (seguro m&eacute;dico) from providers like established private health insurers in Spain, or a leading private insurer &mdash; covering private GP visits, specialists, and diagnostics &mdash; at very affordable rates (&euro;40&ndash;&euro;80/month for basic coverage).</li>
+        </ul>
+
+        <h3>Education for Children</h3>
+        <p>If you are bringing children, Spain has excellent education options:</p>
+        <ul>
+          <li><strong>International schools:</strong> Major Spanish cities have British, American, and bilingual international schools. Fees range from &euro;5,000&ndash;&euro;20,000+ per year depending on the school.</li>
+          <li><strong>Spanish public schools:</strong> Free and high quality. Taught in Spanish (and often regional language). Children adapt quickly, especially under age 10.</li>
+          <li><strong>Concertados (semi-private):</strong> State-subsidised private schools, common in Spain, offering a middle ground between fully private and state education.</li>
+        </ul>
+
+        <h2>Quick Reference: Chicago Consulate Application at a Glance</h2>
+        <table class="req-table">
+          <thead><tr><th>Item</th><th>Detail</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Consulate Address</strong></td><td>180 N Michigan Avenue, Suite 1500, Chicago, IL 60601</td></tr>
+            <tr><td><strong>Appointment Website</strong></td><td>cgespanachicago.org</td></tr>
+            <tr><td><strong>Visa Hours</strong></td><td>Mon&ndash;Fri, 9:00am&ndash;1:00pm</td></tr>
+            <tr><td><strong>States Covered</strong></td><td>IL, IN, IA, KS, KY, MI, MN, MO, NE, ND, OH, SD, WI</td></tr>
+            <tr><td><strong>Typical Appt. Wait</strong></td><td>3&ndash;8 weeks (shorter than Miami/LA)</td></tr>
+            <tr><td><strong>Processing After Submission</strong></td><td>4&ndash;10 weeks</td></tr>
+            <tr><td><strong>Background Check</strong></td><td>Federal FBI Identity History Summary (NOT state check)</td></tr>
+            <tr><td><strong>Apostille Authority</strong></td><td>US Department of State (for FBI check)</td></tr>
+            <tr><td><strong>Income Threshold</strong></td><td>&euro;2,646/month (~,800 USD at 2026 rates)</td></tr>
+            <tr><td><strong>Health Insurance</strong></td><td>No copayments; valid in Spain; 12+ months</td></tr>
+            <tr><td><strong>Translation Requirement</strong></td><td>All English documents need certified sworn Spanish translations</td></tr>
+            <tr><td><strong>Visa Fee</strong></td><td>~40&ndash;90 USD (verify before appointment)</td></tr>
+            <tr><td><strong>Total Timeline</strong></td><td>2.5&ndash;4.5 months (start to arrival in Spain)</td></tr>
+          </tbody>
+        </table>
+
+        <h2>How My Spanish Visa Can Help</h2>
+        <p>Navigating the Spain Digital Nomad Visa process involves coordinating multiple documents, agencies, and deadlines across different countries. My Spanish Visa provides expert guidance and hands-on support at every stage:</p>
+
+        <h3>What We Do for You</h3>
+        <ul>
+          <li><strong>Free eligibility assessment:</strong> We confirm whether you qualify before you spend time and money on documents &mdash; including your job type, income level, and application route options.</li>
+          <li><strong>Step-by-step document guidance:</strong> We provide a personalised document checklist based on your specific situation (employee vs freelancer, family vs solo, consulate vs UGE route).</li>
+          <li><strong>Sworn translator referrals:</strong> We work with vetted, formally certified sworn translators who have extensive experience with Spain visa documents.</li>
+          <li><strong>Health insurance guidance:</strong> We can recommend and help you navigate Spain-compliant health insurance options that explicitly meet the &ldquo;no copayments&rdquo; requirement.</li>
+          <li><strong>Application review:</strong> Before you submit, we review your complete application bundle to identify any gaps or potential issues that could lead to a request for further documents or a rejection.</li>
+          <li><strong>Post-arrival support:</strong> TIE card application, empadronamiento, banking, Social Security registration &mdash; our team can guide you through the first steps of life in Spain.</li>
+          <li><strong>Tax referrals:</strong> We work with dual-qualified tax professionals who understand both the Beckham Law and the relevant bilateral tax treaties for US, UK, and Canadian applicants.</li>
+        </ul>
+
+        <h3>Why Work With a Specialist?</h3>
+        <p>Spain visa applications involve bureaucratic processes that are easy to get wrong &mdash; and the consequences (rejection, delays, having to reapply) are costly in both time and money. Our clients benefit from:</p>
+        <ul>
+          <li>Avoiding the most common mistakes that lead to rejections and resubmissions</li>
+          <li>Faster document preparation through structured guidance and vetted supplier referrals</li>
+          <li>Confidence that their application meets current consulate requirements (which can change)</li>
+          <li>Clear, honest advice on timeline expectations &mdash; not overpromised processing times</li>
+          <li>Ongoing access to our team for questions as they arise through the process</li>
+        </ul>
+
+        <h2>Visa Timeline Summary: Chicago to Spain</h2>
+        <p>To help you plan, here is a realistic timeline for Chicago-based applicants moving through the entire Digital Nomad Visa process:</p>
+        <ul>
+          <li><strong>Day 1:</strong> Book your Chicago consulate appointment at cgespanachicago.org; order your FBI background check via a channeler; begin researching health insurance options.</li>
+          <li><strong>Week 1&ndash;2:</strong> Purchase Spain-compliant health insurance; request employer letter from HR; download 6 months of bank statements; gather W-2/1099 and recent pay stubs.</li>
+          <li><strong>Week 2&ndash;4:</strong> Receive FBI check results (channeler route); apply for US Dept of State apostille on FBI check; send all English documents to sworn translator.</li>
+          <li><strong>Week 3&ndash;8:</strong> Wait for consulate appointment (3&ndash;8 weeks typical); complete EX-01 application form; confirm all documents are current.</li>
+          <li><strong>Appointment day:</strong> Attend at 180 N Michigan Ave with originals and two sets of photocopies; pay visa fee; receive tracking reference.</li>
+          <li><strong>Post-submission (4&ndash;10 weeks):</strong> Consulate processes your application; check status periodically using your reference number.</li>
+          <li><strong>Approval:</strong> Return to collect passport with visa; book flights to Spain; arrange accommodation for arrival.</li>
+          <li><strong>First month in Spain:</strong> Register empadronamiento; apply for TIE card; open Spanish bank account; get local SIM; register with private clinic.</li>
+        </ul>
+        <p><strong>Total realistic timeline: 2.5 to 4.5 months</strong> from starting documents to arriving in Spain. The shorter appointment waits at the Chicago consulate compared to Miami and LA can give Midwest applicants a meaningfully faster overall journey.</p>
+      </main>
+
+      <aside class="sidebar">
+
+        <div class="sidebar-card">
+          <h3>Chicago Consulate Details</h3>
+          <div class="consulate-detail">
+            <strong>Address</strong>
+            180 N Michigan Avenue, Suite 1500<br>Chicago, IL 60601
+          </div>
+          <div class="consulate-detail">
+            <strong>Appointments</strong>
+            cgespanachicago.org
+          </div>
+          <div class="consulate-detail">
+            <strong>Visa Hours</strong>
+            Mon&ndash;Fri, 9:00am&ndash;1:00pm
+          </div>
+          <div class="consulate-detail">
+            <strong>Jurisdiction</strong>
+            IL, IN, IA, KS, KY, MI, MN, MO, NE, ND, OH, SD, WI
+          </div>
+          <div class="consulate-detail">
+            <strong>Appointment Wait</strong>
+            Typically 3&ndash;8 weeks
+          </div>
+          <div class="consulate-detail">
+            <strong>Processing Time</strong>
+            4&ndash;10 weeks after submission
+          </div>
+        </div>
+
+        <div class="sidebar-card">
+          <h3>Application Timeline</h3>
+          <div class="timeline-widget">
+            <div class="timeline-step">
+              <div class="timeline-dot">1</div>
+              <div class="timeline-text"><strong>Week 1&ndash;2</strong>Book appointment; start FBI check</div>
+            </div>
+            <div class="timeline-step">
+              <div class="timeline-dot">2</div>
+              <div class="timeline-text"><strong>Week 2&ndash;8</strong>Gather documents; buy health insurance</div>
+            </div>
+            <div class="timeline-step">
+              <div class="timeline-dot">3</div>
+              <div class="timeline-text"><strong>Week 3&ndash;8</strong>Wait for appointment (shorter than most)</div>
+            </div>
+            <div class="timeline-step">
+              <div class="timeline-dot">4</div>
+              <div class="timeline-text"><strong>Week 6&ndash;12</strong>Commission sworn translations</div>
+            </div>
+            <div class="timeline-step">
+              <div class="timeline-dot">5</div>
+              <div class="timeline-text"><strong>Appointment</strong>Submit at 180 N Michigan Ave</div>
+            </div>
+            <div class="timeline-step">
+              <div class="timeline-dot">6</div>
+              <div class="timeline-text"><strong>+4&ndash;10 weeks</strong>Consulate processes application</div>
+            </div>
+            <div class="timeline-step">
+              <div class="timeline-dot">7</div>
+              <div class="timeline-text"><strong>Approval</strong>Collect visa; book travel</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="sidebar-card">
+          <h3>Quick Links</h3>
+          <div class="quick-links">
+            <a href="/digital-nomad-visa-spain/">DNV Overview</a>
+            <a href="/dnv-requirements/">DNV Requirements</a>
+            <a href="/dnv-income-requirements/">Income Requirements</a>
+            <a href="/dnv-documents/">Document Checklist</a>
+            <a href="/dnv-health-insurance/">Health Insurance Guide</a>
+            <a href="/dnv-family/">Family Application</a>
+            <a href="/dnv-apply-in-spain/">Apply Inside Spain</a>
+            <a href="/dnv-eligibility/">Eligibility Check</a>
+          </div>
+        </div>
+
+        <div class="sidebar-card" style="background:var(--navy);border-color:var(--navy);">
+          <h3 style="color:var(--yellow);">Free Consultation</h3>
+          <p style="color:rgba(255,255,255,0.85);font-size:0.88rem;margin:0 0 16px;">Speak with a Spain visa specialist about your Chicago consulate application.</p>
+          <a href="/contact-us/" class="btn btn-primary" style="display:block;text-align:center;width:100%;">Book Now &mdash; It's Free</a>
+        </div>
+
+      </aside>
+    </div>
+  </div>
+
+
+  <div class="page-container" style="padding-bottom:48px;">
+    <div style="background:var(--cream);border:1px solid var(--border);border-radius:var(--radius-lg);padding:28px 32px;margin-top:0;">
+      <h2 style="font-size:1.1rem;font-weight:800;color:var(--navy);margin:0 0 12px;border:none;display:block;padding:0;">Disclaimer</h2>
+      <p style="font-size:0.86rem;color:var(--muted);margin:0;line-height:1.7;">The information on this page is provided for general guidance only and is based on information available as of April 2026. Spain&rsquo;s Digital Nomad Visa requirements, processing times, consulate procedures, and income thresholds are subject to change. Always verify current requirements directly with the relevant Spanish consulate or embassy before submitting your application. My Spanish Visa provides information and facilitation services; we are not a law firm and this is not legal advice. Consulate contact details, processing times, and fees should be confirmed directly with the consulate at the time of booking.</p>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  var items = document.querySelectorAll('.msv .faq-item');
+  items.forEach(function(item){
+    var btn = item.querySelector('.faq-question');
+    if(btn){
+      btn.addEventListener('click', function(){
+        var isOpen = item.classList.contains('open');
+        items.forEach(function(el){ el.classList.remove('open'); });
+        if(!isOpen){ item.classList.add('open'); }
+      });
+    }
+  });
+})();
+</script>
+
+<!-- FRAGMENT_END -->
+</main>
+
+
+<!-- ═══════════════════════════════════════════════════
+     SITE FOOTER
+     ═══════════════════════════════════════════════════ -->
+
+<section style="background:#f8f7f4;padding:2rem 1.5rem;border-top:1px solid #dce3ed;">
+  <div style="max-width:820px;margin:0 auto;">
+    <div style="background:#fff;border:2px solid #dce3ed;border-radius:12px;padding:1.75rem 2rem;">
+      <p style="font-weight:700;color:#0c1930;margin:0 0 0.5rem;font-size:0.95rem;">Recommended insurance specialists</p>
+      <p style="color:#5a6478;font-size:0.9rem;margin:0;line-height:1.8;">
+        <a href="https://www.spanish-healthinsurance.com/myspanishvisa" target="_blank" rel="noopener" style="color:#be0011;font-weight:700;">Spanish Health Insurance</a> — visa-compliant private health insurance for English-speaking foreigners in Spain.<br>
+        <a href="https://www.247expatinsurance.com/myspanishvisa" target="_blank" rel="noopener" style="color:#be0011;font-weight:700;">247 Expat Insurance</a> — health and all types of expat insurance in Spain, tailored for international residents.
+      </p>
+    </div>
+  </div>
+</section>
+<footer class="msv-footer" role="contentinfo">
+
+  <div class="msv-footer__top">
+
+    <!-- Brand column -->
+    <div class="msv-footer__brand">
+      <a href="/" class="msv-footer__logo" aria-label="My Spanish Visa"><img src="/assets/images/msv-logo-white.png" alt="My Spanish Visa" height="40" style="display:block;"></a>
+      <p class="msv-footer__tagline">
+        Specialist Spain visa &amp; residency guidance for English-speaking foreigners.
+        A service of Platinum Legal Spain.
+      </p>
+      <div class="msv-footer__trust">
+        <span class="msv-footer__trust-item">All English. No barriers.</span>
+        <span class="msv-footer__trust-item">Solicitors &amp; immigration specialists</span>
+        <span class="msv-footer__trust-item">100% online process</span>
+      </div>
+    </div>
+
+    <!-- Visas column -->
+    <div>
+      <div class="msv-footer__col-title">Visas</div>
+      <ul class="msv-footer__links">
+        <li><a href="/non-lucrative-visa-spain/">Non-Lucrative Visa</a></li>
+        <li><a href="/digital-nomad-visa-spain/">Digital Nomad Visa</a></li>
+        <li><a href="/student-visa-spain/">Student Visa</a></li>
+        <li><a href="/spain-visa-renewal/">Visa Renewals</a></li>
+        <li><a href="/best-visa-move-to-spain/">Compare All Visas</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/nlv">Apply: NLV</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/dnv">Apply: DNV</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/student-visa">Apply: Student Visa</a></li>
+      </ul>
+    </div>
+
+    <!-- Resources column -->
+    <div>
+      <div class="msv-footer__col-title">Resources</div>
+      <ul class="msv-footer__links">
+        <li><a href="/blog/">Blog &amp; Guides</a></li>
+        <li><a href="/move-to-spain/">Move to Spain Guide</a></li>
+        <li><a href="/visa-eligibility-quiz/">Eligibility Quiz</a></li>
+        <li><a href="/spain-visa-checklist/">Document Checklists</a></li>
+        <li><a href="/spain-visa-requirements/">Visa Requirements</a></li>
+        <li><a href="/spain-nie-number/">NIE Number Guide</a></li>
+        <li><a href="/spain-tie-card/">TIE Card Guide</a></li>
+      </ul>
+    </div>
+
+    <!-- Company column -->
+    <div>
+      <div class="msv-footer__col-title">Company</div>
+      <ul class="msv-footer__links">
+        <li><a href="/about-us/">About Us</a></li>
+        <li><a href="/testimonials/">Client Reviews</a></li>
+        <li><a href="/why-choose-us/">Why Choose Us</a></li>
+        <li><a href="/contact-us.html">Contact</a></li>
+        <li><a href="https://www.platinumlegalspain.com" rel="noopener">Platinum Legal Spain</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/dnv">Client Portal</a></li>
+      </ul>
+    </div>
+
+  </div><!-- /.msv-footer__top -->
+
+  <div class="msv-footer__bottom">
+    <div class="msv-footer__bottom-inner">
+      <p class="msv-footer__disclaimer">
+        <strong style="color:rgba(255,255,255,0.5);">Disclaimer:</strong>
+        My Spanish Visa provides visa processing support and is not a law firm. Content on this site is for informational purposes only and does not constitute legal advice. Immigration rules change frequently — always verify requirements with official sources or a qualified specialist. My Spanish Visa is a trading name of Platinum Legal Spain.
+      </p>
+      <span class="msv-footer__copyright">© 2026 My Spanish Visa. All rights reserved.</span>
+    </div>
+  </div>
+
+</footer>
+
+</body>
+</html>

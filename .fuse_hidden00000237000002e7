@@ -1,0 +1,1738 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- ═══════════════════════════════════════════════════════════════════
+       PAGE-SPECIFIC HEAD — replace block below per page:
+       <title>Nlv Renewal Income Requirements | My Spanish Visa</title>
+       <meta name="description" content="…">
+       <meta property="og:title" content="…">
+       <meta property="og:description" content="…">
+       <meta property="og:url" content="https://www.myspanishvisa.com/…">
+       <meta property="og:image" content="…">
+       <link rel="canonical" href="https://www.myspanishvisa.com/…">
+       <script type="application/ld+json">…</script>
+       ═══════════════════════════════════════════════════════════════════ -->
+  <title>My Spanish Visa — Spain Visa &amp; Residency Specialists</title>
+  <meta name="description" content="My Spanish Visa helps English-speaking foreigners move to Spain. Expert guidance on Non-Lucrative Visa, Digital Nomad Visa, Student Visa, renewals and more.">
+
+  <!-- Shared Open Graph defaults -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="My Spanish Visa">
+  <meta property="og:image" content="https://www.myspanishvisa.com/assets/images/og/og-myspanishvisa-default.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@myspanishvisa">
+
+  <style>
+/* ═══════════════════════════════════════════════════════════════
+   GLOBAL SHELL — nav + footer only.
+   Page-specific CSS lives inside each fragment's own <style> block.
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── iOS overflow safety ── */
+html, body { max-width: 100%; overflow-x: clip; margin: 0; padding: 0; }
+*, *::before, *::after { box-sizing: border-box; }
+
+/* ── Brand tokens (root-level so all fragments inherit) ── */
+:root {
+  --navy:      #0c1930;
+  --navy-mid:  #1a3a5c;
+  --red:       #be0011;
+  --red-deep:  #8c000d;
+  --yellow:    #facf39;
+  --cream:     #f8f7f4;
+  --white:     #ffffff;
+  --black:     #1a1a1a;
+  --muted:     #5a6478;
+  --border:    #dce3ed;
+  --shadow-sm: 0 2px 8px rgba(12,25,48,0.08);
+  --shadow-md: 0 6px 24px rgba(12,25,48,0.13);
+}
+
+body {
+  font-family: 'Inter', 'Segoe UI', system-ui, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.75;
+  color: var(--black);
+  background: #fff;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   SITE NAV
+   ───────────────────────────────────────────────────────────── */
+.msv-nav {
+  position: sticky;
+  top: 0;
+  z-index: 9000;
+  background: var(--navy);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 2px 12px rgba(12,25,48,0.22);
+}
+.msv-nav__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+  gap: 1.5rem;
+}
+
+/* Logo */
+.msv-nav__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+.msv-nav__logo-flag {
+  font-size: 1.3rem;
+  line-height: 1;
+}
+.msv-nav__logo-text {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+.msv-nav__logo-text span {
+  color: var(--yellow);
+}
+
+/* Links */
+.msv-nav__links {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.msv-nav__links > li {
+  position: relative;
+}
+.msv-nav__links > li > a,
+.msv-nav__links > li > button {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.5rem 0.9rem;
+  font-size: 0.87rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.85);
+  text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: color 0.15s, background 0.15s;
+  white-space: nowrap;
+  height: 64px;
+}
+.msv-nav__links > li > a:hover,
+.msv-nav__links > li > button:hover,
+.msv-nav__links > li:focus-within > a,
+.msv-nav__links > li:focus-within > button {
+  color: #fff;
+  background: rgba(255,255,255,0.08);
+}
+.msv-nav__chevron {
+  font-size: 0.65rem;
+  opacity: 0.7;
+  transition: transform 0.2s;
+}
+.msv-nav__links > li:focus-within .msv-nav__chevron,
+.msv-nav__links > li:hover .msv-nav__chevron {
+  transform: rotate(180deg);
+}
+
+/* Dropdown */
+.msv-nav__dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 230px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  box-shadow: var(--shadow-md);
+  padding: 0.5rem 0;
+  z-index: 200;
+}
+.msv-nav__links > li:hover .msv-nav__dropdown,
+.msv-nav__links > li:focus-within .msv-nav__dropdown {
+  display: block;
+}
+.msv-nav__dropdown a {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.6rem 1.1rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--navy);
+  text-decoration: none;
+  transition: background 0.12s;
+}
+.msv-nav__dropdown a:hover {
+  background: var(--cream);
+  color: var(--red);
+}
+.msv-nav__dropdown-icon {
+  width: 24px;
+  height: 24px;
+  background: var(--cream);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+.msv-nav__dropdown-divider {
+  height: 1px;
+  background: var(--border);
+  margin: 0.4rem 0;
+}
+
+/* CTA button */
+.msv-nav__cta {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.55rem 1.2rem;
+  background: var(--red);
+  color: #fff !important;
+  font-size: 0.85rem;
+  font-weight: 700;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.15s, box-shadow 0.15s;
+  white-space: nowrap;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(190,0,17,0.3);
+}
+.msv-nav__cta:hover {
+  background: var(--red-deep);
+  box-shadow: 0 4px 14px rgba(190,0,17,0.4);
+  text-decoration: none;
+}
+
+/* Hamburger */
+.msv-nav__burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.4rem;
+  border-radius: 5px;
+}
+.msv-nav__burger span {
+  width: 22px;
+  height: 2px;
+  background: #fff;
+  border-radius: 2px;
+  transition: transform 0.2s, opacity 0.2s;
+  display: block;
+}
+
+/* Mobile nav */
+.msv-nav__mobile {
+  display: none;
+  flex-direction: column;
+  background: var(--navy-mid);
+  padding: 1rem 1.5rem 1.5rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+.msv-nav__mobile.open { display: flex; }
+.msv-nav__mobile a {
+  padding: 0.65rem 0;
+  color: rgba(255,255,255,0.9);
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+.msv-nav__mobile a:hover { color: var(--yellow); }
+.msv-nav__mobile .msv-nav__mobile-sub {
+  padding-left: 1rem;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: rgba(255,255,255,0.7);
+}
+.msv-nav__mobile-cta {
+  margin-top: 1rem;
+  background: var(--red);
+  color: #fff !important;
+  border-radius: 6px;
+  text-align: center;
+  padding: 0.75rem 1rem !important;
+  border-bottom: none !important;
+}
+
+@media (max-width: 900px) {
+  .msv-nav__links { display: none; }
+  .msv-nav__cta { display: none; }
+  .msv-nav__burger { display: flex; }
+}
+@media (max-width: 480px) {
+  .msv-nav__inner { padding: 0 1rem; }
+}
+
+/* ─────────────────────────────────────────────────────────────
+   SITE FOOTER
+   ───────────────────────────────────────────────────────────── */
+.msv-footer {
+  background: var(--navy);
+  color: rgba(255,255,255,0.75);
+  overflow-x: clip;
+}
+.msv-footer__top {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem 3rem;
+  display: grid;
+  grid-template-columns: 280px 1fr 1fr 1fr;
+  gap: 3rem;
+}
+@media (max-width: 900px) {
+  .msv-footer__top { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
+}
+@media (max-width: 560px) {
+  .msv-footer__top { grid-template-columns: 1fr; gap: 2rem; padding: 3rem 1.2rem 2rem; }
+}
+
+.msv-footer__brand {}
+.msv-footer__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  margin-bottom: 1rem;
+}
+.msv-footer__logo-flag { font-size: 1.3rem; }
+.msv-footer__logo-text {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -0.01em;
+}
+.msv-footer__logo-text span { color: var(--yellow); }
+.msv-footer__tagline {
+  font-size: 0.83rem;
+  color: rgba(255,255,255,0.55);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+.msv-footer__trust {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+.msv-footer__trust-item {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.65);
+}
+.msv-footer__trust-item::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  background: var(--yellow);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.msv-footer__col-title {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.4);
+  margin-bottom: 1rem;
+}
+.msv-footer__links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.msv-footer__links a {
+  font-size: 0.87rem;
+  color: rgba(255,255,255,0.68);
+  text-decoration: none;
+  transition: color 0.15s;
+  display: inline-block;
+}
+.msv-footer__links a:hover {
+  color: var(--yellow);
+  text-decoration: none;
+}
+
+.msv-footer__bottom {
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+.msv-footer__bottom-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 1rem;
+  justify-content: space-between;
+}
+.msv-footer__disclaimer {
+  font-size: 0.73rem;
+  color: rgba(255,255,255,0.35);
+  line-height: 1.65;
+  max-width: 720px;
+}
+.msv-footer__copyright {
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.35);
+  white-space: nowrap;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   MAIN CONTENT AREA
+   ───────────────────────────────────────────────────────────── */
+main {
+  /* Fragments are self-contained; this wrapper just provides flow context */
+  position: relative;
+}
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════
+     SITE NAVIGATION
+     ═══════════════════════════════════════════════════ -->
+<header class="msv-nav" role="banner">
+  <div class="msv-nav__inner">
+
+    <!-- Logo -->
+    <a href="/" class="msv-nav__logo" aria-label="My Spanish Visa — Home"><img src="/assets/images/msv-logo-white.png" alt="My Spanish Visa" height="80" style="display:block;"></a>
+
+    <!-- Desktop links -->
+    <nav aria-label="Main navigation">
+      <ul class="msv-nav__links">
+
+        <li>
+          <button class="msv-nav__dropdown-trigger" aria-haspopup="true" aria-expanded="false">
+            Visas <span class="msv-nav__chevron">▾</span>
+          </button>
+          <div class="msv-nav__dropdown" role="menu">
+            <a href="/non-lucrative-visa-spain/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🏖️</span>Non-Lucrative Visa
+            </a>
+            <a href="/digital-nomad-visa-spain/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">💻</span>Digital Nomad Visa
+            </a>
+            <a href="/student-visa-spain/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🎓</span>Student Visa
+            </a>
+            <div class="msv-nav__dropdown-divider"></div>
+            <a href="/spain-visa-renewal/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🔄</span>Visa Renewals
+            </a>
+            <a href="/best-visa-move-to-spain/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">⚖️</span>Compare All Visas
+            </a>
+          </div>
+        </li>
+
+        <li>
+          <button aria-haspopup="true" aria-expanded="false">
+            Resources <span class="msv-nav__chevron">▾</span>
+          </button>
+          <div class="msv-nav__dropdown" role="menu">
+            <a href="/blog/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">📝</span>Blog &amp; Guides
+            </a>
+            <a href="/spain-visa-checklist/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">✅</span>Document Checklists
+            </a>
+            <a href="/move-to-spain/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🏠</span>Move to Spain Guide
+            </a>
+            <a href="/visa-eligibility-quiz/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🧭</span>Eligibility Quiz
+            </a>
+          </div>
+        </li>
+
+        <li><a href="/about-us/">About Us</a></li>
+        <li><a href="/testimonials/">Reviews</a></li>
+        <li><a href="/contact-us.html">Contact</a></li>
+
+      </ul>
+    </nav>
+
+    <!-- Desktop CTA -->
+    <a href="https://dashboard.platinumlegalspain.com/nlv-renewal" class="msv-nav__cta">
+      Start My Application →
+    </a>
+
+    <!-- Hamburger (mobile) -->
+    <button class="msv-nav__burger" aria-label="Open menu" aria-expanded="false" onclick="
+      var m=document.querySelector('.msv-nav__mobile');
+      var open=m.classList.toggle('open');
+      this.setAttribute('aria-expanded', open);
+    ">
+      <span></span><span></span><span></span>
+    </button>
+
+  </div><!-- /.msv-nav__inner -->
+
+  <!-- Mobile menu -->
+  <nav class="msv-nav__mobile" aria-label="Mobile navigation">
+    <a href="/non-lucrative-visa-spain/" class="msv-nav__mobile-sub">Non-Lucrative Visa</a>
+    <a href="/digital-nomad-visa-spain/" class="msv-nav__mobile-sub">Digital Nomad Visa</a>
+    <a href="/student-visa-spain/" class="msv-nav__mobile-sub">Student Visa</a>
+    <a href="/spain-visa-renewal/">Visa Renewals</a>
+    <a href="/best-visa-move-to-spain/">Compare All Visas</a>
+    <a href="/blog/">Blog &amp; Guides</a>
+    <a href="/about-us/">About Us</a>
+    <a href="/testimonials/">Reviews</a>
+    <a href="/contact-us.html">Contact</a>
+    <a href="https://dashboard.platinumlegalspain.com/nlv-renewal" class="msv-nav__mobile-cta">Start My Application →</a>
+  </nav>
+
+</header>
+
+
+<!-- ═══════════════════════════════════════════════════
+     PAGE CONTENT (fragment injected here)
+     ═══════════════════════════════════════════════════ -->
+<main>
+<!-- FRAGMENT_START -->
+<!-- NLV Renewal Income Requirements | myspanishvisa.com -->
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "NLV Renewal Income Requirements | My Spanish Visa",
+  "description": "Complete guide to income requirements for Non-Lucrative Visa renewal in Spain. Updated IPREM thresholds, accepted income sources, bank statement requirements, and common renewal mistakes.",
+  "url": "https://myspanishvisa.com/non-lucrative-visa-renewal-income-requirements/",
+  "mainEntity": {
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How are income requirements different at renewal vs. initial NLV application?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "At renewal, you typically submit 3-6 months of recent Spanish bank statements showing regular deposits rather than a lump sum savings requirement. The renewal process is more focused on demonstrating ongoing income, and Spanish bank activity is now strongly preferred over home country bank statements. You must still prove you meet the monthly IPREM threshold (€1,112.50 for individuals in 2024, adjusted annually)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the current IPREM threshold for NLV renewal?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "As of 2024, the IPREM (Indicador Público de Renta de Efectos Múltiples) threshold is €1,112.50 per month for a single applicant. This figure is adjusted annually by the Spanish government on July 1st. Couples renewing joint applications must prove combined monthly income of €1,779.50 (1.6x IPREM). Always verify the current year's IPREM before submitting your renewal application."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I show Spanish bank activity instead of home country statements?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, and Spanish authorities now strongly prefer Spanish bank statements demonstrating regular deposits and income flow. If you have a Spanish bank account with consistent deposits over 3-6 months, this is considered better proof than home country statements. However, if income originates abroad (pension, investment income, rental payments), you should provide both Spanish deposits AND source documentation confirming the origin of funds."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What if my income has decreased since my initial NLV application?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "If your income has decreased but still meets or exceeds the IPREM threshold, you can renew successfully by demonstrating the current income level through recent bank statements and income documentation. If income has dropped below the threshold, consulate officers have discretion to evaluate your overall financial stability, including savings and assets. Early notification of significant income changes increases the likelihood of a successful renewal. Some consulates may request an explanation letter (carta) documenting the change and your plan to maintain sufficient income."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do pension fluctuations and exchange rate changes affect renewal?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "For pensions in foreign currency, consulates calculate income using the official exchange rate on the date of your renewal application. If exchange rates have moved unfavorably against your home currency, your euro-converted pension may appear lower. Document your pension statement in both original currency and euro conversion. If rates fluctuate monthly, provide 6 months of statements showing you consistently meet the IPREM threshold. Most consulates use a conservative approach, averaging rates or using the lowest monthly conversion to ensure compliance."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What if my investment portfolio or savings have changed since the initial application?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Investment income (dividends, interest, capital gains) must be documented with brokerage statements and tax returns showing ongoing income generation. If your portfolio decreased in value, focus on the current income generated, not the total balance. Consulates care less about portfolio size at renewal and more about demonstrated monthly cash flow. Savings depletion is a concern only if it suggests you can no longer afford to live in Spain—having lower savings while still meeting the IPREM income threshold is usually acceptable at renewal."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What happens if I've started working during my NLV period?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Employment income from a Spanish job violates the spirit of the Non-Lucrative Visa (which prohibits economic activity). If you've worked in Spain during your residency, report it honestly at renewal—your options are: (1) transition to a different visa category (Work Permit, Entrepreneur, etc.), (2) cease employment immediately and renew on passive income alone, or (3) risk renewal denial. Some consulates may overlook minor freelance work or part-time employment, but full-time employment typically requires visa reclassification rather than NLV renewal."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is savings drawdown a problem at NLV renewal?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Savings drawdown is not directly a problem at renewal, provided you meet the monthly IPREM income requirement through current income sources. If your savings have depleted but your pension, investment income, or other passive income still covers monthly expenses and exceeds IPREM, renewal is typically approved. However, if you've been drawing down savings to supplement income and current income alone falls below IPREM, this raises concerns about financial sustainability. The key metric is current demonstrated income, not savings reserves."
+        }
+      }
+    ]
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://myspanishvisa.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Non-Lucrative Visa",
+        "item": "https://myspanishvisa.com/non-lucrative-visa-spain/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "NLV Renewal",
+        "item": "https://myspanishvisa.com/non-lucrative-visa-renewal/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "name": "Income Requirements",
+        "item": "https://myspanishvisa.com/non-lucrative-visa-renewal-income-requirements/"
+      }
+    ]
+  }
+}
+</script>
+<!-- Open Graph / Social -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.myspanishvisa.com/nlv-renewal-income-requirements/">
+<meta property="og:title" content="My Spanish Visa">
+<meta property="og:description" content="Expert Spain visa guidance for English-speaking expats.">
+<meta property="og:image" content="https://www.myspanishvisa.com/assets/images/og/og-nlv-spain.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="My Spanish Visa">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@myspanishvisa">
+<meta name="twitter:title" content="My Spanish Visa">
+<meta name="twitter:description" content="Expert Spain visa guidance for English-speaking expats.">
+<meta name="twitter:image" content="https://www.myspanishvisa.com/assets/images/og/og-nlv-spain.jpg">
+
+<style>
+/* ── iOS Safari pinch-zoom overflow safety ─────────────────────────── */
+/* Prevents horizontal overflow when users pinch-zoom on iPhone/iPad.   */
+/* Top-level (also paste into theme Custom CSS / Elementor Site Settings) */
+html, body { max-width: 100%; overflow-x: clip; }
+/* Scoped wrapper safety */
+.msv, .msv-nav, .msv-topbar, .msv-footer, .msv-footer-cta,
+.pls-header, .pls-body, .pls-nlv, .pls-dnv, .pls-student {
+  max-width: 100%;
+  overflow-x: clip;
+  position: relative;
+}
+/* Cap all media inside the wrapper */
+.msv img, .msv video, .msv iframe,
+.msv-footer img, .msv-footer video, .msv-footer iframe {
+  max-width: 100%;
+  height: auto;
+}
+/* Never use 100vw — use 100% instead (dev reminder) */
+
+
+/* ── Reset & scope ─────────────────────────────────────────────────── */
+.msv *, .msv *::before, .msv *::after { box-sizing: border-box; margin: 0; padding: 0; }
+/* ── Tokens ──────────────────────────────────────────────────────── */
+.msv {
+  --navy: #0c1930; --navy-mid: #1a3a5c; --red: #be0011; --red-deep: #8c000d;
+  --yellow: #facf39; --cream: #f8f7f4; --white: #ffffff; --black: #1a1a1a;
+  --muted: #5a6478; --border: #dce3ed;
+  --shadow-sm: 0 2px 8px rgba(12,25,48,0.08); --shadow-md: 0 6px 24px rgba(12,25,48,0.13);
+  font-family: 'Inter', 'Segoe UI', system-ui, Arial, sans-serif;
+  font-size: 16px; line-height: 1.75; color: var(--black); width: 100%;
+}
+.msv__container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+.msv__container--narrow { max-width: 780px; margin: 0 auto; padding: 0 2rem; }
+@media (max-width: 640px) { .msv__container, .msv__container--narrow { padding: 0 1.2rem; } }
+/* ── Typography ──────────────────────────────────────────────────── */
+.msv h1 { font-size: clamp(2rem, 4.5vw, 3rem); font-weight: 800; line-height: 1.12; color: var(--white); letter-spacing: -0.025em; margin-bottom: 1.2rem; }
+.msv h2 { font-size: clamp(1.3rem, 2.5vw, 1.75rem); font-weight: 700; color: var(--navy); letter-spacing: -0.01em; margin-bottom: 0.5rem; position: relative; display: inline-block; padding-bottom: 0.5rem; }
+.msv h2::after { content: ''; position: absolute; bottom: 0; left: 0; width: 44px; height: 3px; background: linear-gradient(90deg, var(--red), var(--red-deep)); border-radius: 2px; }
+.msv h3 { font-size: 1.05rem; font-weight: 700; color: var(--navy); margin-bottom: 0.4rem; }
+.msv p { color: var(--black); margin-bottom: 1rem; font-size: 0.97rem; }
+.msv a { color: var(--red); text-decoration: none; }
+.msv a:hover { text-decoration: underline; }
+.msv ul { list-style: none; padding: 0; margin: 0 0 1rem; }
+.msv ul li { padding: 0.35rem 0 0.35rem 1.4rem; position: relative; font-size: 0.95rem; color: var(--black); }
+.msv ul li::before { content: ''; position: absolute; left: 0; top: 0.75rem; width: 7px; height: 7px; background: linear-gradient(135deg, var(--red), var(--red-deep)); border-radius: 50%; }
+/* ── Sections ─────────────────────────────────────────────────── */
+.msv__section { padding: 5rem 0; background: var(--white); }
+.msv__section--cream { padding: 5rem 0; background: linear-gradient(180deg, #f8f7f4 0%, #f2f4f8 100%); }
+.msv__section--dark { padding: 5rem 0; background: linear-gradient(135deg, var(--navy) 0%, #0d2240 55%, #0a1d38 100%); }
+.msv__section--dark h2 { color: var(--white) !important; }
+.msv__section--dark h2::after { background: linear-gradient(90deg, var(--yellow), #e8b820); }
+.msv__section--dark h3 { color: rgba(255,255,255,0.9) !important; }
+.msv .msv__section--dark p, .msv .msv__section--dark li { color: rgba(255,255,255,0.82); }
+.msv__section--dark ul li::before { background: linear-gradient(135deg, var(--yellow), #e8b820); }
+@media (max-width: 640px) { .msv__section, .msv__section--cream, .msv__section--dark { padding: 3.5rem 0; } }
+.msv__section-hd { margin-bottom: 3rem; }
+.msv__section-hd p { color: var(--muted); font-size: 1rem; margin-top: 0.75rem; line-height: 1.7; max-width: 600px; }
+/* ── Animations ──────────────────────────────────────────────────── */
+@keyframes msv-fade-up { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes msv-shimmer {
+  0%   { background-position: -400px 0; }
+  100% { background-position: 400px 0; }
+}
+.msv__shimmer {
+  background: linear-gradient(90deg, var(--yellow) 0%, #e8b820 25%, var(--red) 50%, #e8b820 75%, var(--yellow) 100%);
+  background-size: 400px 100%;
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: msv-shimmer 3.5s linear infinite;
+  display: inline;
+}
+/* ── Hero ─────────────────────────────────────────────────────── */
+.msv__hero { background: linear-gradient(135deg, #0c1930 0%, #0f2540 40%, #162d50 70%, #1a3560 100%); padding: 5.5rem 0 5rem; position: relative; overflow: hidden; }
+.msv__hero::before { content: ''; position: absolute; top: -30%; right: -5%; width: 700px; height: 700px; background: radial-gradient(circle, rgba(190,0,17,0.1) 0%, transparent 65%); pointer-events: none; }
+.msv__hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, rgba(250,207,57,0.4), transparent); }
+.msv__hero-inner { max-width: 780px; animation: msv-fade-up 0.7s ease-out both; }
+.msv__eyebrow { display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(190,0,17,0.15); border: 1px solid rgba(190,0,17,0.4); color: #ff6b7a; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.35rem 0.9rem; border-radius: 100px; margin-bottom: 1.5rem; }
+.msv__eyebrow::before { content: ''; width: 6px; height: 6px; background: var(--red); border-radius: 50%; box-shadow: 0 0 6px var(--red); }
+.msv__hero p { color: rgba(255,255,255,0.78) !important; font-size: clamp(1rem, 2.2vw, 1.15rem); max-width: 640px; margin-bottom: 2.2rem; line-height: 1.75; }
+/* ── Breadcrumb ───────────────────────────────────────────── */
+.msv__breadcrumb { padding: 0.85rem 0; border-bottom: 1px solid var(--border); background: var(--white); }
+.msv__breadcrumb-inner { display: flex; align-items: center; gap: 0.5rem; font-size: 0.8rem; color: var(--muted); flex-wrap: wrap; }
+.msv__breadcrumb-inner a { color: var(--red); text-decoration: none; }
+.msv__breadcrumb-inner a:hover { text-decoration: underline; }
+.msv__breadcrumb-inner span { color: var(--muted); }
+/* ── Buttons ─────────────────────────────────────────────────── */
+.msv__btn-group { display: flex; flex-wrap: wrap; gap: 0.85rem; }
+.msv__btn { display: inline-block; padding: 0.85rem 2rem; font-size: 0.92rem; font-weight: 700; border-radius: 6px; text-decoration: none !important; transition: transform 0.15s, box-shadow 0.15s; }
+.msv__btn:hover { transform: translateY(-1px); text-decoration: none !important; }
+.msv .msv__btn--primary { background: linear-gradient(135deg, var(--red) 0%, var(--red-deep) 100%); color: #ffffff !important; box-shadow: 0 4px 16px rgba(190,0,17,0.38); }
+.msv .msv__btn--primary:hover { box-shadow: 0 6px 22px rgba(190,0,17,0.48); color: #ffffff !important; }
+.msv .msv__btn--outline-white { background: transparent; color: #ffffff !important; border: 1.5px solid rgba(255,255,255,0.5); }
+.msv .msv__btn--outline-white:hover { background: rgba(255,255,255,0.1); color: #ffffff !important; }
+/* ── Trust bar ──────────────────────────────────────────────── */
+.msv__trust-bar { background: var(--white); border-bottom: 1px solid var(--border); padding: 1rem 0; box-shadow: var(--shadow-sm); }
+.msv__trust-bar-inner { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.75rem; }
+.msv__trust-item { display: flex; align-items: center; gap: 0.5rem; font-size: 0.82rem; font-weight: 600; color: var(--navy); white-space: nowrap; }
+.msv__trust-item::before { content: ''; width: 7px; height: 7px; background: linear-gradient(135deg, var(--red), var(--red-deep)); border-radius: 50%; flex-shrink: 0; }
+/* ── Key facts strip ─────────────────────────────────────────── */
+.msv__facts { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; margin-bottom: 3rem; }
+@media (max-width: 760px) { .msv__facts { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 420px) { .msv__facts { grid-template-columns: 1fr; } }
+.msv__fact { background: var(--white); padding: 1.5rem 1.3rem; text-align: center; }
+.msv__fact-icon { font-size: 1.5rem; display: block; margin-bottom: 0.5rem; }
+.msv__fact-label { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); display: block; margin-bottom: 0.25rem; }
+.msv__fact-value { font-size: 0.97rem; font-weight: 700; color: var(--navy); line-height: 1.35; display: block; }
+/* ── Alert box ───────────────────────────────────────────────── */
+.msv__alert { border-radius: 10px; padding: 1.3rem 1.5rem; display: flex; gap: 1rem; align-items: flex-start; margin-bottom: 2rem; }
+.msv__alert--warn { background: #fffbea; border: 1px solid #f0d060; }
+.msv__alert--info { background: #eef4ff; border: 1px solid #a0bfff; }
+.msv__alert--red { background: #fef2f2; border: 1px solid #fca5a5; }
+.msv__alert--green { background: #f0fdf4; border: 1px solid #86efac; }
+.msv__alert-icon { font-size: 1.4rem; flex-shrink: 0; margin-top: 0.1rem; }
+.msv__alert p { font-size: 0.9rem; color: var(--black); margin: 0; line-height: 1.65; }
+.msv__alert strong { color: var(--navy); }
+/* ── Cost table ──────────────────────────────────────────────── */
+.msv__cost-table { width: 100%; border-collapse: collapse; font-size: 0.88rem; margin: 2rem 0; }
+.msv__cost-table thead tr { background: var(--navy); }
+.msv__cost-table th { padding: 1rem 1.25rem; text-align: left; color: var(--white); font-weight: 700; border-bottom: 2px solid var(--yellow); white-space: nowrap; }
+.msv__cost-table td { padding: 0.85rem 1.25rem; border-bottom: 1px solid var(--border); color: var(--black); }
+.msv__cost-table tbody tr:nth-child(even) { background: #f9fafb; }
+.msv__cost-table .cost-item { font-weight: 600; color: var(--navy); }
+.msv__cost-table .cost-range { color: var(--muted); font-weight: 600; }
+.msv__cost-table .cost-high { color: var(--red); font-weight: 700; }
+/* ── Cost boxes ──────────────────────────────────────────────── */
+.msv__cost-box { background: var(--white); border: 1.5px solid var(--border); border-radius: 12px; padding: 2rem; margin-bottom: 2rem; text-align: center; }
+.msv__cost-box h3 { font-size: 1rem; margin-bottom: 0.5rem; color: var(--navy); }
+.msv__cost-box .cost-value { font-size: 2rem; font-weight: 800; color: var(--red); margin: 1rem 0; }
+.msv__cost-box .cost-label { font-size: 0.8rem; color: var(--muted); font-weight: 600; }
+.msv__cost-boxes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-bottom: 3rem; }
+@media (max-width: 760px) { .msv__cost-boxes { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 420px) { .msv__cost-boxes { grid-template-columns: 1fr; } }
+/* ── FAQs ────────────────────────────────────────────────– */
+.msv__faq-list { display: flex; flex-direction: column; gap: 0; border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+.msv__faq-list details { border-bottom: 1px solid var(--border); background: var(--white); }
+.msv__faq-list details:last-child { border-bottom: none; }
+.msv__faq-list summary { padding: 1.2rem 1.5rem; font-size: 0.97rem; font-weight: 700; color: var(--navy); cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+.msv__faq-list summary::-webkit-details-marker { display: none; }
+.msv__faq-list summary::after { content: '+'; font-size: 1.3rem; font-weight: 400; color: var(--red); flex-shrink: 0; transition: transform 0.2s; }
+.msv__faq-list details[open] summary::after { transform: rotate(45deg); }
+.msv__faq-list details[open] summary { color: var(--red); }
+.msv__faq-answer { padding: 0 1.5rem 1.3rem; font-size: 0.92rem; color: var(--muted); line-height: 1.75; }
+.msv__faq-answer p { color: var(--muted); font-size: 0.92rem; margin-bottom: 0.75rem; }
+.msv__faq-answer p:last-child { margin-bottom: 0; }
+/* ── CTA band ────────────────────────────────────────────────── */
+.msv__cta-band { background: linear-gradient(135deg, var(--navy) 0%, #0d2240 60%, #0a1d38 100%); padding: 5rem 0; text-align: center; }
+.msv__cta-band h2 { color: var(--white) !important; display: block; }
+.msv__cta-band h2::after { left: 50%; transform: translateX(-50%); background: linear-gradient(90deg, var(--yellow), #e8b820); }
+.msv__cta-band p { color: rgba(255,255,255,0.75) !important; max-width: 560px; margin: 1rem auto 2.2rem; font-size: 1rem; }
+.msv__cta-band .msv__btn-group { justify-content: center; }
+/* ── Related guides ──────────────────────────────────────────── */
+.msv__related { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; }
+@media (max-width: 860px) { .msv__related { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 420px) { .msv__related { grid-template-columns: 1fr; } }
+.msv__related-card { background: var(--white); border: 1px solid var(--border); border-radius: 10px; padding: 1.3rem 1.25rem; text-decoration: none !important; transition: box-shadow 0.2s, transform 0.2s; display: block; }
+.msv__related-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); text-decoration: none !important; }
+.msv__related-icon { font-size: 1.5rem; display: block; margin-bottom: 0.6rem; }
+.msv__related-title { font-size: 0.88rem; font-weight: 700; color: var(--navy); display: block; margin-bottom: 0.3rem; }
+.msv__related-desc { font-size: 0.8rem; color: var(--muted); line-height: 1.55; }
+/* ── Disclaimer ──────────────────────────────────────────────── */
+.msv__disclaimer { background: var(--cream); border-top: 1px solid var(--border); padding: 2rem 0; }
+.msv__disclaimer p { font-size: 0.78rem; color: var(--muted); margin: 0; line-height: 1.65; }
+</style>
+
+<div class="msv">
+  <!-- Breadcrumb -->
+  <div class="msv__breadcrumb">
+    <div class="msv__container">
+      <div class="msv__breadcrumb-inner">
+        <a href="/">Home</a>
+        <span>/</span>
+        <a href="/non-lucrative-visa-spain/">Non-Lucrative Visa</a>
+        <span>/</span>
+        <a href="/non-lucrative-visa-renewal/">NLV Renewal</a>
+        <span>/</span>
+        <span>Income Requirements</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="msv__hero">
+    <div class="msv__container--narrow">
+      <div class="msv__hero-inner">
+        <div class="msv__eyebrow">Renewal Guide</div>
+        <h1>NLV Renewal Income Requirements: Updated Thresholds & Documentation</h1>
+        <p>Master the 2024-2025 IPREM thresholds, acceptable income sources, Spanish bank statement requirements, and critical renewal mistakes. A complete resource for renewing your Non-Lucrative Visa with confidence.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Bar -->
+  <div class="msv__trust-bar">
+    <div class="msv__container--narrow">
+      <div class="msv__trust-bar-inner">
+        <div class="msv__trust-item">Reviewed: April 2024</div>
+        <div class="msv__trust-item">Updated IPREM: €1,112.50</div>
+        <div class="msv__trust-item">Based on: Official Spanish Sources</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Key Facts Strip -->
+  <section class="msv__section msv__section--cream">
+    <div class="msv__container">
+      <div class="msv__facts">
+        <div class="msv__fact">
+          <div class="msv__fact-icon">📋</div>
+          <div class="msv__fact-label">Minimum Monthly</div>
+          <div class="msv__fact-value">€1,112.50 IPREM</div>
+        </div>
+        <div class="msv__fact">
+          <div class="msv__fact-icon">📊</div>
+          <div class="msv__fact-label">Bank Statement Period</div>
+          <div class="msv__fact-value">3–6 months (Spanish)</div>
+        </div>
+        <div class="msv__fact">
+          <div class="msv__fact-icon">✅</div>
+          <div class="msv__fact-label">Income Sources</div>
+          <div class="msv__fact-value">Pensions, Investment, Rental</div>
+        </div>
+        <div class="msv__fact">
+          <div class="msv__fact-icon">⚠️</div>
+          <div class="msv__fact-label">Common Mistake</div>
+          <div class="msv__fact-value">Home Bank Only</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How Renewal Income Differs -->
+  <section class="msv__section">
+    <div class="msv__container--narrow">
+      <div class="msv__section-hd">
+        <h2>How Income Proof Differs at Renewal vs. Initial Application</h2>
+        <p>The renewal process for Non-Lucrative Visa income documentation has evolved significantly from your initial approval. Understanding these key differences is critical to avoiding rejection.</p>
+      </div>
+
+      <div class="msv__alert msv__alert--info">
+        <div class="msv__alert-icon">ℹ️</div>
+        <div>
+          <p><strong>At initial application,</strong> you needed to demonstrate €27,900 in savings (roughly 25x monthly IPREM) plus passive income proof. At renewal, the focus shifts entirely: you must show <strong>current, ongoing monthly income</strong> through recent Spanish bank statements and updated income documentation.</p>
+        </div>
+      </div>
+
+      <h3>Initial Application vs. Renewal Checklist</h3>
+      <ul>
+        <li><strong>Savings requirement:</strong> Initial application emphasizes total savings reserves; renewal does not strictly require high savings if current income covers living expenses.</li>
+        <li><strong>Bank statement origin:</strong> Initial: home country statements accepted. Renewal: Spanish bank statements strongly preferred and often required.</li>
+        <li><strong>Income proof timeframe:</strong> Initial: historical documentation (tax returns, pension statements). Renewal: recent 3–6 month bank statement showing active deposits.</li>
+        <li><strong>Employment status review:</strong> Initial: minimal scrutiny. Renewal: explicit confirmation you have not worked during NLV period (employment violates visa conditions).</li>
+        <li><strong>Consistency requirement:</strong> Initial: single snapshot in time. Renewal: demonstrates regular, predictable income deposits over several months.</li>
+        <li><strong>Currency stability:</strong> Initial: exchange rate less critical. Renewal: if income is foreign-sourced, you must show currency stability or conservative conversion rates.</li>
+      </ul>
+
+      <h3>Why Renewal Is Stricter Than You Think</h3>
+      <p>Many renewal applicants are surprised by heightened scrutiny. Spanish consulates have tightened income verification in recent years due to increased applications and a focus on genuine non-lucrative residents. You will be expected to provide:</p>
+      <ul>
+        <li>Current year bank statements (3–6 months minimum, typically the most recent cycle).</li>
+        <li>Updated pension statements or investment income documentation (often within 3 months of application date).</li>
+        <li>Updated tax returns (última declaración, Modelo 100) if applicable in your jurisdiction.</li>
+        <li>Proof of income source origin (pension fund letters, investment brokerage confirmations, property rental agreements with proof of regular deposits).</li>
+        <li>A signed declaration (if required) that you have not engaged in employment or economic activity during your NLV residency period.</li>
+      </ul>
+
+      <h3>Documentation Timeline</h3>
+      <p>Renewal consulates typically accept documentation dated within <strong>3 months before your renewal application submission</strong>. If your pension statement is from January and you apply in June, it may be considered outdated. Always gather fresh documentation close to your application date.</p>
+    </div>
+  </section>
+
+  <!-- Updated IPREM Thresholds -->
+  <section class="msv__section msv__section--cream">
+    <div class="msv__container--narrow">
+      <div class="msv__section-hd">
+        <h2>Updated IPREM Thresholds (2024–2025)</h2>
+        <p>The IPREM (Indicador Público de Renta de Efectos Múltiples) is recalculated annually by Spain's government. This is the baseline threshold for NLV income requirements.</p>
+      </div>
+
+      <h3>Current IPREM Rates</h3>
+      <ul>
+        <li><strong>2024 (July onwards):</strong> €1,112.50 per month for a single applicant. Couples renewing together must prove combined income of €1,779.50 (1.6x IPREM).</li>
+        <li><strong>2025 (projected):</strong> IPREM typically increases 1–3% annually. Expect the 2025 threshold to be announced by June 30, 2025, effective July 1, 2025.</li>
+        <li><strong>Historical context:</strong> 2023 IPREM was €1,080.50; 2022 was €1,033.60. The consistent upward trend reflects Spain's inflation adjustments.</li>
+      </ul>
+
+      <div class="msv__alert msv__alert--warn">
+        <div class="msv__alert-icon">⚠️</div>
+        <div>
+          <p><strong>Always verify the current IPREM before submitting your renewal.</strong> The rate changes on July 1 each year. If you are renewing between June and September, confirm whether your consulate uses the old or new IPREM figure. Contact your consulate in advance to clarify which rate applies to your application.</p>
+        </div>
+      </div>
+
+      <h3>IPREM Multipliers by Applicant Type</h3>
+      <table class="msv__cost-table">
+        <thead>
+          <tr>
+            <th>Applicant Category</th>
+            <th>IPREM Multiplier</th>
+            <th>2024 Monthly Threshold</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="cost-item">Single applicant</td>
+            <td>1.0x</td>
+            <td class="cost-range">€1,112.50</td>
+          </tr>
+          <tr>
+            <td class="cost-item">Couple renewing jointly</td>
+            <td>1.6x</td>
+            <td class="cost-range">€1,779.50</td>
+          </tr>
+          <tr>
+            <td class="cost-item">Single + 1 dependent child</td>
+            <td>1.4x</td>
+            <td class="cost-range">€1,557.50</td>
+          </tr>
+          <tr>
+            <td class="cost-item">Single + 2 dependent children</td>
+            <td>1.8x</td>
+            <td class="cost-range">€2,002.50</td>
+          </tr>
+          <tr>
+            <td class="cost-item">Couple + 1 dependent child</td>
+            <td>2.0x</td>
+            <td class="cost-range">€2,225.00</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p><em>Dependent child definitions vary by consulate. Generally, unmarried children under 25 years old are considered dependents if they have no independent income. Adult children or those studying abroad may not qualify.</em></p>
+
+      <h3>IPREM Adjustments & Inflation</h3>
+      <p>The IPREM is updated annually in line with Spain's consumer price index (IPC). Recent years have seen increases of 2–3% due to inflation. If you're concerned about future renewals, maintain income reserves well above the minimum threshold (at least 1.3–1.5x IPREM monthly) to absorb rate increases and provide a safety margin.</p>
+    </div>
+  </section>
+
+  <!-- Income Sources Accepted -->
+  <section class="msv__section">
+    <div class="msv__container--narrow">
+      <div class="msv__section-hd">
+        <h2>Income Sources Accepted at Renewal</h2>
+        <p>At renewal, you can combine various passive income sources. The key is demonstrating that each source is stable, verifiable, and ongoing.</p>
+      </div>
+
+      <h3>Pension Income</h3>
+      <p>The most commonly accepted income source. Pensions from your home country, the EU, or international bodies (military, government, private pension funds) are recognized. At renewal, provide:</p>
+      <ul>
+        <li>Current pension statement (dated within 3 months of application).</li>
+        <li>If pension is paid in foreign currency, provide both original currency statement and euro-converted amount using official exchange rates.</li>
+        <li>Proof of regular deposits into your Spanish bank account (pension payment receipts, bank statements showing recurring monthly transfers).</li>
+        <li>If your pension increased or decreased since your initial application, explain the reason (COLA adjustment, exchange rate changes, etc.).</li>
+      </ul>
+
+      <h3>Investment Income</h3>
+      <p>Dividends, interest, and capital gains from investment portfolios, stocks, bonds, or real estate investment funds qualify. Documentation required:</p>
+      <ul>
+        <li>Recent brokerage or investment account statements (last 3–6 months) showing income generation and transactions.</li>
+        <li>Tax returns or income documentation from your home country confirming investment income for the last 1–2 years.</li>
+        <li>If income is variable (stocks, dividends fluctuate), provide documentation showing minimum guaranteed or averaged income that meets the IPREM threshold.</li>
+        <li>Spanish bank statements showing deposits of investment income (e.g., dividend payments, interest deposits).</li>
+      </ul>
+
+      <h3>Rental Income</h3>
+      <p>If you own a property (in Spain or abroad) generating rental income, this counts as passive income. Requirements:</p>
+      <ul>
+        <li>Rental agreement or property management contract showing monthly rental amount.</li>
+        <li>Last 1–2 years of tax returns documenting rental income in your home country (Anexo B from Spanish tax returns if you own Spanish property).</li>
+        <li>Spanish bank statements proving regular monthly deposits from rent.</li>
+        <li>If using a property manager or collecting from a tenant, obtain a letter confirming the arrangement and regular payment schedule.</li>
+      </ul>
+
+      <h3>Social Security / Government Allowances</h3>
+      <p>In some cases, government benefits, widow's pensions, disability benefits, or unemployment insurance (if transitional and above IPREM) may be accepted. Verify with your consulate in advance, as rules vary by country of origin.</p>
+
+      <h3>Freelance or Professional Income (Limited)</h3>
+      <p>The NLV prohibits regular employment, but some consulates may accept limited freelance work if it is occasional and doesn't constitute primary economic activity. This is highly consulate-dependent. If you have any work-related income during your NLV period, inform your consulate and be prepared to justify it or transition to a different visa category (Work Permit, Entrepreneur).</p>
+
+      <h3>New Income Sources at Renewal</h3>
+      <p>If you've developed new income sources since your initial application (new rental property, inherited investments, etc.), document them thoroughly. Consulates prefer to see income consistency, but new income sources are acceptable if well-documented. Provide:</p>
+      <ul>
+        <li>Explanation of how the income source originated (inheritance, new property purchase, investment diversification, etc.).</li>
+        <li>Legal documentation (property deed, investment account registration, rental agreement).</li>
+        <li>At least 2–3 months of bank statement evidence showing deposits from the new source.</li>
+      </ul>
+
+      <div class="msv__alert msv__alert--green">
+        <div class="msv__alert-icon">✓</div>
+        <div>
+          <p><strong>Pro tip:</strong> If you have multiple income sources, combine them to clearly exceed the IPREM threshold. For example, €600 pension + €400 investment income + €250 rental income = €1,250 monthly (exceeds €1,112.50). This provides a safety margin and demonstrates financial resilience.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bank Statement Requirements -->
+  <section class="msv__section msv__section--cream">
+    <div class="msv__container--narrow">
+      <div class="msv__section-hd">
+        <h2>Bank Statement Period & Spanish Account Preference</h2>
+        <p>One of the most significant changes in renewal documentation is the shift toward Spanish bank statements. Understanding this requirement can prevent rejection.</p>
+      </div>
+
+      <h3>The 3–6 Month Requirement</h3>
+      <p>Spanish consulates now require 3–6 months of consecutive, recent bank statements. The exact period varies by consulate, so contact yours in advance:</p>
+      <ul>
+        <li><strong>Minimum:</strong> 3 months (typical for most consulates).</li>
+        <li><strong>Standard:</strong> 6 months (safest choice; shows long-term income stability).</li>
+        <li><strong>Some consulates:</strong> May ask for the full 12 months if your income appears variable or if there are concerns about gaps in deposits.</li>
+      </ul>
+
+      <p><strong>Timing is critical.</strong> Statements should cover the most recent 3–6 month period immediately before your renewal application submission. If your application is in September, provide July, August, and September statements (or April–September for 6 months). Statements dated earlier than 3 months before your application may be rejected as outdated.</p>
+
+      <h3>Why Spanish Bank Statements Are Now Preferred</h3>
+      <p>Spanish authorities have shifted toward requiring Spanish bank statements for several reasons:</p>
+      <ul>
+        <li><strong>Verifiability:</strong> Spanish banks are regulated by Spain's financial authorities, making verification easier and faster than checking foreign banks.</li>
+        <li><strong>Proof of residency integration:</strong> Spanish bank account demonstrates you have integrated into Spain's financial system and are genuinely living there.</li>
+        <li><strong>Currency clarity:</strong> Statements in euros eliminate exchange rate ambiguity and currency conversion disputes.</li>
+        <li><strong>Tax compliance:</strong> Regular deposits into a Spanish account suggest you are compliant with Spanish tax reporting (non-residents must report certain activities).</li>
+        <li><strong>Fraud prevention:</strong> Spanish statements are harder to falsify and are directly verifiable by the consulate through banking channels.</li>
+      </ul>
+
+      <h3>Combining Spanish Bank Statements with Source Documentation</h3>
+      <p>Best practice: Provide both Spanish bank statements AND source documentation proving the origin of funds. Example:</p>
+      <ul>
+        <li>Spanish bank statements showing €1,200 monthly deposits from "International Transfer – ABC Pension Fund".</li>
+        <li>Accompanied by a current pension statement from ABC Pension Fund (dated within 3 months) confirming €1,200 monthly pension payment and the international bank details used for transfer.</li>
+      </ul>
+
+      <p>This dual-documentation approach significantly reduces delays and queries from consulate officers.</p>
+
+      <h3>Home Country Bank Statements: Still Acceptable?</h3>
+      <p>Home country bank statements are technically still acceptable, particularly if:</p>
+      <ul>
+        <li>Your income is primarily paid into your home country account (e.g., US pension fund pays to your US bank).</li>
+        <li>You have not yet opened a Spanish bank account.</li>
+        <li>You are in the early stages of residency and are still managing finances primarily in your home country.</li>
+      </ul>
+
+      <p>However, <strong>if you can provide Spanish statements, do so.</strong> If you only have home country statements, include a certified explanation (carta) from your bank explaining why you have not yet transferred funds to a Spanish account and confirming the legitimacy of the income shown.</p>
+
+      <h3>Format & Authentication of Bank Statements</h3>
+      <p>Bank statements must be:</p>
+      <ul>
+        <li><strong>Official:</strong> Downloaded directly from your bank's online portal or requested from the bank as an "official certified statement" on bank letterhead. Do not submit screenshots or casual printouts.</li>
+        <li><strong>Legible:</strong> Clear, full-page statements showing account name, account number (or partial number for security), opening and closing balances, and all transactions.</li>
+        <li><strong>Translated:</strong> If your Spanish bank provides statements in English, that's fine. If your home country bank statements are in another language, include a certified translation into Spanish (or English, depending on your consulate's preference).</li>
+        <li><strong>Recent:</strong> Not older than 3 months before your application submission.</li>
+      </ul>
+
+      <div class="msv__alert msv__alert--warn">
+        <div class="msv__alert-icon">⚠️</div>
+        <div>
+          <p><strong>Red flag:</strong> If your bank statements show large, irregular deposits followed by large withdrawals, or show your balance dropping to near-zero, consulates may question your financial sustainability. Maintain a buffer above your monthly IPREM threshold to demonstrate financial stability.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Income Decreases & Changes -->
+  <section class="msv__section">
+    <div class="msv__container--narrow">
+      <div class="msv__section-hd">
+        <h2>When Your Income Has Changed</h2>
+        <p>Many renewals involve income fluctuations. The key is transparency, documentation, and demonstrating current income still meets the IPREM threshold.</p>
+      </div>
+
+      <h3>Income Decreased Since Initial Application</h3>
+      <p>If your income has dropped but still meets the IPREM threshold:</p>
+      <ul>
+        <li><strong>Document the current level:</strong> Provide recent statements and income documents showing your current income.</li>
+        <li><strong>Explain the change (if significant):</strong> If you earn 20%+ less than at your initial application, consulates appreciate a brief explanation. Examples: "Pension was restructured in 2023, reducing monthly amount from €1,400 to €1,200, but still exceeds the IPREM threshold." or "Rental income decreased due to property renovation period (April–June 2024), but has resumed at €1,150/month as of July 2024."</li>
+        <li><strong>Demonstrate stability:</strong> Show 6 months of statements at the new income level to prove the decrease has stabilized.</li>
+      </ul>
+
+      <p>If income has dropped <strong>below the IPREM threshold</strong>, you face a serious issue. Options:</p>
+      <ul>
+        <li><strong>Develop new income sources:</strong> Can you increase rental income, add investment yields, or obtain new pension benefits?</li>
+        <li><strong>Rely on savings:</strong> If you have substantial savings, some consulates may approve renewal based on the argument that savings can supplement inadequate income. This is discretionary and not guaranteed.</li>
+        <li><strong>Transition to a different visa category:</strong> If you can work in Spain, consider switching to a Work Permit or Entrepreneur Visa to remain legal.</li>
+        <li><strong>Return to home country:</strong> If income cannot be restored, renewal denial may necessitate leaving Spain (though you can apply again later if circumstances improve).</li>
+      </ul>
+
+      <h3>Pension Fluctuations & Currency Exchange Rate Changes</h3>
+      <p>Pensions often fluctuate due to:</p>
+
+      <p><strong>Cost-of-Living Adjustments (COLA):</strong> Annual increases (or decreases) in pension benefits tied to inflation. These are normal and expected. Consulates accept COLA adjustments as routine. Simply provide your most recent pension statement showing the current rate.</p>
+
+      <p><strong>Currency fluctuations:</strong> If your pension is paid in a foreign currency (USD, GBP, EUR, etc.), exchange rate movements can cause your euro-equivalent income to vary. Example:</p>
+      <ul>
+        <li>US pension of $1,500/month = €1,350 in January 2024 (rate: 1 USD = 0.90 EUR).</li>
+        <li>Same $1,500/month = €1,320 in April 2024 (rate: 1 USD = 0.88 EUR).</li>
+      </ul>
+
+      <p>To address currency risk at renewal:</p>
+      <ul>
+        <li><strong>Document the rate used:</strong> State the exchange rate you used to convert pension income. Provide either your bank's conversion rate (from statements) or Spain's official daily rate.</li>
+        <li><strong>Use a conservative rate:</strong> If you're uncertain, convert using a rate slightly unfavorable to you. This demonstrates caution and provides a safety margin.</li>
+        <li><strong>Provide 6 months of statements:</strong> Show Spanish bank deposits over 6 months to average out fluctuations and prove consistent income above the IPREM threshold.</li>
+        <li><strong>Consider forward-looking statements:</strong> If exchange rates are unfavorable, provide a statement showing your pension in original currency and current average euro conversion rate, with a note: "Based on current exchange rates, my pension income averages €X per month over the renewal period, exceeding the €1,112.50 IPREM threshold."</li>
+      </ul>
+
+      <div class="msv__alert msv__alert--info">
+        <div class="msv__alert-icon">ℹ️</div>
+        <div>
+          <p><strong>Consulate approach to exchange rates:</strong> Most Spanish consulates use the official daily rate (Banco de España or ECB rate) on the date of your application to calculate final income. Some may average rates over your application period. Ask your consulate in advance which method they use.</p>
+        </div>
+      </div>
+
+      <h3>Investment Portfolio Changes</h3>
+      <p>Investment income fluctuates based on market performance. Consulates understand this but expect you to document income generation consistently:</p>
+      <ul>
+        <li><strong>Focus on income, not capital:</strong> The consulate cares about dividends and interest income, not portfolio value. A €500,000 stock portfolio that generates €0 in income is worthless for NLV renewal purposes. A €100,000 portfolio generating €1,200/month in dividends exceeds the IPREM threshold.</li>
+        <li><strong>Show distributed income:</strong> If you use a brokerage platform, download statements showing dividend or interest distributions over 6 months. If income is reinvested automatically, request statements showing distributions (not just reinvestments).</li>
+        <li><strong>Tax returns as backup:</strong> Include your home country tax return documenting investment income reported to tax authorities. This corroborates the income shown in bank statements.</li>
+      </ul>
+
+      <h3>Rental Income Changes</h3>
+      <p>Rental properties may experience periods of vacancy, tenant changes, or repairs reducing income temporarily. At renewal:</p>
+      <ul>
+        <li><strong>Document current rental agreements:</strong> Provide the active rental contract with monthly rental amount.</li>
+        <li><strong>Show bank deposits:</strong> Spanish or home country bank statements proving regular monthly deposits from rent.</li>
+        <li><strong>Explain temporary reductions:</strong> If your property was vacant for 2 months, include a brief note: "Property was vacant April–May 2024 due to tenant transition. Rent recommenced June 2024 at €X/month." Provide 3 months of deposits at the current rate (June, July, August) to show stability.</li>
+        <li><strong>Use property management statements:</strong> If a property manager collects rent, request a statement confirming the monthly rental amount and payment schedule. This corroborates the income shown in bank statements.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Employment Implications -->
+  <section class="msv__section msv__section--cream">
+    <div class="msv__container--narrow">
+      <div class="msv__section-hd">
+        <h2>What If You've Started Working? Employment & NLV Renewal</h2>
+        <p>The Non-Lucrative Visa explicitly prohibits economic activity (work). If you've worked during your NLV period, your renewal is at serious risk.</p>
+      </div>
+
+      <h3>NLV Employment Prohibition</h3>
+      <p>The NLV Regulation 3 of Spain's Comprehensive Immigration Law states that visa holders must not engage in any paid economic activity. This includes:</p>
+      <ul>
+        <li>Full-time or part-time employment (employed by a company or organization).</li>
+        <li>Self-employment and freelancing (autónomo status).</li>
+        <li>Running a business or professional practice.</li>
+        <li>Providing services for payment, even occasional work.</li>
+      </ul>
+
+      <p>Unpaid volunteering, occasional consulting (without regular payment), and management of personal investments are generally acceptable.</p>
+
+      <h3>If You've Worked During Your NLV Period</h3>
+      <p>If you have engaged in work, your options are:</p>
+
+      <p><strong>Option 1: Immediate Employment Cessation & Honest Renewal</strong></p>
+      <ul>
+        <li>Stop working immediately if you haven't already.</li>
+        <li>Do not attempt to hide employment income or understate work duration.</li>
+        <li>At renewal, inform your consulate in a brief letter (carta): "During my NLV residency (dates), I engaged in limited freelance work totaling X hours/months and earning €Y. This was inadvertently done without recognition of visa restrictions. I have since ceased all employment and am renewing on passive income sources [list them]."</li>
+        <li>Provide full documentation of passive income sources and Spanish bank statements showing those sources only.</li>
+        <li><strong>Outcome:</strong> Some consulates may approve renewal with a formal warning (amonestación). Others may deny renewal and require you to leave Spain or apply for a different visa category.</li>
+      </ul>
+
+      <p><strong>Option 2: Transition to a Work Permit (Permiso de Trabajo)</strong></p>
+      <ul>
+        <li>If you wish to continue working legally in Spain, apply for a Work Permit (Autorización de Trabajo) while your current NLV is still valid.</li>
+        <li>Your employer must sponsor the application, and you must meet specific requirements (skilled role, Spanish labor market approval, etc.).</li>
+        <li>A successful Work Permit application converts your residency status, and your NLV is effectively replaced.</li>
+        <li><strong>Outcome:</strong> You become a legal resident worker and can continue employment. Your previous NLV violations are generally overlooked once you transition.</li>
+      </ul>
+
+      <p><strong>Option 3: Transition to Entrepreneur/Self-Employment Visa</strong></p>
+      <ul>
+        <li>If you've started a business or consulting practice in Spain, apply for an Entrepreneur Visa (Visa de Emprendedor).</li>
+        <li>Requirements include a business plan, capital investment, and demonstrated economic contribution to Spain.</li>
+        <li>A successful application replaces your NLV and legalizes your business activity.</li>
+        <li><strong>Outcome:</strong> Your business becomes legal, and previous NLV violations are generally overlooked.</li>
+      </ul>
+
+      <p><strong>Option 4: Non-Renewal & Return</strong></p>
+      <ul>
+        <li>If you've worked and don't wish to transition, simply allow your NLV to expire and leave Spain.</li>
+        <li>You can reapply for an NLV in the future if you return to Spain with pure passive income and no work history.</li>
+      </ul>
+
+      <div class="msv__alert msv__alert--red">
+        <div class="msv__alert-icon">⚠️</div>
+        <div>
+          <p><strong>Do not hide employment.</strong> Tax authorities, social security records, and banking patterns often reveal unreported work. Consulates may discover employment through cross-checks with Spanish tax records (Agencia Tributaria) or employment registry (Seguridad Social). Dishonesty is far more damaging than honest admission and visa transition.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Savings & Drawdowns -->
+  <section class="msv__section">
+    <div class="msv__container--narrow">
+      <div class="msv__section-hd">
+        <h2>Savings Drawdown & Financial Sustainability</h2>
+        <p>Unlike initial applications, renewals focus less on total savings and more on current income. But how you manage savings still matters.</p>
+      </div>
+
+      <h3>The Savings Paradox at Renewal</h3>
+      <p>At initial application, you needed large savings reserves (€27,900+). At renewal, consulates care much less about absolute savings balances, provided your current income exceeds the IPREM threshold. However, <strong>dramatic savings depletion raises red flags.</strong></p>
+
+      <p>Example scenarios:</p>
+      <ul>
+        <li><strong>Good scenario:</strong> Initial savings: €30,000. Current savings: €8,000. Current monthly income: €1,300 (exceeds IPREM). Consulate reasoning: "You've drawn down savings to live in Spain, but current income is sustainable. Renewal approved."</li>
+        <li><strong>Concerning scenario:</strong> Initial savings: €30,000. Current savings: €500. Current monthly income: €900 (below IPREM). Bank statements show no deposits for 2 months, then large withdrawal. Consulate concern: "Savings depletion suggests unsustainable lifestyle. Current income is below IPREM. Is applicant truly self-sufficient?" Renewal likely denied unless significant income increase documented.</li>
+      </ul>
+
+      <h3>Documenting Savings Withdrawal Patterns</h3>
+      <p>If you have depleted savings significantly, be prepared to explain why in your renewal documents:</p>
+      <ul>
+        <li><strong>Provide a brief explanation (opcional):</strong> "My initial savings of €30,000 have been drawn down over 3 years of Spanish residency to supplement my €900 monthly pension, augmenting my cost of living in Spain. Recent inheritance of €50,000 in December 2023 has restored savings reserves and improved my financial sustainability."</li>
+        <li><strong>Show income sufficiency:</strong> Even if savings are depleted, demonstrate that current monthly income covers your demonstrated living expenses in Spain.</li>
+        <li><strong>Bank statements as proof:</strong> Recent bank statements showing income deposits and regular spending patterns demonstrate financial activity aligned with your claimed income and lifestyle.</li>
+      </ul>
+
+      <h3>Is Depleted Savings a Renewal Problem?</h3>
+      <p>Short answer: <strong>No, if current income meets IPREM.</strong> Depleted savings become a problem only if:</p>
+      <ul>
+        <li>Current monthly income falls below the IPREM threshold AND savings are minimal, suggesting you cannot afford to live in Spain.</li>
+        <li>Bank statements show sudden, large withdrawals (e.g., €5,000 withdrawn in a single day) with no corresponding deposits, suggesting hidden employment or other income sources.</li>
+        <li>Savings have been entirely depleted, yet you are continuing to live in Spain—where is the income coming from? This invites questions.</li>
+      </ul>
+
+      <h3>The Income-Savings Balance</h3>
+      <p><strong>Ideal renewal scenario:</strong> Current monthly income of 1.2–1.5x IPREM (€1,300–€1,700) plus savings of €5,000–€10,000. This demonstrates both current sustainability and a modest emergency buffer.</p>
+
+      <p><strong>Minimal savings acceptable scenario:</strong> Current monthly income of 1.3x IPREM or higher, with savings of €1,000–€3,000. Consulates understand that long-term residents often liquidate initial reserves.</p>
+
+      <p><strong>High-risk scenario:</strong> Current income at or barely above IPREM threshold, combined with near-zero savings. This is borderline and may be approved if income is stable and well-documented, but increases the risk of renewal denial if any income fluctuation is discovered.</p>
+    </div>
+  </section>
+
+  <!-- Tax Returns & Modelo 100 -->
+  <section class="msv__section msv__section--cream">
+    <div class="msv__container--narrow">
+      <div class="msv__section-hd">
+        <h2>Tax Returns & Spanish Tax Compliance (Modelo 100)</h2>
+        <p>Spanish tax authorities and immigration consulates increasingly cross-reference income claims with tax records. Understanding your tax obligations strengthens your renewal application.</p>
+      </div>
+
+      <h3>Do You Need to File Spanish Taxes?</h3>
+      <p>NLV residents are often required to file Spanish income tax returns (Declaración de la Renta) if:</p>
+      <ul>
+        <li>You have income-generating property in Spain (rental income, capital gains).</li>
+        <li>You earn income from any source while physically present in Spain for more than 183 days per year.</li>
+        <li>You are considered a Spanish tax resident (residentes en territorio español) based on your domicile, economic interests, or family presence.</li>
+      </ul>
+
+      <p>If you do not have Spanish tax obligations, you still benefit from maintaining clear documentation of your income in your home country tax system.</p>
+
+      <h3>Modelo 100: Spanish Personal Income Tax Return</h3>
+      <p>The Modelo 100 is the standard Spanish personal income tax return. It reports:</p>
+      <ul>
+        <li>Income from all sources (employment, pensions, investments, rental income).</li>
+        <li>Deductible expenses (mortgage interest, property repairs, professional fees, etc.).</li>
+        <li>Tax withheld (impuesto sobre la renta).</li>
+        <li>Final tax liability or refund due.</li>
+      </ul>
+
+      <p><strong>For NLV renewal purposes:</strong> If you are required to file Spanish taxes, include a copy of your most recent Modelo 100 (from the previous year) with your renewal application. For example, if renewing in September 2024, include your 2023 Modelo 100 (filed in April 2024). This corroborates income sources and demonstrates tax compliance.</p>
+
+      <h3>If You're Not Required to File Spanish Taxes</h3>
+      <p>Many NLV residents with foreign-sourced income (pensions, investments paid outside Spain) do not file Spanish taxes. In this case:</p>
+      <ul>
+        <li>Provide your home country tax return (e.g., IRS Form 1040 for US citizens, Self Assessment Tax Return for UK residents) showing income for the previous 1–2 years.</li>
+        <li>Include a brief note: "I am not required to file Spanish taxes as my income is entirely foreign-sourced and Spain does not tax non-residents on foreign-source income. I maintain tax compliance in my home country [name] as evidenced by my 2023 tax return."</li>
+        <li>If applicable, mention any tax equalization agreements (e.g., US citizens must file IRS returns globally due to citizenship, not residency).</li>
+      </ul>
+
+      <h3>Tax Residency Status</h3>
+      <p>Be clear about your tax residency status at renewal:</p>
+      <ul>
+        <li><strong>Spanish tax resident:</strong> If you have been in Spain for 183+ days in a calendar year or have economic/family interests suggesting Spanish residency. You must file Modelo 100.</li>
+        <li><strong>Non-resident of Spain / Resident of home country:</strong> If you spend less than 183 days in Spain annually. You typically file taxes in your home country and are not required to file Modelo 100 (though you may owe Spanish tax on Spanish-source income like rental income). Provide home country tax return as evidence of income.</li>
+      </ul>
+
+      <div class="msv__alert msv__alert--warn">
+        <div class="msv__alert-icon">⚠️</div>
+        <div>
+          <p><strong>Tax discrepancies are a red flag:</strong> If your Spanish tax return (Modelo 100) reports €800/month income but your renewal application claims €1,200/month, the consulate will question you. Ensure consistency between tax documents and renewal income claims. If there are legitimate reasons for discrepancies (e.g., new income source starting mid-year, tax deductions reducing reported taxable income), explain them in your renewal letter.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Combining Sources -->
+  <section class="msv__section">
+    <div class="msv__container--narrow">
+      <div class="msv__section-hd">
+        <h2>Combining Income Sources for Renewal</h2>
+        <p>Most successful NLV renewals involve multiple income sources. Understanding how to present combined income clearly strengthens your application.</p>
+      </div>
+
+      <h3>Best Practice: Create an Income Summary Chart</h3>
+      <p>Rather than making consulate officers hunt through multiple documents to calculate your total income, provide a clear summary. Example:</p>
+
+      <table class="msv__cost-table">
+        <thead>
+          <tr>
+            <th>Income Source</th>
+            <th>Monthly Amount</th>
+            <th>Documentation</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="cost-item">US Social Security Pension</td>
+            <td class="cost-range">€800</td>
+            <td>Pension statement dated March 2024; Spanish bank deposits June–August 2024</td>
+          </tr>
+          <tr>
+            <td class="cost-item">Investment Dividends (Vanguard Portfolio)</td>
+            <td class="cost-range">€350</td>
+            <td>Brokerage statement dated July 2024; 2023 tax return (Form 1099-DIV); Spanish bank deposits June–August 2024</td>
+          </tr>
+          <tr>
+            <td class="cost-item">Rental Income (Barcelona Apartment)</td>
+            <td class="cost-range">€250</td>
+            <td>Rental agreement; property management statement dated August 2024; Spanish bank deposits June–August 2024</td>
+          </tr>
+          <tr>
+            <td class="cost-item">TOTAL MONTHLY INCOME</td>
+            <td class="cost-high">€1,400</td>
+            <td>Exceeds IPREM threshold of €1,112.50</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>Include this summary as the first page of your financial documentation package. It gives consulate officers an instant overview and makes your application easier to process.</p>
+
+      <h3>Threshold Overage: How Much Above IPREM is Safe?</h3>
+      <p>While the minimum income requirement is €1,112.50, consulates prefer to see a buffer:</p>
+      <ul>
+        <li><strong>€1,112.50–€1,200:</strong> Technically meets the threshold, but leaves no margin for error. Any income fluctuation or calculation discrepancy could result in denial. Not recommended.</li>
+        <li><strong>€1,200–€1,400:</strong> Reasonable buffer (8–25% above minimum). Demonstrates financial stability and accounts for minor fluctuations or exchange rate changes. Generally approved without question.</li>
+        <li><strong>€1,400+:</strong> Comfortable buffer (25%+ above minimum). Signals financial health and low renewal risk. Consulates are confident in approval.</li>
+      </ul>
+
+      <h3>Irregular vs. Regular Income</h3>
+      <p>When combining sources, distinguish between regular and irregular income:</p>
+      <ul>
+        <li><strong>Regular:</strong> Pensions, monthly investment distributions, consistent rental income. Count at full stated amount.</li>
+        <li><strong>Irregular:</strong> Annual capital gains, sporadic freelance work, one-time inheritance, variable dividend distributions. Do not count toward IPREM threshold unless you can demonstrate consistency over 6+ months of recent statements.</li>
+      </ul>
+
+      <p>Example: Your investment brokerage statement shows "Total Distributions 2024: €2,800 (January: €200, March: €650, May: €750, July: €600, October: €600)." Rather than claiming €233/month average (€2,800/12), conservatively claim €600/month (the lowest recent 3-month distribution rate) to demonstrate reliability.</p>
+    </div>
+  </section>
+
+  <!-- Common Mistakes -->
+  <section class="msv__section msv__section--cream">
+    <div class="msv__container--narrow">
+      <div class="msv__section-hd">
+        <h2>Common NLV Renewal Income Mistakes (& How to Avoid Them)</h2>
+        <p>Knowing what trips up other applicants can save your renewal.</p>
+      </div>
+
+      <h3>Mistake 1: Only Providing Home Country Bank Statements</h3>
+      <p><strong>The error:</strong> Submitting only US, UK, or other foreign bank statements without Spanish account proof.</p>
+      <p><strong>Why it fails:</strong> Consulates now strongly prefer Spanish statements showing active integration into Spain's financial system.</p>
+      <p><strong>Fix:</strong> Open a Spanish bank account if you haven't already. Transfer a portion of your income regularly to that account and provide 6 months of Spanish statements. If you cannot open a Spanish account for logistical reasons, include both home country statements AND a detailed explanation letter.</p>
+
+      <h3>Mistake 2: Outdated Documentation</h3>
+      <p><strong>The error:</strong> Submitting pension statements from 6 months ago, or bank statements that end 2 months before your application.</p>
+      <p><strong>Why it fails:</strong> Consulates want recent proof that you currently meet the income threshold. Outdated documents suggest income may have changed.</p>
+      <p><strong>Fix:</strong> Gather documentation within 3 months of your application submission. Request updated pension statements directly from the pension fund (most will provide statements dated within a few weeks of request). Download current bank statements the week before you submit your application.</p>
+
+      <h3>Mistake 3: Income Exactly at the IPREM Threshold</h3>
+      <p><strong>The error:</strong> Claiming exactly €1,112.50 in income with no margin above the threshold.</p>
+      <p><strong>Why it fails:</strong> Any calculation discrepancy, exchange rate change, or misunderstanding results in denial. Consulates are uncomfortable approving applications with zero buffer.</p>
+      <p><strong>Fix:</strong> Ensure your documented income is at least 1.1–1.2x IPREM (€1,220+) to provide a safety margin. Round conservatively when stating income from multiple sources.</p>
+
+      <h3>Mistake 4: Inconsistency Between Bank Statements and Income Claims</h3>
+      <p><strong>The error:</strong> Claiming €1,200/month pension income, but Spanish bank statements show only €900 monthly deposits.</p>
+      <p><strong>Why it fails:</strong> Consulates compare your stated income against actual deposits shown in statements. Unexplained gaps invite scrutiny and potential denial.</p>
+      <p><strong>Fix:</strong> Ensure your stated income aligns precisely with deposits shown in your 6-month bank statement average. If your pension is €1,200 but only €1,100 is deposited monthly (with the remainder held for taxes or reinvested), state the net monthly deposit amount. If there are timing gaps (e.g., pension paid quarterly, not monthly), average the amount over 3-month cycles and explain this in an attached note.</p>
+
+      <h3>Mistake 5: Large, Unexplained Withdrawals</h3>
+      <p><strong>The error:</strong> Bank statements show multiple large cash withdrawals (€2,000, €3,000) with no clear explanation, suggesting hidden income sources or financial instability.</p>
+      <p><strong>Why it fails:</strong> Consulates may suspect unreported employment income or money laundering. They also question whether your documented income is truly sufficient if you are drawing down savings dramatically.</p>
+      <p><strong>Fix:</strong> Maintain spending patterns aligned with your documented income. If you need to make large withdrawals, document the reason (home renovation, family gift, vacation) in a brief note. Better yet, use bank transfers for large expenses rather than cash withdrawals, which create a clearer financial trail.</p>
+
+      <h3>Mistake 6: Mixing Employment Income with Passive Income</h3>
+      <p><strong>The error:</strong> Submitting bank statements that show both work income (employment or freelance) and passive income, then claiming to be relying only on passive income.</p>
+      <p><strong>Why it fails:</strong> Consulates will question whether you've violated the NLV employment prohibition and may suspect you're hiding ongoing work.</p>
+      <p><strong>Fix:</strong> If you have worked at any point during your NLV period, be honest and either (a) cease employment and renew on pure passive income after 2–3 months of statements showing only passive deposits, or (b) transition to a Work Permit or Entrepreneur Visa. Do not attempt to hide employment income.</p>
+
+      <h3>Mistake 7: Failing to Translate Documents</h3>
+      <p><strong>The error:</strong> Submitting bank statements, pension documents, or tax returns in your home country language without Spanish translation.</p>
+      <p><strong>Why it fails:</strong> Consulate officers may not speak all languages. Untranslated documents may be rejected or cause processing delays.</p>
+      <p><strong>Fix:</strong> Provide certified Spanish translations (traducciones juradas) for any documents not in Spanish or English. English documents are usually accepted, but Spanish is preferred. Certified translations cost €10–25 per document and are worth the investment to avoid delays.</p>
+
+      <h3>Mistake 8: Not Updating Dependent Information</h3>
+      <p><strong>The error:</strong> If your initial application included dependent children, but a dependent has turned 25 or moved away, failing to update your consulate on this change before renewal.</p>
+      <p><strong>Why it fails:</strong> If you were initially approved with dependent multipliers (1.4x or 1.8x IPREM), but no longer have dependents, consulates may recalculate your income requirement downward—but they need current information to confirm.</p>
+      <p><strong>Fix:</strong> If your family status has changed, inform your consulate in writing (carta) and update your renewal application to reflect current dependent status. This ensures the consulate applies the correct IPREM threshold.</p>
+
+      <h3>Mistake 9: Inconsistent Currency Conversion</h3>
+      <p><strong>The error:</strong> Using different exchange rates for different income sources (e.g., converting pension at 1 USD = 0.90 EUR, but investment income at 1 USD = 0.88 EUR).</p>
+      <p><strong>Why it fails:</strong> Inconsistency suggests carelessness or manipulation of numbers to meet the threshold. Consulates verify calculations carefully.</p>
+      <p><strong>Fix:</strong> Use a single exchange rate (ideally the official rate on your application date, from Banco de España or ECB) for all currency conversions. State this rate clearly in your income summary. Example: "All USD-denominated income has been converted to EUR using the official ECB daily rate of 1 USD = 0.92 EUR as of September 15, 2024."</p>
+
+      <h3>Mistake 10: Vague Income Documentation</h3>
+      <p><strong>The error:</strong> Providing only a brief "income overview" without supporting documents (pension statements, brokerage confirmations, rental agreements).</p>
+      <p><strong>Why it fails:</strong> Consulates need to verify each income source independently. Vague claims without documentation are not credible.</p>
+      <p><strong>Fix:</strong> Create a documentation package including: (1) income summary chart (as described above), (2) 6 months of Spanish bank statements, (3) original pension statement from pension fund, (4) investment account statements or brokerage confirmations, (5) rental agreement and property management statements, (6) home country tax return, (7) Spanish tax return (Modelo 100, if applicable). Organize these clearly with dividers or tabs.</p>
+
+      <div class="msv__alert msv__alert--green">
+        <div class="msv__alert-icon">✓</div>
+        <div>
+          <p><strong>Gold standard renewal:</strong> Organized documentation package, clear income summary chart, recent Spanish bank statements, supporting source documents for each income stream, translated documents, consistency between all claims, and income 1.2x+ above IPREM. This approach wins approvals with minimal questions.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="msv__section">
+    <div class="msv__container--narrow">
+      <div class="msv__section-hd">
+        <h2>Frequently Asked Questions</h2>
+      </div>
+
+      <div class="msv__faq-list">
+        <details>
+          <summary>How are income requirements different at renewal vs. initial NLV application?</summary>
+          <div class="msv__faq-answer">
+            <p>At renewal, you typically submit 3–6 months of recent Spanish bank statements showing regular deposits rather than a lump sum savings requirement. The renewal process is more focused on demonstrating ongoing income, and Spanish bank activity is now strongly preferred over home country bank statements. You must still prove you meet the monthly IPREM threshold (€1,112.50 for individuals in 2024, adjusted annually).</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>What is the current IPREM threshold for NLV renewal?</summary>
+          <div class="msv__faq-answer">
+            <p>As of 2024, the IPREM (Indicador Público de Renta de Efectos Múltiples) threshold is €1,112.50 per month for a single applicant. This figure is adjusted annually by the Spanish government on July 1st. Couples renewing joint applications must prove combined monthly income of €1,779.50 (1.6x IPREM). Always verify the current year's IPREM before submitting your renewal application.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Can I show Spanish bank activity instead of home country statements?</summary>
+          <div class="msv__faq-answer">
+            <p>Yes, and Spanish authorities now strongly prefer Spanish bank statements demonstrating regular deposits and income flow. If you have a Spanish bank account with consistent deposits over 3–6 months, this is considered better proof than home country statements. However, if income originates abroad (pension, investment income, rental payments), you should provide both Spanish deposits AND source documentation confirming the origin of funds.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>What if my income has decreased since my initial NLV application?</summary>
+          <div class="msv__faq-answer">
+            <p>If your income has decreased but still meets or exceeds the IPREM threshold, you can renew successfully by demonstrating the current income level through recent bank statements and income documentation. If income has dropped below the threshold, consulate officers have discretion to evaluate your overall financial stability, including savings and assets. Early notification of significant income changes increases the likelihood of a successful renewal. Some consulates may request an explanation letter (carta) documenting the change and your plan to maintain sufficient income.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>How do pension fluctuations and exchange rate changes affect renewal?</summary>
+          <div class="msv__faq-answer">
+            <p>For pensions in foreign currency, consulates calculate income using the official exchange rate on the date of your renewal application. If exchange rates have moved unfavorably against your home currency, your euro-converted pension may appear lower. Document your pension statement in both original currency and euro conversion. If rates fluctuate monthly, provide 6 months of statements showing you consistently meet the IPREM threshold. Most consulates use a conservative approach, averaging rates or using the lowest monthly conversion to ensure compliance.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>What if my investment portfolio or savings have changed since the initial application?</summary>
+          <div class="msv__faq-answer">
+            <p>Investment income (dividends, interest, capital gains) must be documented with brokerage statements and tax returns showing ongoing income generation. If your portfolio decreased in value, focus on the current income generated, not the total balance. Consulates care less about portfolio size at renewal and more about demonstrated monthly cash flow. Savings depletion is a concern only if it suggests you can no longer afford to live in Spain—having lower savings while still meeting the IPREM income threshold is usually acceptable at renewal.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>What happens if I've started working during my NLV period?</summary>
+          <div class="msv__faq-answer">
+            <p>Employment income from a Spanish job violates the spirit of the Non-Lucrative Visa (which prohibits economic activity). If you've worked in Spain during your residency, report it honestly at renewal—your options are: (1) transition to a different visa category (Work Permit, Entrepreneur, etc.), (2) cease employment immediately and renew on passive income alone, or (3) risk renewal denial. Some consulates may overlook minor freelance work or part-time employment, but full-time employment typically requires visa reclassification rather than NLV renewal.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Is savings drawdown a problem at NLV renewal?</summary>
+          <div class="msv__faq-answer">
+            <p>Savings drawdown is not directly a problem at renewal, provided you meet the monthly IPREM income requirement through current income sources. If your savings have depleted but your pension, investment income, or other passive income still covers monthly expenses and exceeds IPREM, renewal is typically approved. However, if you've been drawing down savings to supplement income and current income alone falls below IPREM, this raises concerns about financial sustainability. The key metric is current demonstrated income, not savings reserves.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Band -->
+  <section class="msv__cta-band">
+    <div class="msv__container--narrow">
+      <h2>Start Your Renewal Preparation Today</h2>
+      <p>Don't leave your renewal to chance. Gather the right documentation, verify your income meets the current IPREM threshold, and prepare a clear, organized application package.</p>
+      <div class="msv__btn-group">
+        <a href="/non-lucrative-visa-renewal/" class="msv__btn msv__btn--primary">View Renewal Checklist</a>
+        <a href="https://dashboard.platinumlegalspain.com/nlv-renewal" class="msv__btn msv__btn--outline-white">Check Your Eligibility</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Guides -->
+  <section class="msv__section msv__section--cream">
+    <div class="msv__container">
+      <div class="msv__section-hd">
+        <h2>Related Guides & Resources</h2>
+      </div>
+
+      <div class="msv__related">
+        <a href="/non-lucrative-visa-spain/" class="msv__related-card">
+          <div class="msv__related-icon">📍</div>
+          <div class="msv__related-title">Non-Lucrative Visa Spain</div>
+          <div class="msv__related-desc">Complete guide to obtaining the NLV for Spain's golden visa program.</div>
+        </a>
+
+        <a href="/non-lucrative-visa-renewal/" class="msv__related-card">
+          <div class="msv__related-icon">🔄</div>
+          <div class="msv__related-title">NLV Renewal Overview</div>
+          <div class="msv__related-desc">Full renewal process, timeline, and key requirements for extending your visa.</div>
+        </a>
+
+        <a href="/non-lucrative-visa-renewal-requirements/" class="msv__related-card">
+          <div class="msv__related-icon">✅</div>
+          <div class="msv__related-title">Renewal Requirements Checklist</div>
+          <div class="msv__related-desc">Complete list of documents and proof required for your renewal application.</div>
+        </a>
+
+        <a href="/non-lucrative-visa-renewal-documents/" class="msv__related-card">
+          <div class="msv__related-icon">📄</div>
+          <div class="msv__related-title">Renewal Documents Required</div>
+          <div class="msv__related-desc">Detailed breakdown of each document needed and how to prepare them.</div>
+        </a>
+
+        <a href="/non-lucrative-visa-renewal-timeline/" class="msv__related-card">
+          <div class="msv__related-icon">⏱️</div>
+          <div class="msv__related-title">Renewal Timeline & Deadlines</div>
+          <div class="msv__related-desc">Key dates, processing times, and when to submit your renewal application.</div>
+        </a>
+
+        <a href="/non-lucrative-visa-renewal-health-insurance/" class="msv__related-card">
+          <div class="msv__related-icon">🏥</div>
+          <div class="msv__related-title">Health Insurance for Renewal</div>
+          <div class="msv__related-desc">Health insurance requirements and options for NLV renewal applicants.</div>
+        </a>
+
+        <a href="/non-lucrative-visa-income-requirements/" class="msv__related-card">
+          <div class="msv__related-icon">💰</div>
+          <div class="msv__related-title">Initial NLV Income Requirements</div>
+          <div class="msv__related-desc">Original income thresholds and proof requirements for initial NLV application.</div>
+        </a>
+
+        <a href="/non-lucrative-visa-savings-requirements/" class="msv__related-card">
+          <div class="msv__related-icon">🏦</div>
+          <div class="msv__related-title">Savings & Financial Requirements</div>
+          <div class="msv__related-desc">Savings thresholds and bank account documentation for visa approval.</div>
+        </a>
+
+        <a href="/non-lucrative-visa-passive-income/" class="msv__related-card">
+          <div class="msv__related-icon">📊</div>
+          <div class="msv__related-title">Passive Income Sources</div>
+          <div class="msv__related-desc">Comprehensive guide to acceptable passive income types for the NLV visa.</div>
+        </a>
+
+        <a href="/non-lucrative-visa-pension-income/" class="msv__related-card">
+          <div class="msv__related-icon">👴</div>
+          <div class="msv__related-title">Pension Income for NLV</div>
+          <div class="msv__related-desc">How pensions are calculated, documented, and verified for visa purposes.</div>
+        </a>
+
+        <a href="/non-lucrative-visa-tax-spain/" class="msv__related-card">
+          <div class="msv__related-icon">📋</div>
+          <div class="msv__related-title">Tax Obligations & Compliance</div>
+          <div class="msv__related-desc">Spanish tax filing requirements and implications for NLV residents.</div>
+        </a>
+
+        <a href="/long-term-residency-after-nlv/" class="msv__related-card">
+          <div class="msv__related-icon">🏠</div>
+          <div class="msv__related-title">After NLV: Permanent Residency</div>
+          <div class="msv__related-desc">Pathways to long-term residency and citizenship after your NLV period.</div>
+        </a>
+
+        <a href="/convert-nlv-to-work-permit/" class="msv__related-card">
+          <div class="msv__related-icon">💼</div>
+          <div class="msv__related-title">Transition to Work Permit</div>
+          <div class="msv__related-desc">How to convert your NLV to an employment work visa when circumstances change.</div>
+        </a>
+
+        <a href="https://dashboard.platinumlegalspain.com/nlv-renewal" class="msv__related-card">
+          <div class="msv__related-icon">🎯</div>
+          <div class="msv__related-title">Eligibility Checker Tool</div>
+          <div class="msv__related-desc">Interactive tool to verify your current eligibility for NLV or renewal.</div>
+        </a>
+
+        <a href="/non-lucrative-visa-faq/" class="msv__related-card">
+          <div class="msv__related-icon">❓</div>
+          <div class="msv__related-title">NLV FAQ</div>
+          <div class="msv__related-desc">Answers to the most common questions about the Non-Lucrative Visa.</div>
+        </a>
+
+        <a href="https://dashboard.platinumlegalspain.com/nlv-renewal" class="msv__related-card">
+          <div class="msv__related-icon">📞</div>
+          <div class="msv__related-title">Get Expert Guidance</div>
+          <div class="msv__related-desc">Contact our team for personalized visa advice and renewal support.</div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Disclaimer -->
+  </section>
+</div>
+
+<!-- FRAGMENT_END -->
+</main>
+
+
+<!-- ═══════════════════════════════════════════════════
+     SITE FOOTER
+     ═══════════════════════════════════════════════════ -->
+<footer class="msv-footer" role="contentinfo">
+
+  <div class="msv-footer__top">
+
+    <!-- Brand column -->
+    <div class="msv-footer__brand">
+      <a href="/" class="msv-footer__logo" aria-label="My Spanish Visa"><img src="/assets/images/msv-logo-white.png" alt="My Spanish Visa" height="40" style="display:block;"></a>
+      <p class="msv-footer__tagline">
+        Specialist Spain visa &amp; residency guidance for English-speaking foreigners.
+        A service of Platinum Legal Spain.
+      </p>
+      <div class="msv-footer__trust">
+        <span class="msv-footer__trust-item">All English. No barriers.</span>
+        <span class="msv-footer__trust-item">Solicitors &amp; immigration specialists</span>
+        <span class="msv-footer__trust-item">100% online process</span>
+      </div>
+    </div>
+
+    <!-- Visas column -->
+    <div>
+      <div class="msv-footer__col-title">Visas</div>
+      <ul class="msv-footer__links">
+        <li><a href="/non-lucrative-visa-spain/">Non-Lucrative Visa</a></li>
+        <li><a href="/digital-nomad-visa-spain/">Digital Nomad Visa</a></li>
+        <li><a href="/student-visa-spain/">Student Visa</a></li>
+        <li><a href="/spain-visa-renewal/">Visa Renewals</a></li>
+        <li><a href="/best-visa-move-to-spain/">Compare All Visas</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/nlv">Apply: NLV</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/dnv">Apply: DNV</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/student-visa">Apply: Student Visa</a></li>
+      </ul>
+    </div>
+
+    <!-- Resources column -->
+    <div>
+      <div class="msv-footer__col-title">Resources</div>
+      <ul class="msv-footer__links">
+        <li><a href="/blog/">Blog &amp; Guides</a></li>
+        <li><a href="/move-to-spain/">Move to Spain Guide</a></li>
+        <li><a href="/visa-eligibility-quiz/">Eligibility Quiz</a></li>
+        <li><a href="/spain-visa-checklist/">Document Checklists</a></li>
+        <li><a href="/spain-visa-requirements/">Visa Requirements</a></li>
+        <li><a href="/spain-nie-number/">NIE Number Guide</a></li>
+        <li><a href="/spain-tie-card/">TIE Card Guide</a></li>
+      </ul>
+    </div>
+
+    <!-- Company column -->
+    <div>
+      <div class="msv-footer__col-title">Company</div>
+      <ul class="msv-footer__links">
+        <li><a href="/about-us/">About Us</a></li>
+        <li><a href="/testimonials/">Client Reviews</a></li>
+        <li><a href="/why-choose-us/">Why Choose Us</a></li>
+        <li><a href="/contact-us.html">Contact</a></li>
+        <li><a href="https://www.platinumlegalspain.com" rel="noopener">Platinum Legal Spain</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/nlv-renewal">Client Portal</a></li>
+      </ul>
+    </div>
+
+  </div><!-- /.msv-footer__top -->
+
+  <div class="msv-footer__bottom">
+    <div class="msv-footer__bottom-inner">
+      <p class="msv-footer__disclaimer">
+        <strong style="color:rgba(255,255,255,0.5);">Disclaimer:</strong>
+        My Spanish Visa provides visa processing support and is not a law firm. Content on this site is for informational purposes only and does not constitute legal advice. Immigration rules change frequently — always verify requirements with official sources or a qualified specialist. My Spanish Visa is a trading name of Platinum Legal Spain.
+      </p>
+      <span class="msv-footer__copyright">© 2026 My Spanish Visa. All rights reserved.</span>
+    </div>
+  </div>
+
+</footer>
+
+</body>
+</html>

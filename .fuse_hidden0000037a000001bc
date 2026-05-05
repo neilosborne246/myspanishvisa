@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- ═══════════════════════════════════════════════════════════════════
+       PAGE-SPECIFIC HEAD — replace block below per page:
+       <title>Blog Spain Visa Rejection Reasons Common Mistakes | My Spanish Visa</title>
+       <meta name="description" content="…">
+       <meta property="og:title" content="…">
+       <meta property="og:description" content="…">
+       <meta property="og:url" content="https://www.myspanishvisa.com/…">
+       <meta property="og:image" content="…">
+       <link rel="canonical" href="https://www.myspanishvisa.com/…">
+       <script type="application/ld+json">…</script>
+       ═══════════════════════════════════════════════════════════════════ -->
+  <title>My Spanish Visa — Spain Visa &amp; Residency Specialists</title>
+  <meta name="description" content="My Spanish Visa helps English-speaking foreigners move to Spain. Expert guidance on Non-Lucrative Visa, Digital Nomad Visa, Student Visa, renewals and more.">
+
+  <!-- Shared Open Graph defaults -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="My Spanish Visa">
+  <meta property="og:image" content="https://www.myspanishvisa.com/assets/images/og/og-myspanishvisa-default.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@myspanishvisa">
+
+  <style>
+/* ═══════════════════════════════════════════════════════════════
+   GLOBAL SHELL — nav + footer only.
+   Page-specific CSS lives inside each fragment's own <style> block.
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── iOS overflow safety ── */
+html, body { max-width: 100%; overflow-x: clip; margin: 0; padding: 0; }
+*, *::before, *::after { box-sizing: border-box; }
+
+/* ── Brand tokens (root-level so all fragments inherit) ── */
+:root {
+  --navy:      #0c1930;
+  --navy-mid:  #1a3a5c;
+  --red:       #be0011;
+  --red-deep:  #8c000d;
+  --yellow:    #facf39;
+  --cream:     #f8f7f4;
+  --white:     #ffffff;
+  --black:     #1a1a1a;
+  --muted:     #5a6478;
+  --border:    #dce3ed;
+  --shadow-sm: 0 2px 8px rgba(12,25,48,0.08);
+  --shadow-md: 0 6px 24px rgba(12,25,48,0.13);
+}
+
+body {
+  font-family: 'Inter', 'Segoe UI', system-ui, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.75;
+  color: var(--black);
+  background: #fff;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   SITE NAV
+   ───────────────────────────────────────────────────────────── */
+.msv-nav {
+  position: sticky;
+  top: 0;
+  z-index: 9000;
+  background: var(--navy);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 2px 12px rgba(12,25,48,0.22);
+}
+.msv-nav__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+  gap: 1.5rem;
+}
+
+/* Logo */
+.msv-nav__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+.msv-nav__logo-flag {
+  font-size: 1.3rem;
+  line-height: 1;
+}
+.msv-nav__logo-text {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+.msv-nav__logo-text span {
+  color: var(--yellow);
+}
+
+/* Links */
+.msv-nav__links {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.msv-nav__links > li {
+  position: relative;
+}
+.msv-nav__links > li > a,
+.msv-nav__links > li > button {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.5rem 0.9rem;
+  font-size: 0.87rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.85);
+  text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: color 0.15s, background 0.15s;
+  white-space: nowrap;
+  height: 64px;
+}
+.msv-nav__links > li > a:hover,
+.msv-nav__links > li > button:hover,
+.msv-nav__links > li:focus-within > a,
+.msv-nav__links > li:focus-within > button {
+  color: #fff;
+  background: rgba(255,255,255,0.08);
+}
+.msv-nav__chevron {
+  font-size: 0.65rem;
+  opacity: 0.7;
+  transition: transform 0.2s;
+}
+.msv-nav__links > li:focus-within .msv-nav__chevron,
+.msv-nav__links > li:hover .msv-nav__chevron {
+  transform: rotate(180deg);
+}
+
+/* Dropdown */
+.msv-nav__dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 230px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  box-shadow: var(--shadow-md);
+  padding: 0.5rem 0;
+  z-index: 200;
+}
+.msv-nav__links > li:hover .msv-nav__dropdown,
+.msv-nav__links > li:focus-within .msv-nav__dropdown {
+  display: block;
+}
+.msv-nav__dropdown a {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.6rem 1.1rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--navy);
+  text-decoration: none;
+  transition: background 0.12s;
+}
+.msv-nav__dropdown a:hover {
+  background: var(--cream);
+  color: var(--red);
+}
+.msv-nav__dropdown-icon {
+  width: 24px;
+  height: 24px;
+  background: var(--cream);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+.msv-nav__dropdown-divider {
+  height: 1px;
+  background: var(--border);
+  margin: 0.4rem 0;
+}
+
+/* CTA button */
+.msv-nav__cta {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.55rem 1.2rem;
+  background: var(--red);
+  color: #fff !important;
+  font-size: 0.85rem;
+  font-weight: 700;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.15s, box-shadow 0.15s;
+  white-space: nowrap;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(190,0,17,0.3);
+}
+.msv-nav__cta:hover {
+  background: var(--red-deep);
+  box-shadow: 0 4px 14px rgba(190,0,17,0.4);
+  text-decoration: none;
+}
+
+/* Hamburger */
+.msv-nav__burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.4rem;
+  border-radius: 5px;
+}
+.msv-nav__burger span {
+  width: 22px;
+  height: 2px;
+  background: #fff;
+  border-radius: 2px;
+  transition: transform 0.2s, opacity 0.2s;
+  display: block;
+}
+
+/* Mobile nav */
+.msv-nav__mobile {
+  display: none;
+  flex-direction: column;
+  background: var(--navy-mid);
+  padding: 1rem 1.5rem 1.5rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+.msv-nav__mobile.open { display: flex; }
+.msv-nav__mobile a {
+  padding: 0.65rem 0;
+  color: rgba(255,255,255,0.9);
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+.msv-nav__mobile a:hover { color: var(--yellow); }
+.msv-nav__mobile .msv-nav__mobile-sub {
+  padding-left: 1rem;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: rgba(255,255,255,0.7);
+}
+.msv-nav__mobile-cta {
+  margin-top: 1rem;
+  background: var(--red);
+  color: #fff !important;
+  border-radius: 6px;
+  text-align: center;
+  padding: 0.75rem 1rem !important;
+  border-bottom: none !important;
+}
+
+@media (max-width: 900px) {
+  .msv-nav__links { display: none; }
+  .msv-nav__cta { display: none; }
+  .msv-nav__burger { display: flex; }
+}
+@media (max-width: 480px) {
+  .msv-nav__inner { padding: 0 1rem; }
+}
+
+/* ─────────────────────────────────────────────────────────────
+   SITE FOOTER
+   ───────────────────────────────────────────────────────────── */
+.msv-footer {
+  background: var(--navy);
+  color: rgba(255,255,255,0.75);
+  overflow-x: clip;
+}
+.msv-footer__top {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem 3rem;
+  display: grid;
+  grid-template-columns: 280px 1fr 1fr 1fr;
+  gap: 3rem;
+}
+@media (max-width: 900px) {
+  .msv-footer__top { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
+}
+@media (max-width: 560px) {
+  .msv-footer__top { grid-template-columns: 1fr; gap: 2rem; padding: 3rem 1.2rem 2rem; }
+}
+
+.msv-footer__brand {}
+.msv-footer__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  margin-bottom: 1rem;
+}
+.msv-footer__logo-flag { font-size: 1.3rem; }
+.msv-footer__logo-text {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -0.01em;
+}
+.msv-footer__logo-text span { color: var(--yellow); }
+.msv-footer__tagline {
+  font-size: 0.83rem;
+  color: rgba(255,255,255,0.55);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+.msv-footer__trust {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+.msv-footer__trust-item {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.65);
+}
+.msv-footer__trust-item::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  background: var(--yellow);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.msv-footer__col-title {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.4);
+  margin-bottom: 1rem;
+}
+.msv-footer__links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.msv-footer__links a {
+  font-size: 0.87rem;
+  color: rgba(255,255,255,0.68);
+  text-decoration: none;
+  transition: color 0.15s;
+  display: inline-block;
+}
+.msv-footer__links a:hover {
+  color: var(--yellow);
+  text-decoration: none;
+}
+
+.msv-footer__bottom {
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+.msv-footer__bottom-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 1rem;
+  justify-content: space-between;
+}
+.msv-footer__disclaimer {
+  font-size: 0.73rem;
+  color: rgba(255,255,255,0.35);
+  line-height: 1.65;
+  max-width: 720px;
+}
+.msv-footer__copyright {
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.35);
+  white-space: nowrap;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   MAIN CONTENT AREA
+   ───────────────────────────────────────────────────────────── */
+main {
+  /* Fragments are self-contained; this wrapper just provides flow context */
+  position: relative;
+}
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════
+     SITE NAVIGATION
+     ═══════════════════════════════════════════════════ -->
+<header class="msv-nav" role="banner">
+  <div class="msv-nav__inner">
+
+    <!-- Logo -->
+    <a href="/" class="msv-nav__logo" aria-label="My Spanish Visa — Home"><img src="/assets/images/msv-logo-white.png" alt="My Spanish Visa" height="64" style="display:block;"></a>
+
+    <!-- Desktop links -->
+    <nav aria-label="Main navigation">
+      <ul class="msv-nav__links">
+
+        <li>
+          <button class="msv-nav__dropdown-trigger" aria-haspopup="true" aria-expanded="false">
+            Visas <span class="msv-nav__chevron">▾</span>
+          </button>
+          <div class="msv-nav__dropdown" role="menu">
+            <a href="/non-lucrative-visa-spain/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🏖️</span>Non-Lucrative Visa
+            </a>
+            <a href="/digital-nomad-visa-spain/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">💻</span>Digital Nomad Visa
+            </a>
+            <a href="/student-visa-spain/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🎓</span>Student Visa
+            </a>
+            <div class="msv-nav__dropdown-divider"></div>
+            <a href="/spain-visa-renewal/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🔄</span>Visa Renewals
+            </a>
+            <a href="/best-visa-move-to-spain/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">⚖️</span>Compare All Visas
+            </a>
+          </div>
+        </li>
+
+        <li>
+          <button aria-haspopup="true" aria-expanded="false">
+            Resources <span class="msv-nav__chevron">▾</span>
+          </button>
+          <div class="msv-nav__dropdown" role="menu">
+            <a href="/blog/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">📝</span>Blog &amp; Guides
+            </a>
+            <a href="/spain-visa-checklist/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">✅</span>Document Checklists
+            </a>
+            <a href="/move-to-spain/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🏠</span>Move to Spain Guide
+            </a>
+            <a href="/visa-eligibility-quiz/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🧭</span>Eligibility Quiz
+            </a>
+          </div>
+        </li>
+
+        <li><a href="/about-us/">About Us</a></li>
+        <li><a href="/testimonials/">Reviews</a></li>
+        <li><a href="/contact-us.html">Contact</a></li>
+
+      </ul>
+    </nav>
+
+    <!-- Desktop CTA -->
+    <a href="https://dashboard.platinumlegalspain.com/nlv" class="msv-nav__cta">
+      Start My Application →
+    </a>
+
+    <!-- Hamburger (mobile) -->
+    <button class="msv-nav__burger" aria-label="Open menu" aria-expanded="false" onclick="
+      var m=document.querySelector('.msv-nav__mobile');
+      var open=m.classList.toggle('open');
+      this.setAttribute('aria-expanded', open);
+    ">
+      <span></span><span></span><span></span>
+    </button>
+
+  </div><!-- /.msv-nav__inner -->
+
+  <!-- Mobile menu -->
+  <nav class="msv-nav__mobile" aria-label="Mobile navigation">
+    <a href="/non-lucrative-visa-spain/" class="msv-nav__mobile-sub">Non-Lucrative Visa</a>
+    <a href="/digital-nomad-visa-spain/" class="msv-nav__mobile-sub">Digital Nomad Visa</a>
+    <a href="/student-visa-spain/" class="msv-nav__mobile-sub">Student Visa</a>
+    <a href="/spain-visa-renewal/">Visa Renewals</a>
+    <a href="/best-visa-move-to-spain/">Compare All Visas</a>
+    <a href="/blog/">Blog &amp; Guides</a>
+    <a href="/about-us/">About Us</a>
+    <a href="/testimonials/">Reviews</a>
+    <a href="/contact-us.html">Contact</a>
+    <a href="https://dashboard.platinumlegalspain.com/nlv" class="msv-nav__mobile-cta">Start My Application →</a>
+  </nav>
+
+</header>
+
+
+<!-- ═══════════════════════════════════════════════════
+     PAGE CONTENT (fragment injected here)
+     ═══════════════════════════════════════════════════ -->
+<main>
+<!-- FRAGMENT_START -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://www.myspanishvisa.com/blog/spain-visa-rejection-reasons-common-mistakes/#blogpost",
+      "headline": "Spain Visa Rejection Reasons: The Most Common Mistakes",
+      "description": "Understand the most common Spain visa rejection reasons and how to avoid them in your next application.",
+      "url": "https://www.myspanishvisa.com/blog/spain-visa-rejection-reasons-common-mistakes/",
+      "datePublished": "2026-04-13",
+      "dateModified": "2026-04-13",
+      "inLanguage": "en",
+      "author": {"@type": "Organization", "name": "My Spanish Visa"},
+      "publisher": {
+        "@type": "Organization",
+        "name": "My Spanish Visa",
+        "logo": {"@type": "ImageObject", "url": "https://www.myspanishvisa.com/assets/images/msv-logo.png"}
+      },
+      "isPartOf": {"@id": "https://www.myspanishvisa.com/#website"}
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.myspanishvisa.com/blog/spain-visa-rejection-reasons-common-mistakes/#breadcrumb",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.myspanishvisa.com"},
+        {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.myspanishvisa.com/blog/"},
+        {"@type": "ListItem", "position": 3, "name": "Spain Visa Rejection Reasons: The Most Common Mistakes", "item": "https://www.myspanishvisa.com/blog/spain-visa-rejection-reasons-common-mistakes/"}
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Can a spelling error on my name cause rejection?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Minor spelling variations might not cause rejection if they're clearly the same person, but ensure consistency. If your legal name spelling differs from your documents, clarify this with the consulate."}
+        },
+        {
+          "@type": "Question",
+          "name": "Will outdated bank statements get me rejected?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Yes. Bank statements older than 3 months are often considered outdated. Provide statements dated within 1-2 months of your application."}
+        },
+        {
+          "@type": "Question",
+          "name": "Is there a minimum bank balance to avoid rejection?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Yes. The non-lucrative visa requires approximately 27,792 euros annually. Other visas have different requirements. Check your specific visa type."}
+        },
+        {
+          "@type": "Question",
+          "name": "What if my criminal record certificate got lost in transit?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Request another copy immediately. Don't submit your application without it\u2014you'll be rejected. Use registered mail or hand-deliver if possible."}
+        }
+      ]
+    }
+  ]
+}
+</script>
+<!-- Open Graph / Social -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.myspanishvisa.com/blog/spain-visa-rejection-reasons-common-mistakes/">
+<meta property="og:title" content="My Spanish Visa">
+<meta property="og:description" content="Expert Spain visa guidance for English-speaking expats.">
+<meta property="og:image" content="https://www.myspanishvisa.com/assets/images/og/og-blog-myspanishvisa.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="My Spanish Visa">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@myspanishvisa">
+<meta name="twitter:title" content="My Spanish Visa">
+<meta name="twitter:description" content="Expert Spain visa guidance for English-speaking expats.">
+<meta name="twitter:image" content="https://www.myspanishvisa.com/assets/images/og/og-blog-myspanishvisa.jpg">
+<style>
+
+html, body { max-width: 100%; overflow-x: clip; }
+.msv, .msv-nav, .msv-topbar, .msv-footer, .msv-footer-cta,
+.pls-header, .pls-body, .pls-nlv, .pls-dnv, .pls-student {
+  max-width: 100%; overflow-x: clip; position: relative;
+}
+.msv img, .msv video, .msv iframe,
+.msv-footer img, .msv-footer video, .msv-footer iframe { max-width: 100%; height: auto; }
+
+.msv *, .msv *::before, .msv *::after { box-sizing: border-box; margin: 0; padding: 0; }
+.msv {
+  --navy: #0c1930; --navy-mid: #1a3a5c; --red: #be0011; --red-deep: #8c000d;
+  --yellow: #facf39; --cream: #f8f7f4; --white: #ffffff; --black: #1a1a1a;
+  --muted: #5a6478; --border: #dce3ed;
+  --shadow-sm: 0 2px 8px rgba(12,25,48,0.08); --shadow-md: 0 6px 24px rgba(12,25,48,0.13);
+  font-family: 'Inter', 'Segoe UI', system-ui, Arial, sans-serif;
+  font-size: 16px; line-height: 1.75; color: var(--black); width: 100%;
+}
+.msv__container--narrow { max-width: 780px; margin: 0 auto; padding: 0 2rem; }
+@media (max-width: 640px) { .msv__container--narrow { padding: 0 1.2rem; } }
+.msv h1 { font-size: clamp(1.9rem, 4vw, 2.8rem); font-weight: 800; line-height: 1.15; color: var(--white); margin-bottom: 1.2rem; }
+.msv h2 { font-size: clamp(1.2rem, 2.5vw, 1.6rem); font-weight: 700; color: var(--navy); margin-bottom: 0.5rem; position: relative; display: inline-block; padding-bottom: 0.5rem; }
+.msv h2::after { content: ''; position: absolute; bottom: 0; left: 0; width: 44px; height: 3px; background: linear-gradient(90deg, var(--red), #8c000d); }
+.msv h3 { font-size: 1.05rem; font-weight: 700; color: var(--navy); margin-top: 1.5rem; margin-bottom: 0.5rem; }
+.msv p { color: var(--black); margin-bottom: 1rem; font-size: 0.97rem; }
+.msv a { color: var(--red); text-decoration: none; }
+.msv a:hover { text-decoration: underline; }
+.msv ul { list-style: none; padding: 0; margin: 0 0 1rem; }
+.msv ul li { padding: 0.35rem 0 0.35rem 1.4rem; position: relative; font-size: 0.97rem; }
+.msv ul li::before { content: ''; position: absolute; left: 0; top: 0.75rem; width: 7px; height: 7px; background: linear-gradient(135deg, var(--red), #8c000d); border-radius: 50%; }
+.msv__section { padding: 4rem 0; background: var(--white); }
+.msv__section--cream { padding: 4rem 0; background: linear-gradient(180deg, #f8f7f4 0%, #f2f4f8 100%); }
+.msv__section--dark { padding: 4rem 0; background: linear-gradient(135deg, var(--navy) 0%, #0d2240 60%, #0a1d38 100%); }
+.msv .msv__section--dark p, .msv .msv__section--dark li { color: rgba(255,255,255,0.8); }
+.msv .msv__section--dark h2 { color: var(--white); }
+.msv__hero { background: linear-gradient(135deg, #0c1930 0%, #0f2540 40%, #162d50 70%, #1a3560 100%); padding: 5rem 0 4.5rem; position: relative; }
+.msv__hero p { color: rgba(255,255,255,0.78) !important; font-size: clamp(1rem, 2.2vw, 1.15rem); max-width: 640px; margin-bottom: 2rem; }
+.msv__eyebrow { display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(190,0,17,0.15); border: 1px solid rgba(190,0,17,0.4); color: #ff6b7a; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.35rem 0.9rem; border-radius: 100px; margin-bottom: 1.5rem; }
+.msv__shimmer { background: linear-gradient(90deg, #facf39 0%, #e8b820 25%, #be0011 50%, #e8b820 75%, #facf39 100%); background-size: 400px 100%; -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.msv__alert { border-radius: 10px; padding: 1.2rem 1.4rem; display: flex; gap: 1rem; align-items: flex-start; margin-bottom: 2rem; }
+.msv__alert--yellow { background: #fffaed; border: 1px solid #fcd34d; }
+.msv__alert--red { background: #fef2f2; border: 1px solid #fca5a5; }
+.msv__alert p { font-size: 0.9rem; color: var(--black); margin: 0; }
+.msv__cta-box { background: #f0f4f8; border: 2px solid var(--red); border-radius: 12px; padding: 1.8rem 2rem; margin: 2rem 0; }
+.msv__cta-box h3 { margin-top: 0; color: var(--navy); }
+.msv__cta-band { background: linear-gradient(135deg, var(--navy) 0%, #0d2240 60%, #0a1d38 100%); padding: 4.5rem 0; text-align: center; }
+.msv__cta-band h2 { color: var(--white) !important; display: block; }
+.msv__cta-band p { color: rgba(255,255,255,0.75) !important; max-width: 560px; margin: 1rem auto 2rem; }
+.msv__btn-group { display: flex; flex-wrap: wrap; gap: 0.85rem; justify-content: center; }
+.msv__btn { display: inline-block; padding: 0.85rem 2rem; font-size: 0.92rem; font-weight: 700; border-radius: 6px; text-decoration: none !important; cursor: pointer; }
+.msv .msv__btn--primary { background: linear-gradient(135deg, var(--red) 0%, #8c000d 100%); color: #ffffff !important; }
+.msv .msv__btn--outline-white { background: transparent; color: #ffffff !important; border: 1.5px solid rgba(255,255,255,0.5); }
+.msv__disclaimer { background: var(--cream); border-top: 1px solid var(--border); padding: 2rem 0; }
+.msv__disclaimer p { font-size: 0.78rem; color: var(--muted); margin: 0; }
+.msv__faq-item { border-bottom: 1px solid var(--border); padding: 1.4rem 0; }
+.msv__faq-item:last-child { border-bottom: none; }
+.msv__faq-q { font-weight: 700; color: var(--navy); font-size: 0.95rem; margin-bottom: 0.65rem; }
+.msv__faq-a { color: var(--black); font-size: 0.92rem; line-height: 1.7; }
+.msv__trust-bar { background: var(--white); border-bottom: 1px solid var(--border); padding: 0.9rem 0; }
+.msv__trust-bar-inner { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem; }
+.msv__trust-item { display: flex; align-items: center; gap: 0.45rem; font-size: 0.8rem; font-weight: 600; color: var(--navy); }
+.msv__trust-item::before { content: '✓'; color: var(--red); font-weight: 800; }
+.msv__related { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+@media (max-width: 768px) { .msv__related { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 480px) { .msv__related { grid-template-columns: 1fr; } }
+.msv__related-card { background: var(--white); border: 1px solid var(--border); border-radius: 10px; padding: 1.2rem; text-decoration: none !important; display: block; transition: box-shadow 0.2s; }
+.msv__related-card:hover { box-shadow: var(--shadow-md); }
+.msv__related-title { font-size: 0.88rem; font-weight: 700; color: var(--navy); margin-bottom: 0.25rem; }
+.msv__related-url { font-size: 0.78rem; color: var(--muted); }
+.msv__breadcrumb { padding: 0.75rem 0; font-size: 0.8rem; color: var(--muted); }
+.msv__breadcrumb a { color: var(--red); text-decoration: none; }
+.msv__content { margin-bottom: 2rem; }
+.msv__content h2 { margin-top: 2.5rem; margin-bottom: 1rem; }
+.msv__content h3 { margin-top: 1.8rem; }
+
+</style>
+<div class="msv">
+
+  <section class="msv__hero">
+    <div class="msv__container--narrow">
+      <div class="msv__eyebrow">SPAIN VISA GUIDE</div>
+      <h1>Spain Visa Rejection Reasons: The Most Common Mistakes</h1>
+      <p>Understand the most common Spain visa rejection reasons and how to avoid them in your next application.</p>
+      <div class="msv__btn-group" style="justify-content:flex-start;">
+        <a href="https://dashboard.platinumlegalspain.com/nlv" class="msv__btn msv__btn--primary">Check My Eligibility — Free</a>
+        <a href="https://dashboard.platinumlegalspain.com/nlv" class="msv__btn msv__btn--outline-white">Book a Consultation</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="msv__trust-bar">
+    <div class="msv__trust-bar-inner">
+      <div class="msv__trust-item">Updated April 2026</div><div class="msv__trust-item">Expert reviewed</div><div class="msv__trust-item">English-speaking specialists</div><div class="msv__trust-item">Specialist guidance</div>
+    </div>
+  </div>
+
+  <section class="msv__section">
+    <div class="msv__container--narrow">
+      <div class="msv__breadcrumb">
+        <a href="/">Home</a> / <a href="/blog/">Blog</a> / Spain Visa Rejection Reasons: The Most Common Mistakes
+      </div>
+      <div class="msv__content">
+        <p>Spain visa rejections usually result from preventable mistakes. Understanding the most common rejection reasons can help you avoid the same pitfalls. Here are the mistakes that lead to rejections and how to prevent them.</p>
+<h2>Insufficient Financial Documentation (Most Common)</h2>
+<p>The leading cause of Spain visa rejections is inadequate proof of financial resources. Applicants submit only 1-2 months of bank statements when consulates want 6 months. They show savings without explaining the source. They don&#x27;t provide tax returns to support employment income. Solution: Provide 6-12 months of recent bank statements, tax returns for the past 2-3 years, and employment letters confirming your income. If using savings, provide documentation of how you accumulated it.</p>
+<h2>Missing or Incomplete Documents</h2>
+<p>Many applications are rejected simply because required documents are missing. Common examples: No apostille on vital records. Medical certificate dated too far in the past. No sworn translation of documents. Missing criminal record certificate. Incomplete application form with blank fields. Solution: Use our document checklist to verify every single required document. Double-check that all vital records are apostilled. Ensure documents are dated within acceptable timeframes.</p>
+<h2>Improper Apostilles and Translations</h2>
+<p>Documents have apostilles but they&#x27;re from the wrong authority. Documents are translated by non-professional translators. Apostilles are missing from translated documents. Documents are in a language Spain doesn&#x27;t clearly understand. Solution: Verify you obtained apostilles from the correct government authority. Use only sworn translators. Apostille both the original and the translation if required.</p>
+<h2>Housing Documentation Issues</h2>
+<p>Applicants submit incomplete housing proof. They provide only a rental booking confirmation, not a full lease. They don&#x27;t show the address matches their application. They claim to have housing but provide no documentation. Solution: Provide a complete rental contract or lease agreement. Include a letter from the property owner confirming your tenancy. If staying with family, provide a notarized letter from the family member and their proof of residence.</p>
+<h2>Employment or Income Verification Gaps</h2>
+<p>Employment letters lack critical details like start date, position, or salary. Self-employed applicants don&#x27;t provide business registration or tax returns. Freelancers don&#x27;t show proof of regular client contracts. Solution: Ensure employment letters include your position, start date, salary, and supervisor contact. Provide business registration documents and tax returns for self-employed applicants. Include client contracts or invoices for freelancers.</p>
+<h2>Health Insurance That Doesn&#x27;t Meet Requirements</h2>
+<p>Insurance doesn&#x27;t cover Spain. Insurance lapses during your visa period. The policy doesn&#x27;t cover required medical services. Solution: Purchase travel insurance specifically covering Spain or arrange healthcare through Spain&#x27;s public system. Ensure continuous coverage throughout your intended stay. Verify the policy includes emergency medical, hospitalization, and repatriation.</p>
+<h2>Medical Certificate Problems</h2>
+<p>Certificate is older than 12 months. Certificate doesn&#x27;t explicitly state you&#x27;re free from contagious diseases. Certificate isn&#x27;t from an authorized medical provider. Solution: Obtain medical certificates within 12 months of application submission. Ensure the certificate explicitly addresses tuberculosis, HIV, and syphilis. Verify the provider is authorized by Spain or your home country&#x27;s health authority.</p>
+<h2>Criminal Record Certificate Mistakes</h2>
+<p>Certificate is too old (older than 12 months). Certificate doesn&#x27;t cover all countries where the applicant lived. Certificate is unreadable or unclear. Solution: Obtain criminal records within 12 months of application. If you&#x27;ve lived in multiple countries, get certificates from each country where you resided over 6 months. Ensure the certificate is clear and in English or Spanish.</p>
+<h2>Application Form Errors</h2>
+<p>Form has blank fields. Handwriting is illegible. Inconsistencies appear between the form and documents (different addresses, spellings, dates). Missing signatures or dates. Solution: Complete every field on the form. Type or write legibly. Cross-reference your form with all supporting documents for consistency. Sign and date all required fields. Have someone review it before submission.</p>
+<h2>Inconsistent Information</h2>
+<p>Your current address differs from what you stated on the application. Your employment situation changed but you didn&#x27;t update your documents. Your financial situation deteriorated significantly. Solution: Ensure all applications and documents have consistent addresses and personal information. Update documents if your situation changes. Provide explanations for any discrepancies.</p>
+<p>Avoid Rejection: Get Your Application Reviewed</p>
+<p>Before submitting, have our specialists review your application and documents. We identify issues before the consulate does.</p>
+<p>[Get a Pre-Submission Review]</p>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="msv__section--cream">
+    <div class="msv__container--narrow">
+      <h2>Frequently Asked Questions</h2>
+      <div style="margin-top:2rem;">
+        <div class="msv__faq-item">
+          <div class="msv__faq-q">Can a spelling error on my name cause rejection?</div>
+          <div class="msv__faq-a">Minor spelling variations might not cause rejection if they&#x27;re clearly the same person, but ensure consistency. If your legal name spelling differs from your documents, clarify this with the consulate.</div>
+        </div>
+        <div class="msv__faq-item">
+          <div class="msv__faq-q">Will outdated bank statements get me rejected?</div>
+          <div class="msv__faq-a">Yes. Bank statements older than 3 months are often considered outdated. Provide statements dated within 1-2 months of your application.</div>
+        </div>
+        <div class="msv__faq-item">
+          <div class="msv__faq-q">Is there a minimum bank balance to avoid rejection?</div>
+          <div class="msv__faq-a">Yes. The non-lucrative visa requires approximately 27,792 euros annually. Other visas have different requirements. Check your specific visa type.</div>
+        </div>
+        <div class="msv__faq-item">
+          <div class="msv__faq-q">What if my criminal record certificate got lost in transit?</div>
+          <div class="msv__faq-a">Request another copy immediately. Don&#x27;t submit your application without it—you&#x27;ll be rejected. Use registered mail or hand-deliver if possible.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="msv__cta-band">
+    <div class="msv__container--narrow">
+      <h2>Ready to Move to Spain?</h2>
+      <p>Our Spain visa specialists manage every step for you — from eligibility to approval. Everything is handled in English through your secure online portal.</p>
+      <div class="msv__btn-group">
+        <a href="https://dashboard.platinumlegalspain.com/nlv" class="msv__btn msv__btn--primary">Start Free Eligibility Check</a>
+        <a href="https://dashboard.platinumlegalspain.com/nlv" class="msv__btn msv__btn--outline-white">Book a Free Consultation</a>
+      </div>
+    </div>
+  </section>
+  </section>
+
+</div>
+<!-- FRAGMENT_END -->
+</main>
+
+
+<!-- ═══════════════════════════════════════════════════
+     SITE FOOTER
+     ═══════════════════════════════════════════════════ -->
+<footer class="msv-footer" role="contentinfo">
+
+  <div class="msv-footer__top">
+
+    <!-- Brand column -->
+    <div class="msv-footer__brand">
+      <a href="/" class="msv-footer__logo" aria-label="My Spanish Visa"><img src="/assets/images/msv-logo-white.png" alt="My Spanish Visa" height="40" style="display:block;"></a>
+      <p class="msv-footer__tagline">
+        Specialist Spain visa &amp; residency guidance for English-speaking foreigners.
+        A service of Platinum Legal Spain.
+      </p>
+      <div class="msv-footer__trust">
+        <span class="msv-footer__trust-item">All English. No barriers.</span>
+        <span class="msv-footer__trust-item">Solicitors &amp; immigration specialists</span>
+        <span class="msv-footer__trust-item">100% online process</span>
+      </div>
+    </div>
+
+    <!-- Visas column -->
+    <div>
+      <div class="msv-footer__col-title">Visas</div>
+      <ul class="msv-footer__links">
+        <li><a href="/non-lucrative-visa-spain/">Non-Lucrative Visa</a></li>
+        <li><a href="/digital-nomad-visa-spain/">Digital Nomad Visa</a></li>
+        <li><a href="/student-visa-spain/">Student Visa</a></li>
+        <li><a href="/spain-visa-renewal/">Visa Renewals</a></li>
+        <li><a href="/best-visa-move-to-spain/">Compare All Visas</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/nlv">Apply: NLV</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/dnv">Apply: DNV</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/student-visa">Apply: Student Visa</a></li>
+      </ul>
+    </div>
+
+    <!-- Resources column -->
+    <div>
+      <div class="msv-footer__col-title">Resources</div>
+      <ul class="msv-footer__links">
+        <li><a href="/blog/">Blog &amp; Guides</a></li>
+        <li><a href="/move-to-spain/">Move to Spain Guide</a></li>
+        <li><a href="/visa-eligibility-quiz/">Eligibility Quiz</a></li>
+        <li><a href="/spain-visa-checklist/">Document Checklists</a></li>
+        <li><a href="/spain-visa-requirements/">Visa Requirements</a></li>
+        <li><a href="/spain-nie-number/">NIE Number Guide</a></li>
+        <li><a href="/spain-tie-card/">TIE Card Guide</a></li>
+      </ul>
+    </div>
+
+    <!-- Company column -->
+    <div>
+      <div class="msv-footer__col-title">Company</div>
+      <ul class="msv-footer__links">
+        <li><a href="/about-us/">About Us</a></li>
+        <li><a href="/testimonials/">Client Reviews</a></li>
+        <li><a href="/why-choose-us/">Why Choose Us</a></li>
+        <li><a href="/contact-us.html">Contact</a></li>
+        <li><a href="https://www.platinumlegalspain.com" rel="noopener">Platinum Legal Spain</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/nlv">Client Portal</a></li>
+      </ul>
+    </div>
+
+  </div><!-- /.msv-footer__top -->
+
+  <div class="msv-footer__bottom">
+    <div class="msv-footer__bottom-inner">
+      <p class="msv-footer__disclaimer">
+        <strong style="color:rgba(255,255,255,0.5);">Disclaimer:</strong>
+        My Spanish Visa provides visa processing support and is not a law firm. Content on this site is for informational purposes only and does not constitute legal advice. Immigration rules change frequently — always verify requirements with official sources or a qualified specialist. My Spanish Visa is a trading name of Platinum Legal Spain.
+      </p>
+      <span class="msv-footer__copyright">© 2026 My Spanish Visa. All rights reserved.</span>
+    </div>
+  </div>
+
+</footer>
+
+</body>
+</html>

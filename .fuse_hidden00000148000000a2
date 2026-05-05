@@ -1,0 +1,1402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- ═══════════════════════════════════════════════════════════════════
+       PAGE-SPECIFIC HEAD — replace block below per page:
+       <title>Permanent Residency Spain | My Spanish Visa</title>
+       <meta name="description" content="…">
+       <meta property="og:title" content="…">
+       <meta property="og:description" content="…">
+       <meta property="og:url" content="https://www.myspanishvisa.com/…">
+       <meta property="og:image" content="…">
+       <link rel="canonical" href="https://www.myspanishvisa.com/…">
+       <script type="application/ld+json">…</script>
+       ═══════════════════════════════════════════════════════════════════ -->
+  <title>My Spanish Visa — Spain Visa &amp; Residency Specialists</title>
+  <meta name="description" content="My Spanish Visa helps English-speaking foreigners move to Spain. Expert guidance on Non-Lucrative Visa, Digital Nomad Visa, Student Visa, renewals and more.">
+
+  <!-- Shared Open Graph defaults -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="My Spanish Visa">
+  <meta property="og:image" content="https://www.myspanishvisa.com/assets/images/og/og-myspanishvisa-default.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@myspanishvisa">
+
+  <style>
+/* ═══════════════════════════════════════════════════════════════
+   GLOBAL SHELL — nav + footer only.
+   Page-specific CSS lives inside each fragment's own <style> block.
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── iOS overflow safety ── */
+html, body { max-width: 100%; overflow-x: clip; margin: 0; padding: 0; }
+*, *::before, *::after { box-sizing: border-box; }
+
+/* ── Brand tokens (root-level so all fragments inherit) ── */
+:root {
+  --navy:      #0c1930;
+  --navy-mid:  #1a3a5c;
+  --red:       #be0011;
+  --red-deep:  #8c000d;
+  --yellow:    #facf39;
+  --cream:     #f8f7f4;
+  --white:     #ffffff;
+  --black:     #1a1a1a;
+  --muted:     #5a6478;
+  --border:    #dce3ed;
+  --shadow-sm: 0 2px 8px rgba(12,25,48,0.08);
+  --shadow-md: 0 6px 24px rgba(12,25,48,0.13);
+}
+
+body {
+  font-family: 'Inter', 'Segoe UI', system-ui, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.75;
+  color: var(--black);
+  background: #fff;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   SITE NAV
+   ───────────────────────────────────────────────────────────── */
+.msv-nav {
+  position: sticky;
+  top: 0;
+  z-index: 9000;
+  background: var(--navy);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 2px 12px rgba(12,25,48,0.22);
+}
+.msv-nav__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+  gap: 1.5rem;
+}
+
+/* Logo */
+.msv-nav__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+.msv-nav__logo-flag {
+  font-size: 1.3rem;
+  line-height: 1;
+}
+.msv-nav__logo-text {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+.msv-nav__logo-text span {
+  color: var(--yellow);
+}
+
+/* Links */
+.msv-nav__links {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.msv-nav__links > li {
+  position: relative;
+}
+.msv-nav__links > li > a,
+.msv-nav__links > li > button {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.5rem 0.9rem;
+  font-size: 0.87rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.85);
+  text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: color 0.15s, background 0.15s;
+  white-space: nowrap;
+  height: 64px;
+}
+.msv-nav__links > li > a:hover,
+.msv-nav__links > li > button:hover,
+.msv-nav__links > li:focus-within > a,
+.msv-nav__links > li:focus-within > button {
+  color: #fff;
+  background: rgba(255,255,255,0.08);
+}
+.msv-nav__chevron {
+  font-size: 0.65rem;
+  opacity: 0.7;
+  transition: transform 0.2s;
+}
+.msv-nav__links > li:focus-within .msv-nav__chevron,
+.msv-nav__links > li:hover .msv-nav__chevron {
+  transform: rotate(180deg);
+}
+
+/* Dropdown */
+.msv-nav__dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 230px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  box-shadow: var(--shadow-md);
+  padding: 0.5rem 0;
+  z-index: 200;
+}
+.msv-nav__links > li:hover .msv-nav__dropdown,
+.msv-nav__links > li:focus-within .msv-nav__dropdown {
+  display: block;
+}
+.msv-nav__dropdown a {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.6rem 1.1rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--navy);
+  text-decoration: none;
+  transition: background 0.12s;
+}
+.msv-nav__dropdown a:hover {
+  background: var(--cream);
+  color: var(--red);
+}
+.msv-nav__dropdown-icon {
+  width: 24px;
+  height: 24px;
+  background: var(--cream);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+.msv-nav__dropdown-divider {
+  height: 1px;
+  background: var(--border);
+  margin: 0.4rem 0;
+}
+
+/* CTA button */
+.msv-nav__cta {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.55rem 1.2rem;
+  background: var(--red);
+  color: #fff !important;
+  font-size: 0.85rem;
+  font-weight: 700;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.15s, box-shadow 0.15s;
+  white-space: nowrap;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(190,0,17,0.3);
+}
+.msv-nav__cta:hover {
+  background: var(--red-deep);
+  box-shadow: 0 4px 14px rgba(190,0,17,0.4);
+  text-decoration: none;
+}
+
+/* Hamburger */
+.msv-nav__burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.4rem;
+  border-radius: 5px;
+}
+.msv-nav__burger span {
+  width: 22px;
+  height: 2px;
+  background: #fff;
+  border-radius: 2px;
+  transition: transform 0.2s, opacity 0.2s;
+  display: block;
+}
+
+/* Mobile nav */
+.msv-nav__mobile {
+  display: none;
+  flex-direction: column;
+  background: var(--navy-mid);
+  padding: 1rem 1.5rem 1.5rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+.msv-nav__mobile.open { display: flex; }
+.msv-nav__mobile a {
+  padding: 0.65rem 0;
+  color: rgba(255,255,255,0.9);
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+.msv-nav__mobile a:hover { color: var(--yellow); }
+.msv-nav__mobile .msv-nav__mobile-sub {
+  padding-left: 1rem;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: rgba(255,255,255,0.7);
+}
+.msv-nav__mobile-cta {
+  margin-top: 1rem;
+  background: var(--red);
+  color: #fff !important;
+  border-radius: 6px;
+  text-align: center;
+  padding: 0.75rem 1rem !important;
+  border-bottom: none !important;
+}
+
+@media (max-width: 900px) {
+  .msv-nav__links { display: none; }
+  .msv-nav__cta { display: none; }
+  .msv-nav__burger { display: flex; }
+}
+@media (max-width: 480px) {
+  .msv-nav__inner { padding: 0 1rem; }
+}
+
+/* ─────────────────────────────────────────────────────────────
+   SITE FOOTER
+   ───────────────────────────────────────────────────────────── */
+.msv-footer {
+  background: var(--navy);
+  color: rgba(255,255,255,0.75);
+  overflow-x: clip;
+}
+.msv-footer__top {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem 3rem;
+  display: grid;
+  grid-template-columns: 280px 1fr 1fr 1fr;
+  gap: 3rem;
+}
+@media (max-width: 900px) {
+  .msv-footer__top { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
+}
+@media (max-width: 560px) {
+  .msv-footer__top { grid-template-columns: 1fr; gap: 2rem; padding: 3rem 1.2rem 2rem; }
+}
+
+.msv-footer__brand {}
+.msv-footer__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  margin-bottom: 1rem;
+}
+.msv-footer__logo-flag { font-size: 1.3rem; }
+.msv-footer__logo-text {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -0.01em;
+}
+.msv-footer__logo-text span { color: var(--yellow); }
+.msv-footer__tagline {
+  font-size: 0.83rem;
+  color: rgba(255,255,255,0.55);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+.msv-footer__trust {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+.msv-footer__trust-item {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.65);
+}
+.msv-footer__trust-item::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  background: var(--yellow);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.msv-footer__col-title {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.4);
+  margin-bottom: 1rem;
+}
+.msv-footer__links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.msv-footer__links a {
+  font-size: 0.87rem;
+  color: rgba(255,255,255,0.68);
+  text-decoration: none;
+  transition: color 0.15s;
+  display: inline-block;
+}
+.msv-footer__links a:hover {
+  color: var(--yellow);
+  text-decoration: none;
+}
+
+.msv-footer__bottom {
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+.msv-footer__bottom-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 1rem;
+  justify-content: space-between;
+}
+.msv-footer__disclaimer {
+  font-size: 0.73rem;
+  color: rgba(255,255,255,0.35);
+  line-height: 1.65;
+  max-width: 720px;
+}
+.msv-footer__copyright {
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.35);
+  white-space: nowrap;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   MAIN CONTENT AREA
+   ───────────────────────────────────────────────────────────── */
+main {
+  /* Fragments are self-contained; this wrapper just provides flow context */
+  position: relative;
+}
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════
+     SITE NAVIGATION
+     ═══════════════════════════════════════════════════ -->
+<header class="msv-nav" role="banner">
+  <div class="msv-nav__inner">
+
+    <!-- Logo -->
+    <a href="/" class="msv-nav__logo" aria-label="My Spanish Visa — Home"><img src="/assets/images/msv-logo-white.png" alt="My Spanish Visa" height="80" style="display:block;"></a>
+
+    <!-- Desktop links -->
+    <nav aria-label="Main navigation">
+      <ul class="msv-nav__links">
+
+        <li>
+          <button class="msv-nav__dropdown-trigger" aria-haspopup="true" aria-expanded="false">
+            Visas <span class="msv-nav__chevron">▾</span>
+          </button>
+          <div class="msv-nav__dropdown" role="menu">
+            <a href="/non-lucrative-visa-spain/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🏖️</span>Non-Lucrative Visa
+            </a>
+            <a href="/digital-nomad-visa-spain/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">💻</span>Digital Nomad Visa
+            </a>
+            <a href="/student-visa-spain/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🎓</span>Student Visa
+            </a>
+            <div class="msv-nav__dropdown-divider"></div>
+            <a href="/spain-visa-renewal/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🔄</span>Visa Renewals
+            </a>
+            <a href="/best-visa-move-to-spain/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">⚖️</span>Compare All Visas
+            </a>
+          </div>
+        </li>
+
+        <li>
+          <button aria-haspopup="true" aria-expanded="false">
+            Resources <span class="msv-nav__chevron">▾</span>
+          </button>
+          <div class="msv-nav__dropdown" role="menu">
+            <a href="/blog/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">📝</span>Blog &amp; Guides
+            </a>
+            <a href="/spain-visa-checklist/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">✅</span>Document Checklists
+            </a>
+            <a href="/move-to-spain/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🏠</span>Move to Spain Guide
+            </a>
+            <a href="/visa-eligibility-quiz/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🧭</span>Eligibility Quiz
+            </a>
+          </div>
+        </li>
+
+        <li><a href="/about-us/">About Us</a></li>
+        <li><a href="/testimonials/">Reviews</a></li>
+        <li><a href="/contact-us.html">Contact</a></li>
+
+      </ul>
+    </nav>
+
+    <!-- Desktop CTA -->
+    <a href="https://dashboard.platinumlegalspain.com/nlv" class="msv-nav__cta">
+      Start My Application →
+    </a>
+
+    <!-- Hamburger (mobile) -->
+    <button class="msv-nav__burger" aria-label="Open menu" aria-expanded="false" onclick="
+      var m=document.querySelector('.msv-nav__mobile');
+      var open=m.classList.toggle('open');
+      this.setAttribute('aria-expanded', open);
+    ">
+      <span></span><span></span><span></span>
+    </button>
+
+  </div><!-- /.msv-nav__inner -->
+
+  <!-- Mobile menu -->
+  <nav class="msv-nav__mobile" aria-label="Mobile navigation">
+    <a href="/non-lucrative-visa-spain/" class="msv-nav__mobile-sub">Non-Lucrative Visa</a>
+    <a href="/digital-nomad-visa-spain/" class="msv-nav__mobile-sub">Digital Nomad Visa</a>
+    <a href="/student-visa-spain/" class="msv-nav__mobile-sub">Student Visa</a>
+    <a href="/spain-visa-renewal/">Visa Renewals</a>
+    <a href="/best-visa-move-to-spain/">Compare All Visas</a>
+    <a href="/blog/">Blog &amp; Guides</a>
+    <a href="/about-us/">About Us</a>
+    <a href="/testimonials/">Reviews</a>
+    <a href="/contact-us.html">Contact</a>
+    <a href="https://dashboard.platinumlegalspain.com/nlv" class="msv-nav__mobile-cta">Start My Application →</a>
+  </nav>
+
+</header>
+
+
+<!-- ═══════════════════════════════════════════════════
+     PAGE CONTENT (fragment injected here)
+     ═══════════════════════════════════════════════════ -->
+<main>
+<!-- FRAGMENT_START -->
+<!-- ============================================================
+     MY SPANISH VISA — Permanent Residency Spain: Complete Guide
+     Elementor Full-Width HTML Widget · April 2026
+     Slug: /permanent-residency-spain/
+     ============================================================ -->
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://dashboard.platinumlegalspain.com/permanent-residency-spain/",
+      "url": "https://dashboard.platinumlegalspain.com/permanent-residency-spain/",
+      "name": "Permanent Residency Spain 2026 | How to Get Permanent Residence | My Spanish Visa",
+      "description": "Complete guide to permanent residency in Spain (residencia de larga duración). Requirements, eligibility after 5 years, application process, documents, benefits, and the path to Spanish citizenship.",
+      "isPartOf": { "@id": "https://dashboard.platinumlegalspain.com/" },
+      "datePublished": "2026-04-11",
+      "dateModified": "2026-04-11",
+      "breadcrumb": { "@id": "https://dashboard.platinumlegalspain.com/permanent-residency-spain/#breadcrumb" },
+      "mainEntity": { "@id": "https://dashboard.platinumlegalspain.com/permanent-residency-spain/#faq" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://dashboard.platinumlegalspain.com/permanent-residency-spain/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://dashboard.platinumlegalspain.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Permanent Residency Spain",
+          "item": "https://dashboard.platinumlegalspain.com/permanent-residency-spain/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://dashboard.platinumlegalspain.com/permanent-residency-spain/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How long does it take to get permanent residency in Spain?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You become eligible for permanent residency (residencia de larga duración) after 5 years of continuous legal residence in Spain. The application process itself typically takes 2–4 months from submission to approval, depending on your circumstances and the regional administration handling your case."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I work in Spain with permanent residency?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, permanent residency grants you full employment rights in Spain. You can work for any employer, start a business, or work as a freelancer without any restrictions or additional authorizations. This is one of the key benefits over temporary residency."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need to renew permanent residency?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No, permanent residency does not require renewal. Once granted, your residencia de larga duración remains valid indefinitely, as long as you maintain your legal status and meet any requirements for maintaining continuous residence."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens if I leave Spain with permanent residency?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Permanent residency allows you to travel freely outside Spain. However, absences longer than 12 months may be considered a break in continuous residence, which could jeopardize your status. For extended absences, it's advisable to maintain some ties to Spain and consider your options carefully."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can Non-Lucrative Visa (NLV) holders get permanent residency?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, Non-Lucrative Visa holders can transition to permanent residency after 5 years of continuous legal residence. The NLV counts toward the 5-year requirement, so you begin the clock when you first arrive on this visa. Once eligible, you apply for residencia de larga duración."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What documents do I need for permanent residency?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You'll need a valid passport, proof of 5 years continuous residence (TIE cards, rental contracts, utility bills), proof of financial means or employment, certificate of no criminal record, medical insurance, and evidence of housing. Requirements vary by region; consult the local immigration office for a complete list."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does the permanent residency application take?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "After submission, the application typically takes 2–4 months for a decision. Processing times vary by region and individual circumstances. Some applications may take longer if additional documentation is requested."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What's the difference between permanent residency and citizenship?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Permanent residency (residencia de larga duración) gives you the right to live, work, and study in Spain indefinitely without renewal. Citizenship grants you the right to vote, hold a Spanish passport, and full legal equality with Spanish nationals. You become eligible for citizenship 10 years after first arriving in Spain, or 5 years after obtaining permanent residency."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<!-- Open Graph / Social -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.myspanishvisa.com/permanent-residency-spain/">
+<meta property="og:title" content="My Spanish Visa">
+<meta property="og:description" content="Expert Spain visa guidance for English-speaking expats.">
+<meta property="og:image" content="https://www.myspanishvisa.com/assets/images/og/og-myspanishvisa-default.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="My Spanish Visa">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@myspanishvisa">
+<meta name="twitter:title" content="My Spanish Visa">
+<meta name="twitter:description" content="Expert Spain visa guidance for English-speaking expats.">
+<meta name="twitter:image" content="https://www.myspanishvisa.com/assets/images/og/og-myspanishvisa-default.jpg">
+
+<style>
+/* ── iOS Safari pinch-zoom overflow safety ─────────────────────────── */
+/* Prevents horizontal overflow when users pinch-zoom on iPhone/iPad.   */
+/* Top-level (also paste into theme Custom CSS / Elementor Site Settings) */
+html, body { max-width: 100%; overflow-x: clip; }
+/* Scoped wrapper safety */
+.msv, .msv-nav, .msv-topbar, .msv-footer, .msv-footer-cta,
+.pls-header, .pls-body, .pls-nlv, .pls-dnv, .pls-student {
+  max-width: 100%;
+  overflow-x: clip;
+  position: relative;
+}
+/* Cap all media inside the wrapper */
+.msv img, .msv video, .msv iframe,
+.msv-footer img, .msv-footer video, .msv-footer iframe {
+  max-width: 100%;
+  height: auto;
+}
+/* Never use 100vw — use 100% instead (dev reminder) */
+
+
+.msv *, .msv *::before, .msv *::after { box-sizing: border-box; margin: 0; padding: 0; }
+.msv {
+  --navy: #0c1930; --navy-mid: #1a3a5c; --red: #be0011; --red-deep: #8c000d;
+  --yellow: #facf39; --cream: #f8f7f4; --white: #ffffff; --black: #1a1a1a;
+  --muted: #5a6478; --border: #dce3ed;
+  --shadow-sm: 0 2px 8px rgba(12,25,48,0.08); --shadow-md: 0 6px 24px rgba(12,25,48,0.13);
+  font-family: 'Inter', 'Segoe UI', system-ui, Arial, sans-serif;
+  font-size: 16px; line-height: 1.75; color: var(--black); width: 100%;
+}
+.msv__container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+.msv__container--narrow { max-width: 780px; margin: 0 auto; padding: 0 2rem; }
+@media (max-width: 640px) { .msv__container, .msv__container--narrow { padding: 0 1.2rem; } }
+.msv h1 { font-size: clamp(2rem, 4.5vw, 3rem); font-weight: 800; line-height: 1.12; color: var(--white); letter-spacing: -0.025em; margin-bottom: 1.2rem; }
+.msv h2 { font-size: clamp(1.3rem, 2.5vw, 1.75rem); font-weight: 700; color: var(--navy); letter-spacing: -0.01em; margin-bottom: 0.5rem; position: relative; display: inline-block; padding-bottom: 0.5rem; }
+.msv h2::after { content: ''; position: absolute; bottom: 0; left: 0; width: 44px; height: 3px; background: linear-gradient(90deg, var(--red), var(--red-deep)); border-radius: 2px; }
+.msv h3 { font-size: 1.05rem; font-weight: 700; color: var(--navy); margin-bottom: 0.4rem; }
+.msv p { color: var(--black); margin-bottom: 1rem; font-size: 0.97rem; }
+.msv a { color: var(--red); text-decoration: none; }
+.msv a:hover { text-decoration: underline; }
+.msv ul { list-style: none; padding: 0; margin: 0 0 1rem; }
+.msv ul li { padding: 0.35rem 0 0.35rem 1.4rem; position: relative; font-size: 0.95rem; color: var(--black); }
+.msv ul li::before { content: ''; position: absolute; left: 0; top: 0.75rem; width: 7px; height: 7px; background: linear-gradient(135deg, var(--red), var(--red-deep)); border-radius: 50%; }
+.msv__section { padding: 5rem 0; background: var(--white); }
+.msv__section--cream { padding: 5rem 0; background: linear-gradient(180deg, #f8f7f4 0%, #f2f4f8 100%); }
+.msv__section--dark { padding: 5rem 0; background: linear-gradient(135deg, var(--navy) 0%, #0d2240 55%, #0a1d38 100%); }
+.msv__section--dark h2 { color: var(--white) !important; }
+.msv__section--dark h2::after { background: linear-gradient(90deg, var(--yellow), #e8b820); }
+.msv__section--dark h3 { color: rgba(255,255,255,0.9) !important; }
+.msv .msv__section--dark p, .msv .msv__section--dark li { color: rgba(255,255,255,0.82); }
+.msv__section--dark ul li::before { background: linear-gradient(135deg, var(--yellow), #e8b820); }
+@media (max-width: 640px) { .msv__section, .msv__section--cream, .msv__section--dark { padding: 3.5rem 0; } }
+.msv__section-hd { margin-bottom: 3rem; }
+.msv__section-hd p { color: var(--muted); font-size: 1rem; margin-top: 0.75rem; line-height: 1.7; max-width: 600px; }
+@keyframes msv-fade-up { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes msv-shimmer { 0% { background-position: -400px 0; } 100% { background-position: 400px 0; } }
+.msv__shimmer { background: linear-gradient(90deg, var(--yellow) 0%, #e8b820 25%, var(--red) 50%, #e8b820 75%, var(--yellow) 100%); background-size: 400px 100%; -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; animation: msv-shimmer 3.5s linear infinite; display: inline; }
+.msv__hero { background: linear-gradient(135deg, #0c1930 0%, #0f2540 40%, #162d50 70%, #1a3560 100%); padding: 5.5rem 0 5rem; position: relative; overflow: hidden; }
+.msv__hero::before { content: ''; position: absolute; top: -30%; right: -5%; width: 700px; height: 700px; background: radial-gradient(circle, rgba(190,0,17,0.1) 0%, transparent 65%); pointer-events: none; }
+.msv__hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, rgba(250,207,57,0.4), transparent); }
+.msv__hero-inner { max-width: 780px; animation: msv-fade-up 0.7s ease-out both; }
+.msv__eyebrow { display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(190,0,17,0.15); border: 1px solid rgba(190,0,17,0.4); color: #ff6b7a; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.35rem 0.9rem; border-radius: 100px; margin-bottom: 1.5rem; }
+.msv__eyebrow::before { content: ''; width: 6px; height: 6px; background: var(--red); border-radius: 50%; box-shadow: 0 0 6px var(--red); }
+.msv__hero p { color: rgba(255,255,255,0.78) !important; font-size: clamp(1rem, 2.2vw, 1.15rem); max-width: 640px; margin-bottom: 2.2rem; line-height: 1.75; }
+.msv__trust-bar { background: var(--white); border-bottom: 1px solid var(--border); padding: 1rem 0; box-shadow: var(--shadow-sm); }
+.msv__trust-bar-inner { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.75rem; }
+.msv__trust-item { display: flex; align-items: center; gap: 0.5rem; font-size: 0.82rem; font-weight: 600; color: var(--navy); white-space: nowrap; }
+.msv__trust-item::before { content: ''; width: 7px; height: 7px; background: linear-gradient(135deg, var(--red), var(--red-deep)); border-radius: 50%; flex-shrink: 0; }
+.msv__facts { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; margin-bottom: 3rem; }
+@media (max-width: 760px) { .msv__facts { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 420px) { .msv__facts { grid-template-columns: 1fr; } }
+.msv__fact { background: var(--white); padding: 1.5rem 1.3rem; text-align: center; }
+.msv__fact-icon { font-size: 1.5rem; display: block; margin-bottom: 0.5rem; }
+.msv__fact-label { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); display: block; margin-bottom: 0.25rem; }
+.msv__fact-value { font-size: 0.97rem; font-weight: 700; color: var(--navy); line-height: 1.35; display: block; }
+.msv__alert { border-radius: 10px; padding: 1.3rem 1.5rem; display: flex; gap: 1rem; align-items: flex-start; margin-bottom: 2rem; }
+.msv__alert--warn { background: #fffbea; border: 1px solid #f0d060; }
+.msv__alert--info { background: #eef4ff; border: 1px solid #a0bfff; }
+.msv__alert--red { background: #fef2f2; border: 1px solid #fca5a5; }
+.msv__alert--green { background: #f0fdf4; border: 1px solid #86efac; }
+.msv__alert-icon { font-size: 1.4rem; flex-shrink: 0; margin-top: 0.1rem; }
+.msv__alert p { font-size: 0.9rem; color: var(--black); margin: 0; line-height: 1.65; }
+.msv__alert strong { color: var(--navy); }
+.msv__persona-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-bottom: 3rem; }
+@media (max-width: 860px) { .msv__persona-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 420px) { .msv__persona-grid { grid-template-columns: 1fr; } }
+.msv__persona-card { background: var(--white); border: 1px solid var(--border); border-radius: 12px; padding: 2rem 1.5rem; text-align: center; transition: box-shadow 0.2s, transform 0.2s; }
+.msv__persona-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+.msv__persona-icon { font-size: 2.5rem; margin-bottom: 0.8rem; }
+.msv__persona-title { font-size: 1.1rem; font-weight: 700; color: var(--navy); margin-bottom: 0.5rem; }
+.msv__persona-desc { font-size: 0.9rem; color: var(--muted); line-height: 1.65; margin-bottom: 1.2rem; }
+.msv__persona-cta { display: inline-block; color: var(--red); font-size: 0.88rem; font-weight: 700; }
+.msv__guide-index { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; margin-bottom: 3rem; }
+@media (max-width: 860px) { .msv__guide-index { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 420px) { .msv__guide-index { grid-template-columns: 1fr; } }
+.msv__guide-card { background: var(--white); border: 1.5px solid var(--border); border-radius: 10px; padding: 1.5rem 1.3rem; text-decoration: none !important; transition: all 0.25s ease; display: flex; flex-direction: column; }
+.msv__guide-card:hover { box-shadow: var(--shadow-md); transform: translateY(-3px); border-color: var(--red); }
+.msv__guide-card-icon { font-size: 2rem; margin-bottom: 0.8rem; display: block; }
+.msv__guide-card-title { font-size: 0.95rem; font-weight: 700; color: var(--navy); margin-bottom: 0.5rem; }
+.msv__guide-card-desc { font-size: 0.82rem; color: var(--muted); line-height: 1.5; margin-bottom: 1rem; flex-grow: 1; }
+.msv__guide-card-link { color: var(--red); font-size: 0.85rem; font-weight: 700; }
+.msv__comparison-table { width: 100%; border-collapse: collapse; font-size: 0.88rem; margin: 2rem 0; }
+.msv__comparison-table thead tr { background: var(--navy); }
+.msv__comparison-table th { padding: 1rem 1.25rem; text-align: left; color: var(--white); font-weight: 700; }
+.msv__comparison-table td { padding: 0.85rem 1.25rem; border-bottom: 1px solid var(--border); color: var(--black); }
+.msv__comparison-table tbody tr:nth-child(even) { background: #f9fafb; }
+.msv__comparison-table .table-feature { font-weight: 600; color: var(--navy); }
+.msv__income-boxes { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; margin-bottom: 2rem; }
+@media (max-width: 860px) { .msv__income-boxes { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 420px) { .msv__income-boxes { grid-template-columns: 1fr; } }
+.msv__income-box { background: #f9fafb; border: 1px solid var(--border); border-radius: 10px; padding: 1.3rem; text-align: center; }
+.msv__income-box-label { font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); margin-bottom: 0.5rem; }
+.msv__income-box-value { font-size: 1.5rem; font-weight: 800; color: var(--red); }
+.msv__income-box-detail { font-size: 0.75rem; color: var(--muted); margin-top: 0.4rem; font-weight: 500; }
+.msv__process-steps { display: grid; grid-template-columns: repeat(6, 1fr); gap: 0.8rem; margin-bottom: 2rem; }
+@media (max-width: 760px) { .msv__process-steps { grid-template-columns: repeat(3, 1fr); gap: 1rem; } }
+@media (max-width: 420px) { .msv__process-steps { grid-template-columns: 1fr 1fr; } }
+.msv__process-step { background: var(--white); border: 1.5px solid var(--border); border-radius: 10px; padding: 1.3rem 1rem; text-align: center; }
+.msv__process-step-num { font-size: 1.3rem; font-weight: 800; color: var(--red); margin-bottom: 0.4rem; }
+.msv__process-step-title { font-size: 0.85rem; font-weight: 700; color: var(--navy); line-height: 1.4; }
+.msv__two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: center; }
+@media (max-width: 860px) { .msv__two-col { grid-template-columns: 1fr; } }
+.msv__two-col-card { background: var(--white); border: 1px solid var(--border); border-radius: 12px; padding: 2rem; }
+.msv__two-col-icon { font-size: 2.5rem; margin-bottom: 1rem; }
+.msv__related { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; }
+@media (max-width: 860px) { .msv__related { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 420px) { .msv__related { grid-template-columns: 1fr; } }
+.msv__related-card { background: var(--white); border: 1px solid var(--border); border-radius: 10px; padding: 1.3rem 1.25rem; text-decoration: none !important; transition: box-shadow 0.2s, transform 0.2s; display: block; }
+.msv__related-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); text-decoration: none !important; }
+.msv__related-icon { font-size: 1.5rem; display: block; margin-bottom: 0.6rem; }
+.msv__related-title { font-size: 0.88rem; font-weight: 700; color: var(--navy); display: block; margin-bottom: 0.3rem; }
+.msv__related-desc { font-size: 0.8rem; color: var(--muted); line-height: 1.55; }
+.msv__faq-list { display: flex; flex-direction: column; gap: 0; border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+.msv__faq-list details { border-bottom: 1px solid var(--border); background: var(--white); }
+.msv__faq-list details:last-child { border-bottom: none; }
+.msv__faq-list summary { padding: 1.2rem 1.5rem; font-size: 0.97rem; font-weight: 700; color: var(--navy); cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+.msv__faq-list summary::-webkit-details-marker { display: none; }
+.msv__faq-list summary::after { content: '+'; font-size: 1.3rem; font-weight: 400; color: var(--red); flex-shrink: 0; transition: transform 0.2s; }
+.msv__faq-list details[open] summary::after { transform: rotate(45deg); }
+.msv__faq-list details[open] summary { color: var(--red); }
+.msv__faq-answer { padding: 0 1.5rem 1.3rem; font-size: 0.92rem; color: var(--muted); line-height: 1.75; }
+.msv__faq-answer p { color: var(--muted); font-size: 0.92rem; margin-bottom: 0.75rem; }
+.msv__faq-answer p:last-child { margin-bottom: 0; }
+.msv__cta-band { background: linear-gradient(135deg, var(--navy) 0%, #0d2240 60%, #0a1d38 100%); padding: 5rem 0; text-align: center; }
+.msv__cta-band h2 { color: var(--white) !important; display: block; }
+.msv__cta-band h2::after { left: 50%; transform: translateX(-50%); background: linear-gradient(90deg, var(--yellow), #e8b820); }
+.msv__cta-band p { color: rgba(255,255,255,0.75) !important; max-width: 560px; margin: 1rem auto 2.2rem; font-size: 1rem; }
+.msv__cta-band .msv__btn-group { justify-content: center; }
+.msv__btn-group { display: flex; flex-wrap: wrap; gap: 0.85rem; }
+.msv__btn { display: inline-block; padding: 0.85rem 2rem; font-size: 0.92rem; font-weight: 700; border-radius: 6px; text-decoration: none !important; transition: transform 0.15s, box-shadow 0.15s; }
+.msv__btn:hover { transform: translateY(-1px); text-decoration: none !important; }
+.msv .msv__btn--primary { background: linear-gradient(135deg, var(--red) 0%, var(--red-deep) 100%); color: #ffffff !important; box-shadow: 0 4px 16px rgba(190,0,17,0.38); }
+.msv .msv__btn--primary:hover { box-shadow: 0 6px 22px rgba(190,0,17,0.48); color: #ffffff !important; }
+.msv .msv__btn--outline-white { background: transparent; color: #ffffff !important; border: 1.5px solid rgba(255,255,255,0.5); }
+.msv .msv__btn--outline-white:hover { background: rgba(255,255,255,0.1); color: #ffffff !important; }
+.msv__disclaimer { background: var(--cream); border-top: 1px solid var(--border); padding: 2rem 0; }
+.msv__disclaimer p { font-size: 0.78rem; color: var(--muted); margin: 0; line-height: 1.65; }
+</style>
+
+<div class="msv">
+
+  <!-- HERO SECTION -->
+  <section class="msv__hero">
+    <div class="msv__container">
+      <div class="msv__hero-inner">
+        <div class="msv__eyebrow">Spain Residency Guide</div>
+        <h1>Permanent Residency Spain: <span class="msv__shimmer">The Complete Guide for 2026</span></h1>
+        <p>Achieve long-term legal residence in Spain without visa renewals. After 5 years of continuous residence, unlock permanent residency (residencia de larga duración) — your pathway to full rights, unrestricted work, and citizenship.</p>
+        <div class="msv__btn-group">
+          <a href="https://dashboard.platinumlegalspain.com/nlv" class="msv__btn msv__btn--primary">Check Your Eligibility</a>
+          <a href="https://dashboard.platinumlegalspain.com/nlv" class="msv__btn msv__btn--outline-white">Book a Consultation</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST BAR -->
+  <div class="msv__trust-bar">
+    <div class="msv__container">
+      <div class="msv__trust-bar-inner">
+        <div class="msv__trust-item">After 5 years legal residence</div>
+        <div class="msv__trust-item">No renewal required</div>
+        <div class="msv__trust-item">Right to work freely</div>
+        <div class="msv__trust-item">Path to citizenship</div>
+        <div class="msv__trust-item">Full guide below</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- KEY FACTS GRID -->
+  <section class="msv__section">
+    <div class="msv__container">
+      <div class="msv__facts">
+        <div class="msv__fact">
+          <span class="msv__fact-icon">⏱️</span>
+          <span class="msv__fact-label">Eligibility Requirement</span>
+          <span class="msv__fact-value">5 Years Continuous Residence</span>
+        </div>
+        <div class="msv__fact">
+          <span class="msv__fact-icon">♾️</span>
+          <span class="msv__fact-label">Validity Period</span>
+          <span class="msv__fact-value">No Renewal Required</span>
+        </div>
+        <div class="msv__fact">
+          <span class="msv__fact-icon">💼</span>
+          <span class="msv__fact-label">Work Rights</span>
+          <span class="msv__fact-value">Full Employment Freedom</span>
+        </div>
+        <div class="msv__fact">
+          <span class="msv__fact-icon">🎖️</span>
+          <span class="msv__fact-label">Next Step</span>
+          <span class="msv__fact-value">Spanish Citizenship</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT IS PERMANENT RESIDENCY -->
+  <section class="msv__section">
+    <div class="msv__container--narrow">
+      <div class="msv__section-hd">
+        <h2>What is Permanent Residency?</h2>
+        <p>Understanding residencia de larga duración and what it means for your future in Spain</p>
+      </div>
+      <p><strong>Permanent residency (residencia de larga duración)</strong> is a legal status that grants you the right to live, work, and study in Spain indefinitely without the need for visa renewals. It's one of Spain's most significant immigration milestones — the moment when your temporary status transforms into something lasting.</p>
+      <p>This status is available to non-EU/EEA nationals who have maintained continuous legal residence in Spain for five years. Once granted, permanent residency removes the administrative burden of renewing your visa every 1–2 years and grants you freedom of movement and employment across the entire country.</p>
+      <p>Permanent residency is distinct from temporary residency visas (like the Non-Lucrative Visa or Digital Nomad Visa), which require periodic renewal. It's also the bridge to <a href="/how-to-get-spanish-citizenship/">Spanish citizenship</a>, which becomes available after 10 years of initial residence or 5 years with permanent residency status.</p>
+      <h3>Key Characteristics</h3>
+      <ul>
+        <li>No visa renewal required — it remains valid indefinitely</li>
+        <li>Granted after 5 years of continuous legal residence</li>
+        <li>Full employment rights in Spain without work authorization</li>
+        <li>Right to travel freely within and outside Spain</li>
+        <li>Access to Spanish healthcare, education, and social services</li>
+        <li>Pathway to Spanish citizenship</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- GREEN ALERT -->
+  <section class="msv__section--cream">
+    <div class="msv__container--narrow">
+      <div class="msv__alert msv__alert--green">
+        <span class="msv__alert-icon">✓</span>
+        <div>
+          <p><strong>Permanent residency is the most significant milestone in your Spanish immigration journey.</strong> It removes the need for visa renewals and gives you full work rights, making it the ideal stepping stone toward long-term settlement or citizenship.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PATHWAY TO PERMANENT RESIDENCY -->
+  <section class="msv__section">
+    <div class="msv__container">
+      <div class="msv__section-hd">
+        <h2>The Pathway to Permanent Residency</h2>
+        <p>A visual timeline showing how you progress from initial entry to permanent status and beyond</p>
+      </div>
+      <div class="msv__process-steps">
+        <div class="msv__process-step">
+          <div class="msv__process-step-num">1</div>
+          <div class="msv__process-step-title">Initial Visa</div>
+        </div>
+        <div class="msv__process-step">
+          <div class="msv__process-step-num">2</div>
+          <div class="msv__process-step-title">First Renewal (Yr 2–3)</div>
+        </div>
+        <div class="msv__process-step">
+          <div class="msv__process-step-num">3</div>
+          <div class="msv__process-step-title">Second Renewal (Yr 3–5)</div>
+        </div>
+        <div class="msv__process-step">
+          <div class="msv__process-step-num">4</div>
+          <div class="msv__process-step-title">Permanent Residency Eligible</div>
+        </div>
+        <div class="msv__process-step">
+          <div class="msv__process-step-num">5</div>
+          <div class="msv__process-step-title">Apply for Permanent Status</div>
+        </div>
+        <div class="msv__process-step">
+          <div class="msv__process-step-num">6</div>
+          <div class="msv__process-step-title">Citizenship Path Opens (Yr 10)</div>
+        </div>
+      </div>
+      <p style="color: var(--muted); text-align: center; font-size: 0.9rem;">Your journey progresses step by step. From your initial visa to permanent residency, each stage builds toward your long-term goal. After 10 years total, Spanish citizenship becomes possible.</p>
+    </div>
+  </section>
+
+  <!-- REQUIREMENTS SECTION -->
+  <section class="msv__section--cream">
+    <div class="msv__container--narrow">
+      <div class="msv__section-hd">
+        <h2>Requirements for Permanent Residency</h2>
+        <p>What you need to meet before applying for residencia de larga duración</p>
+      </div>
+      <h3>Eligibility Requirements</h3>
+      <ul>
+        <li><strong>5 years of continuous legal residence:</strong> You must have held a valid residence permit for the entire 5-year period without any significant gaps</li>
+        <li><strong>Legal status throughout:</strong> All residence must be legal — any unauthorized absence or illegal work can break continuity</li>
+        <li><strong>Not an EU/EEA national:</strong> EU and EEA citizens do not need permanent residency; they have separate rights under EU law</li>
+        <li><strong>No serious crime conviction:</strong> You must not have been convicted of serious crimes in Spain or abroad</li>
+      </ul>
+      <h3>Application Requirements</h3>
+      <ul>
+        <li><strong>Valid passport:</strong> Unexpired or expiring within 6 months of application</li>
+        <li><strong>Proof of 5 years continuous residence:</strong> All TIE (Tarjeta de Identidad de Extranjero) cards, residence permit copies, or renewal certificates</li>
+        <li><strong>Proof of financial stability:</strong> Employment contracts, business registration, or income statements showing you can support yourself</li>
+        <li><strong>Evidence of housing:</strong> Lease agreements, property deeds, or proof of residence in Spain</li>
+        <li><strong>Medical insurance:</strong> Valid health insurance covering Spain (public or private)</li>
+        <li><strong>Criminal record certificate:</strong> Official certificate from your home country and any country where you've lived showing no serious convictions</li>
+        <li><strong>Tax compliance:</strong> Proof that you've filed taxes in Spain (if applicable) or social security contributions</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- COMPARISON TABLE (DARK) -->
+  <section class="msv__section--dark">
+    <div class="msv__container">
+      <div class="msv__section-hd">
+        <h2>Permanent Residency vs. Other Status</h2>
+        <p>How permanent residency compares to temporary residence and citizenship</p>
+      </div>
+      <table class="msv__comparison-table">
+        <thead>
+          <tr>
+            <th>Feature</th>
+            <th>Temporary Residency</th>
+            <th>Permanent Residency</th>
+            <th>Spanish Citizenship</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="table-feature">Renewal Required?</td>
+            <td>Yes (every 1–2 years)</td>
+            <td>No (indefinite)</td>
+            <td>No (indefinite)</td>
+          </tr>
+          <tr>
+            <td class="table-feature">Work in Spain</td>
+            <td>Yes (if authorized)</td>
+            <td>Yes (freely)</td>
+            <td>Yes (fully)</td>
+          </tr>
+          <tr>
+            <td class="table-feature">Travel Outside Spain</td>
+            <td>Limited (visa dependent)</td>
+            <td>Unrestricted with home passport</td>
+            <td>Unrestricted (Spanish passport)</td>
+          </tr>
+          <tr>
+            <td class="table-feature">Access Healthcare</td>
+            <td>Limited access</td>
+            <td>Full public access</td>
+            <td>Full public access</td>
+          </tr>
+          <tr>
+            <td class="table-feature">Right to Vote</td>
+            <td>No</td>
+            <td>No</td>
+            <td>Yes</td>
+          </tr>
+          <tr>
+            <td class="table-feature">Family Benefits</td>
+            <td>Limited</td>
+            <td>Full access</td>
+            <td>Full access</td>
+          </tr>
+          <tr>
+            <td class="table-feature">Bring Dependents</td>
+            <td>Yes (with restrictions)</td>
+            <td>Yes (easier process)</td>
+            <td>Yes (full rights)</td>
+          </tr>
+          <tr>
+            <td class="table-feature">Time to Achieve</td>
+            <td>Immediate</td>
+            <td>5 years</td>
+            <td>10 years (or 5 with permanent residency)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- HOW TO APPLY -->
+  <section class="msv__section">
+    <div class="msv__container">
+      <div class="msv__section-hd">
+        <h2>How to Apply for Permanent Residency</h2>
+        <p>Step-by-step guide to submitting your permanent residency application</p>
+      </div>
+      <div class="msv__process-steps">
+        <div class="msv__process-step">
+          <div class="msv__process-step-num">1</div>
+          <div class="msv__process-step-title">Gather Documents</div>
+        </div>
+        <div class="msv__process-step">
+          <div class="msv__process-step-num">2</div>
+          <div class="msv__process-step-title">Schedule Appointment</div>
+        </div>
+        <div class="msv__process-step">
+          <div class="msv__process-step-num">3</div>
+          <div class="msv__process-step-title">Submit Application</div>
+        </div>
+        <div class="msv__process-step">
+          <div class="msv__process-step-num">4</div>
+          <div class="msv__process-step-title">Wait for Review (2–4 months)</div>
+        </div>
+        <div class="msv__process-step">
+          <div class="msv__process-step-num">5</div>
+          <div class="msv__process-step-title">Interview (if required)</div>
+        </div>
+        <div class="msv__process-step">
+          <div class="msv__process-step-num">6</div>
+          <div class="msv__process-step-title">Receive Status & New TIE</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DOCUMENTS REQUIRED -->
+  <section class="msv__section--cream">
+    <div class="msv__container--narrow">
+      <div class="msv__section-hd">
+        <h2>Complete Document Checklist</h2>
+        <p>Everything you need to prepare for a successful application</p>
+      </div>
+      <h3>Personal Documents</h3>
+      <ul>
+        <li>Valid passport (color copy and original for verification)</li>
+        <li>All TIE cards or residence permit copies for the past 5 years</li>
+        <li>Birth certificate (official translation into Spanish)</li>
+        <li>Marriage certificate or civil registry extracts (if applicable, with official translation)</li>
+      </ul>
+      <h3>Financial & Employment</h3>
+      <ul>
+        <li>Employment contract(s) or job offer letters</li>
+        <li>Latest payslips (3–6 months) or tax returns</li>
+        <li>Bank statements showing regular income</li>
+        <li>Tax compliance certificate (certificado de no deuda)</li>
+        <li>Social security contribution records</li>
+        <li>If self-employed: business registration and accounts</li>
+      </ul>
+      <h3>Housing & Residence</h3>
+      <ul>
+        <li>Current lease agreement or property deed</li>
+        <li>Utility bills (water, electricity, gas) as proof of residence</li>
+        <li>Council registration (empadronamiento) from local town hall</li>
+        <li>Historical rental contracts or deeds showing 5 years residence</li>
+      </ul>
+      <h3>Health & Legal</h3>
+      <ul>
+        <li>Valid medical/health insurance policy</li>
+        <li>Criminal record certificate (certificado de antecedentes) from home country</li>
+        <li>Criminal record certificate from any other country of previous residence</li>
+        <li>Certificate of good conduct (if requested)</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- BENEFITS CARDS -->
+  <section class="msv__section">
+    <div class="msv__container">
+      <div class="msv__section-hd">
+        <h2>Benefits of Permanent Residency</h2>
+        <p>What permanent residency unlocks for you and your family</p>
+      </div>
+      <div class="msv__persona-grid">
+        <div class="msv__persona-card">
+          <div class="msv__persona-icon">💼</div>
+          <div class="msv__persona-title">Work Freely</div>
+          <p class="msv__persona-desc">No work permits required. Start a business, change jobs, or freelance without restrictions or employer authorization.</p>
+          <span class="msv__persona-cta">Full employment rights →</span>
+        </div>
+        <div class="msv__persona-card">
+          <div class="msv__persona-icon">♾️</div>
+          <div class="msv__persona-title">No Renewals</div>
+          <p class="msv__persona-desc">Say goodbye to visa renewal cycles. Your permanent residency never expires and requires no administrative renewal.</p>
+          <span class="msv__persona-cta">Forget about renewals →</span>
+        </div>
+        <div class="msv__persona-card">
+          <div class="msv__persona-icon">✈️</div>
+          <div class="msv__persona-title">Travel Freedom</div>
+          <p class="msv__persona-desc">Travel in and out of Spain freely. Extended trips abroad are permitted as long as you don't abandon your Spanish residence.</p>
+          <span class="msv__persona-cta">Explore freely →</span>
+        </div>
+        <div class="msv__persona-card">
+          <div class="msv__persona-icon">🏥</div>
+          <div class="msv__persona-title">Access All Services</div>
+          <p class="msv__persona-desc">Full access to Spanish healthcare, education, social security, and government services on equal terms with residents.</p>
+          <span class="msv__persona-cta">Public services access →</span>
+        </div>
+        <div class="msv__persona-card">
+          <div class="msv__persona-icon">👨‍👩‍👧‍👦</div>
+          <div class="msv__persona-title">Family Benefits</div>
+          <p class="msv__persona-desc">Bring dependents, access family allowances, and provide education to family members with enhanced legal status.</p>
+          <span class="msv__persona-cta">Family sponsorship →</span>
+        </div>
+        <div class="msv__persona-card">
+          <div class="msv__persona-icon">🎖️</div>
+          <div class="msv__persona-title">Path to Citizenship</div>
+          <p class="msv__persona-desc">Opens eligibility for Spanish citizenship after 5 years of permanent residency (or 10 years from initial arrival).</p>
+          <span class="msv__persona-cta">Citizenship pathway →</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COSTS SECTION -->
+  <section class="msv__section--cream">
+    <div class="msv__container">
+      <div class="msv__section-hd">
+        <h2>Costs & Administrative Fees</h2>
+        <p>What to budget for your permanent residency application and ongoing requirements</p>
+      </div>
+      <div class="msv__income-boxes">
+        <div class="msv__income-box">
+          <span class="msv__income-box-label">Application Fee</span>
+          <span class="msv__income-box-value">€500–€750</span>
+          <span class="msv__income-box-detail">Official processing fee</span>
+        </div>
+        <div class="msv__income-box">
+          <span class="msv__income-box-label">TIE Card Replacement</span>
+          <span class="msv__income-box-value">€50–€150</span>
+          <span class="msv__income-box-detail">New permanent residency card</span>
+        </div>
+        <div class="msv__income-box">
+          <span class="msv__income-box-label">Legal Assistance (optional)</span>
+          <span class="msv__income-box-value">€1,500–€3,500</span>
+          <span class="msv__income-box-detail">Professional legal help</span>
+        </div>
+        <div class="msv__income-box">
+          <span class="msv__income-box-label">Document Translation</span>
+          <span class="msv__income-box-value">€200–€600</span>
+          <span class="msv__income-box-detail">Official translations required</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BAND -->
+  <section class="msv__cta-band">
+    <div class="msv__container">
+      <h2>Ready to Take the Next Step?</h2>
+      <p>We guide you through every stage of the permanent residency process. From eligibility checks to document preparation and submission, our team ensures your application is complete and successful.</p>
+      <div class="msv__btn-group">
+        <a href="https://dashboard.platinumlegalspain.com/nlv" class="msv__btn msv__btn--primary">Check Your Eligibility</a>
+        <a href="https://dashboard.platinumlegalspain.com/nlv" class="msv__btn msv__btn--outline-white">Schedule a Call</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ SECTION -->
+  <section class="msv__section">
+    <div class="msv__container--narrow">
+      <div class="msv__section-hd">
+        <h2>Frequently Asked Questions</h2>
+        <p>Answers to common questions about permanent residency in Spain</p>
+      </div>
+      <div class="msv__faq-list">
+        <details>
+          <summary>How long does it take to get permanent residency in Spain?</summary>
+          <div class="msv__faq-answer">
+            <p>You become eligible for permanent residency after 5 years of continuous legal residence in Spain. The application process itself typically takes 2–4 months from submission to approval, depending on your circumstances and the regional administration handling your case.</p>
+          </div>
+        </details>
+        <details>
+          <summary>Can I work in Spain with permanent residency?</summary>
+          <div class="msv__faq-answer">
+            <p>Yes, permanent residency grants you full employment rights in Spain. You can work for any employer, start a business, or work as a freelancer without any restrictions or additional authorizations. This is one of the key benefits over temporary residency.</p>
+          </div>
+        </details>
+        <details>
+          <summary>Do I need to renew permanent residency?</summary>
+          <div class="msv__faq-answer">
+            <p>No, permanent residency does not require renewal. Once granted, your residencia de larga duración remains valid indefinitely, as long as you maintain your legal status and meet any requirements for maintaining continuous residence.</p>
+          </div>
+        </details>
+        <details>
+          <summary>What happens if I leave Spain with permanent residency?</summary>
+          <div class="msv__faq-answer">
+            <p>Permanent residency allows you to travel freely outside Spain. However, absences longer than 12 months may be considered a break in continuous residence, which could jeopardize your status. For extended absences, it's advisable to maintain some ties to Spain and consider your options carefully.</p>
+          </div>
+        </details>
+        <details>
+          <summary>Can Non-Lucrative Visa (NLV) holders get permanent residency?</summary>
+          <div class="msv__faq-answer">
+            <p>Yes, Non-Lucrative Visa holders can transition to permanent residency after 5 years of continuous legal residence. The NLV counts toward the 5-year requirement, so you begin the clock when you first arrive on this visa. Once eligible, you apply for residencia de larga duración.</p>
+          </div>
+        </details>
+        <details>
+          <summary>What documents do I need for permanent residency?</summary>
+          <div class="msv__faq-answer">
+            <p>You'll need a valid passport, proof of 5 years continuous residence (TIE cards, rental contracts, utility bills), proof of financial means or employment, certificate of no criminal record, medical insurance, and evidence of housing. Requirements vary by region; consult the local immigration office for a complete list.</p>
+          </div>
+        </details>
+        <details>
+          <summary>How long does the permanent residency application take?</summary>
+          <div class="msv__faq-answer">
+            <p>After submission, the application typically takes 2–4 months for a decision. Processing times vary by region and individual circumstances. Some applications may take longer if additional documentation is requested.</p>
+          </div>
+        </details>
+        <details>
+          <summary>What's the difference between permanent residency and citizenship?</summary>
+          <div class="msv__faq-answer">
+            <p>Permanent residency (residencia de larga duración) gives you the right to live, work, and study in Spain indefinitely without renewal. Citizenship grants you the right to vote, hold a Spanish passport, and full legal equality with Spanish nationals. You become eligible for citizenship 10 years after first arriving in Spain, or 5 years after obtaining permanent residency.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- RELATED GUIDES -->
+  <section class="msv__section--cream">
+    <div class="msv__container">
+      <div class="msv__section-hd">
+        <h2>Related Guides & Resources</h2>
+        <p>Explore other important steps in your Spanish immigration journey</p>
+      </div>
+      <div class="msv__related">
+        <a href="/how-to-get-spanish-citizenship/" class="msv__related-card">
+          <span class="msv__related-icon">🎖️</span>
+          <span class="msv__related-title">Spanish Citizenship</span>
+          <span class="msv__related-desc">How to become a Spanish citizen after permanent residency</span>
+        </a>
+        <a href="/eu-long-term-residency-spain/" class="msv__related-card">
+          <span class="msv__related-icon">🇪🇺</span>
+          <span class="msv__related-title">EU Long-Term Residency</span>
+          <span class="msv__related-desc">Rights and benefits of EU long-term resident status</span>
+        </a>
+        <a href="/spanish-residency-renewal/" class="msv__related-card">
+          <span class="msv__related-icon">🔄</span>
+          <span class="msv__related-title">Residency Renewal</span>
+          <span class="msv__related-desc">Guide to renewing your temporary residence permit</span>
+        </a>
+        <a href="/how-to-get-residency-in-spain/" class="msv__related-card">
+          <span class="msv__related-icon">🏠</span>
+          <span class="msv__related-title">Getting Residency in Spain</span>
+          <span class="msv__related-desc">Overview of all residency pathways and visa options</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Related Guides ─────────────────────────────────────────── -->
+  <section class="msv__section--cream" style="padding:2.5rem 0;border-top:1px solid #dce3ed;">
+    <div class="msv__container--narrow">
+      <p style="font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#be0011;margin-bottom:.5rem;">Related Guides</p>
+      <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:8px;">
+        <a href="/how-to-get-residency-in-spain/" style="background:#fff;border:1px solid #dce3ed;border-radius:6px;padding:10px 16px;text-decoration:none;font-size:.85rem;font-weight:600;color:#0c1930;" onmouseover="this.style.borderColor='#be0011';this.style.color='#be0011'" onmouseout="this.style.borderColor='#dce3ed';this.style.color='#0c1930'">How to Get Residency in Spain →</a>
+        <a href="/eu-long-term-residency-spain/" style="background:#fff;border:1px solid #dce3ed;border-radius:6px;padding:10px 16px;text-decoration:none;font-size:.85rem;font-weight:600;color:#0c1930;" onmouseover="this.style.borderColor='#be0011';this.style.color='#be0011'" onmouseout="this.style.borderColor='#dce3ed';this.style.color='#0c1930'">EU Long-Term Residency →</a>
+        <a href="/permanent-residency-after-nlv/" style="background:#fff;border:1px solid #dce3ed;border-radius:6px;padding:10px 16px;text-decoration:none;font-size:.85rem;font-weight:600;color:#0c1930;" onmouseover="this.style.borderColor='#be0011';this.style.color='#be0011'" onmouseout="this.style.borderColor='#dce3ed';this.style.color='#0c1930'">Permanent Residency After NLV →</a>
+        <a href="/how-to-get-spanish-citizenship/" style="background:#fff;border:1px solid #dce3ed;border-radius:6px;padding:10px 16px;text-decoration:none;font-size:.85rem;font-weight:600;color:#0c1930;" onmouseover="this.style.borderColor='#be0011';this.style.color='#be0011'" onmouseout="this.style.borderColor='#dce3ed';this.style.color='#0c1930'">How to Get Spanish Citizenship →</a>
+        <a href="/long-term-residency-after-nlv/" style="background:#fff;border:1px solid #dce3ed;border-radius:6px;padding:10px 16px;text-decoration:none;font-size:.85rem;font-weight:600;color:#0c1930;" onmouseover="this.style.borderColor='#be0011';this.style.color='#be0011'" onmouseout="this.style.borderColor='#dce3ed';this.style.color='#0c1930'">Long-Term Residency After NLV →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- DISCLAIMER -->
+  <footer class="msv__disclaimer">
+    <div class="msv__container--narrow">
+      <p><strong>Disclaimer:</strong> This guide is for informational purposes only and does not constitute legal advice. Immigration laws and requirements change frequently and vary by region. We recommend consulting with a qualified immigration lawyer or contacting the Spanish immigration authorities directly to confirm the most current requirements for your specific circumstances. My Spanish Visa and its team are not liable for decisions made based on this information.</p>
+    </div>
+  </footer>
+
+</div>
+
+<!-- FRAGMENT_END -->
+</main>
+
+
+<!-- ═══════════════════════════════════════════════════
+     SITE FOOTER
+     ═══════════════════════════════════════════════════ -->
+<footer class="msv-footer" role="contentinfo">
+
+  <div class="msv-footer__top">
+
+    <!-- Brand column -->
+    <div class="msv-footer__brand">
+      <a href="/" class="msv-footer__logo" aria-label="My Spanish Visa"><img src="/assets/images/msv-logo-white.png" alt="My Spanish Visa" height="40" style="display:block;"></a>
+      <p class="msv-footer__tagline">
+        Specialist Spain visa &amp; residency guidance for English-speaking foreigners.
+        A service of Platinum Legal Spain.
+      </p>
+      <div class="msv-footer__trust">
+        <span class="msv-footer__trust-item">All English. No barriers.</span>
+        <span class="msv-footer__trust-item">Solicitors &amp; immigration specialists</span>
+        <span class="msv-footer__trust-item">100% online process</span>
+      </div>
+    </div>
+
+    <!-- Visas column -->
+    <div>
+      <div class="msv-footer__col-title">Visas</div>
+      <ul class="msv-footer__links">
+        <li><a href="/non-lucrative-visa-spain/">Non-Lucrative Visa</a></li>
+        <li><a href="/digital-nomad-visa-spain/">Digital Nomad Visa</a></li>
+        <li><a href="/student-visa-spain/">Student Visa</a></li>
+        <li><a href="/spain-visa-renewal/">Visa Renewals</a></li>
+        <li><a href="/best-visa-move-to-spain/">Compare All Visas</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/nlv">Apply: NLV</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/dnv">Apply: DNV</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/student-visa">Apply: Student Visa</a></li>
+      </ul>
+    </div>
+
+    <!-- Resources column -->
+    <div>
+      <div class="msv-footer__col-title">Resources</div>
+      <ul class="msv-footer__links">
+        <li><a href="/blog/">Blog &amp; Guides</a></li>
+        <li><a href="/move-to-spain/">Move to Spain Guide</a></li>
+        <li><a href="/visa-eligibility-quiz/">Eligibility Quiz</a></li>
+        <li><a href="/spain-visa-checklist/">Document Checklists</a></li>
+        <li><a href="/spain-visa-requirements/">Visa Requirements</a></li>
+        <li><a href="/spain-nie-number/">NIE Number Guide</a></li>
+        <li><a href="/spain-tie-card/">TIE Card Guide</a></li>
+      </ul>
+    </div>
+
+    <!-- Company column -->
+    <div>
+      <div class="msv-footer__col-title">Company</div>
+      <ul class="msv-footer__links">
+        <li><a href="/about-us/">About Us</a></li>
+        <li><a href="/testimonials/">Client Reviews</a></li>
+        <li><a href="/why-choose-us/">Why Choose Us</a></li>
+        <li><a href="/contact-us.html">Contact</a></li>
+        <li><a href="https://www.platinumlegalspain.com" rel="noopener">Platinum Legal Spain</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/nlv">Client Portal</a></li>
+      </ul>
+    </div>
+
+  </div><!-- /.msv-footer__top -->
+
+  <div class="msv-footer__bottom">
+    <div class="msv-footer__bottom-inner">
+      <p class="msv-footer__disclaimer">
+        <strong style="color:rgba(255,255,255,0.5);">Disclaimer:</strong>
+        My Spanish Visa provides visa processing support and is not a law firm. Content on this site is for informational purposes only and does not constitute legal advice. Immigration rules change frequently — always verify requirements with official sources or a qualified specialist. My Spanish Visa is a trading name of Platinum Legal Spain.
+      </p>
+      <span class="msv-footer__copyright">© 2026 My Spanish Visa. All rights reserved.</span>
+    </div>
+  </div>
+
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Spain Visa &amp; Moving to Spain Blog | My Spanish Visa</title>
+<meta name="description" content="Practical guides, visa explainers, and expat advice for anyone planning to move to Spain. Browse 176 articles by category — from visa applications to life after arrival.">
+<link rel="canonical" href="https://www.myspanishvisa.com/blog/">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.myspanishvisa.com/blog/#webpage",
+      "url": "https://www.myspanishvisa.com/blog/",
+      "name": "Spain Visa & Moving to Spain Blog | My Spanish Visa",
+      "description": "Practical guides, visa explainers, and expat advice for anyone planning to move to Spain. Browse 176 articles by category.",
+      "inLanguage": "en",
+      "isPartOf": { "@id": "https://www.myspanishvisa.com/#website" },
+      "breadcrumb": { "@id": "https://www.myspanishvisa.com/blog/#breadcrumb" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.myspanishvisa.com/blog/#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.myspanishvisa.com" },
+        { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.myspanishvisa.com/blog/" }
+      ]
+    }
+  ]
+}
+</script>
+
+<style>
+html, body { max-width: 100%; overflow-x: clip; }
+.msv, .msv-nav, .msv-topbar, .msv-footer, .msv-footer-cta,
+.msv-blog-index { max-width: 100%; overflow-x: clip; position: relative; }
+.msv img, .msv video, .msv iframe { max-width: 100%; height: auto; }
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --navy: #0c1930;
+  --red: #be0011;
+  --cream: #f8f7f4;
+  --yellow: #facf39;
+  --mid: #5a6478;
+  --border: #dce3ed;
+}
+body { font-family: 'Segoe UI', Arial, sans-serif; color: var(--navy); background: #fff; line-height: 1.65; }
+
+/* ── HERO ── */
+.msv-blog-hero {
+  background: var(--navy);
+  padding: 72px 24px 64px;
+  text-align: center;
+}
+.msv-blog-hero__eyebrow {
+  display: inline-block;
+  background: var(--red);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 4px 14px;
+  border-radius: 2px;
+  margin-bottom: 20px;
+}
+.msv-blog-hero__title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.15;
+  max-width: 720px;
+  margin: 0 auto 20px;
+}
+.msv-blog-hero__title span { color: var(--yellow); }
+.msv-blog-hero__sub {
+  font-size: 1.05rem;
+  color: rgba(255,255,255,0.75);
+  max-width: 540px;
+  margin: 0 auto 32px;
+}
+.msv-blog-hero__stats {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+.msv-blog-hero__stat-num {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--yellow);
+  line-height: 1;
+}
+.msv-blog-hero__stat-label {
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.6);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/* ── BREADCRUMB ── */
+.msv-breadcrumb {
+  background: var(--cream);
+  padding: 12px 24px;
+  font-size: 0.82rem;
+  color: var(--mid);
+  border-bottom: 1px solid var(--border);
+}
+.msv-breadcrumb a { color: var(--mid); text-decoration: none; }
+.msv-breadcrumb a:hover { color: var(--red); }
+.msv-breadcrumb span { margin: 0 6px; }
+
+/* ── LAYOUT ── */
+.msv-blog-wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ── FEATURED ── */
+.msv-featured {
+  padding: 60px 24px 48px;
+  background: #fff;
+}
+.msv-section-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--red);
+  margin-bottom: 8px;
+}
+.msv-section-title {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--navy);
+  margin-bottom: 32px;
+}
+.msv-featured-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+@media (max-width: 900px) { .msv-featured-grid { grid-template-columns: repeat(2,1fr); } }
+@media (max-width: 600px) { .msv-featured-grid { grid-template-columns: 1fr; } }
+.msv-feat-card {
+  background: var(--cream);
+  border-radius: 10px;
+  padding: 28px 24px;
+  border: 1px solid var(--border);
+  text-decoration: none;
+  display: block;
+  transition: box-shadow 0.18s, transform 0.18s;
+}
+.msv-feat-card:hover { box-shadow: 0 6px 28px rgba(12,25,48,0.1); transform: translateY(-2px); }
+.msv-feat-card__cat {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--red);
+  margin-bottom: 10px;
+}
+.msv-feat-card__title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 1.4;
+  margin-bottom: 12px;
+}
+.msv-feat-card__cta {
+  font-size: 0.82rem;
+  color: var(--red);
+  font-weight: 600;
+}
+
+/* ── CATEGORY GRID ── */
+.msv-cat-section {
+  background: var(--cream);
+  padding: 64px 24px;
+  border-top: 1px solid var(--border);
+}
+.msv-cat-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+@media (max-width: 1100px) { .msv-cat-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 768px) { .msv-cat-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 480px) { .msv-cat-grid { grid-template-columns: 1fr; } }
+.msv-cat-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 24px 20px;
+  border: 1px solid var(--border);
+  text-decoration: none;
+  display: block;
+  transition: box-shadow 0.18s, border-color 0.18s;
+}
+.msv-cat-card:hover { box-shadow: 0 4px 20px rgba(12,25,48,0.08); border-color: var(--red); }
+.msv-cat-card__icon {
+  font-size: 1.8rem;
+  margin-bottom: 12px;
+  display: block;
+}
+.msv-cat-card__name {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 8px;
+}
+.msv-cat-card__desc {
+  font-size: 0.83rem;
+  color: var(--mid);
+  line-height: 1.5;
+  margin-bottom: 14px;
+}
+.msv-cat-card__count {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--red);
+}
+
+/* ── CTA BAND ── */
+.msv-cta-band {
+  background: var(--navy);
+  padding: 56px 24px;
+  text-align: center;
+}
+.msv-cta-band__title {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 14px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.msv-cta-band__sub {
+  color: rgba(255,255,255,0.7);
+  font-size: 1rem;
+  margin-bottom: 28px;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.msv-cta-btn {
+  display: inline-block;
+  background: var(--red);
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 700;
+  padding: 14px 32px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.18s;
+  margin: 0 8px 8px;
+}
+.msv-cta-btn:hover { background: #9e0010; }
+.msv-cta-btn--outline {
+  background: transparent;
+  border: 2px solid rgba(255,255,255,0.4);
+}
+.msv-cta-btn--outline:hover { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.7); }
+
+/* ── POPULAR POSTS ── */
+.msv-popular { padding: 64px 24px; background: #fff; }
+.msv-post-list { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+@media (max-width: 900px) { .msv-post-list { grid-template-columns: repeat(2,1fr); } }
+@media (max-width: 580px) { .msv-post-list { grid-template-columns: 1fr; } }
+.msv-post-card {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 24px 20px;
+  text-decoration: none;
+  display: block;
+  transition: box-shadow 0.18s;
+}
+.msv-post-card:hover { box-shadow: 0 4px 20px rgba(12,25,48,0.08); }
+.msv-post-card__cat {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--red);
+  margin-bottom: 8px;
+}
+.msv-post-card__title {
+  font-size: 0.97rem;
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 1.4;
+  margin-bottom: 8px;
+}
+.msv-post-card__read { font-size: 0.8rem; color: var(--mid); }
+</style>
+</head>
+<body>
+
+<!-- BREADCRUMB -->
+<nav class="msv-breadcrumb" aria-label="breadcrumb">
+  <a href="/">Home</a><span>›</span> Blog
+</nav>
+
+<!-- HERO -->
+<section class="msv-blog-hero">
+  <div class="msv-blog-hero__eyebrow">Spain Visa &amp; Residency Guides</div>
+  <h1 class="msv-blog-hero__title">The Spain Visa <span>Blog</span></h1>
+  <p class="msv-blog-hero__sub">Practical, plain-English guides for anyone planning to move to Spain — visas, residency, taxes, and life after arrival.</p>
+  <div class="msv-blog-hero__stats">
+    <div>
+      <span class="msv-blog-hero__stat-num">176</span>
+      <span class="msv-blog-hero__stat-label">Articles</span>
+    </div>
+    <div>
+      <span class="msv-blog-hero__stat-num">17</span>
+      <span class="msv-blog-hero__stat-label">Categories</span>
+    </div>
+    <div>
+      <span class="msv-blog-hero__stat-num">Free</span>
+      <span class="msv-blog-hero__stat-label">Always</span>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURED POSTS -->
+<section class="msv-featured">
+  <div class="msv-blog-wrap">
+    <div class="msv-section-label">Start Here</div>
+    <h2 class="msv-section-title">Essential Reading</h2>
+    <div class="msv-featured-grid">
+      <a href="/blog-non-lucrative-visa-spain-health-insurance-requirements.html" class="msv-feat-card">
+        <div class="msv-feat-card__cat">Non-Lucrative Visa</div>
+        <div class="msv-feat-card__title">The Complete Guide to Spain's Non-Lucrative Visa</div>
+        <div class="msv-feat-card__cta">Read the guide →</div>
+      </a>
+      <a href="/blog-spain-digital-nomad-visa-tax.html" class="msv-feat-card">
+        <div class="msv-feat-card__cat">Digital Nomad Visa</div>
+        <div class="msv-feat-card__title">Spain Digital Nomad Visa: The Complete 2026 Guide</div>
+        <div class="msv-feat-card__cta">Read the guide →</div>
+      </a>
+      <a href="/blog-student-visa-spain-language-school.html" class="msv-feat-card">
+        <div class="msv-feat-card__cat">Student Visa</div>
+        <div class="msv-feat-card__title">Spain Student Visa: The Complete 2026 Guide</div>
+        <div class="msv-feat-card__cta">Read the guide →</div>
+      </a>
+      <a href="/blog-how-to-get-residency-spain-foreigners.html" class="msv-feat-card">
+        <div class="msv-feat-card__cat">Residency</div>
+        <div class="msv-feat-card__title">How to Get Residency in Spain: The Complete Guide</div>
+        <div class="msv-feat-card__cta">Read the guide →</div>
+      </a>
+      <a href="/blog-which-spain-visa-right-for-me.html" class="msv-feat-card">
+        <div class="msv-feat-card__cat">Visa Comparisons</div>
+        <div class="msv-feat-card__title">Which Spain Visa Is Right for Me? A Simple Guide</div>
+        <div class="msv-feat-card__cta">Read the guide →</div>
+      </a>
+      <a href="/blog-first-30-days-spain-post-arrival-checklist.html" class="msv-feat-card">
+        <div class="msv-feat-card__cat">After You Arrive</div>
+        <div class="msv-feat-card__title">First 30 Days in Spain: Your Essential Post-Arrival Checklist</div>
+        <div class="msv-feat-card__cta">Read the guide →</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CATEGORIES -->
+<section class="msv-cat-section">
+  <div class="msv-blog-wrap">
+    <div class="msv-section-label">Browse by Topic</div>
+    <h2 class="msv-section-title">All Categories</h2>
+    <div class="msv-cat-grid">
+      <a href="/blog-category-non-lucrative-visa.html" class="msv-cat-card">
+        <span class="msv-cat-card__icon">🏡</span>
+        <div class="msv-cat-card__name">Non-Lucrative Visa</div>
+        <p class="msv-cat-card__desc">Income requirements, eligibility, documents, and the full application process for Spain's most popular retirement and passive income visa.</p>
+        <div class="msv-cat-card__count">27 articles →</div>
+      </a>
+      <a href="/blog-category-digital-nomad-visa.html" class="msv-cat-card">
+        <span class="msv-cat-card__icon">💻</span>
+        <div class="msv-cat-card__name">Digital Nomad Visa</div>
+        <p class="msv-cat-card__desc">Everything remote workers and freelancers need to know about Spain's Digital Nomad Visa — from eligibility to the Beckham Law.</p>
+        <div class="msv-cat-card__count">26 articles →</div>
+      </a>
+      <a href="/blog-category-student-visa.html" class="msv-cat-card">
+        <span class="msv-cat-card__icon">🎓</span>
+        <div class="msv-cat-card__name">Student Visa</div>
+        <p class="msv-cat-card__desc">How to apply for a Spain student visa, enrol in language schools, and convert your visa to a work permit.</p>
+        <div class="msv-cat-card__count">18 articles →</div>
+      </a>
+      <a href="/blog-category-nationality.html" class="msv-cat-card">
+        <span class="msv-cat-card__icon">🌍</span>
+        <div class="msv-cat-card__name">By Nationality</div>
+        <p class="msv-cat-card__desc">Country-specific guides for UK nationals, Americans, Australians, Canadians, Irish citizens, and South Africans moving to Spain.</p>
+        <div class="msv-cat-card__count">10 articles →</div>
+      </a>
+      <a href="/blog-category-life-in-spain.html" class="msv-cat-card">
+        <span class="msv-cat-card__icon">☀️</span>
+        <div class="msv-cat-card__name">Life in Spain</div>
+        <p class="msv-cat-card__desc">Healthcare, schools, culture shock, cost of living, and everyday life as an expat in Spain.</p>
+        <div class="msv-cat-card__count">15 articles →</div>
+      </a>
+      <a href="/blog-category-bureaucracy.html" class="msv-cat-card">
+        <span class="msv-cat-card__icon">📋</span>
+        <div class="msv-cat-card__name">Spanish Bureaucracy</div>
+        <p class="msv-cat-card__desc">NIE, TIE, padrón, cita previa, social security, digital certificate, and navigating Spanish admin.</p>
+        <div class="msv-cat-card__count">13 articles →</div>
+      </a>
+      <a href="/blog-category-tax.html" class="msv-cat-card">
+        <span class="msv-cat-card__icon">💰</span>
+        <div class="msv-cat-card__name">Tax in Spain</div>
+        <p class="msv-cat-card__desc">Spanish tax residency rules, the Beckham Law, Modelo 720 declarations, and tax guides by nationality.</p>
+        <div class="msv-cat-card__count">8 articles →</div>
+      </a>
+      <a href="/blog-category-locations.html" class="msv-cat-card">
+        <span class="msv-cat-card__icon">📍</span>
+        <div class="msv-cat-card__name">Where to Live</div>
+        <p class="msv-cat-card__desc">City guides and regional comparisons to help you choose where to base yourself in Spain.</p>
+        <div class="msv-cat-card__count">8 articles →</div>
+      </a>
+      <a href="/blog-category-residency.html" class="msv-cat-card">
+        <span class="msv-cat-card__icon">📄</span>
+        <div class="msv-cat-card__name">Residency in Spain</div>
+        <p class="msv-cat-card__desc">The path from temporary residence to permanent residence and Spanish citizenship.</p>
+        <div class="msv-cat-card__count">8 articles →</div>
+      </a>
+      <a href="/blog-category-documents.html" class="msv-cat-card">
+        <span class="msv-cat-card__icon">📁</span>
+        <div class="msv-cat-card__name">Visa Documents</div>
+        <p class="msv-cat-card__desc">Apostilles, sworn translations, criminal record certificates, medical certificates, and document checklists.</p>
+        <div class="msv-cat-card__count">8 articles →</div>
+      </a>
+      <a href="/blog-category-post-arrival.html" class="msv-cat-card">
+        <span class="msv-cat-card__icon">✈️</span>
+        <div class="msv-cat-card__name">After You Arrive</div>
+        <p class="msv-cat-card__desc">First steps after landing in Spain — what to do, what to set up, and how to navigate your first months.</p>
+        <div class="msv-cat-card__count">7 articles →</div>
+      </a>
+      <a href="/blog-category-property.html" class="msv-cat-card">
+        <span class="msv-cat-card__icon">🏠</span>
+        <div class="msv-cat-card__name">Property in Spain</div>
+        <p class="msv-cat-card__desc">Renting and buying property as a foreigner, the Golden Visa, and understanding the Spanish property market.</p>
+        <div class="msv-cat-card__count">6 articles →</div>
+      </a>
+      <a href="/blog-category-rejection.html" class="msv-cat-card">
+        <span class="msv-cat-card__icon">⚠️</span>
+        <div class="msv-cat-card__name">Rejection & Appeals</div>
+        <p class="msv-cat-card__desc">How to appeal a Spain visa refusal, common mistakes that cause rejections, and how to reapply successfully.</p>
+        <div class="msv-cat-card__count">6 articles →</div>
+      </a>
+      <a href="/blog-category-health-insurance.html" class="msv-cat-card">
+        <span class="msv-cat-card__icon">🏥</span>
+        <div class="msv-cat-card__name">Health Insurance</div>
+        <p class="msv-cat-card__desc">Private health insurance requirements for Spanish visa applications — providers, costs, and no-copay rules.</p>
+        <div class="msv-cat-card__count">5 articles →</div>
+      </a>
+      <a href="/blog-category-comparison.html" class="msv-cat-card">
+        <span class="msv-cat-card__icon">⚖️</span>
+        <div class="msv-cat-card__name">Visa Comparisons</div>
+        <p class="msv-cat-card__desc">Side-by-side comparisons to help you choose the right Spain visa for your situation.</p>
+        <div class="msv-cat-card__count">4 articles →</div>
+      </a>
+      <a href="/blog-category-renewal.html" class="msv-cat-card">
+        <span class="msv-cat-card__icon">🔄</span>
+        <div class="msv-cat-card__name">Visa Renewals</div>
+        <p class="msv-cat-card__desc">How to renew your Spanish visa or TIE card — timelines, requirements, and what happens if you miss the deadline.</p>
+        <div class="msv-cat-card__count">3 articles →</div>
+      </a>
+      <a href="/blog-category-faq.html" class="msv-cat-card">
+        <span class="msv-cat-card__icon">❓</span>
+        <div class="msv-cat-card__name">Spain Visa FAQs</div>
+        <p class="msv-cat-card__desc">Quick answers to the most common questions about Spanish visas, residency, and moving to Spain.</p>
+        <div class="msv-cat-card__count">4 articles →</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<section class="msv-cta-band">
+  <div class="msv-blog-wrap">
+    <h2 class="msv-cta-band__title">Not sure which visa is right for you?</h2>
+    <p class="msv-cta-band__sub">Take our free eligibility check or book a consultation with a specialist.</p>
+    <a href="https://dashboard.platinumlegalspain.com/nlv" class="msv-cta-btn">Check Your Eligibility</a>
+    <a href="https://dashboard.platinumlegalspain.com/nlv" class="msv-cta-btn msv-cta-btn--outline">Book a Consultation</a>
+  </div>
+</section>
+
+<!-- POPULAR BY CATEGORY TEASERS -->
+<section class="msv-popular">
+  <div class="msv-blog-wrap">
+    <div class="msv-section-label">Most Read</div>
+    <h2 class="msv-section-title">Popular Right Now</h2>
+    <div class="msv-post-list">
+      <a href="/blog-nlv-how-much-money-do-i-need.html" class="msv-post-card">
+        <div class="msv-post-card__cat">Non-Lucrative Visa</div>
+        <div class="msv-post-card__title">NLV Income Requirements 2026: How Much Do You Really Need?</div>
+        <div class="msv-post-card__read">8 min read</div>
+      </a>
+      <a href="/blog-dnv-vs-non-lucrative-visa.html" class="msv-post-card">
+        <div class="msv-post-card__cat">Visa Comparisons</div>
+        <div class="msv-post-card__title">Digital Nomad Visa vs Non-Lucrative Visa: Which Is Right for You?</div>
+        <div class="msv-post-card__read">7 min read</div>
+      </a>
+      <a href="/blog-americans-moving-to-spain-mistakes.html" class="msv-post-card">
+        <div class="msv-post-card__cat">By Nationality</div>
+        <div class="msv-post-card__title">10 Mistakes Americans Make When Moving to Spain</div>
+        <div class="msv-post-card__read">9 min read</div>
+      </a>
+      <a href="/blog-how-to-get-nie-number-spain.html" class="msv-post-card">
+        <div class="msv-post-card__cat">Spanish Bureaucracy</div>
+        <div class="msv-post-card__title">How to Get Your NIE Number in Spain: Step-by-Step Guide</div>
+        <div class="msv-post-card__read">6 min read</div>
+      </a>
+      <a href="/blog-spain-tax-expats-guide-2026.html" class="msv-post-card">
+        <div class="msv-post-card__cat">Tax in Spain</div>
+        <div class="msv-post-card__title">Spain Tax Residency Rules: What Every Expat Needs to Know</div>
+        <div class="msv-post-card__read">10 min read</div>
+      </a>
+      <a href="/blog-best-cities-live-spain-expats.html" class="msv-post-card">
+        <div class="msv-post-card__cat">Where to Live</div>
+        <div class="msv-post-card__title">10 Best Cities to Live in Spain for Expats (2026)</div>
+        <div class="msv-post-card__read">12 min read</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>

@@ -1,0 +1,1578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- ═══════════════════════════════════════════════════════════════════
+       PAGE-SPECIFIC HEAD — replace block below per page:
+       <title>Nlv Savings Requirements | My Spanish Visa</title>
+       <meta name="description" content="…">
+       <meta property="og:title" content="…">
+       <meta property="og:description" content="…">
+       <meta property="og:url" content="https://www.myspanishvisa.com/…">
+       <meta property="og:image" content="…">
+       <link rel="canonical" href="https://www.myspanishvisa.com/…">
+       <script type="application/ld+json">…</script>
+       ═══════════════════════════════════════════════════════════════════ -->
+  <title>My Spanish Visa — Spain Visa &amp; Residency Specialists</title>
+  <meta name="description" content="My Spanish Visa helps English-speaking foreigners move to Spain. Expert guidance on Non-Lucrative Visa, Digital Nomad Visa, Student Visa, renewals and more.">
+
+  <!-- Shared Open Graph defaults -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="My Spanish Visa">
+  <meta property="og:image" content="https://www.myspanishvisa.com/assets/images/og/og-myspanishvisa-default.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@myspanishvisa">
+
+  <style>
+/* ═══════════════════════════════════════════════════════════════
+   GLOBAL SHELL — nav + footer only.
+   Page-specific CSS lives inside each fragment's own <style> block.
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── iOS overflow safety ── */
+html, body { max-width: 100%; overflow-x: clip; margin: 0; padding: 0; }
+*, *::before, *::after { box-sizing: border-box; }
+
+/* ── Brand tokens (root-level so all fragments inherit) ── */
+:root {
+  --navy:      #0c1930;
+  --navy-mid:  #1a3a5c;
+  --red:       #be0011;
+  --red-deep:  #8c000d;
+  --yellow:    #facf39;
+  --cream:     #f8f7f4;
+  --white:     #ffffff;
+  --black:     #1a1a1a;
+  --muted:     #5a6478;
+  --border:    #dce3ed;
+  --shadow-sm: 0 2px 8px rgba(12,25,48,0.08);
+  --shadow-md: 0 6px 24px rgba(12,25,48,0.13);
+}
+
+body {
+  font-family: 'Inter', 'Segoe UI', system-ui, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.75;
+  color: var(--black);
+  background: #fff;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   SITE NAV
+   ───────────────────────────────────────────────────────────── */
+.msv-nav {
+  position: sticky;
+  top: 0;
+  z-index: 9000;
+  background: var(--navy);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 2px 12px rgba(12,25,48,0.22);
+}
+.msv-nav__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+  gap: 1.5rem;
+}
+
+/* Logo */
+.msv-nav__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+.msv-nav__logo-flag {
+  font-size: 1.3rem;
+  line-height: 1;
+}
+.msv-nav__logo-text {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+.msv-nav__logo-text span {
+  color: var(--yellow);
+}
+
+/* Links */
+.msv-nav__links {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.msv-nav__links > li {
+  position: relative;
+}
+.msv-nav__links > li > a,
+.msv-nav__links > li > button {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.5rem 0.9rem;
+  font-size: 0.87rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.85);
+  text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: color 0.15s, background 0.15s;
+  white-space: nowrap;
+  height: 64px;
+}
+.msv-nav__links > li > a:hover,
+.msv-nav__links > li > button:hover,
+.msv-nav__links > li:focus-within > a,
+.msv-nav__links > li:focus-within > button {
+  color: #fff;
+  background: rgba(255,255,255,0.08);
+}
+.msv-nav__chevron {
+  font-size: 0.65rem;
+  opacity: 0.7;
+  transition: transform 0.2s;
+}
+.msv-nav__links > li:focus-within .msv-nav__chevron,
+.msv-nav__links > li:hover .msv-nav__chevron {
+  transform: rotate(180deg);
+}
+
+/* Dropdown */
+.msv-nav__dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 230px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  box-shadow: var(--shadow-md);
+  padding: 0.5rem 0;
+  z-index: 200;
+}
+.msv-nav__links > li:hover .msv-nav__dropdown,
+.msv-nav__links > li:focus-within .msv-nav__dropdown {
+  display: block;
+}
+.msv-nav__dropdown a {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.6rem 1.1rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--navy);
+  text-decoration: none;
+  transition: background 0.12s;
+}
+.msv-nav__dropdown a:hover {
+  background: var(--cream);
+  color: var(--red);
+}
+.msv-nav__dropdown-icon {
+  width: 24px;
+  height: 24px;
+  background: var(--cream);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+.msv-nav__dropdown-divider {
+  height: 1px;
+  background: var(--border);
+  margin: 0.4rem 0;
+}
+
+/* CTA button */
+.msv-nav__cta {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.55rem 1.2rem;
+  background: var(--red);
+  color: #fff !important;
+  font-size: 0.85rem;
+  font-weight: 700;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.15s, box-shadow 0.15s;
+  white-space: nowrap;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(190,0,17,0.3);
+}
+.msv-nav__cta:hover {
+  background: var(--red-deep);
+  box-shadow: 0 4px 14px rgba(190,0,17,0.4);
+  text-decoration: none;
+}
+
+/* Hamburger */
+.msv-nav__burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.4rem;
+  border-radius: 5px;
+}
+.msv-nav__burger span {
+  width: 22px;
+  height: 2px;
+  background: #fff;
+  border-radius: 2px;
+  transition: transform 0.2s, opacity 0.2s;
+  display: block;
+}
+
+/* Mobile nav */
+.msv-nav__mobile {
+  display: none;
+  flex-direction: column;
+  background: var(--navy-mid);
+  padding: 1rem 1.5rem 1.5rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+.msv-nav__mobile.open { display: flex; }
+.msv-nav__mobile a {
+  padding: 0.65rem 0;
+  color: rgba(255,255,255,0.9);
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+.msv-nav__mobile a:hover { color: var(--yellow); }
+.msv-nav__mobile .msv-nav__mobile-sub {
+  padding-left: 1rem;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: rgba(255,255,255,0.7);
+}
+.msv-nav__mobile-cta {
+  margin-top: 1rem;
+  background: var(--red);
+  color: #fff !important;
+  border-radius: 6px;
+  text-align: center;
+  padding: 0.75rem 1rem !important;
+  border-bottom: none !important;
+}
+
+@media (max-width: 900px) {
+  .msv-nav__links { display: none; }
+  .msv-nav__cta { display: none; }
+  .msv-nav__burger { display: flex; }
+}
+@media (max-width: 480px) {
+  .msv-nav__inner { padding: 0 1rem; }
+}
+
+/* ─────────────────────────────────────────────────────────────
+   SITE FOOTER
+   ───────────────────────────────────────────────────────────── */
+.msv-footer {
+  background: var(--navy);
+  color: rgba(255,255,255,0.75);
+  overflow-x: clip;
+}
+.msv-footer__top {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem 3rem;
+  display: grid;
+  grid-template-columns: 280px 1fr 1fr 1fr;
+  gap: 3rem;
+}
+@media (max-width: 900px) {
+  .msv-footer__top { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
+}
+@media (max-width: 560px) {
+  .msv-footer__top { grid-template-columns: 1fr; gap: 2rem; padding: 3rem 1.2rem 2rem; }
+}
+
+.msv-footer__brand {}
+.msv-footer__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  margin-bottom: 1rem;
+}
+.msv-footer__logo-flag { font-size: 1.3rem; }
+.msv-footer__logo-text {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -0.01em;
+}
+.msv-footer__logo-text span { color: var(--yellow); }
+.msv-footer__tagline {
+  font-size: 0.83rem;
+  color: rgba(255,255,255,0.55);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+.msv-footer__trust {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+.msv-footer__trust-item {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.65);
+}
+.msv-footer__trust-item::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  background: var(--yellow);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.msv-footer__col-title {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.4);
+  margin-bottom: 1rem;
+}
+.msv-footer__links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.msv-footer__links a {
+  font-size: 0.87rem;
+  color: rgba(255,255,255,0.68);
+  text-decoration: none;
+  transition: color 0.15s;
+  display: inline-block;
+}
+.msv-footer__links a:hover {
+  color: var(--yellow);
+  text-decoration: none;
+}
+
+.msv-footer__bottom {
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+.msv-footer__bottom-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 1rem;
+  justify-content: space-between;
+}
+.msv-footer__disclaimer {
+  font-size: 0.73rem;
+  color: rgba(255,255,255,0.35);
+  line-height: 1.65;
+  max-width: 720px;
+}
+.msv-footer__copyright {
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.35);
+  white-space: nowrap;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   MAIN CONTENT AREA
+   ───────────────────────────────────────────────────────────── */
+main {
+  /* Fragments are self-contained; this wrapper just provides flow context */
+  position: relative;
+}
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════
+     SITE NAVIGATION
+     ═══════════════════════════════════════════════════ -->
+<header class="msv-nav" role="banner">
+  <div class="msv-nav__inner">
+
+    <!-- Logo -->
+    <a href="/" class="msv-nav__logo" aria-label="My Spanish Visa — Home"><img src="/assets/images/msv-logo-white.png" alt="My Spanish Visa" height="40" style="display:block;"></a>
+
+    <!-- Desktop links -->
+    <nav aria-label="Main navigation">
+      <ul class="msv-nav__links">
+
+        <li>
+          <button class="msv-nav__dropdown-trigger" aria-haspopup="true" aria-expanded="false">
+            Visas <span class="msv-nav__chevron">▾</span>
+          </button>
+          <div class="msv-nav__dropdown" role="menu">
+            <a href="/non-lucrative-visa-spain/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🏖️</span>Non-Lucrative Visa
+            </a>
+            <a href="/digital-nomad-visa-spain/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">💻</span>Digital Nomad Visa
+            </a>
+            <a href="/student-visa-spain/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🎓</span>Student Visa
+            </a>
+            <div class="msv-nav__dropdown-divider"></div>
+            <a href="/spain-visa-renewal/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🔄</span>Visa Renewals
+            </a>
+            <a href="/best-visa-move-to-spain/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">⚖️</span>Compare All Visas
+            </a>
+          </div>
+        </li>
+
+        <li>
+          <button aria-haspopup="true" aria-expanded="false">
+            Resources <span class="msv-nav__chevron">▾</span>
+          </button>
+          <div class="msv-nav__dropdown" role="menu">
+            <a href="/blog/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">📝</span>Blog &amp; Guides
+            </a>
+            <a href="/spain-visa-checklist/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">✅</span>Document Checklists
+            </a>
+            <a href="/move-to-spain/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🏠</span>Move to Spain Guide
+            </a>
+            <a href="/visa-eligibility-quiz/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🧭</span>Eligibility Quiz
+            </a>
+          </div>
+        </li>
+
+        <li><a href="/about-us/">About Us</a></li>
+        <li><a href="/testimonials/">Reviews</a></li>
+        <li><a href="/contact-us.html">Contact</a></li>
+
+      </ul>
+    </nav>
+
+    <!-- Desktop CTA -->
+    <a href="https://dashboard.platinumlegalspain.com/nlv" class="msv-nav__cta">
+      Start My Application →
+    </a>
+
+    <!-- Hamburger (mobile) -->
+    <button class="msv-nav__burger" aria-label="Open menu" aria-expanded="false" onclick="
+      var m=document.querySelector('.msv-nav__mobile');
+      var open=m.classList.toggle('open');
+      this.setAttribute('aria-expanded', open);
+    ">
+      <span></span><span></span><span></span>
+    </button>
+
+  </div><!-- /.msv-nav__inner -->
+
+  <!-- Mobile menu -->
+  <nav class="msv-nav__mobile" aria-label="Mobile navigation">
+    <a href="/non-lucrative-visa-spain/" class="msv-nav__mobile-sub">Non-Lucrative Visa</a>
+    <a href="/digital-nomad-visa-spain/" class="msv-nav__mobile-sub">Digital Nomad Visa</a>
+    <a href="/student-visa-spain/" class="msv-nav__mobile-sub">Student Visa</a>
+    <a href="/spain-visa-renewal/">Visa Renewals</a>
+    <a href="/best-visa-move-to-spain/">Compare All Visas</a>
+    <a href="/blog/">Blog &amp; Guides</a>
+    <a href="/about-us/">About Us</a>
+    <a href="/testimonials/">Reviews</a>
+    <a href="/contact-us.html">Contact</a>
+    <a href="https://dashboard.platinumlegalspain.com/nlv" class="msv-nav__mobile-cta">Start My Application →</a>
+  </nav>
+
+</header>
+
+
+<!-- ═══════════════════════════════════════════════════
+     PAGE CONTENT (fragment injected here)
+     ═══════════════════════════════════════════════════ -->
+<main>
+<!-- FRAGMENT_START -->
+<!-- Elementor Full-Width HTML Widget | myspanishvisa.com | NLV Savings Requirements -->
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "name": "NLV Savings Requirements | Non-Lucrative Visa Spain",
+      "description": "Complete guide to Non-Lucrative Visa (NLV) savings requirements in Spain, including IPREM thresholds, monthly income calculations, bank statement requirements, and how to present savings evidence effectively.",
+      "url": "https://myspanishvisa.com/non-lucrative-visa-savings-requirements/",
+      "inLanguage": "en-US",
+      "isPartOf": {"@id": "https://myspanishvisa.com/#website"},
+      "breadcrumb": {"@id": "https://myspanishvisa.com/non-lucrative-visa-savings-requirements/#breadcrumb"}
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://myspanishvisa.com/non-lucrative-visa-savings-requirements/#breadcrumb",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://myspanishvisa.com/"},
+        {"@type": "ListItem", "position": 2, "name": "Non-Lucrative Visa", "item": "https://myspanishvisa.com/non-lucrative-visa-spain/"},
+        {"@type": "ListItem", "position": 3, "name": "Savings Requirements", "item": "https://myspanishvisa.com/non-lucrative-visa-savings-requirements/"}
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How much savings do you need for a Non-Lucrative Visa in Spain?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The primary amount is based on 400% of Spain's IPREM (Indicador Público de Renta de Efectos Múltiples). As of 2024-2025, this equals approximately €2,400 per month or €28,800 annually for a single applicant. Additional dependants require an additional 100% IPREM each (approximately €600/month). This is the minimum consistent monthly income or lump sum savings expected by Spanish consulates."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between savings and monthly income for the NLV?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Monthly income (from pensions, investments, or rental income) is assessed against the 400% IPREM threshold. Savings are typically required to cover a lump sum of 12 months of this threshold (€28,800 minimum for single applicants). Some consulates may accept a lower savings figure if you have documented monthly passive income, but savings remain the primary requirement."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What bank accounts count toward NLV savings requirements?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Regular savings accounts, ISAs/tax-free accounts, investment accounts, and pension savings typically count. Checking accounts with high monthly turnover are less favorable. Consulates prefer accounts showing consistent balance rather than frequent deposits and withdrawals. The funds must be accessible and not tied up in long-term fixed-term deposits, though some consulates may accept pension funds if withdrawal is available."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How many months of bank statements do I need for the NLV?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most Spanish consulates require 3-6 months of recent bank statements showing consistent balances above the minimum threshold. Some may request up to 12 months to demonstrate stability and proof that the funds are genuinely yours. The statements should clearly show your name as the account holder and regular balance maintenance rather than one-off deposits."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I use joint savings for the Non-Lucrative Visa?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Joint accounts are permissible if you can prove your proportionate ownership. For couples applying together, you may combine savings if both are listed as owners. However, consulates typically require clear documentation of each applicant's share. Accounts belonging solely to a spouse or partner may not count unless the applicant is a named joint account holder."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens if my savings are below the NLV threshold?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Applications with savings below the required threshold are typically rejected or require supplementary evidence. Options include combining savings with documented monthly income, adding a co-signer or guarantor, or delaying the application until you accumulate sufficient funds. Some consulates may allow slight flexibility (5-10%) if accompanied by strong employment history or pension documentation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need to convert non-EUR savings to euros for the NLV application?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most consulates require bank statements clearly converted to euros using official exchange rates from the date of the application. If you hold accounts in USD, GBP, or other currencies, obtain official currency conversion certificates from your bank dated within days of your application submission. Never use personal or informal conversion rates; consulates use official ECB or official bank rates."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What documents prove my savings for the NLV application?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Essential documents include: 3-6 months of consecutive bank statements, official bank letter on letterhead confirming account ownership and balance, investment statements or pension fund valuations, certified copies of savings books or passbooks, and proof of currency conversion if applicable. Consulates may also request evidence of funds' origin (inheritance, sale of property, etc.) if savings appear recently deposited."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<!-- Open Graph / Social -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.myspanishvisa.com/nlv-savings-requirements/">
+<meta property="og:title" content="My Spanish Visa">
+<meta property="og:description" content="Expert Spain visa guidance for English-speaking expats.">
+<meta property="og:image" content="https://www.myspanishvisa.com/assets/images/og/og-nlv-spain.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="My Spanish Visa">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@myspanishvisa">
+<meta name="twitter:title" content="My Spanish Visa">
+<meta name="twitter:description" content="Expert Spain visa guidance for English-speaking expats.">
+<meta name="twitter:image" content="https://www.myspanishvisa.com/assets/images/og/og-nlv-spain.jpg">
+
+<style>
+/* ── iOS Safari pinch-zoom overflow safety ─────────────────────────── */
+/* Prevents horizontal overflow when users pinch-zoom on iPhone/iPad.   */
+/* Top-level (also paste into theme Custom CSS / Elementor Site Settings) */
+html, body { max-width: 100%; overflow-x: clip; }
+/* Scoped wrapper safety */
+.msv, .msv-nav, .msv-topbar, .msv-footer, .msv-footer-cta,
+.pls-header, .pls-body, .pls-nlv, .pls-dnv, .pls-student {
+  max-width: 100%;
+  overflow-x: clip;
+  position: relative;
+}
+/* Cap all media inside the wrapper */
+.msv img, .msv video, .msv iframe,
+.msv-footer img, .msv-footer video, .msv-footer iframe {
+  max-width: 100%;
+  height: auto;
+}
+/* Never use 100vw — use 100% instead (dev reminder) */
+
+
+/* ── Reset & scope ─────────────────────────────────────────────────── */
+.msv *, .msv *::before, .msv *::after { box-sizing: border-box; margin: 0; padding: 0; }
+/* ── Tokens ──────────────────────────────────────────────────────── */
+.msv {
+  --navy: #0c1930; --navy-mid: #1a3a5c; --red: #be0011; --red-deep: #8c000d;
+  --yellow: #facf39; --cream: #f8f7f4; --white: #ffffff; --black: #1a1a1a;
+  --muted: #5a6478; --border: #dce3ed;
+  --shadow-sm: 0 2px 8px rgba(12,25,48,0.08); --shadow-md: 0 6px 24px rgba(12,25,48,0.13);
+  font-family: 'Inter', 'Segoe UI', system-ui, Arial, sans-serif;
+  font-size: 16px; line-height: 1.75; color: var(--black); width: 100%;
+}
+.msv__container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+.msv__container--narrow { max-width: 780px; margin: 0 auto; padding: 0 2rem; }
+@media (max-width: 640px) { .msv__container, .msv__container--narrow { padding: 0 1.2rem; } }
+/* ── Typography ──────────────────────────────────────────────────── */
+.msv h1 { font-size: clamp(2rem, 4.5vw, 3rem); font-weight: 800; line-height: 1.12; color: var(--white); letter-spacing: -0.025em; margin-bottom: 1.2rem; }
+.msv h2 { font-size: clamp(1.3rem, 2.5vw, 1.75rem); font-weight: 700; color: var(--navy); letter-spacing: -0.01em; margin-bottom: 0.5rem; position: relative; display: inline-block; padding-bottom: 0.5rem; }
+.msv h2::after { content: ''; position: absolute; bottom: 0; left: 0; width: 44px; height: 3px; background: linear-gradient(90deg, var(--red), var(--red-deep)); border-radius: 2px; }
+.msv h3 { font-size: 1.05rem; font-weight: 700; color: var(--navy); margin-bottom: 0.4rem; }
+.msv p { color: var(--black); margin-bottom: 1rem; font-size: 0.97rem; }
+.msv a { color: var(--red); text-decoration: none; }
+.msv a:hover { text-decoration: underline; }
+.msv ul { list-style: none; padding: 0; margin: 0 0 1rem; }
+.msv ul li { padding: 0.35rem 0 0.35rem 1.4rem; position: relative; font-size: 0.95rem; color: var(--black); }
+.msv ul li::before { content: ''; position: absolute; left: 0; top: 0.75rem; width: 7px; height: 7px; background: linear-gradient(135deg, var(--red), var(--red-deep)); border-radius: 50%; }
+/* ── Sections ─────────────────────────────────────────────────── */
+.msv__section { padding: 5rem 0; background: var(--white); }
+.msv__section--cream { padding: 5rem 0; background: linear-gradient(180deg, #f8f7f4 0%, #f2f4f8 100%); }
+.msv__section--dark { padding: 5rem 0; background: linear-gradient(135deg, var(--navy) 0%, #0d2240 55%, #0a1d38 100%); }
+.msv__section--dark h2 { color: var(--white) !important; }
+.msv__section--dark h2::after { background: linear-gradient(90deg, var(--yellow), #e8b820); }
+.msv__section--dark h3 { color: rgba(255,255,255,0.9) !important; }
+.msv .msv__section--dark p, .msv .msv__section--dark li { color: rgba(255,255,255,0.82); }
+.msv__section--dark ul li::before { background: linear-gradient(135deg, var(--yellow), #e8b820); }
+@media (max-width: 640px) { .msv__section, .msv__section--cream, .msv__section--dark { padding: 3.5rem 0; } }
+.msv__section-hd { margin-bottom: 3rem; }
+.msv__section-hd p { color: var(--muted); font-size: 1rem; margin-top: 0.75rem; line-height: 1.7; max-width: 600px; }
+/* ── Animations ──────────────────────────────────────────────────── */
+@keyframes msv-fade-up { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes msv-shimmer {
+  0%   { background-position: -400px 0; }
+  100% { background-position: 400px 0; }
+}
+.msv__shimmer {
+  background: linear-gradient(90deg, var(--yellow) 0%, #e8b820 25%, var(--red) 50%, #e8b820 75%, var(--yellow) 100%);
+  background-size: 400px 100%;
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: msv-shimmer 3.5s linear infinite;
+  display: inline;
+}
+/* ── Hero ─────────────────────────────────────────────────── */
+.msv__hero { background: linear-gradient(135deg, #0c1930 0%, #0f2540 40%, #162d50 70%, #1a3560 100%); padding: 5.5rem 0 5rem; position: relative; overflow: hidden; }
+.msv__hero::before { content: ''; position: absolute; top: -30%; right: -5%; width: 700px; height: 700px; background: radial-gradient(circle, rgba(190,0,17,0.1) 0%, transparent 65%); pointer-events: none; }
+.msv__hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, rgba(250,207,57,0.4), transparent); }
+.msv__hero-inner { max-width: 780px; animation: msv-fade-up 0.7s ease-out both; }
+.msv__eyebrow { display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(190,0,17,0.15); border: 1px solid rgba(190,0,17,0.4); color: #ff6b7a; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.35rem 0.9rem; border-radius: 100px; margin-bottom: 1.5rem; }
+.msv__eyebrow::before { content: ''; width: 6px; height: 6px; background: var(--red); border-radius: 50%; box-shadow: 0 0 6px var(--red); }
+.msv__hero p { color: rgba(255,255,255,0.78) !important; font-size: clamp(1rem, 2.2vw, 1.15rem); max-width: 640px; margin-bottom: 2.2rem; line-height: 1.75; }
+/* ── Breadcrumb ───────────────────────────────────────────── */
+.msv__breadcrumb { padding: 0.85rem 0; border-bottom: 1px solid var(--border); background: var(--white); }
+.msv__breadcrumb-inner { display: flex; align-items: center; gap: 0.5rem; font-size: 0.8rem; color: var(--muted); flex-wrap: wrap; }
+.msv__breadcrumb-inner a { color: var(--red); text-decoration: none; }
+.msv__breadcrumb-inner a:hover { text-decoration: underline; }
+.msv__breadcrumb-inner span { color: var(--muted); }
+/* ── Buttons ─────────────────────────────────────────────────── */
+.msv__btn-group { display: flex; flex-wrap: wrap; gap: 0.85rem; }
+.msv__btn { display: inline-block; padding: 0.85rem 2rem; font-size: 0.92rem; font-weight: 700; border-radius: 6px; text-decoration: none !important; transition: transform 0.15s, box-shadow 0.15s; }
+.msv__btn:hover { transform: translateY(-1px); text-decoration: none !important; }
+.msv .msv__btn--primary { background: linear-gradient(135deg, var(--red) 0%, var(--red-deep) 100%); color: #ffffff !important; box-shadow: 0 4px 16px rgba(190,0,17,0.38); }
+.msv .msv__btn--primary:hover { box-shadow: 0 6px 22px rgba(190,0,17,0.48); color: #ffffff !important; }
+.msv .msv__btn--outline-white { background: transparent; color: #ffffff !important; border: 1.5px solid rgba(255,255,255,0.5); }
+.msv .msv__btn--outline-white:hover { background: rgba(255,255,255,0.1); color: #ffffff !important; }
+/* ── Trust bar ──────────────────────────────────────────────── */
+.msv__trust-bar { background: var(--white); border-bottom: 1px solid var(--border); padding: 1rem 0; box-shadow: var(--shadow-sm); }
+.msv__trust-bar-inner { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.75rem; }
+.msv__trust-item { display: flex; align-items: center; gap: 0.5rem; font-size: 0.82rem; font-weight: 600; color: var(--navy); white-space: nowrap; }
+.msv__trust-item::before { content: ''; width: 7px; height: 7px; background: linear-gradient(135deg, var(--red), var(--red-deep)); border-radius: 50%; flex-shrink: 0; }
+/* ── Key facts strip ─────────────────────────────────────────── */
+.msv__facts { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; margin-bottom: 3rem; }
+@media (max-width: 760px) { .msv__facts { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 420px) { .msv__facts { grid-template-columns: 1fr; } }
+.msv__fact { background: var(--white); padding: 1.5rem 1.3rem; text-align: center; }
+.msv__fact-icon { font-size: 1.5rem; display: block; margin-bottom: 0.5rem; }
+.msv__fact-label { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); display: block; margin-bottom: 0.25rem; }
+.msv__fact-value { font-size: 0.97rem; font-weight: 700; color: var(--navy); line-height: 1.35; display: block; }
+/* ── Alert box ───────────────────────────────────────────────── */
+.msv__alert { border-radius: 10px; padding: 1.3rem 1.5rem; display: flex; gap: 1rem; align-items: flex-start; margin-bottom: 2rem; }
+.msv__alert--warn { background: #fffbea; border: 1px solid #f0d060; }
+.msv__alert--info { background: #eef4ff; border: 1px solid #a0bfff; }
+.msv__alert--red { background: #fef2f2; border: 1px solid #fca5a5; }
+.msv__alert--green { background: #f0fdf4; border: 1px solid #86efac; }
+.msv__alert-icon { font-size: 1.4rem; flex-shrink: 0; margin-top: 0.1rem; }
+.msv__alert p { font-size: 0.9rem; color: var(--black); margin: 0; line-height: 1.65; }
+.msv__alert strong { color: var(--navy); }
+/* ── Cost table ──────────────────────────────────────────────── */
+.msv__cost-table { width: 100%; border-collapse: collapse; font-size: 0.88rem; margin: 2rem 0; }
+.msv__cost-table thead tr { background: var(--navy); }
+.msv__cost-table th { padding: 1rem 1.25rem; text-align: left; color: var(--white); font-weight: 700; border-bottom: 2px solid var(--yellow); white-space: nowrap; }
+.msv__cost-table td { padding: 0.85rem 1.25rem; border-bottom: 1px solid var(--border); color: var(--black); }
+.msv__cost-table tbody tr:nth-child(even) { background: #f9fafb; }
+.msv__cost-table .cost-item { font-weight: 600; color: var(--navy); }
+.msv__cost-table .cost-range { color: var(--muted); font-weight: 600; }
+.msv__cost-table .cost-high { color: var(--red); font-weight: 700; }
+/* ── Cost boxes ──────────────────────────────────────────────── */
+.msv__cost-box { background: var(--white); border: 1.5px solid var(--border); border-radius: 12px; padding: 2rem; margin-bottom: 2rem; text-align: center; }
+.msv__cost-box h3 { font-size: 1rem; margin-bottom: 0.5rem; color: var(--navy); }
+.msv__cost-box .cost-value { font-size: 2rem; font-weight: 800; color: var(--red); margin: 1rem 0; }
+.msv__cost-box .cost-label { font-size: 0.8rem; color: var(--muted); font-weight: 600; }
+.msv__cost-boxes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-bottom: 3rem; }
+@media (max-width: 760px) { .msv__cost-boxes { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 420px) { .msv__cost-boxes { grid-template-columns: 1fr; } }
+/* ── FAQs ────────────────────────────────────────────────– */
+.msv__faq-list { display: flex; flex-direction: column; gap: 0; border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+.msv__faq-list details { border-bottom: 1px solid var(--border); background: var(--white); }
+.msv__faq-list details:last-child { border-bottom: none; }
+.msv__faq-list summary { padding: 1.2rem 1.5rem; font-size: 0.97rem; font-weight: 700; color: var(--navy); cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+.msv__faq-list summary::-webkit-details-marker { display: none; }
+.msv__faq-list summary::after { content: '+'; font-size: 1.3rem; font-weight: 400; color: var(--red); flex-shrink: 0; transition: transform 0.2s; }
+.msv__faq-list details[open] summary::after { transform: rotate(45deg); }
+.msv__faq-list details[open] summary { color: var(--red); }
+.msv__faq-answer { padding: 0 1.5rem 1.3rem; font-size: 0.92rem; color: var(--muted); line-height: 1.75; }
+.msv__faq-answer p { color: var(--muted); font-size: 0.92rem; margin-bottom: 0.75rem; }
+.msv__faq-answer p:last-child { margin-bottom: 0; }
+/* ── CTA band ────────────────────────────────────────────────── */
+.msv__cta-band { background: linear-gradient(135deg, var(--navy) 0%, #0d2240 60%, #0a1d38 100%); padding: 5rem 0; text-align: center; }
+.msv__cta-band h2 { color: var(--white) !important; display: block; }
+.msv__cta-band h2::after { left: 50%; transform: translateX(-50%); background: linear-gradient(90deg, var(--yellow), #e8b820); }
+.msv__cta-band p { color: rgba(255,255,255,0.75) !important; max-width: 560px; margin: 1rem auto 2.2rem; font-size: 1rem; }
+.msv__cta-band .msv__btn-group { justify-content: center; }
+/* ── Related guides ──────────────────────────────────────────── */
+.msv__related { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; }
+@media (max-width: 860px) { .msv__related { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 420px) { .msv__related { grid-template-columns: 1fr; } }
+.msv__related-card { background: var(--white); border: 1px solid var(--border); border-radius: 10px; padding: 1.3rem 1.25rem; text-decoration: none !important; transition: box-shadow 0.2s, transform 0.2s; display: block; }
+.msv__related-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); text-decoration: none !important; }
+.msv__related-icon { font-size: 1.5rem; display: block; margin-bottom: 0.6rem; }
+.msv__related-title { font-size: 0.88rem; font-weight: 700; color: var(--navy); display: block; margin-bottom: 0.3rem; }
+.msv__related-desc { font-size: 0.8rem; color: var(--muted); line-height: 1.55; }
+/* ── Disclaimer ──────────────────────────────────────────────── */
+.msv__disclaimer { background: var(--cream); border-top: 1px solid var(--border); padding: 2rem 0; }
+.msv__disclaimer p { font-size: 0.78rem; color: var(--muted); margin: 0; line-height: 1.65; }
+</style>
+
+<div class="msv">
+  <!-- Breadcrumb -->
+  <div class="msv__breadcrumb">
+    <div class="msv__container">
+      <div class="msv__breadcrumb-inner">
+        <a href="/">Home</a>
+        <span>/</span>
+        <a href="/non-lucrative-visa-spain/">Non-Lucrative Visa</a>
+        <span>/</span>
+        <span>Savings Requirements</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="msv__hero">
+    <div class="msv__container--narrow">
+      <div class="msv__hero-inner">
+        <div class="msv__eyebrow">Non-Lucrative Visa</div>
+        <h1>Savings Required for Non-Lucrative Visa Spain <span class="msv__shimmer">Complete Guide</span></h1>
+        <p>Understand IPREM-based requirements, monthly income calculations, bank statement documentation, and how to present evidence that satisfies Spanish consulates.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Bar -->
+  <div class="msv__trust-bar">
+    <div class="msv__container">
+      <div class="msv__trust-bar-inner">
+        <div class="msv__trust-item">€28,800 minimum annual threshold</div>
+        <div class="msv__trust-item">3-6 months bank statements required</div>
+        <div class="msv__trust-item">IPREM-based (400% main applicant)</div>
+        <div class="msv__trust-item">Dependants add 100% IPREM each</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Key Facts Strip -->
+  <section class="msv__section">
+    <div class="msv__container">
+      <div class="msv__facts">
+        <div class="msv__fact">
+          <span class="msv__fact-icon">💶</span>
+          <span class="msv__fact-label">Primary Applicant</span>
+          <span class="msv__fact-value">€2,400/month</span>
+        </div>
+        <div class="msv__fact">
+          <span class="msv__fact-icon">👥</span>
+          <span class="msv__fact-label">Per Dependant</span>
+          <span class="msv__fact-value">+€600/month</span>
+        </div>
+        <div class="msv__fact">
+          <span class="msv__fact-icon">📄</span>
+          <span class="msv__fact-label">Bank Statement</span>
+          <span class="msv__fact-value">3-6 months</span>
+        </div>
+        <div class="msv__fact">
+          <span class="msv__fact-icon">✓</span>
+          <span class="msv__fact-label">Account Types</span>
+          <span class="msv__fact-value">5+ accepted</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NLV Savings Thresholds -->
+  <section class="msv__section">
+    <div class="msv__container">
+      <div class="msv__section-hd">
+        <h2>NLV Savings Thresholds: How Much You Need</h2>
+        <p>The Non-Lucrative Visa is built on proven financial independence. Spain's Ministry of Inclusion, Social Security and Migration sets thresholds using IPREM (Indicador Público de Renta de Efectos Múltiples), a key economic indicator that adjusts annually.</p>
+      </div>
+
+      <div class="msv__alert msv__alert--info">
+        <span class="msv__alert-icon">ℹ️</span>
+        <p><strong>Key principle:</strong> Spanish consulates assess financial capability through either consistent monthly passive income OR a lump sum of savings. You typically need 12 months of the required threshold in savings.</p>
+      </div>
+
+      <h3>Current IPREM-Based Requirements (2024-2025)</h3>
+      <p>As of January 2024, Spain's monthly IPREM sits at approximately €600. This means:</p>
+
+      <table class="msv__cost-table">
+        <thead>
+          <tr>
+            <th>Applicant Type</th>
+            <th>IPREM %</th>
+            <th>Monthly Threshold</th>
+            <th>Suggested Lump Sum</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="cost-item">Single Applicant</td>
+            <td>400%</td>
+            <td>€2,400</td>
+            <td class="cost-high">€28,800</td>
+          </tr>
+          <tr>
+            <td class="cost-item">Couple (Joint)</td>
+            <td>400% + 100%</td>
+            <td>€3,000</td>
+            <td class="cost-high">€36,000</td>
+          </tr>
+          <tr>
+            <td class="cost-item">Single + 1 Dependant</td>
+            <td>400% + 100%</td>
+            <td>€3,000</td>
+            <td class="cost-high">€36,000</td>
+          </tr>
+          <tr>
+            <td class="cost-item">Single + 2 Dependants</td>
+            <td>400% + 200%</td>
+            <td>€3,600</td>
+            <td class="cost-high">€43,200</td>
+          </tr>
+          <tr>
+            <td class="cost-item">Couple + 1 Dependant</td>
+            <td>400% + 100% + 100%</td>
+            <td>€3,600</td>
+            <td class="cost-high">€43,200</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="msv__alert msv__alert--warn">
+        <span class="msv__alert-icon">⚠️</span>
+        <p><strong>Always verify current IPREM:</strong> These figures are based on early 2024 rates. IPREM adjusts annually on January 1st. Always confirm the current threshold with your Spanish consulate before submitting your application.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Savings vs Monthly Income -->
+  <section class="msv__section msv__section--cream">
+    <div class="msv__container">
+      <div class="msv__section-hd">
+        <h2>Savings vs Monthly Income: What Consulates Actually Want</h2>
+        <p>Spanish consulates evaluate financial independence through two primary mechanisms. Understanding the difference helps you present the strongest possible application.</p>
+      </div>
+
+      <h3>Monthly Passive Income Approach</h3>
+      <p>If you have documented monthly income from pensions, investments, rental property, or other passive sources, you must prove it meets the 400% IPREM threshold (€2,400/month single applicant). This requires:</p>
+      <ul>
+        <li>Official pension statements showing monthly disbursement amount</li>
+        <li>Bank statements demonstrating 6-12 months of consistent deposits</li>
+        <li>Investment account statements with documented yield</li>
+        <li>Rental income contracts and bank deposits</li>
+        <li>Proof that income is stable, recurring, and meets the threshold</li>
+      </ul>
+
+      <h3>Lump Sum Savings Approach (More Common)</h3>
+      <p>Most applicants use savings as primary proof. Consulates expect a lump sum equaling 12 months of the required threshold maintained in accessible accounts. For a single applicant, this means €28,800 minimum, though most consulates are satisfied with €30,000-€35,000 to provide a safety margin.</p>
+      <ul>
+        <li>Funds must be held in savings accounts, not tied up in fixed deposits</li>
+        <li>The balance must remain consistent across required bank statement period</li>
+        <li>Withdrawn amounts suggest reduced financial capacity</li>
+        <li>Deposits and withdrawals need explanation if erratic</li>
+        <li>Foreign currency accounts must be converted to EUR at application date</li>
+      </ul>
+
+      <div class="msv__alert msv__alert--green">
+        <span class="msv__alert-icon">✓</span>
+        <p><strong>Best approach:</strong> Combine both. If you have €30,000 in savings AND €1,500/month passive income, you strengthen your application significantly. Consulates see this as robust financial independence.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bank Account Types -->
+  <section class="msv__section">
+    <div class="msv__container">
+      <div class="msv__section-hd">
+        <h2>Which Bank Accounts Count Toward NLV Requirements</h2>
+        <p>Not all accounts are viewed equally. Spanish consulates prefer accounts that demonstrate genuine, accessible savings rather than speculative investments or high-turnover accounts.</p>
+      </div>
+
+      <h3>Strongly Accepted Account Types</h3>
+      <ul>
+        <li><strong>Regular Savings Accounts:</strong> Ideal. Demonstrates genuine savings intent and funds are accessible.</li>
+        <li><strong>Tax-Free Savings Accounts (ISAs in UK, equivalents elsewhere):</strong> Highly acceptable. Shows disciplined saving.</li>
+        <li><strong>Money Market Accounts:</strong> Acceptable if clearly savings-focused (not trading accounts).</li>
+        <li><strong>Fixed-Rate Savings Bonds (shorter term):</strong> Acceptable if accessible within 30 days of application.</li>
+        <li><strong>Investment Accounts with Conservative Holdings:</strong> Acceptable if showing stable, mature fund holdings (not day-trading).</li>
+      </ul>
+
+      <h3>Acceptable with Documentation</h3>
+      <ul>
+        <li><strong>Pension/Retirement Accounts:</strong> Count if withdrawal is permitted without excessive penalties. Must provide evidence of access conditions.</li>
+        <li><strong>Mutual Funds/ETF Holdings:</strong> Count if showing 6+ months stability. High-volatility or trading accounts may be questioned.</li>
+        <li><strong>Bond Holdings:</strong> Acceptable. Provide statements showing face value and current market value.</li>
+      </ul>
+
+      <h3>Generally Not Accepted or Heavily Scrutinized</h3>
+      <ul>
+        <li><strong>Checking/Current Accounts with High Turnover:</strong> Acceptable for documentation of income but not as primary savings proof.</li>
+        <li><strong>Cryptocurrency Holdings:</strong> Mostly rejected due to volatility. Some consulates may accept if converted to EUR and held in bank account.</li>
+        <li><strong>Real Estate Equity:</strong> Not counted unless liquid (sale in progress).</li>
+        <li><strong>Business Assets or Inventory:</strong> Not counted toward personal savings.</li>
+        <li><strong>Accounts in Others' Names:</strong> Not accepted unless you are a joint owner with documented equal ownership.</li>
+      </ul>
+
+      <div class="msv__alert msv__alert--warn">
+        <span class="msv__alert-icon">⚠️</span>
+        <p><strong>Diversify safely:</strong> Having €15,000 in savings account + €15,000 in a conservative investment account is better than all €30,000 in one account. It demonstrates broader financial maturity, but ensure investment accounts are stable holdings, not volatile day-trading positions.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bank Statement Requirements -->
+  <section class="msv__section msv__section--dark">
+    <div class="msv__container">
+      <div class="msv__section-hd">
+        <h2>Bank Statement & Documentation Requirements</h2>
+        <p>How you present your savings evidence is as important as the amount. Consulates examine bank statements closely for proof of genuine ownership, accessibility, and stability.</p>
+      </div>
+
+      <h3>Bank Statement Period & Frequency</h3>
+      <p>Most consulates require <strong>3 to 6 consecutive months</strong> of recent bank statements. Some may request up to 12 months. Key rules:</p>
+      <ul>
+        <li>Statements must be dated within 3 months of your application submission</li>
+        <li>All statements must be consecutive (no gaps)</li>
+        <li>Monthly statements preferred; quarterly statements are marginal but may be accepted</li>
+        <li>Always provide MORE months than the minimum if you have them (6 months is safer than 3)</li>
+      </ul>
+
+      <h3>Content Requirements for Each Statement</h3>
+      <ul>
+        <li>Account holder name (must match your passport)</li>
+        <li>Account type and number (partially obscured for security is acceptable)</li>
+        <li>Opening and closing balance for each month</li>
+        <li>Clear beginning balance exceeding the threshold</li>
+        <li>Consistent balance maintenance throughout the period</li>
+        <li>Account held at a regulated, recognizable bank</li>
+        <li>Bank name, address, and SWIFT code for international accounts</li>
+      </ul>
+
+      <h3>Additional Supporting Documents</h3>
+      <p>Beyond statements, provide:</p>
+      <ul>
+        <li><strong>Official Bank Letter:</strong> On bank letterhead, signed and dated, confirming account ownership, type, and current balance</li>
+        <li><strong>Certified Copies:</strong> Have statements notarized or certified by your bank where required</li>
+        <li><strong>Investment/Pension Statements:</strong> Latest official statement if claiming pension or investment funds</li>
+        <li><strong>Currency Conversion Certificates:</strong> If holding foreign currency, official bank conversion to EUR at application date</li>
+        <li><strong>Proof of Funds Origin:</strong> If large deposits appear, explain source (sale of property, inheritance, etc.)</li>
+      </ul>
+
+      <div class="msv__alert msv__alert--green">
+        <span class="msv__alert-icon">✓</span>
+        <p><strong>Pro tip:</strong> Request your bank letter at the same time you gather statements. Have the bank date it within 1-2 days of your application submission for maximum impact. The letter showing "as of [current date]" carries more weight than old statements.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Presenting Savings Evidence -->
+  <section class="msv__section">
+    <div class="msv__container">
+      <div class="msv__section-hd">
+        <h2>How to Present Savings Evidence Effectively</h2>
+        <p>The way you organize and present financial documentation affects how consulates perceive your application. Clarity and organization matter.</p>
+      </div>
+
+      <h3>Document Organization</h3>
+      <p>Prepare a dedicated financial dossier with clear structure:</p>
+      <ul>
+        <li><strong>Cover Sheet:</strong> Simple index listing all included documents and total declared funds</li>
+        <li><strong>Chronological Bank Statements:</strong> Oldest first, in clear plastic sleeves, with page numbers</li>
+        <li><strong>Official Bank Letter:</strong> Immediately after statements, prominently placed</li>
+        <li><strong>Investment/Pension Documentation:</strong> Clearly separated section with recent valuations</li>
+        <li><strong>Explanatory Notes:</strong> For any large deposits, withdrawals, or transfers, include brief explanation</li>
+      </ul>
+
+      <h3>What to Highlight</h3>
+      <ul>
+        <li><strong>Consistent Balance:</strong> Use subtle highlighting to show the starting balance exceeds threshold across all months</li>
+        <li><strong>Account Details:</strong> Ensure account holder name is clearly visible on each statement</li>
+        <li><strong>Account Type:</strong> Highlight "Savings Account" or "Investment Account" labels for clarity</li>
+        <li><strong>Currency (if non-EUR):</strong> Include conversion certificate showing EUR equivalent</li>
+      </ul>
+
+      <h3>Translation Requirements</h3>
+      <ul>
+        <li>All documents in non-Spanish language must be accompanied by official Spanish translation</li>
+        <li>Use a certified translator recognized by Spanish authorities (often available through Spanish embassies/consulates)</li>
+        <li>Both original and translation must be submitted</li>
+        <li>Bank letters in English are sometimes accepted without translation in major consulates, but safer to translate</li>
+      </ul>
+
+      <div class="msv__alert msv__alert--warn">
+        <span class="msv__alert-icon">⚠️</span>
+        <p><strong>Common mistake:</strong> Submitting single PDF scans of statements. Print them, organize chronologically, and submit in a clear folder. Consulates handle dozens of applications weekly—clear presentation helps yours stand out positively.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Currency & Foreign Accounts -->
+  <section class="msv__section msv__section--cream">
+    <div class="msv__container">
+      <div class="msv__section-hd">
+        <h2>Currency Considerations for Non-EUR Applicants</h2>
+        <p>If you hold savings in USD, GBP, AUD, CAD, or other non-euro currencies, conversion is necessary and consulates have strict rules about how it's done.</p>
+      </div>
+
+      <h3>Official Conversion Requirements</h3>
+      <p>Spanish consulates use official exchange rates. Personal or informal conversions are never accepted. Your options:</p>
+      <ul>
+        <li><strong>Bank Currency Certificate:</strong> Request from your bank a dated certificate showing conversion of your savings to EUR using their official rate for that date</li>
+        <li><strong>ECB Rate (European Central Bank):</strong> If your bank provides it, reference ECB's published daily rates from your application date</li>
+        <li><strong>Official Bank Rate:</strong> Your bank's published rate for that date, on letterhead</li>
+      </ul>
+
+      <h3>Timing Matters</h3>
+      <p>Do NOT convert funds weeks before application. Obtain the conversion certificate within 3-5 days of your application submission to show current market rates. Exchange rates fluctuate daily, and using an old rate can cause problems.</p>
+
+      <h3>Example: USD Applicant</h3>
+      <p>If you have $40,000 USD and the EUR/USD rate on your application date is 1:0.92, your conversion is $40,000 × 0.92 = EUR 36,800. Obtain official certificate from your bank showing this calculation dated at application time.</p>
+
+      <div class="msv__alert msv__alert--info">
+        <span class="msv__alert-icon">ℹ️</span>
+        <p><strong>Prudent approach:</strong> Hold slightly more than the minimum in your home currency to account for exchange fluctuations. If EUR minimum is €28,800 and USD rate is 0.92, holding $32,500+ protects you if rates shift.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Common Mistakes -->
+  <section class="msv__section">
+    <div class="msv__container">
+      <div class="msv__section-hd">
+        <h2>Common Mistakes to Avoid with Savings Proof</h2>
+        <p>Many otherwise-solid applications face delays or rejection due to presentation errors. Learn what consulates flag.</p>
+      </div>
+
+      <h3>Documentation Errors</h3>
+      <ul>
+        <li><strong>Missing Recent Dates:</strong> Bank statements older than 3 months or no current bank letter. Update documents immediately before submission.</li>
+        <li><strong>Inconsistent Name Spelling:</strong> Account shows "John Smith" but your passport shows "Jon Smith". Ensure consistency across all documents.</li>
+        <li><strong>Incomplete IBAN/Account Details:</strong> Some statements show abbreviated account numbers. Request full details or bank letter confirming account ownership.</li>
+        <li><strong>Untranslated Non-Spanish Documents:</strong> Submitting English-only bank statements when Spanish translation is required. Always provide certified Spanish translations.</li>
+      </ul>
+
+      <h3>Balance & Presentation Issues</h3>
+      <ul>
+        <li><strong>Borderline Balances:</strong> Account shows exactly €28,800 but then drops to €27,000 mid-period. Consulates want to see consistent safety margin, ideally 10-20% above threshold.</li>
+        <li><strong>Erratic Deposits/Withdrawals:</strong> Large weekly transfers in/out suggest funds aren't genuinely yours. Explain patterns if present.</li>
+        <li><strong>New Account (Recently Opened):</strong> If account opened 2 months before application, only 2 months of statements exist. Explanation and longer history helps.</li>
+        <li><strong>Account Showing Overdraft or Near-Zero Balance Periods:</strong> Even brief dips below threshold are flagged as concerning.</li>
+      </ul>
+
+      <h3>Structural Problems</h3>
+      <ul>
+        <li><strong>Mixing Savings with Joint Account Funds:</strong> If claiming €30,000 joint savings but account is 50/50 with spouse, your portion is only €15,000. Clarify ownership percentages.</li>
+        <li><strong>No Evidence of Account Accessibility:</strong> Money locked in 5-year fixed deposit may not count. Show that funds are accessible (savings account, short-term bonds, investment account with no lock-in).</li>
+        <li><strong>Missing Beneficiary Proof:</strong> If funds are in a trust or beneficiary account in your name, provide documentation confirming you have access.</li>
+      </ul>
+
+      <div class="msv__alert msv__alert--red">
+        <span class="msv__alert-icon">✗</span>
+        <p><strong>Fatal errors:</strong> Using different surnames on statements vs passport, claiming joint funds without joint account documentation, or submitting statements older than 3 months will cause automatic rejection or request for resubmission, delaying your visa.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Joint & Couple Applications -->
+  <section class="msv__section msv__section--cream">
+    <div class="msv__container">
+      <div class="msv__section-hd">
+        <h2>Joint Savings & Couple Applications</h2>
+        <p>If you're applying as a couple or using shared savings with a co-applicant, documentation requirements change significantly.</p>
+      </div>
+
+      <h3>Couple Applying Together (Recommended Structure)</h3>
+      <p>When both spouses apply for NLV simultaneously, the requirement is 400% IPREM main applicant + 100% IPREM second applicant. For 2024-2025, this equals approximately €3,000/month or €36,000 lump sum. Best approach:</p>
+      <ul>
+        <li><strong>Joint Savings Account:</strong> Hold at least €36,000 in a joint account (both names listed). Simplest for documentation.</li>
+        <li><strong>Individual + Shared Accounts:</strong> One spouse has €25,000 in individual account, couple has €11,000 in joint. Each provides statements. Total = €36,000 available.</li>
+        <li><strong>Separate Accounts:</strong> Each spouse maintains individual account meeting own threshold requirements separately.</li>
+      </ul>
+
+      <h3>Single Applicant with Spouse's Funds</h3>
+      <p>If one spouse applies (e.g., retiring early, other remains working) but relies on joint savings:</p>
+      <ul>
+        <li>Joint account statements must show both names</li>
+        <li>Notarized letter from spouse confirming co-ownership and applicant's right to use funds</li>
+        <li>Marriage certificate (official copy, potentially translated)</li>
+        <li>Both spouses' passports to confirm relationship and documentation validity</li>
+        <li>Individual account statements not necessary if joint account covers threshold</li>
+      </ul>
+
+      <h3>Single Applicant Supported by Family Member</h3>
+      <p>If relying on parent or adult child's funds (rare but possible):</p>
+      <ul>
+        <li>Legal documentation proving access rights (power of attorney, trust agreement, notarized permission)</li>
+        <li>Ideally, joint account with both names listed</li>
+        <li>If separate account, notarized letter from account holder permitting applicant to use funds</li>
+        <li>Consulates scrutinize these heavily; joint account is much stronger</li>
+      </ul>
+
+      <div class="msv__alert msv__alert--warn">
+        <span class="msv__alert-icon">⚠️</span>
+        <p><strong>Key distinction:</strong> Joint account (both names, both signatures needed to withdraw) is strongest. "I can use my spouse's account" without formal joint ownership is weak and may be rejected, even with permission letter.</p>
+      </div>
+
+      <h3>Remarriage & Blended Finances</h3>
+      <p>If funds come from previous marriage (alimony, asset settlement, etc.):</p>
+      <ul>
+        <li>Divorce decree or settlement document confirming your ownership/right to funds</li>
+        <li>Bank statements showing transfer to your account (establishes personal ownership)</li>
+        <li>Timeline: if recent (within 6 months), explanation helps consulate understand timing</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Borderline Savings -->
+  <section class="msv__section">
+    <div class="msv__container">
+      <div class="msv__section-hd">
+        <h2>What Happens If Your Savings Are Borderline</h2>
+        <p>Not everyone has exactly €30,000. If you're below the threshold, you have options—but they require strategy.</p>
+      </div>
+
+      <h3>Supplementary Income + Lower Savings</h3>
+      <p>If you have €22,000 savings but €1,800/month pension income, some consulates may accept this combination. Requirements:</p>
+      <ul>
+        <li>Documented monthly income must be stable and verifiable</li>
+        <li>6-12 months of bank statement showing income deposits</li>
+        <li>Savings should still be substantial (€15,000+), not minimal</li>
+        <li>Official pension/income statement confirming amount and duration</li>
+      </ul>
+
+      <h3>Time to Build vs. Apply Now</h3>
+      <p>If you're €5,000 short and savings are clearly growing, consider:</p>
+      <ul>
+        <li><strong>Delay 3-6 months:</strong> Reach threshold and apply with stronger position</li>
+        <li><strong>Apply now with explanation:</strong> Show savings growth trajectory (€1,000/month increases), explain timing</li>
+        <li><strong>Add guarantor/sponsor:</strong> Some consulates accept co-signer (rare)</li>
+      </ul>
+
+      <h3>Co-Signer or Guarantor Route (Rare)</h3>
+      <p>A few consulates accept financial guarantees from family members abroad. If pursuing this:</p>
+      <ul>
+        <li>Co-signer provides notarized affidavit and proof of funds</li>
+        <li>Co-signer must have significant financial resources (usually 1.5-2x threshold)</li>
+        <li>Consulate acceptance varies widely; check with your specific office first</li>
+        <li>Much less common than savings-based approach</li>
+      </ul>
+
+      <div class="msv__alert msv__alert--info">
+        <span class="msv__alert-icon">ℹ️</span>
+        <p><strong>Margin of safety:</strong> If €28,800 is minimum, aim for €30,000-€35,000. A 5-10% buffer protects you against exchange fluctuations or minor changes in IPREM between application and approval.</p>
+      </div>
+
+      <h3>Application Refusal & Appeals</h3>
+      <p>If rejected for insufficient funds:</p>
+      <ul>
+        <li>Request written explanation of shortfall amount</li>
+        <li>Consulate may allow resubmission once you meet threshold</li>
+        <li>No formal appeal exists in most cases, but consulate may reconsider if new evidence submitted</li>
+        <li>Waiting 3-6 months and reapplying is typically the only remedy</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- CTA Section 1 -->
+  <section class="msv__cta-band">
+    <div class="msv__container--narrow">
+      <h2>Ready to Prepare Your Savings Documentation?</h2>
+      <p>Organize your financial proof strategically. The clearer your documentation, the faster your NLV approval. Review this guide, gather your statements, and ensure compliance with all consulate requirements.</p>
+      <div class="msv__btn-group">
+        <a href="/non-lucrative-visa-documents/" class="msv__btn msv__btn--primary">Complete Document Checklist</a>
+        <a href="https://dashboard.platinumlegalspain.com/nlv" class="msv__btn msv__btn--outline-white">Check Your Eligibility</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Additional Considerations -->
+  <section class="msv__section">
+    <div class="msv__container">
+      <div class="msv__section-hd">
+        <h2>Additional Considerations & Special Scenarios</h2>
+        <p>Edge cases and special situations require tailored approaches.</p>
+      </div>
+
+      <h3>Inheritance & Recently Received Funds</h3>
+      <p>If your savings grew recently through inheritance or property sale, you're in a stronger position than someone rebuilding savings. Consulates understand that windfall events occur. Provide:</p>
+      <ul>
+        <li>Estate documentation (will, inheritance letter from lawyer)</li>
+        <li>Property sale contract and notary deed (for sale proceeds)</li>
+        <li>Bank transfer records showing funds deposited to your account</li>
+        <li>Timeline showing funds now in account for 2-3 months (to prevent money laundering concerns)</li>
+      </ul>
+
+      <h3>Separated/Divorced Applicants</h3>
+      <p>If savings were previously joint with a separated spouse, establish clear personal ownership:</p>
+      <ul>
+        <li>Divorce/separation decree clearly allocating funds to you</li>
+        <li>Bank statements showing separated accounts in your sole name</li>
+        <li>Timeline: funds should be in your separate account for 2+ months before application</li>
+      </ul>
+
+      <h3>Self-Employed & Business Owners</h3>
+      <p>If you've extracted profits from business to personal savings:</p>
+      <ul>
+        <li>Business financial statements (last 1-2 years)</li>
+        <li>Business tax returns showing business income</li>
+        <li>Personal tax returns showing your income/distributions</li>
+        <li>Bank statements showing business profit transfers to personal account</li>
+        <li>Note: Business assets themselves rarely count; personal savings do</li>
+      </ul>
+
+      <h3>Retirees & Pension Recipients</h3>
+      <p>If your income is primarily pension:</p>
+      <ul>
+        <li>Official pension statement (from government or private pension provider)</li>
+        <li>12 months of bank statements showing pension deposits</li>
+        <li>Pension documentation confirming amount is guaranteed/permanent</li>
+        <li>Savings are supplementary but strengthen case significantly</li>
+      </ul>
+
+      <h3>Remote Workers & Independent Contractors</h3>
+      <p>If income comes from remote work or freelancing:</p>
+      <ul>
+        <li>Contract(s) with clients showing income terms</li>
+        <li>Recent invoices and proof of payment</li>
+        <li>6-12 months of bank statements showing consistent deposits</li>
+        <li>Note: Consulates prefer passive income (pensions) over active work, but documented income + savings is acceptable</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Related Guides -->
+  <section class="msv__section msv__section--cream">
+    <div class="msv__container">
+      <div class="msv__section-hd">
+        <h2>Related Guides & Resources</h2>
+        <p>Explore comprehensive guides covering all aspects of the Non-Lucrative Visa application and Spanish residency.</p>
+      </div>
+      <div class="msv__related">
+        <a href="/non-lucrative-visa-spain/" class="msv__related-card">
+          <span class="msv__related-icon">🇪🇸</span>
+          <span class="msv__related-title">Non-Lucrative Visa Spain</span>
+          <span class="msv__related-desc">Complete overview of NLV eligibility, requirements, and application process</span>
+        </a>
+        <a href="/non-lucrative-visa-income-requirements/" class="msv__related-card">
+          <span class="msv__related-icon">💰</span>
+          <span class="msv__related-title">Income Requirements</span>
+          <span class="msv__related-desc">Monthly income thresholds and documentation for passive income applicants</span>
+        </a>
+        <a href="/non-lucrative-visa-requirements/" class="msv__related-card">
+          <span class="msv__related-icon">📋</span>
+          <span class="msv__related-title">NLV Requirements</span>
+          <span class="msv__related-desc">Complete checklist of all NLV eligibility and documentation requirements</span>
+        </a>
+        <a href="/non-lucrative-visa-documents/" class="msv__related-card">
+          <span class="msv__related-icon">📄</span>
+          <span class="msv__related-title">NLV Document Checklist</span>
+          <span class="msv__related-desc">All required documents and supporting evidence for strong application</span>
+        </a>
+        <a href="/non-lucrative-visa-application-process/" class="msv__related-card">
+          <span class="msv__related-icon">✓</span>
+          <span class="msv__related-title">Application Process</span>
+          <span class="msv__related-desc">Step-by-step guide to submitting your NLV application to Spanish consulates</span>
+        </a>
+        <a href="/non-lucrative-visa-cost/" class="msv__related-card">
+          <span class="msv__related-icon">💳</span>
+          <span class="msv__related-title">NLV Visa Cost</span>
+          <span class="msv__related-desc">Breakdown of visa application fees, residence card costs, and related expenses</span>
+        </a>
+        <a href="/non-lucrative-visa-health-insurance/" class="msv__related-card">
+          <span class="msv__related-icon">🏥</span>
+          <span class="msv__related-title">Health Insurance Requirements</span>
+          <span class="msv__related-desc">Private health insurance options and coverage thresholds for NLV</span>
+        </a>
+        <a href="/non-lucrative-visa-timeline/" class="msv__related-card">
+          <span class="msv__related-icon">⏱️</span>
+          <span class="msv__related-title">NLV Timeline</span>
+          <span class="msv__related-desc">Expected processing timeframes from application to visa issuance</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="msv__section">
+    <div class="msv__container--narrow">
+      <div class="msv__section-hd">
+        <h2>Frequently Asked Questions</h2>
+        <p>Answers to the most common questions about NLV savings requirements and documentation.</p>
+      </div>
+      <div class="msv__faq-list">
+        <details>
+          <summary>How much savings do you need for a Non-Lucrative Visa in Spain?</summary>
+          <div class="msv__faq-answer">
+            <p>The primary amount is based on 400% of Spain's IPREM (Indicador Público de Renta de Efectos Múltiples). As of 2024-2025, this equals approximately €2,400 per month or €28,800 annually for a single applicant. Additional dependants require an additional 100% IPREM each (approximately €600/month). This is the minimum consistent monthly income or lump sum savings expected by Spanish consulates.</p>
+          </div>
+        </details>
+        <details>
+          <summary>What is the difference between savings and monthly income for the NLV?</summary>
+          <div class="msv__faq-answer">
+            <p>Monthly income (from pensions, investments, or rental income) is assessed against the 400% IPREM threshold. Savings are typically required to cover a lump sum of 12 months of this threshold (€28,800 minimum for single applicants). Some consulates may accept a lower savings figure if you have documented monthly passive income, but savings remain the primary requirement.</p>
+          </div>
+        </details>
+        <details>
+          <summary>What bank accounts count toward NLV savings requirements?</summary>
+          <div class="msv__faq-answer">
+            <p>Regular savings accounts, ISAs/tax-free accounts, investment accounts, and pension savings typically count. Checking accounts with high monthly turnover are less favorable. Consulates prefer accounts showing consistent balance rather than frequent deposits and withdrawals. The funds must be accessible and not tied up in long-term fixed-term deposits, though some consulates may accept pension funds if withdrawal is available.</p>
+          </div>
+        </details>
+        <details>
+          <summary>How many months of bank statements do I need for the NLV?</summary>
+          <div class="msv__faq-answer">
+            <p>Most Spanish consulates require 3-6 months of recent bank statements showing consistent balances above the minimum threshold. Some may request up to 12 months to demonstrate stability and proof that the funds are genuinely yours. The statements should clearly show your name as the account holder and regular balance maintenance rather than one-off deposits.</p>
+          </div>
+        </details>
+        <details>
+          <summary>Can I use joint savings for the Non-Lucrative Visa?</summary>
+          <div class="msv__faq-answer">
+            <p>Joint accounts are permissible if you can prove your proportionate ownership. For couples applying together, you may combine savings if both are listed as owners. However, consulates typically require clear documentation of each applicant's share. Accounts belonging solely to a spouse or partner may not count unless the applicant is a named joint account holder.</p>
+          </div>
+        </details>
+        <details>
+          <summary>What happens if my savings are below the NLV threshold?</summary>
+          <div class="msv__faq-answer">
+            <p>Applications with savings below the required threshold are typically rejected or require supplementary evidence. Options include combining savings with documented monthly income, adding a co-signer or guarantor, or delaying the application until you accumulate sufficient funds. Some consulates may allow slight flexibility (5-10%) if accompanied by strong employment history or pension documentation.</p>
+          </div>
+        </details>
+        <details>
+          <summary>Do I need to convert non-EUR savings to euros for the NLV application?</summary>
+          <div class="msv__faq-answer">
+            <p>Most consulates require bank statements clearly converted to euros using official exchange rates from the date of the application. If you hold accounts in USD, GBP, or other currencies, obtain official currency conversion certificates from your bank dated within days of your application submission. Never use personal or informal conversion rates; consulates use official ECB or official bank rates.</p>
+          </div>
+        </details>
+        <details>
+          <summary>What documents prove my savings for the NLV application?</summary>
+          <div class="msv__faq-answer">
+            <p>Essential documents include: 3-6 months of consecutive bank statements, official bank letter on letterhead confirming account ownership and balance, investment statements or pension fund valuations, certified copies of savings books or passbooks, and proof of currency conversion if applicable. Consulates may also request evidence of funds' origin (inheritance, sale of property, etc.) if savings appear recently deposited.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section 2 -->
+  <section class="msv__cta-band">
+    <div class="msv__container--narrow">
+      <h2>Start Your NLV Application Today</h2>
+      <p>Don't leave your visa approval to chance. Ensure your savings documentation meets all Spanish consulate requirements. Get expert guidance and complete your application with confidence.</p>
+      <div class="msv__btn-group">
+        <a href="/non-lucrative-visa-application-process/" class="msv__btn msv__btn--primary">Begin Application Process</a>
+        <a href="https://dashboard.platinumlegalspain.com/nlv" class="msv__btn msv__btn--outline-white">Check Your Eligibility</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Additional Resources -->
+  <section class="msv__section">
+    <div class="msv__container">
+      <div class="msv__section-hd">
+        <h2>Additional Resources & Related Topics</h2>
+        <p>Explore more guides and topics relevant to your Non-Lucrative Visa application and Spanish residency planning.</p>
+      </div>
+      <div class="msv__related">
+        <a href="/non-lucrative-visa-renewal/" class="msv__related-card">
+          <span class="msv__related-icon">🔄</span>
+          <span class="msv__related-title">NLV Renewal</span>
+          <span class="msv__related-desc">Renewing your Non-Lucrative Visa after initial approval and residency</span>
+        </a>
+        <a href="/non-lucrative-visa-tax-spain/" class="msv__related-card">
+          <span class="msv__related-icon">💸</span>
+          <span class="msv__related-title">Tax Obligations</span>
+          <span class="msv__related-desc">Tax residency and obligations for NLV holders in Spain</span>
+        </a>
+        <a href="/non-lucrative-visa-faq/" class="msv__related-card">
+          <span class="msv__related-icon">❓</span>
+          <span class="msv__related-title">NLV FAQ</span>
+          <span class="msv__related-desc">Comprehensive answers to frequently asked questions about the Non-Lucrative Visa</span>
+        </a>
+        <a href="/non-lucrative-visa-americans/" class="msv__related-card">
+          <span class="msv__related-icon">🇺🇸</span>
+          <span class="msv__related-title">NLV for Americans</span>
+          <span class="msv__related-desc">Special considerations and guidance for US citizens applying for NLV</span>
+        </a>
+        <a href="/non-lucrative-visa-uk/" class="msv__related-card">
+          <span class="msv__related-icon">🇬🇧</span>
+          <span class="msv__related-title">NLV for UK Citizens</span>
+          <span class="msv__related-desc">Post-Brexit NLV requirements and documentation for British applicants</span>
+        </a>
+        <a href="/digital-nomad-visa-spain/" class="msv__related-card">
+          <span class="msv__related-icon">💻</span>
+          <span class="msv__related-title">Digital Nomad Visa</span>
+          <span class="msv__related-desc">Alternative visa option for remote workers and freelancers</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Disclaimer -->
+  </section>
+</div>
+
+<!-- FRAGMENT_END -->
+</main>
+
+
+<!-- ═══════════════════════════════════════════════════
+     SITE FOOTER
+     ═══════════════════════════════════════════════════ -->
+<footer class="msv-footer" role="contentinfo">
+
+  <div class="msv-footer__top">
+
+    <!-- Brand column -->
+    <div class="msv-footer__brand">
+      <a href="/" class="msv-footer__logo" aria-label="My Spanish Visa"><img src="/assets/images/msv-logo-white.png" alt="My Spanish Visa" height="40" style="display:block;"></a>
+      <p class="msv-footer__tagline">
+        Specialist Spain visa &amp; residency guidance for English-speaking foreigners.
+        A service of Platinum Legal Spain.
+      </p>
+      <div class="msv-footer__trust">
+        <span class="msv-footer__trust-item">All English. No barriers.</span>
+        <span class="msv-footer__trust-item">Solicitors &amp; immigration specialists</span>
+        <span class="msv-footer__trust-item">100% online process</span>
+      </div>
+    </div>
+
+    <!-- Visas column -->
+    <div>
+      <div class="msv-footer__col-title">Visas</div>
+      <ul class="msv-footer__links">
+        <li><a href="/non-lucrative-visa-spain/">Non-Lucrative Visa</a></li>
+        <li><a href="/digital-nomad-visa-spain/">Digital Nomad Visa</a></li>
+        <li><a href="/student-visa-spain/">Student Visa</a></li>
+        <li><a href="/spain-visa-renewal/">Visa Renewals</a></li>
+        <li><a href="/best-visa-move-to-spain/">Compare All Visas</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/nlv">Apply: NLV</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/dnv">Apply: DNV</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/student-visa">Apply: Student Visa</a></li>
+      </ul>
+    </div>
+
+    <!-- Resources column -->
+    <div>
+      <div class="msv-footer__col-title">Resources</div>
+      <ul class="msv-footer__links">
+        <li><a href="/blog/">Blog &amp; Guides</a></li>
+        <li><a href="/move-to-spain/">Move to Spain Guide</a></li>
+        <li><a href="/visa-eligibility-quiz/">Eligibility Quiz</a></li>
+        <li><a href="/spain-visa-checklist/">Document Checklists</a></li>
+        <li><a href="/spain-visa-requirements/">Visa Requirements</a></li>
+        <li><a href="/spain-nie-number/">NIE Number Guide</a></li>
+        <li><a href="/spain-tie-card/">TIE Card Guide</a></li>
+      </ul>
+    </div>
+
+    <!-- Company column -->
+    <div>
+      <div class="msv-footer__col-title">Company</div>
+      <ul class="msv-footer__links">
+        <li><a href="/about-us/">About Us</a></li>
+        <li><a href="/testimonials/">Client Reviews</a></li>
+        <li><a href="/why-choose-us/">Why Choose Us</a></li>
+        <li><a href="/contact-us.html">Contact</a></li>
+        <li><a href="https://www.platinumlegalspain.com" rel="noopener">Platinum Legal Spain</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/nlv">Client Portal</a></li>
+      </ul>
+    </div>
+
+  </div><!-- /.msv-footer__top -->
+
+  <div class="msv-footer__bottom">
+    <div class="msv-footer__bottom-inner">
+      <p class="msv-footer__disclaimer">
+        <strong style="color:rgba(255,255,255,0.5);">Disclaimer:</strong>
+        My Spanish Visa provides visa processing support and is not a law firm. Content on this site is for informational purposes only and does not constitute legal advice. Immigration rules change frequently — always verify requirements with official sources or a qualified specialist. My Spanish Visa is a trading name of Platinum Legal Spain.
+      </p>
+      <span class="msv-footer__copyright">© 2026 My Spanish Visa. All rights reserved.</span>
+    </div>
+  </div>
+
+</footer>
+
+</body>
+</html>

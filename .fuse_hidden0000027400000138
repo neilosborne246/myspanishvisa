@@ -1,0 +1,1292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- ═══════════════════════════════════════════════════════════════════
+       PAGE-SPECIFIC HEAD — replace block below per page:
+       <title>Best Health Insurance Nlv Spain | My Spanish Visa</title>
+       <meta name="description" content="…">
+       <meta property="og:title" content="…">
+       <meta property="og:description" content="…">
+       <meta property="og:url" content="https://www.myspanishvisa.com/…">
+       <meta property="og:image" content="…">
+       <link rel="canonical" href="https://www.myspanishvisa.com/…">
+       <script type="application/ld+json">…</script>
+       ═══════════════════════════════════════════════════════════════════ -->
+  <title>My Spanish Visa — Spain Visa &amp; Residency Specialists</title>
+  <meta name="description" content="My Spanish Visa helps English-speaking foreigners move to Spain. Expert guidance on Non-Lucrative Visa, Digital Nomad Visa, Student Visa, renewals and more.">
+
+  <!-- Shared Open Graph defaults -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="My Spanish Visa">
+  <meta property="og:image" content="https://www.myspanishvisa.com/assets/images/og/og-myspanishvisa-default.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@myspanishvisa">
+
+  <style>
+/* ═══════════════════════════════════════════════════════════════
+   GLOBAL SHELL — nav + footer only.
+   Page-specific CSS lives inside each fragment's own <style> block.
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── iOS overflow safety ── */
+html, body { max-width: 100%; overflow-x: clip; margin: 0; padding: 0; }
+*, *::before, *::after { box-sizing: border-box; }
+
+/* ── Brand tokens (root-level so all fragments inherit) ── */
+:root {
+  --navy:      #0c1930;
+  --navy-mid:  #1a3a5c;
+  --red:       #be0011;
+  --red-deep:  #8c000d;
+  --yellow:    #facf39;
+  --cream:     #f8f7f4;
+  --white:     #ffffff;
+  --black:     #1a1a1a;
+  --muted:     #5a6478;
+  --border:    #dce3ed;
+  --shadow-sm: 0 2px 8px rgba(12,25,48,0.08);
+  --shadow-md: 0 6px 24px rgba(12,25,48,0.13);
+}
+
+body {
+  font-family: 'Inter', 'Segoe UI', system-ui, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.75;
+  color: var(--black);
+  background: #fff;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   SITE NAV
+   ───────────────────────────────────────────────────────────── */
+.msv-nav {
+  position: sticky;
+  top: 0;
+  z-index: 9000;
+  background: var(--navy);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 2px 12px rgba(12,25,48,0.22);
+}
+.msv-nav__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+  gap: 1.5rem;
+}
+
+/* Logo */
+.msv-nav__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+.msv-nav__logo-flag {
+  font-size: 1.3rem;
+  line-height: 1;
+}
+.msv-nav__logo-text {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+.msv-nav__logo-text span {
+  color: var(--yellow);
+}
+
+/* Links */
+.msv-nav__links {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.msv-nav__links > li {
+  position: relative;
+}
+.msv-nav__links > li > a,
+.msv-nav__links > li > button {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.5rem 0.9rem;
+  font-size: 0.87rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.85);
+  text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: color 0.15s, background 0.15s;
+  white-space: nowrap;
+  height: 64px;
+}
+.msv-nav__links > li > a:hover,
+.msv-nav__links > li > button:hover,
+.msv-nav__links > li:focus-within > a,
+.msv-nav__links > li:focus-within > button {
+  color: #fff;
+  background: rgba(255,255,255,0.08);
+}
+.msv-nav__chevron {
+  font-size: 0.65rem;
+  opacity: 0.7;
+  transition: transform 0.2s;
+}
+.msv-nav__links > li:focus-within .msv-nav__chevron,
+.msv-nav__links > li:hover .msv-nav__chevron {
+  transform: rotate(180deg);
+}
+
+/* Dropdown */
+.msv-nav__dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 230px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  box-shadow: var(--shadow-md);
+  padding: 0.5rem 0;
+  z-index: 200;
+}
+.msv-nav__links > li:hover .msv-nav__dropdown,
+.msv-nav__links > li:focus-within .msv-nav__dropdown {
+  display: block;
+}
+.msv-nav__dropdown a {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.6rem 1.1rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--navy);
+  text-decoration: none;
+  transition: background 0.12s;
+}
+.msv-nav__dropdown a:hover {
+  background: var(--cream);
+  color: var(--red);
+}
+.msv-nav__dropdown-icon {
+  width: 24px;
+  height: 24px;
+  background: var(--cream);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+.msv-nav__dropdown-divider {
+  height: 1px;
+  background: var(--border);
+  margin: 0.4rem 0;
+}
+
+/* CTA button */
+.msv-nav__cta {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.55rem 1.2rem;
+  background: var(--red);
+  color: #fff !important;
+  font-size: 0.85rem;
+  font-weight: 700;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.15s, box-shadow 0.15s;
+  white-space: nowrap;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(190,0,17,0.3);
+}
+.msv-nav__cta:hover {
+  background: var(--red-deep);
+  box-shadow: 0 4px 14px rgba(190,0,17,0.4);
+  text-decoration: none;
+}
+
+/* Hamburger */
+.msv-nav__burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.4rem;
+  border-radius: 5px;
+}
+.msv-nav__burger span {
+  width: 22px;
+  height: 2px;
+  background: #fff;
+  border-radius: 2px;
+  transition: transform 0.2s, opacity 0.2s;
+  display: block;
+}
+
+/* Mobile nav */
+.msv-nav__mobile {
+  display: none;
+  flex-direction: column;
+  background: var(--navy-mid);
+  padding: 1rem 1.5rem 1.5rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+.msv-nav__mobile.open { display: flex; }
+.msv-nav__mobile a {
+  padding: 0.65rem 0;
+  color: rgba(255,255,255,0.9);
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+.msv-nav__mobile a:hover { color: var(--yellow); }
+.msv-nav__mobile .msv-nav__mobile-sub {
+  padding-left: 1rem;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: rgba(255,255,255,0.7);
+}
+.msv-nav__mobile-cta {
+  margin-top: 1rem;
+  background: var(--red);
+  color: #fff !important;
+  border-radius: 6px;
+  text-align: center;
+  padding: 0.75rem 1rem !important;
+  border-bottom: none !important;
+}
+
+@media (max-width: 900px) {
+  .msv-nav__links { display: none; }
+  .msv-nav__cta { display: none; }
+  .msv-nav__burger { display: flex; }
+}
+@media (max-width: 480px) {
+  .msv-nav__inner { padding: 0 1rem; }
+}
+
+/* ─────────────────────────────────────────────────────────────
+   SITE FOOTER
+   ───────────────────────────────────────────────────────────── */
+.msv-footer {
+  background: var(--navy);
+  color: rgba(255,255,255,0.75);
+  overflow-x: clip;
+}
+.msv-footer__top {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem 3rem;
+  display: grid;
+  grid-template-columns: 280px 1fr 1fr 1fr;
+  gap: 3rem;
+}
+@media (max-width: 900px) {
+  .msv-footer__top { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
+}
+@media (max-width: 560px) {
+  .msv-footer__top { grid-template-columns: 1fr; gap: 2rem; padding: 3rem 1.2rem 2rem; }
+}
+
+.msv-footer__brand {}
+.msv-footer__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  margin-bottom: 1rem;
+}
+.msv-footer__logo-flag { font-size: 1.3rem; }
+.msv-footer__logo-text {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -0.01em;
+}
+.msv-footer__logo-text span { color: var(--yellow); }
+.msv-footer__tagline {
+  font-size: 0.83rem;
+  color: rgba(255,255,255,0.55);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+.msv-footer__trust {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+.msv-footer__trust-item {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.65);
+}
+.msv-footer__trust-item::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  background: var(--yellow);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.msv-footer__col-title {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.4);
+  margin-bottom: 1rem;
+}
+.msv-footer__links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.msv-footer__links a {
+  font-size: 0.87rem;
+  color: rgba(255,255,255,0.68);
+  text-decoration: none;
+  transition: color 0.15s;
+  display: inline-block;
+}
+.msv-footer__links a:hover {
+  color: var(--yellow);
+  text-decoration: none;
+}
+
+.msv-footer__bottom {
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+.msv-footer__bottom-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 1rem;
+  justify-content: space-between;
+}
+.msv-footer__disclaimer {
+  font-size: 0.73rem;
+  color: rgba(255,255,255,0.35);
+  line-height: 1.65;
+  max-width: 720px;
+}
+.msv-footer__copyright {
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.35);
+  white-space: nowrap;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   MAIN CONTENT AREA
+   ───────────────────────────────────────────────────────────── */
+main {
+  /* Fragments are self-contained; this wrapper just provides flow context */
+  position: relative;
+}
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════
+     SITE NAVIGATION
+     ═══════════════════════════════════════════════════ -->
+<header class="msv-nav" role="banner">
+  <div class="msv-nav__inner">
+
+    <!-- Logo -->
+    <a href="/" class="msv-nav__logo" aria-label="My Spanish Visa — Home"><img src="/assets/images/msv-logo-white.png" alt="My Spanish Visa" height="80" style="display:block;"></a>
+
+    <!-- Desktop links -->
+    <nav aria-label="Main navigation">
+      <ul class="msv-nav__links">
+
+        <li>
+          <button class="msv-nav__dropdown-trigger" aria-haspopup="true" aria-expanded="false">
+            Visas <span class="msv-nav__chevron">▾</span>
+          </button>
+          <div class="msv-nav__dropdown" role="menu">
+            <a href="/non-lucrative-visa-spain/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🏖️</span>Non-Lucrative Visa
+            </a>
+            <a href="/digital-nomad-visa-spain/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">💻</span>Digital Nomad Visa
+            </a>
+            <a href="/student-visa-spain/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🎓</span>Student Visa
+            </a>
+            <div class="msv-nav__dropdown-divider"></div>
+            <a href="/spain-visa-renewal/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🔄</span>Visa Renewals
+            </a>
+            <a href="/best-visa-move-to-spain/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">⚖️</span>Compare All Visas
+            </a>
+          </div>
+        </li>
+
+        <li>
+          <button aria-haspopup="true" aria-expanded="false">
+            Resources <span class="msv-nav__chevron">▾</span>
+          </button>
+          <div class="msv-nav__dropdown" role="menu">
+            <a href="/blog/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">📝</span>Blog &amp; Guides
+            </a>
+            <a href="/spain-visa-checklist/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">✅</span>Document Checklists
+            </a>
+            <a href="/move-to-spain/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🏠</span>Move to Spain Guide
+            </a>
+            <a href="/visa-eligibility-quiz/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🧭</span>Eligibility Quiz
+            </a>
+          </div>
+        </li>
+
+        <li><a href="/about-us/">About Us</a></li>
+        <li><a href="/testimonials/">Reviews</a></li>
+        <li><a href="/contact-us.html">Contact</a></li>
+
+      </ul>
+    </nav>
+
+    <!-- Desktop CTA -->
+    <a href="https://dashboard.platinumlegalspain.com/nlv" class="msv-nav__cta">
+      Start My Application →
+    </a>
+
+    <!-- Hamburger (mobile) -->
+    <button class="msv-nav__burger" aria-label="Open menu" aria-expanded="false" onclick="
+      var m=document.querySelector('.msv-nav__mobile');
+      var open=m.classList.toggle('open');
+      this.setAttribute('aria-expanded', open);
+    ">
+      <span></span><span></span><span></span>
+    </button>
+
+  </div><!-- /.msv-nav__inner -->
+
+  <!-- Mobile menu -->
+  <nav class="msv-nav__mobile" aria-label="Mobile navigation">
+    <a href="/non-lucrative-visa-spain/" class="msv-nav__mobile-sub">Non-Lucrative Visa</a>
+    <a href="/digital-nomad-visa-spain/" class="msv-nav__mobile-sub">Digital Nomad Visa</a>
+    <a href="/student-visa-spain/" class="msv-nav__mobile-sub">Student Visa</a>
+    <a href="/spain-visa-renewal/">Visa Renewals</a>
+    <a href="/best-visa-move-to-spain/">Compare All Visas</a>
+    <a href="/blog/">Blog &amp; Guides</a>
+    <a href="/about-us/">About Us</a>
+    <a href="/testimonials/">Reviews</a>
+    <a href="/contact-us.html">Contact</a>
+    <a href="https://dashboard.platinumlegalspain.com/nlv" class="msv-nav__mobile-cta">Start My Application →</a>
+  </nav>
+
+</header>
+
+
+<!-- ═══════════════════════════════════════════════════
+     PAGE CONTENT (fragment injected here)
+     ═══════════════════════════════════════════════════ -->
+<main>
+<!-- FRAGMENT_START -->
+<!-- Best Health Insurance for NLV Spain | myspanishvisa.com -->
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Best Health Insurance for NLV Spain",
+  "url": "https://myspanishvisa.com/best-health-insurance-nlv-spain/",
+  "description": "Complete guide to the best health insurance providers for Spain's Non-Lucrative Visa holders. Compare established private health insurers in Spain with no-copay plans, pricing, and visa compliance.",
+  "isPartOf": {
+    "@type": "WebSite",
+    "url": "https://myspanishvisa.com",
+    "name": "My Spanish Visa"
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://myspanishvisa.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Non-Lucrative Visa", "item": "https://myspanishvisa.com/non-lucrative-visa-spain/" },
+      { "@type": "ListItem", "position": 3, "name": "Best Health Insurance for NLV", "item": "https://myspanishvisa.com/best-health-insurance-nlv-spain/" }
+    ]
+  }
+}
+</script>
+<!-- Open Graph / Social -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.myspanishvisa.com/best-health-insurance-nlv-spain/">
+<meta property="og:title" content="My Spanish Visa">
+<meta property="og:description" content="Expert Spain visa guidance for English-speaking expats.">
+<meta property="og:image" content="https://www.myspanishvisa.com/assets/images/og/og-nlv-spain.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="My Spanish Visa">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@myspanishvisa">
+<meta name="twitter:title" content="My Spanish Visa">
+<meta name="twitter:description" content="Expert Spain visa guidance for English-speaking expats.">
+<meta name="twitter:image" content="https://www.myspanishvisa.com/assets/images/og/og-nlv-spain.jpg">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What health insurance do NLV visa holders need in Spain?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Spain's Non-Lucrative Visa requires proof of private health insurance. You must have a policy that covers you in Spain with no monthly copayment (co-pago). The minimum coverage requirement is approximately €2,000/year, though most compliant plans cost €100–250/month depending on age and provider."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use travel insurance or Spanish public healthcare instead?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Travel insurance is not accepted for NLV visa approval. While you can register for public healthcare once you have residency, the visa itself requires a private insurance policy at the time of application. Public healthcare registration comes after visa approval."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is no-copay (sin copago) mandatory for NLV visa holders?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Spanish immigration authorities specifically require that your insurance policy includes no copayment (sin copago). This means you pay only the insurance premium — no per-visit or per-prescription charges at doctors or pharmacies for covered services."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the best health insurance providers for NLV visa holders?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The top-rated providers for NLV holders are: established private health insurers in Spain. Each offers NLV-compliant plans with no copayment."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does health insurance cost for NLV visa holders?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Cost varies by age and provider: ages 25–40 typically €80–130/month, ages 41–60 typically €120–200/month, ages 60+ typically €180–280/month. established private health insurers in Spain are mid-range; established private health insurers in Spain offer competitive rates; a leading private insurer offers premium coverage at higher cost."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I get health insurance with pre-existing conditions?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, but with conditions. Most insurers accept applicants with pre-existing conditions but may impose waiting periods (typically 12 months) for treatment. Some deny coverage for specific conditions. Specialist brokers can approach multiple insurers to find the best terms for your health profile."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long do insurance waiting periods last for pre-existing conditions?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Standard waiting periods are 12 months for pre-existing conditions already under treatment. Minor conditions (e.g., seasonal allergies) may have shorter or no waiting periods. Active treatment at the time of application may result in policy denial — switching to a different insurer or working with a broker is recommended."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I switch health insurance providers after getting my NLV visa?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You can switch providers at any time after approval, but there are considerations: pre-existing condition clauses may reset, waiting periods may apply, and some providers offer better rates for longer-term customers. Plan any switch during contract renewal periods to avoid penalties. Specialist brokers can help coordinate the transition."
+      }
+    }
+  ]
+}
+</script>
+
+<style>
+/* ── iOS Safari pinch-zoom overflow safety ─────────────────────────── */
+/* Prevents horizontal overflow when users pinch-zoom on iPhone/iPad.   */
+/* Top-level (also paste into theme Custom CSS / Elementor Site Settings) */
+html, body { max-width: 100%; overflow-x: clip; }
+/* Scoped wrapper safety */
+.msv, .msv-nav, .msv-topbar, .msv-footer, .msv-footer-cta,
+.pls-header, .pls-body, .pls-nlv, .pls-dnv, .pls-student {
+  max-width: 100%;
+  overflow-x: clip;
+  position: relative;
+}
+/* Cap all media inside the wrapper */
+.msv img, .msv video, .msv iframe,
+.msv-footer img, .msv-footer video, .msv-footer iframe {
+  max-width: 100%;
+  height: auto;
+}
+/* Never use 100vw — use 100% instead (dev reminder) */
+
+
+/* ── Reset & scope ─────────────────────────────────────────────────── */
+.msv *, .msv *::before, .msv *::after { box-sizing: border-box; margin: 0; padding: 0; }
+/* ── Tokens ──────────────────────────────────────────────────────── */
+.msv {
+  --navy: #0c1930; --navy-mid: #1a3a5c; --red: #be0011; --red-deep: #8c000d;
+  --yellow: #facf39; --cream: #f8f7f4; --white: #ffffff; --black: #1a1a1a;
+  --muted: #5a6478; --border: #dce3ed;
+  --shadow-sm: 0 2px 8px rgba(12,25,48,0.08); --shadow-md: 0 6px 24px rgba(12,25,48,0.13);
+  font-family: 'Inter', 'Segoe UI', system-ui, Arial, sans-serif;
+  font-size: 16px; line-height: 1.75; color: var(--black); width: 100%;
+}
+.msv__container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+.msv__container--narrow { max-width: 780px; margin: 0 auto; padding: 0 2rem; }
+@media (max-width: 640px) { .msv__container, .msv__container--narrow { padding: 0 1.2rem; } }
+/* ── Typography ──────────────────────────────────────────────────── */
+.msv h1 { font-size: clamp(2rem, 4.5vw, 3rem); font-weight: 800; line-height: 1.12; color: var(--white); letter-spacing: -0.025em; margin-bottom: 1.2rem; }
+.msv h2 { font-size: clamp(1.3rem, 2.5vw, 1.75rem); font-weight: 700; color: var(--navy); letter-spacing: -0.01em; margin-bottom: 0.5rem; position: relative; display: inline-block; padding-bottom: 0.5rem; }
+.msv h2::after { content: ''; position: absolute; bottom: 0; left: 0; width: 44px; height: 3px; background: linear-gradient(90deg, var(--red), var(--red-deep)); border-radius: 2px; }
+.msv h3 { font-size: 1.05rem; font-weight: 700; color: var(--navy); margin-bottom: 0.4rem; }
+.msv p { color: var(--black); margin-bottom: 1rem; font-size: 0.97rem; }
+.msv a { color: var(--red); text-decoration: none; }
+.msv a:hover { text-decoration: underline; }
+.msv ul { list-style: none; padding: 0; margin: 0 0 1rem; }
+.msv ul li { padding: 0.35rem 0 0.35rem 1.4rem; position: relative; font-size: 0.95rem; color: var(--black); }
+.msv ul li::before { content: ''; position: absolute; left: 0; top: 0.75rem; width: 7px; height: 7px; background: linear-gradient(135deg, var(--red), var(--red-deep)); border-radius: 50%; }
+/* ── Sections ─────────────────────────────────────────────────– */
+.msv__section { padding: 5rem 0; background: var(--white); }
+.msv__section--cream { padding: 5rem 0; background: linear-gradient(180deg, #f8f7f4 0%, #f2f4f8 100%); }
+.msv__section--dark { padding: 5rem 0; background: linear-gradient(135deg, var(--navy) 0%, #0d2240 55%, #0a1d38 100%); }
+.msv__section--dark h2 { color: var(--white) !important; }
+.msv__section--dark h2::after { background: linear-gradient(90deg, var(--yellow), #e8b820); }
+.msv__section--dark h3 { color: rgba(255,255,255,0.9) !important; }
+.msv .msv__section--dark p, .msv .msv__section--dark li { color: rgba(255,255,255,0.82); }
+.msv__section--dark ul li::before { background: linear-gradient(135deg, var(--yellow), #e8b820); }
+@media (max-width: 640px) { .msv__section, .msv__section--cream, .msv__section--dark { padding: 3.5rem 0; } }
+.msv__section-hd { margin-bottom: 3rem; }
+.msv__section-hd p { color: var(--muted); font-size: 1rem; margin-top: 0.75rem; line-height: 1.7; max-width: 600px; }
+/* ── Animations ──────────────────────────────────────────────────── */
+@keyframes msv-fade-up { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes msv-shimmer {
+  0%   { background-position: -400px 0; }
+  100% { background-position: 400px 0; }
+}
+.msv__shimmer {
+  background: linear-gradient(90deg, var(--yellow) 0%, #e8b820 25%, var(--red) 50%, #e8b820 75%, var(--yellow) 100%);
+  background-size: 400px 100%;
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: msv-shimmer 3.5s linear infinite;
+  display: inline;
+}
+/* ── Hero ─────────────────────────────────────────────────────– */
+.msv__hero { background: linear-gradient(135deg, #0c1930 0%, #0f2540 40%, #162d50 70%, #1a3560 100%); padding: 5.5rem 0 5rem; position: relative; overflow: hidden; }
+.msv__hero::before { content: ''; position: absolute; top: -30%; right: -5%; width: 700px; height: 700px; background: radial-gradient(circle, rgba(190,0,17,0.1) 0%, transparent 65%); pointer-events: none; }
+.msv__hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, rgba(250,207,57,0.4), transparent); }
+.msv__hero-inner { max-width: 780px; animation: msv-fade-up 0.7s ease-out both; }
+.msv__eyebrow { display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(190,0,17,0.15); border: 1px solid rgba(190,0,17,0.4); color: #ff6b7a; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.35rem 0.9rem; border-radius: 100px; margin-bottom: 1.5rem; }
+.msv__eyebrow::before { content: ''; width: 6px; height: 6px; background: var(--red); border-radius: 50%; box-shadow: 0 0 6px var(--red); }
+.msv__hero p { color: rgba(255,255,255,0.78) !important; font-size: clamp(1rem, 2.2vw, 1.15rem); max-width: 640px; margin-bottom: 2.2rem; line-height: 1.75; }
+/* ── Breadcrumb ───────────────────────────────────────────── */
+.msv__breadcrumb { padding: 0.85rem 0; border-bottom: 1px solid var(--border); background: var(--white); }
+.msv__breadcrumb-inner { display: flex; align-items: center; gap: 0.5rem; font-size: 0.8rem; color: var(--muted); flex-wrap: wrap; }
+.msv__breadcrumb-inner a { color: var(--red); text-decoration: none; }
+.msv__breadcrumb-inner a:hover { text-decoration: underline; }
+.msv__breadcrumb-inner span { color: var(--muted); }
+/* ── Buttons ─────────────────────────────────────────────────– */
+.msv__btn-group { display: flex; flex-wrap: wrap; gap: 0.85rem; }
+.msv__btn { display: inline-block; padding: 0.85rem 2rem; font-size: 0.92rem; font-weight: 700; border-radius: 6px; text-decoration: none !important; transition: transform 0.15s, box-shadow 0.15s; }
+.msv__btn:hover { transform: translateY(-1px); text-decoration: none !important; }
+.msv .msv__btn--primary { background: linear-gradient(135deg, var(--red) 0%, var(--red-deep) 100%); color: #ffffff !important; box-shadow: 0 4px 16px rgba(190,0,17,0.38); }
+.msv .msv__btn--primary:hover { box-shadow: 0 6px 22px rgba(190,0,17,0.48); color: #ffffff !important; }
+.msv .msv__btn--outline-white { background: transparent; color: #ffffff !important; border: 1.5px solid rgba(255,255,255,0.5); }
+.msv .msv__btn--outline-white:hover { background: rgba(255,255,255,0.1); color: #ffffff !important; }
+/* ── Trust bar ──────────────────────────────────────────────– */
+.msv__trust-bar { background: var(--white); border-bottom: 1px solid var(--border); padding: 1rem 0; box-shadow: var(--shadow-sm); }
+.msv__trust-bar-inner { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.75rem; }
+.msv__trust-item { display: flex; align-items: center; gap: 0.5rem; font-size: 0.82rem; font-weight: 600; color: var(--navy); white-space: nowrap; }
+.msv__trust-item::before { content: ''; width: 7px; height: 7px; background: linear-gradient(135deg, var(--red), var(--red-deep)); border-radius: 50%; flex-shrink: 0; }
+/* ── Key facts strip ─────────────────────────────────────────– */
+.msv__facts { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; margin-bottom: 3rem; }
+@media (max-width: 760px) { .msv__facts { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 420px) { .msv__facts { grid-template-columns: 1fr; } }
+.msv__fact { background: var(--white); padding: 1.5rem 1.3rem; text-align: center; }
+.msv__fact-icon { font-size: 1.5rem; display: block; margin-bottom: 0.5rem; }
+.msv__fact-label { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); display: block; margin-bottom: 0.25rem; }
+.msv__fact-value { font-size: 0.97rem; font-weight: 700; color: var(--navy); line-height: 1.35; display: block; }
+/* ── Alert box ───────────────────────────────────────────────– */
+.msv__alert { border-radius: 10px; padding: 1.3rem 1.5rem; display: flex; gap: 1rem; align-items: flex-start; margin-bottom: 2rem; }
+.msv__alert--warn { background: #fffbea; border: 1px solid #f0d060; }
+.msv__alert--info { background: #eef4ff; border: 1px solid #a0bfff; }
+.msv__alert--red { background: #fef2f2; border: 1px solid #fca5a5; }
+.msv__alert--green { background: #f0fdf4; border: 1px solid #86efac; }
+.msv__alert-icon { font-size: 1.4rem; flex-shrink: 0; margin-top: 0.1rem; }
+.msv__alert p { font-size: 0.9rem; color: var(--black); margin: 0; line-height: 1.65; }
+.msv__alert strong { color: var(--navy); }
+/* ── Cost table ──────────────────────────────────────────────– */
+.msv__cost-table { width: 100%; border-collapse: collapse; font-size: 0.88rem; margin: 2rem 0; }
+.msv__cost-table thead tr { background: var(--navy); }
+.msv__cost-table th { padding: 1rem 1.25rem; text-align: left; color: var(--white); font-weight: 700; border-bottom: 2px solid var(--yellow); white-space: nowrap; }
+.msv__cost-table td { padding: 0.85rem 1.25rem; border-bottom: 1px solid var(--border); color: var(--black); }
+.msv__cost-table tbody tr:nth-child(even) { background: #f9fafb; }
+.msv__cost-table .cost-item { font-weight: 600; color: var(--navy); }
+.msv__cost-table .cost-range { color: var(--muted); font-weight: 600; }
+.msv__cost-table .cost-high { color: var(--red); font-weight: 700; }
+/* ── Cost boxes ──────────────────────────────────────────────– */
+.msv__cost-box { background: var(--white); border: 1.5px solid var(--border); border-radius: 12px; padding: 2rem; margin-bottom: 2rem; text-align: center; }
+.msv__cost-box h3 { font-size: 1rem; margin-bottom: 0.5rem; color: var(--navy); }
+.msv__cost-box .cost-value { font-size: 2rem; font-weight: 800; color: var(--red); margin: 1rem 0; }
+.msv__cost-box .cost-label { font-size: 0.8rem; color: var(--muted); font-weight: 600; }
+.msv__cost-boxes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-bottom: 3rem; }
+@media (max-width: 760px) { .msv__cost-boxes { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 420px) { .msv__cost-boxes { grid-template-columns: 1fr; } }
+/* ── FAQs ────────────────────────────────────────────────– */
+.msv__faq-list { display: flex; flex-direction: column; gap: 0; border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+.msv__faq-list details { border-bottom: 1px solid var(--border); background: var(--white); }
+.msv__faq-list details:last-child { border-bottom: none; }
+.msv__faq-list summary { padding: 1.2rem 1.5rem; font-size: 0.97rem; font-weight: 700; color: var(--navy); cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+.msv__faq-list summary::-webkit-details-marker { display: none; }
+.msv__faq-list summary::after { content: '+'; font-size: 1.3rem; font-weight: 400; color: var(--red); flex-shrink: 0; transition: transform 0.2s; }
+.msv__faq-list details[open] summary::after { transform: rotate(45deg); }
+.msv__faq-list details[open] summary { color: var(--red); }
+.msv__faq-answer { padding: 0 1.5rem 1.3rem; font-size: 0.92rem; color: var(--muted); line-height: 1.75; }
+.msv__faq-answer p { color: var(--muted); font-size: 0.92rem; margin-bottom: 0.75rem; }
+.msv__faq-answer p:last-child { margin-bottom: 0; }
+/* ── CTA band ────────────────────────────────────────────────– */
+.msv__cta-band { background: linear-gradient(135deg, var(--navy) 0%, #0d2240 60%, #0a1d38 100%); padding: 5rem 0; text-align: center; }
+.msv__cta-band h2 { color: var(--white) !important; display: block; }
+.msv__cta-band h2::after { left: 50%; transform: translateX(-50%); background: linear-gradient(90deg, var(--yellow), #e8b820); }
+.msv__cta-band p { color: rgba(255,255,255,0.75) !important; max-width: 560px; margin: 1rem auto 2.2rem; font-size: 1rem; }
+.msv__cta-band .msv__btn-group { justify-content: center; }
+/* ── Related guides ──────────────────────────────────────────– */
+.msv__related { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; }
+@media (max-width: 860px) { .msv__related { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 420px) { .msv__related { grid-template-columns: 1fr; } }
+.msv__related-card { background: var(--white); border: 1px solid var(--border); border-radius: 10px; padding: 1.3rem 1.25rem; text-decoration: none !important; transition: box-shadow 0.2s, transform 0.2s; display: block; }
+.msv__related-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); text-decoration: none !important; }
+.msv__related-icon { font-size: 1.5rem; display: block; margin-bottom: 0.6rem; }
+.msv__related-title { font-size: 0.88rem; font-weight: 700; color: var(--navy); display: block; margin-bottom: 0.3rem; }
+.msv__related-desc { font-size: 0.8rem; color: var(--muted); line-height: 1.55; }
+/* ── Broker band ──────────────────────────────────────────────– */
+.msv__broker-band { background: linear-gradient(135deg, #0c1930 0%, #0f2540 60%, #162d50 100%); padding: 3rem 0; border-bottom: 3px solid var(--yellow); }
+.msv__broker-band-hd { text-align: center; margin-bottom: 2rem; }
+.msv__broker-band-hd h2 { color: var(--white) !important; font-size: clamp(1.2rem, 2.5vw, 1.6rem); font-weight: 800; margin-bottom: 0.5rem; display: block; }
+.msv__broker-band-hd h2::after { display: none; }
+.msv__broker-band-hd p { color: rgba(255,255,255,0.72); font-size: 0.97rem; margin: 0; }
+.msv__broker-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+@media (max-width: 640px) { .msv__broker-cards { grid-template-columns: 1fr; } }
+.msv__broker-card { background: rgba(255,255,255,0.07); border: 1.5px solid rgba(255,255,255,0.15); border-radius: 14px; padding: 2rem 2rem 1.75rem; display: flex; flex-direction: column; gap: 0.75rem; transition: background 0.2s, border-color 0.2s; }
+.msv__broker-card:hover { background: rgba(255,255,255,0.12); border-color: rgba(250,207,57,0.5); }
+.msv__broker-card-tag { display: inline-block; background: var(--yellow); color: var(--navy); font-size: 0.68rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; padding: 0.2rem 0.7rem; border-radius: 100px; width: fit-content; }
+.msv__broker-card h3 { font-size: 1.2rem; font-weight: 800; color: var(--white); margin: 0; }
+.msv__broker-card p { font-size: 0.88rem; color: rgba(255,255,255,0.75); margin: 0; line-height: 1.7; flex-grow: 1; }
+.msv__broker-card-btn { display: inline-flex; align-items: center; gap: 0.5rem; background: linear-gradient(135deg, var(--red) 0%, var(--red-deep) 100%); color: #ffffff !important; font-size: 0.88rem; font-weight: 800; padding: 0.75rem 1.5rem; border-radius: 6px; text-decoration: none !important; width: fit-content; margin-top: 0.5rem; }
+.msv__broker-card-btn:hover { background: linear-gradient(135deg, var(--red-deep) 0%, var(--red) 100%); text-decoration: none !important; }
+/* ── Broker section (light) ────────────────────────────────────– */
+.msv__broker-section { padding: 5rem 0; background: linear-gradient(180deg, #f8f7f4 0%, #f2f4f8 100%); border-top: 3px solid var(--yellow); }
+.msv__broker-section-hd { margin-bottom: 2.5rem; }
+.msv__broker-section-hd h2 { font-size: clamp(1.3rem, 2.5vw, 1.75rem); color: var(--navy); }
+.msv__broker-section-hd p { color: var(--muted); font-size: 1rem; margin-top: 0.75rem; line-height: 1.7; max-width: 600px; }
+.msv__broker-cards-light { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+@media (max-width: 640px) { .msv__broker-cards-light { grid-template-columns: 1fr; } }
+.msv__broker-card-light { background: var(--white); border: 2px solid var(--border); border-radius: 14px; padding: 2.25rem 2rem; display: flex; flex-direction: column; gap: 0.75rem; box-shadow: var(--shadow-md); transition: transform 0.18s, box-shadow 0.18s; }
+.msv__broker-card-light:hover { transform: translateY(-3px); box-shadow: 0 12px 40px rgba(12,25,48,0.16); }
+.msv__broker-card-light-tag { display: inline-block; background: rgba(190,0,17,0.1); color: var(--red); font-size: 0.68rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; padding: 0.2rem 0.7rem; border-radius: 100px; width: fit-content; }
+.msv__broker-card-light h3 { font-size: 1.25rem; font-weight: 800; color: var(--navy); margin: 0; }
+.msv__broker-card-light p { font-size: 0.91rem; color: var(--muted); margin: 0; line-height: 1.75; flex-grow: 1; }
+.msv__broker-card-light-btn { display: inline-flex; align-items: center; gap: 0.5rem; background: linear-gradient(135deg, var(--red) 0%, var(--red-deep) 100%); color: #fff !important; font-size: 0.9rem; font-weight: 700; padding: 0.85rem 1.75rem; border-radius: 6px; text-decoration: none !important; width: fit-content; margin-top: 0.5rem; box-shadow: 0 4px 14px rgba(190,0,17,0.35); transition: box-shadow 0.15s, transform 0.15s; }
+.msv__broker-card-light-btn:hover { box-shadow: 0 6px 20px rgba(190,0,17,0.48); transform: translateY(-1px); text-decoration: none !important; }
+/* ── Disclaimer ──────────────────────────────────────────────– */
+.msv__disclaimer { background: var(--cream); border-top: 1px solid var(--border); padding: 2rem 0; }
+.msv__disclaimer p { font-size: 0.78rem; color: var(--muted); margin: 0; line-height: 1.65; }
+</style>
+
+<div class="msv">
+  <!-- Hero Section -->
+  <div class="msv__hero">
+    <div class="msv__container">
+      <div class="msv__hero-inner">
+        <span class="msv__eyebrow">Health Insurance Guide</span>
+        <h1>Best Health Insurance for Spain's Non-Lucrative Visa</h1>
+        <p>Compare NLV-compliant health insurance plans with no copayment. Find the right provider for your age, budget, and health profile — approved by Spanish immigration authorities.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Breadcrumb -->
+  <div class="msv__breadcrumb">
+    <div class="msv__container">
+      <div class="msv__breadcrumb-inner">
+        <a href="/">Home</a>
+        <span>/</span>
+        <a href="/non-lucrative-visa-spain/">Non-Lucrative Visa</a>
+        <span>/</span>
+        <span>Best Health Insurance for NLV</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Trust Bar -->
+  <div class="msv__trust-bar">
+    <div class="msv__container">
+      <div class="msv__trust-bar-inner">
+        <div class="msv__trust-item">NLV visa specialists since 2015</div>
+        <div class="msv__trust-item">6 insurers compared & reviewed</div>
+        <div class="msv__trust-item">No-copay plans explained</div>
+        <div class="msv__trust-item">Updated April 2026</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Key Facts -->
+  <section class="msv__section">
+    <div class="msv__container">
+      <div class="msv__facts">
+        <div class="msv__fact">
+          <span class="msv__fact-icon">📋</span>
+          <span class="msv__fact-label">Requirement</span>
+          <span class="msv__fact-value">Private Insurance Mandatory</span>
+        </div>
+        <div class="msv__fact">
+          <span class="msv__fact-icon">€</span>
+          <span class="msv__fact-label">Monthly Cost</span>
+          <span class="msv__fact-value">€80–280/month</span>
+        </div>
+        <div class="msv__fact">
+          <span class="msv__fact-icon">🏥</span>
+          <span class="msv__fact-label">Key Feature</span>
+          <span class="msv__fact-value">Zero Copayment</span>
+        </div>
+        <div class="msv__fact">
+          <span class="msv__fact-icon">✓</span>
+          <span class="msv__fact-label">Top Providers</span>
+          <span class="msv__fact-value">6 Major Insurers</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Overview Section -->
+  <section class="msv__section">
+    <div class="msv__container--narrow">
+      <h2>What You Need to Know About NLV Health Insurance</h2>
+      <p>Spain's Non-Lucrative (NLV) Visa is one of the most popular golden visa programs for retirees and digital nomads seeking residency in Europe. But there's a critical requirement many applicants overlook: <strong>you must have private health insurance</strong> to qualify.</p>
+
+      <div class="msv__alert msv__alert--info">
+        <span class="msv__alert-icon">ℹ</span>
+        <p><strong>Key Point:</strong> Spain's immigration authorities require proof of private health insurance at the time of your visa application. This is not optional. You cannot use travel insurance or rely solely on Spain's public healthcare system for visa approval.</p>
+      </div>
+
+      <h3>Why Health Insurance Matters for Your NLV Visa</h3>
+      <p>The Spanish government introduced the health insurance requirement to ensure visa holders have adequate medical coverage and don't become a burden on the public healthcare system. Your insurance policy serves as proof of financial responsibility and shows authorities you're prepared for healthcare costs during your stay in Spain.</p>
+
+      <ul>
+        <li><strong>Visa approval requirement:</strong> Immigration will request proof of valid insurance covering the entire territory of Spain</li>
+        <li><strong>No copayment mandate:</strong> Your policy must include "sin copago" (no copayment) — this means no per-visit or per-prescription charges</li>
+        <li><strong>Coverage amount:</strong> Minimum coverage of approximately €2,000/year, though most plans are significantly higher</li>
+        <li><strong>Ongoing obligation:</strong> You must maintain continuous coverage throughout your residency in Spain</li>
+      </ul>
+
+      <h3>NLV Insurance vs. Travel Insurance</h3>
+      <p>Many people mistakenly think travel insurance covers the NLV visa requirement. It doesn't. Travel insurance is short-term, limited coverage designed for vacations. Immigration authorities specifically reject travel policies for NLV applications.</p>
+      <p>What you need is <strong>private health insurance</strong> — a comprehensive annual policy issued by a recognized Spanish insurer (or international insurer operating in Spain) that covers you year-round.</p>
+
+      <h3>When Public Healthcare Becomes Available</h3>
+      <p>After you receive your NLV visa and register as a resident in Spain (empadronamiento), you can register for the Spanish public healthcare system. This takes several months. Most NLV holders use private insurance initially, then transition to public healthcare once registered, using private insurance as supplementary coverage.</p>
+    </div>
+  </section>
+
+  <!-- Provider Comparison Section -->
+  <section class="msv__section--cream">
+    <div class="msv__container">
+      <h2>Top 6 Health Insurance Providers for NLV Visa Holders</h2>
+      <p style="color: var(--muted); margin-bottom: 2.5rem; max-width: 700px;">Each of these insurers offers NLV-compliant plans with zero copayment. Rates vary by age, location, and health profile. All are recognized by Spanish immigration authorities.</p>
+
+      <table class="msv__cost-table">
+        <thead>
+          <tr>
+            <th>Provider</th>
+            <th>Ages 25–40</th>
+            <th>Ages 41–60</th>
+            <th>Ages 60+</th>
+            <th>Best For</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="cost-item">a leading private insurer (a leading private insurer)</td>
+            <td class="cost-range">€90–130</td>
+            <td class="cost-range">€130–190</td>
+            <td class="cost-high">€180–270</td>
+            <td>Most popular with expats</td>
+          </tr>
+          <tr>
+            <td class="cost-item">a leading private insurer</td>
+            <td class="cost-range">€85–125</td>
+            <td class="cost-range">€125–180</td>
+            <td class="cost-high">€170–260</td>
+            <td>Excellent English support</td>
+          </tr>
+          <tr>
+            <td class="cost-item">a leading private insurer</td>
+            <td class="cost-range">€80–120</td>
+            <td class="cost-range">€120–170</td>
+            <td class="cost-high">€160–250</td>
+            <td>Competitive pricing</td>
+          </tr>
+          <tr>
+            <td class="cost-item">a leading private insurer</td>
+            <td class="cost-range">€85–125</td>
+            <td class="cost-range">€125–180</td>
+            <td class="cost-high">€170–260</td>
+            <td>Strong GP network</td>
+          </tr>
+          <tr>
+            <td class="cost-item">a leading private insurer</td>
+            <td class="cost-range">€75–110</td>
+            <td class="cost-range">€110–160</td>
+            <td class="cost-high">€150–240</td>
+            <td>Budget option</td>
+          </tr>
+          <tr>
+            <td class="cost-item">a leading private insurer</td>
+            <td class="cost-range">€110–150</td>
+            <td class="cost-range">€150–210</td>
+            <td class="cost-high">€200–300</td>
+            <td>Premium coverage</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="msv__alert msv__alert--warn" style="margin-top: 2rem;">
+        <span class="msv__alert-icon">⚠</span>
+        <p><strong>Price Note:</strong> These are approximate monthly premiums as of April 2026. Final cost depends on your exact age, location in Spain, smoking status, and pre-existing conditions. Always request official quotes from providers or brokers. Prices may include slight variations for family vs. individual plans.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Detailed Provider Breakdown -->
+  <section class="msv__section">
+    <div class="msv__container--narrow">
+      <h2>Provider Details & Reviews</h2>
+
+      <h3>a leading private insurer (a leading private insurer-Backed)</h3>
+      <p><strong>Why it's popular:</strong> a leading private insurer is backed by a leading private insurer, a global healthcare company, making it highly trustworthy. It has the largest network of private hospitals and clinics in Spain, excellent app support, and strong brand recognition among expats.</p>
+      <ul>
+        <li>Wide hospital and clinic network across all regions</li>
+        <li>Excellent app for appointments and claims</li>
+        <li>English-speaking customer service available</li>
+        <li>Frequently chosen by NLV applicants and approved by immigration</li>
+        <li>Slightly higher premiums but offset by network quality</li>
+      </ul>
+
+      <h3>a leading private insurer</h3>
+      <p><strong>Why it's popular:</strong> a leading private insurer offers competitive pricing with excellent English customer support. Known for prompt claims processing and good coverage options.</p>
+      <ul>
+        <li>Strong English-language support (critical for visa applications)</li>
+        <li>Competitive mid-range pricing</li>
+        <li>Flexible plan options</li>
+        <li>Good for digital communication and remote management</li>
+        <li>Handles pre-existing conditions reasonably well</li>
+      </ul>
+
+      <h3>a leading private insurer</h3>
+      <p><strong>Why it's popular:</strong> a leading private insurer is one of Spain's oldest insurers with competitive rates and reliable service. Strong option for budget-conscious applicants without sacrificing coverage quality.</p>
+      <ul>
+        <li>Competitive pricing across all age groups</li>
+        <li>Established Spanish insurer (trusted track record)</li>
+        <li>Reasonable pre-existing condition handling</li>
+        <li>Good regional presence</li>
+        <li>Straightforward claim process</li>
+      </ul>
+
+      <h3>a leading private insurer</h3>
+      <p><strong>Why it's popular:</strong> a leading private insurer specializes in health insurance and has strong relationships with Spanish healthcare providers. Excellent for those who prioritize doctor availability.</p>
+      <ul>
+        <li>One of Spain's largest health-focused insurers</li>
+        <li>Excellent GP network and specialist referral system</li>
+        <li>Mid-range pricing</li>
+        <li>Strong digital tools for appointment booking</li>
+        <li>Good customer service quality</li>
+      </ul>
+
+      <h3>a leading private insurer</h3>
+      <p><strong>Why it's popular:</strong> a leading private insurer offers some of the most competitive pricing for NLV applicants, particularly those aged 25–50. Best budget option without cutting corners on essential coverage.</p>
+      <ul>
+        <li>Most affordable premiums overall</li>
+        <li>Solid provider network (though slightly smaller than a leading private insurer)</li>
+        <li>Good for younger, healthier applicants</li>
+        <li>Reasonable pre-existing condition terms</li>
+        <li>Straightforward policy terms</li>
+      </ul>
+
+      <h3>a leading private insurer</h3>
+      <p><strong>Why it's popular:</strong> a leading private insurer is a global insurer offering premium coverage with international recognition. Best for those seeking comprehensive healthcare without budget constraints.</p>
+      <ul>
+        <li>Premium coverage with international medical standards</li>
+        <li>Excellent for complex health profiles</li>
+        <li>Comprehensive preventive care coverage</li>
+        <li>Strong customer support</li>
+        <li>Higher cost, but includes more benefits</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Critical Features Section -->
+  <section class="msv__section--cream">
+    <div class="msv__container">
+      <h2>What to Look For in an NLV Insurance Plan</h2>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2rem;">
+        <div>
+          <h3>Non-Negotiable Features</h3>
+          <ul>
+            <li><strong>Sin Copago (No Copayment):</strong> Zero per-visit charges and zero prescription costs. This is mandatory for visa approval.</li>
+            <li><strong>National Coverage:</strong> Must cover all of Spain, not just your region. Immigration specifically checks this.</li>
+            <li><strong>Minimum €2,000/year:</strong> Although most plans are significantly higher, this is the legal minimum.</li>
+            <li><strong>Annual Coverage:</strong> Must be continuous for 12 months, not travel insurance or short-term plans.</li>
+            <li><strong>Recognized Insurer:</strong> Must be a legitimate Spanish or international insurer (not unknown or unregulated).</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Quality Factors to Compare</h3>
+          <ul>
+            <li><strong>Network Size:</strong> Larger networks = easier specialist access and shorter wait times</li>
+            <li><strong>Hospital Coverage:</strong> Does it cover private hospitals in your region? Which ones?</li>
+            <li><strong>Emergency Coverage:</strong> Must include 24/7 emergency care and ambulance services</li>
+            <li><strong>Outpatient Care:</strong> GP visits, specialist consultations, diagnostics (X-rays, blood tests)</li>
+            <li><strong>Prescription Drugs:</strong> Full coverage for medications or percentage reimbursement?</li>
+            <li><strong>Pre-existing Conditions:</strong> What's the waiting period? Is your condition excluded?</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Age-Based Pricing -->
+  <section class="msv__section">
+    <div class="msv__container--narrow">
+      <h2>How Age Affects Your Insurance Cost</h2>
+      <p>Health insurance premiums in Spain increase significantly with age. Here's what you can expect:</p>
+
+      <div class="msv__cost-boxes">
+        <div class="msv__cost-box">
+          <h3>Ages 25–40</h3>
+          <div class="cost-value">€80–150</div>
+          <div class="cost-label">Monthly Average</div>
+          <p style="font-size: 0.85rem; color: var(--muted); margin-top: 0.75rem;">Lowest premiums. Most insurers use a base rate in this band. established private health insurers in Spain particularly competitive.</p>
+        </div>
+        <div class="msv__cost-box">
+          <h3>Ages 41–60</h3>
+          <div class="cost-value">€120–200</div>
+          <div class="cost-label">Monthly Average</div>
+          <p style="font-size: 0.85rem; color: var(--muted); margin-top: 0.75rem;">Moderate increase (30–40% above younger rates). Most NLV applicants fall here. a leading private insurer popular choice.</p>
+        </div>
+        <div class="msv__cost-box">
+          <h3>Ages 60+</h3>
+          <div class="cost-value">€180–300</div>
+          <div class="cost-label">Monthly Average</div>
+          <p style="font-size: 0.85rem; color: var(--muted); margin-top: 0.75rem;">Significant premium (60–100% above younger rates). Premium increases accelerate at 65+. Shop carefully.</p>
+        </div>
+      </div>
+
+      <p><strong>Why age matters:</strong> Older applicants have higher claims probability, requiring insurers to charge more. At 55+, you'll see 40–60% higher premiums than a 35-year-old. At 65+, expect 100%+ higher costs. Some insurers cap coverage at 80–85 years old.</p>
+
+      <p style="margin-top: 1.5rem;"><strong>Pro tip:</strong> Lock in your rate early. Once approved, your visa is valid for 1 year initially. Renew before rates increase further. Some insurers offer loyalty discounts after 2+ years with them.</p>
+    </div>
+  </section>
+
+  <!-- Pre-Existing Conditions -->
+  <section class="msv__section--cream">
+    <div class="msv__container">
+      <h2>Navigating Pre-Existing Conditions</h2>
+
+      <div class="msv__alert msv__alert--red">
+        <span class="msv__alert-icon">⚠</span>
+        <p><strong>Important:</strong> Pre-existing conditions affect your insurability and premiums. Be honest on applications — insurers review medical history, and dishonesty voids your coverage.</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2rem;">
+        <div>
+          <h3>Typical Outcomes by Condition Severity</h3>
+          <ul>
+            <li><strong>Minor conditions:</strong> Accepted with standard or slightly higher premium (allergies, treated hypertension, controlled asthma)</li>
+            <li><strong>Moderate conditions:</strong> Accepted with 12-month waiting period for condition-related treatment (diabetes, arthritis, back problems)</li>
+            <li><strong>Serious conditions:</strong> May be denied, or accepted with substantial exclusions (cancer under active treatment, uncontrolled heart disease, recent stroke)</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Strategies for Pre-Existing Conditions</h3>
+          <ul>
+            <li><strong>Apply early:</strong> Get quotes before your official visa application. Don't wait until the last minute.</li>
+            <li><strong>Compare multiple insurers:</strong> Different companies apply different underwriting criteria. One may approve you when another declines.</li>
+            <li><strong>Use a specialist broker:</strong> Brokers have relationships with insurers and can advocate for your case. They often negotiate better terms.</li>
+            <li><strong>Gather documentation:</strong> Medical reports, recent test results, and treatment history help your case.</li>
+            <li><strong>Consider waiting periods:</strong> Accepting a 12-month waiting period may be necessary for some conditions.</li>
+          </ul>
+        </div>
+      </div>
+
+      <h3 style="margin-top: 2rem;">When an Insurer Denies Coverage</h3>
+      <p>If an insurer rejects your application due to pre-existing conditions, don't panic. This doesn't mean you're uninsurable. Your options:</p>
+      <ol style="list-style: decimal; padding-left: 2rem; color: var(--black);">
+        <li style="margin-bottom: 0.75rem;"><strong>Try a different insurer.</strong> established private health insurers in Spain are often more flexible with complex health profiles. Specialist brokers know which insurers are most accepting.</li>
+        <li style="margin-bottom: 0.75rem;"><strong>Work with a broker.</strong> A specialist broker (see Partner section below) can approach multiple insurers and present your case professionally. This increases approval rates significantly.</li>
+        <li style="margin-bottom: 0.75rem;"><strong>Negotiate exclusions.</strong> Rather than full denial, some insurers will accept you but exclude specific conditions for 12 months (you pay for treatment, then coverage kicks in).</li>
+        <li style="margin-bottom: 0.75rem;"><strong>Wait for clinical improvement.</strong> If you're in active treatment, waiting 3–6 months for stabilization improves your approval odds dramatically.</li>
+      </ol>
+
+      <div class="msv__alert msv__alert--green">
+        <span class="msv__alert-icon">✓</span>
+        <p><strong>Real-world outcome:</strong> Many applicants with serious pre-existing conditions (diabetes, hypertension, arthritis) successfully get approved — often through brokers who specialize in exactly this problem. Don't assume rejection means the visa is off the table.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- No-Copay Requirement -->
+  <section class="msv__section">
+    <div class="msv__container--narrow">
+      <h2>The No-Copay Requirement Explained</h2>
+      <p>One of the most misunderstood aspects of NLV insurance is the <strong>"sin copago"</strong> (no copayment) requirement. Let's clarify what this means and why it matters.</p>
+
+      <h3>What "Sin Copago" Actually Means</h3>
+      <p>In Spain's healthcare system, a "copago" is a per-visit charge or co-payment. For example, you might pay €3 for a doctor visit, €5 for a prescription, or €10 for an emergency room visit — amounts the patient must cover out-of-pocket.</p>
+      <p><strong>Sin copago means:</strong> Your insurance covers 100% of these co-payments. You pay only your monthly premium — no additional charges when you visit a doctor, fill a prescription, or use a hospital.</p>
+
+      <h3>Why Spanish Immigration Requires Sin Copago</h3>
+      <p>Spain's immigration authorities specify this requirement for two reasons:</p>
+      <ul>
+        <li><strong>Financial proof:</strong> It proves you can afford healthcare without draining your bank account on every visit. The visa requires a minimum income, and sin copago ensures you won't deplete savings on medical costs.</li>
+        <li><strong>Healthcare access:</strong> Without sin copago, some older applicants might avoid seeking treatment due to cost, straining public emergency services. Sin copago ensures you'll seek preventive care early.</li>
+      </ul>
+
+      <h3>Standard Spanish Insurance vs. NLV Requirements</h3>
+      <p>Standard Spanish private insurance (for Spanish citizens and residents) often includes copagos of €3–10 per visit. This is acceptable for Spanish insurance purposes but <strong>NOT acceptable for NLV visa approval</strong>.</p>
+      <p>Make sure your quote explicitly states "sin copago" or "zero copayment." If you're unsure, ask the insurer directly: "Is this policy sin copago for all covered services?"</p>
+
+      <div class="msv__alert msv__alert--info">
+        <span class="msv__alert-icon">ℹ</span>
+        <p><strong>Key distinction:</strong> "Sin copago" applies to normal medical services (doctor visits, prescriptions, hospital stays). It does NOT typically cover cosmetic procedures, dental work, or experimental treatments — but these aren't required for the visa anyway.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Best For Categories -->
+  <section class="msv__section--cream">
+    <div class="msv__container">
+      <h2>Best Insurance Plans by Situation</h2>
+
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2.5rem;">
+        <div style="background: white; border-radius: 12px; padding: 2rem; box-shadow: var(--shadow-sm);">
+          <h3 style="color: var(--navy); margin-bottom: 1rem;">Best for Retirees (60+)</h3>
+          <p style="font-size: 0.95rem; margin-bottom: 1rem;"><strong>Top choice: established private health insurers in Spain</strong></p>
+          <p style="font-size: 0.9rem; color: var(--muted); line-height: 1.7;">a leading private insurer has Spain's largest network, ensuring quick access to specialists — critical at 60+. a leading private insurer's premium coverage handles multiple conditions well. Expect €180–300/month. Pre-existing conditions are manageable with the right approach.</p>
+        </div>
+
+        <div style="background: white; border-radius: 12px; padding: 2rem; box-shadow: var(--shadow-sm);">
+          <h3 style="color: var(--navy); margin-bottom: 1rem;">Best for Families</h3>
+          <p style="font-size: 0.95rem; margin-bottom: 1rem;"><strong>Top choice: established private health insurers in Spain</strong></p>
+          <p style="font-size: 0.9rem; color: var(--muted); line-height: 1.7;">Family plans offer better rates per person than individual policies. a leading private insurer excels at family coverage with English support. a leading private insurer offers the best hospital network for emergencies. Most family plans (2 adults + 2 children) run €250–450/month total.</p>
+        </div>
+
+        <div style="background: white; border-radius: 12px; padding: 2rem; box-shadow: var(--shadow-sm);">
+          <h3 style="color: var(--navy); margin-bottom: 1rem;">Best Budget Option</h3>
+          <p style="font-size: 0.95rem; margin-bottom: 1rem;"><strong>Top choice: established private health insurers in Spain</strong></p>
+          <p style="font-size: 0.9rem; color: var(--muted); line-height: 1.7;">For ages 25–50, established private health insurers in Spain offer the lowest premiums (€75–130/month) without sacrificing essential coverage. Both are recognized by immigration. Suitable for young, healthy applicants without pre-existing conditions.</p>
+        </div>
+
+        <div style="background: white; border-radius: 12px; padding: 2rem; box-shadow: var(--shadow-sm);">
+          <h3 style="color: var(--navy); margin-bottom: 1rem;">Best for Pre-Existing Conditions</h3>
+          <p style="font-size: 0.95rem; margin-bottom: 1rem;"><strong>Top choice: Work with a specialist broker</strong></p>
+          <p style="font-size: 0.9rem; color: var(--muted); line-height: 1.7;">Brokers have relationships with underwriters and can negotiate better terms. Some insurers (established private health insurers in Spain) are more accepting of complex health. Expect 12-month waiting periods but coverage is possible.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Switching Providers Section -->
+  <section class="msv__section">
+    <div class="msv__container--narrow">
+      <h2>Can You Switch Insurance Providers After Visa Approval?</h2>
+      <p>Yes, you can switch health insurance providers after receiving your NLV visa. However, there are important considerations:</p>
+
+      <h3>When Switching Makes Sense</h3>
+      <ul>
+        <li><strong>Better rate elsewhere:</strong> You found a cheaper provider offering similar coverage</li>
+        <li><strong>Network issues:</strong> Current provider's doctor network is weak in your region</li>
+        <li><strong>Service problems:</strong> Customer service or claims processing has been poor</li>
+        <li><strong>Renewal time:</strong> When your annual policy renews (best time to switch without penalties)</li>
+      </ul>
+
+      <h3>Considerations Before Switching</h3>
+      <p><strong>Pre-existing condition clauses reset:</strong> If you switch providers, pre-existing conditions will be subject to a new 12-month waiting period with the new insurer. This can be problematic if you're mid-treatment.</p>
+      <p><strong>Price increases at renewal:</strong> Some insurers offer lower introductory rates, then increase significantly at renewal. Switching every 2–3 years can keep costs down, but beware of the pre-existing condition reset.</p>
+      <p><strong>Health changes:</strong> If your health deteriorated since your first policy, the new insurer may charge more or impose exclusions. Timing your switch during good health is strategic.</p>
+
+      <h3>Best Practices for Switching</h3>
+      <ol style="list-style: decimal; padding-left: 2rem; color: var(--black);">
+        <li style="margin-bottom: 0.75rem;">Switch during contract renewal periods (typically anniversary dates) to avoid termination penalties.</li>
+        <li style="margin-bottom: 0.75rem;">Get quotes 2–3 months before renewal to compare rates and time your decision.</li>
+        <li style="margin-bottom: 0.75rem;">If you have pre-existing conditions, ensure the new policy has favorable waiting period terms before signing.</li>
+        <li style="margin-bottom: 0.75rem;">Keep proof of continuous coverage (letter from old insurer) to avoid gaps that could affect visa renewal.</li>
+        <li style="margin-bottom: 0.75rem;">Once switched, notify your visa renewal contact (lawyer or immigration agency) of the new policy. Immigration wants proof of continuous coverage.</li>
+      </ol>
+
+      <div class="msv__alert msv__alert--info">
+        <span class="msv__alert-icon">ℹ</span>
+        <p><strong>Visa renewal tip:</strong> When you renew your NLV visa (typically every 1–2 years), you'll need to show proof of continuous health insurance. Switching to a significantly cheaper provider is acceptable as long as coverage remains uninterrupted.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Broker Partners Band (Dark) -->
+  <div class="msv__broker-band">
+    <div class="msv__container">
+      <div class="msv__broker-band-hd">
+        <h2>Connect with Specialist Brokers</h2>
+        <p>Our partner brokers help English-speaking expats find the right policy — including NLV-compliant cover with no co-payment.</p>
+      </div>
+      <div class="msv__broker-cards">
+        <div class="msv__broker-card">
+          <span class="msv__broker-card-tag">Expat Insurance Specialists</span>
+          <h3>247 Expat Insurance</h3>
+          <p>Specialist insurance broker for expats in Spain — covering health, life, home, car, and more. Access plans from all major Spanish insurers, with English-speaking advisers who confirm visa compliance before you buy.</p>
+          <a href="https://www.247expatinsurance.com/myspanishvisa" target="_blank" rel="noopener" class="msv__broker-card-btn">Get a Quote →</a>
+        </div>
+        <div class="msv__broker-card">
+          <span class="msv__broker-card-tag">Health Insurance Specialists</span>
+          <h3>Spanish Health Insurance</h3>
+          <p>Health and visa insurance specialists for English-speaking foreigners moving to Spain. Their team understand exactly what Spanish consulates require and can match you to the right policy — whether you need cover for a new application, a renewal, or a full family plan.</p>
+      <span class="msv-footer__copyright">© 2026 My Spanish Visa. All rights reserved.</span>
+    </div>
+  </div>
+
+</footer>
+
+</body>
+</html>

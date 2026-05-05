@@ -1,0 +1,1370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- ═══════════════════════════════════════════════════════════════════
+       PAGE-SPECIFIC HEAD — replace block below per page:
+       <title>Dnv Usa | My Spanish Visa</title>
+       <meta name="description" content="…">
+       <meta property="og:title" content="…">
+       <meta property="og:description" content="…">
+       <meta property="og:url" content="https://www.myspanishvisa.com/…">
+       <meta property="og:image" content="…">
+       <link rel="canonical" href="https://www.myspanishvisa.com/…">
+       <script type="application/ld+json">…</script>
+       ═══════════════════════════════════════════════════════════════════ -->
+  <title>My Spanish Visa — Spain Visa &amp; Residency Specialists</title>
+  <meta name="description" content="My Spanish Visa helps English-speaking foreigners move to Spain. Expert guidance on Non-Lucrative Visa, Digital Nomad Visa, Student Visa, renewals and more.">
+
+  <!-- Shared Open Graph defaults -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="My Spanish Visa">
+  <meta property="og:image" content="https://www.myspanishvisa.com/assets/images/og/og-myspanishvisa-default.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@myspanishvisa">
+
+  <style>
+/* ═══════════════════════════════════════════════════════════════
+   GLOBAL SHELL — nav + footer only.
+   Page-specific CSS lives inside each fragment's own <style> block.
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── iOS overflow safety ── */
+html, body { max-width: 100%; overflow-x: clip; margin: 0; padding: 0; }
+*, *::before, *::after { box-sizing: border-box; }
+
+/* ── Brand tokens (root-level so all fragments inherit) ── */
+:root {
+  --navy:      #0c1930;
+  --navy-mid:  #1a3a5c;
+  --red:       #be0011;
+  --red-deep:  #8c000d;
+  --yellow:    #facf39;
+  --cream:     #f8f7f4;
+  --white:     #ffffff;
+  --black:     #1a1a1a;
+  --muted:     #5a6478;
+  --border:    #dce3ed;
+  --shadow-sm: 0 2px 8px rgba(12,25,48,0.08);
+  --shadow-md: 0 6px 24px rgba(12,25,48,0.13);
+}
+
+body {
+  font-family: 'Inter', 'Segoe UI', system-ui, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.75;
+  color: var(--black);
+  background: #fff;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   SITE NAV
+   ───────────────────────────────────────────────────────────── */
+.msv-nav {
+  position: sticky;
+  top: 0;
+  z-index: 9000;
+  background: var(--navy);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 2px 12px rgba(12,25,48,0.22);
+}
+.msv-nav__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+  gap: 1.5rem;
+}
+
+/* Logo */
+.msv-nav__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+.msv-nav__logo-flag {
+  font-size: 1.3rem;
+  line-height: 1;
+}
+.msv-nav__logo-text {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+.msv-nav__logo-text span {
+  color: var(--yellow);
+}
+
+/* Links */
+.msv-nav__links {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.msv-nav__links > li {
+  position: relative;
+}
+.msv-nav__links > li > a,
+.msv-nav__links > li > button {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.5rem 0.9rem;
+  font-size: 0.87rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.85);
+  text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: color 0.15s, background 0.15s;
+  white-space: nowrap;
+  height: 64px;
+}
+.msv-nav__links > li > a:hover,
+.msv-nav__links > li > button:hover,
+.msv-nav__links > li:focus-within > a,
+.msv-nav__links > li:focus-within > button {
+  color: #fff;
+  background: rgba(255,255,255,0.08);
+}
+.msv-nav__chevron {
+  font-size: 0.65rem;
+  opacity: 0.7;
+  transition: transform 0.2s;
+}
+.msv-nav__links > li:focus-within .msv-nav__chevron,
+.msv-nav__links > li:hover .msv-nav__chevron {
+  transform: rotate(180deg);
+}
+
+/* Dropdown */
+.msv-nav__dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 230px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  box-shadow: var(--shadow-md);
+  padding: 0.5rem 0;
+  z-index: 200;
+}
+.msv-nav__links > li:hover .msv-nav__dropdown,
+.msv-nav__links > li:focus-within .msv-nav__dropdown {
+  display: block;
+}
+.msv-nav__dropdown a {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.6rem 1.1rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--navy);
+  text-decoration: none;
+  transition: background 0.12s;
+}
+.msv-nav__dropdown a:hover {
+  background: var(--cream);
+  color: var(--red);
+}
+.msv-nav__dropdown-icon {
+  width: 24px;
+  height: 24px;
+  background: var(--cream);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+.msv-nav__dropdown-divider {
+  height: 1px;
+  background: var(--border);
+  margin: 0.4rem 0;
+}
+
+/* CTA button */
+.msv-nav__cta {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.55rem 1.2rem;
+  background: var(--red);
+  color: #fff !important;
+  font-size: 0.85rem;
+  font-weight: 700;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.15s, box-shadow 0.15s;
+  white-space: nowrap;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(190,0,17,0.3);
+}
+.msv-nav__cta:hover {
+  background: var(--red-deep);
+  box-shadow: 0 4px 14px rgba(190,0,17,0.4);
+  text-decoration: none;
+}
+
+/* Hamburger */
+.msv-nav__burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.4rem;
+  border-radius: 5px;
+}
+.msv-nav__burger span {
+  width: 22px;
+  height: 2px;
+  background: #fff;
+  border-radius: 2px;
+  transition: transform 0.2s, opacity 0.2s;
+  display: block;
+}
+
+/* Mobile nav */
+.msv-nav__mobile {
+  display: none;
+  flex-direction: column;
+  background: var(--navy-mid);
+  padding: 1rem 1.5rem 1.5rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+.msv-nav__mobile.open { display: flex; }
+.msv-nav__mobile a {
+  padding: 0.65rem 0;
+  color: rgba(255,255,255,0.9);
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+.msv-nav__mobile a:hover { color: var(--yellow); }
+.msv-nav__mobile .msv-nav__mobile-sub {
+  padding-left: 1rem;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: rgba(255,255,255,0.7);
+}
+.msv-nav__mobile-cta {
+  margin-top: 1rem;
+  background: var(--red);
+  color: #fff !important;
+  border-radius: 6px;
+  text-align: center;
+  padding: 0.75rem 1rem !important;
+  border-bottom: none !important;
+}
+
+@media (max-width: 900px) {
+  .msv-nav__links { display: none; }
+  .msv-nav__cta { display: none; }
+  .msv-nav__burger { display: flex; }
+}
+@media (max-width: 480px) {
+  .msv-nav__inner { padding: 0 1rem; }
+}
+
+/* ─────────────────────────────────────────────────────────────
+   SITE FOOTER
+   ───────────────────────────────────────────────────────────── */
+.msv-footer {
+  background: var(--navy);
+  color: rgba(255,255,255,0.75);
+  overflow-x: clip;
+}
+.msv-footer__top {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem 3rem;
+  display: grid;
+  grid-template-columns: 280px 1fr 1fr 1fr;
+  gap: 3rem;
+}
+@media (max-width: 900px) {
+  .msv-footer__top { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
+}
+@media (max-width: 560px) {
+  .msv-footer__top { grid-template-columns: 1fr; gap: 2rem; padding: 3rem 1.2rem 2rem; }
+}
+
+.msv-footer__brand {}
+.msv-footer__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  margin-bottom: 1rem;
+}
+.msv-footer__logo-flag { font-size: 1.3rem; }
+.msv-footer__logo-text {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -0.01em;
+}
+.msv-footer__logo-text span { color: var(--yellow); }
+.msv-footer__tagline {
+  font-size: 0.83rem;
+  color: rgba(255,255,255,0.55);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+.msv-footer__trust {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+.msv-footer__trust-item {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.65);
+}
+.msv-footer__trust-item::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  background: var(--yellow);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.msv-footer__col-title {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.4);
+  margin-bottom: 1rem;
+}
+.msv-footer__links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.msv-footer__links a {
+  font-size: 0.87rem;
+  color: rgba(255,255,255,0.68);
+  text-decoration: none;
+  transition: color 0.15s;
+  display: inline-block;
+}
+.msv-footer__links a:hover {
+  color: var(--yellow);
+  text-decoration: none;
+}
+
+.msv-footer__bottom {
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+.msv-footer__bottom-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 1rem;
+  justify-content: space-between;
+}
+.msv-footer__disclaimer {
+  font-size: 0.73rem;
+  color: rgba(255,255,255,0.35);
+  line-height: 1.65;
+  max-width: 720px;
+}
+.msv-footer__copyright {
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.35);
+  white-space: nowrap;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   MAIN CONTENT AREA
+   ───────────────────────────────────────────────────────────── */
+main {
+  /* Fragments are self-contained; this wrapper just provides flow context */
+  position: relative;
+}
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════
+     SITE NAVIGATION
+     ═══════════════════════════════════════════════════ -->
+<header class="msv-nav" role="banner">
+  <div class="msv-nav__inner">
+
+    <!-- Logo -->
+    <a href="/" class="msv-nav__logo" aria-label="My Spanish Visa — Home"><img src="/assets/images/msv-logo-white.png" alt="My Spanish Visa" height="64" style="display:block;"></a>
+
+    <!-- Desktop links -->
+    <nav aria-label="Main navigation">
+      <ul class="msv-nav__links">
+
+        <li>
+          <button class="msv-nav__dropdown-trigger" aria-haspopup="true" aria-expanded="false">
+            Visas <span class="msv-nav__chevron">▾</span>
+          </button>
+          <div class="msv-nav__dropdown" role="menu">
+            <a href="/non-lucrative-visa-spain/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🏖️</span>Non-Lucrative Visa
+            </a>
+            <a href="/digital-nomad-visa-spain/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">💻</span>Digital Nomad Visa
+            </a>
+            <a href="/student-visa-spain/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🎓</span>Student Visa
+            </a>
+            <div class="msv-nav__dropdown-divider"></div>
+            <a href="/spain-visa-renewal/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🔄</span>Visa Renewals
+            </a>
+            <a href="/best-visa-move-to-spain/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">⚖️</span>Compare All Visas
+            </a>
+          </div>
+        </li>
+
+        <li>
+          <button aria-haspopup="true" aria-expanded="false">
+            Resources <span class="msv-nav__chevron">▾</span>
+          </button>
+          <div class="msv-nav__dropdown" role="menu">
+            <a href="/blog/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">📝</span>Blog &amp; Guides
+            </a>
+            <a href="/spain-visa-checklist/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">✅</span>Document Checklists
+            </a>
+            <a href="/move-to-spain/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🏠</span>Move to Spain Guide
+            </a>
+            <a href="/visa-eligibility-quiz/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🧭</span>Eligibility Quiz
+            </a>
+          </div>
+        </li>
+
+        <li><a href="/about-us/">About Us</a></li>
+        <li><a href="/testimonials/">Reviews</a></li>
+        <li><a href="/contact-us.html">Contact</a></li>
+
+      </ul>
+    </nav>
+
+    <!-- Desktop CTA -->
+    <a href="https://dashboard.platinumlegalspain.com/dnv" class="msv-nav__cta">
+      Start My Application →
+    </a>
+
+    <!-- Hamburger (mobile) -->
+    <button class="msv-nav__burger" aria-label="Open menu" aria-expanded="false" onclick="
+      var m=document.querySelector('.msv-nav__mobile');
+      var open=m.classList.toggle('open');
+      this.setAttribute('aria-expanded', open);
+    ">
+      <span></span><span></span><span></span>
+    </button>
+
+  </div><!-- /.msv-nav__inner -->
+
+  <!-- Mobile menu -->
+  <nav class="msv-nav__mobile" aria-label="Mobile navigation">
+    <a href="/non-lucrative-visa-spain/" class="msv-nav__mobile-sub">Non-Lucrative Visa</a>
+    <a href="/digital-nomad-visa-spain/" class="msv-nav__mobile-sub">Digital Nomad Visa</a>
+    <a href="/student-visa-spain/" class="msv-nav__mobile-sub">Student Visa</a>
+    <a href="/spain-visa-renewal/">Visa Renewals</a>
+    <a href="/best-visa-move-to-spain/">Compare All Visas</a>
+    <a href="/blog/">Blog &amp; Guides</a>
+    <a href="/about-us/">About Us</a>
+    <a href="/testimonials/">Reviews</a>
+    <a href="/contact-us.html">Contact</a>
+    <a href="https://dashboard.platinumlegalspain.com/dnv" class="msv-nav__mobile-cta">Start My Application →</a>
+  </nav>
+
+</header>
+
+
+<!-- ═══════════════════════════════════════════════════
+     PAGE CONTENT (fragment injected here)
+     ═══════════════════════════════════════════════════ -->
+<main>
+<!-- FRAGMENT_START -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://myspanishvisa.com/dnv-usa/",
+      "url": "https://myspanishvisa.com/dnv-usa/",
+      "name": "Spain Digital Nomad Visa for Americans 2026: Complete Application Guide | My Spanish Visa",
+      "description": "How Americans apply for Spain's Digital Nomad Visa — FBI background check, US consulates, income evidence, FBAR implications, and Beckham Law for US citizens.",
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://myspanishvisa.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Digital Nomad Visa", "item": "https://myspanishvisa.com/digital-nomad-visa-spain/" },
+          { "@type": "ListItem", "position": 3, "name": "US Nationals", "item": "https://myspanishvisa.com/dnv-usa/" }
+        ]
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Do I need the FBI background check or a state check for the Spain Digital Nomad Visa?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The Spain Digital Nomad Visa requires a national-level criminal record check — the FBI Identity History Summary Check (commonly called the FBI background check). State-level background checks are not accepted. The FBI check covers the national criminal database and is specifically formatted for international use. You can apply directly through the FBI website (fbi.gov/how-we-can-help-you/more-fbi-services-and-information/identity-history-summary-checks) or through an approved FBI-authorized channeler, which is typically faster. Standard FBI processing takes 8-15 weeks; channeler processing is usually 3-4 weeks."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I get my FBI background check apostilled for Spain?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "FBI Identity History Summary Checks are federal documents. Federal documents are apostilled by the US Department of State's Office of Authentications in Washington DC, not by individual state Secretaries of State. You send the original FBI check directly to the US Department of State for the apostille. Allow approximately 6-8 weeks for standard service or use their expedited service. After apostilling, the document must be accompanied by a sworn Spanish translation certified by a translator accredited by the Spanish Ministry of Foreign Affairs."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the income threshold for Americans applying for the Spain Digital Nomad Visa?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The income threshold is 200% of Spain's IPREM (approximately EUR 2,646/month in 2025/2026). At approximately USD 1.08/EUR (April 2026), this equates to roughly USD 2,857/month. However, to comfortably demonstrate compliance and account for exchange rate fluctuation, we recommend showing income of at least USD 3,200-3,500/month. Income must be documented through pay stubs, W-2 or 1099 forms, tax returns, and bank statements, all with sworn Spanish translations."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which US consulate do I apply to for the Spain Digital Nomad Visa?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Spain operates consulates in multiple US cities including Los Angeles, New York, Miami, Chicago, Houston, Boston, and San Francisco. You must apply at the consulate with jurisdiction over your state of residence. The jurisdiction map generally follows: Los Angeles covers California, Nevada, Arizona, Hawaii, and Pacific territories; New York covers NY, NJ, CT, and several northeastern states; Miami covers Florida and nearby states; Chicago covers the Midwest; Houston covers Texas and neighboring states; Boston covers New England; San Francisco covers northern California and Pacific Northwest. Verify jurisdiction on the consulate website."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I keep my US remote job on the Spain Digital Nomad Visa?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes — maintaining your US remote job is exactly what the DNV is designed for. The visa allows you to work remotely for US employers (or any non-Spanish employer) while living in Spain. Your employment relationship with your US company continues unchanged; you simply work from Spain instead of the US. You must ensure no more than 20% of your income comes from Spanish clients or entities. Your employer must confirm in writing that your role can be performed remotely and that you are authorized to work from Spain."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are the US tax obligations if I live in Spain on the Digital Nomad Visa?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "US citizens are taxed on worldwide income regardless of where they live. Living in Spain does not remove your US tax filing obligation. You must continue filing annual US federal tax returns (Form 1040) and potentially state tax returns. If you have foreign financial accounts (including Spanish bank accounts), you may have FBAR (FinCEN 114) and FATCA (Form 8938) reporting obligations. However, the US-Spain tax treaty and the Foreign Tax Credit (Form 1116) prevent double taxation by allowing you to credit Spanish taxes paid against your US tax liability. Consult a US expat tax specialist."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are FBAR obligations for Americans living in Spain on the DNV?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "If you have foreign financial accounts (bank accounts, investment accounts, etc.) in Spain or elsewhere outside the US, and the aggregate maximum value exceeds USD 10,000 at any point during the calendar year, you must file an FBAR (Report of Foreign Bank and Financial Accounts, FinCEN Form 114) with the US Treasury Department by April 15 (with automatic extension to October 15). Failure to file carries severe civil and potentially criminal penalties. Additionally, under FATCA, if your foreign financial assets exceed certain thresholds, you must report them on Form 8938 with your federal tax return."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is the Beckham Law available to US citizens on the Spain Digital Nomad Visa?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. US citizens who obtain the Spain DNV and become Spanish tax residents can apply for the Beckham Law regime (Regimen Especial para Trabajadores Desplazados). This provides a flat 24% Spanish tax rate on Spanish-sourced income up to EUR 600,000 rather than the progressive rates up to 47%. The key requirement is not having been tax resident in Spain in the prior five years. However, US citizens must still file US tax returns on worldwide income — the Beckham Law only affects Spanish tax; it does not eliminate US filing obligations. The US-Spain tax treaty and Foreign Tax Credit can reduce or eliminate double taxation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I bring my family when I apply for the Spain DNV as a US citizen?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Spouses, civil partners, and dependent children (under 21 or financially dependent) can apply as dependants. Each family member submits their own documents including their own qualifying Spain health insurance policy, criminal record certificate (adults), and relationship proof documents. The income threshold increases per dependant: approximately EUR 992/month per additional person. All documents in English need sworn Spanish translations."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are the typical processing times for the Spain DNV from US consulates?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Processing times from US consulates typically range from 30 to 90 days after submission, with significant variation between consulates and seasons. New York and Los Angeles tend to be busier and can run 60-90 days. Miami, Chicago, Houston, Boston, and San Francisco are often faster (30-60 days) due to lower volumes. The total process from starting document preparation to having your visa is typically 5-8 months, with the FBI background check (8-15 weeks standard, 3-4 weeks via channeler) being the longest single element."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Should I apply for the Spain DNV from the US or from within Spain?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Both options are available. Applying from the US at a Spanish consulate is appropriate if you are not yet in Spain. If you are already in Spain legally (within your visa-free 90-day tourist period), you can apply via the UGE online platform without returning to the US. The UGE route is often faster and requires digital document submissions rather than in-person attendance. However, ensure your documents are prepared in advance, as UGE applications are subject to the same eligibility requirements. Do not overstay your tourist period while waiting for a UGE decision without legal advice."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<!-- Open Graph / Social -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.myspanishvisa.com/dnv-usa/">
+<meta property="og:title" content="My Spanish Visa">
+<meta property="og:description" content="Expert Spain visa guidance for English-speaking expats.">
+<meta property="og:image" content="https://www.myspanishvisa.com/assets/images/og/og-dnv-spain.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="My Spanish Visa">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@myspanishvisa">
+<meta name="twitter:title" content="My Spanish Visa">
+<meta name="twitter:description" content="Expert Spain visa guidance for English-speaking expats.">
+<meta name="twitter:image" content="https://www.myspanishvisa.com/assets/images/og/og-dnv-spain.jpg">
+
+<style>
+html, body { max-width: 100%; overflow-x: clip; }
+.msv, .msv-nav, .msv-topbar, .msv-footer { max-width: 100%; overflow-x: clip; position: relative; }
+.msv img, .msv video, .msv iframe { max-width: 100%; height: auto; }
+.msv *, .msv *::before, .msv *::after { box-sizing: border-box; margin: 0; padding: 0; }
+.msv {
+  --navy: #0c1930; --navy-mid: #1a3a5c; --red: #be0011; --red-deep: #8c000d;
+  --yellow: #facf39; --cream: #f8f7f4; --white: #ffffff; --black: #1a1a1a;
+  --muted: #5a6478; --border: #dce3ed;
+  --shadow-sm: 0 2px 8px rgba(12,25,48,0.08); --shadow-md: 0 6px 24px rgba(12,25,48,0.13);
+  font-family: 'Inter', 'Segoe UI', system-ui, Arial, sans-serif;
+  font-size: 16px; line-height: 1.75; color: var(--black); width: 100%;
+}
+.msv__container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+.msv__container--narrow { max-width: 780px; margin: 0 auto; padding: 0 2rem; }
+@media (max-width: 640px) { .msv__container, .msv__container--narrow { padding: 0 1.2rem; } }
+.msv h1 { font-size: clamp(1.9rem, 4vw, 2.9rem); font-weight: 800; line-height: 1.12; color: var(--white); letter-spacing: -0.025em; margin-bottom: 1.2rem; }
+.msv h2 { font-size: clamp(1.25rem, 2.5vw, 1.7rem); font-weight: 700; color: var(--navy); letter-spacing: -0.01em; margin-bottom: 0.5rem; position: relative; display: inline-block; padding-bottom: 0.5rem; }
+.msv h2::after { content: ''; position: absolute; bottom: 0; left: 0; width: 44px; height: 3px; background: linear-gradient(90deg, var(--red), var(--red-deep)); border-radius: 2px; }
+.msv h3 { font-size: 1.05rem; font-weight: 700; color: var(--navy); margin-bottom: 0.4rem; }
+.msv p { color: var(--black); margin-bottom: 1rem; font-size: 0.97rem; }
+.msv a { color: var(--red); text-decoration: none; }
+.msv a:hover { text-decoration: underline; }
+.msv ul { list-style: none; padding: 0; margin: 0 0 1rem; }
+.msv ul li { padding: 0.35rem 0 0.35rem 1.4rem; position: relative; font-size: 0.95rem; color: var(--black); }
+.msv ul li::before { content: ''; position: absolute; left: 0; top: 0.75rem; width: 7px; height: 7px; background: linear-gradient(135deg, var(--red), var(--red-deep)); border-radius: 50%; }
+.msv__section { padding: 5rem 0; background: var(--white); }
+.msv__section--cream { padding: 5rem 0; background: linear-gradient(180deg, #f8f7f4 0%, #f2f4f8 100%); }
+.msv__section--dark { padding: 5rem 0; background: linear-gradient(135deg, var(--navy) 0%, #0d2240 55%, #0a1d38 100%); }
+.msv__section--dark h2 { color: var(--white) !important; }
+.msv__section--dark h2::after { background: linear-gradient(90deg, var(--yellow), #e8b820); }
+.msv .msv__section--dark p, .msv .msv__section--dark li { color: rgba(255,255,255,0.82); }
+.msv__section--dark ul li::before { background: linear-gradient(135deg, var(--yellow), #e8b820); }
+@media (max-width: 640px) { .msv__section, .msv__section--cream, .msv__section--dark { padding: 3.5rem 0; } }
+.msv__section-hd { margin-bottom: 3rem; }
+.msv__section-hd p { color: var(--muted); font-size: 1rem; margin-top: 0.75rem; line-height: 1.7; max-width: 640px; }
+@keyframes msv-fade-up { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes msv-shimmer { 0% { background-position: -400px 0; } 100% { background-position: 400px 0; } }
+.msv__shimmer { background: linear-gradient(90deg, var(--yellow) 0%, #e8b820 25%, var(--red) 50%, #e8b820 75%, var(--yellow) 100%); background-size: 400px 100%; -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; animation: msv-shimmer 3.5s linear infinite; display: inline; }
+.msv__hero { background: linear-gradient(135deg, #0c1930 0%, #0f2540 40%, #162d50 70%, #1a3560 100%); padding: 5.5rem 0 5rem; position: relative; overflow: hidden; }
+.msv__hero::before { content: ''; position: absolute; top: -30%; right: -5%; width: 700px; height: 700px; background: radial-gradient(circle, rgba(190,0,17,0.1) 0%, transparent 65%); pointer-events: none; }
+.msv__hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, rgba(250,207,57,0.4), transparent); }
+.msv__hero-inner { max-width: 780px; animation: msv-fade-up 0.7s ease-out both; }
+.msv__eyebrow { display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(190,0,17,0.15); border: 1px solid rgba(190,0,17,0.4); color: #ff6b7a; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.35rem 0.9rem; border-radius: 100px; margin-bottom: 1.5rem; }
+.msv__eyebrow::before { content: ''; width: 6px; height: 6px; background: var(--red); border-radius: 50%; box-shadow: 0 0 6px var(--red); }
+.msv__hero p { color: rgba(255,255,255,0.78) !important; font-size: clamp(1rem, 2.2vw, 1.15rem); max-width: 640px; margin-bottom: 2.2rem; line-height: 1.75; }
+.msv__breadcrumb { padding: 0.85rem 0; border-bottom: 1px solid var(--border); background: var(--white); }
+.msv__breadcrumb-inner { display: flex; align-items: center; gap: 0.5rem; font-size: 0.8rem; color: var(--muted); flex-wrap: wrap; }
+.msv__breadcrumb-inner a { color: var(--red); }
+.msv__btn-group { display: flex; flex-wrap: wrap; gap: 0.85rem; }
+.msv__btn { display: inline-block; padding: 0.85rem 2rem; font-size: 0.92rem; font-weight: 700; border-radius: 6px; text-decoration: none !important; transition: transform 0.15s, box-shadow 0.15s; }
+.msv__btn:hover { transform: translateY(-1px); }
+.msv .msv__btn--primary { background: linear-gradient(135deg, var(--red) 0%, var(--red-deep) 100%); color: #ffffff !important; box-shadow: 0 4px 16px rgba(190,0,17,0.38); }
+.msv .msv__btn--outline-white { background: transparent; color: #ffffff !important; border: 1.5px solid rgba(255,255,255,0.5); }
+.msv .msv__btn--outline-white:hover { background: rgba(255,255,255,0.1); }
+.msv__trust-bar { background: var(--white); border-bottom: 1px solid var(--border); padding: 1rem 0; box-shadow: var(--shadow-sm); }
+.msv__trust-bar-inner { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.75rem; }
+.msv__trust-item { display: flex; align-items: center; gap: 0.5rem; font-size: 0.82rem; font-weight: 600; color: var(--navy); white-space: nowrap; }
+.msv__trust-item::before { content: ''; width: 7px; height: 7px; background: linear-gradient(135deg, var(--red), var(--red-deep)); border-radius: 50%; flex-shrink: 0; }
+.msv__facts { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; margin-bottom: 3rem; }
+@media (max-width: 760px) { .msv__facts { grid-template-columns: 1fr 1fr; } }
+.msv__fact { background: var(--white); padding: 1.5rem 1.3rem; text-align: center; }
+.msv__fact-icon { font-size: 1.5rem; display: block; margin-bottom: 0.5rem; }
+.msv__fact-label { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); display: block; margin-bottom: 0.25rem; }
+.msv__fact-value { font-size: 0.97rem; font-weight: 700; color: var(--navy); line-height: 1.35; display: block; }
+.msv__faq-list { display: flex; flex-direction: column; gap: 0; border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+.msv__faq-list details { border-bottom: 1px solid var(--border); background: var(--white); }
+.msv__faq-list details:last-child { border-bottom: none; }
+.msv__faq-list summary { padding: 1.2rem 1.5rem; font-size: 0.97rem; font-weight: 700; color: var(--navy); cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+.msv__faq-list summary::-webkit-details-marker { display: none; }
+.msv__faq-list summary::after { content: '+'; font-size: 1.3rem; font-weight: 400; color: var(--red); flex-shrink: 0; transition: transform 0.2s; }
+.msv__faq-list details[open] summary::after { transform: rotate(45deg); }
+.msv__faq-list details[open] summary { color: var(--red); }
+.msv__faq-answer { padding: 0 1.5rem 1.3rem; font-size: 0.92rem; color: var(--muted); line-height: 1.75; }
+.msv__faq-answer p { color: var(--muted); font-size: 0.92rem; margin-bottom: 0.75rem; }
+.msv__faq-answer p:last-child { margin-bottom: 0; }
+.msv__cta-band { background: linear-gradient(135deg, var(--navy) 0%, #0d2240 60%, #0a1d38 100%); padding: 5rem 0; text-align: center; }
+.msv__cta-band h2 { color: var(--white) !important; display: block; }
+.msv__cta-band h2::after { left: 50%; transform: translateX(-50%); background: linear-gradient(90deg, var(--yellow), #e8b820); }
+.msv__cta-band p { color: rgba(255,255,255,0.75) !important; max-width: 560px; margin: 1rem auto 2.2rem; font-size: 1rem; }
+.msv__cta-band .msv__btn-group { justify-content: center; }
+.msv__related { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; }
+@media (max-width: 860px) { .msv__related { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 420px) { .msv__related { grid-template-columns: 1fr; } }
+.msv__related-card { background: var(--white); border: 1px solid var(--border); border-radius: 10px; padding: 1.3rem 1.25rem; text-decoration: none !important; transition: box-shadow 0.2s, transform 0.2s; display: block; }
+.msv__related-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+.msv__related-icon { font-size: 1.5rem; display: block; margin-bottom: 0.6rem; }
+.msv__related-title { font-size: 0.88rem; font-weight: 700; color: var(--navy); display: block; margin-bottom: 0.3rem; }
+.msv__related-desc { font-size: 0.8rem; color: var(--muted); line-height: 1.55; }
+.msv__alert { border-radius: 10px; padding: 1.3rem 1.5rem; display: flex; gap: 1rem; align-items: flex-start; margin-bottom: 2rem; }
+.msv__alert--warn { background: #fffbea; border: 1px solid #f0d060; }
+.msv__alert--info { background: #eef4ff; border: 1px solid #a0bfff; }
+.msv__alert--red { background: #fef2f2; border: 1px solid #fca5a5; }
+.msv__alert-icon { font-size: 1.4rem; flex-shrink: 0; margin-top: 0.1rem; }
+.msv__alert p { font-size: 0.9rem; color: var(--black); margin: 0; line-height: 1.65; }
+.msv__alert strong { color: var(--navy); }
+.msv__checklist { list-style: none; padding: 0; margin: 0 0 2rem; }
+.msv__checklist li { padding: 0.75rem 0 0.75rem 2.2rem; position: relative; font-size: 0.95rem; color: var(--black); border-bottom: 1px solid var(--border); line-height: 1.6; }
+.msv__checklist li:last-child { border-bottom: none; }
+.msv__checklist li::before { content: '☐'; position: absolute; left: 0; top: 0.72rem; font-size: 1.1rem; color: var(--red); }
+.msv__checklist li strong { color: var(--navy); }
+.msv__consulate-table { width: 100%; border-collapse: collapse; margin-bottom: 2rem; font-size: 0.88rem; }
+.msv__consulate-table th, .msv__consulate-table td { padding: 0.85rem 1rem; text-align: left; border-bottom: 1px solid var(--border); vertical-align: top; }
+.msv__consulate-table th { background: var(--cream); font-weight: 700; color: var(--navy); }
+.msv__consulate-table tr:last-child td { border-bottom: none; }
+.msv__comparison-table { width: 100%; border-collapse: collapse; margin-bottom: 2rem; font-size: 0.92rem; }
+.msv__comparison-table th, .msv__comparison-table td { padding: 0.9rem 1.1rem; text-align: left; border-bottom: 1px solid var(--border); vertical-align: top; }
+.msv__comparison-table th { background: var(--cream); font-weight: 700; color: var(--navy); }
+.msv__comparison-table tr:last-child td { border-bottom: none; }
+.msv__steps { display: flex; flex-direction: column; gap: 1.5rem; }
+.msv__step { display: flex; gap: 1.5rem; align-items: flex-start; }
+.msv__step-num { width: 44px; height: 44px; flex-shrink: 0; border-radius: 50%; background: linear-gradient(135deg, var(--red), var(--red-deep)); color: #fff; font-size: 0.9rem; font-weight: 800; display: flex; align-items: center; justify-content: center; }
+.msv__step-body h3 { font-size: 1rem; font-weight: 700; color: var(--navy); margin-bottom: 0.3rem; }
+.msv__step-body p { font-size: 0.9rem; color: var(--muted); margin: 0; line-height: 1.65; }
+.msv__disclaimer { background: var(--cream); border-top: 1px solid var(--border); padding: 2rem 0; }
+.msv__disclaimer p { font-size: 0.78rem; color: var(--muted); margin: 0; line-height: 1.65; }
+</style>
+
+<div class="msv">
+
+  <div class="msv__breadcrumb">
+    <div class="msv__container">
+      <div class="msv__breadcrumb-inner">
+        <a href="/">Home</a> <span>›</span>
+        <a href="/digital-nomad-visa-spain/">Digital Nomad Visa</a> <span>›</span>
+        <span>US Citizens Guide</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="msv__hero">
+    <div class="msv__container">
+      <div class="msv__hero-inner">
+        <div class="msv__eyebrow">Complete Guide for American Applicants</div>
+        <h1>Spain Digital Nomad Visa for Americans: The Complete 2026 Guide</h1>
+        <p>How US citizens apply for Spain's Digital Nomad Visa — FBI background check step-by-step, which of the 7 US consulates handles your state, income evidence in USD, FBAR and US tax obligations explained, and the Beckham Law opportunity for Americans.</p>
+        <div class="msv__btn-group">
+          <a href="https://dashboard.platinumlegalspain.com/dnv" class="msv__btn msv__btn--primary">Book a Free Consultation</a>
+          <a href="/dnv-checklist/" class="msv__btn msv__btn--outline-white">Full Document Checklist</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="msv__trust-bar">
+    <div class="msv__container">
+      <div class="msv__trust-bar-inner">
+        <div class="msv__trust-item">Specialists in US DNV applications</div>
+        <div class="msv__trust-item">All 7 US consulates covered</div>
+        <div class="msv__trust-item">FBI check &amp; US tax guidance</div>
+        <div class="msv__trust-item">Updated April 2026</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="msv__section">
+    <div class="msv__container">
+      <div class="msv__facts">
+        <div class="msv__fact">
+          <span class="msv__fact-icon">🇺🇸</span>
+          <span class="msv__fact-label">US Consulates Available</span>
+          <span class="msv__fact-value">7 cities across the US</span>
+        </div>
+        <div class="msv__fact">
+          <span class="msv__fact-icon">💵</span>
+          <span class="msv__fact-label">Min. Income (USD approx.)</span>
+          <span class="msv__fact-value">~$2,857/month</span>
+        </div>
+        <div class="msv__fact">
+          <span class="msv__fact-icon">🔍</span>
+          <span class="msv__fact-label">Criminal Record Required</span>
+          <span class="msv__fact-value">FBI Identity History Check</span>
+        </div>
+        <div class="msv__fact">
+          <span class="msv__fact-icon">⏱</span>
+          <span class="msv__fact-label">FBI Check Turnaround</span>
+          <span class="msv__fact-value">8–15 wks standard / 3–4 wks via channeler</span>
+        </div>
+      </div>
+
+      <div class="msv__section-hd">
+        <h2>Why Spain's Digital Nomad Visa Is Ideal for American Remote Workers</h2>
+        <p>Spain's Digital Nomad Visa was created under the 2022 Startups Law (Ley de Startups) specifically to attract remote workers who earn income outside Spain. For Americans working remotely for US companies, it provides a legal pathway to live in Spain full-time while continuing to work for your US employer.</p>
+      </div>
+
+      <p>The visa grants initial residency for one year from entry (or two years if the underlying employment contract is for longer), renewable for two years at a time, with a path to long-term residency after five years. Unlike a traditional work permit, there is no requirement for a Spanish employer to sponsor you, no labor market test, and no need to change your US employment relationship.</p>
+      <p>For US citizens specifically, there are a few unique considerations beyond the standard DNV application: the FBI background check (not a state-level check), apostille through the US Department of State (not a Secretary of State) for federal documents, US tax obligations that continue regardless of where you live, FBAR and FATCA reporting requirements for foreign accounts, and the Beckham Law opportunity to reduce Spanish tax on income up to €600,000.</p>
+      <p>The process takes longer than many applicants expect — primarily because the FBI Identity History Summary Check takes 8–15 weeks on standard service. Using an FBI-authorized channeler reduces this to 3–4 weeks. Planning your timeline around the FBI check is the single most important scheduling decision you will make.</p>
+    </div>
+  </div>
+
+  <div class="msv__section--cream">
+    <div class="msv__container--narrow">
+      <div class="msv__section-hd">
+        <h2>Which US Consulate Handles Your Spain DNV Application?</h2>
+        <p>Spain maintains consular offices in seven US cities. Each consulate has defined jurisdiction over specific states. You must apply at the consulate serving your state of legal residence — not the most convenient one, and not the one with the fastest reported processing times.</p>
+      </div>
+
+      <table class="msv__consulate-table">
+        <thead>
+          <tr>
+            <th>Consulate</th>
+            <th>States Covered (approximate — verify with consulate)</th>
+            <th>Est. Processing</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Los Angeles</strong></td>
+            <td>California (south + central), Nevada, Arizona, Hawaii, Guam, Pacific territories</td>
+            <td>45–75 days</td>
+          </tr>
+          <tr>
+            <td><strong>San Francisco</strong></td>
+            <td>Northern California, Oregon, Washington, Alaska, Idaho, Montana, Wyoming, Utah, Colorado</td>
+            <td>30–60 days</td>
+          </tr>
+          <tr>
+            <td><strong>New York</strong></td>
+            <td>New York, New Jersey, Connecticut, Pennsylvania, Delaware, Rhode Island, Vermont, New Hampshire, Maine</td>
+            <td>45–90 days</td>
+          </tr>
+          <tr>
+            <td><strong>Miami</strong></td>
+            <td>Florida, Georgia, South Carolina, North Carolina, Alabama, Mississippi, Tennessee, Virginia, West Virginia, DC, Maryland</td>
+            <td>30–60 days</td>
+          </tr>
+          <tr>
+            <td><strong>Chicago</strong></td>
+            <td>Illinois, Indiana, Ohio, Michigan, Wisconsin, Minnesota, Iowa, Missouri, Kansas, Nebraska, North Dakota, South Dakota</td>
+            <td>30–60 days</td>
+          </tr>
+          <tr>
+            <td><strong>Houston</strong></td>
+            <td>Texas, Louisiana, Arkansas, Oklahoma, New Mexico</td>
+            <td>30–60 days</td>
+          </tr>
+          <tr>
+            <td><strong>Boston</strong></td>
+            <td>Massachusetts, New York (some areas — verify), Connecticut (some areas)</td>
+            <td>30–55 days</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="msv__alert msv__alert--warn">
+        <div class="msv__alert-icon">⚠️</div>
+        <div>
+          <p><strong>Always verify jurisdiction directly with the consulate.</strong> Jurisdiction boundaries are determined by the Spanish Ministry of Foreign Affairs and can be updated. Some states near consulate boundaries may have ambiguous jurisdiction. If you live near a boundary or have recently relocated, contact your intended consulate to confirm they serve your state before beginning document preparation.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="msv__section">
+    <div class="msv__container--narrow">
+      <div class="msv__section-hd">
+        <h2>FBI Background Check for the Spain DNV: Step-by-Step Process for US Citizens</h2>
+        <p>The FBI Identity History Summary Check is the required national criminal record certificate for US citizens applying for the Spain Digital Nomad Visa. State-level background checks (whether from a state police agency, the state department of justice, or a commercial background check service) are not accepted.</p>
+      </div>
+
+      <div class="msv__alert msv__alert--red">
+        <div class="msv__alert-icon">🚫</div>
+        <div>
+          <p><strong>State background checks are not accepted.</strong> Even if a state police check covers your entire state criminal history, it does not draw from the national FBI database and will be rejected by Spanish consulates. You specifically need the FBI Identity History Summary Check (FBI IHSC) — the federal national criminal record check.</p>
+        </div>
+      </div>
+
+      <div class="msv__steps">
+        <div class="msv__step">
+          <div class="msv__step-num">1</div>
+          <div class="msv__step-body">
+            <h3>Choose: Direct FBI application or FBI-authorized channeler</h3>
+            <p>Option A — Apply directly through the FBI (fbi.gov): You submit your fingerprints by mail to the FBI. Standard processing is 8–15 weeks. Cost is approximately $18. This is the slowest but most affordable option. Option B — Use an FBI-authorized channeler: Private companies authorized by the FBI to collect fingerprints and submit to the FBI electronically. Processing is typically 3–4 weeks. Cost is $50–$125 depending on the channeler. The result is the same FBI check — channelers simply accelerate the process.</p>
+          </div>
+        </div>
+        <div class="msv__step">
+          <div class="msv__step-num">2</div>
+          <div class="msv__step-body">
+            <h3>Submit fingerprints</h3>
+            <p>For the direct FBI route, download the fingerprint card (Form FD-258) and have your fingerprints taken at a local police department, sheriff's office, or approved fingerprinting service. Mail to the FBI with payment. For the channeler route, the channeler will direct you to an approved fingerprinting location or provide live-scan fingerprinting at their office.</p>
+          </div>
+        </div>
+        <div class="msv__step">
+          <div class="msv__step-num">3</div>
+          <div class="msv__step-body">
+            <h3>Receive your FBI Identity History Summary Check</h3>
+            <p>The FBI sends results by mail (direct route) or electronically to the channeler who forwards to you. The document shows your personal details and criminal record status. Review carefully for any errors — especially in your name and date of birth. Errors must be corrected before proceeding to the apostille step.</p>
+          </div>
+        </div>
+        <div class="msv__step">
+          <div class="msv__step-num">4</div>
+          <div class="msv__step-body">
+            <h3>US Department of State apostille (not Secretary of State)</h3>
+            <p>The FBI check is a federal document. Federal documents must be apostilled by the US Department of State's Office of Authentications in Washington DC — not by your state's Secretary of State. Submit the original FBI check with the apostille request form and fee. Standard service takes approximately 6–8 weeks. Expedited service is available. Apostille service: travel.state.gov/content/travel/en/legal/travel-legal-considerations/Official-Record-Requests/Apostille-Requirements.html</p>
+          </div>
+        </div>
+        <div class="msv__step">
+          <div class="msv__step-num">5</div>
+          <div class="msv__step-body">
+            <h3>Sworn Spanish translation</h3>
+            <p>Once apostilled, commission a sworn Spanish translation from a translator certified by the Spanish Ministry of Foreign Affairs. The translation is attached to the apostilled FBI check and submitted together. Allow 5–10 business days for the translation.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="msv__alert msv__alert--info">
+        <div class="msv__alert-icon">⏱</div>
+        <div>
+          <p><strong>Total FBI check timeline:</strong> Direct FBI route (8–15 weeks) + US Dept of State apostille (6–8 weeks standard) + translation (1–2 weeks) = approximately 15–25 weeks total. Using a channeler reduces the FBI step to 3–4 weeks, bringing total time to approximately 10–14 weeks. <strong>Start the FBI check immediately when you decide to apply for the DNV.</strong></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="msv__section--cream">
+    <div class="msv__container--narrow">
+      <div class="msv__section-hd">
+        <h2>Apostille for US Documents: Federal vs State Documents Explained</h2>
+        <p>Americans are sometimes confused about where to get apostilles because the answer depends on whether a document was issued at the federal or state level. The two authorities are completely separate.</p>
+      </div>
+
+      <table class="msv__comparison-table">
+        <thead>
+          <tr>
+            <th>Document Type</th>
+            <th>Apostille Authority</th>
+            <th>Processing Time</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>FBI Identity History Summary Check</td>
+            <td>US Department of State (federal)</td>
+            <td>6–8 weeks standard; expedited available</td>
+          </tr>
+          <tr>
+            <td>US birth certificate</td>
+            <td>Secretary of State of the issuing state</td>
+            <td>1–6 weeks depending on state</td>
+          </tr>
+          <tr>
+            <td>US marriage certificate</td>
+            <td>Secretary of State of the issuing state</td>
+            <td>1–6 weeks depending on state</td>
+          </tr>
+          <tr>
+            <td>State-issued medical certificate</td>
+            <td>Secretary of State of the issuing state</td>
+            <td>1–6 weeks depending on state</td>
+          </tr>
+          <tr>
+            <td>US passport (as identity document)</td>
+            <td>No apostille needed — passport is self-authenticating</td>
+            <td>N/A</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="msv__alert msv__alert--warn">
+        <div class="msv__alert-icon">⚠️</div>
+        <div>
+          <p><strong>Common mistake:</strong> Sending the FBI check to your state's Secretary of State for apostille will be rejected — the Secretary of State cannot authenticate a federal document. Only the US Department of State can apostille the FBI check. Similarly, sending a state birth certificate to the US Department of State will be rejected — that must go to the relevant state's Secretary of State.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="msv__section">
+    <div class="msv__container--narrow">
+      <div class="msv__section-hd">
+        <h2>US Income Evidence for the Spain DNV: W-2, 1099, Pay Stubs, and Bank Statements</h2>
+        <p>Spain's DNV income threshold is approximately €2,646/month (200% of IPREM 2025/2026). At April 2026 exchange rates (~$1.08/€1), this is approximately $2,857/month. To demonstrate comfortable compliance, aim to show $3,200–$3,500/month.</p>
+      </div>
+
+      <div class="msv__alert msv__alert--info">
+        <div class="msv__alert-icon">💵</div>
+        <div>
+          <p><strong>Exchange rate buffer matters.</strong> The USD/EUR rate has ranged from $1.00 to $1.12 per euro over the past two years. An income of $2,900/month might just clear the threshold at today's rates but fall short if the dollar weakens. Demonstrating $3,500+/month creates a genuine margin of safety. Show your conversion calculation using the ECB reference rate.</p>
+        </div>
+      </div>
+
+      <ul class="msv__checklist">
+        <li><strong>Employed applicants — pay stubs:</strong> Three to six consecutive monthly pay stubs from your employer showing gross salary, federal and state tax withholdings, FICA contributions, and net pay. All must be accompanied by sworn Spanish translations.</li>
+        <li><strong>Employed applicants — W-2:</strong> Your most recent annual W-2 form confirms total annual earnings and aligns with pay stubs. Sworn Spanish translation required.</li>
+        <li><strong>Self-employed / contractors — 1099s:</strong> Most recent 1099-NEC or 1099-MISC forms from clients corroborate self-employment income. Sworn Spanish translation required.</li>
+        <li><strong>Self-employed — Schedule C:</strong> Your most recent Schedule C (Profit or Loss from Business) from your federal tax return demonstrates net business income. This is particularly important for demonstrating consistent, sustainable self-employment income.</li>
+        <li><strong>Tax returns:</strong> Most recent federal Form 1040 (complete, with relevant schedules) demonstrates income history. Sworn Spanish translation required. State returns may be requested by some consulates.</li>
+        <li><strong>Bank statements:</strong> Three to six months of US personal or business bank statements showing income deposits. Statements should clearly show your name, account number (can be partially redacted), and the deposit history consistent with your income evidence.</li>
+        <li><strong>Employment contract or offer letter:</strong> Confirming your role, salary, start date, and authorization to work remotely from Spain. Sworn Spanish translation required.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="msv__section--cream">
+    <div class="msv__container--narrow">
+      <div class="msv__section-hd">
+        <h2>US Tax Obligations While Living in Spain: FBAR, FATCA, and the Tax Treaty</h2>
+        <p>This section is critical for US citizens considering the Spain DNV. Unlike most nationalities, US citizens are taxed on worldwide income regardless of where they live. Moving to Spain does not eliminate your US tax obligations — it adds a new layer of Spanish tax obligations alongside them.</p>
+      </div>
+
+      <div class="msv__alert msv__alert--red">
+        <div class="msv__alert-icon">🚨</div>
+        <div>
+          <p><strong>US citizens must file US taxes forever.</strong> Moving to Spain and becoming a Spanish tax resident does not end your US federal tax filing obligation. You must continue to file Form 1040 annually and report worldwide income to the IRS, regardless of where the income is earned or where you live. The only way to stop this obligation is to renounce US citizenship, which is an irreversible and complex legal process.</p>
+        </div>
+      </div>
+
+      <h3 style="margin-bottom: 1rem; margin-top: 0.5rem;">FBAR (Report of Foreign Bank and Financial Accounts)</h3>
+      <p>If the aggregate maximum value of all your foreign financial accounts (Spanish bank accounts, investment accounts, pension accounts, etc.) exceeds $10,000 at any point during a calendar year, you must file FinCEN Form 114 (the FBAR) with the US Treasury Department by April 15 (with automatic extension to October 15). This is separate from your federal tax return.</p>
+      <p>Penalties for non-willful FBAR violations can reach $10,000 per violation; willful violations carry penalties of up to $100,000 or 50% of the account balance per violation, whichever is higher. The penalties are severe — file the FBAR even if you owe no US tax.</p>
+
+      <h3 style="margin-bottom: 1rem; margin-top: 0.5rem;">FATCA (Foreign Account Tax Compliance Act)</h3>
+      <p>Under FATCA, if you are living abroad and your foreign financial assets exceed $200,000 on the last day of the year (or $300,000 at any point during the year), you must report them on Form 8938 with your annual federal tax return. Different thresholds apply if you file jointly or live in the US. Spanish banks are required by treaty to report US account holders' information to the IRS.</p>
+
+      <h3 style="margin-bottom: 1rem; margin-top: 0.5rem;">How the US-Spain Tax Treaty Prevents Double Taxation</h3>
+      <p>The US and Spain have a comprehensive tax treaty that generally prevents double taxation. The Foreign Tax Credit (Form 1116) allows you to credit Spanish income taxes you have paid against your US tax liability on the same income. In practice, because Spanish tax rates are comparable to or higher than US rates for most income levels, many US citizens living in Spain owe little additional US tax after applying the Foreign Tax Credit. However, the interaction is complex and professional advice is essential. See also our guide on <a href="/blog-spain-digital-nomad-visa-tax/">Spain DNV tax implications</a>.</p>
+
+      <ul class="msv__checklist">
+        <li><strong>Continue filing Form 1040 annually</strong> — on worldwide income, due April 15 (automatic extension to June 15 for those living abroad, further extension to October 15 available)</li>
+        <li><strong>File FBAR (FinCEN 114)</strong> annually if aggregate foreign account balances exceed $10,000 at any point in the year</li>
+        <li><strong>File Form 8938</strong> with your 1040 if foreign financial assets exceed the applicable FATCA thresholds</li>
+        <li><strong>Apply for Foreign Tax Credit (Form 1116)</strong> to credit Spanish taxes paid against US liability</li>
+        <li><strong>Consider the Beckham Law</strong> to reduce Spanish tax rate (see below) — but understand this does not affect your US filing obligations</li>
+        <li><strong>Engage a US expat tax specialist</strong> — the interaction of US and Spanish tax, FBAR, FATCA, and the Beckham Law is complex and mistakes are costly</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="msv__section">
+    <div class="msv__container--narrow">
+      <div class="msv__section-hd">
+        <h2>The Beckham Law for US Citizens: Spain's 24% Flat Tax Explained</h2>
+        <p>Despite the ongoing US tax filing obligation, US citizens on the Spain DNV can still benefit significantly from the Beckham Law, which reduces Spanish tax on income up to €600,000 from the progressive 19%–47% resident rates to a flat 24%. Over a six-year period, this saving can be substantial.</p>
+      </div>
+
+      <table class="msv__comparison-table">
+        <thead>
+          <tr>
+            <th>Annual Income (EUR)</th>
+            <th>Spanish Tax (Beckham Law 24%)</th>
+            <th>Spanish Tax (Standard Resident)</th>
+            <th>Annual Saving</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>€40,000</td>
+            <td>€9,600</td>
+            <td>~€9,300–€11,800</td>
+            <td>Approx. break-even to saving ~€2,200</td>
+          </tr>
+          <tr>
+            <td>€60,000</td>
+            <td>€14,400</td>
+            <td>~€15,000–€18,500</td>
+            <td>~€600–€4,100 saving</td>
+          </tr>
+          <tr>
+            <td>€80,000</td>
+            <td>€19,200</td>
+            <td>~€22,000–€27,000</td>
+            <td>~€2,800–€7,800 saving</td>
+          </tr>
+          <tr>
+            <td>€120,000</td>
+            <td>€28,800</td>
+            <td>~€40,000–€47,000</td>
+            <td>~€11,200–€18,200 saving</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>Note: The above figures are illustrative. Actual Spanish tax depends on regional surcharges, deductions, and personal circumstances. The Beckham Law also provides that foreign-sourced income (e.g., interest, dividends from US sources) is generally not taxed in Spain under this regime. For US citizens, Spanish taxes paid are then credited against US tax liability via the Foreign Tax Credit, so the interaction can be favourable.</p>
+      <p>Apply for the Beckham Law via Modelo 149 within six months of beginning work in Spain. The application is filed with the Agencia Tributaria (Spanish Tax Agency). Our <a href="/blog-beckham-law-digital-nomad-visa-spain/">detailed Beckham Law guide</a> covers the eligibility criteria and application process.</p>
+    </div>
+  </div>
+
+  <div class="msv__section--cream">
+    <div class="msv__container--narrow">
+      <div class="msv__section-hd">
+        <h2>Health Insurance for Americans: Why US Plans Don't Qualify for the Spain DNV</h2>
+        <p>A Blue Cross Blue Shield plan, Aetna, a leading private insurer US, or UnitedHealthcare plan will not qualify as health insurance for the Spain Digital Nomad Visa — even comprehensive international rider plans. You need insurance from a provider operating in Spain.</p>
+      </div>
+
+      <p>Spain's DNV health insurance requirements are: issued by an insurer authorised by Spain's DGSFP insurance regulator, comprehensive coverage throughout all of Spain, no copayments for any medical treatment, minimum coverage for the full visa duration (one year), and no significant waiting periods or exclusions.</p>
+      <p>Most US health plans, even those with some international emergency coverage, do not meet these requirements. The copayment requirement alone disqualifies most plans — US plans typically have deductibles, copays, and out-of-pocket maximums that are incompatible with Spain's no-copayment rule.</p>
+
+      <ul class="msv__checklist">
+        <li><strong>Qualifying insurers for US applicants:</strong> a leading private insurer Spain plan (distinct from a leading private insurer US), a leading private insurer Spain, established private health insurers in Spain Health Spain</li>
+        <li><strong>Not qualifying:</strong> Blue Cross Blue Shield, Aetna, a leading private insurer US, UnitedHealthcare, Kaiser Permanente, Oscar Health, standard international travel insurance, Medicare, Medicaid</li>
+        <li><strong>Medicare abroad:</strong> Medicare generally does not cover healthcare outside the US (with very limited exceptions). You cannot use Medicare as your Spain DNV health insurance.</li>
+        <li><strong>Annual cost:</strong> Budget $700–$2,000 USD per adult per year for qualifying Spain coverage. Compare quotes from multiple Spain-authorised insurers.</li>
+        <li><strong>a leading private insurer note:</strong> a leading private insurer's international (Global) health plans designed for expatriates are distinct from a leading private insurer US domestic plans and may qualify — confirm the specific plan is DGSFP-authorised and has no copayments for Spain coverage.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="msv__cta-band">
+    <div class="msv__container">
+      <h2>Americans: Start Your Spain DNV Application With Expert Guidance</h2>
+      <p>The FBI check, US Dept of State apostille, FBAR obligations, and Beckham Law interaction make the US DNV application genuinely complex. Our immigration lawyers and tax specialists have guided hundreds of Americans through every step.</p>
+      <div class="msv__btn-group">
+        <a href="https://dashboard.platinumlegalspain.com/dnv" class="msv__btn msv__btn--primary">Book a Free Consultation</a>
+        <a href="/dnv-checklist/" class="msv__btn msv__btn--outline-white">View Full Document Checklist</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="msv__section">
+    <div class="msv__container--narrow">
+      <div class="msv__section-hd">
+        <h2>Frequently Asked Questions: Spain Digital Nomad Visa for Americans</h2>
+      </div>
+
+      <div class="msv__faq-list">
+        <details>
+          <summary>Do I need the FBI background check or can I use a state police check?</summary>
+          <div class="msv__faq-answer">
+            <p>You need the federal FBI Identity History Summary Check — not a state police check. Spanish consulates require a national-level criminal record certificate that draws from the national criminal database. State police checks only cover records within that state and are not internationally recognised for immigration purposes.</p>
+            <p>Apply directly through the FBI at fbi.gov (8–15 weeks standard) or through an FBI-authorized channeler (3–4 weeks, $50–$125). The channeler route is strongly recommended to minimise this delay.</p>
+          </div>
+        </details>
+        <details>
+          <summary>How do I apostille my FBI check — do I use my state's Secretary of State?</summary>
+          <div class="msv__faq-answer">
+            <p>No — the FBI check is a federal document and must be apostilled by the US Department of State's Office of Authentications in Washington DC, not by your state's Secretary of State. The two apostille authorities are for different types of documents: the US Department of State handles federal documents; state Secretaries of State handle documents issued at the state level (birth certificates, marriage certificates, state-notarized documents).</p>
+            <p>Sending your FBI check to the Secretary of State will result in it being returned without apostille. Send it directly to the US Department of State with the required apostille request form and fee. Standard processing is approximately 6–8 weeks.</p>
+          </div>
+        </details>
+        <details>
+          <summary>What is the income threshold in US dollars for the Spain Digital Nomad Visa?</summary>
+          <div class="msv__faq-answer">
+            <p>The threshold is 200% of Spain's IPREM — approximately €2,646/month in 2025/2026. At April 2026 exchange rates (~$1.08/€1), this is approximately $2,857/month. However, exchange rates fluctuate, and a rate that barely clears today might fall short if the dollar weakens.</p>
+            <p>We recommend demonstrating income of at least $3,200–$3,500/month to create a genuine margin above the threshold. Include an explicit EUR conversion note in your application, using the ECB reference rate and noting the date used, to make it easy for the consulate officer to verify compliance.</p>
+          </div>
+        </details>
+        <details>
+          <summary>Which US consulate do I apply to for the Spain DNV?</summary>
+          <div class="msv__faq-answer">
+            <p>Your consulate is determined by your state of legal residence. Approximate jurisdictions: Los Angeles covers southern/central California, Nevada, Arizona, Hawaii; San Francisco covers northern California, Oregon, Washington, and mountain states; New York covers NY, NJ, CT, and several northeastern states; Miami covers Florida and much of the Southeast and Mid-Atlantic; Chicago covers the Midwest; Houston covers Texas and nearby states; Boston covers New England.</p>
+            <p>Always verify your specific consulate directly — jurisdiction can change and state assignments near boundaries can be ambiguous. Contact the consulate by phone or email to confirm before beginning document preparation.</p>
+          </div>
+        </details>
+        <details>
+          <summary>Can I keep my US remote job while living in Spain on the Digital Nomad Visa?</summary>
+          <div class="msv__faq-answer">
+            <p>Yes — keeping your US remote job is exactly what the Spain Digital Nomad Visa is designed to enable. Your employment relationship with your US employer continues unchanged; you simply work from Spain instead of the US. Your salary continues to be paid by your US employer and your employment contract remains US-governed.</p>
+            <p>Your employer needs to provide a letter confirming your employment, salary, remote work authorization, and the fact that your role can be performed from Spain. The 20% rule applies: no more than 20% of your income or work should be for Spanish clients or entities. If you also have some Spanish clients, ensure their share stays below this threshold.</p>
+          </div>
+        </details>
+        <details>
+          <summary>What are my FBAR obligations if I open a Spanish bank account?</summary>
+          <div class="msv__faq-answer">
+            <p>If the aggregate maximum value of all your foreign financial accounts (including your Spanish bank account and any other non-US accounts) exceeds $10,000 at any point during the calendar year, you must file an FBAR (FinCEN Form 114) with the US Treasury Department by April 15 (automatic extension to October 15).</p>
+            <p>The FBAR is filed separately from your tax return — it goes to FinCEN (Financial Crimes Enforcement Network), not the IRS. The filing is made online at the BSA E-Filing System (bsaefiling.fincen.treas.gov). Penalties for non-filing are severe even if you owe no tax. This is a compliance requirement many Americans abroad underestimate — take it seriously.</p>
+          </div>
+        </details>
+        <details>
+          <summary>How does the Beckham Law work for US citizens — and does it help given US worldwide taxation?</summary>
+          <div class="msv__faq-answer">
+            <p>The Beckham Law provides a flat 24% Spanish tax rate on Spanish-sourced income up to €600,000, rather than the progressive 19%–47% standard rates. For US citizens, the Spanish taxes paid under Beckham Law are then credited against your US tax liability via the Foreign Tax Credit (Form 1116), preventing double taxation.</p>
+            <p>In practice, because Spanish tax rates are often higher than equivalent US rates (particularly for higher earners), you may owe little or no additional US tax after the Foreign Tax Credit — the Spanish tax essentially replaces the US tax. The Beckham Law benefit is primarily in reducing the Spanish side of the equation, leaving you with a lower combined tax burden than the standard Spanish resident rates would produce. But the interaction is complex — seek advice from a tax adviser experienced in both US and Spanish tax law.</p>
+          </div>
+        </details>
+        <details>
+          <summary>Can I bring my family with me on the US Digital Nomad Visa application?</summary>
+          <div class="msv__faq-answer">
+            <p>Yes. Spouses, civil partners, and dependent children (under 21 or financially dependent) can apply as dependants. Each family member needs their own document bundle: valid passport, criminal record (adults over 18), medical certificate, qualifying Spain health insurance (no copayments, Spain-wide coverage), and proof of relationship (marriage certificate or birth certificate, apostilled and translated).</p>
+            <p>The income threshold increases per dependant: approximately €992/month per additional person. For a couple, the minimum is ~€3,638/month; for a family of four, ~€5,622/month. US birth certificates and marriage certificates issued by states are apostilled by the relevant state's Secretary of State (not the US Department of State).</p>
+          </div>
+        </details>
+        <details>
+          <summary>What are processing times for the Spain DNV from US consulates?</summary>
+          <div class="msv__faq-answer">
+            <p>Processing times after submitting at a US consulate typically range from 30–90 days. New York and Los Angeles (highest volume) tend toward 45–90 days. Miami, Chicago, Houston, San Francisco, and Boston are often faster at 30–60 days. These are estimates — individual applications vary and busy seasons (spring and summer) can slow processing.</p>
+            <p>The total process from decision to visa is typically 5–8 months for US applicants, with the FBI check being the longest element. Using a channeler for the FBI check reduces the total from potentially 6–8 months to 4–5 months.</p>
+          </div>
+        </details>
+        <details>
+          <summary>Should I apply from the US or from within Spain while on a tourist visit?</summary>
+          <div class="msv__faq-answer">
+            <p>Both routes are valid. Applying from the US at a Spanish consulate is the standard path. If you are already in Spain within your 90-day Schengen tourist allowance, you can apply via the UGE online platform without returning to the US — and the UGE route often processes faster (20–40 days vs 30–90 days at consulates).</p>
+            <p>The UGE route requires the same document preparation and eligibility criteria. Do not overstay your 90-day tourist allowance while waiting for a UGE decision without legal advice about your right to remain during a pending application. If your documents are mostly ready and you plan to spend time in Spain, the UGE route is worth considering for its speed advantage.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </div>
+
+  <div class="msv__section--cream">
+    <div class="msv__container">
+      <div class="msv__section-hd">
+        <h2>Related Guides for American Applicants</h2>
+      </div>
+      <div class="msv__related">
+        <a href="/dnv-checklist/" class="msv__related-card">
+          <span class="msv__related-icon">📋</span>
+          <span class="msv__related-title">Full Document Checklist</span>
+          <span class="msv__related-desc">Every document for the Spain DNV with apostille and translation requirements.</span>
+        </a>
+        <a href="/dnv-mistakes/" class="msv__related-card">
+          <span class="msv__related-icon">⚠️</span>
+          <span class="msv__related-title">Common DNV Mistakes</span>
+          <span class="msv__related-desc">The 10 errors most likely to lead to rejection — including the state check error.</span>
+        </a>
+        <a href="/blog-beckham-law-digital-nomad-visa-spain/" class="msv__related-card">
+          <span class="msv__related-icon">💶</span>
+          <span class="msv__related-title">Beckham Law Guide</span>
+          <span class="msv__related-desc">Spain's 24% flat tax regime — what it means for US citizens on the DNV.</span>
+        </a>
+        <a href="/blog-digital-nomad-visa-spain-processing-times-consulate/" class="msv__related-card">
+          <span class="msv__related-icon">⏱</span>
+          <span class="msv__related-title">Processing Times by Consulate</span>
+          <span class="msv__related-desc">Current processing time estimates for all major consulates worldwide.</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="msv__cta-band">
+    <div class="msv__container">
+      <h2>Ready to Move to Spain? Expert Help for American DNV Applicants.</h2>
+      <p>From FBI check timing to Beckham Law applications, My Spanish Visa has guided hundreds of Americans through Spain's Digital Nomad Visa. Book a free consultation with our immigration team today.</p>
+      <div class="msv__btn-group">
+        <a href="https://dashboard.platinumlegalspain.com/dnv" class="msv__btn msv__btn--primary">Book a Free Consultation</a>
+        <a href="/moving-to-spain-from-usa/" class="msv__btn msv__btn--outline-white">Americans Moving to Spain Guide</a>
+      </div>
+    </div>
+  </div>
+  </div>
+
+</div>
+
+<!-- FRAGMENT_END -->
+</main>
+
+
+<!-- ═══════════════════════════════════════════════════
+     SITE FOOTER
+     ═══════════════════════════════════════════════════ -->
+<footer class="msv-footer" role="contentinfo">
+
+  <div class="msv-footer__top">
+
+    <!-- Brand column -->
+    <div class="msv-footer__brand">
+      <a href="/" class="msv-footer__logo" aria-label="My Spanish Visa"><img src="/assets/images/msv-logo-white.png" alt="My Spanish Visa" height="40" style="display:block;"></a>
+      <p class="msv-footer__tagline">
+        Specialist Spain visa &amp; residency guidance for English-speaking foreigners.
+        A service of Platinum Legal Spain.
+      </p>
+      <div class="msv-footer__trust">
+        <span class="msv-footer__trust-item">All English. No barriers.</span>
+        <span class="msv-footer__trust-item">Solicitors &amp; immigration specialists</span>
+        <span class="msv-footer__trust-item">100% online process</span>
+      </div>
+    </div>
+
+    <!-- Visas column -->
+    <div>
+      <div class="msv-footer__col-title">Visas</div>
+      <ul class="msv-footer__links">
+        <li><a href="/non-lucrative-visa-spain/">Non-Lucrative Visa</a></li>
+        <li><a href="/digital-nomad-visa-spain/">Digital Nomad Visa</a></li>
+        <li><a href="/student-visa-spain/">Student Visa</a></li>
+        <li><a href="/spain-visa-renewal/">Visa Renewals</a></li>
+        <li><a href="/best-visa-move-to-spain/">Compare All Visas</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/nlv">Apply: NLV</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/dnv">Apply: DNV</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/student-visa">Apply: Student Visa</a></li>
+      </ul>
+    </div>
+
+    <!-- Resources column -->
+    <div>
+      <div class="msv-footer__col-title">Resources</div>
+      <ul class="msv-footer__links">
+        <li><a href="/blog/">Blog &amp; Guides</a></li>
+        <li><a href="/move-to-spain/">Move to Spain Guide</a></li>
+        <li><a href="/visa-eligibility-quiz/">Eligibility Quiz</a></li>
+        <li><a href="/spain-visa-checklist/">Document Checklists</a></li>
+        <li><a href="/spain-visa-requirements/">Visa Requirements</a></li>
+        <li><a href="/spain-nie-number/">NIE Number Guide</a></li>
+        <li><a href="/spain-tie-card/">TIE Card Guide</a></li>
+      </ul>
+    </div>
+
+    <!-- Company column -->
+    <div>
+      <div class="msv-footer__col-title">Company</div>
+      <ul class="msv-footer__links">
+        <li><a href="/about-us/">About Us</a></li>
+        <li><a href="/testimonials/">Client Reviews</a></li>
+        <li><a href="/why-choose-us/">Why Choose Us</a></li>
+        <li><a href="/contact-us.html">Contact</a></li>
+        <li><a href="https://www.platinumlegalspain.com" rel="noopener">Platinum Legal Spain</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/dnv">Client Portal</a></li>
+      </ul>
+    </div>
+
+  </div><!-- /.msv-footer__top -->
+
+  <div class="msv-footer__bottom">
+    <div class="msv-footer__bottom-inner">
+      <p class="msv-footer__disclaimer">
+        <strong style="color:rgba(255,255,255,0.5);">Disclaimer:</strong>
+        My Spanish Visa provides visa processing support and is not a law firm. Content on this site is for informational purposes only and does not constitute legal advice. Immigration rules change frequently — always verify requirements with official sources or a qualified specialist. My Spanish Visa is a trading name of Platinum Legal Spain.
+      </p>
+      <span class="msv-footer__copyright">© 2026 My Spanish Visa. All rights reserved.</span>
+    </div>
+  </div>
+
+</footer>
+
+</body>
+</html>

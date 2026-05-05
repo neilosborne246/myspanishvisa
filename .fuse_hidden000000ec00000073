@@ -1,0 +1,2120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- ═══════════════════════════════════════════════════════════════════
+       PAGE-SPECIFIC HEAD — replace block below per page:
+       <title>Student Visa Pillar Page | My Spanish Visa</title>
+       <meta name="description" content="…">
+       <meta property="og:title" content="…">
+       <meta property="og:description" content="…">
+       <meta property="og:url" content="https://www.myspanishvisa.com/…">
+       <meta property="og:image" content="…">
+       <link rel="canonical" href="https://www.myspanishvisa.com/…">
+       <script type="application/ld+json">…</script>
+       ═══════════════════════════════════════════════════════════════════ -->
+  <title>My Spanish Visa — Spain Visa &amp; Residency Specialists</title>
+  <meta name="description" content="My Spanish Visa helps English-speaking foreigners move to Spain. Expert guidance on Non-Lucrative Visa, Digital Nomad Visa, Student Visa, renewals and more.">
+
+  <!-- Shared Open Graph defaults -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="My Spanish Visa">
+  <meta property="og:image" content="https://www.myspanishvisa.com/assets/images/og/og-myspanishvisa-default.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@myspanishvisa">
+
+  <style>
+/* ═══════════════════════════════════════════════════════════════
+   GLOBAL SHELL — nav + footer only.
+   Page-specific CSS lives inside each fragment's own <style> block.
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── iOS overflow safety ── */
+html, body { max-width: 100%; overflow-x: clip; margin: 0; padding: 0; }
+*, *::before, *::after { box-sizing: border-box; }
+
+/* ── Brand tokens (root-level so all fragments inherit) ── */
+:root {
+  --navy:      #0c1930;
+  --navy-mid:  #1a3a5c;
+  --red:       #be0011;
+  --red-deep:  #8c000d;
+  --yellow:    #facf39;
+  --cream:     #f8f7f4;
+  --white:     #ffffff;
+  --black:     #1a1a1a;
+  --muted:     #5a6478;
+  --border:    #dce3ed;
+  --shadow-sm: 0 2px 8px rgba(12,25,48,0.08);
+  --shadow-md: 0 6px 24px rgba(12,25,48,0.13);
+}
+
+body {
+  font-family: 'Inter', 'Segoe UI', system-ui, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.75;
+  color: var(--black);
+  background: #fff;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   SITE NAV
+   ───────────────────────────────────────────────────────────── */
+.msv-nav {
+  position: sticky;
+  top: 0;
+  z-index: 9000;
+  background: var(--navy);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 2px 12px rgba(12,25,48,0.22);
+}
+.msv-nav__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+  gap: 1.5rem;
+}
+
+/* Logo */
+.msv-nav__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+.msv-nav__logo-flag {
+  font-size: 1.3rem;
+  line-height: 1;
+}
+.msv-nav__logo-text {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+.msv-nav__logo-text span {
+  color: var(--yellow);
+}
+
+/* Links */
+.msv-nav__links {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.msv-nav__links > li {
+  position: relative;
+}
+.msv-nav__links > li > a,
+.msv-nav__links > li > button {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.5rem 0.9rem;
+  font-size: 0.87rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.85);
+  text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: color 0.15s, background 0.15s;
+  white-space: nowrap;
+  height: 64px;
+}
+.msv-nav__links > li > a:hover,
+.msv-nav__links > li > button:hover,
+.msv-nav__links > li:focus-within > a,
+.msv-nav__links > li:focus-within > button {
+  color: #fff;
+  background: rgba(255,255,255,0.08);
+}
+.msv-nav__chevron {
+  font-size: 0.65rem;
+  opacity: 0.7;
+  transition: transform 0.2s;
+}
+.msv-nav__links > li:focus-within .msv-nav__chevron,
+.msv-nav__links > li:hover .msv-nav__chevron {
+  transform: rotate(180deg);
+}
+
+/* Dropdown */
+.msv-nav__dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 230px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  box-shadow: var(--shadow-md);
+  padding: 0.5rem 0;
+  z-index: 200;
+}
+.msv-nav__links > li:hover .msv-nav__dropdown,
+.msv-nav__links > li:focus-within .msv-nav__dropdown {
+  display: block;
+}
+.msv-nav__dropdown a {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.6rem 1.1rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--navy);
+  text-decoration: none;
+  transition: background 0.12s;
+}
+.msv-nav__dropdown a:hover {
+  background: var(--cream);
+  color: var(--red);
+}
+.msv-nav__dropdown-icon {
+  width: 24px;
+  height: 24px;
+  background: var(--cream);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+.msv-nav__dropdown-divider {
+  height: 1px;
+  background: var(--border);
+  margin: 0.4rem 0;
+}
+
+/* CTA button */
+.msv-nav__cta {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.55rem 1.2rem;
+  background: var(--red);
+  color: #fff !important;
+  font-size: 0.85rem;
+  font-weight: 700;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.15s, box-shadow 0.15s;
+  white-space: nowrap;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(190,0,17,0.3);
+}
+.msv-nav__cta:hover {
+  background: var(--red-deep);
+  box-shadow: 0 4px 14px rgba(190,0,17,0.4);
+  text-decoration: none;
+}
+
+/* Hamburger */
+.msv-nav__burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.4rem;
+  border-radius: 5px;
+}
+.msv-nav__burger span {
+  width: 22px;
+  height: 2px;
+  background: #fff;
+  border-radius: 2px;
+  transition: transform 0.2s, opacity 0.2s;
+  display: block;
+}
+
+/* Mobile nav */
+.msv-nav__mobile {
+  display: none;
+  flex-direction: column;
+  background: var(--navy-mid);
+  padding: 1rem 1.5rem 1.5rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+.msv-nav__mobile.open { display: flex; }
+.msv-nav__mobile a {
+  padding: 0.65rem 0;
+  color: rgba(255,255,255,0.9);
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+.msv-nav__mobile a:hover { color: var(--yellow); }
+.msv-nav__mobile .msv-nav__mobile-sub {
+  padding-left: 1rem;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: rgba(255,255,255,0.7);
+}
+.msv-nav__mobile-cta {
+  margin-top: 1rem;
+  background: var(--red);
+  color: #fff !important;
+  border-radius: 6px;
+  text-align: center;
+  padding: 0.75rem 1rem !important;
+  border-bottom: none !important;
+}
+
+@media (max-width: 900px) {
+  .msv-nav__links { display: none; }
+  .msv-nav__cta { display: none; }
+  .msv-nav__burger { display: flex; }
+}
+@media (max-width: 480px) {
+  .msv-nav__inner { padding: 0 1rem; }
+}
+
+/* ─────────────────────────────────────────────────────────────
+   SITE FOOTER
+   ───────────────────────────────────────────────────────────── */
+.msv-footer {
+  background: var(--navy);
+  color: rgba(255,255,255,0.75);
+  overflow-x: clip;
+}
+.msv-footer__top {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem 3rem;
+  display: grid;
+  grid-template-columns: 280px 1fr 1fr 1fr;
+  gap: 3rem;
+}
+@media (max-width: 900px) {
+  .msv-footer__top { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
+}
+@media (max-width: 560px) {
+  .msv-footer__top { grid-template-columns: 1fr; gap: 2rem; padding: 3rem 1.2rem 2rem; }
+}
+
+.msv-footer__brand {}
+.msv-footer__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  margin-bottom: 1rem;
+}
+.msv-footer__logo-flag { font-size: 1.3rem; }
+.msv-footer__logo-text {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -0.01em;
+}
+.msv-footer__logo-text span { color: var(--yellow); }
+.msv-footer__tagline {
+  font-size: 0.83rem;
+  color: rgba(255,255,255,0.55);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+.msv-footer__trust {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+.msv-footer__trust-item {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.65);
+}
+.msv-footer__trust-item::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  background: var(--yellow);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.msv-footer__col-title {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.4);
+  margin-bottom: 1rem;
+}
+.msv-footer__links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.msv-footer__links a {
+  font-size: 0.87rem;
+  color: rgba(255,255,255,0.68);
+  text-decoration: none;
+  transition: color 0.15s;
+  display: inline-block;
+}
+.msv-footer__links a:hover {
+  color: var(--yellow);
+  text-decoration: none;
+}
+
+.msv-footer__bottom {
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+.msv-footer__bottom-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 1rem;
+  justify-content: space-between;
+}
+.msv-footer__disclaimer {
+  font-size: 0.73rem;
+  color: rgba(255,255,255,0.35);
+  line-height: 1.65;
+  max-width: 720px;
+}
+.msv-footer__copyright {
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.35);
+  white-space: nowrap;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   MAIN CONTENT AREA
+   ───────────────────────────────────────────────────────────── */
+main {
+  /* Fragments are self-contained; this wrapper just provides flow context */
+  position: relative;
+}
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════
+     SITE NAVIGATION
+     ═══════════════════════════════════════════════════ -->
+<header class="msv-nav" role="banner">
+  <div class="msv-nav__inner">
+
+    <!-- Logo -->
+    <a href="/" class="msv-nav__logo" aria-label="My Spanish Visa — Home"><img src="/assets/images/msv-logo-white.png" alt="My Spanish Visa" height="40" style="display:block;"></a>
+
+    <!-- Desktop links -->
+    <nav aria-label="Main navigation">
+      <ul class="msv-nav__links">
+
+        <li>
+          <button class="msv-nav__dropdown-trigger" aria-haspopup="true" aria-expanded="false">
+            Visas <span class="msv-nav__chevron">▾</span>
+          </button>
+          <div class="msv-nav__dropdown" role="menu">
+            <a href="/non-lucrative-visa-spain/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🏖️</span>Non-Lucrative Visa
+            </a>
+            <a href="/digital-nomad-visa-spain/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">💻</span>Digital Nomad Visa
+            </a>
+            <a href="/student-visa-spain/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🎓</span>Student Visa
+            </a>
+            <div class="msv-nav__dropdown-divider"></div>
+            <a href="/spain-visa-renewal/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🔄</span>Visa Renewals
+            </a>
+            <a href="/best-visa-move-to-spain/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">⚖️</span>Compare All Visas
+            </a>
+          </div>
+        </li>
+
+        <li>
+          <button aria-haspopup="true" aria-expanded="false">
+            Resources <span class="msv-nav__chevron">▾</span>
+          </button>
+          <div class="msv-nav__dropdown" role="menu">
+            <a href="/blog/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">📝</span>Blog &amp; Guides
+            </a>
+            <a href="/spain-visa-checklist/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">✅</span>Document Checklists
+            </a>
+            <a href="/move-to-spain/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🏠</span>Move to Spain Guide
+            </a>
+            <a href="/visa-eligibility-quiz/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🧭</span>Eligibility Quiz
+            </a>
+          </div>
+        </li>
+
+        <li><a href="/about-us/">About Us</a></li>
+        <li><a href="/testimonials/">Reviews</a></li>
+        <li><a href="/contact-us.html">Contact</a></li>
+
+      </ul>
+    </nav>
+
+    <!-- Desktop CTA -->
+    <a href="https://dashboard.platinumlegalspain.com/student-visa" class="msv-nav__cta">
+      Start My Application →
+    </a>
+
+    <!-- Hamburger (mobile) -->
+    <button class="msv-nav__burger" aria-label="Open menu" aria-expanded="false" onclick="
+      var m=document.querySelector('.msv-nav__mobile');
+      var open=m.classList.toggle('open');
+      this.setAttribute('aria-expanded', open);
+    ">
+      <span></span><span></span><span></span>
+    </button>
+
+  </div><!-- /.msv-nav__inner -->
+
+  <!-- Mobile menu -->
+  <nav class="msv-nav__mobile" aria-label="Mobile navigation">
+    <a href="/non-lucrative-visa-spain/" class="msv-nav__mobile-sub">Non-Lucrative Visa</a>
+    <a href="/digital-nomad-visa-spain/" class="msv-nav__mobile-sub">Digital Nomad Visa</a>
+    <a href="/student-visa-spain/" class="msv-nav__mobile-sub">Student Visa</a>
+    <a href="/spain-visa-renewal/">Visa Renewals</a>
+    <a href="/best-visa-move-to-spain/">Compare All Visas</a>
+    <a href="/blog/">Blog &amp; Guides</a>
+    <a href="/about-us/">About Us</a>
+    <a href="/testimonials/">Reviews</a>
+    <a href="/contact-us.html">Contact</a>
+    <a href="https://dashboard.platinumlegalspain.com/student-visa" class="msv-nav__mobile-cta">Start My Application →</a>
+  </nav>
+
+</header>
+
+
+<!-- ═══════════════════════════════════════════════════
+     PAGE CONTENT (fragment injected here)
+     ═══════════════════════════════════════════════════ -->
+<main>
+<!-- FRAGMENT_START -->
+<!-- ============================================================
+     MY SPANISH VISA — Student Visa Spain — Pillar Page
+     Elementor Full-Width HTML Widget · April 2026
+     Paste this entire block into an Elementor HTML widget
+     set to Full Width / Stretch to Full Width
+     ============================================================ -->
+
+<!-- JSON-LD Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "name": "Student Visa Spain 2025/26 — Complete Guide",
+      "description": "Everything you need to know about the Spain student visa. Requirements, documents, costs, timelines, and expert help from My Spanish Visa.",
+      "url": "https://www.myspanishvisa.com/student-visa-spain/",
+      "inLanguage": "en",
+      "isPartOf": { "@type": "WebSite", "name": "My Spanish Visa", "url": "https://www.myspanishvisa.com/" },
+      "breadcrumb": { "@id": "#breadcrumb" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.myspanishvisa.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Student Visa Spain", "item": "https://www.myspanishvisa.com/student-visa-spain/" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Do I need a student visa to study in Spain?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Only non-EU/EEA nationals studying for more than 90 days. EU citizens don't need one. Short courses under 90 days may not require a visa depending on your nationality." }
+        },
+        {
+          "@type": "Question",
+          "name": "How much money do I need for a Spain student visa?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Approximately €600/month as a guide for 2026, based on IPREM. You need to show you can cover your full stay — typically via bank statements, scholarship letters, or a parental support letter with documentation." }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need to be enrolled before I apply?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Proof of enrolment or an official acceptance letter from your Spanish institution is a mandatory document. You cannot apply speculatively." }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I work while studying in Spain?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Student visa holders can apply for permission to work part-time, but work authorisation is not automatic. Hours and conditions vary. You cannot work full-time on a student visa." }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does the Spain student visa take?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Typically 4–8 weeks from your consulate appointment, though this varies by location. UK consulates are generally within this range; other consulates can vary. Apply at least 3 months before your course starts." }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I bring family members on a student visa?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Generally, bringing dependants on a student visa is more complex than on other visa types. Speak to our team about your specific situation." }
+        },
+        {
+          "@type": "Question",
+          "name": "What type of health insurance do I need?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Private health insurance providing full medical coverage in Spain with no copayment clause. Standard travel insurance does not qualify. Your institution may have approved provider recommendations." }
+        },
+        {
+          "@type": "Question",
+          "name": "Do my documents need to be translated into Spanish?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. All non-Spanish documents must be translated by a certified sworn translator recognised in Spain. Criminal records and medical certificates also typically require an Apostille of the Hague." }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens when my student visa expires?",
+          "acceptedAnswer": { "@type": "Answer", "text": "If continuing your studies, you can apply to renew before expiry. If your course has ended, graduates of official Spanish degrees may apply for 12 months of work-seeking authorisation. Other options include transitioning to a different visa type." }
+        },
+        {
+          "@type": "Question",
+          "name": "Can My Spanish Visa help if my application has been refused?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. If you have received a refusal, we can review what went wrong and advise on whether an appeal or fresh application is the right approach. Speak to our team." }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<!-- Open Graph / Social -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.myspanishvisa.com/student-visa-pillar-page/">
+<meta property="og:title" content="My Spanish Visa">
+<meta property="og:description" content="Expert Spain visa guidance for English-speaking expats.">
+<meta property="og:image" content="https://www.myspanishvisa.com/assets/images/og/og-student-visa-spain.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="My Spanish Visa">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@myspanishvisa">
+<meta name="twitter:title" content="My Spanish Visa">
+<meta name="twitter:description" content="Expert Spain visa guidance for English-speaking expats.">
+<meta name="twitter:image" content="https://www.myspanishvisa.com/assets/images/og/og-student-visa-spain.jpg">
+
+<style>
+/* ── iOS Safari pinch-zoom overflow safety ─────────────────────────── */
+/* Prevents horizontal overflow when users pinch-zoom on iPhone/iPad.   */
+/* Top-level (also paste into theme Custom CSS / Elementor Site Settings) */
+html, body { max-width: 100%; overflow-x: clip; }
+/* Scoped wrapper safety */
+.msv, .msv-nav, .msv-topbar, .msv-footer, .msv-footer-cta,
+.pls-header, .pls-body, .pls-nlv, .pls-dnv, .pls-student {
+  max-width: 100%;
+  overflow-x: clip;
+  position: relative;
+}
+/* Cap all media inside the wrapper */
+.msv img, .msv video, .msv iframe,
+.msv-footer img, .msv-footer video, .msv-footer iframe {
+  max-width: 100%;
+  height: auto;
+}
+/* Never use 100vw — use 100% instead (dev reminder) */
+
+
+/* ── Reset & scope ─────────────────────────────────────────────────── */
+.msv *, .msv *::before, .msv *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ── Tokens ─────────────────────────────────────────────────────────── */
+.msv {
+  --navy:       #0c1930;
+  --navy-mid:   #1a3a5c;
+  --navy-light: #1e4975;
+  --red:        #be0011;
+  --red-deep:   #8c000d;
+  --yellow:     #facf39;
+  --cream:      #f8f7f4;
+  --white:      #ffffff;
+  --black:      #1a1a1a;
+  --muted:      #5a6478;
+  --border:     #dce3ed;
+  --row-alt:    #f2f5fb;
+  --info-bg:    #e8edf6;
+  --shadow-sm:  0 2px 8px rgba(12,25,48,0.08);
+  --shadow-md:  0 6px 24px rgba(12,25,48,0.13);
+  --shadow-lg:  0 12px 40px rgba(12,25,48,0.18);
+
+  font-family: 'Inter', 'Segoe UI', system-ui, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.75;
+  color: var(--black);
+  width: 100%;
+}
+
+/* ── Inner container ──────────────────────────────────────────────── */
+.msv__container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+@media (max-width: 640px) {
+  .msv__container { padding: 0 1.2rem; }
+}
+
+/* ── Typography ───────────────────────────────────────────────────── */
+.msv h1 {
+  font-size: clamp(2rem, 4.5vw, 3rem);
+  font-weight: 800;
+  line-height: 1.15;
+  color: var(--white);
+  letter-spacing: -0.02em;
+  margin-bottom: 1.2rem;
+}
+.msv h2 {
+  font-size: clamp(1.35rem, 2.8vw, 1.85rem);
+  font-weight: 700;
+  color: var(--navy);
+  letter-spacing: -0.01em;
+  margin-bottom: 0.5rem;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 0.5rem;
+}
+.msv h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 48px; height: 3px;
+  background: linear-gradient(90deg, var(--red), var(--red-deep));
+  border-radius: 2px;
+}
+.msv h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 0.35rem;
+}
+.msv p { color: var(--black); margin-bottom: 1rem; font-size: 0.97rem; }
+
+/* ── Anchor base — never let generic link colour bleed into buttons ── */
+.msv a { color: var(--red); text-decoration: none; }
+.msv a:hover { text-decoration: underline; }
+
+/* ── Sections ─────────────────────────────────────────────────────── */
+.msv__section { padding: 6.5rem 0; background: var(--white); }
+.msv__section--cream {
+  padding: 6.5rem 0;
+  background: linear-gradient(180deg, #f8f7f4 0%, #f2f4f8 100%);
+}
+.msv__section--dark {
+  padding: 6.5rem 0;
+  background: linear-gradient(135deg, var(--navy) 0%, #0d2240 55%, #0a1d38 100%);
+}
+.msv__section--dark h2 { color: var(--white) !important; }
+.msv__section--dark h2::after { background: linear-gradient(90deg, var(--yellow), #e8b820); }
+.msv__section--dark h3 { color: rgba(255,255,255,0.9) !important; }
+.msv__section--dark p  { color: rgba(255,255,255,0.82); }
+@media (max-width: 640px) { .msv__section, .msv__section--cream { padding: 3.5rem 0; } }
+
+/* ── Hero ─────────────────────────────────────────────────────────── */
+.msv__hero {
+  background: linear-gradient(135deg, #0c1930 0%, #0f2540 45%, #162d50 75%, #1a3560 100%);
+  padding: 6rem 0 5rem;
+  position: relative;
+  overflow: hidden;
+}
+.msv__hero::before {
+  content: '';
+  position: absolute;
+  top: -40%; right: -10%;
+  width: 600px; height: 600px;
+  background: radial-gradient(circle, rgba(190,0,17,0.12) 0%, transparent 70%);
+  pointer-events: none;
+}
+.msv__hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(250,207,57,0.4), transparent);
+}
+.msv__hero-inner { max-width: 780px; }
+.msv__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(190,0,17,0.15);
+  border: 1px solid rgba(190,0,17,0.4);
+  color: #ff6b7a;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.35rem 0.9rem;
+  border-radius: 100px;
+  margin-bottom: 1.5rem;
+}
+.msv__eyebrow::before {
+  content: '';
+  width: 6px; height: 6px;
+  background: var(--red);
+  border-radius: 50%;
+  box-shadow: 0 0 6px var(--red);
+}
+.msv__hero-sub {
+  font-size: clamp(1rem, 2vw, 1.15rem);
+  color: rgba(255,255,255,0.78) !important;
+  max-width: 600px;
+  margin-bottom: 2.2rem;
+  line-height: 1.7;
+}
+.msv__hero p { color: rgba(255,255,255,0.78) !important; }
+.msv__hero-trust {
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.45);
+  margin-top: 2rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  letter-spacing: 0.02em;
+}
+
+/* ── Buttons — explicit white text always, high specificity ──────── */
+.msv__btn-group { display: flex; flex-wrap: wrap; gap: 0.85rem; }
+.msv__btn {
+  display: inline-block;
+  padding: 0.85rem 2rem;
+  font-size: 0.92rem;
+  font-weight: 700;
+  border-radius: 6px;
+  text-decoration: none !important;
+  cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.15s, opacity 0.15s;
+  letter-spacing: 0.01em;
+}
+.msv__btn:hover { transform: translateY(-1px); text-decoration: none !important; }
+.msv .msv__btn--primary {
+  background: linear-gradient(135deg, var(--red) 0%, var(--red-deep) 100%);
+  color: #ffffff !important;
+  box-shadow: 0 4px 14px rgba(190,0,17,0.35);
+}
+.msv .msv__btn--primary:hover { box-shadow: 0 6px 20px rgba(190,0,17,0.45); color: #ffffff !important; }
+.msv .msv__btn--ghost {
+  background: rgba(255,255,255,0.07);
+  color: #ffffff !important;
+  border: 1.5px solid rgba(255,255,255,0.3);
+  backdrop-filter: blur(4px);
+}
+.msv .msv__btn--ghost:hover { background: rgba(255,255,255,0.13); color: #ffffff !important; }
+.msv .msv__btn--navy {
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%);
+  color: #ffffff !important;
+  box-shadow: var(--shadow-sm);
+}
+.msv .msv__btn--navy:hover { box-shadow: var(--shadow-md); color: #ffffff !important; }
+.msv .msv__btn--outline {
+  background: transparent;
+  color: var(--navy) !important;
+  border: 2px solid var(--navy);
+}
+.msv .msv__btn--outline:hover { background: var(--navy); color: #ffffff !important; }
+.msv .msv__btn--outline-white {
+  background: transparent;
+  color: #ffffff !important;
+  border: 1.5px solid rgba(255,255,255,0.5);
+}
+.msv .msv__btn--outline-white:hover { background: rgba(255,255,255,0.1); color: #ffffff !important; }
+
+/* ── Trust bar ────────────────────────────────────────────────────── */
+.msv__trust-bar {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  padding: 1.1rem 0;
+  box-shadow: var(--shadow-sm);
+}
+.msv__trust-bar-inner {
+  display: flex; flex-wrap: wrap;
+  justify-content: center; gap: 1.5rem;
+}
+.msv__trust-item {
+  display: flex; align-items: center; gap: 0.5rem;
+  font-size: 0.8rem; font-weight: 600;
+  color: var(--navy); white-space: nowrap;
+}
+.msv__trust-item::before {
+  content: '';
+  width: 7px; height: 7px;
+  background: linear-gradient(135deg, var(--red), var(--red-deep));
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* ── CTA inline box ───────────────────────────────────────────────── */
+.msv__cta-inline {
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%);
+  border-radius: 10px;
+  padding: 1.6rem 2rem;
+  margin: 2.2rem 0;
+  display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap;
+  box-shadow: var(--shadow-md);
+  position: relative; overflow: hidden;
+}
+.msv__cta-inline::before {
+  content: '';
+  position: absolute; left: 0; top: 0; bottom: 0;
+  width: 4px;
+  background: linear-gradient(180deg, var(--red), var(--red-deep));
+}
+.msv__cta-inline-text {
+  flex: 1; min-width: 200px;
+  color: #ffffff !important; font-size: 0.97rem; font-weight: 600; margin: 0;
+}
+
+/* ── Note / Info boxes ────────────────────────────────────────────── */
+.msv__note {
+  background: var(--info-bg);
+  border-left: 4px solid var(--navy-light);
+  border-radius: 0 8px 8px 0;
+  padding: 1.2rem 1.6rem;
+  margin: 2rem 0;
+  font-size: 0.92rem;
+  line-height: 1.7;
+  color: var(--navy);
+}
+.msv__note-label {
+  display: block;
+  font-size: 0.72rem; font-weight: 800;
+  text-transform: uppercase; letter-spacing: 0.09em;
+  color: var(--navy-light);
+  margin-bottom: 0.3rem;
+}
+.msv__note--warning { background: #fefce8; border-color: #c9a000; }
+.msv__note--warning .msv__note-label { color: #7a5c00; }
+.msv__note--disclaimer { background: #f5f5f5; border-color: #888; }
+.msv__note--disclaimer .msv__note-label { color: #555; }
+
+/* ── Tables ───────────────────────────────────────────────────────── */
+.msv__table-wrap {
+  overflow-x: auto;
+  margin: 1.4rem 0 1.8rem;
+  border-radius: 10px;
+  box-shadow: var(--shadow-sm);
+}
+.msv__table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  min-width: 480px;
+}
+.msv__table th {
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%);
+  color: #ffffff;
+  padding: 0.85rem 1.1rem;
+  text-align: left;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.msv__table td {
+  padding: 0.85rem 1.1rem;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+  color: var(--black);
+}
+.msv__table tr:nth-child(even) td { background: var(--row-alt); }
+.msv__table tr:last-child td { border-bottom: none; }
+.msv__pill {
+  display: inline-block;
+  padding: 0.2rem 0.65rem;
+  border-radius: 100px;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+.msv__pill--green { background: #d4edda; color: #1a5c2a; }
+.msv__pill--amber { background: #fff3cd; color: #7a5c00; }
+.msv__pill--red   { background: #ffe0e3; color: #8c000d; }
+
+/* ── Lists ────────────────────────────────────────────────────────── */
+.msv__list {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 1.4rem;
+}
+.msv__list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 0.85rem 0;
+  font-size: 0.96rem;
+  border-bottom: 1px solid rgba(220,227,237,0.5);
+  color: var(--black);
+}
+.msv__list li:last-child { border-bottom: none; }
+.msv__list li::before {
+  content: '';
+  width: 7px; height: 7px;
+  background: linear-gradient(135deg, var(--red), var(--red-deep));
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-top: 0.52rem;
+}
+.msv__list--checks li::before {
+  content: '✓';
+  width: auto; height: auto;
+  background: none;
+  color: #27ae60;
+  font-weight: 800;
+  font-size: 0.85rem;
+  margin-top: 0.1rem;
+}
+.msv__section--dark .msv__list li { color: rgba(255,255,255,0.85); border-color: rgba(255,255,255,0.1); }
+
+/* ── Cards ────────────────────────────────────────────────────────── */
+.msv__cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 2rem;
+  margin: 3rem 0;
+}
+.msv__card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 2.4rem 2.2rem;
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.msv__card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+.msv__card-icon { font-size: 1.8rem; margin-bottom: 0.85rem; display: block; }
+.msv__card-title { font-size: 1rem; font-weight: 700; color: var(--navy); margin-bottom: 0.5rem; }
+.msv__card p { font-size: 0.88rem; color: var(--muted); margin: 0; }
+
+/* ── Two-route split ──────────────────────────────────────────────── */
+.msv__routes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+@media (max-width: 640px) { .msv__routes { grid-template-columns: 1fr; } }
+.msv__route {
+  border-radius: 12px;
+  padding: 1.75rem 1.5rem;
+  border: 2px solid var(--border);
+}
+.msv__route--employee {
+  border-color: var(--navy-light);
+  background: linear-gradient(135deg, #f0f5fb, #e8edf6);
+}
+.msv__route--freelance {
+  border-color: var(--red);
+  background: linear-gradient(135deg, #fdf5f5, #fbeaeb);
+}
+.msv__route-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 100px;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 0.85rem;
+  color: #ffffff !important;
+}
+.msv__route--employee .msv__route-badge { background: var(--navy); }
+.msv__route--freelance .msv__route-badge { background: var(--red); }
+.msv__route h3 { font-size: 1.05rem; margin-bottom: 0.6rem; color: var(--navy) !important; }
+.msv__route-cta-note {
+  margin-top: 1rem;
+  padding: 0.75rem 1rem;
+  background: #e8f4f0;
+  border-left: 3px solid #2a7a5e;
+  border-radius: 0 8px 8px 0;
+  font-size: 0.88rem;
+  color: #1a4a38;
+  line-height: 1.5;
+}
+.msv__route-cta-note strong { color: #1a4a38; }
+
+/* ── Steps ────────────────────────────────────────────────────────── */
+.msv__steps { margin: 2.5rem 0; }
+.msv__step {
+  display: flex;
+  gap: 1.5rem;
+  padding: 2rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  align-items: flex-start;
+}
+.msv__step:last-child { border-bottom: none; }
+.msv__step-num {
+  width: 44px; height: 44px;
+  background: linear-gradient(135deg, var(--red), var(--red-deep));
+  color: #ffffff !important;
+  font-size: 1rem;
+  font-weight: 800;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 3px 10px rgba(190,0,17,0.3);
+}
+.msv__step-body { flex: 1; }
+.msv__step-title { font-size: 1rem; font-weight: 700; color: #ffffff !important; margin-bottom: 0.35rem; }
+.msv__step-body p { color: rgba(255,255,255,0.78); }
+
+/* ── Pricing section ──────────────────────────────────────────────── */
+.msv__pricing {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+@media (max-width: 680px) { .msv__pricing { grid-template-columns: 1fr; } }
+.msv__price-card {
+  border-radius: 14px;
+  border: 2px solid var(--border);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.msv__price-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+.msv__price-card--featured { border-color: var(--red); }
+.msv__price-header {
+  padding: 1.5rem 1.75rem 1rem;
+  background: linear-gradient(135deg, var(--navy), var(--navy-mid));
+}
+.msv__price-header--featured {
+  background: linear-gradient(135deg, var(--red), var(--red-deep));
+}
+.msv__price-label {
+  font-size: 0.72rem; font-weight: 800;
+  text-transform: uppercase; letter-spacing: 0.1em;
+  color: rgba(255,255,255,0.7);
+  margin-bottom: 0.4rem;
+}
+.msv__price-amount {
+  font-size: 2.4rem; font-weight: 900;
+  color: #ffffff !important;
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+.msv__price-sub {
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.6);
+  margin-top: 0.3rem;
+}
+.msv__price-body {
+  padding: 1.4rem 1.75rem 1.75rem;
+  background: var(--white);
+}
+.msv__price-instalment {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.55rem 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.88rem;
+}
+.msv__price-instalment:last-of-type { border-bottom: none; margin-bottom: 1rem; }
+.msv__price-instalment-label { color: var(--muted); }
+.msv__price-instalment-amount { font-weight: 700; color: var(--navy); }
+.msv__price-includes-title {
+  font-size: 0.72rem; font-weight: 800;
+  text-transform: uppercase; letter-spacing: 0.08em;
+  color: var(--navy-light);
+  margin: 1rem 0 0.6rem;
+}
+.msv__price-includes li {
+  font-size: 0.85rem;
+  color: var(--muted);
+  padding: 0.25rem 0;
+  display: flex; gap: 0.5rem; align-items: flex-start;
+}
+.msv__price-includes li::before {
+  content: '✓';
+  color: #27ae60;
+  font-weight: 800;
+  font-size: 0.8rem;
+  flex-shrink: 0;
+  margin-top: 0.05rem;
+}
+.msv__price-body .msv__btn { display: block; width: 100%; text-align: center; margin-top: 1.25rem; }
+
+/* ── FAQ ──────────────────────────────────────────────────────────── */
+.msv__faq { margin: 1.5rem 0; }
+.msv__faq-item {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  background: var(--white);
+  box-shadow: var(--shadow-sm);
+}
+.msv__faq-q {
+  display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+  padding: 1.3rem 1.6rem;
+  font-size: 0.96rem; font-weight: 700;
+  color: var(--navy);
+  cursor: pointer; user-select: none;
+}
+.msv__faq-q::after { content: '+'; font-size: 1.3rem; font-weight: 400; color: var(--red); flex-shrink: 0; line-height: 1; }
+.msv__faq-a { padding: 0 1.6rem 1.3rem; font-size: 0.92rem; color: var(--muted); line-height: 1.75; }
+
+/* ── Guides grid (card format) ─────────────────────────────────────── */
+.msv__guide-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin: 2.5rem 0;
+}
+@media (max-width: 900px) { .msv__guide-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .msv__guide-grid { grid-template-columns: 1fr; } }
+
+.msv__guide-card {
+  display: flex; flex-direction: column; gap: 0.5rem;
+  background: var(--white); border: 1px solid var(--border); border-radius: 12px;
+  border-top: 4px solid var(--navy);
+  padding: 1.6rem 1.5rem 1.4rem;
+  text-decoration: none; color: inherit;
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.msv__guide-card:hover { box-shadow: var(--shadow-md); transform: translateY(-3px); text-decoration: none; }
+/* Rotating accent colours on top border */
+.msv__guide-card:nth-child(1)  { border-top-color: #1a3560; }
+.msv__guide-card:nth-child(2)  { border-top-color: #2a7a5e; }
+.msv__guide-card:nth-child(3)  { border-top-color: #be0011; }
+.msv__guide-card:nth-child(4)  { border-top-color: #1a3560; }
+.msv__guide-card:nth-child(5)  { border-top-color: #5b4fcf; }
+.msv__guide-card:nth-child(6)  { border-top-color: #2a7a5e; }
+.msv__guide-card:nth-child(7)  { border-top-color: #be0011; }
+.msv__guide-card:nth-child(8)  { border-top-color: #1a3560; }
+.msv__guide-card:nth-child(9)  { border-top-color: #2a7a5e; }
+.msv__guide-card:nth-child(10) { border-top-color: #5b4fcf; }
+.msv__guide-card:nth-child(11) { border-top-color: #1a3560; }
+.msv__guide-card:nth-child(12) { border-top-color: #be0011; }
+.msv__guide-icon { font-size: 1.6rem; line-height: 1; margin-bottom: 0.4rem; }
+.msv__guide-title { font-size: 1rem; font-weight: 700; color: var(--navy); line-height: 1.35; }
+.msv__guide-desc { font-size: 0.88rem; color: #5a6270; line-height: 1.6; flex: 1; margin-top: 0.1rem; }
+.msv__guide-cta { font-size: 0.85rem; font-weight: 700; color: var(--navy); margin-top: 0.8rem; opacity: 0.75; }
+.msv__guide-card:hover .msv__guide-cta { opacity: 1; }
+
+/* ── UGE callout (in How It Works) ─────────────────────────────────── */
+.msv__uge-callout {
+  display: flex; align-items: flex-start; gap: 1rem;
+  background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.18);
+  border-radius: 10px; padding: 1.25rem 1.4rem;
+  margin: 0 0 2.2rem;
+  color: #fff; font-size: 0.95rem; line-height: 1.6;
+}
+.msv__uge-callout-icon { font-size: 2rem; flex-shrink: 0; margin-top: 0.1rem; }
+.msv__uge-callout strong { color: #fff; }
+.msv__uge-callout em { color: rgba(255,255,255,0.7); font-style: normal; }
+
+/* ── Consulate fallback note ────────────────────────────────────────── */
+.msv__consulate-note {
+  background: rgba(255,255,255,0.06); border-left: 3px solid rgba(255,255,255,0.25);
+  border-radius: 0 8px 8px 0; padding: 1rem 1.2rem;
+  margin: 2rem 0 0;
+  font-size: 0.9rem; color: rgba(255,255,255,0.8); line-height: 1.6;
+}
+.msv__consulate-note strong { color: #fff; }
+
+/* ── Final CTA section ────────────────────────────────────────────── */
+.msv__final-cta {
+  background: linear-gradient(135deg, var(--navy) 0%, #0f2540 50%, #0c1930 100%);
+  padding: 5.5rem 0;
+  text-align: center;
+  position: relative; overflow: hidden;
+}
+.msv__final-cta::before {
+  content: '';
+  position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+  width: 700px; height: 700px;
+  background: radial-gradient(circle, rgba(190,0,17,0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+.msv__final-cta h2 {
+  color: #ffffff !important; font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+  display: block; padding-bottom: 0; margin-bottom: 1rem;
+}
+.msv__final-cta h2::after { display: none; }
+.msv__final-cta p { color: rgba(255,255,255,0.72); max-width: 560px; margin: 0 auto 2.2rem; }
+.msv__final-cta .msv__btn-group { justify-content: center; }
+
+/* ── Section title wrapper ────────────────────────────────────────── */
+.msv__section-hd { margin-bottom: 3.5rem; }
+.msv__section-hd p { color: var(--muted); font-size: 1rem; margin-top: 1rem; line-height: 1.7; }
+.msv__section--dark .msv__section-hd p { color: rgba(255,255,255,0.6); }
+
+/* ── Divider ──────────────────────────────────────────────────────── */
+.msv__divider { border: none; border-top: 1px solid var(--border); margin: 3rem 0; }
+
+/* ── Disclaimer footer ────────────────────────────────────────────── */
+.msv__disclaimer {
+  background: #f5f5f5;
+  border-top: 1px solid var(--border);
+  padding: 2rem 0;
+}
+.msv__disclaimer p {
+  font-size: 0.8rem;
+  color: #777;
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+}
+.msv__disclaimer p:last-child { margin-bottom: 0; }
+</style>
+
+<div class="msv">
+
+  <!-- ═══════════════════════════════════════════
+       HERO
+  ═══════════════════════════════════════════ -->
+  <section class="msv__hero">
+    <div class="msv__container">
+      <div class="msv__hero-inner">
+        <div class="msv__eyebrow">Spain Student Visa — Complete Guide</div>
+        <h1>Study in Spain.<br>We Handle the Visa.</h1>
+        <p class="msv__hero-sub">
+          The Spain Student Visa is the legal route for non-EU nationals who want to study at a Spanish university, language school, or private institution for more than 90 days. Expert immigration help — managed online from start to finish.
+        </p>
+        <div class="msv__btn-group">
+          <a href="/visa-eligibility-quiz/" class="msv__btn msv__btn--primary">Start Free Eligibility Check</a>
+          <a href="https://dashboard.platinumlegalspain.com/student-visa" class="msv__btn msv__btn--outline-white">Book a Consultation</a>
+        </div>
+        <p class="msv__hero-trust">Backed by PLS Platinum Legal Spain &nbsp;·&nbsp; Applications from 40+ nationalities &nbsp;·&nbsp; Managed entirely online</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       TRUST BAR
+  ═══════════════════════════════════════════ -->
+  <div class="msv__trust-bar">
+    <div class="msv__container">
+      <div class="msv__trust-bar-inner">
+        <div class="msv__trust-item">Student visas managed online</div>
+        <div class="msv__trust-item">All study types &amp; institutions</div>
+        <div class="msv__trust-item">Full document support</div>
+        <div class="msv__trust-item">Pay in 3 instalments</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+       WHAT IS THE SPAIN STUDENT VISA
+  ═══════════════════════════════════════════ -->
+  <section class="msv__section--cream">
+    <div class="msv__container">
+      <div class="msv__section-hd">
+        <h2>What Is the Spain Student Visa?</h2>
+      </div>
+      <p>
+        The Spain Student Visa — officially the <em>Visado de Estudios</em> — is a Type D long-stay visa for non-EU and non-EEA nationals who want to stay in Spain for more than 90 days to study at a recognised Spanish institution. This includes undergraduate degrees, master's programmes, PhD research, intensive language courses, and professional training at accredited private academies.
+      </p>
+      <p>
+        The student visa allows you to legally reside in Spain for the duration of your studies. The duration of the visa mirrors the length of your course — typically up to one year on the initial visa, and renewable if you continue your studies. After your course ends, you may be eligible to apply for work authorisation to seek employment in Spain.
+      </p>
+      <div class="msv__note">
+        <strong>Key facts:</strong> The student visa is NOT required for EU or EEA citizens (you have freedom of movement). It is also NOT required for short study stays under 90 days — tourist visas or visa-free entry may apply instead. If you are a non-EU national studying in Spain for longer than 90 days, the student visa is the correct route.
+      </div>
+      <div class="msv__note">
+        Already enrolled at a Spanish institution? That's the first step — we handle everything else.
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       WHO IS IT FOR
+  ═══════════════════════════════════════════ -->
+  <section class="msv__section">
+    <div class="msv__container">
+      <div class="msv__section-hd">
+        <h2>Who Is the Spain Student Visa For?</h2>
+        <p>The student visa covers a wide range of study types and institutions. Here's who it's designed for:</p>
+      </div>
+
+      <div class="msv__cards">
+        <div class="msv__card">
+          <span class="msv__card-icon">🎓</span>
+          <h3 class="msv__card-title">University Students</h3>
+          <p>Degree programmes (Bachelor's, Master's, PhD) at Spanish public or private universities. Must be formally enrolled before applying.</p>
+        </div>
+        <div class="msv__card">
+          <span class="msv__card-icon">🗣️</span>
+          <h3 class="msv__card-title">Language School Students</h3>
+          <p>Intensive Spanish language courses lasting more than 90 days. Popular with English speakers wanting immersive language learning in Spain.</p>
+        </div>
+        <div class="msv__card">
+          <span class="msv__card-icon">📚</span>
+          <h3 class="msv__card-title">Private Courses & Professional Training</h3>
+          <p>Design schools, culinary academies, business programmes, art schools, and other accredited private institutions.</p>
+        </div>
+      </div>
+
+      <p>
+        The visa is for anyone who:
+      </p>
+      <ul class="msv__list">
+        <li>Is a non-EU/EEA national</li>
+        <li>Has been accepted and enrolled at a recognised Spanish institution</li>
+        <li>Can demonstrate sufficient financial means for the duration of their stay</li>
+        <li>Has private health insurance covering Spain</li>
+        <li>Has a clean criminal record</li>
+      </ul>
+
+      <div class="msv__note">
+        <strong>EU and EEA nationals:</strong> You do not need a student visa to study in Spain. If you hold an EU passport, you have freedom of movement and can enrol and live in Spain without a visa.
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       FINANCIAL REQUIREMENTS
+  ═══════════════════════════════════════════ -->
+  <section class="msv__section--cream">
+    <div class="msv__container">
+      <div class="msv__section-hd">
+        <h2>Spain Student Visa — Financial Requirements</h2>
+        <p>You must demonstrate sufficient funds to cover living costs while studying in Spain</p>
+      </div>
+
+      <p>
+        The Spanish government requires student visa applicants to show proof of sufficient financial means to support themselves for the duration of their stay. These thresholds are based on IPREM (Indicador Público de Renta de Efectos Múltiples) — a government index that is updated annually and used as the benchmark for various financial requirements.
+      </p>
+
+      <div class="msv__table-wrap">
+        <table class="msv__table">
+          <thead>
+            <tr>
+              <th>Situation</th>
+              <th>Monthly Amount</th>
+              <th>Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Single student</td>
+              <td>~€600/month</td>
+              <td>Approx. 100% IPREM 2026</td>
+            </tr>
+            <tr>
+              <td>Student + 1 dependant</td>
+              <td>~€750/month</td>
+              <td>Additional 50% IPREM per dependant</td>
+            </tr>
+            <tr>
+              <td>Full year in advance</td>
+              <td>~€7,200+</td>
+              <td>Some consulates want to see full year demonstrated upfront</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="msv__note">
+        Exact IPREM figures are updated annually. We apply current thresholds when preparing every application.
+      </div>
+
+      <h3>How to Demonstrate Your Funds</h3>
+      <ul class="msv__list">
+        <li>Bank statements showing sufficient balance (typically last 3–6 months)</li>
+        <li>Scholarship or grant award letter from your institution or external organisation</li>
+        <li>Proof of financial support from parents or guardians (with their bank statements and a notarised support letter)</li>
+        <li>Employment contract if working part-time alongside studies (where permitted)</li>
+        <li>Sponsorship letter from an institution or employer</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       DOCUMENTS
+  ═══════════════════════════════════════════ -->
+  <section class="msv__section">
+    <div class="msv__container">
+      <div class="msv__section-hd">
+        <h2>Documents Required for the Spain Student Visa</h2>
+        <p>Getting documents right — with correct apostilles and translations — is where most student visa applications run into delays</p>
+      </div>
+
+      <div class="msv__route msv__route--employee" style="display: block; grid-template-columns: none;">
+        <span class="msv__route-badge">Consulate Application</span>
+        <h3>Applying at Your Spanish Consulate</h3>
+        <p>
+          All student visa applications are made at the Spanish consulate covering your area of residence. There is no in-country online application route for students. You must apply at your consulate before you travel to Spain.
+        </p>
+
+        <h3 style="margin-top: 1.5rem; margin-bottom: 0.8rem;">Required Documents</h3>
+        <ul class="msv__list">
+          <li>Completed national visa application form (from your Spanish consulate)</li>
+          <li>Valid passport (at least 1 year validity, 2 blank pages)</li>
+          <li>Passport-size photographs (usually 4x4 cm)</li>
+          <li>Proof of enrolment — official letter of acceptance or enrolment from your Spanish institution</li>
+          <li>Proof of financial means — bank statements, scholarship letter, or parental support documentation</li>
+          <li>Private health insurance certificate — full Spain coverage, no copayment, for the full duration of studies</li>
+          <li>Criminal record certificate — from every country where you have lived in the past 5 years, apostilled and translated into Spanish</li>
+          <li>Medical certificate confirming you have no diseases that could cause public health issues (Spanish prescribed format, apostilled and translated)</li>
+          <li>Proof of accommodation in Spain (student halls, rental agreement, host family letter)</li>
+          <li>Consulate fee receipt</li>
+          <li>Proof of payment of institution fees (where required)</li>
+        </ul>
+
+        <div class="msv__note">
+          All non-Spanish documents must be officially translated by a sworn translator. Criminal records and medical certificates typically require an Apostille of the Hague. We manage all of this as part of our service.
+        </div>
+
+        <div class="msv__cta-inline">
+          <p class="msv__cta-inline-text">Get your personalised student visa document checklist — starts with a free eligibility check</p>
+          <a href="/visa-eligibility-quiz/" class="msv__btn msv__btn--primary">Start Free Eligibility Check</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       HOW IT WORKS
+  ═══════════════════════════════════════════ -->
+  <section class="msv__section--dark">
+    <div class="msv__container">
+      <div class="msv__section-hd">
+        <h2>How We Manage Your Student Visa Application</h2>
+        <p>Full-service support from enrolment to arrival — everything managed through your secure online portal</p>
+      </div>
+
+      <div class="msv__steps">
+        <div class="msv__step">
+          <div class="msv__step-num">1</div>
+          <div class="msv__step-body">
+            <div class="msv__step-title">Free Eligibility Check</div>
+            <p>Five minutes. Confirms your institution, study duration, nationality, and financial situation — and whether you're ready to apply.</p>
+          </div>
+        </div>
+        <div class="msv__step">
+          <div class="msv__step-num">2</div>
+          <div class="msv__step-body">
+            <div class="msv__step-title">Onboarding Call with a Specialist</div>
+            <p>We review your situation in detail — institution type, consulate location, document status, financial evidence — and build your application roadmap.</p>
+          </div>
+        </div>
+        <div class="msv__step">
+          <div class="msv__step-num">3</div>
+          <div class="msv__step-body">
+            <div class="msv__step-title">We Build Your Document Pack</div>
+            <p>Every document, every apostille, every sworn translation — coordinated and reviewed by our team through your secure client portal before anything goes to the consulate.</p>
+          </div>
+        </div>
+        <div class="msv__step">
+          <div class="msv__step-num">4</div>
+          <div class="msv__step-body">
+            <div class="msv__step-title">We Prepare Your Consulate Pack and Brief You</div>
+            <p>Your complete, checked application pack is assembled and ready. We brief you on exactly what your consulate expects, what questions you may be asked, and how to present your case clearly.</p>
+          </div>
+        </div>
+        <div class="msv__step">
+          <div class="msv__step-num">5</div>
+          <div class="msv__step-body">
+            <div class="msv__step-title">You Attend Your Consulate Appointment</div>
+            <p>The one step only you can do. You walk in with a professionally prepared pack and a clear brief. We're on hand if anything comes up.</p>
+          </div>
+        </div>
+        <div class="msv__step">
+          <div class="msv__step-num">6</div>
+          <div class="msv__step-body">
+            <div class="msv__step-title">Approval and Arrival Support</div>
+            <p>When your student visa is approved, we help with next steps — registering your padrón, understanding your rights, and knowing what to do once you're in Spain.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="msv__consulate-note">
+        <strong>Consulate appointment availability:</strong> Wait times vary significantly by location and season. We help you understand the current wait times at your specific consulate and plan your application timeline around them.
+      </div>
+
+      <div style="margin-top: 2.5rem; text-align: center;">
+        <div class="msv__btn-group" style="justify-content: center;">
+          <a href="/visa-eligibility-quiz/" class="msv__btn msv__btn--primary">Start Free Eligibility Check</a>
+          <a href="https://dashboard.platinumlegalspain.com/student-visa" class="msv__btn msv__btn--outline-white">Book a Consultation</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       PROCESSING TIME
+  ═══════════════════════════════════════════ -->
+  <section class="msv__section">
+    <div class="msv__container">
+      <div class="msv__section-hd">
+        <h2>Spain Student Visa Processing Time</h2>
+        <p>Plan your application well in advance of your course start date</p>
+      </div>
+
+      <div class="msv__cards">
+        <div class="msv__card">
+          <span class="msv__card-icon">⏱️</span>
+          <h3 class="msv__card-title">Typical Processing</h3>
+          <p><strong>4–8 weeks from consulate appointment</strong></p>
+          <p>This is a guide only — times vary by consulate and current demand. UK consulates typically process within this range; US and other locations can vary.</p>
+        </div>
+        <div class="msv__card">
+          <span class="msv__card-icon">📅</span>
+          <h3 class="msv__card-title">Apply Early</h3>
+          <p><strong>At least 3 months before course start</strong></p>
+          <p>Consulate appointment slots are limited. Always apply well in advance of your intended arrival date.</p>
+        </div>
+        <div class="msv__card">
+          <span class="msv__card-icon">⚠️</span>
+          <h3 class="msv__card-title">Document Delays</h3>
+          <p><strong>Most delays are document-related</strong></p>
+          <p>Incomplete packs, missing apostilles, or incorrect translations are the primary reason for delays. Professional preparation makes a measurable difference.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       WORK RIGHTS
+  ═══════════════════════════════════════════ -->
+  <section class="msv__section--cream">
+    <div class="msv__container">
+      <div class="msv__section-hd">
+        <h2>Can You Work on a Spain Student Visa?</h2>
+      </div>
+
+      <p>
+        <strong>Short answer: Yes, but with limitations.</strong>
+      </p>
+
+      <p>
+        Student visa holders can apply for permission to work part-time alongside their studies. This is not automatic — it must be applied for separately after your visa is approved. Work authorisation allows you to earn income to support yourself, but comes with conditions on hours and type of work.
+      </p>
+
+      <h3 style="margin-top: 1.5rem;">Key Conditions</h3>
+      <ul class="msv__list">
+        <li>Work authorisation must be applied for separately (it is not included in the student visa by default)</li>
+        <li>Generally limited to work that does not interfere with your studies</li>
+        <li>Hours may be limited depending on your institution and study programme</li>
+        <li>You cannot work full-time on a student visa</li>
+        <li>Your employer must be aware of your visa status and conditions</li>
+      </ul>
+
+      <div class="msv__note msv__note--warning">
+        <span class="msv__note-label">Important</span>
+        Work conditions on student visas can vary depending on your specific visa category, institution, and individual circumstances. Always verify your specific conditions before accepting employment. My Spanish Visa does not provide employment law advice.
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       AFTER YOUR STUDIES
+  ═══════════════════════════════════════════ -->
+  <section class="msv__section">
+    <div class="msv__container">
+      <div class="msv__section-hd">
+        <h2>What Happens After Your Studies in Spain?</h2>
+      </div>
+
+      <p>
+        Your student visa is tied to the duration of your course. When your studies end, you have several options:
+      </p>
+
+      <h3>Renewal</h3>
+      <p>
+        If you're continuing with another course or further study, you can renew your student visa. You must reapply before the current visa expires. If accepted onto another programme, the renewal process is similar to the original application.
+      </p>
+
+      <h3>Work Authorisation</h3>
+      <p>
+        Graduates of official Spanish degrees (Grado, Máster, Doctorado) may apply for work-seeking authorisation that allows 12 months to find employment in Spain before needing a work permit. This is a transitional visa category designed for new graduates and is a valuable stepping stone to employment-based residency.
+      </p>
+
+      <h3>Transition to Other Visas</h3>
+      <p>
+        After studying in Spain, many people transition to other visa types based on their new circumstances. Options include:
+      </p>
+      <ul class="msv__list">
+        <li>Non-Lucrative Visa (if you have passive income from investments, pensions, or savings)</li>
+        <li>Digital Nomad Visa (if you have remote work with a company outside Spain)</li>
+        <li>Work Permit (if you have a Spanish job offer)</li>
+        <li>Entrepreneur Visa (if you're starting a business in Spain)</li>
+      </ul>
+
+      <div class="msv__note">
+        Planning your next step before your student visa expires is important. We can advise on the right transition route for your situation at your onboarding call.
+      </div>
+
+      <div class="msv__cta-inline">
+        <p class="msv__cta-inline-text">Thinking about staying in Spain after your studies? Let's talk through your options</p>
+        <a href="https://dashboard.platinumlegalspain.com/student-visa" class="msv__btn msv__btn--primary">Book a Consultation</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       COST BREAKDOWN
+  ═══════════════════════════════════════════ -->
+  <section class="msv__section">
+    <div class="msv__container">
+      <div class="msv__section-hd">
+        <h2>Cost Breakdown</h2>
+        <p>Third-party costs billed directly &nbsp;·&nbsp; our fees shown separately below</p>
+      </div>
+
+      <div style="max-width: 640px; margin: 0 auto; background: var(--white); border: 1px solid var(--border); border-radius: 12px; padding: 2rem;">
+
+        <!-- Third-party extras -->
+        <div style="font-size: 0.72rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin: 0 0 0.5rem;">Third-Party Extras (paid separately)</div>
+        <table style="width: 100%; font-size: 0.9rem;">
+          <tr style="border-bottom: 1px solid var(--border);">
+            <td style="padding: 0.6rem 0; font-weight: 600;">Consulate / government fees</td>
+            <td style="padding: 0.6rem 0; text-align: right; color: var(--navy); font-weight: 700;">€80–€200</td>
+          </tr>
+          <tr style="border-bottom: 1px solid var(--border);">
+            <td style="padding: 0.6rem 0; font-weight: 600;">Apostille of documents</td>
+            <td style="padding: 0.6rem 0; text-align: right; color: var(--navy); font-weight: 700;">€30–€80 each</td>
+          </tr>
+          <tr style="border-bottom: 1px solid var(--border);">
+            <td style="padding: 0.6rem 0; font-weight: 600;">Sworn translations</td>
+            <td style="padding: 0.6rem 0; text-align: right; color: var(--navy); font-weight: 700;">€30–€80 each</td>
+          </tr>
+          <tr style="border-bottom: 1px solid var(--border);">
+            <td style="padding: 0.6rem 0; font-weight: 600;">Student health insurance</td>
+            <td style="padding: 0.6rem 0; text-align: right; color: var(--navy); font-weight: 700;">€60–€150/mo</td>
+          </tr>
+          <tr>
+            <td style="padding: 0.6rem 0; font-weight: 600;">Criminal record check (if required)</td>
+            <td style="padding: 0.6rem 0; text-align: right; color: var(--navy); font-weight: 700;">€20–€60</td>
+          </tr>
+        </table>
+
+        <!-- MSV fees -->
+        <div style="font-size: 0.72rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; color: var(--red); margin: 1.5rem 0 0.5rem;">Our Fees (My Spanish Visa)</div>
+        <table style="width: 100%; font-size: 0.9rem;">
+          <tr style="background: #fff5f5;">
+            <td style="padding: 0.65rem 0.6rem; font-weight: 700; color: var(--navy);">Student Visa — Full Application</td>
+            <td style="padding: 0.65rem 0.6rem; text-align: right; color: var(--red); font-weight: 800;">€799</td>
+          </tr>
+        </table>
+        <p style="font-size: 0.85rem; color: var(--muted); margin-top: 1rem; line-height: 1.55;">Split into 2 manageable payments. Family discounts available where applicable. Government fees, translations and insurance are billed directly by third parties.</p>
+        <p style="margin-top: 0.75rem;"><a href="/student-visa-cost/" style="color: var(--red); font-weight: 700; font-size: 0.9rem;">View complete cost breakdown →</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       PRICING
+  ═══════════════════════════════════════════ -->
+  <section class="msv__section--cream">
+    <div class="msv__container">
+      <div class="msv__section-hd">
+        <h2>Student Visa Spain — My Spanish Visa Pricing</h2>
+      </div>
+
+      <div style="display: flex; justify-content: center; margin: 2.5rem 0;">
+        <div class="msv__price-card msv__price-card--featured" style="max-width: 480px; width: 100%;">
+          <div class="msv__price-header msv__price-header--featured">
+            <div class="msv__price-label">Student Visa — Full Application</div>
+            <div class="msv__price-amount">€799</div>
+            <div class="msv__price-sub">Split into 2 manageable payments</div>
+          </div>
+          <div class="msv__price-body">
+            <div style="margin-bottom: 1rem;">
+              <div class="msv__price-instalment">
+                <span class="msv__price-instalment-label">To get started with the application</span>
+                <span class="msv__price-instalment-amount">€300</span>
+              </div>
+              <div class="msv__price-instalment">
+                <span class="msv__price-instalment-label">After the visa has been approved</span>
+                <span class="msv__price-instalment-amount">€499</span>
+              </div>
+            </div>
+            <div class="msv__price-includes-title">Includes</div>
+            <ul class="msv__price-includes msv__list--checks">
+              <li>Free eligibility check and onboarding call</li>
+              <li>Dedicated case manager from start to approval</li>
+              <li>Full document guidance and review</li>
+              <li>Apostille and translation coordination</li>
+              <li>Consulate pack preparation</li>
+              <li>Pre-appointment briefing</li>
+              <li>Application submission support and progress tracking</li>
+            </ul>
+            <a href="https://dashboard.platinumlegalspain.com/student-visa" class="msv__btn msv__btn--primary">Start Your Application →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="msv__note">
+        Fees are charged at each stage of the process — not all upfront. All payments made securely through your client portal.
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       WHY USE MSV
+  ═══════════════════════════════════════════ -->
+  <section class="msv__section">
+    <div class="msv__container">
+      <div class="msv__section-hd">
+        <h2>Why Use My Spanish Visa for Your Student Visa?</h2>
+      </div>
+
+      <ul class="msv__list--checks">
+        <li>Free eligibility check — confirm you're ready before committing</li>
+        <li>Specialist onboarding call — with someone who knows student visa requirements for your institution type and consulate</li>
+        <li>Complete document management — every apostille and translation coordinated for you</li>
+        <li>Consulate pack — professionally prepared, fully checked, ready to submit</li>
+        <li>Pre-appointment briefing — know exactly what to expect at your consulate</li>
+        <li>Payment in 3 instalments — spread the cost across your application journey</li>
+      </ul>
+
+      <div style="margin-top: 2.5rem; text-align: center;">
+        <div class="msv__btn-group" style="justify-content: center;">
+          <a href="/visa-eligibility-quiz/" class="msv__btn msv__btn--primary">Start Free Eligibility Check</a>
+          <a href="https://dashboard.platinumlegalspain.com/student-visa" class="msv__btn msv__btn--navy">Book a Consultation</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       DEEP-DIVE GUIDES
+  ═══════════════════════════════════════════ -->
+  <section class="msv__section--cream">
+    <div class="msv__container">
+      <div class="msv__section-hd">
+        <h2>Student Visa Deep-Dive Guides</h2>
+        <p>Every detail of the Spain Student Visa, covered by our specialists</p>
+      </div>
+
+      <div class="msv__guide-grid">
+        <a href="/student-visa-spain-requirements/" class="msv__guide-card">
+          <div class="msv__guide-icon">📋</div>
+          <div class="msv__guide-title">Student Visa Requirements</div>
+          <div class="msv__guide-desc">Full eligibility — who qualifies, which institutions count</div>
+          <div class="msv__guide-cta">Read guide →</div>
+        </a>
+        <a href="/student-visa-spain-financial-requirements/" class="msv__guide-card">
+          <div class="msv__guide-icon">💰</div>
+          <div class="msv__guide-title">Financial Requirements</div>
+          <div class="msv__guide-desc">IPREM thresholds, bank statements, sponsorship, and scholarships</div>
+          <div class="msv__guide-cta">Read guide →</div>
+        </a>
+        <a href="/student-visa-spain-documents/" class="msv__guide-card">
+          <div class="msv__guide-icon">📄</div>
+          <div class="msv__guide-title">Documents Checklist</div>
+          <div class="msv__guide-desc">Every document with apostille and translation guidance</div>
+          <div class="msv__guide-cta">Read guide →</div>
+        </a>
+        <a href="/student-visa-spain-university/" class="msv__guide-card">
+          <div class="msv__guide-icon">🏛️</div>
+          <div class="msv__guide-title">University Student Visa</div>
+          <div class="msv__guide-desc">Applying for a degree programme at a Spanish university</div>
+          <div class="msv__guide-cta">Read guide →</div>
+        </a>
+        <a href="/student-visa-spain-language-school/" class="msv__guide-card">
+          <div class="msv__guide-icon">🗣️</div>
+          <div class="msv__guide-title">Language School Visa</div>
+          <div class="msv__guide-desc">Spanish language courses over 90 days — how to apply</div>
+          <div class="msv__guide-cta">Read guide →</div>
+        </a>
+        <a href="/student-visa-spain-processing-time/" class="msv__guide-card">
+          <div class="msv__guide-icon">⏱️</div>
+          <div class="msv__guide-title">Processing Time</div>
+          <div class="msv__guide-desc">Current timelines by consulate and how to plan ahead</div>
+          <div class="msv__guide-cta">Read guide →</div>
+        </a>
+        <a href="/student-visa-spain-cost/" class="msv__guide-card">
+          <div class="msv__guide-icon">💳</div>
+          <div class="msv__guide-title">Cost &amp; Fees</div>
+          <div class="msv__guide-desc">Consulate fees, translations, insurance, and our service pricing</div>
+          <div class="msv__guide-cta">Read guide →</div>
+        </a>
+        <a href="/student-visa-spain-health-insurance/" class="msv__guide-card">
+          <div class="msv__guide-icon">🏥</div>
+          <div class="msv__guide-title">Health Insurance</div>
+          <div class="msv__guide-desc">Which policies satisfy the student visa requirement</div>
+          <div class="msv__guide-cta">Read guide →</div>
+        </a>
+        <a href="/student-visa-spain-work-rights/" class="msv__guide-card">
+          <div class="msv__guide-icon">💼</div>
+          <div class="msv__guide-title">Work Rights</div>
+          <div class="msv__guide-desc">What you can and can't do while on a student visa</div>
+          <div class="msv__guide-cta">Read guide →</div>
+        </a>
+        <a href="/student-visa-spain-renewal/" class="msv__guide-card">
+          <div class="msv__guide-icon">🔄</div>
+          <div class="msv__guide-title">Renewal Guide</div>
+          <div class="msv__guide-desc">How to renew and what to do when your course ends</div>
+          <div class="msv__guide-cta">Read guide →</div>
+        </a>
+        <a href="/compare-spain-visas/" class="msv__guide-card">
+          <div class="msv__guide-icon">⚖️</div>
+          <div class="msv__guide-title">Student vs Other Visas</div>
+          <div class="msv__guide-desc">When NLV or DNV might suit your situation better</div>
+          <div class="msv__guide-cta">Read guide →</div>
+        </a>
+        <a href="/student-visa-spain-rejection/" class="msv__guide-card">
+          <div class="msv__guide-icon">❌</div>
+          <div class="msv__guide-title">Rejection Reasons</div>
+          <div class="msv__guide-desc">Common refusal reasons and how to avoid them</div>
+          <div class="msv__guide-cta">Read guide →</div>
+        </a>
+        <a href="/spain-student-visa-uk/" class="msv__guide-card">
+          <div class="msv__guide-icon">🇬🇧</div>
+          <div class="msv__guide-title">Student Visa for UK Nationals</div>
+          <div class="msv__guide-desc">UK-specific requirements, costs, and UK consulate process</div>
+          <div class="msv__guide-cta">Read guide →</div>
+        </a>
+        <a href="/spain-student-visa-us-citizens/" class="msv__guide-card">
+          <div class="msv__guide-icon">🇺🇸</div>
+          <div class="msv__guide-title">Student Visa for US Citizens</div>
+          <div class="msv__guide-desc">US-specific requirements and application guidance</div>
+          <div class="msv__guide-cta">Read guide →</div>
+        </a>
+        <a href="/student-visa-to-residency-spain/" class="msv__guide-card">
+          <div class="msv__guide-icon">📜</div>
+          <div class="msv__guide-title">Student to Residency Pathway</div>
+          <div class="msv__guide-desc">Transitioning from student visa to other visa types after graduation</div>
+          <div class="msv__guide-cta">Read guide →</div>
+        </a>
+        <a href="/visa-eligibility-quiz/" class="msv__guide-card">
+          <div class="msv__guide-icon">✔️</div>
+          <div class="msv__guide-title">Visa Eligibility Quiz</div>
+          <div class="msv__guide-desc">Free 5-minute check to confirm student visa is right for you</div>
+          <div class="msv__guide-cta">Read guide →</div>
+        </a>
+        <a href="/compare-spain-visas/" class="msv__guide-card">
+          <div class="msv__guide-icon">⚖️</div>
+          <div class="msv__guide-title">Compare All Spain Visas</div>
+          <div class="msv__guide-desc">Student visa vs NLV vs DNV — find the right option</div>
+          <div class="msv__guide-cta">Read guide →</div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       FAQ
+  ═══════════════════════════════════════════ -->
+  <section class="msv__section">
+    <div class="msv__container">
+      <div class="msv__section-hd">
+        <h2>Frequently Asked Questions — Spain Student Visa</h2>
+      </div>
+
+      <div class="msv__faq">
+        <div class="msv__faq-item">
+          <div class="msv__faq-q">Do I need a student visa to study in Spain?</div>
+          <div class="msv__faq-a">Only non-EU/EEA nationals studying for more than 90 days. EU citizens don't need one. Short courses under 90 days may not require a visa depending on your nationality.</div>
+        </div>
+        <div class="msv__faq-item">
+          <div class="msv__faq-q">How much money do I need for a Spain student visa?</div>
+          <div class="msv__faq-a">Approximately €600/month as a guide for 2026, based on IPREM. You need to show you can cover your full stay — typically via bank statements, scholarship letters, or a parental support letter with documentation.</div>
+        </div>
+        <div class="msv__faq-item">
+          <div class="msv__faq-q">Do I need to be enrolled before I apply?</div>
+          <div class="msv__faq-a">Yes. Proof of enrolment or an official acceptance letter from your Spanish institution is a mandatory document. You cannot apply speculatively.</div>
+        </div>
+        <div class="msv__faq-item">
+          <div class="msv__faq-q">Can I work while studying in Spain?</div>
+          <div class="msv__faq-a">Student visa holders can apply for permission to work part-time, but work authorisation is not automatic. Hours and conditions vary. You cannot work full-time on a student visa.</div>
+        </div>
+        <div class="msv__faq-item">
+          <div class="msv__faq-q">How long does the Spain student visa take?</div>
+          <div class="msv__faq-a">Typically 4–8 weeks from your consulate appointment, though this varies by location. UK consulates are generally within this range; other consulates can vary. Apply at least 3 months before your course starts.</div>
+        </div>
+        <div class="msv__faq-item">
+          <div class="msv__faq-q">Can I bring family members on a student visa?</div>
+          <div class="msv__faq-a">Generally, bringing dependants on a student visa is more complex than on other visa types. Speak to our team about your specific situation.</div>
+        </div>
+        <div class="msv__faq-item">
+          <div class="msv__faq-q">What type of health insurance do I need?</div>
+          <div class="msv__faq-a">Private health insurance providing full medical coverage in Spain with no copayment clause. Standard travel insurance does not qualify. Your institution may have approved provider recommendations.</div>
+        </div>
+        <div class="msv__faq-item">
+          <div class="msv__faq-q">Do my documents need to be translated into Spanish?</div>
+          <div class="msv__faq-a">Yes. All non-Spanish documents must be translated by a certified sworn translator recognised in Spain. Criminal records and medical certificates also typically require an Apostille of the Hague.</div>
+        </div>
+        <div class="msv__faq-item">
+          <div class="msv__faq-q">What happens when my student visa expires?</div>
+          <div class="msv__faq-a">If continuing your studies, you can apply to renew before expiry. If your course has ended, graduates of official Spanish degrees may apply for 12 months of work-seeking authorisation. Other options include transitioning to a different visa type.</div>
+        </div>
+        <div class="msv__faq-item">
+          <div class="msv__faq-q">Can My Spanish Visa help if my application has been refused?</div>
+          <div class="msv__faq-a">Yes. If you have received a refusal, we can review what went wrong and advise on whether an appeal or fresh application is the right approach. Speak to our team.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       FINAL CTA
+  ═══════════════════════════════════════════ -->
+  <section class="msv__final-cta">
+    <div class="msv__container">
+      <h2>Ready to Study in Spain?</h2>
+      <p>
+        Spain offers world-class universities, leading language schools, and an unbeatable quality of life for international students. Whether you are starting a degree, improving your Spanish, or training at a private academy — the student visa is the legal route to make it happen.
+      </p>
+      <div class="msv__btn-group">
+        <a href="/visa-eligibility-quiz/" class="msv__btn msv__btn--primary">Start Free Eligibility Check</a>
+        <a href="https://dashboard.platinumlegalspain.com/student-visa" class="msv__btn msv__btn--outline-white">Book a Consultation</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Related Guides Hub ──────────────────────────────────────────── -->
+  <section class="msv__section--cream" style="padding: 3rem 0;">
+    <div class="msv__container">
+      <div style="margin-bottom: 1.5rem;">
+        <p style="font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#be0011;margin-bottom:.4rem;">Complete Resource Hub</p>
+        <h2 style="font-size:1.35rem;font-weight:800;color:#0c1930;">All Student Visa Guides</h2>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px;">
+        <a href="/student-visa-spain-requirements/" style="background:#fff;border:1px solid #dce3ed;border-radius:8px;padding:14px 16px;text-decoration:none;display:block;font-size:.88rem;font-weight:600;color:#0c1930;transition:border-color .18s;" onmouseover="this.style.borderColor='#be0011'" onmouseout="this.style.borderColor='#dce3ed'">Visa Requirements →</a>
+        <a href="/student-visa-spain-documents/" style="background:#fff;border:1px solid #dce3ed;border-radius:8px;padding:14px 16px;text-decoration:none;display:block;font-size:.88rem;font-weight:600;color:#0c1930;transition:border-color .18s;" onmouseover="this.style.borderColor='#be0011'" onmouseout="this.style.borderColor='#dce3ed'">Documents Checklist →</a>
+        <a href="/student-visa-spain-financial-requirements/" style="background:#fff;border:1px solid #dce3ed;border-radius:8px;padding:14px 16px;text-decoration:none;display:block;font-size:.88rem;font-weight:600;color:#0c1930;transition:border-color .18s;" onmouseover="this.style.borderColor='#be0011'" onmouseout="this.style.borderColor='#dce3ed'">Financial Requirements →</a>
+        <a href="/student-visa-spain-health-insurance/" style="background:#fff;border:1px solid #dce3ed;border-radius:8px;padding:14px 16px;text-decoration:none;display:block;font-size:.88rem;font-weight:600;color:#0c1930;transition:border-color .18s;" onmouseover="this.style.borderColor='#be0011'" onmouseout="this.style.borderColor='#dce3ed'">Health Insurance Guide →</a>
+        <a href="/student-visa-spain-processing-time/" style="background:#fff;border:1px solid #dce3ed;border-radius:8px;padding:14px 16px;text-decoration:none;display:block;font-size:.88rem;font-weight:600;color:#0c1930;transition:border-color .18s;" onmouseover="this.style.borderColor='#be0011'" onmouseout="this.style.borderColor='#dce3ed'">Processing Times →</a>
+        <a href="/student-visa-spain-renewal/" style="background:#fff;border:1px solid #dce3ed;border-radius:8px;padding:14px 16px;text-decoration:none;display:block;font-size:.88rem;font-weight:600;color:#0c1930;transition:border-color .18s;" onmouseover="this.style.borderColor='#be0011'" onmouseout="this.style.borderColor='#dce3ed'">Renewing Your Visa →</a>
+        <a href="/student-visa-spain-work-rights/" style="background:#fff;border:1px solid #dce3ed;border-radius:8px;padding:14px 16px;text-decoration:none;display:block;font-size:.88rem;font-weight:600;color:#0c1930;transition:border-color .18s;" onmouseover="this.style.borderColor='#be0011'" onmouseout="this.style.borderColor='#dce3ed'">Working While Studying →</a>
+        <a href="/student-visa-spain-cost/" style="background:#fff;border:1px solid #dce3ed;border-radius:8px;padding:14px 16px;text-decoration:none;display:block;font-size:.88rem;font-weight:600;color:#0c1930;transition:border-color .18s;" onmouseover="this.style.borderColor='#be0011'" onmouseout="this.style.borderColor='#dce3ed'">Total Cost Breakdown →</a>
+        <a href="/student-visa-spain-university/" style="background:#fff;border:1px solid #dce3ed;border-radius:8px;padding:14px 16px;text-decoration:none;display:block;font-size:.88rem;font-weight:600;color:#0c1930;transition:border-color .18s;" onmouseover="this.style.borderColor='#be0011'" onmouseout="this.style.borderColor='#dce3ed'">University Students →</a>
+        <a href="/student-visa-spain-language-school/" style="background:#fff;border:1px solid #dce3ed;border-radius:8px;padding:14px 16px;text-decoration:none;display:block;font-size:.88rem;font-weight:600;color:#0c1930;transition:border-color .18s;" onmouseover="this.style.borderColor='#be0011'" onmouseout="this.style.borderColor='#dce3ed'">Language School Students →</a>
+        <a href="/student-visa-spain-nie/" style="background:#fff;border:1px solid #dce3ed;border-radius:8px;padding:14px 16px;text-decoration:none;display:block;font-size:.88rem;font-weight:600;color:#0c1930;transition:border-color .18s;" onmouseover="this.style.borderColor='#be0011'" onmouseout="this.style.borderColor='#dce3ed'">Getting Your NIE →</a>
+        <a href="/student-visa-spain-tie-card/" style="background:#fff;border:1px solid #dce3ed;border-radius:8px;padding:14px 16px;text-decoration:none;display:block;font-size:.88rem;font-weight:600;color:#0c1930;transition:border-color .18s;" onmouseover="this.style.borderColor='#be0011'" onmouseout="this.style.borderColor='#dce3ed'">TIE Residency Card →</a>
+        <a href="/student-visa-spain-rejection/" style="background:#fff;border:1px solid #dce3ed;border-radius:8px;padding:14px 16px;text-decoration:none;display:block;font-size:.88rem;font-weight:600;color:#0c1930;transition:border-color .18s;" onmouseover="this.style.borderColor='#be0011'" onmouseout="this.style.borderColor='#dce3ed'">Dealing with Rejection →</a>
+        <a href="/student-visa-spain-uk/" style="background:#fff;border:1px solid #dce3ed;border-radius:8px;padding:14px 16px;text-decoration:none;display:block;font-size:.88rem;font-weight:600;color:#0c1930;transition:border-color .18s;" onmouseover="this.style.borderColor='#be0011'" onmouseout="this.style.borderColor='#dce3ed'">UK Applicants Guide →</a>
+        <a href="/student-visa-spain-usa/" style="background:#fff;border:1px solid #dce3ed;border-radius:8px;padding:14px 16px;text-decoration:none;display:block;font-size:.88rem;font-weight:600;color:#0c1930;transition:border-color .18s;" onmouseover="this.style.borderColor='#be0011'" onmouseout="this.style.borderColor='#dce3ed'">US Applicants Guide →</a>
+        <a href="/student-visa-spain-india/" style="background:#fff;border:1px solid #dce3ed;border-radius:8px;padding:14px 16px;text-decoration:none;display:block;font-size:.88rem;font-weight:600;color:#0c1930;transition:border-color .18s;" onmouseover="this.style.borderColor='#be0011'" onmouseout="this.style.borderColor='#dce3ed'">Indian Applicants Guide →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       DISCLAIMER
+  ═══════════════════════════════════════════ -->
+  </div>
+
+</div><!-- /msv -->
+
+<!-- FRAGMENT_END -->
+</main>
+
+
+<!-- ═══════════════════════════════════════════════════
+     SITE FOOTER
+     ═══════════════════════════════════════════════════ -->
+
+<section style="background:#f8f7f4;padding:2rem 1.5rem;border-top:1px solid #dce3ed;">
+  <div style="max-width:820px;margin:0 auto;">
+    <div style="background:#fff;border:2px solid #dce3ed;border-radius:12px;padding:1.75rem 2rem;">
+      <p style="font-weight:700;color:#0c1930;margin:0 0 0.5rem;font-size:0.95rem;">Recommended insurance specialists</p>
+      <p style="color:#5a6478;font-size:0.9rem;margin:0;line-height:1.8;">
+        <a href="https://www.spanish-healthinsurance.com/myspanishvisa" target="_blank" rel="noopener" style="color:#be0011;font-weight:700;">Spanish Health Insurance</a> — visa-compliant private health insurance for English-speaking foreigners in Spain.<br>
+        <a href="https://www.247expatinsurance.com/myspanishvisa" target="_blank" rel="noopener" style="color:#be0011;font-weight:700;">247 Expat Insurance</a> — health and all types of expat insurance in Spain, tailored for international residents.
+      </p>
+    </div>
+  </div>
+</section>
+<footer class="msv-footer" role="contentinfo">
+
+  <div class="msv-footer__top">
+
+    <!-- Brand column -->
+    <div class="msv-footer__brand">
+      <a href="/" class="msv-footer__logo" aria-label="My Spanish Visa"><img src="/assets/images/msv-logo-white.png" alt="My Spanish Visa" height="40" style="display:block;"></a>
+      <p class="msv-footer__tagline">
+        Specialist Spain visa &amp; residency guidance for English-speaking foreigners.
+        A service of Platinum Legal Spain.
+      </p>
+      <div class="msv-footer__trust">
+        <span class="msv-footer__trust-item">All English. No barriers.</span>
+        <span class="msv-footer__trust-item">Solicitors &amp; immigration specialists</span>
+        <span class="msv-footer__trust-item">100% online process</span>
+      </div>
+    </div>
+
+    <!-- Visas column -->
+    <div>
+      <div class="msv-footer__col-title">Visas</div>
+      <ul class="msv-footer__links">
+        <li><a href="/non-lucrative-visa-spain/">Non-Lucrative Visa</a></li>
+        <li><a href="/digital-nomad-visa-spain/">Digital Nomad Visa</a></li>
+        <li><a href="/student-visa-spain/">Student Visa</a></li>
+        <li><a href="/spain-visa-renewal/">Visa Renewals</a></li>
+        <li><a href="/best-visa-move-to-spain/">Compare All Visas</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/nlv">Apply: NLV</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/dnv">Apply: DNV</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/student-visa">Apply: Student Visa</a></li>
+      </ul>
+    </div>
+
+    <!-- Resources column -->
+    <div>
+      <div class="msv-footer__col-title">Resources</div>
+      <ul class="msv-footer__links">
+        <li><a href="/blog/">Blog &amp; Guides</a></li>
+        <li><a href="/move-to-spain/">Move to Spain Guide</a></li>
+        <li><a href="/visa-eligibility-quiz/">Eligibility Quiz</a></li>
+        <li><a href="/spain-visa-checklist/">Document Checklists</a></li>
+        <li><a href="/spain-visa-requirements/">Visa Requirements</a></li>
+        <li><a href="/spain-nie-number/">NIE Number Guide</a></li>
+        <li><a href="/spain-tie-card/">TIE Card Guide</a></li>
+      </ul>
+    </div>
+
+    <!-- Company column -->
+    <div>
+      <div class="msv-footer__col-title">Company</div>
+      <ul class="msv-footer__links">
+        <li><a href="/about-us/">About Us</a></li>
+        <li><a href="/testimonials/">Client Reviews</a></li>
+        <li><a href="/why-choose-us/">Why Choose Us</a></li>
+        <li><a href="/contact-us.html">Contact</a></li>
+        <li><a href="https://www.platinumlegalspain.com" rel="noopener">Platinum Legal Spain</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/student-visa">Client Portal</a></li>
+      </ul>
+    </div>
+
+  </div><!-- /.msv-footer__top -->
+
+  <div class="msv-footer__bottom">
+    <div class="msv-footer__bottom-inner">
+      <p class="msv-footer__disclaimer">
+        <strong style="color:rgba(255,255,255,0.5);">Disclaimer:</strong>
+        My Spanish Visa provides visa processing support and is not a law firm. Content on this site is for informational purposes only and does not constitute legal advice. Immigration rules change frequently — always verify requirements with official sources or a qualified specialist. My Spanish Visa is a trading name of Platinum Legal Spain.
+      </p>
+      <span class="msv-footer__copyright">© 2026 My Spanish Visa. All rights reserved.</span>
+    </div>
+  </div>
+
+</footer>
+
+</body>
+</html>

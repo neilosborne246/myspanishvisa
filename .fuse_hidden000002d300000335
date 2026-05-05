@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Book a free consultation with a Spain visa specialist. Get expert advice on Non-Lucrative Visa, Digital Nomad Visa, Student Visa, and renewals. Clear answers, no jargon.">
+    <!-- Open Graph / Social -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.myspanishvisa.com/book-consultation/">
+    <meta property="og:title" content="Book a Free Spain Visa Consultation | My Spanish Visa">
+    <meta property="og:description" content="Speak to a Spain visa specialist. Get personalised advice on the right visa for your situation — NLV, DNV, Student Visa, or renewals.">
+    <meta property="og:image" content="https://www.myspanishvisa.com/assets/images/og/og-myspanishvisa-default.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="My Spanish Visa">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@myspanishvisa">
+    <meta name="twitter:title" content="Book a Free Spain Visa Consultation | My Spanish Visa">
+    <meta name="twitter:description" content="Speak to a Spain visa specialist. Get personalised advice on the right visa for your situation — NLV, DNV, Student Visa, or renewals.">
+    <meta name="twitter:image" content="https://www.myspanishvisa.com/assets/images/og/og-myspanishvisa-default.jpg">
+    <title>Book a Free Spain Visa Consultation | My Spanish Visa</title>
+
+    <style>
+/* ── iOS Safari pinch-zoom overflow safety ─────────────────────────── */
+html, body { max-width: 100%; overflow-x: clip; }
+.msv, .msv-nav, .msv-topbar, .msv-footer, .msv-footer-cta {
+  max-width: 100%;
+  overflow-x: clip;
+  position: relative;
+}
+.msv img, .msv video, .msv iframe,
+.msv-footer img, .msv-footer video, .msv-footer iframe {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ── Reset & scope ─────────────────────────────────────────────────── */
+.msv *, .msv *::before, .msv *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ── Tokens ──────────────────────────────────────────────────────── */
+.msv {
+  --navy: #0c1930;
+  --navy-mid: #1a3a5c;
+  --red: #be0011;
+  --red-deep: #8c000d;
+  --yellow: #facf39;
+  --cream: #f8f7f4;
+  --white: #ffffff;
+  --black: #1a1a1a;
+  --muted: #5a6478;
+  --border: #dce3ed;
+  --shadow-sm: 0 2px 8px rgba(12,25,48,0.08);
+  --shadow-md: 0 6px 24px rgba(12,25,48,0.13);
+  font-family: 'Inter', 'Segoe UI', system-ui, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.75;
+  color: var(--black);
+  width: 100%;
+}
+
+.msv__container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+.msv__container--narrow { max-width: 780px; margin: 0 auto; padding: 0 2rem; }
+@media (max-width: 640px) { .msv__container, .msv__container--narrow { padding: 0 1.2rem; } }
+
+/* Typography */
+.msv h1 { font-size: clamp(2rem, 4.5vw, 3rem); font-weight: 800; line-height: 1.12; color: var(--white); letter-spacing: -0.025em; margin-bottom: 1.2rem; }
+.msv h2 { font-size: clamp(1.3rem, 2.5vw, 1.75rem); font-weight: 700; color: var(--navy); letter-spacing: -0.01em; margin-bottom: 0.5rem; position: relative; display: inline-block; padding-bottom: 0.5rem; }
+.msv h2::after { content: ''; position: absolute; bottom: 0; left: 0; width: 44px; height: 3px; background: linear-gradient(90deg, var(--red), var(--red-deep)); border-radius: 2px; }
+.msv h3 { font-size: 1.05rem; font-weight: 700; color: var(--navy); margin-bottom: 0.4rem; }
+.msv p { color: var(--black); margin-bottom: 1rem; font-size: 0.97rem; }
+.msv a { color: var(--red); text-decoration: none; }
+.msv a:hover { text-decoration: underline; }
+.msv ul { list-style: none; padding: 0; margin: 0 0 1rem; }
+.msv ul li { padding: 0.35rem 0 0.35rem 1.4rem; position: relative; font-size: 0.95rem; color: var(--black); }
+.msv ul li::before { content: ''; position: absolute; left: 0; top: 0.75rem; width: 7px; height: 7px; background: linear-gradient(135deg, var(--red), var(--red-deep)); border-radius: 50%; }
+
+/* Sections */
+.msv__section { padding: 5rem 0; background: var(--white); }
+.msv__section--cream { padding: 5rem 0; background: linear-gradient(180deg, #f8f7f4 0%, #f2f4f8 100%); }
+.msv__section--dark { padding: 5rem 0; background: linear-gradient(135deg, var(--navy) 0%, #0d2240 55%, #0a1d38 100%); }
+.msv__section--dark h2 { color: var(--white) !important; }
+.msv__section--dark h2::after { background: linear-gradient(90deg, var(--yellow), #e8b820); }
+.msv__section--dark h3 { color: rgba(255,255,255,0.9) !important; }
+.msv .msv__section--dark p, .msv .msv__section--dark li { color: rgba(255,255,255,0.82); }
+.msv__section--dark ul li::before { background: linear-gradient(135deg, var(--yellow), #e8b820); }
+@media (max-width: 640px) { .msv__section, .msv__section--cream, .msv__section--dark { padding: 3.5rem 0; } }
+.msv__section-hd { margin-bottom: 3rem; }
+.msv__section-hd p { color: var(--muted); font-size: 1rem; margin-top: 0.75rem; line-height: 1.7; max-width: 600px; }
+
+/* Animations */
+@keyframes msv-fade-up { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes msv-shimmer { 0% { background-position: -400px 0; } 100% { background-position: 400px 0; } }
+.msv__shimmer { background: linear-gradient(90deg, var(--yellow) 0%, #e8b820 25%, var(--red) 50%, #e8b820 75%, var(--yellow) 100%); background-size: 400px 100%; -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; animation: msv-shimmer 3.5s linear infinite; display: inline; }
+
+/* Hero */
+.msv__hero { background: linear-gradient(135deg, #0c1930 0%, #0f2540 40%, #162d50 70%, #1a3560 100%); padding: 5.5rem 0 5rem; position: relative; overflow: hidden; }
+.msv__hero::before { content: ''; position: absolute; top: -30%; right: -5%; width: 700px; height: 700px; background: radial-gradient(circle, rgba(190,0,17,0.1) 0%, transparent 65%); pointer-events: none; }
+.msv__hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, rgba(250,207,57,0.4), transparent); }
+.msv__hero-inner { max-width: 780px; animation: msv-fade-up 0.7s ease-out both; }
+.msv__eyebrow { display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(190,0,17,0.15); border: 1px solid rgba(190,0,17,0.4); color: #ff6b7a; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.35rem 0.9rem; border-radius: 100px; margin-bottom: 1.5rem; }
+.msv__eyebrow::before { content: ''; width: 6px; height: 6px; background: var(--red); border-radius: 50%; box-shadow: 0 0 6px var(--red); }
+.msv__hero p { color: rgba(255,255,255,0.78) !important; font-size: clamp(1rem, 2.2vw, 1.15rem); max-width: 640px; margin-bottom: 2.2rem; line-height: 1.75; }
+
+/* Breadcrumb */
+.msv__breadcrumb { padding: 0.85rem 0; border-bottom: 1px solid var(--border); background: var(--white); }
+.msv__breadcrumb-inner { display: flex; align-items: center; gap: 0.5rem; font-size: 0.8rem; color: var(--muted); flex-wrap: wrap; }
+.msv__breadcrumb-inner a { color: var(--red); text-decoration: none; }
+.msv__breadcrumb-inner a:hover { text-decoration: underline; }
+
+/* Buttons */
+.msv__btn-group { display: flex; flex-wrap: wrap; gap: 0.85rem; }
+.msv__btn { display: inline-block; padding: 0.85rem 2rem; font-size: 0.92rem; font-weight: 700; border-radius: 6px; text-decoration: none !important; transition: transform 0.15s, box-shadow 0.15s; }
+.msv__btn:hover { transform: translateY(-1px); text-decoration: none !important; }
+.msv .msv__btn--primary { background: linear-gradient(135deg, var(--red) 0%, var(--red-deep) 100%); color: #ffffff !important; box-shadow: 0 4px 16px rgba(190,0,17,0.38); }
+.msv .msv__btn--primary:hover { box-shadow: 0 6px 22px rgba(190,0,17,0.48); color: #ffffff !important; }
+.msv .msv__btn--outline-white { background: transparent; color: #ffffff !important; border: 1.5px solid rgba(255,255,255,0.5); }
+.msv .msv__btn--outline-white:hover { background: rgba(255,255,255,0.1); color: #ffffff !important; }
+
+/* Trust bar */
+.msv__trust-bar { background: var(--white); border-bottom: 1px solid var(--border); padding: 1rem 0; box-shadow: var(--shadow-sm); }
+.msv__trust-bar-inner { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.75rem; }
+.msv__trust-item { display: flex; align-items: center; gap: 0.5rem; font-size: 0.82rem; font-weight: 600; color: var(--navy); white-space: nowrap; }
+.msv__trust-item::before { content: ''; width: 7px; height: 7px; background: linear-gradient(135deg, var(--red), var(--red-deep)); border-radius: 50%; flex-shrink: 0; }
+
+/* Visa path cards */
+.bc__path-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+@media (max-width: 860px) { .bc__path-grid { grid-template-columns: 1fr; } }
+.bc__path-card { background: var(--white); border: 1px solid var(--border); border-radius: 14px; padding: 2rem 1.75rem; box-shadow: var(--shadow-sm); display: flex; flex-direction: column; position: relative; overflow: hidden; transition: box-shadow 0.2s, transform 0.2s; }
+.bc__path-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+.bc__path-card--featured { border-color: var(--red); }
+.bc__path-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: var(--border); }
+.bc__path-card--nlv::before { background: linear-gradient(90deg, #0c6291, #1a3a5c); }
+.bc__path-card--dnv::before { background: linear-gradient(90deg, var(--red), var(--red-deep)); }
+.bc__path-card--student::before { background: linear-gradient(90deg, #2d7d46, #1a5c31); }
+.bc__path-badge { display: inline-block; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; padding: 0.25rem 0.75rem; border-radius: 100px; margin-bottom: 1.2rem; }
+.bc__path-card--nlv .bc__path-badge { background: #e8f0f8; color: #0c6291; }
+.bc__path-card--dnv .bc__path-badge { background: #fef2f2; color: var(--red-deep); }
+.bc__path-card--student .bc__path-badge { background: #e8f4ed; color: #1a5c31; }
+.bc__path-card h3 { font-size: 1.15rem; font-weight: 800; color: var(--navy); margin-bottom: 0.5rem; }
+.bc__path-card p { font-size: 0.88rem; color: var(--muted); margin-bottom: 1.2rem; line-height: 1.65; flex-grow: 1; }
+.bc__path-meta { display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 1.5rem; padding: 1rem; background: var(--cream); border-radius: 8px; }
+.bc__path-meta-row { display: flex; justify-content: space-between; font-size: 0.82rem; }
+.bc__path-meta-label { color: var(--muted); font-weight: 600; }
+.bc__path-meta-value { color: var(--navy); font-weight: 700; }
+.bc__path-card .msv__btn { width: 100%; text-align: center; }
+
+/* Steps */
+.msv__steps { display: flex; flex-direction: column; gap: 1.5rem; }
+.msv__step { display: flex; gap: 1.5rem; align-items: flex-start; }
+.msv__step-num { width: 44px; height: 44px; flex-shrink: 0; border-radius: 50%; background: linear-gradient(135deg, var(--red), var(--red-deep)); color: #fff; font-size: 0.9rem; font-weight: 800; display: flex; align-items: center; justify-content: center; margin-top: 0.1rem; }
+.msv__step-body h3 { font-size: 1rem; font-weight: 700; color: var(--navy); margin-bottom: 0.3rem; }
+.msv__step-body p { font-size: 0.9rem; color: var(--muted); margin: 0; line-height: 1.65; }
+
+/* Renewals grid */
+.bc__renewal-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 2rem; }
+@media (max-width: 640px) { .bc__renewal-grid { grid-template-columns: 1fr; } }
+.bc__renewal-card { background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.15); border-radius: 12px; padding: 1.75rem; }
+.bc__renewal-card h3 { color: var(--yellow) !important; font-size: 1.05rem; margin-bottom: 0.5rem; }
+.bc__renewal-card p { color: rgba(255,255,255,0.75) !important; font-size: 0.88rem; margin-bottom: 1.2rem; line-height: 1.65; }
+
+/* FAQs */
+.msv__faq-list { display: flex; flex-direction: column; gap: 0; border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+.msv__faq-list details { border-bottom: 1px solid var(--border); background: var(--white); }
+.msv__faq-list details:last-child { border-bottom: none; }
+.msv__faq-list summary { padding: 1.2rem 1.5rem; font-size: 0.97rem; font-weight: 700; color: var(--navy); cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+.msv__faq-list summary::-webkit-details-marker { display: none; }
+.msv__faq-list summary::after { content: '+'; font-size: 1.3rem; font-weight: 400; color: var(--red); flex-shrink: 0; transition: transform 0.2s; }
+.msv__faq-list details[open] summary::after { transform: rotate(45deg); }
+.msv__faq-list details[open] summary { color: var(--red); }
+.msv__faq-answer { padding: 0 1.5rem 1.3rem; font-size: 0.92rem; color: var(--muted); line-height: 1.75; }
+.msv__faq-answer p { color: var(--muted); font-size: 0.92rem; margin-bottom: 0.75rem; }
+.msv__faq-answer p:last-child { margin-bottom: 0; }
+
+/* CTA band */
+.msv__cta-band { background: linear-gradient(135deg, var(--navy) 0%, #0d2240 60%, #0a1d38 100%); padding: 5rem 0; text-align: center; }
+.msv__cta-band h2 { color: var(--white) !important; display: block; }
+.msv__cta-band h2::after { left: 50%; transform: translateX(-50%); background: linear-gradient(90deg, var(--yellow), #e8b820); }
+.msv__cta-band p { color: rgba(255,255,255,0.75) !important; max-width: 560px; margin: 1rem auto 2.2rem; font-size: 1rem; }
+.msv__cta-band .msv__btn-group { justify-content: center; }
+
+/* Social proof */
+.msv__proof { display: flex; gap: 0.5rem; align-items: center; font-size: 0.88rem; color: var(--muted); margin-bottom: 1.5rem; }
+
+/* Disclaimer */
+.msv__disclaimer { background: var(--cream); border-top: 1px solid var(--border); padding: 2rem 0; }
+.msv__disclaimer p { font-size: 0.78rem; color: var(--muted); margin: 0; line-height: 1.65; }
+
+    </style>
+</head>
+<body class="msv">
+
+    <!-- Breadcrumb -->
+    <div class="msv__breadcrumb">
+        <div class="msv__container">
+            <div class="msv__breadcrumb-inner">
+                <a href="/">Home</a>
+                <span>/</span>
+                <span>Book a Consultation</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero -->
+    <section class="msv__hero">
+        <div class="msv__container">
+            <div class="msv__hero-inner">
+                <span class="msv__eyebrow">Free Specialist Call</span>
+                <h1>Book a Free Call With a <span class="msv__shimmer">Spain Visa Specialist</span></h1>
+                <p>Not sure which visa is right for you? Our specialists walk you through your options, check your eligibility, and help you avoid the mistakes that cause delays and rejections.</p>
+                <div class="msv__btn-group">
+                    <a href="https://dashboard.platinumlegalspain.com/nlv" class="msv__btn msv__btn--primary">Start Your Application</a>
+                    <a href="#visa-options" class="msv__btn msv__btn--outline-white">See All Options</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Bar -->
+    <div class="msv__trust-bar">
+        <div class="msv__container">
+            <div class="msv__trust-bar-inner">
+                <div class="msv__trust-item">NLV &middot; DNV &middot; Student Visa</div>
+                <div class="msv__trust-item">Renewals &amp; Status Changes</div>
+                <div class="msv__trust-item">Trusted by 1,000+ applicants</div>
+                <div class="msv__trust-item">Spain-licensed specialists</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Visa Path Cards -->
+    <section class="msv__section" id="visa-options">
+        <div class="msv__container">
+            <div class="msv__section-hd">
+                <h2>Choose Your Visa Path</h2>
+                <p>Select the option that matches your situation. Not sure which applies to you? Start with the Non-Lucrative Visa if you have passive income, or the Digital Nomad Visa if you work remotely.</p>
+            </div>
+
+            <div class="bc__path-grid">
+
+                <!-- NLV -->
+                <div class="bc__path-card bc__path-card--nlv">
+                    <span class="bc__path-badge">Retirees &amp; Passive Income</span>
+                    <h3>Non-Lucrative Visa</h3>
+                    <p>For those who can support themselves without working in Spain &mdash; retirees, passive investors, and those with regular savings or pension income.</p>
+                    <div class="bc__path-meta">
+                        <div class="bc__path-meta-row">
+                            <span class="bc__path-meta-label">Min. Income</span>
+                            <span class="bc__path-meta-value">~&euro;2,400/month</span>
+                        </div>
+                        <div class="bc__path-meta-row">
+                            <span class="bc__path-meta-label">Work Rights</span>
+                            <span class="bc__path-meta-value">No work allowed</span>
+                        </div>
+                        <div class="bc__path-meta-row">
+                            <span class="bc__path-meta-label">Duration</span>
+                            <span class="bc__path-meta-value">1 year, renewable</span>
+                        </div>
+                    </div>
+                    <a href="https://dashboard.platinumlegalspain.com/nlv" class="msv__btn msv__btn--primary">Start NLV Application</a>
+                </div>
+
+                <!-- DNV -->
+                <div class="bc__path-card bc__path-card--dnv bc__path-card--featured">
+                    <span class="bc__path-badge">Remote Workers &amp; Freelancers</span>
+                    <h3>Digital Nomad Visa</h3>
+                    <p>Spain&rsquo;s dedicated visa for remote workers employed by companies outside Spain. Includes access to the Beckham Law flat 24% tax rate and full work rights.</p>
+                    <div class="bc__path-meta">
+                        <div class="bc__path-meta-row">
+                            <span class="bc__path-meta-label">Min. Income</span>
+                            <span class="bc__path-meta-value">~&euro;2,646/month</span>
+                        </div>
+                        <div class="bc__path-meta-row">
+                            <span class="bc__path-meta-label">Work Rights</span>
+                            <span class="bc__path-meta-value">Remote work permitted</span>
+                        </div>
+                        <div class="bc__path-meta-row">
+                            <span class="bc__path-meta-label">Duration</span>
+                            <span class="bc__path-meta-value">3 years, renewable</span>
+                        </div>
+                    </div>
+                    <a href="https://dashboard.platinumlegalspain.com/dnv" class="msv__btn msv__btn--primary">Start DNV Application</a>
+                </div>
+
+                <!-- Student Visa -->
+                <div class="bc__path-card bc__path-card--student">
+                    <span class="bc__path-badge">Students &amp; Language Learners</span>
+                    <h3>Student Visa</h3>
+                    <p>For those enrolled in an accredited Spanish educational institution. Lower income requirements and a flexible path to long-term residency in Spain.</p>
+                    <div class="bc__path-meta">
+                        <div class="bc__path-meta-row">
+                            <span class="bc__path-meta-label">Min. Income</span>
+                            <span class="bc__path-meta-value">~&euro;600&ndash;800/month</span>
+                        </div>
+                        <div class="bc__path-meta-row">
+                            <span class="bc__path-meta-label">Work Rights</span>
+                            <span class="bc__path-meta-value">Up to 30 hrs/week</span>
+                        </div>
+                        <div class="bc__path-meta-row">
+                            <span class="bc__path-meta-label">Duration</span>
+                            <span class="bc__path-meta-value">1 year, renewable</span>
+                        </div>
+                    </div>
+                    <a href="https://dashboard.platinumlegalspain.com/student-visa" class="msv__btn msv__btn--primary">Start Student Application</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- What Happens When You Start -->
+    <section class="msv__section--cream">
+        <div class="msv__container--narrow">
+            <div class="msv__section-hd">
+                <h2>What Happens When You Start</h2>
+                <p>A clear, straightforward process from first enquiry to visa approval &mdash; without the confusion.</p>
+            </div>
+
+            <div class="msv__steps">
+                <div class="msv__step">
+                    <div class="msv__step-num">1</div>
+                    <div class="msv__step-body">
+                        <h3>Tell us about your situation</h3>
+                        <p>Start your application online. We ask you a few key questions &mdash; your nationality, income source, and what you&rsquo;re hoping to do in Spain. This takes around 5 minutes and lets our team prepare for your call.</p>
+                    </div>
+                </div>
+                <div class="msv__step">
+                    <div class="msv__step-num">2</div>
+                    <div class="msv__step-body">
+                        <h3>Speak to a visa specialist</h3>
+                        <p>A qualified specialist reviews your answers and speaks with you directly. They&rsquo;ll confirm which visa is right for you, what documents you&rsquo;ll need, and what the realistic timeline looks like for your application.</p>
+                    </div>
+                </div>
+                <div class="msv__step">
+                    <div class="msv__step-num">3</div>
+                    <div class="msv__step-body">
+                        <h3>We build your application</h3>
+                        <p>Once you&rsquo;re ready to proceed, we handle the paperwork. Document preparation, translations, form completion, and embassy submission guidance &mdash; everything done to the correct standard the first time.</p>
+                    </div>
+                </div>
+                <div class="msv__step">
+                    <div class="msv__step-num">4</div>
+                    <div class="msv__step-body">
+                        <h3>Arrive in Spain with confidence</h3>
+                        <p>After approval, we support your first steps in Spain &mdash; from registering your NIE and TIE to setting up your padr&oacute;n. We stay with you beyond the visa, not just to the approval letter.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Renewals Section -->
+    <section class="msv__section--dark">
+        <div class="msv__container">
+            <div class="msv__section-hd">
+                <h2>Already in Spain? We Handle Renewals Too</h2>
+                <p style="color: rgba(255,255,255,0.72); margin-top: 0.75rem;">Whether your visa is approaching renewal or you need to change status, our team manages the process so nothing slips through the cracks.</p>
+            </div>
+
+            <div class="bc__renewal-grid">
+                <div class="bc__renewal-card">
+                    <h3>NLV Renewal</h3>
+                    <p>Non-Lucrative Visa holders must renew annually for the first two years, then every two years. Miss the window and you may need to restart from scratch. We track deadlines and submit on your behalf.</p>
+                    <a href="https://dashboard.platinumlegalspain.com/nlv-renewal" class="msv__btn msv__btn--outline-white">Start NLV Renewal</a>
+                </div>
+                <div class="bc__renewal-card">
+                    <h3>DNV Renewal</h3>
+                    <p>The Digital Nomad Visa is valid for 3 years and can be renewed for a further 2. Documentation must show continued qualifying remote income. We prepare everything and guide you through the process.</p>
+                    <a href="https://dashboard.platinumlegalspain.com/dnv-renewal" class="msv__btn msv__btn--outline-white">Start DNV Renewal</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="msv__section">
+        <div class="msv__container--narrow">
+            <div class="msv__section-hd">
+                <h2>Common Questions</h2>
+                <p>Answers to the questions we hear most often before a first consultation.</p>
+            </div>
+
+            <div class="msv__faq-list">
+                <details>
+                    <summary>Is the initial consultation really free?</summary>
+                    <div class="msv__faq-answer">
+                        <p>Yes. Your first call with one of our visa specialists is completely free. There&rsquo;s no commitment required and no pressure to proceed. The call is there to help you understand your options and decide whether you want to take things further with us.</p>
+                    </div>
+                </details>
+
+                <details>
+                    <summary>How do I know which visa is right for me?</summary>
+                    <div class="msv__faq-answer">
+                        <p>The right visa depends on your income source, nationality, employment status, and what you plan to do in Spain. As a general guide: if you work remotely for a non-Spanish employer, the Digital Nomad Visa is usually best. If you have passive income or a pension, the Non-Lucrative Visa. If you&rsquo;re enrolling in a course or language school, the Student Visa. Your specialist will confirm the best route for your specific situation.</p>
+                    </div>
+                </details>
+
+                <details>
+                    <summary>What documents will I need?</summary>
+                    <div class="msv__faq-answer">
+                        <p>This varies by visa type, but core documents typically include a valid passport, proof of income (bank statements, payslips, or pension letters), private health insurance, and a clean criminal record certificate. Your specialist will give you a personalised document checklist after your call.</p>
+                    </div>
+                </details>
+
+                <details>
+                    <summary>Can you help if my previous visa application was rejected?</summary>
+                    <div class="msv__faq-answer">
+                        <p>Yes. Rejection doesn&rsquo;t mean the end of the road. Our team reviews the reasons for rejection, identifies what needs to be corrected, and rebuilds a stronger application. In many cases, applicants who were rejected without professional support go on to be approved once the right documents and approach are in place.</p>
+                    </div>
+                </details>
+
+                <details>
+                    <summary>Do you help with family applications?</summary>
+                    <div class="msv__faq-answer">
+                        <p>Yes. Most visa types allow spouses and dependent children to apply as accompanying family members on the same application. Your specialist will outline what&rsquo;s needed for family members and how the process works for dependants.</p>
+                    </div>
+                </details>
+
+                <details>
+                    <summary>How long does the visa process typically take?</summary>
+                    <div class="msv__faq-answer">
+                        <p>Processing times vary. The Digital Nomad Visa via the UGE route typically takes 20&ndash;45 days. The Non-Lucrative Visa is usually 30&ndash;90 days depending on the consulate in your home country. Student Visa processing is typically 30&ndash;60 days. Your specialist will give you a realistic timeline based on your nationality and consulate. We always factor in document preparation time before submission.</p>
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Band -->
+    <section class="msv__cta-band">
+        <div class="msv__container">
+            <h2>Ready to Start?</h2>
+            <p>Choose your visa path above and begin your application. Our specialists are ready to guide you through every step.</p>
+            <div class="msv__proof" style="justify-content: center; margin-bottom: 1.5rem;">
+                <span style="color: #facf39;">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                <span style="color: rgba(255,255,255,0.7); margin-left: 0.5rem;">Trusted by 1,000+ successful applicants</span>
+            </div>
+            <div class="msv__btn-group" style="justify-content: center;">
+                <a href="https://dashboard.platinumlegalspain.com/nlv" class="msv__btn msv__btn--primary">Non-Lucrative Visa</a>
+                <a href="https://dashboard.platinumlegalspain.com/dnv" class="msv__btn msv__btn--outline-white">Digital Nomad Visa</a>
+                <a href="https://dashboard.platinumlegalspain.com/student-visa" class="msv__btn msv__btn--outline-white">Student Visa</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Disclaimer -->
+    <div class="msv__disclaimer">
+        <div class="msv__container">
+            <p>My Spanish Visa provides immigration guidance and document preparation support. We are not a law firm and do not provide legal advice. Information on this page is accurate to the best of our knowledge but visa rules can change &mdash; always verify current requirements with the relevant consulate or a qualified immigration lawyer. For terms and privacy information, see our <a href="/privacy-policy/" style="color: var(--red);">Privacy Policy</a>.</p>
+        </div>
+    </div>
+
+    <!-- JSON-LD Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is the initial consultation really free?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Your first call with one of our visa specialists is completely free. There is no commitment required and no pressure to proceed."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I know which visa is right for me?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The right visa depends on your income source, nationality, employment status, and what you plan to do in Spain. Remote workers typically suit the Digital Nomad Visa, passive income earners the Non-Lucrative Visa, and students the Student Visa. Your specialist will confirm the best route."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can you help if my previous visa application was rejected?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Our team reviews the reasons for rejection, identifies what needs to be corrected, and rebuilds a stronger application."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does the visa process typically take?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Processing times vary. The Digital Nomad Visa via the UGE route typically takes 20-45 days. The Non-Lucrative Visa is usually 30-90 days depending on the consulate. Student Visa processing is typically 30-60 days."
+          }
+        }
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.myspanishvisa.com"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Book a Consultation",
+          "item": "https://www.myspanishvisa.com/book-consultation/"
+        }
+      ]
+    }
+    </script>
+
+</body>
+</html>

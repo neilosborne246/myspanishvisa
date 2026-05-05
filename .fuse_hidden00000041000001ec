@@ -1,0 +1,1119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- ═══════════════════════════════════════════════════════════════════
+       PAGE-SPECIFIC HEAD — replace block below per page:
+       <title>Blog Nlv Apostille Translation Guide | My Spanish Visa</title>
+       <meta name="description" content="…">
+       <meta property="og:title" content="…">
+       <meta property="og:description" content="…">
+       <meta property="og:url" content="https://www.myspanishvisa.com/…">
+       <meta property="og:image" content="…">
+       <link rel="canonical" href="https://www.myspanishvisa.com/…">
+       <script type="application/ld+json">…</script>
+       ═══════════════════════════════════════════════════════════════════ -->
+  <title>My Spanish Visa — Spain Visa &amp; Residency Specialists</title>
+  <meta name="description" content="My Spanish Visa helps English-speaking foreigners move to Spain. Expert guidance on Non-Lucrative Visa, Digital Nomad Visa, Student Visa, renewals and more.">
+
+  <!-- Shared Open Graph defaults -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="My Spanish Visa">
+  <meta property="og:image" content="https://www.myspanishvisa.com/assets/images/og/og-myspanishvisa-default.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@myspanishvisa">
+
+  <style>
+/* ═══════════════════════════════════════════════════════════════
+   GLOBAL SHELL — nav + footer only.
+   Page-specific CSS lives inside each fragment's own <style> block.
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── iOS overflow safety ── */
+html, body { max-width: 100%; overflow-x: clip; margin: 0; padding: 0; }
+*, *::before, *::after { box-sizing: border-box; }
+
+/* ── Brand tokens (root-level so all fragments inherit) ── */
+:root {
+  --navy:      #0c1930;
+  --navy-mid:  #1a3a5c;
+  --red:       #be0011;
+  --red-deep:  #8c000d;
+  --yellow:    #facf39;
+  --cream:     #f8f7f4;
+  --white:     #ffffff;
+  --black:     #1a1a1a;
+  --muted:     #5a6478;
+  --border:    #dce3ed;
+  --shadow-sm: 0 2px 8px rgba(12,25,48,0.08);
+  --shadow-md: 0 6px 24px rgba(12,25,48,0.13);
+}
+
+body {
+  font-family: 'Inter', 'Segoe UI', system-ui, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.75;
+  color: var(--black);
+  background: #fff;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   SITE NAV
+   ───────────────────────────────────────────────────────────── */
+.msv-nav {
+  position: sticky;
+  top: 0;
+  z-index: 9000;
+  background: var(--navy);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 2px 12px rgba(12,25,48,0.22);
+}
+.msv-nav__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+  gap: 1.5rem;
+}
+
+/* Logo */
+.msv-nav__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+.msv-nav__logo-flag {
+  font-size: 1.3rem;
+  line-height: 1;
+}
+.msv-nav__logo-text {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+.msv-nav__logo-text span {
+  color: var(--yellow);
+}
+
+/* Links */
+.msv-nav__links {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.msv-nav__links > li {
+  position: relative;
+}
+.msv-nav__links > li > a,
+.msv-nav__links > li > button {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.5rem 0.9rem;
+  font-size: 0.87rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.85);
+  text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: color 0.15s, background 0.15s;
+  white-space: nowrap;
+  height: 64px;
+}
+.msv-nav__links > li > a:hover,
+.msv-nav__links > li > button:hover,
+.msv-nav__links > li:focus-within > a,
+.msv-nav__links > li:focus-within > button {
+  color: #fff;
+  background: rgba(255,255,255,0.08);
+}
+.msv-nav__chevron {
+  font-size: 0.65rem;
+  opacity: 0.7;
+  transition: transform 0.2s;
+}
+.msv-nav__links > li:focus-within .msv-nav__chevron,
+.msv-nav__links > li:hover .msv-nav__chevron {
+  transform: rotate(180deg);
+}
+
+/* Dropdown */
+.msv-nav__dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 230px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  box-shadow: var(--shadow-md);
+  padding: 0.5rem 0;
+  z-index: 200;
+}
+.msv-nav__links > li:hover .msv-nav__dropdown,
+.msv-nav__links > li:focus-within .msv-nav__dropdown {
+  display: block;
+}
+.msv-nav__dropdown a {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.6rem 1.1rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--navy);
+  text-decoration: none;
+  transition: background 0.12s;
+}
+.msv-nav__dropdown a:hover {
+  background: var(--cream);
+  color: var(--red);
+}
+.msv-nav__dropdown-icon {
+  width: 24px;
+  height: 24px;
+  background: var(--cream);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+.msv-nav__dropdown-divider {
+  height: 1px;
+  background: var(--border);
+  margin: 0.4rem 0;
+}
+
+/* CTA button */
+.msv-nav__cta {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.55rem 1.2rem;
+  background: var(--red);
+  color: #fff !important;
+  font-size: 0.85rem;
+  font-weight: 700;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.15s, box-shadow 0.15s;
+  white-space: nowrap;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(190,0,17,0.3);
+}
+.msv-nav__cta:hover {
+  background: var(--red-deep);
+  box-shadow: 0 4px 14px rgba(190,0,17,0.4);
+  text-decoration: none;
+}
+
+/* Hamburger */
+.msv-nav__burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.4rem;
+  border-radius: 5px;
+}
+.msv-nav__burger span {
+  width: 22px;
+  height: 2px;
+  background: #fff;
+  border-radius: 2px;
+  transition: transform 0.2s, opacity 0.2s;
+  display: block;
+}
+
+/* Mobile nav */
+.msv-nav__mobile {
+  display: none;
+  flex-direction: column;
+  background: var(--navy-mid);
+  padding: 1rem 1.5rem 1.5rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+.msv-nav__mobile.open { display: flex; }
+.msv-nav__mobile a {
+  padding: 0.65rem 0;
+  color: rgba(255,255,255,0.9);
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+.msv-nav__mobile a:hover { color: var(--yellow); }
+.msv-nav__mobile .msv-nav__mobile-sub {
+  padding-left: 1rem;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: rgba(255,255,255,0.7);
+}
+.msv-nav__mobile-cta {
+  margin-top: 1rem;
+  background: var(--red);
+  color: #fff !important;
+  border-radius: 6px;
+  text-align: center;
+  padding: 0.75rem 1rem !important;
+  border-bottom: none !important;
+}
+
+@media (max-width: 900px) {
+  .msv-nav__links { display: none; }
+  .msv-nav__cta { display: none; }
+  .msv-nav__burger { display: flex; }
+}
+@media (max-width: 480px) {
+  .msv-nav__inner { padding: 0 1rem; }
+}
+
+/* ─────────────────────────────────────────────────────────────
+   SITE FOOTER
+   ───────────────────────────────────────────────────────────── */
+.msv-footer {
+  background: var(--navy);
+  color: rgba(255,255,255,0.75);
+  overflow-x: clip;
+}
+.msv-footer__top {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem 3rem;
+  display: grid;
+  grid-template-columns: 280px 1fr 1fr 1fr;
+  gap: 3rem;
+}
+@media (max-width: 900px) {
+  .msv-footer__top { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
+}
+@media (max-width: 560px) {
+  .msv-footer__top { grid-template-columns: 1fr; gap: 2rem; padding: 3rem 1.2rem 2rem; }
+}
+
+.msv-footer__brand {}
+.msv-footer__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  margin-bottom: 1rem;
+}
+.msv-footer__logo-flag { font-size: 1.3rem; }
+.msv-footer__logo-text {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -0.01em;
+}
+.msv-footer__logo-text span { color: var(--yellow); }
+.msv-footer__tagline {
+  font-size: 0.83rem;
+  color: rgba(255,255,255,0.55);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+.msv-footer__trust {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+.msv-footer__trust-item {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.65);
+}
+.msv-footer__trust-item::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  background: var(--yellow);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.msv-footer__col-title {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.4);
+  margin-bottom: 1rem;
+}
+.msv-footer__links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.msv-footer__links a {
+  font-size: 0.87rem;
+  color: rgba(255,255,255,0.68);
+  text-decoration: none;
+  transition: color 0.15s;
+  display: inline-block;
+}
+.msv-footer__links a:hover {
+  color: var(--yellow);
+  text-decoration: none;
+}
+
+.msv-footer__bottom {
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+.msv-footer__bottom-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 1rem;
+  justify-content: space-between;
+}
+.msv-footer__disclaimer {
+  font-size: 0.73rem;
+  color: rgba(255,255,255,0.35);
+  line-height: 1.65;
+  max-width: 720px;
+}
+.msv-footer__copyright {
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.35);
+  white-space: nowrap;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   MAIN CONTENT AREA
+   ───────────────────────────────────────────────────────────── */
+main {
+  /* Fragments are self-contained; this wrapper just provides flow context */
+  position: relative;
+}
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════
+     SITE NAVIGATION
+     ═══════════════════════════════════════════════════ -->
+<header class="msv-nav" role="banner">
+  <div class="msv-nav__inner">
+
+    <!-- Logo -->
+    <a href="/" class="msv-nav__logo" aria-label="My Spanish Visa — Home"><img src="/assets/images/msv-logo-white.png" alt="My Spanish Visa" height="80" style="display:block;"></a>
+
+    <!-- Desktop links -->
+    <nav aria-label="Main navigation">
+      <ul class="msv-nav__links">
+
+        <li>
+          <button class="msv-nav__dropdown-trigger" aria-haspopup="true" aria-expanded="false">
+            Visas <span class="msv-nav__chevron">▾</span>
+          </button>
+          <div class="msv-nav__dropdown" role="menu">
+            <a href="/non-lucrative-visa-spain/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🏖️</span>Non-Lucrative Visa
+            </a>
+            <a href="/digital-nomad-visa-spain/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">💻</span>Digital Nomad Visa
+            </a>
+            <a href="/student-visa-spain/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🎓</span>Student Visa
+            </a>
+            <div class="msv-nav__dropdown-divider"></div>
+            <a href="/spain-visa-renewal/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🔄</span>Visa Renewals
+            </a>
+            <a href="/best-visa-move-to-spain/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">⚖️</span>Compare All Visas
+            </a>
+          </div>
+        </li>
+
+        <li>
+          <button aria-haspopup="true" aria-expanded="false">
+            Resources <span class="msv-nav__chevron">▾</span>
+          </button>
+          <div class="msv-nav__dropdown" role="menu">
+            <a href="/blog/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">📝</span>Blog &amp; Guides
+            </a>
+            <a href="/spain-visa-checklist/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">✅</span>Document Checklists
+            </a>
+            <a href="/move-to-spain/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🏠</span>Move to Spain Guide
+            </a>
+            <a href="/visa-eligibility-quiz/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🧭</span>Eligibility Quiz
+            </a>
+          </div>
+        </li>
+
+        <li><a href="/about-us/">About Us</a></li>
+        <li><a href="/testimonials/">Reviews</a></li>
+        <li><a href="/contact-us.html">Contact</a></li>
+
+      </ul>
+    </nav>
+
+    <!-- Desktop CTA -->
+    <a href="https://dashboard.platinumlegalspain.com/nlv" class="msv-nav__cta">
+      Start My Application →
+    </a>
+
+    <!-- Hamburger (mobile) -->
+    <button class="msv-nav__burger" aria-label="Open menu" aria-expanded="false" onclick="
+      var m=document.querySelector('.msv-nav__mobile');
+      var open=m.classList.toggle('open');
+      this.setAttribute('aria-expanded', open);
+    ">
+      <span></span><span></span><span></span>
+    </button>
+
+  </div><!-- /.msv-nav__inner -->
+
+  <!-- Mobile menu -->
+  <nav class="msv-nav__mobile" aria-label="Mobile navigation">
+    <a href="/non-lucrative-visa-spain/" class="msv-nav__mobile-sub">Non-Lucrative Visa</a>
+    <a href="/digital-nomad-visa-spain/" class="msv-nav__mobile-sub">Digital Nomad Visa</a>
+    <a href="/student-visa-spain/" class="msv-nav__mobile-sub">Student Visa</a>
+    <a href="/spain-visa-renewal/">Visa Renewals</a>
+    <a href="/best-visa-move-to-spain/">Compare All Visas</a>
+    <a href="/blog/">Blog &amp; Guides</a>
+    <a href="/about-us/">About Us</a>
+    <a href="/testimonials/">Reviews</a>
+    <a href="/contact-us.html">Contact</a>
+    <a href="https://dashboard.platinumlegalspain.com/nlv" class="msv-nav__mobile-cta">Start My Application →</a>
+  </nav>
+
+</header>
+
+
+<!-- ═══════════════════════════════════════════════════
+     PAGE CONTENT (fragment injected here)
+     ═══════════════════════════════════════════════════ -->
+<main>
+<!-- FRAGMENT_START -->
+<!-- Apostille & Translation Guide for NLV - Comprehensive -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "headline": "Apostille & Translation Guide for Spain NLV 2026 | Step-by-Step",
+      "description": "Complete guide to apostilles and translations for NLV: what is apostille, Hague Convention, which documents need apostille, sworn translation requirements, traductor jurado, costs, timelines, and common mistakes.",
+      "datePublished": "2026-04-13",
+      "author": {
+        "@type": "Organization",
+        "name": "My Spanish Visa"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://myspanishvisa.com"},
+        {"@type": "ListItem", "position": 2, "name": "NLV Guide", "item": "https://myspanishvisa.com/non-lucrative-visa-spain/"},
+        {"@type": "ListItem", "position": 3, "name": "Apostille & Translation", "item": "https://myspanishvisa.com/blog-nlv-apostille-translation-guide/"}
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {"@type": "Question", "name": "What is an apostille and why do I need it?", "acceptedAnswer": {"@type": "Answer", "text": "An apostille is an official certification that authenticates a document's origin under the Hague Apostille Convention (1961). It certifies that the signature, seal, or stamp on a foreign document is genuine. Spain requires apostilles on ALL foreign official documents submitted to consulates because it proves the document is legitimate and came from an authorized issuing authority."}},
+        {"@type": "Question", "name": "Which documents need apostille for NLV application?", "acceptedAnswer": {"@type": "Answer", "text": "All government and court documents need apostille: birth certificate, marriage certificate, criminal record certificate, divorce decree, custody documents, and educational credentials if included. Bank statements from banks directly typically do NOT need apostille, nor do employment letters (though employment letters proving income may need apostille depending on who issued them)."}},
+        {"@type": "Question", "name": "What is a traductor jurado and how do I find one?", "acceptedAnswer": {"@type": "Answer", "text": "A traductor jurado is a certified translator officially sworn and regulated by the Spanish government. Their translations carry legal weight. Find one by searching 'traductor jurado' + your city online, contacting your local Colegio de Traductores (Professional Translators Association), or using online services. Many work remotely and accept documents via email. Costs range €30-80 per document."}},
+        {"@type": "Question", "name": "How long does apostille and translation take total?", "acceptedAnswer": {"@type": "Answer", "text": "Total timeline is 8-10 weeks minimum. Start gathering documents 8 weeks before submission, request apostilles 6-7 weeks before (takes 3-6 weeks), send to translator 4-5 weeks before (takes 3-10 business days), and have final documents 1-2 weeks before submission for review."}},
+        {"@type": "Question", "name": "What are common mistakes with apostilles and translations?", "acceptedAnswer": {"@type": "Answer", "text": "Top mistakes include using non-certified translators (machine translation or unverified humans—leads to rejection), forgetting apostilles entirely, submitting apostilles that don't match documents, using expired documents, including pages consulates don't recognize, and poor translation quality that creates misunderstandings or legal issues."}},
+        {"@type": "Question", "name": "Can I use Google Translate or am I required to use a professional translator?", "acceptedAnswer": {"@type": "Answer", "text": "You MUST use a certified human translator (traductor jurado). Machine translations like Google Translate will result in automatic rejection. Spanish consulates require certified translations to ensure accuracy, legal validity, and proper formatting. This is non-negotiable and is one of the most common reasons for application rejection."}}
+      ]
+    }
+  ]
+}
+</script>
+<!-- Open Graph / Social -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.myspanishvisa.com/blog/nlv-apostille-translation-guide/">
+<meta property="og:title" content="My Spanish Visa">
+<meta property="og:description" content="Expert Spain visa guidance for English-speaking expats.">
+<meta property="og:image" content="https://www.myspanishvisa.com/assets/images/og/og-nlv-spain.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="My Spanish Visa">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@myspanishvisa">
+<meta name="twitter:title" content="My Spanish Visa">
+<meta name="twitter:description" content="Expert Spain visa guidance for English-speaking expats.">
+<meta name="twitter:image" content="https://www.myspanishvisa.com/assets/images/og/og-nlv-spain.jpg">
+<style>
+/* ── iOS Safari pinch-zoom overflow safety ─────────────────────────── */
+/* Prevents horizontal overflow when users pinch-zoom on iPhone/iPad.   */
+/* Top-level (also paste into theme Custom CSS / Elementor Site Settings) */
+html, body { max-width: 100%; overflow-x: clip; }
+/* Scoped wrapper safety */
+.msv, .msv-nav, .msv-topbar, .msv-footer, .msv-footer-cta,
+.pls-header, .pls-body, .pls-nlv, .pls-dnv, .pls-student {
+  max-width: 100%;
+  overflow-x: clip;
+  position: relative;
+}
+/* Cap all media inside the wrapper */
+.msv img, .msv video, .msv iframe,
+.msv-footer img, .msv-footer video, .msv-footer iframe {
+  max-width: 100%;
+  height: auto;
+}
+/* Never use 100vw — use 100% instead (dev reminder) */
+
+
+.msv *, .msv *::before, .msv *::after { box-sizing: border-box; margin: 0; padding: 0; }
+.msv {
+  --navy: #0c1930; --navy-mid: #1a3a5c; --red: #be0011; --red-deep: #8c000d;
+  --yellow: #facf39; --cream: #f8f7f4; --white: #ffffff; --black: #1a1a1a;
+  --muted: #5a6478; --border: #dce3ed;
+  --shadow-sm: 0 2px 8px rgba(12,25,48,0.08); --shadow-md: 0 6px 24px rgba(12,25,48,0.13);
+  font-family: 'Inter', 'Segoe UI', system-ui, Arial, sans-serif;
+  font-size: 16px; line-height: 1.75; color: var(--black); width: 100%;
+}
+.msv__container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+.msv__container--narrow { max-width: 780px; margin: 0 auto; padding: 0 2rem; }
+@media (max-width: 640px) { .msv__container, .msv__container--narrow { padding: 0 1.2rem; } }
+.msv h1 { font-size: clamp(2rem, 4.5vw, 3rem); font-weight: 800; line-height: 1.12; color: var(--white); letter-spacing: -0.025em; margin-bottom: 1.2rem; }
+.msv h2 { font-size: clamp(1.3rem, 2.5vw, 1.75rem); font-weight: 700; color: var(--navy); letter-spacing: -0.01em; margin-bottom: 0.5rem; position: relative; display: inline-block; padding-bottom: 0.5rem; }
+.msv h2::after { content: ''; position: absolute; bottom: 0; left: 0; width: 44px; height: 3px; background: linear-gradient(90deg, var(--red), var(--red-deep)); border-radius: 2px; }
+.msv h3 { font-size: 1.05rem; font-weight: 700; color: var(--navy); margin-bottom: 0.4rem; }
+.msv p { color: var(--black); margin-bottom: 1rem; font-size: 0.97rem; }
+.msv a { color: var(--red); text-decoration: none; }
+.msv a:hover { text-decoration: underline; }
+.msv ul { list-style: none; padding: 0; margin: 0 0 1rem; }
+.msv ul li { padding: 0.35rem 0 0.35rem 1.4rem; position: relative; font-size: 0.95rem; color: var(--black); }
+.msv ul li::before { content: ''; position: absolute; left: 0; top: 0.75rem; width: 7px; height: 7px; background: linear-gradient(135deg, var(--red), var(--red-deep)); border-radius: 50%; }
+.msv__section { padding: 5rem 0; background: var(--white); }
+.msv__section--cream { padding: 5rem 0; background: linear-gradient(180deg, #f8f7f4 0%, #f2f4f8 100%); }
+.msv__section--dark { padding: 5rem 0; background: linear-gradient(135deg, var(--navy) 0%, #0d2240 55%, #0a1d38 100%); }
+.msv__section--dark h2 { color: var(--white) !important; }
+.msv__section--dark h2::after { background: linear-gradient(90deg, var(--yellow), #e8b820); }
+.msv__section--dark h3 { color: rgba(255,255,255,0.9) !important; }
+.msv .msv__section--dark p, .msv .msv__section--dark li { color: rgba(255,255,255,0.82); }
+.msv__section--dark ul li::before { background: linear-gradient(135deg, var(--yellow), #e8b820); }
+@media (max-width: 640px) { .msv__section, .msv__section--cream, .msv__section--dark { padding: 3.5rem 0; } }
+.msv__section-hd { margin-bottom: 3rem; }
+.msv__section-hd p { color: var(--muted); font-size: 1rem; margin-top: 0.75rem; line-height: 1.7; max-width: 600px; }
+@keyframes msv-fade-up { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes msv-shimmer { 0% { background-position: -400px 0; } 100% { background-position: 400px 0; } }
+.msv__shimmer { background: linear-gradient(90deg, var(--yellow) 0%, #e8b820 25%, var(--red) 50%, #e8b820 75%, var(--yellow) 100%); background-size: 400px 100%; -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; animation: msv-shimmer 3.5s linear infinite; display: inline; }
+.msv__hero { background: linear-gradient(135deg, #0c1930 0%, #0f2540 40%, #162d50 70%, #1a3560 100%); padding: 5.5rem 0 5rem; position: relative; overflow: hidden; }
+.msv__hero::before { content: ''; position: absolute; top: -30%; right: -5%; width: 700px; height: 700px; background: radial-gradient(circle, rgba(190,0,17,0.1) 0%, transparent 65%); pointer-events: none; }
+.msv__hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, rgba(250,207,57,0.4), transparent); }
+.msv__hero-inner { max-width: 780px; animation: msv-fade-up 0.7s ease-out both; }
+.msv__eyebrow { display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(190,0,17,0.15); border: 1px solid rgba(190,0,17,0.4); color: #ff6b7a; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.35rem 0.9rem; border-radius: 100px; margin-bottom: 1.5rem; }
+.msv__eyebrow::before { content: ''; width: 6px; height: 6px; background: var(--red); border-radius: 50%; box-shadow: 0 0 6px var(--red); }
+.msv__hero p { color: rgba(255,255,255,0.78) !important; font-size: clamp(1rem, 2.2vw, 1.15rem); max-width: 640px; margin-bottom: 2.2rem; line-height: 1.75; }
+.msv__trust-bar { background: var(--white); border-bottom: 1px solid var(--border); padding: 1rem 0; box-shadow: var(--shadow-sm); }
+.msv__trust-bar-inner { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.75rem; }
+.msv__trust-item { display: flex; align-items: center; gap: 0.5rem; font-size: 0.82rem; font-weight: 600; color: var(--navy); white-space: nowrap; }
+.msv__trust-item::before { content: ''; width: 7px; height: 7px; background: linear-gradient(135deg, var(--red), var(--red-deep)); border-radius: 50%; flex-shrink: 0; }
+.msv__alert { border-radius: 10px; padding: 1.3rem 1.5rem; display: flex; gap: 1rem; align-items: flex-start; margin-bottom: 2rem; }
+.msv__alert--warn { background: #fffbea; border: 1px solid #f0d060; }
+.msv__alert--info { background: #eef4ff; border: 1px solid #a0bfff; }
+.msv__alert--red { background: #fef2f2; border: 1px solid #fca5a5; }
+.msv__alert--green { background: #f0fdf4; border: 1px solid #86efac; }
+.msv__alert-icon { font-size: 1.4rem; flex-shrink: 0; margin-top: 0.1rem; }
+.msv__alert p { font-size: 0.9rem; color: var(--black); margin: 0; line-height: 1.65; }
+.msv__alert strong { color: var(--navy); }
+.msv__comparison-table { width: 100%; border-collapse: collapse; font-size: 0.88rem; margin: 2rem 0; }
+.msv__comparison-table thead tr { background: var(--navy); }
+.msv__comparison-table th { padding: 1rem 1.25rem; text-align: left; color: var(--white); font-weight: 700; }
+.msv__comparison-table td { padding: 0.85rem 1.25rem; border-bottom: 1px solid var(--border); color: var(--black); }
+.msv__comparison-table tbody tr:nth-child(even) { background: #f9fafb; }
+.msv__faq-list { display: flex; flex-direction: column; gap: 0; border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+.msv__faq-list details { border-bottom: 1px solid var(--border); background: var(--white); }
+.msv__faq-list details:last-child { border-bottom: none; }
+.msv__faq-list summary { padding: 1.2rem 1.5rem; font-size: 0.97rem; font-weight: 700; color: var(--navy); cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+.msv__faq-list summary::-webkit-details-marker { display: none; }
+.msv__faq-list summary::after { content: '+'; font-size: 1.3rem; font-weight: 400; color: var(--red); flex-shrink: 0; transition: transform 0.2s; }
+.msv__faq-list details[open] summary::after { transform: rotate(45deg); }
+.msv__faq-list details[open] summary { color: var(--red); }
+.msv__faq-answer { padding: 0 1.5rem 1.3rem; font-size: 0.92rem; color: var(--muted); line-height: 1.75; }
+.msv__faq-answer p { color: var(--muted); font-size: 0.92rem; margin-bottom: 0.75rem; }
+.msv__faq-answer p:last-child { margin-bottom: 0; }
+.msv__cta-band { background: linear-gradient(135deg, var(--navy) 0%, #0d2240 60%, #0a1d38 100%); padding: 5rem 0; text-align: center; }
+.msv__cta-band h2 { color: var(--white) !important; display: block; }
+.msv__cta-band h2::after { left: 50%; transform: translateX(-50%); background: linear-gradient(90deg, var(--yellow), #e8b820); }
+.msv__cta-band p { color: rgba(255,255,255,0.75) !important; max-width: 560px; margin: 1rem auto 2.2rem; font-size: 1rem; }
+.msv__cta-band .msv__btn-group { justify-content: center; }
+.msv__btn-group { display: flex; flex-wrap: wrap; gap: 0.85rem; }
+.msv__btn { display: inline-block; padding: 0.85rem 2rem; font-size: 0.92rem; font-weight: 700; border-radius: 6px; text-decoration: none !important; transition: transform 0.15s, box-shadow 0.15s; }
+.msv__btn:hover { transform: translateY(-1px); text-decoration: none !important; }
+.msv .msv__btn--primary { background: linear-gradient(135deg, var(--red) 0%, var(--red-deep) 100%); color: #ffffff !important; box-shadow: 0 4px 16px rgba(190,0,17,0.38); }
+.msv .msv__btn--primary:hover { box-shadow: 0 6px 22px rgba(190,0,17,0.48); color: #ffffff !important; }
+.msv .msv__btn--outline-white { background: transparent; color: #ffffff !important; border: 1.5px solid rgba(255,255,255,0.5); }
+.msv .msv__btn--outline-white:hover { background: rgba(255,255,255,0.1); color: #ffffff !important; }
+.msv__disclaimer { background: var(--cream); border-top: 1px solid var(--border); padding: 2rem 0; }
+.msv__disclaimer p { font-size: 0.78rem; color: var(--muted); margin: 0; line-height: 1.65; }
+.msv__related { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; }
+@media (max-width: 860px) { .msv__related { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 420px) { .msv__related { grid-template-columns: 1fr; } }
+.msv__related-card { background: var(--white); border: 1px solid var(--border); border-radius: 10px; padding: 1.3rem 1.25rem; text-decoration: none !important; transition: box-shadow 0.2s, transform 0.2s; display: block; }
+.msv__related-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); text-decoration: none !important; }
+.msv__related-icon { font-size: 1.5rem; display: block; margin-bottom: 0.6rem; }
+.msv__related-title { font-size: 0.88rem; font-weight: 700; color: var(--navy); display: block; margin-bottom: 0.3rem; }
+.msv__related-desc { font-size: 0.8rem; color: var(--muted); line-height: 1.55; }
+</style>
+<div class="msv">
+  <section class="msv__hero">
+    <div class="msv__container--narrow">
+      <div class="msv__eyebrow">BLOG · NLV GUIDE</div>
+      <h1>Apostille & Translation: <span class="msv__shimmer">Complete NLV Guide</span></h1>
+      <p>Master apostilles and Spanish translations: understand the Hague Convention, which documents need certification, how to work with certified translators (traductor jurado), realistic costs and timelines, and critical mistakes that delay or derail applications.</p>
+      <p style="font-size: 0.88rem; color: rgba(255,255,255,0.65); margin-bottom: 0;">12 min read · Expert verified · April 2026</p>
+    </div>
+  </section>
+
+  <div class="msv__trust-bar">
+    <div class="msv__trust-bar-inner">
+      <div class="msv__trust-item">Consulate verified information</div>
+      <div class="msv__trust-item">Updated April 2026</div>
+      <div class="msv__trust-item">Expert reviewed</div>
+    </div>
+  </div>
+
+  <section class="msv__section">
+    <div class="msv__container--narrow">
+      <div class="msv__section-hd">
+        <h2>What is an Apostille and Why Spain Requires It</h2>
+        <p>An apostille is an official governmental authentication certificate that verifies a document's origin and the legitimacy of its signatures, seals, and stamps. It's not a new translation or notarization—it's a separate certification added to the original document (or a certified copy) by the government authority that issued it or by an authorized certifying body.</p>
+      </div>
+
+      <p>Spain is a signatory of the Hague Apostille Convention of 1961, which established a simplified authentication system for documents used internationally. Under this convention, Spanish consulates recognize apostilles as the standard proof of document authenticity. Without an apostille, any foreign government or court document submitted to a Spanish consulate will be rejected outright.</p>
+
+      <h3>The Hague Convention Explained</h3>
+      <p>The Hague Apostille Convention eliminated the complex "chain of certification" process that existed before. Previously, countries required documents to be authenticated through multiple levels of government officials. The Convention simplified this to a single, standardized apostille certificate that all signatories recognize. This means an apostille from the UK, USA, Canada, or Australia is equally valid for Spanish consulate submissions.</p>
+
+      <p>Spain recognizes apostilles because both countries are Convention members. This mutual recognition streamlines international document verification and is why the apostille is your golden ticket for NLV applications.</p>
+
+      <h2>Which NLV Documents Must Have Apostille</h2>
+
+      <h3>Documents That ALWAYS Need Apostille</h3>
+      <ul>
+        <li><strong>Birth Certificate:</strong> Government vital records document—always apostilled</li>
+        <li><strong>Marriage Certificate:</strong> Court or vital records document—required if applying as couple</li>
+        <li><strong>Criminal Record Certificate:</strong> Issued by police or justice ministry—always apostilled</li>
+        <li><strong>Divorce Decree:</strong> Court document—required if previously married</li>
+        <li><strong>Custody Documents:</strong> Court orders—required if children included</li>
+        <li><strong>Educational Credentials:</strong> University diplomas or degrees—required if submitting as proof of anything</li>
+        <li><strong>Medical Certificates:</strong> Government health department (if issued officially)</li>
+        <li><strong>Power of Attorney Documents:</strong> If signed before notary and submitted to consulate</li>
+      </ul>
+
+      <h3>Documents That Do NOT Typically Need Apostille</h3>
+      <ul>
+        <li><strong>Bank Statements:</strong> Come directly from private banks (already verified)</li>
+        <li><strong>Investment Account Statements:</strong> From brokers and private financial institutions</li>
+        <li><strong>Payslips/Employment Records:</strong> From private employers (though employment letters from companies sometimes do)</li>
+        <li><strong>Rental Contracts:</strong> Private documents between tenants and landlords</li>
+        <li><strong>Utility Bills and Insurance Statements:</strong> Commercial documents</li>
+      </ul>
+
+      <div class="msv__alert msv__alert--info">
+        <div class="msv__alert-icon">ℹ️</div>
+        <div>
+          <p><strong>Golden Rule:</strong> If it's an official government document (issued by courts, police, vital records, or government ministries), it needs an apostille. If it's from a private company or bank, it typically doesn't. When in doubt, contact your specific Spanish consulate before spending money on unnecessary apostilles.</p>
+        </div>
+      </div>
+
+      <h2>Step-by-Step Process: Getting Your Apostille</h2>
+
+      <h3>Step 1: Identify the Issuing Authority</h3>
+      <p>Determine which government body originally issued your document. For birth certificates, it's the vital records office. For criminal records, it's the police department or justice ministry. For degrees, it's your university's registrar. Contact that authority directly to request a certified copy with apostille.</p>
+
+      <h3>Step 2: Request the Apostille</h3>
+      <p>Contact the issuing authority and specifically request "an apostille" or "apostille certificate" (they'll know what you mean). Some authorities have request forms online; others require phone calls or in-person visits. Be clear you need it for "international legal use" or "Spanish consulate submission"—this speeds the process.</p>
+
+      <h3>Step 3: Provide Payment</h3>
+      <p>Apostille fees are typically modest: USD $10-25 or EUR €10-20 per document, depending on the jurisdiction. Some authorities accept credit cards or checks; others require cash or money orders. Some allow payment by mail; others only in person.</p>
+
+      <h3>Step 4: Receive Your Apostille</h3>
+      <p>The issuing authority will attach an apostille certificate (usually a separate sheet) or stamp the apostille directly onto the document. You'll receive the complete package by mail. This is your official authenticated document, ready for Spanish consulate submission.</p>
+
+      <h2>Apostille Timeline by Country</h2>
+
+      <p><strong>Be prepared for delays.</strong> Apostille processing varies significantly by country and issuing authority:</p>
+
+      <h3>United Kingdom (FCDO - Foreign, Commonwealth & Development Office)</h3>
+      <p>The UK Foreign Office handles apostilles. Processing typically takes 3-4 weeks, though during peak times (spring/summer) it can extend to 6 weeks. You can apply by post or through the apostille application service. UK documents are generally reliable and well-recognized by Spanish consulates.</p>
+
+      <h3>United States (State Department)</h3>
+      <p>US apostille processing varies dramatically by state. Secretary of State offices in states like California, Texas, and New York handle high volumes and may take 4-8 weeks. Smaller states process faster (2-3 weeks). The US State Department Vital Records office (for federal documents) also takes 3-4 weeks. Plan ahead—this is consistently one of the longest delays.</p>
+
+      <h3>Canada (DFAT and GAC)</h3>
+      <p>Canadian apostilles are handled by Global Affairs Canada (GAC) for federal documents and by provincial authorities for provincial records. Federal documents take 2-3 weeks; provincial documents vary (1-4 weeks depending on province). Quebec processes slower than other provinces. Start early if requesting Canadian documents.</p>
+
+      <h3>Australia (DFAT)</h3>
+      <p>The Australian Department of Foreign Affairs and Trade handles apostilles. Processing takes 2-3 weeks for straightforward requests. Australian authorities are generally efficient, though international mail can add another week. Birth/marriage certificates from state registrars take 1-2 weeks.</p>
+
+      <h3>Other Countries</h3>
+      <p>EU countries typically process apostilles in 1-3 weeks. Spain itself processes domestic apostilles very quickly (same day to 2 days). Countries outside the Convention may take significantly longer or may not participate at all.</p>
+
+      <div class="msv__alert msv__alert--warn">
+        <div class="msv__alert-icon">⚠️</div>
+        <div>
+          <p><strong>Start apostille requests EARLY.</strong> Don't wait until you're ready to submit your NLV application. Request apostilles at least 8-10 weeks before your planned submission. International mail delays alone can add 1-2 weeks to processing times.</p>
+        </div>
+      </div>
+
+      <h2>Spanish Translations: The Traductor Jurado Requirement</h2>
+
+      <p>Every document you submit to a Spanish consulate must be translated into Spanish. But not any translation will do—it must be a <strong>sworn translation by a certified translator officially registered with the Spanish government (traductor jurado)</strong>.</p>
+
+      <h3>Why Certified Translation is Non-Negotiable</h3>
+
+      <p>Machine translations (Google Translate, ChatGPT, etc.) are unreliable and will result in automatic rejection. Translations by friends, family members, or unverified people online carry no legal weight. Spanish consulates require certified translators because:</p>
+
+      <ul>
+        <li><strong>Legal Accuracy:</strong> Certified translators understand legal terminology and ensure precision</li>
+        <li><strong>Accountability:</strong> Traductores jurados are registered, insured, and subject to professional standards</li>
+        <li><strong>Official Verification:</strong> Their seal and signature make the translation legally binding</li>
+        <li><strong>Consistency:</strong> Professional translators follow standardized formats that consulates recognize</li>
+      </ul>
+
+      <p>One poorly translated word or phrase can cause your entire application to be rejected or delayed for clarification. It's not worth risking.</p>
+
+      <h3>How to Find a Traductor Jurado</h3>
+
+      <p><strong>Online Search:</strong> Search "traductor jurado [your city]" or "traductor jurado [your language] a español." Many work remotely and accept documents via email, eliminating the need to be in Spain.</p>
+
+      <p><strong>Professional Association:</strong> Contact your local Colegio Profesional de Traductores (Professional Translators Association). They maintain directories of certified translators organized by language pair. Most cities have associations; you can find them online.</p>
+
+      <p><strong>Consulate Recommendation:</strong> Some Spanish consulates provide lists of approved local translators. Your consulate may have a preference or list, so ask when you start the application process.</p>
+
+      <p><strong>Translator Networks:</strong> Online platforms connect you with certified translators worldwide. Services like ProZ.com or TranslatorsCafe.com list verified traductores jurados. Verify their credentials before hiring.</p>
+
+      <h3>Cost and Timeline for Translation</h3>
+
+      <p><strong>Costs per document:</strong> €30-150 depending on document length and translator. A 2-page birth certificate might cost €40-60. A 10-page employment contract could cost €100-150. Get a quote before committing.</p>
+
+      <p><strong>Timeline:</strong> Most certified translators complete documents within 3-10 business days. Rush services (2-3 day turnaround) may cost extra (€20-50 premium). Submit documents with clear instructions and realistic timelines.</p>
+
+      <h3>What You'll Receive from the Translator</h3>
+
+      <p>The translator returns your original document with a certified Spanish translation attached (or on the back). Both the original and translation are stamped and signed by the translator, with their professional seal and registration number visible. This complete package (original + certified translation + translator's seal) becomes your official submission document.</p>
+
+      <p>The translator may also provide a brief cover sheet stating the translation's accuracy and their professional credentials. This is normal and helpful for consulate verification.</p>
+
+      <h2>Complete Timeline: From Documents to Ready Submission</h2>
+
+      <div class="msv__comparison-table">
+        <thead>
+          <tr>
+            <th>Timeline</th>
+            <th>Action</th>
+            <th>Duration</th>
+            <th>Key Details</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>8 weeks before</td>
+            <td>Start gathering originals</td>
+            <td>1-2 weeks</td>
+            <td>Request documents from government agencies, universities, employers</td>
+          </tr>
+          <tr>
+            <td>6-7 weeks before</td>
+            <td>Request apostilles</td>
+            <td>3-6 weeks</td>
+            <td>Contact issuing authorities; allow for international mail delays</td>
+          </tr>
+          <tr>
+            <td>4-5 weeks before</td>
+            <td>Receive apostilles, verify</td>
+            <td>1 week</td>
+            <td>Confirm all documents arrived and apostilles are properly attached</td>
+          </tr>
+          <tr>
+            <td>3-4 weeks before</td>
+            <td>Send to translator</td>
+            <td>3-10 business days</td>
+            <td>Use certified traductor jurado; include deadline and clear instructions</td>
+          </tr>
+          <tr>
+            <td>2 weeks before</td>
+            <td>Receive translations</td>
+            <td>1-2 days</td>
+            <td>Review for accuracy; verify translator's seal and signature</td>
+          </tr>
+          <tr>
+            <td>1 week before</td>
+            <td>Final review & organize</td>
+            <td>2-3 days</td>
+            <td>Verify all documents are complete, in order, no missing pages</td>
+          </tr>
+          <tr>
+            <td>Submission day</td>
+            <td>Submit to consulate</td>
+            <td>—</td>
+            <td>All apostilles and certified translations ready</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p><strong>Total elapsed time: 8-10 weeks minimum from start to finish.</strong> This is why starting early is absolutely critical to avoiding application delays.</p>
+
+      <h2>Critical Mistakes That Cause Rejection or Delays</h2>
+
+      <h3>Using Non-Certified Translators</h3>
+      <p>Machine translations or unverified translators result in automatic rejection. Consulates check translator credentials carefully. Only certified traductores jurados are acceptable.</p>
+
+      <h3>Forgetting Apostilles Entirely</h3>
+      <p>Submitting documents without apostilles (even if translated) will result in rejection. The apostille is not optional.</p>
+
+      <h3>Apostille Doesn't Match Document</h3>
+      <p>The apostille must be for the exact document you're submitting. An apostille for a different version or copy won't work. Consulates verify this carefully.</p>
+
+      <h3>Expired Apostilles</h3>
+      <p>Apostilles don't technically "expire," but documents themselves may. A criminal record from 10 years ago might not be accepted; consulates typically want recent records (within 1-2 years). Confirm document freshness before apostille request.</p>
+
+      <h3>Poor Translation Quality</h3>
+      <p>Mistranslations create legal confusion. If your birth certificate has a spelling variation (surname spelled differently), the translator must handle this accurately. Consulates will request clarification for poorly translated documents, delaying your application.</p>
+
+      <h3>Missing or Illegible Translator Credentials</h3>
+      <p>The translator's seal, signature, registration number, and professional credentials must be clearly visible on the translation. If these are missing or illegible, consulates may request a new translation.</p>
+
+      <h3>Incomplete Documents</h3>
+      <p>Submitting only page 1 of a 3-page document means pages 2-3 won't be apostilled or translated. You must submit the entire document.</p>
+
+      <h3>Wrong Language Combination</h3>
+      <p>Translate into Spanish (español), not Catalan, Basque, or another language. Spanish is the official consulate language.</p>
+
+      <div class="msv__alert msv__alert--red">
+        <div class="msv__alert-icon">🚫</div>
+        <div>
+          <p><strong>Never use Google Translate:</strong> This is the #1 mistake that results in rejection. Machine translations lack legal validity and often contain errors that consulates catch immediately. Always use a certified human translator. No exceptions.</p>
+        </div>
+      </div>
+
+      <h2>Strategic Timing for Your NLV Application</h2>
+
+      <p>Plan your document preparation timeline strategically:</p>
+
+      <p><strong>Start at Week -10:</strong> Request original documents and apostilles simultaneously. Don't wait for one to finish before starting the other.</p>
+
+      <p><strong>At Week -6:</strong> All apostilles should be in-transit or received. If not, follow up with issuing authorities.</p>
+
+      <p><strong>At Week -4:</strong> Begin translator searches and quotes. Select translator and send documents.</p>
+
+      <p><strong>At Week -2:</strong> Final translations received and verified. Organize all documents in consulate-required order.</p>
+
+      <p><strong>At Week 0:</strong> Submit to consulate with confidence.</p>
+
+      <p>This timeline assumes no major delays. Build in buffer time for unforeseen issues (lost mail, translator illness, consulate email queue delays, etc.).</p>
+    </div>
+  </section>
+
+  <section class="msv__section--cream">
+    <div class="msv__container--narrow">
+      <div class="msv__section-hd">
+        <h2>Frequently Asked Questions</h2>
+        <p>Clear answers to common apostille and translation questions that trip up applicants.</p>
+      </div>
+
+      <div class="msv__faq-list">
+        <details>
+          <summary>What is an apostille and why do I need it?</summary>
+          <div class="msv__faq-answer">
+            <p>An apostille is an official certification that authenticates a document's origin under the Hague Apostille Convention (1961). It certifies that the signature, seal, or stamp on a foreign document is genuine. Spain requires apostilles on ALL foreign official documents submitted to consulates because it proves the document is legitimate and came from an authorized issuing authority. Without an apostille, your documents won't be accepted.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Which documents need apostille for NLV application?</summary>
+          <div class="msv__faq-answer">
+            <p>All government and court documents need apostille: birth certificate, marriage certificate, criminal record certificate, divorce decree, custody documents, and educational credentials if included. Bank statements from banks directly typically do NOT need apostille, nor do employment letters from companies (though government employment letters sometimes do). Rule of thumb: if it's from a government office, court, or official institution, it needs apostille.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>What is a traductor jurado and how do I find one?</summary>
+          <div class="msv__faq-answer">
+            <p>A traductor jurado is a certified translator officially sworn and regulated by the Spanish government. Their translations carry legal weight. Find one by searching "traductor jurado" + your city online, contacting your local Colegio de Traductores (Professional Translators Association), or using online translator networks like ProZ.com. Many work remotely and accept documents via email. Costs range €30-150 per document depending on length. Always verify their credentials before hiring.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>How long does apostille and translation take total?</summary>
+          <div class="msv__faq-answer">
+            <p>Total timeline is 8-10 weeks minimum. Start gathering documents 8 weeks before submission, request apostilles 6-7 weeks before (takes 3-6 weeks depending on country), send to translator 4-5 weeks before (takes 3-10 business days), and have final documents 1-2 weeks before submission for review. The longest delays typically come from US state apostille offices (4-8 weeks) and international mail. Plan ahead or risk delays in your entire NLV application.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>What are common mistakes with apostilles and translations?</summary>
+          <div class="msv__faq-answer">
+            <p>Top mistakes include: using non-certified translators or machine translation (results in automatic rejection), forgetting apostilles entirely, submitting apostilles that don't match documents, using expired documents, including incomplete pages that weren't apostilled, poor translation quality that creates misunderstandings, missing or illegible translator credentials, and wrong language (translating to Catalan instead of Spanish). Each of these causes rejection or significant delays.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Can I use Google Translate or am I required to use a professional translator?</summary>
+          <div class="msv__faq-answer">
+            <p>You MUST use a certified human translator (traductor jurado). Machine translations like Google Translate will result in automatic rejection. Spanish consulates require certified translations to ensure legal accuracy, official validity, and proper formatting. This is non-negotiable and is one of the most common reasons for application rejection. Professional translation is a critical investment in your application success.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="msv__cta-band">
+    <div class="msv__container--narrow">
+      <h2>Ready to Prepare Your NLV Documents?</h2>
+      <p>Apostilles and translations are critical to application success. Start your document preparation now to avoid delays.</p>
+      <div class="msv__btn-group">
+        <a href="/nlv-documents/" class="msv__btn msv__btn--primary">Get Full Document Checklist</a>
+        <a href="/nlv-application-process/" class="msv__btn msv__btn--outline-white">View Application Steps</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="msv__section">
+    <div class="msv__container--narrow">
+      <div class="msv__section-hd">
+        <h2>Related Documentation & NLV Guides</h2>
+        <p>Complete your NLV knowledge with these essential guides and checklists.</p>
+      </div>
+      <div class="msv__related">
+        <a href="/non-lucrative-visa-spain/" class="msv__related-card">
+          <div class="msv__related-icon">📋</div>
+          <span class="msv__related-title">NLV Complete Guide</span>
+          <span class="msv__related-desc">Full Non-Lucrative Visa overview and requirements</span>
+        </a>
+        <a href="/nlv-documents/" class="msv__related-card">
+          <div class="msv__related-icon">📄</div>
+          <span class="msv__related-title">Document Checklist</span>
+          <span class="msv__related-desc">Complete list of all required NLV documents</span>
+        </a>
+        <a href="/nlv-application-process/" class="msv__related-card">
+          <div class="msv__related-icon">🔄</div>
+          <span class="msv__related-title">Application Process</span>
+          <span class="msv__related-desc">Step-by-step NLV application guide</span>
+        </a>
+        <a href="/nlv-criminal-record-check/" class="msv__related-card">
+          <div class="msv__related-icon">✓</div>
+          <span class="msv__related-title">Criminal Records</span>
+          <span class="msv__related-desc">Getting apostilled criminal record certificates</span>
+        </a>
+      </div>
+    </div>
+  </section>
+  </section>
+</div>
+<!-- FRAGMENT_END -->
+</main>
+
+
+<!-- ═══════════════════════════════════════════════════
+     SITE FOOTER
+     ═══════════════════════════════════════════════════ -->
+<footer class="msv-footer" role="contentinfo">
+
+  <div class="msv-footer__top">
+
+    <!-- Brand column -->
+    <div class="msv-footer__brand">
+      <a href="/" class="msv-footer__logo" aria-label="My Spanish Visa"><img src="/assets/images/msv-logo-white.png" alt="My Spanish Visa" height="40" style="display:block;"></a>
+      <p class="msv-footer__tagline">
+        Specialist Spain visa &amp; residency guidance for English-speaking foreigners.
+        A service of Platinum Legal Spain.
+      </p>
+      <div class="msv-footer__trust">
+        <span class="msv-footer__trust-item">All English. No barriers.</span>
+        <span class="msv-footer__trust-item">Solicitors &amp; immigration specialists</span>
+        <span class="msv-footer__trust-item">100% online process</span>
+      </div>
+    </div>
+
+    <!-- Visas column -->
+    <div>
+      <div class="msv-footer__col-title">Visas</div>
+      <ul class="msv-footer__links">
+        <li><a href="/non-lucrative-visa-spain/">Non-Lucrative Visa</a></li>
+        <li><a href="/digital-nomad-visa-spain/">Digital Nomad Visa</a></li>
+        <li><a href="/student-visa-spain/">Student Visa</a></li>
+        <li><a href="/spain-visa-renewal/">Visa Renewals</a></li>
+        <li><a href="/best-visa-move-to-spain/">Compare All Visas</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/nlv">Apply: NLV</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/dnv">Apply: DNV</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/student-visa">Apply: Student Visa</a></li>
+      </ul>
+    </div>
+
+    <!-- Resources column -->
+    <div>
+      <div class="msv-footer__col-title">Resources</div>
+      <ul class="msv-footer__links">
+        <li><a href="/blog/">Blog &amp; Guides</a></li>
+        <li><a href="/move-to-spain/">Move to Spain Guide</a></li>
+        <li><a href="/visa-eligibility-quiz/">Eligibility Quiz</a></li>
+        <li><a href="/spain-visa-checklist/">Document Checklists</a></li>
+        <li><a href="/spain-visa-requirements/">Visa Requirements</a></li>
+        <li><a href="/spain-nie-number/">NIE Number Guide</a></li>
+        <li><a href="/spain-tie-card/">TIE Card Guide</a></li>
+      </ul>
+    </div>
+
+    <!-- Company column -->
+    <div>
+      <div class="msv-footer__col-title">Company</div>
+      <ul class="msv-footer__links">
+        <li><a href="/about-us/">About Us</a></li>
+        <li><a href="/testimonials/">Client Reviews</a></li>
+        <li><a href="/why-choose-us/">Why Choose Us</a></li>
+        <li><a href="/contact-us.html">Contact</a></li>
+        <li><a href="https://www.platinumlegalspain.com" rel="noopener">Platinum Legal Spain</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/nlv">Client Portal</a></li>
+      </ul>
+    </div>
+
+  </div><!-- /.msv-footer__top -->
+
+  <div class="msv-footer__bottom">
+    <div class="msv-footer__bottom-inner">
+      <p class="msv-footer__disclaimer">
+        <strong style="color:rgba(255,255,255,0.5);">Disclaimer:</strong>
+        My Spanish Visa provides visa processing support and is not a law firm. Content on this site is for informational purposes only and does not constitute legal advice. Immigration rules change frequently — always verify requirements with official sources or a qualified specialist. My Spanish Visa is a trading name of Platinum Legal Spain.
+      </p>
+      <span class="msv-footer__copyright">© 2026 My Spanish Visa. All rights reserved.</span>
+    </div>
+  </div>
+
+</footer>
+
+</body>
+</html>

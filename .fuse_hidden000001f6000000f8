@@ -1,0 +1,1687 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- ═══════════════════════════════════════════════════════════════════
+       PAGE-SPECIFIC HEAD — replace block below per page:
+       <title>Retire To Spain From Canada | My Spanish Visa</title>
+       <meta name="description" content="…">
+       <meta property="og:title" content="…">
+       <meta property="og:description" content="…">
+       <meta property="og:url" content="https://www.myspanishvisa.com/…">
+       <meta property="og:image" content="…">
+       <link rel="canonical" href="https://www.myspanishvisa.com/…">
+       <script type="application/ld+json">…</script>
+       ═══════════════════════════════════════════════════════════════════ -->
+  <title>My Spanish Visa — Spain Visa &amp; Residency Specialists</title>
+  <meta name="description" content="My Spanish Visa helps English-speaking foreigners move to Spain. Expert guidance on Non-Lucrative Visa, Digital Nomad Visa, Student Visa, renewals and more.">
+
+  <!-- Shared Open Graph defaults -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="My Spanish Visa">
+  <meta property="og:image" content="https://www.myspanishvisa.com/assets/images/og/og-myspanishvisa-default.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@myspanishvisa">
+
+  <style>
+/* ═══════════════════════════════════════════════════════════════
+   GLOBAL SHELL — nav + footer only.
+   Page-specific CSS lives inside each fragment's own <style> block.
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── iOS overflow safety ── */
+html, body { max-width: 100%; overflow-x: clip; margin: 0; padding: 0; }
+*, *::before, *::after { box-sizing: border-box; }
+
+/* ── Brand tokens (root-level so all fragments inherit) ── */
+:root {
+  --navy:      #0c1930;
+  --navy-mid:  #1a3a5c;
+  --red:       #be0011;
+  --red-deep:  #8c000d;
+  --yellow:    #facf39;
+  --cream:     #f8f7f4;
+  --white:     #ffffff;
+  --black:     #1a1a1a;
+  --muted:     #5a6478;
+  --border:    #dce3ed;
+  --shadow-sm: 0 2px 8px rgba(12,25,48,0.08);
+  --shadow-md: 0 6px 24px rgba(12,25,48,0.13);
+}
+
+body {
+  font-family: 'Inter', 'Segoe UI', system-ui, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.75;
+  color: var(--black);
+  background: #fff;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   SITE NAV
+   ───────────────────────────────────────────────────────────── */
+.msv-nav {
+  position: sticky;
+  top: 0;
+  z-index: 9000;
+  background: var(--navy);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 2px 12px rgba(12,25,48,0.22);
+}
+.msv-nav__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+  gap: 1.5rem;
+}
+
+/* Logo */
+.msv-nav__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+.msv-nav__logo-flag {
+  font-size: 1.3rem;
+  line-height: 1;
+}
+.msv-nav__logo-text {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+.msv-nav__logo-text span {
+  color: var(--yellow);
+}
+
+/* Links */
+.msv-nav__links {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.msv-nav__links > li {
+  position: relative;
+}
+.msv-nav__links > li > a,
+.msv-nav__links > li > button {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.5rem 0.9rem;
+  font-size: 0.87rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.85);
+  text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: color 0.15s, background 0.15s;
+  white-space: nowrap;
+  height: 64px;
+}
+.msv-nav__links > li > a:hover,
+.msv-nav__links > li > button:hover,
+.msv-nav__links > li:focus-within > a,
+.msv-nav__links > li:focus-within > button {
+  color: #fff;
+  background: rgba(255,255,255,0.08);
+}
+.msv-nav__chevron {
+  font-size: 0.65rem;
+  opacity: 0.7;
+  transition: transform 0.2s;
+}
+.msv-nav__links > li:focus-within .msv-nav__chevron,
+.msv-nav__links > li:hover .msv-nav__chevron {
+  transform: rotate(180deg);
+}
+
+/* Dropdown */
+.msv-nav__dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 230px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  box-shadow: var(--shadow-md);
+  padding: 0.5rem 0;
+  z-index: 200;
+}
+.msv-nav__links > li:hover .msv-nav__dropdown,
+.msv-nav__links > li:focus-within .msv-nav__dropdown {
+  display: block;
+}
+.msv-nav__dropdown a {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.6rem 1.1rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--navy);
+  text-decoration: none;
+  transition: background 0.12s;
+}
+.msv-nav__dropdown a:hover {
+  background: var(--cream);
+  color: var(--red);
+}
+.msv-nav__dropdown-icon {
+  width: 24px;
+  height: 24px;
+  background: var(--cream);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+.msv-nav__dropdown-divider {
+  height: 1px;
+  background: var(--border);
+  margin: 0.4rem 0;
+}
+
+/* CTA button */
+.msv-nav__cta {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.55rem 1.2rem;
+  background: var(--red);
+  color: #fff !important;
+  font-size: 0.85rem;
+  font-weight: 700;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.15s, box-shadow 0.15s;
+  white-space: nowrap;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(190,0,17,0.3);
+}
+.msv-nav__cta:hover {
+  background: var(--red-deep);
+  box-shadow: 0 4px 14px rgba(190,0,17,0.4);
+  text-decoration: none;
+}
+
+/* Hamburger */
+.msv-nav__burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.4rem;
+  border-radius: 5px;
+}
+.msv-nav__burger span {
+  width: 22px;
+  height: 2px;
+  background: #fff;
+  border-radius: 2px;
+  transition: transform 0.2s, opacity 0.2s;
+  display: block;
+}
+
+/* Mobile nav */
+.msv-nav__mobile {
+  display: none;
+  flex-direction: column;
+  background: var(--navy-mid);
+  padding: 1rem 1.5rem 1.5rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+.msv-nav__mobile.open { display: flex; }
+.msv-nav__mobile a {
+  padding: 0.65rem 0;
+  color: rgba(255,255,255,0.9);
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+.msv-nav__mobile a:hover { color: var(--yellow); }
+.msv-nav__mobile .msv-nav__mobile-sub {
+  padding-left: 1rem;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: rgba(255,255,255,0.7);
+}
+.msv-nav__mobile-cta {
+  margin-top: 1rem;
+  background: var(--red);
+  color: #fff !important;
+  border-radius: 6px;
+  text-align: center;
+  padding: 0.75rem 1rem !important;
+  border-bottom: none !important;
+}
+
+@media (max-width: 900px) {
+  .msv-nav__links { display: none; }
+  .msv-nav__cta { display: none; }
+  .msv-nav__burger { display: flex; }
+}
+@media (max-width: 480px) {
+  .msv-nav__inner { padding: 0 1rem; }
+}
+
+/* ─────────────────────────────────────────────────────────────
+   SITE FOOTER
+   ───────────────────────────────────────────────────────────── */
+.msv-footer {
+  background: var(--navy);
+  color: rgba(255,255,255,0.75);
+  overflow-x: clip;
+}
+.msv-footer__top {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem 3rem;
+  display: grid;
+  grid-template-columns: 280px 1fr 1fr 1fr;
+  gap: 3rem;
+}
+@media (max-width: 900px) {
+  .msv-footer__top { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
+}
+@media (max-width: 560px) {
+  .msv-footer__top { grid-template-columns: 1fr; gap: 2rem; padding: 3rem 1.2rem 2rem; }
+}
+
+.msv-footer__brand {}
+.msv-footer__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  margin-bottom: 1rem;
+}
+.msv-footer__logo-flag { font-size: 1.3rem; }
+.msv-footer__logo-text {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -0.01em;
+}
+.msv-footer__logo-text span { color: var(--yellow); }
+.msv-footer__tagline {
+  font-size: 0.83rem;
+  color: rgba(255,255,255,0.55);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+.msv-footer__trust {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+.msv-footer__trust-item {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.65);
+}
+.msv-footer__trust-item::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  background: var(--yellow);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.msv-footer__col-title {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.4);
+  margin-bottom: 1rem;
+}
+.msv-footer__links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.msv-footer__links a {
+  font-size: 0.87rem;
+  color: rgba(255,255,255,0.68);
+  text-decoration: none;
+  transition: color 0.15s;
+  display: inline-block;
+}
+.msv-footer__links a:hover {
+  color: var(--yellow);
+  text-decoration: none;
+}
+
+.msv-footer__bottom {
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+.msv-footer__bottom-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 1rem;
+  justify-content: space-between;
+}
+.msv-footer__disclaimer {
+  font-size: 0.73rem;
+  color: rgba(255,255,255,0.35);
+  line-height: 1.65;
+  max-width: 720px;
+}
+.msv-footer__copyright {
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.35);
+  white-space: nowrap;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   MAIN CONTENT AREA
+   ───────────────────────────────────────────────────────────── */
+main {
+  /* Fragments are self-contained; this wrapper just provides flow context */
+  position: relative;
+}
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════
+     SITE NAVIGATION
+     ═══════════════════════════════════════════════════ -->
+<header class="msv-nav" role="banner">
+  <div class="msv-nav__inner">
+
+    <!-- Logo -->
+    <a href="/" class="msv-nav__logo" aria-label="My Spanish Visa — Home"><img src="/assets/images/msv-logo-white.png" alt="My Spanish Visa" height="40" style="display:block;"></a>
+
+    <!-- Desktop links -->
+    <nav aria-label="Main navigation">
+      <ul class="msv-nav__links">
+
+        <li>
+          <button class="msv-nav__dropdown-trigger" aria-haspopup="true" aria-expanded="false">
+            Visas <span class="msv-nav__chevron">▾</span>
+          </button>
+          <div class="msv-nav__dropdown" role="menu">
+            <a href="/non-lucrative-visa-spain/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🏖️</span>Non-Lucrative Visa
+            </a>
+            <a href="/digital-nomad-visa-spain/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">💻</span>Digital Nomad Visa
+            </a>
+            <a href="/student-visa-spain/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🎓</span>Student Visa
+            </a>
+            <div class="msv-nav__dropdown-divider"></div>
+            <a href="/spain-visa-renewal/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🔄</span>Visa Renewals
+            </a>
+            <a href="/best-visa-move-to-spain/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">⚖️</span>Compare All Visas
+            </a>
+          </div>
+        </li>
+
+        <li>
+          <button aria-haspopup="true" aria-expanded="false">
+            Resources <span class="msv-nav__chevron">▾</span>
+          </button>
+          <div class="msv-nav__dropdown" role="menu">
+            <a href="/blog/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">📝</span>Blog &amp; Guides
+            </a>
+            <a href="/spain-visa-checklist/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">✅</span>Document Checklists
+            </a>
+            <a href="/move-to-spain/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🏠</span>Move to Spain Guide
+            </a>
+            <a href="/visa-eligibility-quiz/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🧭</span>Eligibility Quiz
+            </a>
+          </div>
+        </li>
+
+        <li><a href="/about-us/">About Us</a></li>
+        <li><a href="/testimonials/">Reviews</a></li>
+        <li><a href="/contact-us.html">Contact</a></li>
+
+      </ul>
+    </nav>
+
+    <!-- Desktop CTA -->
+    <a href="https://dashboard.platinumlegalspain.com/nlv" class="msv-nav__cta">
+      Start My Application →
+    </a>
+
+    <!-- Hamburger (mobile) -->
+    <button class="msv-nav__burger" aria-label="Open menu" aria-expanded="false" onclick="
+      var m=document.querySelector('.msv-nav__mobile');
+      var open=m.classList.toggle('open');
+      this.setAttribute('aria-expanded', open);
+    ">
+      <span></span><span></span><span></span>
+    </button>
+
+  </div><!-- /.msv-nav__inner -->
+
+  <!-- Mobile menu -->
+  <nav class="msv-nav__mobile" aria-label="Mobile navigation">
+    <a href="/non-lucrative-visa-spain/" class="msv-nav__mobile-sub">Non-Lucrative Visa</a>
+    <a href="/digital-nomad-visa-spain/" class="msv-nav__mobile-sub">Digital Nomad Visa</a>
+    <a href="/student-visa-spain/" class="msv-nav__mobile-sub">Student Visa</a>
+    <a href="/spain-visa-renewal/">Visa Renewals</a>
+    <a href="/best-visa-move-to-spain/">Compare All Visas</a>
+    <a href="/blog/">Blog &amp; Guides</a>
+    <a href="/about-us/">About Us</a>
+    <a href="/testimonials/">Reviews</a>
+    <a href="/contact-us.html">Contact</a>
+    <a href="https://dashboard.platinumlegalspain.com/nlv" class="msv-nav__mobile-cta">Start My Application →</a>
+  </nav>
+
+</header>
+
+
+<!-- ═══════════════════════════════════════════════════
+     PAGE CONTENT (fragment injected here)
+     ═══════════════════════════════════════════════════ -->
+<main>
+<!-- FRAGMENT_START -->
+<!-- Retire to Spain from Canada: Complete Guide for Canadian Retirees -->
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.myspanishvisa.com/retire-to-spain-from-canada/",
+      "url": "https://www.myspanishvisa.com/retire-to-spain-from-canada/",
+      "name": "Retire to Spain from Canada 2026 | Complete Guide for Canadians | My Spanish Visa",
+      "description": "Everything Canadian retirees need to know about retiring to Spain — visa options, financial requirements, healthcare, pensions, taxes, cost of living, and the best places to retire.",
+      "isPartOf": {
+        "@id": "https://www.myspanishvisa.com/#website"
+      },
+      "inLanguage": "en-US",
+      "mainEntity": {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What visa do Canadian retirees need to retire to Spain?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The Non-Lucrative Visa (NLV) is the primary visa route for Canadian retirees. It allows you to live in Spain indefinitely without working, provided you meet the financial requirements (approximately €2,400/month or ~CAD 3,600/month). You can also explore the Digital Nomad Visa if you have passive income or freelance work, though the NLV is typically the best fit for retirees."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How much does it cost to retire in Spain as a Canadian?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The Canadian government estimates costs between CAD 1,800–3,500/month depending on location and lifestyle. Financial requirements for the NLV visa are €2,400/month (~CAD 3,600/month) or a lump sum of approximately CAD 42,000+ in savings. Actual living costs in cities like Valencia or Málaga are often lower than major Canadian cities, especially when housing costs are considered."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I receive my Canadian pension while living in Spain?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Canada Pension Plan (CPP) and Old Age Security (OAS) payments can be received while living abroad. However, you must: continue filing taxes with the CRA as a Canadian resident, be aware of the Canada-Spain tax treaty to avoid double taxation, and ensure you report all foreign income. Your provincial health coverage (OHIP, MSP, etc.) will stop, so you'll need private health insurance in Spain."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What documents do Canadian retirees need for the Spanish visa application?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Key documents include: a valid Canadian passport, RCMP criminal record check (apostilled), Canadian birth certificate (apostilled), proof of funds from Canadian banks, employment records or pension statements, and medical certificate. Canada joined the Hague Apostille Convention in January 2024, making document authentication simpler for Canadian retirees."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Will I need health insurance in Spain as a retiree?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Private health insurance is required during the first few years of residency. Once registered on the padron (local registry) and established as a Spanish resident after approximately 3 months, you may be eligible for Spain's public healthcare system. Your Canadian provincial health coverage will not apply abroad, so insurance is essential."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How long does the visa application process take for Canadians?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The Non-Lucrative Visa typically takes 4–6 weeks after submitting a complete application to the Spanish consulate in Canada. Processing times vary by consulate (Toronto, Vancouver, Montreal). It's advisable to start 2–3 months before your intended move to allow time for document preparation, apostille certification, and any unforeseen delays."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the 183-day rule for Spanish tax residency?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "If you spend more than 183 days in Spain within a calendar year, you're considered a Spanish tax resident. This affects your tax obligations in both Spain and Canada. The Canada-Spain tax treaty helps prevent double taxation, but you'll typically report income to Spanish tax authorities (Hacienda) and may still need to file with the CRA. Consult a tax professional for your specific situation."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I convert my Canadian driver's license to a Spanish one?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Canada and Spain have a reciprocal agreement, allowing Canadian drivers to exchange their provincial license for a Spanish driving permit (carnet de conducir) without taking a new test. You'll need your Canadian license, NIE (Spanish ID number), proof of residency, and a medical certificate. The process takes 2–4 weeks."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What happens to my RRSP and TFSA when I move to Spain?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Your RRSP and TFSA remain valid. RRSPs can still grow tax-deferred, but withdrawals are taxed in Canada and potentially in Spain under the tax treaty. TFSAs are not recognized by Spain, so growth and distributions may be taxed. You should consult a cross-border accountant to optimize your withdrawal strategy and ensure CRA compliance."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Which areas of Spain are best for Canadian retirees?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Popular regions include the Costa del Sol (warm, English-speaking communities), Valencia (modern, excellent cost of living), Alicante (beaches, affordable), Barcelona (cultural, vibrant), Málaga (year-round sunshine, relaxed lifestyle), and the Canary Islands (subtropical climate, unique culture). Each region offers different benefits depending on your lifestyle priorities, but all have lower costs and excellent healthcare compared to major Canadian cities."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.myspanishvisa.com/retire-to-spain-from-canada/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.myspanishvisa.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Retire to Spain from Canada",
+          "item": "https://www.myspanishvisa.com/retire-to-spain-from-canada/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<!-- Open Graph / Social -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.myspanishvisa.com/retire-to-spain-from-canada/">
+<meta property="og:title" content="My Spanish Visa">
+<meta property="og:description" content="Expert Spain visa guidance for English-speaking expats.">
+<meta property="og:image" content="https://www.myspanishvisa.com/assets/images/og/og-retire-spain.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="My Spanish Visa">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@myspanishvisa">
+<meta name="twitter:title" content="My Spanish Visa">
+<meta name="twitter:description" content="Expert Spain visa guidance for English-speaking expats.">
+<meta name="twitter:image" content="https://www.myspanishvisa.com/assets/images/og/og-retire-spain.jpg">
+
+<style>
+/* ── iOS Safari pinch-zoom overflow safety ─────────────────────────── */
+/* Prevents horizontal overflow when users pinch-zoom on iPhone/iPad.   */
+/* Top-level (also paste into theme Custom CSS / Elementor Site Settings) */
+html, body { max-width: 100%; overflow-x: clip; }
+/* Scoped wrapper safety */
+.msv, .msv-nav, .msv-topbar, .msv-footer, .msv-footer-cta,
+.pls-header, .pls-body, .pls-nlv, .pls-dnv, .pls-student {
+  max-width: 100%;
+  overflow-x: clip;
+  position: relative;
+}
+/* Cap all media inside the wrapper */
+.msv img, .msv video, .msv iframe,
+.msv-footer img, .msv-footer video, .msv-footer iframe {
+  max-width: 100%;
+  height: auto;
+}
+/* Never use 100vw — use 100% instead (dev reminder) */
+
+
+.msv *, .msv *::before, .msv *::after { box-sizing: border-box; margin: 0; padding: 0; }
+.msv {
+  --navy: #0c1930; --navy-mid: #1a3a5c; --red: #be0011; --red-deep: #8c000d;
+  --yellow: #facf39; --cream: #f8f7f4; --white: #ffffff; --black: #1a1a1a;
+  --muted: #5a6478; --border: #dce3ed;
+  --shadow-sm: 0 2px 8px rgba(12,25,48,0.08); --shadow-md: 0 6px 24px rgba(12,25,48,0.13);
+  font-family: 'Inter', 'Segoe UI', system-ui, Arial, sans-serif;
+  font-size: 16px; line-height: 1.75; color: var(--black); width: 100%;
+}
+.msv__container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+.msv__container--narrow { max-width: 780px; margin: 0 auto; padding: 0 2rem; }
+@media (max-width: 640px) { .msv__container, .msv__container--narrow { padding: 0 1.2rem; } }
+.msv h1 { font-size: clamp(2rem, 4.5vw, 3rem); font-weight: 800; line-height: 1.12; color: var(--white); letter-spacing: -0.025em; margin-bottom: 1.2rem; }
+.msv h2 { font-size: clamp(1.3rem, 2.5vw, 1.75rem); font-weight: 700; color: var(--navy); letter-spacing: -0.01em; margin-bottom: 0.5rem; position: relative; display: inline-block; padding-bottom: 0.5rem; }
+.msv h2::after { content: ''; position: absolute; bottom: 0; left: 0; width: 44px; height: 3px; background: linear-gradient(90deg, var(--red), var(--red-deep)); border-radius: 2px; }
+.msv h3 { font-size: 1.05rem; font-weight: 700; color: var(--navy); margin-bottom: 0.4rem; }
+.msv p { color: var(--black); margin-bottom: 1rem; font-size: 0.97rem; }
+.msv a { color: var(--red); text-decoration: none; }
+.msv a:hover { text-decoration: underline; }
+.msv ul { list-style: none; padding: 0; margin: 0 0 1rem; }
+.msv ul li { padding: 0.35rem 0 0.35rem 1.4rem; position: relative; font-size: 0.95rem; color: var(--black); }
+.msv ul li::before { content: ''; position: absolute; left: 0; top: 0.75rem; width: 7px; height: 7px; background: linear-gradient(135deg, var(--red), var(--red-deep)); border-radius: 50%; }
+.msv__section { padding: 5rem 0; background: var(--white); }
+.msv__section--cream { padding: 5rem 0; background: linear-gradient(180deg, #f8f7f4 0%, #f2f4f8 100%); }
+.msv__section--dark { padding: 5rem 0; background: linear-gradient(135deg, var(--navy) 0%, #0d2240 55%, #0a1d38 100%); }
+.msv__section--dark h2 { color: var(--white) !important; }
+.msv__section--dark h2::after { background: linear-gradient(90deg, var(--yellow), #e8b820); }
+.msv__section--dark h3 { color: rgba(255,255,255,0.9) !important; }
+.msv .msv__section--dark p, .msv .msv__section--dark li { color: rgba(255,255,255,0.82); }
+.msv__section--dark ul li::before { background: linear-gradient(135deg, var(--yellow), #e8b820); }
+@media (max-width: 640px) { .msv__section, .msv__section--cream, .msv__section--dark { padding: 3.5rem 0; } }
+.msv__section-hd { margin-bottom: 3rem; }
+.msv__section-hd p { color: var(--muted); font-size: 1rem; margin-top: 0.75rem; line-height: 1.7; max-width: 600px; }
+@keyframes msv-fade-up { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes msv-shimmer { 0% { background-position: -400px 0; } 100% { background-position: 400px 0; } }
+.msv__shimmer { background: linear-gradient(90deg, var(--yellow) 0%, #e8b820 25%, var(--red) 50%, #e8b820 75%, var(--yellow) 100%); background-size: 400px 100%; -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; animation: msv-shimmer 3.5s linear infinite; display: inline; }
+.msv__hero { background: linear-gradient(135deg, #0c1930 0%, #0f2540 40%, #162d50 70%, #1a3560 100%); padding: 5.5rem 0 5rem; position: relative; overflow: hidden; }
+.msv__hero::before { content: ''; position: absolute; top: -30%; right: -5%; width: 700px; height: 700px; background: radial-gradient(circle, rgba(190,0,17,0.1) 0%, transparent 65%); pointer-events: none; }
+.msv__hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, rgba(250,207,57,0.4), transparent); }
+.msv__hero-inner { max-width: 780px; animation: msv-fade-up 0.7s ease-out both; }
+.msv__eyebrow { display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(190,0,17,0.15); border: 1px solid rgba(190,0,17,0.4); color: #ff6b7a; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.35rem 0.9rem; border-radius: 100px; margin-bottom: 1.5rem; }
+.msv__eyebrow::before { content: ''; width: 6px; height: 6px; background: var(--red); border-radius: 50%; box-shadow: 0 0 6px var(--red); }
+.msv__hero p { color: rgba(255,255,255,0.78) !important; font-size: clamp(1rem, 2.2vw, 1.15rem); max-width: 640px; margin-bottom: 2.2rem; line-height: 1.75; }
+.msv__trust-bar { background: var(--white); border-bottom: 1px solid var(--border); padding: 1rem 0; box-shadow: var(--shadow-sm); }
+.msv__trust-bar-inner { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.75rem; }
+.msv__trust-item { display: flex; align-items: center; gap: 0.5rem; font-size: 0.82rem; font-weight: 600; color: var(--navy); white-space: nowrap; }
+.msv__trust-item::before { content: ''; width: 7px; height: 7px; background: linear-gradient(135deg, var(--red), var(--red-deep)); border-radius: 50%; flex-shrink: 0; }
+.msv__facts { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; margin-bottom: 3rem; }
+@media (max-width: 760px) { .msv__facts { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 420px) { .msv__facts { grid-template-columns: 1fr; } }
+.msv__fact { background: var(--white); padding: 1.5rem 1.3rem; text-align: center; }
+.msv__fact-icon { font-size: 1.5rem; display: block; margin-bottom: 0.5rem; }
+.msv__fact-label { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); display: block; margin-bottom: 0.25rem; }
+.msv__fact-value { font-size: 0.97rem; font-weight: 700; color: var(--navy); line-height: 1.35; display: block; }
+.msv__alert { border-radius: 10px; padding: 1.3rem 1.5rem; display: flex; gap: 1rem; align-items: flex-start; margin-bottom: 2rem; }
+.msv__alert--warn { background: #fffbea; border: 1px solid #f0d060; }
+.msv__alert--info { background: #eef4ff; border: 1px solid #a0bfff; }
+.msv__alert--red { background: #fef2f2; border: 1px solid #fca5a5; }
+.msv__alert--green { background: #f0fdf4; border: 1px solid #86efac; }
+.msv__alert-icon { font-size: 1.4rem; flex-shrink: 0; margin-top: 0.1rem; }
+.msv__alert p { font-size: 0.9rem; color: var(--black); margin: 0; line-height: 1.65; }
+.msv__alert strong { color: var(--navy); }
+.msv__persona-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-bottom: 3rem; }
+@media (max-width: 860px) { .msv__persona-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 420px) { .msv__persona-grid { grid-template-columns: 1fr; } }
+.msv__persona-card { background: var(--white); border: 1px solid var(--border); border-radius: 12px; padding: 2rem 1.5rem; text-align: center; transition: box-shadow 0.2s, transform 0.2s; }
+.msv__persona-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+.msv__persona-icon { font-size: 2.5rem; margin-bottom: 0.8rem; }
+.msv__persona-title { font-size: 1.1rem; font-weight: 700; color: var(--navy); margin-bottom: 0.5rem; }
+.msv__persona-desc { font-size: 0.9rem; color: var(--muted); line-height: 1.65; margin-bottom: 1.2rem; }
+.msv__persona-cta { display: inline-block; color: var(--red); font-size: 0.88rem; font-weight: 700; }
+.msv__guide-index { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; margin-bottom: 3rem; }
+@media (max-width: 860px) { .msv__guide-index { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 420px) { .msv__guide-index { grid-template-columns: 1fr; } }
+.msv__guide-card { background: var(--white); border: 1.5px solid var(--border); border-radius: 10px; padding: 1.5rem 1.3rem; text-decoration: none !important; transition: all 0.25s ease; display: flex; flex-direction: column; }
+.msv__guide-card:hover { box-shadow: var(--shadow-md); transform: translateY(-3px); border-color: var(--red); }
+.msv__guide-card-icon { font-size: 2rem; margin-bottom: 0.8rem; display: block; }
+.msv__guide-card-title { font-size: 0.95rem; font-weight: 700; color: var(--navy); margin-bottom: 0.5rem; }
+.msv__guide-card-desc { font-size: 0.82rem; color: var(--muted); line-height: 1.5; margin-bottom: 1rem; flex-grow: 1; }
+.msv__guide-card-link { color: var(--red); font-size: 0.85rem; font-weight: 700; }
+.msv__comparison-table { width: 100%; border-collapse: collapse; font-size: 0.88rem; margin: 2rem 0; }
+.msv__comparison-table thead tr { background: var(--navy); }
+.msv__comparison-table th { padding: 1rem 1.25rem; text-align: left; color: var(--white); font-weight: 700; }
+.msv__comparison-table td { padding: 0.85rem 1.25rem; border-bottom: 1px solid var(--border); color: var(--black); }
+.msv__comparison-table tbody tr:nth-child(even) { background: #f9fafb; }
+.msv__comparison-table .table-feature { font-weight: 600; color: var(--navy); }
+.msv__income-boxes { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; margin-bottom: 2rem; }
+@media (max-width: 860px) { .msv__income-boxes { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 420px) { .msv__income-boxes { grid-template-columns: 1fr; } }
+.msv__income-box { background: #f9fafb; border: 1px solid var(--border); border-radius: 10px; padding: 1.3rem; text-align: center; }
+.msv__income-box-label { font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); margin-bottom: 0.5rem; }
+.msv__income-box-value { font-size: 1.5rem; font-weight: 800; color: var(--red); }
+.msv__income-box-detail { font-size: 0.75rem; color: var(--muted); margin-top: 0.4rem; font-weight: 500; }
+.msv__process-steps { display: grid; grid-template-columns: repeat(6, 1fr); gap: 0.8rem; margin-bottom: 2rem; }
+@media (max-width: 760px) { .msv__process-steps { grid-template-columns: repeat(3, 1fr); gap: 1rem; } }
+@media (max-width: 420px) { .msv__process-steps { grid-template-columns: 1fr 1fr; } }
+.msv__process-step { background: var(--white); border: 1.5px solid var(--border); border-radius: 10px; padding: 1.3rem 1rem; text-align: center; }
+.msv__process-step-num { font-size: 1.3rem; font-weight: 800; color: var(--red); margin-bottom: 0.4rem; }
+.msv__process-step-title { font-size: 0.85rem; font-weight: 700; color: var(--navy); line-height: 1.4; }
+.msv__two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: center; }
+@media (max-width: 860px) { .msv__two-col { grid-template-columns: 1fr; } }
+.msv__two-col-card { background: var(--white); border: 1px solid var(--border); border-radius: 12px; padding: 2rem; }
+.msv__two-col-icon { font-size: 2.5rem; margin-bottom: 1rem; }
+.msv__related { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; }
+@media (max-width: 860px) { .msv__related { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 420px) { .msv__related { grid-template-columns: 1fr; } }
+.msv__related-card { background: var(--white); border: 1px solid var(--border); border-radius: 10px; padding: 1.3rem 1.25rem; text-decoration: none !important; transition: box-shadow 0.2s, transform 0.2s; display: block; }
+.msv__related-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); text-decoration: none !important; }
+.msv__related-icon { font-size: 1.5rem; display: block; margin-bottom: 0.6rem; }
+.msv__related-title { font-size: 0.88rem; font-weight: 700; color: var(--navy); display: block; margin-bottom: 0.3rem; }
+.msv__related-desc { font-size: 0.8rem; color: var(--muted); line-height: 1.55; }
+.msv__faq-list { display: flex; flex-direction: column; gap: 0; border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+.msv__faq-list details { border-bottom: 1px solid var(--border); background: var(--white); }
+.msv__faq-list details:last-child { border-bottom: none; }
+.msv__faq-list summary { padding: 1.2rem 1.5rem; font-size: 0.97rem; font-weight: 700; color: var(--navy); cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+.msv__faq-list summary::-webkit-details-marker { display: none; }
+.msv__faq-list summary::after { content: '+'; font-size: 1.3rem; font-weight: 400; color: var(--red); flex-shrink: 0; transition: transform 0.2s; }
+.msv__faq-list details[open] summary::after { transform: rotate(45deg); }
+.msv__faq-list details[open] summary { color: var(--red); }
+.msv__faq-answer { padding: 0 1.5rem 1.3rem; font-size: 0.92rem; color: var(--muted); line-height: 1.75; }
+.msv__faq-answer p { color: var(--muted); font-size: 0.92rem; margin-bottom: 0.75rem; }
+.msv__faq-answer p:last-child { margin-bottom: 0; }
+.msv__cta-band { background: linear-gradient(135deg, var(--navy) 0%, #0d2240 60%, #0a1d38 100%); padding: 5rem 0; text-align: center; }
+.msv__cta-band h2 { color: var(--white) !important; display: block; }
+.msv__cta-band h2::after { left: 50%; transform: translateX(-50%); background: linear-gradient(90deg, var(--yellow), #e8b820); }
+.msv__cta-band p { color: rgba(255,255,255,0.75) !important; max-width: 560px; margin: 1rem auto 2.2rem; font-size: 1rem; }
+.msv__cta-band .msv__btn-group { justify-content: center; }
+.msv__btn-group { display: flex; flex-wrap: wrap; gap: 0.85rem; }
+.msv__btn { display: inline-block; padding: 0.85rem 2rem; font-size: 0.92rem; font-weight: 700; border-radius: 6px; text-decoration: none !important; transition: transform 0.15s, box-shadow 0.15s; }
+.msv__btn:hover { transform: translateY(-1px); text-decoration: none !important; }
+.msv .msv__btn--primary { background: linear-gradient(135deg, var(--red) 0%, var(--red-deep) 100%); color: #ffffff !important; box-shadow: 0 4px 16px rgba(190,0,17,0.38); }
+.msv .msv__btn--primary:hover { box-shadow: 0 6px 22px rgba(190,0,17,0.48); color: #ffffff !important; }
+.msv .msv__btn--outline-white { background: transparent; color: #ffffff !important; border: 1.5px solid rgba(255,255,255,0.5); }
+.msv .msv__btn--outline-white:hover { background: rgba(255,255,255,0.1); color: #ffffff !important; }
+.msv__disclaimer { background: var(--cream); border-top: 1px solid var(--border); padding: 2rem 0; }
+.msv__disclaimer p { font-size: 0.78rem; color: var(--muted); margin: 0; line-height: 1.65; }
+</style>
+
+<div class="msv">
+  <!-- HERO SECTION -->
+  <section class="msv__hero">
+    <div class="msv__container">
+      <div class="msv__hero-inner">
+        <div class="msv__eyebrow">
+          <span>Canadian Retirees</span>
+        </div>
+        <h1>Retire to Spain <span class="msv__shimmer">from Canada</span></h1>
+        <p>Your complete guide to visa options, financial requirements, healthcare, pensions, taxes, cost of living, and the best retirement destinations in Spain. Start your new chapter today.</p>
+        <div class="msv__btn-group">
+          <a href="https://dashboard.platinumlegalspain.com/nlv" class="msv__btn msv__btn--primary">Start Eligibility Check →</a>
+          <a href="https://dashboard.platinumlegalspain.com/nlv" class="msv__btn msv__btn--outline-white">Book Consultation</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST BAR -->
+  <div class="msv__trust-bar">
+    <div class="msv__trust-bar-inner">
+      <div class="msv__trust-item">50,000+ Canadians living in Spain</div>
+      <div class="msv__trust-item">Est. cost: CAD 2,200–4,200/month</div>
+      <div class="msv__trust-item">Non-Lucrative Visa: 4–6 weeks</div>
+      <div class="msv__trust-item">Direct flights from Toronto, Vancouver</div>
+    </div>
+  </div>
+
+  <!-- QUICK FACTS SECTION -->
+  <section class="msv__section">
+    <div class="msv__container">
+      <div class="msv__section-hd">
+        <h2>Quick Facts for Canadian Retirees</h2>
+        <p>Essential at-a-glance information for planning your retirement move to Spain.</p>
+      </div>
+      <div class="msv__facts">
+        <div class="msv__fact">
+          <span class="msv__fact-icon">📋</span>
+          <span class="msv__fact-label">Primary Visa</span>
+          <span class="msv__fact-value">Non-Lucrative Visa (NLV)</span>
+        </div>
+        <div class="msv__fact">
+          <span class="msv__fact-icon">💰</span>
+          <span class="msv__fact-label">Monthly Income</span>
+          <span class="msv__fact-value">CAD 3,600+ (~€2,400)</span>
+        </div>
+        <div class="msv__fact">
+          <span class="msv__fact-icon">⏱</span>
+          <span class="msv__fact-label">Processing Time</span>
+          <span class="msv__fact-value">4–6 weeks</span>
+        </div>
+        <div class="msv__fact">
+          <span class="msv__fact-icon">🏥</span>
+          <span class="msv__fact-label">Healthcare</span>
+          <span class="msv__fact-value">Private insurance required first</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY CANADIANS RETIRE TO SPAIN -->
+  <section class="msv__section--cream">
+    <div class="msv__container--narrow">
+      <div class="msv__section-hd">
+        <h2>Why Canadians Retire to Spain</h2>
+        <p>Spain offers Canadian retirees a compelling alternative to aging in Canada, combining lifestyle, climate, affordability, and world-class healthcare.</p>
+      </div>
+
+      <p><strong>Lifestyle & Climate:</strong> Spain offers year-round sunshine, Mediterranean charm, and a relaxed pace of life. Unlike Canada's long winters, Spain's climate is ideal for outdoor activities, reducing seasonal depression common in Canadian retirees. Major cities like Madrid, Barcelona, and Valencia blend modern infrastructure with historic culture.</p>
+
+      <p><strong>Cost vs. Canada:</strong> Living costs in Spain are significantly lower than major Canadian cities. Rent in Valencia or Málaga averages 40–50% less than Toronto or Vancouver. Groceries, dining, and utilities follow similar savings. Your Canadian pension stretches further, meaning more travel, hobbies, and comfort.</p>
+
+      <p><strong>Healthcare Quality:</strong> Spain's public healthcare system ranks among Europe's best. After establishing residency (typically 3+ months), you gain access to the same system Spanish citizens use—without private insurance costs. Combined with modern private options, healthcare in Spain is affordable and world-class.</p>
+
+      <p><strong>Direct Flights & Connectivity:</strong> Direct flights from Toronto, Vancouver, and Montreal to Madrid, Barcelona, and Málaga make visiting family and friends simple. Flight times are 8–9 hours, and competitive pricing makes frequent visits feasible. Spanish internet and services are modern and reliable.</p>
+
+      <p><strong>No Language Barrier (for Many):</strong> While learning Spanish is rewarding, English is widely spoken in tourist areas, major cities, and among younger Spaniards. Healthcare professionals, lawyers, and government liaisons often speak English, easing your transition.</p>
+    </div>
+  </section>
+
+  <!-- BEST VISA FOR CANADIAN RETIREES -->
+  <section class="msv__section">
+    <div class="msv__container">
+      <div class="msv__section-hd">
+        <h2>Best Visa for Canadian Retirees</h2>
+        <p>The Non-Lucrative Visa is the gold standard for Canadian retirees seeking residency in Spain.</p>
+      </div>
+
+      <div class="msv__two-col">
+        <div>
+          <h3>Non-Lucrative Visa (NLV)</h3>
+          <p>The <a href="/non-lucrative-visa-spain/">Non-Lucrative Visa</a> is designed for individuals with financial means who wish to live in Spain without working. It's the primary route for retirees.</p>
+
+          <h3>Why It's Ideal for Retirees</h3>
+          <ul>
+            <li><strong>No Employment Required:</strong> Live on your Canadian pension (CPP/OAS) or savings without Spanish employment.</li>
+            <li><strong>Renewable Indefinitely:</strong> Once approved, the NLV can be renewed every 2 years, allowing lifelong residency.</li>
+            <li><strong>Access to Spanish Residency:</strong> Opens the door to a NIE (tax ID), Spanish bank accounts, and public healthcare after registration.</li>
+            <li><strong>No Minimum Work Commitment:</strong> Passive income, pensions, and investment returns satisfy financial requirements—no active work needed.</li>
+            <li><strong>Straightforward Process:</strong> For Canadians, the application is streamlined, especially with apostilled documents (Canada joined the Hague Apostille Convention in January 2024).</li>
+          </ul>
+
+          <p><strong>Alternative:</strong> The <a href="/digital-nomad-visa-spain/">Digital Nomad Visa</a> suits retirees with remote income or freelance work. However, the NLV is simpler for pension-based retirees.</p>
+        </div>
+
+        <div class="msv__two-col-card">
+          <div class="msv__two-col-icon">✓</div>
+          <h3>NLV At a Glance</h3>
+          <ul>
+            <li>Duration: 1 year (renewable every 2 years thereafter)</li>
+            <li>Processing: 4–6 weeks via Spanish consulate in Canada</li>
+            <li>Cost: CAD 150–300 (application fees)</li>
+            <li>Financial Requirement: €2,400/month (~CAD 3,600/month) or CAD 42,000+ lump sum in savings</li>
+            <li>Work Restriction: No employment in Spain</li>
+            <li>Family: Spouses/partners can be included</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINANCIAL REQUIREMENTS IN CAD -->
+  <section class="msv__section--cream">
+    <div class="msv__container">
+      <div class="msv__section-hd">
+        <h2>Financial Requirements in CAD</h2>
+        <p>Understanding the Non-Lucrative Visa's income and savings requirements in Canadian dollars.</p>
+      </div>
+
+      <p>Spain's NLV financial requirements are tied to the IPREM (Public Multiple Effect Indicator / Indicador Público de Renta de Efectos Múltiples). The baseline is approximately €2,400 per month per applicant, which converts to roughly <strong>CAD 3,600/month</strong> (using a EUR/CAD rate of ~1.5). These amounts increase with inflation; consult your Spanish consulate for current figures.</p>
+
+      <div class="msv__income-boxes">
+        <div class="msv__income-box">
+          <span class="msv__income-box-label">Monthly Income</span>
+          <span class="msv__income-box-value">CAD 3,600+</span>
+          <span class="msv__income-box-detail">Per person (€2,400/month)</span>
+        </div>
+        <div class="msv__income-box">
+          <span class="msv__income-box-label">Couple Income</span>
+          <span class="msv__income-box-value">CAD 5,200+</span>
+          <span class="msv__income-box-detail">Two applicants (€3,480/month)</span>
+        </div>
+        <div class="msv__income-box">
+          <span class="msv__income-box-label">Savings (Lump Sum)</span>
+          <span class="msv__income-box-value">CAD 42,000+</span>
+          <span class="msv__income-box-detail">Instead of monthly income</span>
+        </div>
+        <div class="msv__income-box">
+          <span class="msv__income-box-label">Combined Option</span>
+          <span class="msv__income-box-value">Partial income + savings</span>
+          <span class="msv__income-box-detail">Mix income and reserves</span>
+        </div>
+      </div>
+
+      <h3>How Financial Requirements Work</h3>
+      <p><strong>Monthly Income Method:</strong> Prove a recurring monthly income of CAD 3,600+ from CPP, OAS, RRSP withdrawals, rental income, or investment returns. Documentation includes pension statements from Service Canada, bank statements, or income tax returns from the last 2 years.</p>
+
+      <p><strong>Lump Sum Method:</strong> Demonstrate CAD 42,000+ in savings (or 17.5× the monthly requirement). Many retirees use a combination: CPP/OAS covers the baseline, with additional savings reserves to boost the application. The lump sum must be held in a Canadian bank account for at least 3 months before submission.</p>
+
+      <p><strong>Combined Approach:</strong> If your pension is CAD 2,000/month, you can supplement with savings (e.g., CAD 30,000) to meet the overall requirement. Flexibility makes the NLV accessible to most Canadian retirees with decent pensions.</p>
+
+      <div class="msv__alert msv__alert--info">
+        <span class="msv__alert-icon">ℹ</span>
+        <p><strong>Exchange Rate Consideration:</strong> The requirement is legally in euros. CAD conversion varies daily; submit your application when the exchange rate favors you. Many Canadians apply when CAD is strong to lock in lower euro equivalents.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- STEP-BY-STEP APPLICATION PROCESS -->
+  <section class="msv__section">
+    <div class="msv__container">
+      <div class="msv__section-hd">
+        <h2>Step-by-Step Application Process</h2>
+        <p>The Non-Lucrative Visa application for Canadian retirees is straightforward. Follow these six steps to secure residency in Spain.</p>
+      </div>
+
+      <div class="msv__process-steps">
+        <div class="msv__process-step">
+          <div class="msv__process-step-num">1</div>
+          <div class="msv__process-step-title">Gather Documents</div>
+        </div>
+        <div class="msv__process-step">
+          <div class="msv__process-step-num">2</div>
+          <div class="msv__process-step-title">Get Apostille Certification</div>
+        </div>
+        <div class="msv__process-step">
+          <div class="msv__process-step-num">3</div>
+          <div class="msv__process-step-title">Obtain Medical Certificate</div>
+        </div>
+        <div class="msv__process-step">
+          <div class="msv__process-step-num">4</div>
+          <div class="msv__process-step-title">Submit to Consulate</div>
+        </div>
+        <div class="msv__process-step">
+          <div class="msv__process-step-num">5</div>
+          <div class="msv__process-step-title">Attend Interview (if needed)</div>
+        </div>
+        <div class="msv__process-step">
+          <div class="msv__process-step-num">6</div>
+          <div class="msv__process-step-title">Receive Visa & Move</div>
+        </div>
+      </div>
+
+      <h3>Step 1: Gather Documents</h3>
+      <p>Collect a valid Canadian passport, criminal record check (RCMP check), birth certificate, marriage/divorce certificates (if applicable), bank statements (last 3 months), pension statements, employment history, and a medical certificate. For retirees, pension statements from Service Canada (CPP/OAS) are critical.</p>
+
+      <h3>Step 2: Get Apostille Certification</h3>
+      <p>Spanish authorities require documents to be authenticated via the Hague Apostille process. Thanks to Canada joining the Hague Apostille Convention in January 2024, apostilles are faster and simpler. Contact your provincial government office (typically Secretary of State or Attorney General) to apostille documents like birth certificates, RCMP checks, and marriage certificates. Allow 2–3 weeks for this process.</p>
+
+      <h3>Step 3: Obtain a Medical Certificate</h3>
+      <p>Have your Canadian doctor complete a medical certificate confirming you're in good health and fit for residency. The certificate must be dated within 3 months of your application. Some consulates have specific medical forms; verify with your consulate beforehand.</p>
+
+      <h3>Step 4: Submit to the Spanish Consulate</h3>
+      <p>Apply to the Spanish consulate in your jurisdiction (Toronto, Vancouver, or Montreal for Canada). Submit a completed application form, passport, apostilled documents, bank statements, pension statements, and the medical certificate. Include translations to Spanish (certified translations). Pay the application fee (typically CAD 150–300).</p>
+
+      <h3>Step 5: Attend Interview (if Requested)</h3>
+      <p>Some consulates conduct brief interviews. Be prepared to discuss your retirement plans, financial situation, and ties to Spain. Interviews are typically straightforward for retirees with clear documentation.</p>
+
+      <h3>Step 6: Receive Visa & Move</h3>
+      <p>Once approved, your passport is stamped with the 1-year Non-Lucrative Visa. You'll have 3 months to enter Spain. Upon arrival, register with local authorities (obtain your NIE and register on the padron—local registry). These steps allow you to access Spanish healthcare and set up a bank account.</p>
+    </div>
+  </section>
+
+  <!-- REQUIRED DOCUMENTS FOR CANADIANS -->
+  <section class="msv__section--cream">
+    <div class="msv__container--narrow">
+      <div class="msv__section-hd">
+        <h2>Required Documents for Canadian Retirees</h2>
+        <p>A comprehensive checklist of Canadian-specific documents needed for your Non-Lucrative Visa application.</p>
+      </div>
+
+      <h3>Primary Documents</h3>
+      <ul>
+        <li><strong>Valid Canadian Passport:</strong> Must be valid for the entire visa duration (at least 1 year from application). Passport pages may be copied and apostilled.</li>
+        <li><strong>RCMP Criminal Record Check:</strong> Obtain from the RCMP or your provincial police service. This must be apostilled. Canada's recent Hague Apostille membership makes this process faster.</li>
+        <li><strong>Canadian Birth Certificate:</strong> Original or certified copy, apostilled. Typically obtained from your provincial Vital Statistics office.</li>
+      </ul>
+
+      <h3>Marriage & Personal Status</h3>
+      <ul>
+        <li><strong>Marriage Certificate (if married):</strong> Apostilled original or certified copy. Required if applying as a spouse/partner.</li>
+        <li><strong>Divorce Decree (if applicable):</strong> Apostilled, from provincial courts.</li>
+        <li><strong>Proof of Common-Law Partnership:</strong> Joint documents (lease, utility bill, or statutory declaration) if applying with an unmarried partner.</li>
+      </ul>
+
+      <h3>Financial Documentation</h3>
+      <ul>
+        <li><strong>Bank Statements (3 months):</strong> From your Canadian bank(s) showing available funds. Required whether proving monthly income or lump sum savings.</li>
+        <li><strong>CPP/OAS Pension Statements:</strong> Service Canada letters confirming your monthly pension amounts. These are critical for monthly income method.</li>
+        <li><strong>Employment Income Records:</strong> Tax returns (last 2 years) if you have non-pension income, rental income, or investment returns.</li>
+        <li><strong>Property Documentation (if applicable):</strong> Proof of real estate ownership or other assets to strengthen the application.</li>
+      </ul>
+
+      <h3>Health & Residence</h3>
+      <ul>
+        <li><strong>Medical Certificate:</strong> Completed by a Canadian doctor, dated within 3 months of submission. Must state you're in good health for residency.</li>
+        <li><strong>Proof of Residence:</strong> Recent utility bill, lease, or property tax document confirming your Canadian address.</li>
+      </ul>
+
+      <h3>Translations & Certification</h3>
+      <ul>
+        <li><strong>Spanish Translations:</strong> All documents must be translated into Spanish by a certified translator. Many translation services in Canadian cities specialize in Spanish legal documents.</li>
+        <li><strong>Apostille Certification:</strong> Critical for all official documents (birth certificates, RCMP checks, marriage documents, educational records). Contact your provincial Secretary of State or Attorney General office.</li>
+      </ul>
+
+      <div class="msv__alert msv__alert--warn">
+        <span class="msv__alert-icon">⚠</span>
+        <p><strong>Apostille Timeline:</strong> Allow 2–3 weeks for apostille certification. Many provinces offer expedited services. Plan early to avoid delays in your visa application.</p>
+      </div>
+
+      <div class="msv__alert msv__alert--info">
+        <span class="msv__alert-icon">ℹ</span>
+        <p><strong>Certified Translations:</strong> Hire a translator certified by Spain's official registry (Colegio de Traductores). Many consulates accept translations from Canadian legal translators, but verify with your consulate beforehand.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- HEALTHCARE IN SPAIN -->
+  <section class="msv__section">
+    <div class="msv__container">
+      <div class="msv__section-hd">
+        <h2>Healthcare in Spain for Canadian Retirees</h2>
+        <p>Spain's healthcare system is world-class. Understand the transition from Canadian provincial health coverage to Spanish residency healthcare.</p>
+      </div>
+
+      <h3>Private Health Insurance (First Years)</h3>
+      <p>When you first arrive in Spain, you'll need <strong>private health insurance</strong>. Your Canadian provincial health coverage (OHIP in Ontario, MSP in British Columbia, RAMQ in Quebec, etc.) stops as soon as you become a non-resident. Private insurance typically costs CAD 100–300/month, depending on age and coverage level. Many insurers (established private health insurers in Spain) offer expat packages specifically for Canadians moving to Spain.</p>
+
+      <h3>Access to Public Healthcare</h3>
+      <p>After approximately 3 months of residency in Spain, once you register on the <strong>padron</strong> (municipal registry) and obtain your <a href="/nie-number-spain/">NIE (Spanish tax ID)</a>, you become eligible for Spain's public healthcare system (Sistema Nacional de Salud, or SNS). The SNS is free at point of service and covers:</p>
+      <ul>
+        <li>Doctor visits and specialist consultations</li>
+        <li>Hospital care and surgeries</li>
+        <li>Prescription medications (small co-pays, typically EUR 3–10 per medication)</li>
+        <li>Preventive care and screening</li>
+        <li>Ambulance and emergency services</li>
+      </ul>
+
+      <h3>Healthcare Quality</h3>
+      <p>Spain's healthcare system ranks 7th globally (World Health Organization). Doctors are well-trained, modern equipment is standard, and waiting times are reasonable. For serious procedures or specialist care, Spanish hospitals rival those in Canada. Many retirees report superior care and shorter wait times compared to Canadian provincial systems.</p>
+
+      <h3>Padron Registration</h3>
+      <p>The padron is your local municipal registry. To register:</p>
+      <ul>
+        <li>Visit your local municipal office (Ayuntamiento) with your passport and proof of residence (rental contract or property deed).</li>
+        <li>The registration is free and typically takes 1–2 weeks.</li>
+        <li>Once registered, you'll receive proof of empadronamiento (registration certificate).</li>
+      </ul>
+
+      <h3>NIE (Número de Identidad de Extranjero)</h3>
+      <p>Your <a href="/nie-number-spain/">NIE (Foreigner's Identification Number)</a> is essential for healthcare, banking, and taxation. Apply at the National Police office (Comisaría de Policía) shortly after arrival. You'll need your passport, proof of residency, and a completed form. The NIE is usually issued within 1–2 weeks.</p>
+
+      <h3>Dental & Vision Care</h3>
+      <p>Dental and vision care are not fully covered by the SNS. Many retirees maintain private dental insurance or pay out-of-pocket (which is affordable: cleanings cost EUR 60–100, fillings EUR 80–150). Vision care follows a similar model. Private insurance options exist for these services.</p>
+
+      <h3>Prescription Medications</h3>
+      <p>Once in the SNS, prescription medications have minimal co-pays (EUR 3–10 depending on the drug). Many medications, especially for chronic conditions (blood pressure, diabetes, cholesterol), are very affordable compared to Canada. Spanish pharmacies (farmacias) are ubiquitous and staffed by knowledgeable pharmacists.</p>
+
+      <div class="msv__alert msv__alert--green">
+        <span class="msv__alert-icon">✓</span>
+        <p><strong>Healthcare Continuity:</strong> If you're on ongoing medications (common for retirees), request a summary of your health conditions and prescriptions from your Canadian doctor. Spanish doctors will recognize most medications, but having this documentation eases transition.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CANADIAN PENSION & TAXES -->
+  <section class="msv__section--cream">
+    <div class="msv__container--narrow">
+      <div class="msv__section-hd">
+        <h2>Canadian Pensions & Taxes for Spanish Residents</h2>
+        <p>Retiring to Spain doesn't stop your Canadian pension. Navigate CPP, OAS, taxation, and residency rules.</p>
+      </div>
+
+      <h3>CPP & OAS Payments Abroad</h3>
+      <p><strong>Canada Pension Plan (CPP) and Old Age Security (OAS)</strong> payments continue while you live abroad. Service Canada will deposit funds directly into your Canadian bank account (or a Spanish account via international transfer). No special approval is needed, but you must remain enrolled and notify Service Canada of your address change.</p>
+
+      <p>However, OAS may be subject to recovery (clawback) if your income exceeds a threshold (approximately CAD 86,912 in 2026). Living in Spain doesn't exempt you from Canadian income tax on worldwide income.</p>
+
+      <h3>Canada-Spain Tax Treaty</h3>
+      <p>Canada and Spain have a tax treaty to prevent double taxation. Key points:</p>
+      <ul>
+        <li><strong>Pensions:</strong> CPP and OAS are taxed in Canada (your country of origin), not Spain, if you're receiving them as a resident of either country.</li>
+        <li><strong>Spanish Income:</strong> Any income earned or derived in Spain (rental income from Spanish property, Spanish-source investments) is taxed in Spain.</li>
+        <li><strong>Investment Income:</strong> Dividends, interest, and capital gains may be taxed in both countries, but the treaty provides credits to avoid double taxation.</li>
+        <li><strong>Retirement Savings:</strong> RRSPs and TFSAs have special treatment under the treaty, but withdrawals may be subject to Spanish taxation depending on the type and source.</li>
+      </ul>
+
+      <h3>Tax Residency & the 183-Day Rule</h3>
+      <p>Spain considers you a tax resident if you spend more than 183 days in the country within a calendar year. Once you're a tax resident, Spanish tax authorities (Hacienda) expect you to file Spanish income tax returns (declaración de la renta).</p>
+
+      <p><strong>Important:</strong> You remain a Canadian tax resident based on ties to Canada (home, family, etc.), even while living in Spain. This creates a dual tax residency situation. The Canada-Spain tax treaty provides guidance on which country has primary taxation rights for different income types.</p>
+
+      <h3>RRSP Considerations</h3>
+      <p><strong>RRSPs are still available to you in Spain.</strong> Contributions can continue if you have earned Canadian income. Withdrawals are taxed in Canada, and Spain generally recognizes RRSPs as retirement savings. However, once you become a Spanish tax resident, Spain may claim taxation rights on RRSP withdrawals. The Canada-Spain treaty provides relief to avoid double taxation.</p>
+
+      <p>Many cross-border tax professionals recommend a withdrawal strategy: take RRSP distributions gradually (in lower-income years) to manage both Canadian and Spanish tax burdens.</p>
+
+      <h3>TFSA in Spain</h3>
+      <p><strong>TFSAs are not recognized by Spain.</strong> Growth within a TFSA may be subject to Spanish taxation, and distributions may be treated as taxable income. This makes TFSAs less advantageous once you're a Spanish resident. Consult a cross-border accountant to optimize conversions or withdrawals before residency.</p>
+
+      <h3>CRA Filing Obligations</h3>
+      <p>You must continue filing Canadian income tax returns with the CRA, even as a Spanish resident. File by June 15 (or June 30 if self-employed). Report all worldwide income, including Spanish-source income, on your Canadian return. The Canada-Spain tax treaty allows you to claim foreign tax credits for Spanish taxes paid, reducing your Canadian tax bill.</p>
+
+      <h3>Spanish Tax Filing (Declaración de la Renta)</h3>
+      <p>As a Spanish tax resident, you'll file Spanish income tax returns (typically by June 30 each year) reporting all Spanish-source income. This includes rental income from Spanish property, Spanish-source pensions, and Spanish investment income. Many Canadian retirees hire Spanish tax accountants (gestoría) to handle this, costing approximately EUR 200–500/year.</p>
+
+      <div class="msv__alert msv__alert--red">
+        <span class="msv__alert-icon">⚠</span>
+        <p><strong>Hire a Cross-Border Accountant:</strong> Tax planning for Canadian retirees moving to Spain is complex. Consider consulting a Canadian accountant specializing in cross-border taxation before you move. The cost (typically CAD 1,000–3,000 for initial planning) is well worth the tax savings and peace of mind.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- COST OF LIVING COMPARISON -->
+  <section class="msv__section">
+    <div class="msv__container">
+      <div class="msv__section-hd">
+        <h2>Cost of Living: Canada vs. Spain</h2>
+        <p>How your retirement budget stretches in Spain compared to major Canadian cities. Actual costs vary by location and lifestyle.</p>
+      </div>
+
+      <table class="msv__comparison-table">
+        <thead>
+          <tr>
+            <th>Expense Category</th>
+            <th>Toronto, Canada</th>
+            <th>Vancouver, Canada</th>
+            <th>Montreal, Canada</th>
+            <th>Madrid, Spain</th>
+            <th>Barcelona, Spain</th>
+            <th>Valencia, Spain</th>
+            <th>Málaga, Spain</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="table-feature">1-Bedroom Apartment (Monthly Rent)</td>
+            <td>CAD 1,500–2,000</td>
+            <td>CAD 1,800–2,400</td>
+            <td>CAD 1,100–1,500</td>
+            <td>EUR 700–900</td>
+            <td>EUR 750–1,000</td>
+            <td>EUR 500–700</td>
+            <td>EUR 550–750</td>
+          </tr>
+          <tr>
+            <td class="table-feature">Groceries (Monthly, 1 Person)</td>
+            <td>CAD 250–350</td>
+            <td>CAD 280–380</td>
+            <td>CAD 220–300</td>
+            <td>EUR 200–280</td>
+            <td>EUR 220–300</td>
+            <td>EUR 180–250</td>
+            <td>EUR 190–260</td>
+          </tr>
+          <tr>
+            <td class="table-feature">Utilities (Monthly)</td>
+            <td>CAD 150–200</td>
+            <td>CAD 160–220</td>
+            <td>CAD 120–170</td>
+            <td>EUR 100–150</td>
+            <td>EUR 110–160</td>
+            <td>EUR 80–120</td>
+            <td>EUR 90–130</td>
+          </tr>
+          <tr>
+            <td class="table-feature">Dining Out (2-Course Meal)</td>
+            <td>CAD 35–60</td>
+            <td>CAD 40–70</td>
+            <td>CAD 25–50</td>
+            <td>EUR 15–30</td>
+            <td>EUR 18–35</td>
+            <td>EUR 12–25</td>
+            <td>EUR 14–28</td>
+          </tr>
+          <tr>
+            <td class="table-feature">Healthcare (Annual, Private Insurance)</td>
+            <td>CAD 800–1,500</td>
+            <td>CAD 900–1,600</td>
+            <td>CAD 700–1,200</td>
+            <td>EUR 400–700 (1st year)</td>
+            <td>EUR 450–800 (1st year)</td>
+            <td>EUR 350–600 (1st year)</td>
+            <td>EUR 380–650 (1st year)</td>
+          </tr>
+          <tr>
+            <td class="table-feature">Internet/Mobile (Monthly)</td>
+            <td>CAD 60–100</td>
+            <td>CAD 70–120</td>
+            <td>CAD 50–80</td>
+            <td>EUR 25–45</td>
+            <td>EUR 30–50</td>
+            <td>EUR 20–40</td>
+            <td>EUR 22–42</td>
+          </tr>
+          <tr>
+            <td class="table-feature">Car Ownership (Monthly, incl. insurance, fuel)</td>
+            <td>CAD 400–600</td>
+            <td>CAD 450–650</td>
+            <td>CAD 350–500</td>
+            <td>EUR 300–450</td>
+            <td>EUR 320–480</td>
+            <td>EUR 250–400</td>
+            <td>EUR 280–420</td>
+          </tr>
+          <tr>
+            <td class="table-feature"><strong>Total Monthly (1 Person, Moderate Lifestyle)</strong></td>
+            <td><strong>CAD 2,800–4,200</strong></td>
+            <td><strong>CAD 3,200–4,800</strong></td>
+            <td><strong>CAD 2,200–3,500</strong></td>
+            <td><strong>EUR 1,600–2,400</strong></td>
+            <td><strong>EUR 1,800–2,700</strong></td>
+            <td><strong>EUR 1,300–2,000</strong></td>
+            <td><strong>EUR 1,400–2,200</strong></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>Key Takeaways</h3>
+      <p><strong>Spain is 30–50% cheaper than major Canadian cities.</strong> A modest lifestyle in Valencia or Málaga costs approximately EUR 1,500–2,000/month (CAD 2,250–3,000), versus CAD 2,800–4,200 in Toronto. This means a CAD 3,600/month pension (the NLV minimum) comfortably covers basic living expenses in mid-tier Spanish cities, with room for travel and leisure.</p>
+
+      <p><strong>Regional Variations:</strong> Madrid and Barcelona, Spain's largest cities, match or exceed Canadian costs due to tourism and demand. Valencia, Alicante, and Málaga are significantly cheaper, especially for housing. Small towns (not shown in the table) can be 40% cheaper again.</p>
+
+      <p><strong>Housing is the Biggest Saving:</strong> Rent in Valencia is typically 50% less than Toronto. If you own property outright in Spain, monthly costs drop further, making retirement very affordable.</p>
+
+      <p><strong>Healthcare Savings (After Year 1):</strong> Once you access Spain's public healthcare, annual costs drop to EUR 0–100 (for prescriptions and minor co-pays), a dramatic saving compared to Canadian private insurance or out-of-pocket costs.</p>
+    </div>
+  </section>
+
+  <!-- BEST PLACES IN SPAIN FOR CANADIAN RETIREES -->
+  <section class="msv__section--cream">
+    <div class="msv__container">
+      <div class="msv__section-hd">
+        <h2>Best Places in Spain for Canadian Retirees</h2>
+        <p>Six destinations offering different lifestyles, climates, and communities. Choose based on your priorities.</p>
+      </div>
+
+      <div class="msv__persona-grid">
+        <div class="msv__persona-card">
+          <div class="msv__persona-icon">☀️</div>
+          <h3 class="msv__persona-title">Costa del Sol</h3>
+          <p class="msv__persona-desc">Málaga, Marbella, Torremolinos. Warm year-round, established expat communities, golf courses, beaches, and English widely spoken. Slightly pricier but very English-friendly.</p>
+          <a href="#" class="msv__persona-cta">Learn more →</a>
+        </div>
+
+        <div class="msv__persona-card">
+          <div class="msv__persona-icon">🌆</div>
+          <h3 class="msv__persona-title">Valencia</h3>
+          <p class="msv__persona-desc">Modern, Mediterranean city with excellent cost of living. Paella homeland, vibrant culture, beautiful beaches. Great for retirees seeking culture + affordability.</p>
+          <a href="#" class="msv__persona-cta">Learn more →</a>
+        </div>
+
+        <div class="msv__persona-card">
+          <div class="msv__persona-icon">🏖</div>
+          <h3 class="msv__persona-title">Alicante</h3>
+          <p class="msv__persona-desc">Costa Blanca hub. Sunny, affordable, with a young expat demographic. Beach lifestyle, international airport, good food. Less crowded than Costa del Sol.</p>
+          <a href="#" class="msv__persona-cta">Learn more →</a>
+        </div>
+
+        <div class="msv__persona-card">
+          <div class="msv__persona-icon">🏛</div>
+          <h3 class="msv__persona-title">Barcelona</h3>
+          <p class="msv__persona-desc">Catalonia's cosmopolitan capital. Museums, culture, food, beaches, and international community. Higher cost but cultural richness unmatched. Great for urban retirees.</p>
+          <a href="#" class="msv__persona-cta">Learn more →</a>
+        </div>
+
+        <div class="msv__persona-card">
+          <div class="msv__persona-icon">🌞</div>
+          <h3 class="msv__persona-title">Málaga</h3>
+          <p class="msv__persona-desc">Sunny coastal city with Picasso Museum, beaches, and relaxed vibe. Growing expat community. More authentic Spanish feel than Marbella, more affordable.</p>
+          <a href="#" class="msv__persona-cta">Learn more →</a>
+        </div>
+
+        <div class="msv__persona-card">
+          <div class="msv__persona-icon">🌴</div>
+          <h3 class="msv__persona-title">Canary Islands</h3>
+          <p class="msv__persona-desc">Subtropical climate, unique culture, eternal spring. Tenerife and Gran Canaria are popular. Higher airfare to mainland, but paradise-like weather year-round.</p>
+          <a href="#" class="msv__persona-cta">Learn more →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AFTER YOU ARRIVE -->
+  <section class="msv__section">
+    <div class="msv__container--narrow">
+      <div class="msv__section-hd">
+        <h2>After You Arrive: Next Steps</h2>
+        <p>Your first weeks in Spain require key registrations and administrative steps. Here's the checklist.</p>
+      </div>
+
+      <h3>Obtain Your NIE (Spanish Tax ID)</h3>
+      <p>Visit the National Police office (Comisaría de Policía Nacional) in your city with your passport, proof of residency, and a completed form (Solicitud de Número de Identidad de Extranjero). The <a href="/nie-number-spain/">NIE</a> is issued within 1–2 weeks and is essential for banking, healthcare, and taxes. You'll receive a <a href="/tie-card-spain/">TIE card</a> (temporary residence permit) at the same time—this is your physical proof of residency.</p>
+
+      <h3>Register on the Padron (Local Registry)</h3>
+      <p>Visit your local municipal office (Ayuntamiento) with your passport and proof of residence (rental contract or property deed). Registration is free and takes 1–2 weeks. The padron registration opens access to Spain's public healthcare and is required for most administrative processes.</p>
+
+      <h3>Open a Spanish Bank Account</h3>
+      <p>With your NIE and padron certificate, open a bank account. Spanish banks (Santander, BBVA, CaixaBank, ING) have simple processes for foreign residents. You'll need your passport, NIE, proof of address, and initial deposit (typically EUR 100–500). A Spanish bank account simplifies pension deposits, payments, and tax compliance.</p>
+
+      <h3>Register with Spanish Tax Authorities (Hacienda)</h3>
+      <p>Once you have a NIE, register with Spain's tax authority (Agencia Tributaria) if you have Spanish-source income or significant assets. Many accountants handle this. You'll file annual Spanish tax returns (declaración de la renta) if required.</p>
+
+      <h3>Exchange Your Canadian Driver's Licence</h3>
+      <p>Canada and Spain have a reciprocal agreement. Exchange your provincial driving licence for a Spanish carnet de conducir (driving permit) at the local traffic office (Jefatura de Tráfico). You'll need your licence, NIE, proof of residency, and a medical certificate (EUR 10–20). The exchange takes 2–4 weeks and requires no new test.</p>
+
+      <h3>Arrange Private Health Insurance</h3>
+      <p>Before your healthcare registration is complete (typically 3+ months), purchase private health insurance. Companies like established private health insurers in Spain leading private insurer offer expat plans. Monthly cost: EUR 80–250, depending on age and coverage.</p>
+
+      <h3>Notify Service Canada</h3>
+      <p>Contact Service Canada to update your address for CPP/OAS payments. You can set up direct deposits to a Spanish bank account. Notify the CRA of your change of residence as well (you remain a Canadian tax resident for tax purposes).</p>
+
+      <div class="msv__alert msv__alert--info">
+        <span class="msv__alert-icon">ℹ</span>
+        <p><strong>Timeline:</strong> Most registrations (NIE, padron, bank account) are completed within 3–4 weeks. Plan to complete these tasks in your first month. Once done, you'll have a solid foundation for Spanish residency.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMMON MISTAKES CANADIANS MAKE -->
+  <section class="msv__section--cream">
+    <div class="msv__container">
+      <div class="msv__section-hd">
+        <h2>Common Mistakes Canadian Retirees Make</h2>
+        <p>Avoid these pitfalls to ensure a smooth transition to Spanish retirement.</p>
+      </div>
+
+      <div class="msv__alert msv__alert--red">
+        <span class="msv__alert-icon">❌</span>
+        <p><strong>Mistake 1: Assuming Provincial Health Coverage Continues.</strong> OHIP, MSP, RAMQ, and other provincial plans do not cover you abroad. You must arrange private insurance before arriving. Many retirees arrive without coverage and face unexpected medical costs. Plan ahead and purchase before your move date.</p>
+      </div>
+
+      <div class="msv__alert msv__alert--red">
+        <span class="msv__alert-icon">❌</span>
+        <p><strong>Mistake 2: Not Obtaining Apostille Certification Early.</strong> Delaying apostille certification of documents can push back your visa application by weeks. Canada's Hague Apostille membership (as of January 2024) makes this faster, but provincial offices still have processing times. Start this process 6–8 weeks before your target visa submission date.</p>
+      </div>
+
+      <div class="msv__alert msv__alert--red">
+        <span class="msv__alert-icon">❌</span>
+        <p><strong>Mistake 3: Ignoring Canadian Tax Obligations.</strong> Many retirees assume they stop filing Canadian taxes once they move. False. You remain a Canadian tax resident and must file annually with the CRA, reporting all worldwide income. Failure to file risks penalties and loss of OAS benefits. Work with a cross-border accountant.</p>
+      </div>
+
+      <div class="msv__alert msv__alert--red">
+        <span class="msv__alert-icon">❌</span>
+        <p><strong>Mistake 4: Underestimating Language Barriers.</strong> While English is spoken in tourist areas, daily life (utilities, medical appointments, legal documents) happens in Spanish. Even retirees in expat-heavy areas benefit from basic Spanish language skills. Consider taking a course before arriving or enrolling in local classes.</p>
+      </div>
+
+      <div class="msv__alert msv__alert--red">
+        <span class="msv__alert-icon">❌</span>
+        <p><strong>Mistake 5: Not Planning Healthcare Transition.</strong> Assuming you'll automatically access Spain's public healthcare upon arrival is wrong. You need NIE, padron registration, and (often) 3+ months of residency. Plan private insurance for the gap. Once eligible, Spain's system is excellent, but the transition requires patience.</p>
+      </div>
+
+      <div class="msv__alert msv__alert--red">
+        <span class="msv__alert-icon">❌</span>
+        <p><strong>Mistake 6: Choosing Wrong City for Your Lifestyle.</strong> Barcelona is expensive; Valencia is affordable. Costa del Sol is touristy; inland regions are quieter. Visit potential cities for a week or month before committing. Renting a temporary apartment is cheap (EUR 600–1,000/month) and helps ensure you love the area.</p>
+      </div>
+
+      <div class="msv__alert msv__alert--red">
+        <span class="msv__alert-icon">❌</span>
+        <p><strong>Mistake 7: Not Hiring a Spanish Lawyer for the Application.</strong> While the NLV process is relatively straightforward, hiring a Spanish lawyer or gestor (accountant/administrator) familiar with Canadian documents ensures no mistakes. Cost: EUR 500–1,000. Worth it for peace of mind.</p>
+      </div>
+
+      <div class="msv__alert msv__alert--red">
+        <span class="msv__alert-icon">❌</span>
+        <p><strong>Mistake 8: Withdrawing RRSPs Prematurely for the Move.</strong> Many retirees withdraw RRSPs to fund their Spain move, incurring tax penalties and losing retirement savings. Explore whether you can use CPP/OAS, savings, or a HELOC (home equity line of credit) instead. Consult a financial advisor before raiding retirement accounts.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ SECTION -->
+  <section class="msv__section">
+    <div class="msv__container--narrow">
+      <div class="msv__section-hd">
+        <h2>Frequently Asked Questions</h2>
+        <p>Answers to common questions Canadian retirees ask about moving to Spain.</p>
+      </div>
+
+      <div class="msv__faq-list">
+        <details>
+          <summary>What visa do Canadian retirees need to retire to Spain?</summary>
+          <div class="msv__faq-answer">
+            <p>The <a href="/non-lucrative-visa-spain/">Non-Lucrative Visa (NLV)</a> is the primary visa route for Canadian retirees. It allows you to live in Spain indefinitely without working, provided you meet the financial requirements (approximately €2,400/month or ~CAD 3,600/month). You can also explore the <a href="/digital-nomad-visa-spain/">Digital Nomad Visa</a> if you have passive income or freelance work, though the NLV is typically the best fit for retirees.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>How much does it cost to retire in Spain as a Canadian?</summary>
+          <div class="msv__faq-answer">
+            <p>Financial requirements for the NLV visa are €2,400/month (~CAD 3,600/month) or a lump sum of approximately CAD 42,000+ in savings. Actual living costs in cities like Valencia or Málaga are typically CAD 1,800–3,500/month depending on location and lifestyle. This is significantly lower than major Canadian cities, especially when housing costs are considered.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Can I receive my Canadian pension while living in Spain?</summary>
+          <div class="msv__faq-answer">
+            <p>Yes. Canada Pension Plan (CPP) and Old Age Security (OAS) payments can be received while living abroad. However, you must: continue filing taxes with the CRA as a Canadian resident, be aware of the Canada-Spain tax treaty to avoid double taxation, and ensure you report all foreign income. Your provincial health coverage (OHIP, MSP, etc.) will stop, so you'll need private health insurance in Spain.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>What documents do Canadian retirees need for the Spanish visa application?</summary>
+          <div class="msv__faq-answer">
+            <p>Key documents include: a valid Canadian passport, RCMP criminal record check (apostilled), Canadian birth certificate (apostilled), proof of funds from Canadian banks, employment records or pension statements, and medical certificate. Canada joined the Hague Apostille Convention in January 2024, making document authentication simpler for Canadian retirees.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Will I need health insurance in Spain as a retiree?</summary>
+          <div class="msv__faq-answer">
+            <p>Yes. Private health insurance is required during the first few years of residency. Once registered on the padron (local registry) and established as a Spanish resident after approximately 3 months, you may be eligible for Spain's public healthcare system. Your Canadian provincial health coverage will not apply abroad, so insurance is essential.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>How long does the visa application process take for Canadians?</summary>
+          <div class="msv__faq-answer">
+            <p>The Non-Lucrative Visa typically takes 4–6 weeks after submitting a complete application to the Spanish consulate in Canada. Processing times vary by consulate (Toronto, Vancouver, Montreal). It's advisable to start 2–3 months before your intended move to allow time for document preparation, apostille certification, and any unforeseen delays.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>What is the 183-day rule for Spanish tax residency?</summary>
+          <div class="msv__faq-answer">
+            <p>If you spend more than 183 days in Spain within a calendar year, you're considered a Spanish tax resident. This affects your tax obligations in both Spain and Canada. The Canada-Spain tax treaty helps prevent double taxation, but you'll typically report income to Spanish tax authorities (Hacienda) and may still need to file with the CRA. Consult a tax professional for your specific situation.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Can I convert my Canadian driver's license to a Spanish one?</summary>
+          <div class="msv__faq-answer">
+            <p>Yes. Canada and Spain have a reciprocal agreement, allowing Canadian drivers to exchange their provincial license for a Spanish driving permit (carnet de conducir) without taking a new test. You'll need your Canadian license, NIE (Spanish ID number), proof of residency, and a medical certificate. The process takes 2–4 weeks.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>What happens to my RRSP and TFSA when I move to Spain?</summary>
+          <div class="msv__faq-answer">
+            <p>Your RRSP and TFSA remain valid. RRSPs can still grow tax-deferred, but withdrawals are taxed in Canada and potentially in Spain under the tax treaty. TFSAs are not recognized by Spain, so growth and distributions may be taxed. You should consult a cross-border accountant to optimize your withdrawal strategy and ensure CRA compliance.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Which areas of Spain are best for Canadian retirees?</summary>
+          <div class="msv__faq-answer">
+            <p>Popular regions include the Costa del Sol (warm, English-speaking communities), Valencia (modern, excellent cost of living), Alicante (beaches, affordable), Barcelona (cultural, vibrant), Málaga (year-round sunshine, relaxed lifestyle), and the Canary Islands (subtropical climate, unique culture). Each region offers different benefits depending on your lifestyle priorities, but all have lower costs and excellent healthcare compared to major Canadian cities.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Do I need to speak Spanish to retire in Spain?</summary>
+          <div class="msv__faq-answer">
+            <p>While English is spoken in tourist areas and major cities, learning basic Spanish significantly improves your experience. Daily interactions—medical visits, utilities, shopping—happen in Spanish. Many retirees take language classes in their first year. Being bilingual is not required but is highly recommended for integration and practical life in Spain.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BAND -->
+  
+  <!-- ── Insurance Partners ──────────────────────────── -->
+  <section class="msv__section--cream" style="padding: 2.5rem 0;">
+    <div class="msv__container--narrow">
+      <div style="background:#fff;border:2px solid var(--border);border-radius:12px;padding:1.75rem 2rem;">
+        <p style="font-weight:700;color:var(--navy);margin:0 0 0.5rem;font-size:0.95rem;">Recommended insurance specialists</p>
+        <p style="color:var(--muted);font-size:0.9rem;margin:0;line-height:1.75;">
+          <a href="https://www.spanish-healthinsurance.com/myspanishvisa" target="_blank" rel="noopener" style="color:var(--red);font-weight:700;">Spanish Health Insurance</a> — visa-compliant private health insurance for English-speaking foreigners in Spain.<br>
+          <a href="https://www.247expatinsurance.com/myspanishvisa" target="_blank" rel="noopener" style="color:var(--red);font-weight:700;">247 Expat Insurance</a> — health and all types of expat insurance in Spain, tailored for international residents.
+        </p>
+      </div>
+    </div>
+  </section>
+  <section class="msv__cta-band">
+    <div class="msv__container--narrow">
+      <h2>Ready to Retire to Spain?</h2>
+      <p>Start your journey with a free eligibility check or book a consultation with our Spain residency experts. We'll guide you through every step, from visa applications to settling into your new life.</p>
+      <div class="msv__btn-group">
+        <a href="https://dashboard.platinumlegalspain.com/nlv" class="msv__btn msv__btn--primary">Start Eligibility Check →</a>
+        <a href="https://dashboard.platinumlegalspain.com/nlv" class="msv__btn msv__btn--outline-white">Book Consultation</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- RELATED GUIDES -->
+  <section class="msv__section">
+    <div class="msv__container">
+      <div class="msv__section-hd">
+        <h2>Related Guides & Resources</h2>
+        <p>Deepen your knowledge with these essential guides for Canadian retirees moving to Spain.</p>
+      </div>
+
+      <div class="msv__related">
+        <a href="/non-lucrative-visa-spain/" class="msv__related-card">
+          <span class="msv__related-icon">📋</span>
+          <span class="msv__related-title">Non-Lucrative Visa</span>
+          <span class="msv__related-desc">Complete guide to the NLV, Spain's premier visa for retirees and passive income earners.</span>
+        </a>
+
+        <a href="/how-to-get-residency-in-spain/" class="msv__related-card">
+          <span class="msv__related-icon">🏡</span>
+          <span class="msv__related-title">Residency Guide</span>
+          <span class="msv__related-desc">Full roadmap for obtaining Spanish residency, from visa application to long-term settlement.</span>
+        </a>
+
+        <a href="/nie-number-spain/" class="msv__related-card">
+          <span class="msv__related-icon">🆔</span>
+          <span class="msv__related-title">NIE Number</span>
+          <span class="msv__related-desc">What the NIE (Spanish tax ID) is, how to obtain it, and why it's essential for Spanish life.</span>
+        </a>
+
+        <a href="/living-in-spain-as-a-foreigner/" class="msv__related-card">
+          <span class="msv__related-icon">🌍</span>
+          <span class="msv__related-title">Living in Spain</span>
+          <span class="msv__related-desc">Essential tips, cultural insights, and practical advice for foreigners settling in Spain.</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- DISCLAIMER -->
+  </section>
+</div>
+
+
+<!-- FRAGMENT_END -->
+</main>
+
+
+<!-- ═══════════════════════════════════════════════════
+     SITE FOOTER
+     ═══════════════════════════════════════════════════ -->
+<footer class="msv-footer" role="contentinfo">
+
+  <div class="msv-footer__top">
+
+    <!-- Brand column -->
+    <div class="msv-footer__brand">
+      <a href="/" class="msv-footer__logo" aria-label="My Spanish Visa"><img src="/assets/images/msv-logo-white.png" alt="My Spanish Visa" height="40" style="display:block;"></a>
+      <p class="msv-footer__tagline">
+        Specialist Spain visa &amp; residency guidance for English-speaking foreigners.
+        A service of Platinum Legal Spain.
+      </p>
+      <div class="msv-footer__trust">
+        <span class="msv-footer__trust-item">All English. No barriers.</span>
+        <span class="msv-footer__trust-item">Solicitors &amp; immigration specialists</span>
+        <span class="msv-footer__trust-item">100% online process</span>
+      </div>
+    </div>
+
+    <!-- Visas column -->
+    <div>
+      <div class="msv-footer__col-title">Visas</div>
+      <ul class="msv-footer__links">
+        <li><a href="/non-lucrative-visa-spain/">Non-Lucrative Visa</a></li>
+        <li><a href="/digital-nomad-visa-spain/">Digital Nomad Visa</a></li>
+        <li><a href="/student-visa-spain/">Student Visa</a></li>
+        <li><a href="/spain-visa-renewal/">Visa Renewals</a></li>
+        <li><a href="/best-visa-move-to-spain/">Compare All Visas</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/nlv">Apply: NLV</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/dnv">Apply: DNV</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/student-visa">Apply: Student Visa</a></li>
+      </ul>
+    </div>
+
+    <!-- Resources column -->
+    <div>
+      <div class="msv-footer__col-title">Resources</div>
+      <ul class="msv-footer__links">
+        <li><a href="/blog/">Blog &amp; Guides</a></li>
+        <li><a href="/move-to-spain/">Move to Spain Guide</a></li>
+        <li><a href="/visa-eligibility-quiz/">Eligibility Quiz</a></li>
+        <li><a href="/spain-visa-checklist/">Document Checklists</a></li>
+        <li><a href="/spain-visa-requirements/">Visa Requirements</a></li>
+        <li><a href="/spain-nie-number/">NIE Number Guide</a></li>
+        <li><a href="/spain-tie-card/">TIE Card Guide</a></li>
+      </ul>
+    </div>
+
+    <!-- Company column -->
+    <div>
+      <div class="msv-footer__col-title">Company</div>
+      <ul class="msv-footer__links">
+        <li><a href="/about-us/">About Us</a></li>
+        <li><a href="/testimonials/">Client Reviews</a></li>
+        <li><a href="/why-choose-us/">Why Choose Us</a></li>
+        <li><a href="/contact-us.html">Contact</a></li>
+        <li><a href="https://www.platinumlegalspain.com" rel="noopener">Platinum Legal Spain</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/nlv">Client Portal</a></li>
+      </ul>
+    </div>
+
+  </div><!-- /.msv-footer__top -->
+
+  <div class="msv-footer__bottom">
+    <div class="msv-footer__bottom-inner">
+      <p class="msv-footer__disclaimer">
+        <strong style="color:rgba(255,255,255,0.5);">Disclaimer:</strong>
+        My Spanish Visa provides visa processing support and is not a law firm. Content on this site is for informational purposes only and does not constitute legal advice. Immigration rules change frequently — always verify requirements with official sources or a qualified specialist. My Spanish Visa is a trading name of Platinum Legal Spain.
+      </p>
+      <span class="msv-footer__copyright">© 2026 My Spanish Visa. All rights reserved.</span>
+    </div>
+  </div>
+
+</footer>
+
+</body>
+</html>

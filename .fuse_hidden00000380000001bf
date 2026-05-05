@@ -1,0 +1,1477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- ═══════════════════════════════════════════════════════════════════
+       PAGE-SPECIFIC HEAD — replace block below per page:
+       <title>Nlv Pension Income | My Spanish Visa</title>
+       <meta name="description" content="…">
+       <meta property="og:title" content="…">
+       <meta property="og:description" content="…">
+       <meta property="og:url" content="https://www.myspanishvisa.com/…">
+       <meta property="og:image" content="…">
+       <link rel="canonical" href="https://www.myspanishvisa.com/…">
+       <script type="application/ld+json">…</script>
+       ═══════════════════════════════════════════════════════════════════ -->
+  <title>My Spanish Visa — Spain Visa &amp; Residency Specialists</title>
+  <meta name="description" content="My Spanish Visa helps English-speaking foreigners move to Spain. Expert guidance on Non-Lucrative Visa, Digital Nomad Visa, Student Visa, renewals and more.">
+
+  <!-- Shared Open Graph defaults -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="My Spanish Visa">
+  <meta property="og:image" content="https://www.myspanishvisa.com/assets/images/og/og-myspanishvisa-default.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@myspanishvisa">
+
+  <style>
+/* ═══════════════════════════════════════════════════════════════
+   GLOBAL SHELL — nav + footer only.
+   Page-specific CSS lives inside each fragment's own <style> block.
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── iOS overflow safety ── */
+html, body { max-width: 100%; overflow-x: clip; margin: 0; padding: 0; }
+*, *::before, *::after { box-sizing: border-box; }
+
+/* ── Brand tokens (root-level so all fragments inherit) ── */
+:root {
+  --navy:      #0c1930;
+  --navy-mid:  #1a3a5c;
+  --red:       #be0011;
+  --red-deep:  #8c000d;
+  --yellow:    #facf39;
+  --cream:     #f8f7f4;
+  --white:     #ffffff;
+  --black:     #1a1a1a;
+  --muted:     #5a6478;
+  --border:    #dce3ed;
+  --shadow-sm: 0 2px 8px rgba(12,25,48,0.08);
+  --shadow-md: 0 6px 24px rgba(12,25,48,0.13);
+}
+
+body {
+  font-family: 'Inter', 'Segoe UI', system-ui, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.75;
+  color: var(--black);
+  background: #fff;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   SITE NAV
+   ───────────────────────────────────────────────────────────── */
+.msv-nav {
+  position: sticky;
+  top: 0;
+  z-index: 9000;
+  background: var(--navy);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 2px 12px rgba(12,25,48,0.22);
+}
+.msv-nav__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+  gap: 1.5rem;
+}
+
+/* Logo */
+.msv-nav__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+.msv-nav__logo-flag {
+  font-size: 1.3rem;
+  line-height: 1;
+}
+.msv-nav__logo-text {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+.msv-nav__logo-text span {
+  color: var(--yellow);
+}
+
+/* Links */
+.msv-nav__links {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.msv-nav__links > li {
+  position: relative;
+}
+.msv-nav__links > li > a,
+.msv-nav__links > li > button {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.5rem 0.9rem;
+  font-size: 0.87rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.85);
+  text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: color 0.15s, background 0.15s;
+  white-space: nowrap;
+  height: 64px;
+}
+.msv-nav__links > li > a:hover,
+.msv-nav__links > li > button:hover,
+.msv-nav__links > li:focus-within > a,
+.msv-nav__links > li:focus-within > button {
+  color: #fff;
+  background: rgba(255,255,255,0.08);
+}
+.msv-nav__chevron {
+  font-size: 0.65rem;
+  opacity: 0.7;
+  transition: transform 0.2s;
+}
+.msv-nav__links > li:focus-within .msv-nav__chevron,
+.msv-nav__links > li:hover .msv-nav__chevron {
+  transform: rotate(180deg);
+}
+
+/* Dropdown */
+.msv-nav__dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 230px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  box-shadow: var(--shadow-md);
+  padding: 0.5rem 0;
+  z-index: 200;
+}
+.msv-nav__links > li:hover .msv-nav__dropdown,
+.msv-nav__links > li:focus-within .msv-nav__dropdown {
+  display: block;
+}
+.msv-nav__dropdown a {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.6rem 1.1rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--navy);
+  text-decoration: none;
+  transition: background 0.12s;
+}
+.msv-nav__dropdown a:hover {
+  background: var(--cream);
+  color: var(--red);
+}
+.msv-nav__dropdown-icon {
+  width: 24px;
+  height: 24px;
+  background: var(--cream);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+.msv-nav__dropdown-divider {
+  height: 1px;
+  background: var(--border);
+  margin: 0.4rem 0;
+}
+
+/* CTA button */
+.msv-nav__cta {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.55rem 1.2rem;
+  background: var(--red);
+  color: #fff !important;
+  font-size: 0.85rem;
+  font-weight: 700;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.15s, box-shadow 0.15s;
+  white-space: nowrap;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(190,0,17,0.3);
+}
+.msv-nav__cta:hover {
+  background: var(--red-deep);
+  box-shadow: 0 4px 14px rgba(190,0,17,0.4);
+  text-decoration: none;
+}
+
+/* Hamburger */
+.msv-nav__burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.4rem;
+  border-radius: 5px;
+}
+.msv-nav__burger span {
+  width: 22px;
+  height: 2px;
+  background: #fff;
+  border-radius: 2px;
+  transition: transform 0.2s, opacity 0.2s;
+  display: block;
+}
+
+/* Mobile nav */
+.msv-nav__mobile {
+  display: none;
+  flex-direction: column;
+  background: var(--navy-mid);
+  padding: 1rem 1.5rem 1.5rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+.msv-nav__mobile.open { display: flex; }
+.msv-nav__mobile a {
+  padding: 0.65rem 0;
+  color: rgba(255,255,255,0.9);
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+.msv-nav__mobile a:hover { color: var(--yellow); }
+.msv-nav__mobile .msv-nav__mobile-sub {
+  padding-left: 1rem;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: rgba(255,255,255,0.7);
+}
+.msv-nav__mobile-cta {
+  margin-top: 1rem;
+  background: var(--red);
+  color: #fff !important;
+  border-radius: 6px;
+  text-align: center;
+  padding: 0.75rem 1rem !important;
+  border-bottom: none !important;
+}
+
+@media (max-width: 900px) {
+  .msv-nav__links { display: none; }
+  .msv-nav__cta { display: none; }
+  .msv-nav__burger { display: flex; }
+}
+@media (max-width: 480px) {
+  .msv-nav__inner { padding: 0 1rem; }
+}
+
+/* ─────────────────────────────────────────────────────────────
+   SITE FOOTER
+   ───────────────────────────────────────────────────────────── */
+.msv-footer {
+  background: var(--navy);
+  color: rgba(255,255,255,0.75);
+  overflow-x: clip;
+}
+.msv-footer__top {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem 3rem;
+  display: grid;
+  grid-template-columns: 280px 1fr 1fr 1fr;
+  gap: 3rem;
+}
+@media (max-width: 900px) {
+  .msv-footer__top { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
+}
+@media (max-width: 560px) {
+  .msv-footer__top { grid-template-columns: 1fr; gap: 2rem; padding: 3rem 1.2rem 2rem; }
+}
+
+.msv-footer__brand {}
+.msv-footer__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  margin-bottom: 1rem;
+}
+.msv-footer__logo-flag { font-size: 1.3rem; }
+.msv-footer__logo-text {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -0.01em;
+}
+.msv-footer__logo-text span { color: var(--yellow); }
+.msv-footer__tagline {
+  font-size: 0.83rem;
+  color: rgba(255,255,255,0.55);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+.msv-footer__trust {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+.msv-footer__trust-item {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.65);
+}
+.msv-footer__trust-item::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  background: var(--yellow);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.msv-footer__col-title {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.4);
+  margin-bottom: 1rem;
+}
+.msv-footer__links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.msv-footer__links a {
+  font-size: 0.87rem;
+  color: rgba(255,255,255,0.68);
+  text-decoration: none;
+  transition: color 0.15s;
+  display: inline-block;
+}
+.msv-footer__links a:hover {
+  color: var(--yellow);
+  text-decoration: none;
+}
+
+.msv-footer__bottom {
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+.msv-footer__bottom-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 1rem;
+  justify-content: space-between;
+}
+.msv-footer__disclaimer {
+  font-size: 0.73rem;
+  color: rgba(255,255,255,0.35);
+  line-height: 1.65;
+  max-width: 720px;
+}
+.msv-footer__copyright {
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.35);
+  white-space: nowrap;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   MAIN CONTENT AREA
+   ───────────────────────────────────────────────────────────── */
+main {
+  /* Fragments are self-contained; this wrapper just provides flow context */
+  position: relative;
+}
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════
+     SITE NAVIGATION
+     ═══════════════════════════════════════════════════ -->
+<header class="msv-nav" role="banner">
+  <div class="msv-nav__inner">
+
+    <!-- Logo -->
+    <a href="/" class="msv-nav__logo" aria-label="My Spanish Visa — Home"><img src="/assets/images/msv-logo-white.png" alt="My Spanish Visa" height="64" style="display:block;"></a>
+
+    <!-- Desktop links -->
+    <nav aria-label="Main navigation">
+      <ul class="msv-nav__links">
+
+        <li>
+          <button class="msv-nav__dropdown-trigger" aria-haspopup="true" aria-expanded="false">
+            Visas <span class="msv-nav__chevron">▾</span>
+          </button>
+          <div class="msv-nav__dropdown" role="menu">
+            <a href="/non-lucrative-visa-spain/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🏖️</span>Non-Lucrative Visa
+            </a>
+            <a href="/digital-nomad-visa-spain/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">💻</span>Digital Nomad Visa
+            </a>
+            <a href="/student-visa-spain/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🎓</span>Student Visa
+            </a>
+            <div class="msv-nav__dropdown-divider"></div>
+            <a href="/spain-visa-renewal/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🔄</span>Visa Renewals
+            </a>
+            <a href="/best-visa-move-to-spain/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">⚖️</span>Compare All Visas
+            </a>
+          </div>
+        </li>
+
+        <li>
+          <button aria-haspopup="true" aria-expanded="false">
+            Resources <span class="msv-nav__chevron">▾</span>
+          </button>
+          <div class="msv-nav__dropdown" role="menu">
+            <a href="/blog/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">📝</span>Blog &amp; Guides
+            </a>
+            <a href="/spain-visa-checklist/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">✅</span>Document Checklists
+            </a>
+            <a href="/move-to-spain/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🏠</span>Move to Spain Guide
+            </a>
+            <a href="/visa-eligibility-quiz/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🧭</span>Eligibility Quiz
+            </a>
+          </div>
+        </li>
+
+        <li><a href="/about-us/">About Us</a></li>
+        <li><a href="/testimonials/">Reviews</a></li>
+        <li><a href="/contact-us.html">Contact</a></li>
+
+      </ul>
+    </nav>
+
+    <!-- Desktop CTA -->
+    <a href="https://dashboard.platinumlegalspain.com/nlv" class="msv-nav__cta">
+      Start My Application →
+    </a>
+
+    <!-- Hamburger (mobile) -->
+    <button class="msv-nav__burger" aria-label="Open menu" aria-expanded="false" onclick="
+      var m=document.querySelector('.msv-nav__mobile');
+      var open=m.classList.toggle('open');
+      this.setAttribute('aria-expanded', open);
+    ">
+      <span></span><span></span><span></span>
+    </button>
+
+  </div><!-- /.msv-nav__inner -->
+
+  <!-- Mobile menu -->
+  <nav class="msv-nav__mobile" aria-label="Mobile navigation">
+    <a href="/non-lucrative-visa-spain/" class="msv-nav__mobile-sub">Non-Lucrative Visa</a>
+    <a href="/digital-nomad-visa-spain/" class="msv-nav__mobile-sub">Digital Nomad Visa</a>
+    <a href="/student-visa-spain/" class="msv-nav__mobile-sub">Student Visa</a>
+    <a href="/spain-visa-renewal/">Visa Renewals</a>
+    <a href="/best-visa-move-to-spain/">Compare All Visas</a>
+    <a href="/blog/">Blog &amp; Guides</a>
+    <a href="/about-us/">About Us</a>
+    <a href="/testimonials/">Reviews</a>
+    <a href="/contact-us.html">Contact</a>
+    <a href="https://dashboard.platinumlegalspain.com/nlv" class="msv-nav__mobile-cta">Start My Application →</a>
+  </nav>
+
+</header>
+
+
+<!-- ═══════════════════════════════════════════════════
+     PAGE CONTENT (fragment injected here)
+     ═══════════════════════════════════════════════════ -->
+<main>
+<!-- FRAGMENT_START -->
+<!--
+  ──────────────────────────────────────────────────────────────────────────
+  NLV Pension Income — Non-Lucrative Visa Pension Income Requirements
+  myspanishvisa.com — Elementor Full-Width HTML Widget
+  ──────────────────────────────────────────────────────────────────────────
+  Keywords: pension income Spain retirement visa, UK State Pension, US Social Security
+  Parent: /non-lucrative-visa-spain/
+  ────────────────────────────────────────────────────────────────────────── -->
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "NLV Pension Income: Using Pensions for Spain Retirement Visa",
+  "description": "Complete guide to using pension income for Non-Lucrative Visa applications in Spain. Covers UK State Pension, US Social Security, private pensions, military pensions, IPREM thresholds, verification requirements, and tax implications.",
+  "url": "https://myspanishvisa.com/non-lucrative-visa-pension-income/",
+  "publisher": {
+    "@type": "Organization",
+    "name": "My Spanish Visa",
+    "url": "https://myspanishvisa.com"
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://myspanishvisa.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Non-Lucrative Visa",
+        "item": "https://myspanishvisa.com/non-lucrative-visa-spain/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Pension Income",
+        "item": "https://myspanishvisa.com/non-lucrative-visa-pension-income/"
+      }
+    ]
+  },
+  "faqPage": {
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Can I use UK State Pension for NLV application?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, UK State Pension is the most common pension income source for NLV applications. Standard State Pension (£210+ per week) easily meets IPREM thresholds when combined with savings. The Spanish consulate recognizes UK pensions as reliable, passive income."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How much monthly pension income do I need for NLV?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The IPREM threshold for 2024-2025 is €1,440/month (approx £1,225). Couples need €2,160/month. These figures are updated annually. Most UK State Pensions and US Social Security exceed these minimums."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What documents prove my pension income to the Spanish consulate?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Required documents include: official pension statement (last 3 months), annual pension award letter, P60 (UK) or 1099 (US), notarized pension acceptance letter, and bank statements showing regular pension deposits. All documents must be translated to Spanish."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I combine pension income with savings for NLV?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, many applicants combine income sources. If pension falls short of IPREM, you can supplement with savings (€27,360 per person) or passive investment income. The consulate assesses total financial capacity holistically."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I pay Spanish income tax on pension received in Spain?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Foreign pensions are taxed as Spanish-source income at progressive rates (19%-45%). However, Spain has tax treaties with most countries to prevent double taxation. UK-Spain and US-Spain treaties offer relief. Check if you're eligible for Beckham Law non-resident status."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Will my foreign pension be frozen or reduced in Spain?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "UK and US pensions are portable to Spain and continue at full rate. Some countries freeze pensions for residents abroad. Check your specific pension provider's portability policy and Spain's social security agreements with your home country."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What if my pension is below IPREM threshold?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "If your pension falls short, combine it with savings (€27,360+), rental income, or investment returns. The consulate accepts mixed income sources. Alternative: apply for a higher-income visa category (investors, skilled workers) if you have assets above €500k."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does currency exchange affect my pension for NLV?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Pension received in foreign currency is converted to EUR for IPREM assessment. Exchange rates fluctuate; consulates typically use official conversion rates at application time. Hedge risk by maintaining slight buffer above minimum or opening EUR account."
+        }
+      }
+    ]
+  }
+}
+</script>
+<!-- Open Graph / Social -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.myspanishvisa.com/nlv-pension-income/">
+<meta property="og:title" content="My Spanish Visa">
+<meta property="og:description" content="Expert Spain visa guidance for English-speaking expats.">
+<meta property="og:image" content="https://www.myspanishvisa.com/assets/images/og/og-nlv-spain.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="My Spanish Visa">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@myspanishvisa">
+<meta name="twitter:title" content="My Spanish Visa">
+<meta name="twitter:description" content="Expert Spain visa guidance for English-speaking expats.">
+<meta name="twitter:image" content="https://www.myspanishvisa.com/assets/images/og/og-nlv-spain.jpg">
+
+<style>
+/* ── iOS Safari pinch-zoom overflow safety ─────────────────────────── */
+/* Prevents horizontal overflow when users pinch-zoom on iPhone/iPad.   */
+/* Top-level (also paste into theme Custom CSS / Elementor Site Settings) */
+html, body { max-width: 100%; overflow-x: clip; }
+/* Scoped wrapper safety */
+.msv, .msv-nav, .msv-topbar, .msv-footer, .msv-footer-cta,
+.pls-header, .pls-body, .pls-nlv, .pls-dnv, .pls-student {
+  max-width: 100%;
+  overflow-x: clip;
+  position: relative;
+}
+/* Cap all media inside the wrapper */
+.msv img, .msv video, .msv iframe,
+.msv-footer img, .msv-footer video, .msv-footer iframe {
+  max-width: 100%;
+  height: auto;
+}
+/* Never use 100vw — use 100% instead (dev reminder) */
+
+
+/* ── Reset & scope ─────────────────────────────────────────────────── */
+.msv *, .msv *::before, .msv *::after { box-sizing: border-box; margin: 0; padding: 0; }
+/* ── Tokens ──────────────────────────────────────────────────────── */
+.msv {
+  --navy: #0c1930; --navy-mid: #1a3a5c; --red: #be0011; --red-deep: #8c000d;
+  --yellow: #facf39; --cream: #f8f7f4; --white: #ffffff; --black: #1a1a1a;
+  --muted: #5a6478; --border: #dce3ed;
+  --shadow-sm: 0 2px 8px rgba(12,25,48,0.08); --shadow-md: 0 6px 24px rgba(12,25,48,0.13);
+  font-family: 'Inter', 'Segoe UI', system-ui, Arial, sans-serif;
+  font-size: 16px; line-height: 1.75; color: var(--black); width: 100%;
+}
+.msv__container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+.msv__container--narrow { max-width: 780px; margin: 0 auto; padding: 0 2rem; }
+@media (max-width: 640px) { .msv__container, .msv__container--narrow { padding: 0 1.2rem; } }
+/* ── Typography ──────────────────────────────────────────────────── */
+.msv h1 { font-size: clamp(2rem, 4.5vw, 3rem); font-weight: 800; line-height: 1.12; color: var(--white); letter-spacing: -0.025em; margin-bottom: 1.2rem; }
+.msv h2 { font-size: clamp(1.3rem, 2.5vw, 1.75rem); font-weight: 700; color: var(--navy); letter-spacing: -0.01em; margin-bottom: 0.5rem; position: relative; display: inline-block; padding-bottom: 0.5rem; }
+.msv h2::after { content: ''; position: absolute; bottom: 0; left: 0; width: 44px; height: 3px; background: linear-gradient(90deg, var(--red), var(--red-deep)); border-radius: 2px; }
+.msv h3 { font-size: 1.05rem; font-weight: 700; color: var(--navy); margin-bottom: 0.4rem; }
+.msv p { color: var(--black); margin-bottom: 1rem; font-size: 0.97rem; }
+.msv a { color: var(--red); text-decoration: none; }
+.msv a:hover { text-decoration: underline; }
+.msv ul { list-style: none; padding: 0; margin: 0 0 1rem; }
+.msv ul li { padding: 0.35rem 0 0.35rem 1.4rem; position: relative; font-size: 0.95rem; color: var(--black); }
+.msv ul li::before { content: ''; position: absolute; left: 0; top: 0.75rem; width: 7px; height: 7px; background: linear-gradient(135deg, var(--red), var(--red-deep)); border-radius: 50%; }
+/* ── Sections ─────────────────────────────────────────────────── */
+.msv__section { padding: 5rem 0; background: var(--white); }
+.msv__section--cream { padding: 5rem 0; background: linear-gradient(180deg, #f8f7f4 0%, #f2f4f8 100%); }
+.msv__section--dark { padding: 5rem 0; background: linear-gradient(135deg, var(--navy) 0%, #0d2240 55%, #0a1d38 100%); }
+.msv__section--dark h2 { color: var(--white) !important; }
+.msv__section--dark h2::after { background: linear-gradient(90deg, var(--yellow), #e8b820); }
+.msv__section--dark h3 { color: rgba(255,255,255,0.9) !important; }
+.msv .msv__section--dark p, .msv .msv__section--dark li { color: rgba(255,255,255,0.82); }
+.msv__section--dark ul li::before { background: linear-gradient(135deg, var(--yellow), #e8b820); }
+@media (max-width: 640px) { .msv__section, .msv__section--cream, .msv__section--dark { padding: 3.5rem 0; } }
+.msv__section-hd { margin-bottom: 3rem; }
+.msv__section-hd p { color: var(--muted); font-size: 1rem; margin-top: 0.75rem; line-height: 1.7; max-width: 600px; }
+/* ── Animations ──────────────────────────────────────────────────── */
+@keyframes msv-fade-up { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes msv-shimmer {
+  0%   { background-position: -400px 0; }
+  100% { background-position: 400px 0; }
+}
+.msv__shimmer {
+  background: linear-gradient(90deg, var(--yellow) 0%, #e8b820 25%, var(--red) 50%, #e8b820 75%, var(--yellow) 100%);
+  background-size: 400px 100%;
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: msv-shimmer 3.5s linear infinite;
+  display: inline;
+}
+/* ── Hero ─────────────────────────────────────────────────── */
+.msv__hero { background: linear-gradient(135deg, #0c1930 0%, #0f2540 40%, #162d50 70%, #1a3560 100%); padding: 5.5rem 0 5rem; position: relative; overflow: hidden; }
+.msv__hero::before { content: ''; position: absolute; top: -30%; right: -5%; width: 700px; height: 700px; background: radial-gradient(circle, rgba(190,0,17,0.1) 0%, transparent 65%); pointer-events: none; }
+.msv__hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, rgba(250,207,57,0.4), transparent); }
+.msv__hero-inner { max-width: 780px; animation: msv-fade-up 0.7s ease-out both; }
+.msv__eyebrow { display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(190,0,17,0.15); border: 1px solid rgba(190,0,17,0.4); color: #ff6b7a; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.35rem 0.9rem; border-radius: 100px; margin-bottom: 1.5rem; }
+.msv__eyebrow::before { content: ''; width: 6px; height: 6px; background: var(--red); border-radius: 50%; box-shadow: 0 0 6px var(--red); }
+.msv__hero p { color: rgba(255,255,255,0.78) !important; font-size: clamp(1rem, 2.2vw, 1.15rem); max-width: 640px; margin-bottom: 2.2rem; line-height: 1.75; }
+/* ── Breadcrumb ───────────────────────────────────────────── */
+.msv__breadcrumb { padding: 0.85rem 0; border-bottom: 1px solid var(--border); background: var(--white); }
+.msv__breadcrumb-inner { display: flex; align-items: center; gap: 0.5rem; font-size: 0.8rem; color: var(--muted); flex-wrap: wrap; }
+.msv__breadcrumb-inner a { color: var(--red); text-decoration: none; }
+.msv__breadcrumb-inner a:hover { text-decoration: underline; }
+.msv__breadcrumb-inner span { color: var(--muted); }
+/* ── Buttons ─────────────────────────────────────────────────── */
+.msv__btn-group { display: flex; flex-wrap: wrap; gap: 0.85rem; }
+.msv__btn { display: inline-block; padding: 0.85rem 2rem; font-size: 0.92rem; font-weight: 700; border-radius: 6px; text-decoration: none !important; transition: transform 0.15s, box-shadow 0.15s; }
+.msv__btn:hover { transform: translateY(-1px); text-decoration: none !important; }
+.msv .msv__btn--primary { background: linear-gradient(135deg, var(--red) 0%, var(--red-deep) 100%); color: #ffffff !important; box-shadow: 0 4px 16px rgba(190,0,17,0.38); }
+.msv .msv__btn--primary:hover { box-shadow: 0 6px 22px rgba(190,0,17,0.48); color: #ffffff !important; }
+.msv .msv__btn--outline-white { background: transparent; color: #ffffff !important; border: 1.5px solid rgba(255,255,255,0.5); }
+.msv .msv__btn--outline-white:hover { background: rgba(255,255,255,0.1); color: #ffffff !important; }
+/* ── Trust bar ──────────────────────────────────────────────── */
+.msv__trust-bar { background: var(--white); border-bottom: 1px solid var(--border); padding: 1rem 0; box-shadow: var(--shadow-sm); }
+.msv__trust-bar-inner { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.75rem; }
+.msv__trust-item { display: flex; align-items: center; gap: 0.5rem; font-size: 0.82rem; font-weight: 600; color: var(--navy); white-space: nowrap; }
+.msv__trust-item::before { content: ''; width: 7px; height: 7px; background: linear-gradient(135deg, var(--red), var(--red-deep)); border-radius: 50%; flex-shrink: 0; }
+/* ── Key facts strip ─────────────────────────────────────────── */
+.msv__facts { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; margin-bottom: 3rem; }
+@media (max-width: 760px) { .msv__facts { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 420px) { .msv__facts { grid-template-columns: 1fr; } }
+.msv__fact { background: var(--white); padding: 1.5rem 1.3rem; text-align: center; }
+.msv__fact-icon { font-size: 1.5rem; display: block; margin-bottom: 0.5rem; }
+.msv__fact-label { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); display: block; margin-bottom: 0.25rem; }
+.msv__fact-value { font-size: 0.97rem; font-weight: 700; color: var(--navy); line-height: 1.35; display: block; }
+/* ── Alert box ───────────────────────────────────────────────── */
+.msv__alert { border-radius: 10px; padding: 1.3rem 1.5rem; display: flex; gap: 1rem; align-items: flex-start; margin-bottom: 2rem; }
+.msv__alert--warn { background: #fffbea; border: 1px solid #f0d060; }
+.msv__alert--info { background: #eef4ff; border: 1px solid #a0bfff; }
+.msv__alert--red { background: #fef2f2; border: 1px solid #fca5a5; }
+.msv__alert--green { background: #f0fdf4; border: 1px solid #86efac; }
+.msv__alert-icon { font-size: 1.4rem; flex-shrink: 0; margin-top: 0.1rem; }
+.msv__alert p { font-size: 0.9rem; color: var(--black); margin: 0; line-height: 1.65; }
+.msv__alert strong { color: var(--navy); }
+/* ── Cost table ──────────────────────────────────────────────── */
+.msv__cost-table { width: 100%; border-collapse: collapse; font-size: 0.88rem; margin: 2rem 0; }
+.msv__cost-table thead tr { background: var(--navy); }
+.msv__cost-table th { padding: 1rem 1.25rem; text-align: left; color: var(--white); font-weight: 700; border-bottom: 2px solid var(--yellow); white-space: nowrap; }
+.msv__cost-table td { padding: 0.85rem 1.25rem; border-bottom: 1px solid var(--border); color: var(--black); }
+.msv__cost-table tbody tr:nth-child(even) { background: #f9fafb; }
+.msv__cost-table .cost-item { font-weight: 600; color: var(--navy); }
+.msv__cost-table .cost-range { color: var(--muted); font-weight: 600; }
+.msv__cost-table .cost-high { color: var(--red); font-weight: 700; }
+/* ── Cost boxes ──────────────────────────────────────────────── */
+.msv__cost-box { background: var(--white); border: 1.5px solid var(--border); border-radius: 12px; padding: 2rem; margin-bottom: 2rem; text-align: center; }
+.msv__cost-box h3 { font-size: 1rem; margin-bottom: 0.5rem; color: var(--navy); }
+.msv__cost-box .cost-value { font-size: 2rem; font-weight: 800; color: var(--red); margin: 1rem 0; }
+.msv__cost-box .cost-label { font-size: 0.8rem; color: var(--muted); font-weight: 600; }
+.msv__cost-boxes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-bottom: 3rem; }
+@media (max-width: 760px) { .msv__cost-boxes { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 420px) { .msv__cost-boxes { grid-template-columns: 1fr; } }
+/* ── FAQs ────────────────────────────────────────────────– */
+.msv__faq-list { display: flex; flex-direction: column; gap: 0; border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+.msv__faq-list details { border-bottom: 1px solid var(--border); background: var(--white); }
+.msv__faq-list details:last-child { border-bottom: none; }
+.msv__faq-list summary { padding: 1.2rem 1.5rem; font-size: 0.97rem; font-weight: 700; color: var(--navy); cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+.msv__faq-list summary::-webkit-details-marker { display: none; }
+.msv__faq-list summary::after { content: '+'; font-size: 1.3rem; font-weight: 400; color: var(--red); flex-shrink: 0; transition: transform 0.2s; }
+.msv__faq-list details[open] summary::after { transform: rotate(45deg); }
+.msv__faq-list details[open] summary { color: var(--red); }
+.msv__faq-answer { padding: 0 1.5rem 1.3rem; font-size: 0.92rem; color: var(--muted); line-height: 1.75; }
+.msv__faq-answer p { color: var(--muted); font-size: 0.92rem; margin-bottom: 0.75rem; }
+.msv__faq-answer p:last-child { margin-bottom: 0; }
+/* ── CTA band ────────────────────────────────────────────────── */
+.msv__cta-band { background: linear-gradient(135deg, var(--navy) 0%, #0d2240 60%, #0a1d38 100%); padding: 5rem 0; text-align: center; }
+.msv__cta-band h2 { color: var(--white) !important; display: block; }
+.msv__cta-band h2::after { left: 50%; transform: translateX(-50%); background: linear-gradient(90deg, var(--yellow), #e8b820); }
+.msv__cta-band p { color: rgba(255,255,255,0.75) !important; max-width: 560px; margin: 1rem auto 2.2rem; font-size: 1rem; }
+.msv__cta-band .msv__btn-group { justify-content: center; }
+/* ── Related guides ──────────────────────────────────────────── */
+.msv__related { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; }
+@media (max-width: 860px) { .msv__related { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 420px) { .msv__related { grid-template-columns: 1fr; } }
+.msv__related-card { background: var(--white); border: 1px solid var(--border); border-radius: 10px; padding: 1.3rem 1.25rem; text-decoration: none !important; transition: box-shadow 0.2s, transform 0.2s; display: block; }
+.msv__related-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); text-decoration: none !important; }
+.msv__related-icon { font-size: 1.5rem; display: block; margin-bottom: 0.6rem; }
+.msv__related-title { font-size: 0.88rem; font-weight: 700; color: var(--navy); display: block; margin-bottom: 0.3rem; }
+.msv__related-desc { font-size: 0.8rem; color: var(--muted); line-height: 1.55; }
+/* ── Disclaimer ──────────────────────────────────────────────── */
+.msv__disclaimer { background: var(--cream); border-top: 1px solid var(--border); padding: 2rem 0; }
+.msv__disclaimer p { font-size: 0.78rem; color: var(--muted); margin: 0; line-height: 1.65; }
+</style>
+
+<div class="msv">
+  <!-- ── Hero ─────────────────────────────────────────────────── -->
+  <section class="msv__hero">
+    <div class="msv__container">
+      <div class="msv__hero-inner">
+        <div class="msv__eyebrow">Non-Lucrative Visa</div>
+        <h1>Pension Income for Spain Retirement Visa</h1>
+        <p>Complete guide to using pension income—UK State Pension, US Social Security, private pensions, and occupational pensions—to meet Non-Lucrative Visa income requirements. Understand IPREM thresholds, verification, tax implications, and portability.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Breadcrumb ───────────────────────────────────────────── -->
+  <nav class="msv__breadcrumb">
+    <div class="msv__container">
+      <div class="msv__breadcrumb-inner">
+        <a href="/">Home</a>
+        <span>/</span>
+        <a href="/non-lucrative-visa-spain/">Non-Lucrative Visa</a>
+        <span>/</span>
+        <span>Pension Income</span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ── Trust bar ─────────────────────────────────────────────── -->
+  <div class="msv__trust-bar">
+    <div class="msv__container">
+      <div class="msv__trust-bar-inner">
+        <div class="msv__trust-item">Up-to-date 2024-2025 IPREM thresholds</div>
+        <div class="msv__trust-item">Covers UK, US, and international pensions</div>
+        <div class="msv__trust-item">Tax treaty analysis included</div>
+        <div class="msv__trust-item">Consulate-verified requirements</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Key facts ─────────────────────────────────────────────── -->
+  <section class="msv__section">
+    <div class="msv__container--narrow">
+      <div class="msv__facts">
+        <div class="msv__fact">
+          <span class="msv__fact-icon">💶</span>
+          <span class="msv__fact-label">IPREM Single</span>
+          <span class="msv__fact-value">€1,440/month</span>
+        </div>
+        <div class="msv__fact">
+          <span class="msv__fact-icon">👥</span>
+          <span class="msv__fact-label">IPREM Couple</span>
+          <span class="msv__fact-value">€2,160/month</span>
+        </div>
+        <div class="msv__fact">
+          <span class="msv__fact-icon">🇬🇧</span>
+          <span class="msv__fact-label">UK Pension Avg.</span>
+          <span class="msv__fact-value">£210+/week</span>
+        </div>
+        <div class="msv__fact">
+          <span class="msv__fact-icon">📋</span>
+          <span class="msv__fact-label">Documents Required</span>
+          <span class="msv__fact-value">4-6 items</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Main Content ──────────────────────────────────────────── -->
+  <section class="msv__section">
+    <div class="msv__container--narrow">
+      <div class="msv__alert msv__alert--info">
+        <span class="msv__alert-icon">ℹ️</span>
+        <p><strong>Pension income is one of the most straightforward ways to meet Non-Lucrative Visa income requirements.</strong> If you receive a regular, reliable pension from the UK, US, or other countries, you may qualify without needing to demonstrate business income, employment, or complex investments. This guide walks you through everything you need to know.</p>
+      </div>
+
+      <h2>Using Pension Income for NLV Application</h2>
+      <p>The Non-Lucrative Visa in Spain is designed for individuals with passive income sources—pensions are the perfect fit. The Spanish consulate recognizes pensions as dependable, non-employment income that can sustain living expenses. Most applicants with a UK State Pension or US Social Security comfortably exceed the minimum income threshold.</p>
+
+      <p>Pension income counts as <em>passive income</em>, meaning you don't need to be actively working in Spain. The consulate simply verifies that your pension is:</p>
+      <ul>
+        <li>Legitimate and regularly received</li>
+        <li>Sufficient to meet the IPREM minimum (€1,440+ per month for individuals)</li>
+        <li>Portable to Spain (will continue while you reside there)</li>
+        <li>Properly documented with official statements</li>
+      </ul>
+
+      <p>The key advantage: pension income is predictable, verifiable, and rarely subject to consular skepticism. Unlike freelance income or business profits, pension payments are managed by established institutions, making your application straightforward to process.</p>
+
+      <h2>UK State Pension and NLV</h2>
+      <p>The UK State Pension is the most common income source for NLV applicants from Britain. If you've reached State Pension age (68 for most people born after April 1951) and qualify based on National Insurance contributions, your pension is typically sufficient to meet Spanish income requirements on its own.</p>
+
+      <h3>UK State Pension basics</h3>
+      <ul>
+        <li><strong>Full rate (2024-2025):</strong> £220.80 per week (approx. €258/week or €1,112/month)</li>
+        <li><strong>Entry threshold for NLV:</strong> €1,440/month for individuals</li>
+        <li><strong>Conclusion:</strong> A full State Pension alone exceeds the minimum by a comfortable margin</li>
+      </ul>
+
+      <p>If your State Pension is higher due to Additional State Pension or Graduated Retirement Benefit, your income is even stronger. The Spanish consulate accepts the official annual award letter from HMRC (Her Majesty's Revenue and Customs) as primary proof of your pension income.</p>
+
+      <h3>Portability of UK State Pension</h3>
+      <p>UK State Pension is <em>fully portable</em> to Spain. You will continue to receive payments at the full rate while living in Spain (no freezing, unlike some countries). To keep receiving your pension while in Spain, you must:</p>
+      <ul>
+        <li>Maintain contact with the UK Overseas Pension Service</li>
+        <li>Confirm your identity annually (via DWP correspondence)</li>
+        <li>Register with the Spanish Tax Authority (AEAT) for foreign pension income</li>
+      </ul>
+
+      <p>The UK and Spain have a <a href="/non-lucrative-visa-tax-spain/">social security agreement</a> that ensures your pension continues without interruption. However, you will be liable for Spanish income tax on the pension amount (see tax implications section below).</p>
+
+      <h2>US Social Security and NLV</h2>
+      <p>US Social Security (OASDI—Old Age, Survivors, and Disability Insurance) is another excellent income source for NLV applicants. Average retirement benefits (2024) are approximately $1,907 per month, which far exceeds the IPREM threshold of €1,440.</p>
+
+      <h3>US Social Security rates</h3>
+      <ul>
+        <li><strong>Average retiree benefit:</strong> $1,907/month (approx. €1,750)</li>
+        <li><strong>Spousal benefit:</strong> Up to 50% of primary earner's benefit</li>
+        <li><strong>IPREM requirement:</strong> €1,440 (met easily by most applicants)</li>
+      </ul>
+
+      <p>The Spanish consulate accepts a Social Security Benefit Statement (Form SSA-1099) and official award letter as proof. These documents clearly show your monthly benefit amount and are readily obtained from the Social Security Administration.</p>
+
+      <h3>Portability of US Social Security</h3>
+      <p>US Social Security is fully portable to Spain. Unlike some countries, the US does not suspend or reduce benefits for retirees living abroad. You can receive your benefits while a Spanish resident, though you must:</p>
+      <ul>
+        <li>Continue reporting to the US Social Security Administration annually</li>
+        <li>Provide evidence that you're alive (periodic verification required)</li>
+        <li>Pay US income tax on benefits (if you meet the threshold based on combined income)</li>
+      </ul>
+
+      <p>The US-Spain tax treaty prevents double taxation on your benefits. You'll typically pay Spanish income tax at a lower rate and can claim a foreign tax credit in the US, or vice versa depending on your total income and residency status.</p>
+
+      <h2>Private Pensions: Defined Benefit and Defined Contribution</h2>
+      <p>Private pensions—whether from an employer scheme or personal retirement savings—are equally acceptable for NLV purposes. The consulate treats them the same way as state pensions: as legitimate, passive income.</p>
+
+      <h3>Defined Benefit (DB) pensions</h3>
+      <p>A Defined Benefit scheme promises a fixed income based on salary and length of service. Your employer or pension scheme trustee guarantees the payment for life. These are ideal for NLV applications because:</p>
+      <ul>
+        <li>Payments are guaranteed regardless of market conditions</li>
+        <li>Income is fixed and predictable (easier to demonstrate to consulate)</li>
+        <li>Usually portable to Spain without interruption</li>
+        <li>Easier to obtain official statements confirming lifetime payment</li>
+      </ul>
+
+      <p>Example: A former civil servant with a DB pension of £800/month has income of approx. €933, which combined with other sources (savings, spouse's pension) reaches the IPREM threshold.</p>
+
+      <h3>Defined Contribution (DC) pensions</h3>
+      <p>A Defined Contribution scheme (such as a Self-Invested Personal Pension, SIPP, or personal pension) depends on contributions and investment returns. The income you draw depends on how you structure your withdrawals. For NLV purposes, you must demonstrate regular, stable income from your DC pension:</p>
+      <ul>
+        <li><strong>Annuity route:</strong> You've converted your pension pot into a lifetime annuity (guaranteed income)</li>
+        <li><strong>Drawdown route:</strong> You withdraw a regular amount monthly from your pension pot</li>
+        <li><strong>Documentation:</strong> Bank statements showing regular transfers, plus pension provider letter confirming pot size and withdrawal sustainability</li>
+      </ul>
+
+      <p>For DC pensions taken via drawdown, the consulate will scrutinize whether your withdrawals are sustainable long-term. If you have a pot of £200,000 and withdraw £1,500/month, the consulate calculates longevity: at current withdrawal rates, can your pension sustain 30+ years? If the math is tight, combine your pension income with savings to strengthen your application.</p>
+
+      <h2>Military and Government Pensions</h2>
+      <p>If you're a veteran receiving military pension or a former civil servant with government pension, your income qualifies directly for NLV. Military and government pensions are among the most secure income sources:</p>
+
+      <h3>Military pension income</h3>
+      <ul>
+        <li><strong>UK Armed Forces pension:</strong> Usually £300-800+ monthly depending on rank and service length</li>
+        <li><strong>US Military pension:</strong> Average $2,000+ monthly; fully portable to Spain</li>
+        <li><strong>Other NATO countries:</strong> German, French, Dutch military pensions also recognized</li>
+      </ul>
+
+      <p>Military pensions are typically combined with State Pension or Social Security (if eligible), providing strong income documentation. The veteran status itself adds credibility to your application.</p>
+
+      <h3>Civil service and government pensions</h3>
+      <p>Pensions from government agencies (NHS, local government, UK Civil Service, US Federal employees, etc.) are treated identically to military pensions. These are often generous schemes with inflation-linked increases—excellent for demonstrating long-term income stability.</p>
+
+      <h2>Occupational Pensions and Company Schemes</h2>
+      <p>Pensions from your former employer's occupational scheme count fully toward NLV income. Large companies and reputable employers offer pension schemes that are well-recognized by Spanish consulates.</p>
+
+      <h3>How occupational pensions are verified</h3>
+      <ul>
+        <li><strong>Pension statement letter:</strong> Your scheme provider issues an annual statement showing your current payment and expected continuation</li>
+        <li><strong>Scheme details:</strong> Confirmation of whether pension is guaranteed (DB) or linked to investment performance (DC)</li>
+        <li><strong>Bank statements:</strong> 3 months of statements showing regular pension deposits</li>
+        <li><strong>Translation:</strong> All documents translated to Spanish by a certified translator</li>
+      </ul>
+
+      <p>If your occupational pension falls short of IPREM on its own (e.g., early retirement pension or part-time career), combine it with a spouse's income, investment returns, or savings to reach the threshold.</p>
+
+      <h2>Pension Income Verification by Spanish Consulate</h2>
+      <p>The consulate uses a rigorous but straightforward process to verify your pension income. Understand what they're checking:</p>
+
+      <h3>Verification steps</h3>
+      <ol style="list-style: decimal; margin-left: 1.5rem; margin-bottom: 1rem;">
+        <li><strong>Authenticity:</strong> Is the pension letter genuine? Consulates may contact pension providers directly to confirm.</li>
+        <li><strong>Continuity:</strong> Will the pension continue while you're a Spanish resident? (Portability check)</li>
+        <li><strong>Sufficiency:</strong> Does the monthly amount meet IPREM? Is it in writing from the pension provider?</li>
+        <li><strong>Consistency:</strong> Do bank statements show regular deposits matching the stated pension amount?</li>
+        <li><strong>Sustainability:</strong> If drawing from a pension pot (DC drawdown), do calculations show longevity?</li>
+      </ol>
+
+      <p>The consulate will request a <em>notarized letter from your pension provider</em> confirming: (1) your current pension amount, (2) that payments are expected to continue for life (or, for company schemes, the expected duration), and (3) that the pension is portable to Spain.</p>
+
+      <h2>Required Documents for Pension Income Proof</h2>
+      <p>To prove your pension income to the Spanish consulate, gather and translate the following:</p>
+
+      <h3>Essential documents (all required)</h3>
+      <ul>
+        <li><strong>Pension award letter or statement:</strong> Official letter from your pension provider (HMRC for UK State Pension, Social Security Administration for US, or private scheme trustee) showing your monthly/annual pension amount. Current within last 12 months.</li>
+        <li><strong>P60 (UK) or SSA-1099 form (US):</strong> Annual earnings statement from your previous year's tax filing, proving pension income to tax authorities</li>
+        <li><strong>Bank statements (last 3 months):</strong> Bank statements clearly showing regular deposits of your pension amount</li>
+        <li><strong>Notarized pension letter:</strong> A letter from your pension provider (on official letterhead, ideally notarized or certified) stating: your pension amount, expected lifetime duration, and portability to Spain</li>
+      </ul>
+
+      <h3>Supporting documents (highly recommended)</h3>
+      <ul>
+        <li><strong>Tax return (last 2 years):</strong> Your income tax return (Self Assessment in UK, IRS Form 1040 in US) showing declared pension income</li>
+        <li><strong>Pension scheme documentation:</strong> Plan summary, annual statement, or benefit forecast from your pension provider</li>
+        <li><strong>Letter from pension provider confirming portability:</strong> Explicit confirmation that your pension can be received while living in Spain without reduction</li>
+      </ul>
+
+      <h3>Translation and certification</h3>
+      <p>All documents must be translated to Spanish by a <em>certified translator</em> (traductor jurado). The Spanish consulate will not accept photocopies of originals; you may need to provide certified copies (a notary or your bank can certify them). Budget €20-50 per document for professional translation.</p>
+
+      <h2>IPREM Thresholds: Does Your Pension Meet the Minimum?</h2>
+      <p>The IPREM (Índice Público de Renta de Efectos Múltiples) is the Spanish income threshold for social benefits and legal purposes. For NLV purposes, the relevant figures (2024-2025) are:</p>
+
+      <h3>Current IPREM thresholds</h3>
+      <ul>
+        <li><strong>Single applicant:</strong> €1,440/month or €17,280/year</li>
+        <li><strong>Married couple or cohabiting partners:</strong> €2,160/month or €25,920/year</li>
+        <li><strong>Each additional family member:</strong> +€432/month</li>
+      </ul>
+
+      <p>These thresholds are updated annually (usually January). The consulate assesses your income as of your application date; if IPREM rises between your pre-assessment and official application, you must meet the new threshold. Check the official IPREM website (www.boe.es) for current rates before submitting your application.</p>
+
+      <h3>Does a typical UK State Pension meet IPREM?</h3>
+      <ul>
+        <li><strong>Full UK State Pension (2024-2025):</strong> £220.80/week = approx. €258/week = €1,112/month</li>
+        <li><strong>IPREM requirement:</strong> €1,440/month</li>
+        <li><strong>Shortfall:</strong> €328/month</li>
+      </ul>
+
+      <p>As you see, a standard UK State Pension alone falls short of the full IPREM threshold by roughly €328/month. However, most applicants supplement this with additional sources (see next section).</p>
+
+      <h3>Does a typical US Social Security benefit meet IPREM?</h3>
+      <ul>
+        <li><strong>Average US Social Security (2024):</strong> $1,907/month = approx. €1,750/month</li>
+        <li><strong>IPREM requirement:</strong> €1,440/month</li>
+        <li><strong>Surplus:</strong> €310/month</li>
+      </ul>
+
+      <p>A typical US Social Security benefit comfortably exceeds the IPREM threshold, often by 15-20%. Most US retirees easily qualify with Social Security alone, though adding savings or supplemental income strengthens the application.</p>
+
+      <h2>What If Your Pension Falls Short of IPREM?</h2>
+      <p>If your pension alone doesn't reach the IPREM threshold, you can combine it with other income or assets. The consulate accepts a <em>total financial capacity</em> assessment rather than requiring a single income source to meet the threshold.</p>
+
+      <h3>Supplementing pension income with savings</h3>
+      <p>The <a href="/non-lucrative-visa-savings-requirements/">savings requirement</a> for NLV is a one-time reserve of:</p>
+      <ul>
+        <li><strong>Individual:</strong> €27,360</li>
+        <li><strong>Couple:</strong> €41,040</li>
+      </ul>
+
+      <p>If your pension is €1,200/month (€240 short of IPREM), you can satisfy the income requirement with:</p>
+      <ul>
+        <li>Your pension: €1,200/month</li>
+        <li>Investment income from savings: €240+/month (on €27,360 at 11% gross yield, or higher-yield investments)</li>
+      </ul>
+
+      <p>The consulate accepts bank statements showing interest or investment returns that bridge the gap. Ensure your savings account or investment statement clearly demonstrates the income generated.</p>
+
+      <h3>Combining pension with other passive income</h3>
+      <ul>
+        <li><strong>Rental income:</strong> Lease property in your home country and receive rental payments; include lease agreement and bank deposits as proof</li>
+        <li><strong>Interest from savings:</strong> Bank accounts earning interest; show bank statements with clearly itemized interest</li>
+        <li><strong>Investment returns:</strong> Dividends, bond interest, or ETF distributions; provide investment statements and brokerage confirmations</li>
+        <li><strong>Spouse's pension or income:</strong> If married or in a recognized partnership, combine your income with your spouse's pension (e.g., two UK State Pensions = €2,224/month, well above the €2,160 couple threshold)</li>
+      </ul>
+
+      <h3>Demonstrating combined income</h3>
+      <p>When combining income sources, provide:</p>
+      <ul>
+        <li>Separate pension letters for each source</li>
+        <li>A summary page (in Spanish) listing all income sources and their monthly total</li>
+        <li>6 months of bank statements showing regular deposits from all sources</li>
+        <li>Tax returns (if applicable) showing combined income</li>
+      </ul>
+
+      <p>The consulate will add up your total monthly income and compare it to IPREM. As long as the combined total exceeds the threshold, your application is strengthened.</p>
+
+      <h2>Currency Conversion and Exchange Rate Risk</h2>
+      <p>If your pension is paid in a currency other than EUR (British pounds, US dollars, etc.), the consulate will convert it to euros for IPREM assessment. This introduces exchange rate risk: if your home currency weakens significantly, your euro equivalent may dip below the threshold.</p>
+
+      <h3>Exchange rate strategy</h3>
+      <ul>
+        <li><strong>Official conversion rate:</strong> The consulate uses the official exchange rate at the time of assessment (from ECB or similar authority), not the rate you receive from your bank</li>
+        <li><strong>Buffer strategy:</strong> Maintain a 10-15% buffer above IPREM (€1,615+ for individuals) to protect against currency fluctuations</li>
+        <li><strong>Currency account:</strong> Open a EUR bank account before moving to Spain and request your pension provider transfer payments in euros to avoid conversion fees and rate fluctuations on each transfer</li>
+      </ul>
+
+      <p>For example, if you have £1,200/month (€1,400 at current rates), a weakening pound could reduce your euro amount. If the pound drops 5%, your income becomes €1,330—still above IPREM, but with less margin. Many applicants request their pension provider pay directly into a EUR account to lock in rates and eliminate recurring conversion risk.</p>
+
+      <h2>Tax Implications of Receiving Pension in Spain</h2>
+      <p>Once you're a Spanish resident, your foreign pension becomes subject to Spanish income tax. Here's what you need to understand:</p>
+
+      <h3>Spanish income tax on foreign pensions</h3>
+      <ul>
+        <li><strong>Tax status:</strong> Foreign pensions are classified as earned income (though technically passive) and taxed at progressive rates</li>
+        <li><strong>Tax rates (2024):</strong> 19% (€0-12,450), 24% (€12,451-20,200), 30% (€20,201-35,200), 37% (€35,201-60,000), 45% (€60,000+)</li>
+        <li><strong>Filing requirement:</strong> Spanish residents must file a tax return (declaración de la renta) if their pension income exceeds €22,000/year (for non-residents it's lower)</li>
+      </ul>
+
+      <p>Important: These are Spanish tax brackets as of 2024; rates change annually. Consult a Spanish tax advisor for exact liability based on your income level.</p>
+
+      <h3>Double taxation risk</h3>
+      <p>You may face tax in both your home country and Spain on the same pension. However, Spain has tax treaties with most countries to prevent this double taxation:</p>
+
+      <h4>UK-Spain tax treaty</h4>
+      <p>The treaty typically allocates pension taxation based on where you reside (Spain, in your case). As a Spanish resident, you pay Spanish tax on your UK pension, and the UK provides a <em>foreign tax credit</em> so you're not taxed twice. Practically, you'll pay Spanish tax and won't pay UK tax on the pension (though you may have other UK-taxable income).</p>
+
+      <h4>US-Spain tax treaty</h4>
+      <p>The US-Spain treaty allows Spain to tax your Social Security and US pension income. As a Spanish resident, you pay Spanish income tax on the full amount. You also report to the IRS, but US tax is calculated on your worldwide income minus foreign taxes paid (the foreign earned income exclusion doesn't typically apply to pensions, but the treaty provides relief).</p>
+
+      <h3>Other major tax treaties</h3>
+      <ul>
+        <li><strong>Canada-Spain:</strong> Pensions taxed by country of residence; Spain taxes your Canadian pension</li>
+        <li><strong>Ireland-Spain:</strong> Pension income taxed by country of residence</li>
+        <li><strong>Australia-Spain:</strong> Pensions taxable by Spain for Spanish residents</li>
+      </ul>
+
+      <p>Check the specific treaty between your home country and Spain (available on Spain's Tax Agency website, www.aeat.es, in the treaties section).</p>
+
+      <h2>Beckham Law and Non-Resident Tax Status</h2>
+      <p>Spain's "Beckham Law" (Régimen Especial de Residentes No Habituales, or RENH) is a non-resident tax status for newly arrived individuals. If you qualify, you can opt to be taxed as a non-resident for the first 4 years, which can reduce your tax burden on foreign pensions.</p>
+
+      <h3>Beckham Law basics</h3>
+      <ul>
+        <li><strong>Eligibility:</strong> Non-resident of Spain in the previous 5 years; valid residence permit in Spain</li>
+        <li><strong>Foreign pension treatment:</strong> Taxed at fixed rates (typically lower than Spanish resident rates) or at source country rates, depending on your pension type</li>
+        <li><strong>Duration:</strong> Up to 4 years from the year you become a Spanish resident</li>
+        <li><strong>Filing:</strong> Requires formal election with Spanish Tax Agency; not automatic</li>
+      </ul>
+
+      <p>For many NLV applicants, Beckham Law offers significant savings on pension taxes in early retirement years. A UK State Pension or US Social Security, when taxed under Beckham Law, may have lower Spanish tax than if you're assessed as a full resident. Consult a Spanish tax advisor about whether electing Beckham Law status benefits you.</p>
+
+      <h2>Pension Portability by Country</h2>
+      <p>Not all pensions are equally portable. Before committing to Spain, verify that your pension will continue uninterrupted while you reside there.</p>
+
+      <h3>UK pensions</h3>
+      <ul>
+        <li><strong>UK State Pension:</strong> Fully portable; continues at full rate in Spain (not frozen)</li>
+        <li><strong>Private pensions (DB/DC):</strong> Generally portable; check with your scheme trustee</li>
+        <li><strong>Occupational pensions:</strong> Usually portable; some schemes have restrictions for certain countries</li>
+      </ul>
+
+      <p>The key rule: UK pensions are portable to Spain unless your pension scheme explicitly prohibits payment to Spain-resident beneficiaries. This is rare, but check your pension document's scheme rules. Contact your pension provider with a simple question: "Can I receive my pension while residing in Spain?" A yes confirms portability.</p>
+
+      <h3>US pensions</h3>
+      <ul>
+        <li><strong>Social Security:</strong> Fully portable; continues to US residents abroad</li>
+        <li><strong>Military pension:</strong> Fully portable; received anywhere</li>
+        <li><strong>Federal employee pension:</strong> Fully portable</li>
+        <li><strong>Private pensions/IRAs:</strong> Portable, but check withdrawal restrictions with your plan administrator</li>
+      </ul>
+
+      <p>The US does not suspend or reduce payments for retirees abroad (unlike some countries, e.g., Vietnam, which freezes pensions for residents). Expect annual correspondence from Social Security asking you to confirm your continued eligibility (you'll provide a statement from your Spanish local government confirming your residency).</p>
+
+      <h3>Other countries' pension portability</h3>
+      <ul>
+        <li><strong>Canada:</strong> CPP and OAS fully portable to Spain; no reduction</li>
+        <li><strong>Ireland:</strong> State pension fully portable; private pensions portable unless scheme restricts</li>
+        <li><strong>Australia:</strong> Age Pension portable to Spain under a bilateral agreement</li>
+        <li><strong>Germany, France, Netherlands:</strong> State pensions portable to Spain under EU coordination rules (even post-Brexit for some, depending on residence)</li>
+      </ul>
+
+      <p>If your pension is from a country not listed here, contact your pension provider directly. They'll provide a clear answer on Spain portability. Some smaller countries or very old pension schemes may have restrictions; if so, you'll need to maintain a bank account in your home country or arrange international transfers. However, this doesn't prevent you from receiving the pension—it just affects the logistics.</p>
+
+      <h2>Common Pension-Related Rejection Issues</h2>
+      <p>While pension income is generally strong for NLV applications, consulates do reject some applications. Learn the most common issues and how to avoid them:</p>
+
+      <h3>Insufficient documentation</h3>
+      <p>The most common reason for rejection: insufficient or unclear documentation. Examples:</p>
+      <ul>
+        <li><strong>Outdated pension letter:</strong> Submitting a statement from 2 years ago; provide a letter dated within the last 6-12 months</li>
+        <li><strong>Unsigned or uncertified letter:</strong> The consulate requires an official letterhead and signature (or better, a notarized/certified letter); print-outs of online pension statements may not suffice</li>
+        <li><strong>No proof of regular receipt:</strong> Bank statements don't show pension deposits; the consulate may suspect the pension is not actually being received. Provide 6+ months of statements clearly showing regular deposits.</li>
+      </ul>
+
+      <h3>Pension amount unclear or ambiguous</h3>
+      <p>Your pension letter states an annual amount, but the consulate expects a monthly figure. Translation errors, unclear currency symbols, or confusing formatting can lead to rejection. Ensure:</p>
+      <ul>
+        <li>Pension amount is crystal clear in the original and translated documents</li>
+        <li>Currency is explicitly stated (GBP, USD, EUR, etc.)</li>
+        <li>Monthly and annual figures are both provided</li>
+        <li>Translation is performed by a certified translator (traductor jurado) in your country of application (e.g., if applying at the Madrid consulate, get a translator certified in Spain)</li>
+      </ul>
+
+      <h3>Portability not confirmed</h3>
+      <p>The consulate wants assurance your pension won't be cut off once you move to Spain. If your pension letter doesn't explicitly state that payments will continue in Spain, obtain a separate letter from your pension provider confirming portability. This is especially important for private occupational pensions or older schemes.</p>
+
+      <h3>Income below IPREM (without supplementation)</h3>
+      <p>If your pension is €1,300/month and you're applying as a single person, you're below the €1,440 threshold. The consulate may reject you outright, or request proof of supplementary income. Avoid this by:</p>
+      <ul>
+        <li>Calculating your combined income (pension + savings interest + spouse's income) <em>before</em> applying</li>
+        <li>Submitting documentation for all income sources simultaneously</li>
+        <li>Including a summary page (in Spanish) with total monthly income clearly calculated</li>
+      </ul>
+
+      <h3>Bank statements don't match pension amount</h3>
+      <p>Your pension letter states €1,500/month, but your bank statements show deposits of €1,300 in some months and €1,700 in others. This discrepancy raises red flags: Is the pension reliable? The consulate may reject until you explain (e.g., the difference is dividend income, currency conversion fluctuations, or adjustments for tax). Provide a clear explanation and ideally evidence of why the variance occurs.</p>
+
+      <h3>Foreign pension not recognized or seems fraudulent</h3>
+      <p>If your pension is from a small, obscure pension provider or a country with which Spain has no social security agreement, the consulate may scrutinize more heavily or ask for additional verification (e.g., a bank reference, direct contact with the pension provider). Mitigate by:</p>
+      <ul>
+        <li>Providing multiple supporting documents (tax returns, bank statements over 12 months, pension scheme rules)</li>
+        <li>Including a letter from your pension provider explaining the scheme details and guaranteeing portability</li>
+        <li>If possible, arranging a notarized letter from the pension provider confirming your eligibility and ongoing payments</li>
+      </ul>
+
+      <h3>Age and longevity concerns (for DC drawdown pensions)</h3>
+      <p>If you're drawing from a Defined Contribution pension via drawdown, the consulate may calculate whether your pot will sustain your withdrawals to your life expectancy. If the math is tight (you're 70, have a €300k pot, withdrawing €2,000/month—that's 12.5 years), the consulate may reject because your savings won't sustain you long-term. Address this by:</p>
+      <ul>
+        <li>Including supplementary income (partner's pension, rental income)</li>
+        <li>Including an annuity quote showing how much guaranteed income you could purchase</li>
+        <li>Providing savings (€27k+) to serve as a buffer if the pension pot depletes</li>
+      </ul>
+
+      <h2>Pension Income FAQ Accordion</h2>
+      <div class="msv__faq-list">
+        <details>
+          <summary>Can I use UK State Pension alone for NLV, or do I need supplementary income?</summary>
+          <div class="msv__faq-answer">
+            <p>It depends on the exact amount. A full UK State Pension (2024-2025: £220.80/week = €1,112/month) falls short of the IPREM threshold of €1,440/month by about €328. However, if you also have an Additional State Pension, a private occupational pension, or investment income, combined income will likely exceed IPREM. Alternatively, if you have savings of €27,360+, the consulate accepts a combined assessment of pension + savings interest. Many applicants use UK State Pension as the base and add modest supplementary income or savings to meet the threshold.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>How does the consulate verify my pension is genuine?</summary>
+          <div class="msv__faq-answer">
+            <p>The consulate verifies through multiple steps: (1) official pension provider letter (on letterhead, ideally notarized), (2) bank statements showing regular deposits matching the stated pension amount, (3) tax returns (P60, 1099, or IRS Form 1040) showing the same income, and (4) sometimes direct contact with the pension provider. Providing multiple, consistent sources of evidence (pension letter + bank statements + tax return) makes forgery very difficult and builds consular confidence.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>What if my pension is paid in pounds/dollars? How is it converted to euros?</summary>
+          <div class="msv__faq-answer">
+            <p>The consulate uses an official exchange rate (from the ECB or the rate in effect on your assessment date) to convert foreign currency to euros. For example, if your pension is £1,200 and the GBP/EUR rate is 1.17, your euro equivalent is €1,404. This introduces exchange rate risk; if the pound weakens, your euro amount may drop. Mitigation strategies: (1) maintain a 10-15% buffer above IPREM to protect against currency fluctuations, (2) request your pension provider transfer payments directly to your Spanish EUR bank account (avoiding conversion fees and locking in a single conversion), or (3) combine your pension with euro-denominated savings or investments.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>My UK pension has a guaranteed minimum income. Does that count toward IPREM?</summary>
+          <div class="msv__faq-answer">
+            <p>Yes. If your occupational pension scheme guarantees a minimum income (e.g., "minimum €1,200/month regardless of fund performance"), the consulate accepts the guaranteed amount as your demonstrable income. Provide the pension scheme documentation and the pension provider's letter stating the guaranteed minimum. This is particularly valuable for DB schemes and annuities, which offer strong consular confidence.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Can I use a pension I haven't started drawing yet?</summary>
+          <div class="msv__faq-answer">
+            <p>No. The consulate requires proof of actual, regular income. A pension you haven't yet activated or claimed doesn't count. However, if you're eligible to claim a pension (e.g., you've reached State Pension age but haven't applied yet), you can claim it specifically for your NLV application, then provide evidence of the first payments via bank statements. Alternatively, if you're not yet eligible to claim, consider deferring your NLV application until you reach pension age, or combine other income sources (savings, investments, work income) to meet IPREM in the meantime.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Do I need to translate my pension documents into Spanish?</summary>
+          <div class="msv__faq-answer">
+            <p>Yes. All pension documents must be translated to Spanish by a certified translator (traductor jurado). This includes your pension letter, P60, 1099, tax returns, and bank statements if they're originally in English or another language. Budget €20-50 per document for professional translation. Some consulates provide a list of approved translators; others allow you to choose. Always use a translator who is officially certified in the country where you're applying (e.g., if at Madrid consulate, a translator certified in Spain).</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>What if my pension drops below IPREM after I'm granted the visa?</summary>
+          <div class="msv__faq-answer">
+            <p>The NLV is granted based on your income at application time. If your pension later decreases (e.g., due to inflation adjustment, early withdrawal penalty, or scheme rule change), the consulate doesn't automatically revoke your visa. However, renewal could be at risk. To protect yourself: (1) when renewing, ensure your income still meets IPREM (or combine with other sources), (2) maintain savings above the €27,360 threshold as a buffer, and (3) keep supplementary income sources stable (rental income, investments). In practice, pension reductions are rare; most schemes increase pensions with inflation. Focus on maintaining your current income and building supplementary sources over time.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Can my spouse's pension count toward IPREM, or only my own?</summary>
+          <div class="msv__faq-answer">
+            <p>Both spouses' pensions count. If you're applying as a married couple, the IPREM threshold is €2,160/month (50% higher than the individual threshold). Both your pensions are summed. For example, if you have a UK State Pension of €1,112/month and your spouse has a US Social Security of €1,750/month, your combined income is €2,862—well above the €2,160 couple requirement. This is one of the strongest applications for couples. Ensure you provide pension documentation for both spouses and clearly label the combined income in your application.</p>
+          </div>
+        </details>
+      </div>
+
+      <h2>Alert: Documenting Pension Income Properly</h2>
+      <div class="msv__alert msv__alert--warn">
+        <span class="msv__alert-icon">⚠️</span>
+        <p><strong>Common mistake:</strong> Submitting informal bank statements or printouts of online pension accounts. The consulate expects <em>official documents</em> from the pension provider (on letterhead, dated, signed). Request a formal pension award letter or annual statement from your provider rather than relying on screenshots. If your provider only offers online access, obtain a printed version from your account, or call and request an official letter for immigration purposes. Many providers will issue a certified letter at no cost if you explain its purpose.</p>
+      </div>
+
+      <h2>CTA Section: Verify Your Pension Income Now</h2>
+    </div>
+  </section>
+
+  <!-- ── CTA Band ─────────────────────────────────────────────── -->
+  <section class="msv__cta-band">
+    <div class="msv__container">
+      <h2>Check Your NLV Eligibility with Your Pension Income</h2>
+      <p>Use our interactive eligibility checker to see if your pension, combined with your savings or other income, meets the IPREM threshold for your situation (individual, couple, dependents).</p>
+      <div class="msv__btn-group">
+        <a href="https://dashboard.platinumlegalspain.com/nlv" class="msv__btn msv__btn--primary">Check Eligibility Now</a>
+        <a href="/non-lucrative-visa-spain/" class="msv__btn msv__btn--outline-white">Back to NLV Guide</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Related Guides ───────────────────────────────────────── -->
+  <section class="msv__section">
+    <div class="msv__container">
+      <h2 style="margin-bottom: 2rem;">Related Guides and Resources</h2>
+      <div class="msv__related">
+        <a href="/non-lucrative-visa-spain/" class="msv__related-card">
+          <span class="msv__related-icon">🇪🇸</span>
+          <span class="msv__related-title">Non-Lucrative Visa Spain</span>
+          <span class="msv__related-desc">Complete guide to the Spanish retirement visa, eligibility, and application process.</span>
+        </a>
+        <a href="/non-lucrative-visa-income-requirements/" class="msv__related-card">
+          <span class="msv__related-icon">💰</span>
+          <span class="msv__related-title">Income Requirements</span>
+          <span class="msv__related-desc">IPREM thresholds, passive income sources, and proof requirements for 2024-2025.</span>
+        </a>
+        <a href="/non-lucrative-visa-savings-requirements/" class="msv__related-card">
+          <span class="msv__related-icon">🏦</span>
+          <span class="msv__related-title">Savings Requirements</span>
+          <span class="msv__related-desc">Required savings amounts and how to demonstrate liquid assets to the consulate.</span>
+        </a>
+        <a href="/non-lucrative-visa-passive-income/" class="msv__related-card">
+          <span class="msv__related-icon">📊</span>
+          <span class="msv__related-title">Passive Income Sources</span>
+          <span class="msv__related-desc">Rental income, investments, dividends, and other passive income for NLV.</span>
+        </a>
+        <a href="/non-lucrative-visa-tax-spain/" class="msv__related-card">
+          <span class="msv__related-icon">📋</span>
+          <span class="msv__related-title">Tax Implications</span>
+          <span class="msv__related-desc">Spanish income tax, tax treaties, Beckham Law, and pension taxation.</span>
+        </a>
+        <a href="/non-lucrative-visa-documents/" class="msv__related-card">
+          <span class="msv__related-icon">📄</span>
+          <span class="msv__related-title">Required Documents</span>
+          <span class="msv__related-desc">Complete document checklist for NLV applications at Spanish consulates.</span>
+        </a>
+        <a href="/non-lucrative-visa-uk/" class="msv__related-card">
+          <span class="msv__related-icon">🇬🇧</span>
+          <span class="msv__related-title">NLV for UK Citizens</span>
+          <span class="msv__related-desc">UK-specific guidance, tax treaties, and visa renewal for British applicants.</span>
+        </a>
+        <a href="/non-lucrative-visa-americans/" class="msv__related-card">
+          <span class="msv__related-icon">🇺🇸</span>
+          <span class="msv__related-title">NLV for Americans</span>
+          <span class="msv__related-desc">US-specific guidance, Social Security, taxes, and FATCA reporting.</span>
+        </a>
+        <a href="/non-lucrative-visa-health-insurance/" class="msv__related-card">
+          <span class="msv__related-icon">🏥</span>
+          <span class="msv__related-title">Health Insurance</span>
+          <span class="msv__related-desc">Approved providers, no-copay rules, and costs by age group.</span>
+        </a>
+        <a href="/non-lucrative-visa-cost/" class="msv__related-card">
+          <span class="msv__related-icon">💷</span>
+          <span class="msv__related-title">NLV Costs & Fees</span>
+          <span class="msv__related-desc">Full cost breakdown for your NLV application.</span>
+        </a>
+        <a href="/non-lucrative-visa-application-process/" class="msv__related-card">
+          <span class="msv__related-icon">📝</span>
+          <span class="msv__related-title">Application Process</span>
+          <span class="msv__related-desc">Step-by-step guide from consulate booking to visa stamp.</span>
+        </a>
+        <a href="/non-lucrative-visa-renewal/" class="msv__related-card">
+          <span class="msv__related-icon">🔄</span>
+          <span class="msv__related-title">NLV Renewal</span>
+          <span class="msv__related-desc">How to renew your visa — income proof, documents, timeline.</span>
+        </a>
+        <a href="/non-lucrative-visa-timeline/" class="msv__related-card">
+          <span class="msv__related-icon">⏱️</span>
+          <span class="msv__related-title">NLV Timeline</span>
+          <span class="msv__related-desc">Processing times and realistic planning calendar.</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+<!-- FRAGMENT_END -->
+</main>
+
+
+<!-- ═══════════════════════════════════════════════════
+     SITE FOOTER
+     ═══════════════════════════════════════════════════ -->
+<footer class="msv-footer" role="contentinfo">
+
+  <div class="msv-footer__top">
+
+    <!-- Brand column -->
+    <div class="msv-footer__brand">
+      <a href="/" class="msv-footer__logo" aria-label="My Spanish Visa"><img src="/assets/images/msv-logo-white.png" alt="My Spanish Visa" height="40" style="display:block;"></a>
+      <p class="msv-footer__tagline">
+        Specialist Spain visa &amp; residency guidance for English-speaking foreigners.
+        A service of Platinum Legal Spain.
+      </p>
+      <div class="msv-footer__trust">
+        <span class="msv-footer__trust-item">All English. No barriers.</span>
+        <span class="msv-footer__trust-item">Solicitors &amp; immigration specialists</span>
+        <span class="msv-footer__trust-item">100% online process</span>
+      </div>
+    </div>
+
+    <!-- Visas column -->
+    <div>
+      <div class="msv-footer__col-title">Visas</div>
+      <ul class="msv-footer__links">
+        <li><a href="/non-lucrative-visa-spain/">Non-Lucrative Visa</a></li>
+        <li><a href="/digital-nomad-visa-spain/">Digital Nomad Visa</a></li>
+        <li><a href="/student-visa-spain/">Student Visa</a></li>
+        <li><a href="/spain-visa-renewal/">Visa Renewals</a></li>
+        <li><a href="/best-visa-move-to-spain/">Compare All Visas</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/nlv">Apply: NLV</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/dnv">Apply: DNV</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/student-visa">Apply: Student Visa</a></li>
+      </ul>
+    </div>
+
+    <!-- Resources column -->
+    <div>
+      <div class="msv-footer__col-title">Resources</div>
+      <ul class="msv-footer__links">
+        <li><a href="/blog/">Blog &amp; Guides</a></li>
+        <li><a href="/move-to-spain/">Move to Spain Guide</a></li>
+        <li><a href="/visa-eligibility-quiz/">Eligibility Quiz</a></li>
+        <li><a href="/spain-visa-checklist/">Document Checklists</a></li>
+        <li><a href="/spain-visa-requirements/">Visa Requirements</a></li>
+        <li><a href="/spain-nie-number/">NIE Number Guide</a></li>
+        <li><a href="/spain-tie-card/">TIE Card Guide</a></li>
+      </ul>
+    </div>
+
+    <!-- Company column -->
+    <div>
+      <div class="msv-footer__col-title">Company</div>
+      <ul class="msv-footer__links">
+        <li><a href="/about-us/">About Us</a></li>
+        <li><a href="/testimonials/">Client Reviews</a></li>
+        <li><a href="/why-choose-us/">Why Choose Us</a></li>
+        <li><a href="/contact-us.html">Contact</a></li>
+        <li><a href="https://www.platinumlegalspain.com" rel="noopener">Platinum Legal Spain</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/nlv">Client Portal</a></li>
+      </ul>
+    </div>
+
+  </div><!-- /.msv-footer__top -->
+
+  <div class="msv-footer__bottom">
+    <div class="msv-footer__bottom-inner">
+      <p class="msv-footer__disclaimer">
+        <strong style="color:rgba(255,255,255,0.5);">Disclaimer:</strong>
+        My Spanish Visa provides visa processing support and is not a law firm. Content on this site is for informational purposes only and does not constitute legal advice. Immigration rules change frequently — always verify requirements with official sources or a qualified specialist. My Spanish Visa is a trading name of Platinum Legal Spain.
+      </p>
+      <span class="msv-footer__copyright">© 2026 My Spanish Visa. All rights reserved.</span>
+    </div>
+  </div>
+
+</footer>
+
+</body>
+</html>

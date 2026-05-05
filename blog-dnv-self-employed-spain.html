@@ -1,0 +1,1109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="dns-prefetch" href="https://js-eu1.hsforms.net">
+  <link rel="dns-prefetch" href="https://dashboard.platinumlegalspain.com">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- ═══════════════════════════════════════════════════════════════════
+       PAGE-SPECIFIC HEAD — replace block below per page:
+       <title>Blog Dnv Self Employed Spain | My Spanish Visa</title>
+       <meta name="description" content="…">
+       <meta property="og:title" content="…">
+       <meta property="og:description" content="…">
+       <meta property="og:url" content="https://www.myspanishvisa.com/…">
+       <meta property="og:image" content="…">
+       <link rel="canonical" href="https://www.myspanishvisa.com/blog/dnv-self-employed-spain/">>
+       <script type="application/ld+json">…</script>
+       ═══════════════════════════════════════════════════════════════════ -->
+  <title>DNV as a Freelancer: Self-Employed Guide | My Spanish Visa</title>
+  <meta name="description" content="DNV as a Freelancer: Self-Employed Guide. Practical advice for English-speaking foreigners moving to Spain.">
+  <link rel="canonical" href="https://www.myspanishvisa.com/blog/dnv-self-employed-spain/">
+
+  <!-- Shared Open Graph defaults -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="My Spanish Visa">
+  <meta property="og:image" content="https://www.myspanishvisa.com/assets/images/og/og-myspanishvisa-default.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@myspanishvisa">
+
+  <style>
+/* ═══════════════════════════════════════════════════════════════
+   GLOBAL SHELL — nav + footer only.
+   Page-specific CSS lives inside each fragment's own <style> block.
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── iOS overflow safety ── */
+html, body { max-width: 100%; overflow-x: clip; margin: 0; padding: 0; }
+*, *::before, *::after { box-sizing: border-box; }
+
+/* ── Brand tokens (root-level so all fragments inherit) ── */
+:root {
+  --navy:      #0c1930;
+  --navy-mid:  #1a3a5c;
+  --red:       #be0011;
+  --red-deep:  #8c000d;
+  --yellow:    #facf39;
+  --cream:     #f8f7f4;
+  --white:     #ffffff;
+  --black:     #1a1a1a;
+  --muted:     #5a6478;
+  --border:    #dce3ed;
+  --shadow-sm: 0 2px 8px rgba(12,25,48,0.08);
+  --shadow-md: 0 6px 24px rgba(12,25,48,0.13);
+}
+
+body {
+  font-family: 'Inter', 'Segoe UI', system-ui, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.75;
+  color: var(--black);
+  background: #fff;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   SITE NAV
+   ───────────────────────────────────────────────────────────── */
+.msv-nav {
+  position: sticky;
+  top: 0;
+  z-index: 9000;
+  background: var(--navy);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 2px 12px rgba(12,25,48,0.22);
+}
+.msv-nav__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 90px;
+  gap: 1.5rem;
+}
+
+/* Logo */
+.msv-nav__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+.msv-nav__logo-flag {
+  font-size: 1.3rem;
+  line-height: 1;
+}
+.msv-nav__logo-text {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+.msv-nav__logo-text span {
+  color: var(--yellow);
+}
+
+/* Links */
+.msv-nav__links {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.msv-nav__links > li {
+  position: relative;
+}
+.msv-nav__links > li > a,
+.msv-nav__links > li > button {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.5rem 0.9rem;
+  font-size: 0.87rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.85);
+  text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: color 0.15s, background 0.15s;
+  white-space: nowrap;
+  height: 90px;
+}
+.msv-nav__links > li > a:hover,
+.msv-nav__links > li > button:hover,
+.msv-nav__links > li:focus-within > a,
+.msv-nav__links > li:focus-within > button {
+  color: #fff;
+  background: rgba(255,255,255,0.08);
+}
+.msv-nav__chevron {
+  font-size: 0.65rem;
+  opacity: 0.7;
+  transition: transform 0.2s;
+}
+.msv-nav__links > li:focus-within .msv-nav__chevron,
+.msv-nav__links > li:hover .msv-nav__chevron {
+  transform: rotate(180deg);
+}
+
+/* Dropdown */
+.msv-nav__dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 230px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  box-shadow: var(--shadow-md);
+  padding: 0.5rem 0;
+  z-index: 200;
+}
+.msv-nav__links > li:hover .msv-nav__dropdown,
+.msv-nav__links > li:focus-within .msv-nav__dropdown {
+  display: block;
+}
+.msv-nav__dropdown a {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.6rem 1.1rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--navy);
+  text-decoration: none;
+  transition: background 0.12s;
+}
+.msv-nav__dropdown a:hover {
+  background: var(--cream);
+  color: var(--red);
+}
+.msv-nav__dropdown-icon {
+  width: 24px;
+  height: 24px;
+  background: var(--cream);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+.msv-nav__dropdown-divider {
+  height: 1px;
+  background: var(--border);
+  margin: 0.4rem 0;
+}
+
+/* CTA button */
+.msv-nav__cta {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.55rem 1.2rem;
+  background: var(--red);
+  color: #fff !important;
+  font-size: 0.85rem;
+  font-weight: 700;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.15s, box-shadow 0.15s;
+  white-space: nowrap;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(190,0,17,0.3);
+}
+.msv-nav__cta:hover {
+  background: var(--red-deep);
+  box-shadow: 0 4px 14px rgba(190,0,17,0.4);
+  text-decoration: none;
+}
+
+/* Hamburger */
+.msv-nav__burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.4rem;
+  border-radius: 5px;
+}
+.msv-nav__burger span {
+  width: 22px;
+  height: 2px;
+  background: #fff;
+  border-radius: 2px;
+  transition: transform 0.2s, opacity 0.2s;
+  display: block;
+}
+
+/* Mobile nav */
+.msv-nav__mobile {
+  display: none;
+  flex-direction: column;
+  background: var(--navy-mid);
+  padding: 1rem 1.5rem 1.5rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+.msv-nav__mobile.open { display: flex; }
+.msv-nav__mobile a {
+  padding: 0.65rem 0;
+  color: rgba(255,255,255,0.9);
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+.msv-nav__mobile a:hover { color: var(--yellow); }
+.msv-nav__mobile .msv-nav__mobile-sub {
+  padding-left: 1rem;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: rgba(255,255,255,0.7);
+}
+.msv-nav__mobile-cta {
+  margin-top: 1rem;
+  background: var(--red);
+  color: #fff !important;
+  border-radius: 6px;
+  text-align: center;
+  padding: 0.75rem 1rem !important;
+  border-bottom: none !important;
+}
+
+@media (max-width: 900px) {
+  .msv-nav__links { display: none; }
+  .msv-nav__cta { display: none; }
+  .msv-nav__burger { display: flex; }
+}
+@media (max-width: 480px) {
+  .msv-nav__inner { padding: 0 1rem; }
+}
+
+/* ─────────────────────────────────────────────────────────────
+   SITE FOOTER
+   ───────────────────────────────────────────────────────────── */
+.msv-footer {
+  background: var(--navy);
+  color: rgba(255,255,255,0.75);
+  overflow-x: clip;
+}
+.msv-footer__top {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem 3rem;
+  display: grid;
+  grid-template-columns: 280px 1fr 1fr 1fr;
+  gap: 3rem;
+}
+@media (max-width: 900px) {
+  .msv-footer__top { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
+}
+@media (max-width: 560px) {
+  .msv-footer__top { grid-template-columns: 1fr; gap: 2rem; padding: 3rem 1.2rem 2rem; }
+}
+
+.msv-footer__brand {}
+.msv-footer__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  margin-bottom: 1rem;
+}
+.msv-footer__logo-flag { font-size: 1.3rem; }
+.msv-footer__logo-text {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -0.01em;
+}
+.msv-footer__logo-text span { color: var(--yellow); }
+.msv-footer__tagline {
+  font-size: 0.83rem;
+  color: rgba(255,255,255,0.55);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+.msv-footer__trust {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+.msv-footer__trust-item {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.65);
+}
+.msv-footer__trust-item::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  background: var(--yellow);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.msv-footer__col-title {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.4);
+  margin-bottom: 1rem;
+}
+.msv-footer__links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.msv-footer__links a {
+  font-size: 0.87rem;
+  color: rgba(255,255,255,0.68);
+  text-decoration: none;
+  transition: color 0.15s;
+  display: inline-block;
+}
+.msv-footer__links a:hover {
+  color: var(--yellow);
+  text-decoration: none;
+}
+
+.msv-footer__bottom {
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+.msv-footer__bottom-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 1rem;
+  justify-content: space-between;
+}
+.msv-footer__disclaimer {
+  font-size: 0.73rem;
+  color: rgba(255,255,255,0.35);
+  line-height: 1.65;
+  max-width: 720px;
+}
+.msv-footer__copyright {
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.35);
+  white-space: nowrap;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   MAIN CONTENT AREA
+   ───────────────────────────────────────────────────────────── */
+main {
+  /* Fragments are self-contained; this wrapper just provides flow context */
+  position: relative;
+}
+  </style>
+  <link rel="icon" type="image/png" href="/assets/images/msv-favicon.png">
+  <link rel="apple-touch-icon" href="/assets/images/msv-favicon.png">
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════
+     SITE NAVIGATION
+     ═══════════════════════════════════════════════════ -->
+<header class="msv-nav" role="banner">
+  <div class="msv-nav__inner">
+    <a href="/" class="msv-nav__logo" aria-label="My Spanish Visa — Home"><img src="/assets/images/msv-logo-white.png" alt="My Spanish Visa" height="72" style="display:block;"></a>
+    <nav aria-label="Main navigation">
+      <ul class="msv-nav__links">
+        <li>
+          <button class="msv-nav__dropdown-trigger" aria-haspopup="true" aria-expanded="false">Visas <span class="msv-nav__chevron">▾</span></button>
+          <div class="msv-nav__dropdown" role="menu">
+            <a href="/non-lucrative-visa-spain.html" role="menuitem"><span class="msv-nav__dropdown-icon">🏖️</span>Non-Lucrative Visa</a>
+            <a href="/digital-nomad-visa-spain.html" role="menuitem"><span class="msv-nav__dropdown-icon">💻</span>Digital Nomad Visa</a>
+            <a href="/student-visa-spain.html" role="menuitem"><span class="msv-nav__dropdown-icon">🎓</span>Student Visa</a>
+            <div class="msv-nav__dropdown-divider"></div>
+            <a href="/spain-visa-renewal.html" role="menuitem"><span class="msv-nav__dropdown-icon">🔄</span>Visa Renewals</a>
+            <a href="/best-visa-move-to-spain.html" role="menuitem"><span class="msv-nav__dropdown-icon">⚖️</span>Compare All Visas</a>
+          </div>
+        </li>
+        <li>
+          <button aria-haspopup="true" aria-expanded="false">Resources <span class="msv-nav__chevron">▾</span></button>
+          <div class="msv-nav__dropdown" role="menu">
+            <a href="/blog-index.html" role="menuitem"><span class="msv-nav__dropdown-icon">📝</span>Blog &amp; Guides</a>
+            <a href="/blog-spain-visa-document-checklist-2026.html" role="menuitem"><span class="msv-nav__dropdown-icon">✅</span>Document Checklists</a>
+            <a href="/move-to-spain.html" role="menuitem"><span class="msv-nav__dropdown-icon">🏠</span>Move to Spain Guide</a>
+            <a href="/book-consultation.html" role="menuitem"><span class="msv-nav__dropdown-icon">🧭</span>Eligibility Quiz</a>
+          </div>
+        </li>
+        <li><a href="/about-us.html">About Us</a></li>
+        <li><a href="/contact-us.html">Contact</a></li>
+      </ul>
+    </nav>
+    <a href="/book-consultation.html" class="msv-nav__cta">Start My Application →</a>
+    <button class="msv-nav__burger" aria-label="Open menu" aria-expanded="false" onclick="var m=document.querySelector('.msv-nav__mobile');var open=m.classList.toggle('open');this.setAttribute('aria-expanded',open);">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <nav class="msv-nav__mobile" aria-label="Mobile navigation">
+    <a href="/non-lucrative-visa-spain.html" class="msv-nav__mobile-sub">Non-Lucrative Visa</a>
+    <a href="/digital-nomad-visa-spain.html" class="msv-nav__mobile-sub">Digital Nomad Visa</a>
+    <a href="/student-visa-spain.html" class="msv-nav__mobile-sub">Student Visa</a>
+    <a href="/spain-visa-renewal.html">Visa Renewals</a>
+    <a href="/best-visa-move-to-spain.html">Compare All Visas</a>
+    <a href="/blog-index.html">Blog &amp; Guides</a>
+    <a href="/about-us.html">About Us</a>    <a href="/contact-us.html">Contact</a>
+    <a href="/book-consultation.html" class="msv-nav__mobile-cta">Start My Application →</a>
+  </nav>
+</header>
+
+<!-- ═══════════════════════════════════════════════════
+     PAGE CONTENT (fragment injected here)
+     ═══════════════════════════════════════════════════ -->
+<main>
+<!-- FRAGMENT_START -->
+<!-- Blog Post: Digital Nomad Visa as a Freelancer 2026 | Self-Employed Guide for Spain -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "headline": "Digital Nomad Visa as a Freelancer 2026 | Self-Employed Guide for Spain",
+      "image": "https://www.myspanishvisa.com/images/dnv-freelancer.jpg",
+      "datePublished": "2026-04-13",
+      "dateModified": "2026-04-13",
+      "author": {
+        "@type": "Organization",
+        "name": "My Spanish Visa"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "My Spanish Visa"
+      },
+      "description": "Complete guide to obtaining a Digital Nomad Visa in Spain as a freelancer or self-employed professional."
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.myspanishvisa.com"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://www.myspanishvisa.com/blog"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "DNV as a Freelancer",
+          "item": "https://www.myspanishvisa.com/blog-dnv-self-employed-spain"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Can I get a DNV as a freelancer without an employer letter?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Freelancers can apply using 3–6 months of bank statements and invoices showing client payments instead of an employer letter. You'll need to demonstrate you're generating sufficient income from multiple clients."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need to register as autónomo to get a DNV?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. You can apply for a DNV without being registered as autónomo in Spain. However, once you arrive and work in Spain, you'll need to register as self-employed within the first month."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What if I don't have 3 months of invoices?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "If you're new to freelancing, provide what you have (even 1–2 months) along with a detailed letter explaining your business model, clients, and projected income. Some consulates are flexible with new freelancers."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What's the difference between autónomo and being a freelancer for visa purposes?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For DNV purposes, both are self-employed. A freelancer earning income from international clients works the same way as an autónomo. The distinction is mainly administrative and tax-related in Spain."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I have a UK/US company and still get a DNV as a freelancer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Many freelancers maintain a company in their home country and invoice from it. As long as you're drawing personal income and showing it in your bank statements, this works for DNV eligibility."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much do autónomo contributions cost in Spain?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Social contributions for autónomos are approximately €280–€350 per month (about €3,500–€4,200 annually) in 2026. This is mandatory once registered and remains regardless of income."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<!-- Open Graph / Social -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.myspanishvisa.com/blog/dnv-self-employed-spain/">
+<meta property="og:title" content="My Spanish Visa">
+<meta property="og:description" content="Expert Spain visa guidance for English-speaking expats.">
+<meta property="og:image" content="https://www.myspanishvisa.com/assets/images/og/og-dnv-spain.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="My Spanish Visa">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@myspanishvisa">
+<meta name="twitter:title" content="My Spanish Visa">
+<meta name="twitter:description" content="Expert Spain visa guidance for English-speaking expats.">
+<meta name="twitter:image" content="https://www.myspanishvisa.com/assets/images/og/og-dnv-spain.jpg">
+<style>
+/* ── iOS Safari pinch-zoom overflow safety ─────────────────────────── */
+/* Prevents horizontal overflow when users pinch-zoom on iPhone/iPad.   */
+/* Top-level (also paste into theme Custom CSS / Elementor Site Settings) */
+html, body { max-width: 100%; overflow-x: clip; }
+/* Scoped wrapper safety */
+.msv, .msv-nav, .msv-topbar, .msv-footer, .msv-footer-cta,
+.pls-header, .pls-body, .pls-nlv, .pls-dnv, .pls-student {
+  max-width: 100%;
+  overflow-x: clip;
+  position: relative;
+}
+/* Cap all media inside the wrapper */
+.msv img, .msv video, .msv iframe,
+.msv-footer img, .msv-footer video, .msv-footer iframe {
+  max-width: 100%;
+  height: auto;
+}
+/* Never use 100vw — use 100% instead (dev reminder) */
+
+
+.msv *, .msv *::before, .msv *::after { box-sizing: border-box; margin: 0; padding: 0; }
+.msv {
+  --navy: #0c1930; --navy-mid: #1a3a5c; --red: #be0011; --red-deep: #8c000d;
+  --yellow: #facf39; --cream: #f8f7f4; --white: #ffffff; --black: #1a1a1a;
+  --muted: #5a6478; --border: #dce3ed;
+  --shadow-sm: 0 2px 8px rgba(12,25,48,0.08); --shadow-md: 0 6px 24px rgba(12,25,48,0.13);
+  font-family: 'Inter', 'Segoe UI', system-ui, Arial, sans-serif;
+  font-size: 16px; line-height: 1.75; color: var(--black); width: 100%;
+}
+.msv__container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+.msv__container--narrow { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+@media (max-width: 640px) { .msv__container, .msv__container--narrow { padding: 0 1.2rem; } }
+.msv h1 { font-size: clamp(2rem, 4.5vw, 3rem); font-weight: 800; line-height: 1.12; color: var(--white); letter-spacing: -0.025em; margin-bottom: 1.2rem; }
+.msv h2 { font-size: clamp(1.3rem, 2.5vw, 1.75rem); font-weight: 700; color: var(--navy); letter-spacing: -0.01em; margin-bottom: 0.5rem; position: relative; display: inline-block; padding-bottom: 0.5rem; }
+.msv h2::after { content: ''; position: absolute; bottom: 0; left: 0; width: 44px; height: 3px; background: linear-gradient(90deg, var(--red), var(--red-deep)); border-radius: 2px; }
+.msv h3 { font-size: 1.05rem; font-weight: 700; color: var(--navy); margin-bottom: 0.4rem; }
+.msv p { color: var(--black); margin-bottom: 1rem; font-size: 0.97rem; }
+.msv a { color: var(--red); text-decoration: none; }
+.msv a:hover { text-decoration: underline; }
+.msv ul { list-style: none; padding: 0; margin: 0 0 1rem; }
+.msv ul li { padding: 0.35rem 0 0.35rem 1.4rem; position: relative; font-size: 0.95rem; color: var(--black); }
+.msv ul li::before { content: ''; position: absolute; left: 0; top: 0.75rem; width: 7px; height: 7px; background: linear-gradient(135deg, var(--red), var(--red-deep)); border-radius: 50%; }
+.msv__section { padding: 5rem 0; background: var(--white); }
+.msv__section--cream { padding: 5rem 0; background: linear-gradient(180deg, #f8f7f4 0%, #f2f4f8 100%); }
+.msv__section--dark { padding: 5rem 0; background: linear-gradient(135deg, var(--navy) 0%, #0d2240 55%, #0a1d38 100%); }
+.msv__section--dark h2 { color: var(--white) !important; }
+.msv__section--dark h2::after { background: linear-gradient(90deg, var(--yellow), #e8b820); }
+.msv__section--dark h3 { color: rgba(255,255,255,0.9) !important; }
+.msv .msv__section--dark p, .msv .msv__section--dark li { color: rgba(255,255,255,0.82); }
+.msv__section--dark ul li::before { background: linear-gradient(135deg, var(--yellow), #e8b820); }
+@media (max-width: 640px) { .msv__section, .msv__section--cream, .msv__section--dark { padding: 3.5rem 0; } }
+.msv__section-hd { margin-bottom: 3rem; }
+.msv__section-hd p { color: var(--muted); font-size: 1rem; margin-top: 0.75rem; line-height: 1.7; max-width: 600px; }
+@keyframes msv-fade-up { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes msv-shimmer { 0% { background-position: -400px 0; } 100% { background-position: 400px 0; } }
+.msv__shimmer { background: linear-gradient(90deg, var(--yellow) 0%, #e8b820 25%, var(--red) 50%, #e8b820 75%, var(--yellow) 100%); background-size: 400px 100%; -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; animation: msv-shimmer 3.5s linear infinite; display: inline; }
+.msv__hero { background: linear-gradient(135deg, #0c1930 0%, #0f2540 40%, #162d50 70%, #1a3560 100%); padding: 5.5rem 0 5rem; position: relative; overflow: hidden; }
+.msv__hero::before { content: ''; position: absolute; top: -30%; right: -5%; width: 700px; height: 700px; background: radial-gradient(circle, rgba(190,0,17,0.1) 0%, transparent 65%); pointer-events: none; }
+.msv__hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, rgba(250,207,57,0.4), transparent); }
+.msv__hero-inner { max-width: 780px; animation: msv-fade-up 0.7s ease-out both; }
+.msv__eyebrow { display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(190,0,17,0.15); border: 1px solid rgba(190,0,17,0.4); color: #ff6b7a; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.35rem 0.9rem; border-radius: 100px; margin-bottom: 1.5rem; }
+.msv__eyebrow::before { content: ''; width: 6px; height: 6px; background: var(--red); border-radius: 50%; box-shadow: 0 0 6px var(--red); }
+.msv__hero p { color: rgba(255,255,255,0.78) !important; font-size: clamp(1rem, 2.2vw, 1.15rem); max-width: 640px; margin-bottom: 2.2rem; line-height: 1.75; }
+.msv__trust-bar { background: var(--white); border-bottom: 1px solid var(--border); padding: 1rem 0; box-shadow: var(--shadow-sm); }
+.msv__trust-bar-inner { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.75rem; }
+.msv__trust-item { display: flex; align-items: center; gap: 0.5rem; font-size: 0.82rem; font-weight: 600; color: var(--navy); white-space: nowrap; }
+.msv__trust-item::before { content: ''; width: 7px; height: 7px; background: linear-gradient(135deg, var(--red), var(--red-deep)); border-radius: 50%; flex-shrink: 0; }
+.msv__alert { border-radius: 10px; padding: 1.3rem 1.5rem; display: flex; gap: 1rem; align-items: flex-start; margin-bottom: 2rem; }
+.msv__alert--warn { background: #fffbea; border: 1px solid #f0d060; }
+.msv__alert--info { background: #eef4ff; border: 1px solid #a0bfff; }
+.msv__alert--red { background: #fef2f2; border: 1px solid #fca5a5; }
+.msv__alert--green { background: #f0fdf4; border: 1px solid #86efac; }
+.msv__alert-icon { font-size: 1.4rem; flex-shrink: 0; margin-top: 0.1rem; }
+.msv__alert p { font-size: 0.9rem; color: var(--black); margin: 0; line-height: 1.65; }
+.msv__alert strong { color: var(--navy); }
+.msv__comparison-table { width: 100%; border-collapse: collapse; font-size: 0.88rem; margin: 2rem 0; }
+.msv__comparison-table thead tr { background: var(--navy); }
+.msv__comparison-table th { padding: 1rem 1.25rem; text-align: left; color: var(--white); font-weight: 700; }
+.msv__comparison-table td { padding: 0.85rem 1.25rem; border-bottom: 1px solid var(--border); color: var(--black); }
+.msv__comparison-table tbody tr { background: #fff; }
+.msv__comparison-table tbody tr:nth-child(even) { background: #f9fafb; }
+.msv__comparison-table .table-feature { font-weight: 600; color: var(--navy); }
+.msv__faq-list { display: flex; flex-direction: column; gap: 0; border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+.msv__faq-list details { border-bottom: 1px solid var(--border); background: var(--white); }
+.msv__faq-list details:last-child { border-bottom: none; }
+.msv__faq-list summary { padding: 1.2rem 1.5rem; font-size: 0.97rem; font-weight: 700; color: var(--navy); cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+.msv__faq-list summary::-webkit-details-marker { display: none; }
+.msv__faq-list summary::after { content: '+'; font-size: 1.3rem; font-weight: 400; color: var(--red); flex-shrink: 0; transition: transform 0.2s; }
+.msv__faq-list details[open] summary::after { transform: rotate(45deg); }
+.msv__faq-list details[open] summary { color: var(--red); }
+.msv__faq-answer { padding: 0 1.5rem 1.3rem; font-size: 0.92rem; color: var(--muted); line-height: 1.75; }
+.msv__faq-answer p { color: var(--muted); font-size: 0.92rem; margin-bottom: 0.75rem; }
+.msv__faq-answer p:last-child { margin-bottom: 0; }
+.msv__cta-band { background: linear-gradient(135deg, var(--navy) 0%, #0d2240 60%, #0a1d38 100%); padding: 5rem 0; text-align: center; }
+.msv__cta-band h2 { color: var(--white) !important; display: block; }
+.msv__cta-band h2::after { left: 50%; transform: translateX(-50%); background: linear-gradient(90deg, var(--yellow), #e8b820); }
+.msv__cta-band p { color: rgba(255,255,255,0.75) !important; max-width: 560px; margin: 1rem auto 2.2rem; font-size: 1rem; }
+.msv__cta-band .msv__btn-group { justify-content: center; }
+.msv__btn-group { display: flex; flex-wrap: wrap; gap: 0.85rem; }
+.msv__btn { display: inline-block; padding: 0.85rem 2rem; font-size: 0.92rem; font-weight: 700; border-radius: 6px; text-decoration: none !important; transition: transform 0.15s, box-shadow 0.15s; }
+.msv__btn:hover { transform: translateY(-1px); text-decoration: none !important; }
+.msv .msv__btn--primary { background: linear-gradient(135deg, var(--red) 0%, var(--red-deep) 100%); color: #ffffff !important; box-shadow: 0 4px 16px rgba(190,0,17,0.38); }
+.msv .msv__btn--primary:hover { box-shadow: 0 6px 22px rgba(190,0,17,0.48); color: #ffffff !important; }
+.msv .msv__btn--outline-white { background: transparent; color: #ffffff !important; border: 1.5px solid rgba(255,255,255,0.5); }
+.msv .msv__btn--outline-white:hover { background: rgba(255,255,255,0.1); color: #ffffff !important; }
+.msv__disclaimer { background: var(--cream); border-top: 1px solid var(--border); padding: 2rem 0; }
+.msv__disclaimer p { font-size: 0.78rem; color: var(--muted); margin: 0; line-height: 1.65; }
+.msv__related { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; }
+@media (max-width: 860px) { .msv__related { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 420px) { .msv__related { grid-template-columns: 1fr; } }
+.msv__related-card { background: var(--white); border: 1px solid var(--border); border-radius: 10px; padding: 1.3rem 1.25rem; text-decoration: none !important; transition: box-shadow 0.2s, transform 0.2s; display: block; }
+.msv__related-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); text-decoration: none !important; }
+.msv__related-icon { font-size: 1.5rem; display: block; margin-bottom: 0.6rem; }
+.msv__related-title { font-size: 0.88rem; font-weight: 700; color: var(--navy); display: block; margin-bottom: 0.3rem; }
+.msv__related-desc { font-size: 0.8rem; color: var(--muted); line-height: 1.55; }
+.msv__cta-box { background: linear-gradient(135deg, #f8f7f4 0%, #f2f4f8 100%); border: 2px solid var(--red); border-radius: 12px; padding: 2rem; margin: 3rem 0; }
+.msv__cta-box h3 { color: var(--navy); margin-bottom: 0.8rem; }
+.msv__cta-box p { color: var(--black); margin-bottom: 1.2rem; font-size: 0.95rem; }
+</style>
+<div class="msv">
+  <section class="msv__hero">
+    <div class="msv__container--narrow">
+      <div class="msv__hero-inner">
+        <span class="msv__eyebrow">Blog · DNV Guide</span>
+        <h1>DNV as a Freelancer: <span class="msv__shimmer">Self-Employed Guide</span></h1>
+        <p>Complete guide to obtaining and maintaining a Digital Nomad Visa in Spain as a freelancer, self-employed professional, or online entrepreneur. Learn how to document income, register as autónomo, and manage Spanish taxes.</p>
+        <p style="font-size: 0.9rem; color: rgba(255,255,255,0.65);">9 min read</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="msv__trust-bar">
+    <div class="msv__trust-bar-inner">
+      <div class="msv__trust-item">No Employer Letter Required</div>
+      <div class="msv__trust-item">Bank Statements Work</div>
+      <div class="msv__trust-item">Proven Freelance Income</div>
+      <div class="msv__trust-item">Updated April 2026</div>
+    </div>
+  </div>
+
+  <section class="msv__section">
+    <div class="msv__container--narrow">
+      <div class="msv__section-hd">
+        <h2>Freelancers Can Get a DNV Without an Employer</h2>
+        <p>One of the biggest misconceptions about Spain's Digital Nomad Visa is that you need a company sponsoring you or an employer letter proving remote work. That's not true. Freelancers, consultants, and self-employed professionals can apply using bank statements and client invoices instead.</p>
+      </div>
+
+      <p>If you're a freelancer working with clients across multiple countries, you're eligible for the DNV. The Spanish government recognizes that self-employment is a legitimate form of income, and you don't need permission from an employer to demonstrate it.</p>
+
+      <div class="msv__alert msv__alert--green">
+        <span class="msv__alert-icon">✓</span>
+        <p><strong>Key advantage:</strong> Freelancers have more flexibility in the DNV application process than traditional employees. You control your documentation and don't depend on a company's willingness to write a letter.</p>
+      </div>
+
+      <h2>Income Requirements for Freelancers</h2>
+      <p>The minimum income threshold for a single person is the monthly Spanish Minimum Wage (Salario Mínimo Interprofesional, or SMI). In 2026, this is approximately €1,445 per month, or about €17,340 annually.</p>
+
+      <p>For families, add 75% of the SMI per dependent. So if you're bringing a spouse, you'd need about €2,178 per month combined.</p>
+
+      <p>However, the consulate doesn't just look at the number—they assess whether your income is stable and likely to continue. Stable is the keyword.</p>
+
+      <h2>What Documents Do Freelancers Need for DNV Application?</h2>
+      <p>Instead of an employer letter, you'll provide:</p>
+
+      <h3>Mandatory:</h3>
+      <ul>
+        <li>3–6 months of bank statements showing client payments</li>
+        <li>Invoices to clients (proving the income is legitimate work, not gifts or loans)</li>
+        <li>A letter from you explaining your freelance business, client base, and expected future income</li>
+        <li>Proof of professional liability insurance (if applicable to your field)</li>
+        <li>Copy of your professional website or LinkedIn profile</li>
+      </ul>
+
+      <h3>Optional but Helpful:</h3>
+      <ul>
+        <li>Signed contracts with key clients (showing ongoing relationships)</li>
+        <li>Tax returns from previous years showing self-employment income</li>
+        <li>Business registration in your home country (if you have one)</li>
+        <li>Client testimonials or portfolio samples (less common, but demonstrates credibility)</li>
+        <li>Letters from regular clients confirming the working relationship</li>
+      </ul>
+
+      <p>The core goal is showing that you earn real income from legitimate work, not passive investment returns or family support.</p>
+
+      <h2>Bank Statements: What Consulates Look For</h2>
+      <p>Your bank statements are the centerpiece of your freelance DNV application. Here's what the consulate scrutinizes:</p>
+
+      <h3>Regular Deposits</h3>
+      <p>Deposits should be consistent month-to-month. Large, irregular deposits raise concerns. For example, one €20,000 deposit in month 1, then nothing for months 2–3, then €2,000 in month 4 looks unstable. Steady €2,500–€5,000 monthly deposits look more reliable.</p>
+
+      <h3>Source Labels</h3>
+      <p>Deposits labeled as "Invoice from Client X," "Freelance Payment," or client company names are ideal. Vague deposits from unknown sources or labeled "Friend" are problematic. If possible, ensure deposit memos or descriptions match your client names.</p>
+
+      <h3>Outgoing Expenses</h3>
+      <p>The consulate also watches your spending. Legitimate business expenses (software subscriptions, equipment, home office supplies) demonstrate you're running a real operation, not just living off savings.</p>
+
+      <h3>Overall Account Health</h3>
+      <p>An account with positive balance, consistent activity, and no major red flags (frequent overdrafts, large cash withdrawals) looks stable. A dormant account with one deposit is suspicious.</p>
+
+      <div class="msv__alert msv__alert--warn">
+        <span class="msv__alert-icon">⚠</span>
+        <p><strong>Pro tip:</strong> Clean up your bank statements before submission. Use clear invoice labeling, separate business and personal accounts if possible, and maintain 3–6 months of spotless records before applying.</p>
+      </div>
+
+      <h2>Invoice Documentation: How to Show Freelance Work</h2>
+      <p>Invoices are proof of the work you've done. The consulate wants to see:</p>
+
+      <ul>
+        <li>Your name and details (as the service provider)</li>
+        <li>Client name and location</li>
+        <li>Description of services rendered (e.g., "Copywriting services," "Web design," "Consulting")</li>
+        <li>Invoice date and amount</li>
+        <li>Payment received confirmation (matched to bank statement)</li>
+      </ul>
+
+      <p>Invoices can be formal (through invoice software) or casual (a simple email receipt from a client). The key is that they match your bank deposits and tell a coherent story of ongoing work.</p>
+
+      <h3>What If You Don't Have Formal Invoices?</h3>
+      <p>If you're new to freelancing or work informally, gather what you have:</p>
+
+      <ul>
+        <li>Email confirmations of work acceptance and payment</li>
+        <li>Platform screenshots (if you use Upwork, Fiverr, Toptal, etc.)</li>
+        <li>Client messages confirming services and rates</li>
+        <li>Contracts or statements of work</li>
+      </ul>
+
+      <p>Create formal invoices retroactively if needed (many consulates accept backdated invoices as long as they're consistent with bank statements). Just be honest—don't fabricate documents.</p>
+
+      <div class="msv__alert msv__alert--info">
+        <span class="msv__alert-icon">ℹ</span>
+        <p>If you've been freelancing for 1–2 months, most consulates will accept that. New freelancers are a reality. Show what you have, explain your onboarding timeline, and demonstrate growth trajectory.</p>
+      </div>
+
+      <h2>The Autónomo Question: Do You Need to Register Before Applying?</h2>
+      <p>No. You don't need to be registered as autónomo (self-employed) in Spain to get a DNV. You can apply from abroad, and registration happens after arrival.</p>
+
+      <h3>Timeline:</h3>
+      <ul>
+        <li><strong>Before arrival:</strong> Apply for DNV using current bank statements and invoices from your home country</li>
+        <li><strong>Within 30 days of arrival:</strong> Register with Spanish tax authority (Agencia Tributaria) and social security as autónomo</li>
+        <li><strong>First year:</strong> File taxes under both your home country and Spain (if applicable)</li>
+      </ul>
+
+      <p>However, you're allowed to register as autónomo before arriving if you want to get ahead. Some freelancers do this to show extra commitment during the visa interview or to streamline their first month in Spain.</p>
+
+      <h2>Autónomo Registration and Social Contributions</h2>
+      <p>Once in Spain, registering as self-employed is straightforward. You'll need:</p>
+
+      <ul>
+        <li>Proof of identity (passport)</li>
+        <li>Proof of address (rental contract, utility bill)</li>
+        <li>A description of your economic activity</li>
+        <li>Your NIE (foreigner ID number, obtained through immigration)</li>
+      </ul>
+
+      <p>Registration costs nothing, but social contributions are mandatory. In 2026, autónomo contributions are approximately €280–€350 per month (about €3,500–€4,200 annually), regardless of income level. Some low-income freelancers qualify for reduced contributions.</p>
+
+      <h3>What Autónomo Registration Includes:</h3>
+      <ul>
+        <li>Social security coverage (healthcare, pension, unemployment protection)</li>
+        <li>Tax residency status (for Beckham Law eligibility)</li>
+        <li>Business activity registration (allows you to invoice clients)</li>
+        <li>Access to small business loans and grants</li>
+      </ul>
+
+      <p>For Digital Nomad Visa holders, autónomo registration is mandatory once you're in Spain and working. You'll file quarterly VAT returns (even if zero-rated) and annual income tax returns.</p>
+
+      <div class="msv__cta-box">
+        <h3>Estimate Your DNV Income Requirement</h3>
+        <p>Use our DNV income calculator to determine the exact monthly threshold for your situation, accounting for dependents and regional variations.</p>
+        <a href="/spain-digital-nomad-visa-income-calculator.html" class="msv__btn msv__btn--primary">Calculate Your Threshold →</a>
+      </div>
+
+      <h2>Client Contracts: Showing Ongoing Work</h2>
+      <p>If you have signed contracts with clients, include them. They demonstrate your work is not a one-off project but an ongoing relationship. Long-term contracts (6–12 months) are especially valuable for proving income stability.</p>
+
+      <p>If your clients are reluctant to sign contracts, emails or platform confirmations work too. The goal is credibility—showing that real people are paying you for real work.</p>
+
+      <h2>Tax Obligations for Freelancers on a DNV</h2>
+      <p>Once you're in Spain:</p>
+
+      <h3>Spanish Taxes</h3>
+      <ul>
+        <li>File quarterly VAT returns (even if VAT-exempt for services)</li>
+        <li>File annual income tax return (Declaración de la Renta)</li>
+        <li>Pay quarterly estimated taxes if income is high</li>
+        <li>Eligible for Beckham Law (24% flat tax) for your first six years</li>
+      </ul>
+
+      <h3>Home Country Taxes</h3>
+      <ul>
+        <li><strong>US:</strong> File worldwide income; use FEIE or Foreign Tax Credit</li>
+        <li><strong>UK:</strong> Notify HMRC; determine tax residency status</li>
+        <li><strong>EU/Other:</strong> Check your specific country's rules on departing residents</li>
+      </ul>
+
+      <p>Most freelancers hire a gestoría (tax advisor) to handle Spanish compliance. Cost: €200–€500 annually for straightforward freelance work.</p>
+
+      <h2>Self-Employment Without Being Incorporated</h2>
+      <p>Some freelancers ask: "Can I operate as a sole trader without registering as autónomo?" In Spain, the answer is essentially no. If you're earning self-employment income in Spain, you must register and contribute to social security. There's no unregistered self-employment option.</p>
+
+      <p>However, you can operate under a business name without forming a limited company. Most freelancers do exactly this.</p>
+
+      <h2>Common Mistakes Freelancers Make</h2>
+      <ul>
+        <li><strong>Inconsistent income:</strong> Applying with fluctuating monthly earnings looks unstable. Wait until you have 3–6 months of consistent income if possible.</li>
+        <li><strong>Unlabeled deposits:</strong> Bank transfers with no invoice reference confuse consulates. Use clear memo lines.</li>
+        <li><strong>Fake invoices:</strong> Never fabricate client work or invoices. Consulates can verify with clients.</li>
+        <li><strong>Ignoring home country taxes:</strong> Don't assume Beckham Law or Spanish residency eliminates your home country obligations.</li>
+        <li><strong>Poor accounting:</strong> Disorganized records make your application weaker. Clean it up before submitting.</li>
+        <li><strong>One large client:</strong> If 90%+ of income is from one client, show contract length and termination terms to ease consulate concerns.</li>
+      </ul>
+
+      <div class="msv__alert msv__alert--red">
+        <span class="msv__alert-icon">!</span>
+        <p><strong>Critical:</strong> Never fabricate documents or exaggerate income. Consulates verify with tax authorities and can identify false invoices. Dishonesty leads to visa rejection and blacklisting.</p>
+      </div>
+
+      <h2>Proof of Business: Website and Professional Presence</h2>
+      <p>Having a professional online presence strengthens your application. This doesn't need to be elaborate:</p>
+
+      <ul>
+        <li>A simple website or landing page showing your services</li>
+        <li>An active LinkedIn profile with client endorsements</li>
+        <li>A portfolio or case studies demonstrating past work</li>
+        <li>Social media presence (if relevant to your field)</li>
+      </ul>
+
+      <p>A professional website costs €5–€50/month and takes a few hours to build. It's an easy win that shows you take your business seriously.</p>
+
+      <h2>International Clients and Currency</h2>
+      <p>Most Digital Nomad freelancers work with international clients and receive payments in foreign currencies (USD, GBP, EUR). This is fine. Your consulate understands remote work is borderless.</p>
+
+      <p>When you convert foreign currency to your home currency for tax purposes, keep records of exchange rates used. Your bank statements will show the converted amount; the consulate accepts this.</p>
+
+      <h2>Moving to Spain: First Year Tax Implications</h2>
+      <p>When you first move to Spain mid-year, tax gets complex:</p>
+
+      <ul>
+        <li>Your home country may still claim taxes on income earned before residency change</li>
+        <li>Spain claims taxes from your residency date onwards</li>
+        <li>The tax treaty between your home country and Spain determines how to avoid double taxation</li>
+        <li>You may owe taxes in both countries for a pro-rata period</li>
+      </ul>
+
+      <p>A cross-border tax accountant is worth the €300–€500 investment for your first year to get this right.</p>
+    </div>
+  </section>
+
+  <section class="msv__section msv__section--dark">
+    <div class="msv__container--narrow">
+      <h2>Frequently Asked Questions</h2>
+      <div class="msv__faq-list">
+        <details>
+          <summary>Do I need to have been self-employed in my home country to qualify for a DNV?</summary>
+          <div class="msv__faq-answer">
+            <p>No. You can be transitioning from employment to freelancing. As long as you show current freelance income and documentation, you're eligible. Consulates understand that people change work arrangements.</p>
+          </div>
+        </details>
+        <details>
+          <summary>What if I have multiple small clients instead of one large one?</summary>
+          <div class="msv__faq-answer">
+            <p>That's actually ideal. Multiple clients show diversification and reduce perceived risk. The consulate prefers many €500 invoices over one €5,000 invoice because it suggests stable, ongoing work.</p>
+          </div>
+        </details>
+        <details>
+          <summary>Can I be a business partner or co-founder and use the DNV?</summary>
+          <div class="msv__faq-answer">
+            <p>Yes. If you draw a salary or profit distributions from the business, that counts as earned income. Provide proof of ownership (articles of association) and documentation of your income draws.</p>
+          </div>
+        </details>
+        <details>
+          <summary>What happens to my UK/US business registration when I move to Spain?</summary>
+          <div class="msv__faq-answer">
+            <p>You keep it. Many freelancers maintain a home-country company and invoice from it while resident in Spain. Inform your tax authority about Spanish residency, but the business remains active. Consult your accountant on tax implications.</p>
+          </div>
+        </details>
+        <details>
+          <summary>Can I apply for a DNV if I'm between clients or between projects?</summary>
+          <div class="msv__faq-answer">
+            <p>It depends. If you show 3 months of income preceding application and have signed contracts starting soon, consulates are often flexible. If you have zero recent income, wait until you've secured clients and generated deposits.</p>
+          </div>
+        </details>
+        <details>
+          <summary>How do I show income stability if I just started freelancing?</summary>
+          <div class="msv__faq-answer">
+            <p>Provide what you have (even 1–2 months of invoices), explain your onboarding timeline, and show projected income. Include client contracts if available. Consulates understand new freelancers exist, but expect clear documentation of the trajectory.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="msv__section">
+    <div class="msv__container--narrow">
+      <h2>Key Takeaways for Freelancers</h2>
+      <ul>
+        <li>No employer letter needed—bank statements and invoices prove freelance income</li>
+        <li>Earn above the SMI threshold (€1,445/month, ~€17,340/year) with documented, consistent income</li>
+        <li>Provide 3–6 months of bank statements and matching invoices to consulate</li>
+        <li>Register as autónomo within 30 days of arrival; costs ~€300–€350/month in social contributions</li>
+        <li>Eligible for Beckham Law (24% flat tax) once you become a Spanish tax resident</li>
+        <li>File quarterly VAT and annual income tax returns in Spain</li>
+        <li>Verify your home country's tax requirements independently</li>
+        <li>Professional documentation (website, contracts, invoices) strengthens your application</li>
+        <li>Multiple small clients are better than one large client for perceived income stability</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="msv__section msv__section--cream">
+    <div class="msv__container--narrow">
+      <h2>Related DNV Resources</h2>
+      <div class="msv__related">
+        <a href="/digital-nomad-visa-spain.html" class="msv__related-card">
+          <span class="msv__related-icon">📋</span>
+          <span class="msv__related-title">Complete DNV Guide</span>
+          <span class="msv__related-desc">Full requirements, documents, timeline, and FAQ for the Digital Nomad Visa</span>
+        </a>
+        <a href="/spain-digital-nomad-visa-income-calculator.html" class="msv__related-card">
+          <span class="msv__related-icon">💰</span>
+          <span class="msv__related-title">Income Calculator</span>
+          <span class="msv__related-desc">Calculate your required threshold with dependents included</span>
+        </a>
+        <a href="/spain-tax-calculator.html" class="msv__related-card">
+          <span class="msv__related-icon">🧮</span>
+          <span class="msv__related-title">Tax Calculator</span>
+          <span class="msv__related-desc">Model Beckham Law savings and cross-border tax implications</span>
+        </a>
+        <a href="/dnv-requirements.html" class="msv__related-card">
+          <span class="msv__related-icon">✓</span>
+          <span class="msv__related-title">DNV Document Checklist</span>
+          <span class="msv__related-desc">Detailed checklist for freelancers and employed applicants</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <div class="msv__section msv__section--dark">
+    <div class="msv__container--narrow" style="text-align: center;">
+      <h2>Ready to Apply as a Freelancer?</h2>
+      <p>Get expert guidance on documenting your income, applying to the right consulate, and planning your first year in Spain as a self-employed Digital Nomad.</p>
+    </div>
+  </div>
+  </section>
+</div>
+
+<!-- FRAGMENT_END -->
+</main>
+
+
+<!-- ═══════════════════════════════════════════════════
+     SITE FOOTER
+     ═══════════════════════════════════════════════════ -->
+<footer class="msv-footer" role="contentinfo">
+  <div class="msv-footer__top">
+    <div class="msv-footer__brand">
+      <a href="/" class="msv-footer__logo" aria-label="My Spanish Visa"><img src="/assets/images/msv-logo-white.png" alt="My Spanish Visa" height="72" style="display:block;"></a>
+      <p class="msv-footer__tagline">Specialist Spain visa &amp; residency guidance for English-speaking foreigners. A service of Platinum Legal Spain.</p>
+      <div class="msv-footer__trust">
+        <span class="msv-footer__trust-item">All English. No barriers.</span>
+        <span class="msv-footer__trust-item">Solicitors &amp; immigration specialists</span>
+        <span class="msv-footer__trust-item">100% online process</span>
+      </div>
+    </div>
+    <div>
+      <div class="msv-footer__col-title">Visas</div>
+      <ul class="msv-footer__links">
+        <li><a href="/non-lucrative-visa-spain.html">Non-Lucrative Visa</a></li>
+        <li><a href="/digital-nomad-visa-spain.html">Digital Nomad Visa</a></li>
+        <li><a href="/student-visa-spain.html">Student Visa</a></li>
+        <li><a href="/spain-visa-renewal.html">Visa Renewals</a></li>
+        <li><a href="/best-visa-move-to-spain.html">Compare All Visas</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/nlv">Apply: NLV</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/dnv">Apply: DNV</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/student-visa">Apply: Student Visa</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="msv-footer__col-title">Resources</div>
+      <ul class="msv-footer__links">
+        <li><a href="/blog-index.html">Blog &amp; Guides</a></li>
+        <li><a href="/move-to-spain.html">Move to Spain Guide</a></li>
+        <li><a href="/book-consultation.html">Which Visa Is Right for Me?</a></li>
+        <li><a href="/blog-spain-visa-document-checklist-2026.html">Document Checklists</a></li>
+        <li><a href="/spain-visa-options.html">Visa Requirements</a></li>
+        <li><a href="/nie-number-spain.html">NIE Number Guide</a></li>
+        <li><a href="/tie-card-spain.html">TIE Card Guide</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="msv-footer__col-title">Company</div>
+      <ul class="msv-footer__links">
+        <li><a href="/about-us.html">About Us</a></li>
+        <li><a href="/contact-us.html">Contact</a></li>
+        <li><a href="https://www.platinumlegalspain.com" rel="noopener">Platinum Legal Spain</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/nlv">Client Portal</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="msv-footer__bottom">
+    <div class="msv-footer__bottom-inner">
+      <p class="msv-footer__disclaimer"><strong style="color:rgba(255,255,255,0.5);">Disclaimer:</strong> My Spanish Visa provides visa processing support and is not a law firm. Content on this site is for informational purposes only and does not constitute legal advice. Immigration rules change frequently — always verify requirements with official sources or a qualified specialist. My Spanish Visa is a trading name of Platinum Legal Spain.</p>
+      <span class="msv-footer__copyright">© 2026 My Spanish Visa. All rights reserved.</span>
+    </div>
+  </div>
+</footer>
+
+
+</body>
+</html>

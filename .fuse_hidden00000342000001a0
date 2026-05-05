@@ -1,0 +1,1673 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- ═══════════════════════════════════════════════════════════════════
+       PAGE-SPECIFIC HEAD — replace block below per page:
+       <title>Nlv Renewal Documents | My Spanish Visa</title>
+       <meta name="description" content="…">
+       <meta property="og:title" content="…">
+       <meta property="og:description" content="…">
+       <meta property="og:url" content="https://www.myspanishvisa.com/…">
+       <meta property="og:image" content="…">
+       <link rel="canonical" href="https://www.myspanishvisa.com/…">
+       <script type="application/ld+json">…</script>
+       ═══════════════════════════════════════════════════════════════════ -->
+  <title>My Spanish Visa — Spain Visa &amp; Residency Specialists</title>
+  <meta name="description" content="My Spanish Visa helps English-speaking foreigners move to Spain. Expert guidance on Non-Lucrative Visa, Digital Nomad Visa, Student Visa, renewals and more.">
+
+  <!-- Shared Open Graph defaults -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="My Spanish Visa">
+  <meta property="og:image" content="https://www.myspanishvisa.com/assets/images/og/og-myspanishvisa-default.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@myspanishvisa">
+
+  <style>
+/* ═══════════════════════════════════════════════════════════════
+   GLOBAL SHELL — nav + footer only.
+   Page-specific CSS lives inside each fragment's own <style> block.
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── iOS overflow safety ── */
+html, body { max-width: 100%; overflow-x: clip; margin: 0; padding: 0; }
+*, *::before, *::after { box-sizing: border-box; }
+
+/* ── Brand tokens (root-level so all fragments inherit) ── */
+:root {
+  --navy:      #0c1930;
+  --navy-mid:  #1a3a5c;
+  --red:       #be0011;
+  --red-deep:  #8c000d;
+  --yellow:    #facf39;
+  --cream:     #f8f7f4;
+  --white:     #ffffff;
+  --black:     #1a1a1a;
+  --muted:     #5a6478;
+  --border:    #dce3ed;
+  --shadow-sm: 0 2px 8px rgba(12,25,48,0.08);
+  --shadow-md: 0 6px 24px rgba(12,25,48,0.13);
+}
+
+body {
+  font-family: 'Inter', 'Segoe UI', system-ui, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.75;
+  color: var(--black);
+  background: #fff;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   SITE NAV
+   ───────────────────────────────────────────────────────────── */
+.msv-nav {
+  position: sticky;
+  top: 0;
+  z-index: 9000;
+  background: var(--navy);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 2px 12px rgba(12,25,48,0.22);
+}
+.msv-nav__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+  gap: 1.5rem;
+}
+
+/* Logo */
+.msv-nav__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+.msv-nav__logo-flag {
+  font-size: 1.3rem;
+  line-height: 1;
+}
+.msv-nav__logo-text {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+.msv-nav__logo-text span {
+  color: var(--yellow);
+}
+
+/* Links */
+.msv-nav__links {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.msv-nav__links > li {
+  position: relative;
+}
+.msv-nav__links > li > a,
+.msv-nav__links > li > button {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.5rem 0.9rem;
+  font-size: 0.87rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.85);
+  text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: color 0.15s, background 0.15s;
+  white-space: nowrap;
+  height: 64px;
+}
+.msv-nav__links > li > a:hover,
+.msv-nav__links > li > button:hover,
+.msv-nav__links > li:focus-within > a,
+.msv-nav__links > li:focus-within > button {
+  color: #fff;
+  background: rgba(255,255,255,0.08);
+}
+.msv-nav__chevron {
+  font-size: 0.65rem;
+  opacity: 0.7;
+  transition: transform 0.2s;
+}
+.msv-nav__links > li:focus-within .msv-nav__chevron,
+.msv-nav__links > li:hover .msv-nav__chevron {
+  transform: rotate(180deg);
+}
+
+/* Dropdown */
+.msv-nav__dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 230px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  box-shadow: var(--shadow-md);
+  padding: 0.5rem 0;
+  z-index: 200;
+}
+.msv-nav__links > li:hover .msv-nav__dropdown,
+.msv-nav__links > li:focus-within .msv-nav__dropdown {
+  display: block;
+}
+.msv-nav__dropdown a {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.6rem 1.1rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--navy);
+  text-decoration: none;
+  transition: background 0.12s;
+}
+.msv-nav__dropdown a:hover {
+  background: var(--cream);
+  color: var(--red);
+}
+.msv-nav__dropdown-icon {
+  width: 24px;
+  height: 24px;
+  background: var(--cream);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+.msv-nav__dropdown-divider {
+  height: 1px;
+  background: var(--border);
+  margin: 0.4rem 0;
+}
+
+/* CTA button */
+.msv-nav__cta {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.55rem 1.2rem;
+  background: var(--red);
+  color: #fff !important;
+  font-size: 0.85rem;
+  font-weight: 700;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.15s, box-shadow 0.15s;
+  white-space: nowrap;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(190,0,17,0.3);
+}
+.msv-nav__cta:hover {
+  background: var(--red-deep);
+  box-shadow: 0 4px 14px rgba(190,0,17,0.4);
+  text-decoration: none;
+}
+
+/* Hamburger */
+.msv-nav__burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.4rem;
+  border-radius: 5px;
+}
+.msv-nav__burger span {
+  width: 22px;
+  height: 2px;
+  background: #fff;
+  border-radius: 2px;
+  transition: transform 0.2s, opacity 0.2s;
+  display: block;
+}
+
+/* Mobile nav */
+.msv-nav__mobile {
+  display: none;
+  flex-direction: column;
+  background: var(--navy-mid);
+  padding: 1rem 1.5rem 1.5rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+.msv-nav__mobile.open { display: flex; }
+.msv-nav__mobile a {
+  padding: 0.65rem 0;
+  color: rgba(255,255,255,0.9);
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+.msv-nav__mobile a:hover { color: var(--yellow); }
+.msv-nav__mobile .msv-nav__mobile-sub {
+  padding-left: 1rem;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: rgba(255,255,255,0.7);
+}
+.msv-nav__mobile-cta {
+  margin-top: 1rem;
+  background: var(--red);
+  color: #fff !important;
+  border-radius: 6px;
+  text-align: center;
+  padding: 0.75rem 1rem !important;
+  border-bottom: none !important;
+}
+
+@media (max-width: 900px) {
+  .msv-nav__links { display: none; }
+  .msv-nav__cta { display: none; }
+  .msv-nav__burger { display: flex; }
+}
+@media (max-width: 480px) {
+  .msv-nav__inner { padding: 0 1rem; }
+}
+
+/* ─────────────────────────────────────────────────────────────
+   SITE FOOTER
+   ───────────────────────────────────────────────────────────── */
+.msv-footer {
+  background: var(--navy);
+  color: rgba(255,255,255,0.75);
+  overflow-x: clip;
+}
+.msv-footer__top {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem 3rem;
+  display: grid;
+  grid-template-columns: 280px 1fr 1fr 1fr;
+  gap: 3rem;
+}
+@media (max-width: 900px) {
+  .msv-footer__top { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
+}
+@media (max-width: 560px) {
+  .msv-footer__top { grid-template-columns: 1fr; gap: 2rem; padding: 3rem 1.2rem 2rem; }
+}
+
+.msv-footer__brand {}
+.msv-footer__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  margin-bottom: 1rem;
+}
+.msv-footer__logo-flag { font-size: 1.3rem; }
+.msv-footer__logo-text {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -0.01em;
+}
+.msv-footer__logo-text span { color: var(--yellow); }
+.msv-footer__tagline {
+  font-size: 0.83rem;
+  color: rgba(255,255,255,0.55);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+.msv-footer__trust {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+.msv-footer__trust-item {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.65);
+}
+.msv-footer__trust-item::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  background: var(--yellow);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.msv-footer__col-title {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.4);
+  margin-bottom: 1rem;
+}
+.msv-footer__links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.msv-footer__links a {
+  font-size: 0.87rem;
+  color: rgba(255,255,255,0.68);
+  text-decoration: none;
+  transition: color 0.15s;
+  display: inline-block;
+}
+.msv-footer__links a:hover {
+  color: var(--yellow);
+  text-decoration: none;
+}
+
+.msv-footer__bottom {
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+.msv-footer__bottom-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 1rem;
+  justify-content: space-between;
+}
+.msv-footer__disclaimer {
+  font-size: 0.73rem;
+  color: rgba(255,255,255,0.35);
+  line-height: 1.65;
+  max-width: 720px;
+}
+.msv-footer__copyright {
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.35);
+  white-space: nowrap;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   MAIN CONTENT AREA
+   ───────────────────────────────────────────────────────────── */
+main {
+  /* Fragments are self-contained; this wrapper just provides flow context */
+  position: relative;
+}
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════
+     SITE NAVIGATION
+     ═══════════════════════════════════════════════════ -->
+<header class="msv-nav" role="banner">
+  <div class="msv-nav__inner">
+
+    <!-- Logo -->
+    <a href="/" class="msv-nav__logo" aria-label="My Spanish Visa — Home"><img src="/assets/images/msv-logo-white.png" alt="My Spanish Visa" height="64" style="display:block;"></a>
+
+    <!-- Desktop links -->
+    <nav aria-label="Main navigation">
+      <ul class="msv-nav__links">
+
+        <li>
+          <button class="msv-nav__dropdown-trigger" aria-haspopup="true" aria-expanded="false">
+            Visas <span class="msv-nav__chevron">▾</span>
+          </button>
+          <div class="msv-nav__dropdown" role="menu">
+            <a href="/non-lucrative-visa-spain/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🏖️</span>Non-Lucrative Visa
+            </a>
+            <a href="/digital-nomad-visa-spain/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">💻</span>Digital Nomad Visa
+            </a>
+            <a href="/student-visa-spain/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🎓</span>Student Visa
+            </a>
+            <div class="msv-nav__dropdown-divider"></div>
+            <a href="/spain-visa-renewal/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🔄</span>Visa Renewals
+            </a>
+            <a href="/best-visa-move-to-spain/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">⚖️</span>Compare All Visas
+            </a>
+          </div>
+        </li>
+
+        <li>
+          <button aria-haspopup="true" aria-expanded="false">
+            Resources <span class="msv-nav__chevron">▾</span>
+          </button>
+          <div class="msv-nav__dropdown" role="menu">
+            <a href="/blog/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">📝</span>Blog &amp; Guides
+            </a>
+            <a href="/spain-visa-checklist/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">✅</span>Document Checklists
+            </a>
+            <a href="/move-to-spain/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🏠</span>Move to Spain Guide
+            </a>
+            <a href="/visa-eligibility-quiz/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🧭</span>Eligibility Quiz
+            </a>
+          </div>
+        </li>
+
+        <li><a href="/about-us/">About Us</a></li>
+        <li><a href="/testimonials/">Reviews</a></li>
+        <li><a href="/contact-us.html">Contact</a></li>
+
+      </ul>
+    </nav>
+
+    <!-- Desktop CTA -->
+    <a href="https://dashboard.platinumlegalspain.com/nlv-renewal" class="msv-nav__cta">
+      Start My Application →
+    </a>
+
+    <!-- Hamburger (mobile) -->
+    <button class="msv-nav__burger" aria-label="Open menu" aria-expanded="false" onclick="
+      var m=document.querySelector('.msv-nav__mobile');
+      var open=m.classList.toggle('open');
+      this.setAttribute('aria-expanded', open);
+    ">
+      <span></span><span></span><span></span>
+    </button>
+
+  </div><!-- /.msv-nav__inner -->
+
+  <!-- Mobile menu -->
+  <nav class="msv-nav__mobile" aria-label="Mobile navigation">
+    <a href="/non-lucrative-visa-spain/" class="msv-nav__mobile-sub">Non-Lucrative Visa</a>
+    <a href="/digital-nomad-visa-spain/" class="msv-nav__mobile-sub">Digital Nomad Visa</a>
+    <a href="/student-visa-spain/" class="msv-nav__mobile-sub">Student Visa</a>
+    <a href="/spain-visa-renewal/">Visa Renewals</a>
+    <a href="/best-visa-move-to-spain/">Compare All Visas</a>
+    <a href="/blog/">Blog &amp; Guides</a>
+    <a href="/about-us/">About Us</a>
+    <a href="/testimonials/">Reviews</a>
+    <a href="/contact-us.html">Contact</a>
+    <a href="https://dashboard.platinumlegalspain.com/nlv-renewal" class="msv-nav__mobile-cta">Start My Application →</a>
+  </nav>
+
+</header>
+
+
+<!-- ═══════════════════════════════════════════════════
+     PAGE CONTENT (fragment injected here)
+     ═══════════════════════════════════════════════════ -->
+<main>
+<!-- FRAGMENT_START -->
+<!--
+NLV Renewal Documents Page
+For myspanishvisa.com
+Slug: /non-lucrative-visa-renewal-documents/
+Primary Keyword: NLV renewal documents Spain
+Parent: /non-lucrative-visa-spain/
+Elementor Full-Width HTML Widget - No DOCTYPE/html/head/body tags
+-->
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "NLV Renewal Documents Spain - Complete Checklist",
+  "description": "Complete guide to required documents for Non-Lucrative visa renewal in Spain. Learn what forms, certificates, and proofs you need for NLV renewal.",
+  "url": "https://myspanishvisa.com/non-lucrative-visa-renewal-documents/",
+  "mainEntity": {
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the EX-01 form for NLV renewal?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The EX-01 is the official application form for Non-Lucrative visa renewal in Spain. It must be completed in triplicate and signed by the applicant. This form is submitted to the Oficina de Extranjería along with all supporting documents."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does my health insurance certificate need to be updated for NLV renewal?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, you must provide a current health insurance certificate valid for the entire renewal period. The insurance must cover medical and hospital care in Spain with at least €600 annual deductible and be recognized by Spanish authorities."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What proof of income do I need for NLV renewal?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You must prove monthly income of at least €1,260-€1,350 per month (varies by autonomous community). Required documents include recent bank statements (3-6 months), pension certificates, rental income documentation, or investment account statements showing consistent income."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is the padrón certificate required for NLV renewal?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, a padrón certificate (empadronamiento) is required for renewal. It proves your continuous residence in Spain at the registered address. You can obtain it from your local municipal office (Ayuntamiento)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need a medical certificate for NLV renewal?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No, a medical certificate is NOT required for NLV renewal, unlike the initial application. However, your health insurance certificate must be current and valid."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What translations are required for NLV renewal documents?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "All documents issued outside Spain must be officially translated into Spanish by a certified translator (traductor jurado). This includes bank statements, pension certificates, income documents, and any foreign government-issued documents."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Where do I submit my NLV renewal documents in Spain?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Submit your renewal application and documents to the Oficina de Extranjería (Immigration Office) in the province where you are registered. Many provinces accept appointments through their official websites."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What common mistakes should I avoid when renewing my NLV?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Common mistakes include: submitting documents without proper translations, providing outdated health insurance, not updating income documentation, missing padrón certificate, incomplete EX-01 form, blurry passport copies, not signing the application, and missing the application fee receipt."
+        }
+      }
+    ]
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://myspanishvisa.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Non-Lucrative Visa",
+        "item": "https://myspanishvisa.com/non-lucrative-visa-spain/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Renewal",
+        "item": "https://myspanishvisa.com/non-lucrative-visa-renewal/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "name": "Renewal Documents",
+        "item": "https://myspanishvisa.com/non-lucrative-visa-renewal-documents/"
+      }
+    ]
+  }
+}
+</script>
+<!-- Open Graph / Social -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.myspanishvisa.com/nlv-renewal-documents/">
+<meta property="og:title" content="My Spanish Visa">
+<meta property="og:description" content="Expert Spain visa guidance for English-speaking expats.">
+<meta property="og:image" content="https://www.myspanishvisa.com/assets/images/og/og-nlv-spain.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="My Spanish Visa">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@myspanishvisa">
+<meta name="twitter:title" content="My Spanish Visa">
+<meta name="twitter:description" content="Expert Spain visa guidance for English-speaking expats.">
+<meta name="twitter:image" content="https://www.myspanishvisa.com/assets/images/og/og-nlv-spain.jpg">
+
+<style>
+/* ── iOS Safari pinch-zoom overflow safety ─────────────────────────── */
+/* Prevents horizontal overflow when users pinch-zoom on iPhone/iPad.   */
+/* Top-level (also paste into theme Custom CSS / Elementor Site Settings) */
+html, body { max-width: 100%; overflow-x: clip; }
+/* Scoped wrapper safety */
+.msv, .msv-nav, .msv-topbar, .msv-footer, .msv-footer-cta,
+.pls-header, .pls-body, .pls-nlv, .pls-dnv, .pls-student {
+  max-width: 100%;
+  overflow-x: clip;
+  position: relative;
+}
+/* Cap all media inside the wrapper */
+.msv img, .msv video, .msv iframe,
+.msv-footer img, .msv-footer video, .msv-footer iframe {
+  max-width: 100%;
+  height: auto;
+}
+/* Never use 100vw — use 100% instead (dev reminder) */
+
+
+/* ── Reset & scope ─────────────────────────────────────────────────── */
+.msv *, .msv *::before, .msv *::after { box-sizing: border-box; margin: 0; padding: 0; }
+/* ── Tokens ──────────────────────────────────────────────────────── */
+.msv {
+  --navy: #0c1930; --navy-mid: #1a3a5c; --red: #be0011; --red-deep: #8c000d;
+  --yellow: #facf39; --cream: #f8f7f4; --white: #ffffff; --black: #1a1a1a;
+  --muted: #5a6478; --border: #dce3ed;
+  --shadow-sm: 0 2px 8px rgba(12,25,48,0.08); --shadow-md: 0 6px 24px rgba(12,25,48,0.13);
+  font-family: 'Inter', 'Segoe UI', system-ui, Arial, sans-serif;
+  font-size: 16px; line-height: 1.75; color: var(--black); width: 100%;
+}
+.msv__container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+.msv__container--narrow { max-width: 780px; margin: 0 auto; padding: 0 2rem; }
+@media (max-width: 640px) { .msv__container, .msv__container--narrow { padding: 0 1.2rem; } }
+/* ── Typography ──────────────────────────────────────────────────── */
+.msv h1 { font-size: clamp(2rem, 4.5vw, 3rem); font-weight: 800; line-height: 1.12; color: var(--white); letter-spacing: -0.025em; margin-bottom: 1.2rem; }
+.msv h2 { font-size: clamp(1.3rem, 2.5vw, 1.75rem); font-weight: 700; color: var(--navy); letter-spacing: -0.01em; margin-bottom: 0.5rem; position: relative; display: inline-block; padding-bottom: 0.5rem; }
+.msv h2::after { content: ''; position: absolute; bottom: 0; left: 0; width: 44px; height: 3px; background: linear-gradient(90deg, var(--red), var(--red-deep)); border-radius: 2px; }
+.msv h3 { font-size: 1.05rem; font-weight: 700; color: var(--navy); margin-bottom: 0.4rem; }
+.msv p { color: var(--black); margin-bottom: 1rem; font-size: 0.97rem; }
+.msv a { color: var(--red); text-decoration: none; }
+.msv a:hover { text-decoration: underline; }
+.msv ul { list-style: none; padding: 0; margin: 0 0 1rem; }
+.msv ul li { padding: 0.35rem 0 0.35rem 1.4rem; position: relative; font-size: 0.95rem; color: var(--black); }
+.msv ul li::before { content: ''; position: absolute; left: 0; top: 0.75rem; width: 7px; height: 7px; background: linear-gradient(135deg, var(--red), var(--red-deep)); border-radius: 50%; }
+/* ── Sections ─────────────────────────────────────────────────── */
+.msv__section { padding: 5rem 0; background: var(--white); }
+.msv__section--cream { padding: 5rem 0; background: linear-gradient(180deg, #f8f7f4 0%, #f2f4f8 100%); }
+.msv__section--dark { padding: 5rem 0; background: linear-gradient(135deg, var(--navy) 0%, #0d2240 55%, #0a1d38 100%); }
+.msv__section--dark h2 { color: var(--white) !important; }
+.msv__section--dark h2::after { background: linear-gradient(90deg, var(--yellow), #e8b820); }
+.msv__section--dark h3 { color: rgba(255,255,255,0.9) !important; }
+.msv .msv__section--dark p, .msv .msv__section--dark li { color: rgba(255,255,255,0.82); }
+.msv__section--dark ul li::before { background: linear-gradient(135deg, var(--yellow), #e8b820); }
+@media (max-width: 640px) { .msv__section, .msv__section--cream, .msv__section--dark { padding: 3.5rem 0; } }
+.msv__section-hd { margin-bottom: 3rem; }
+.msv__section-hd p { color: var(--muted); font-size: 1rem; margin-top: 0.75rem; line-height: 1.7; max-width: 600px; }
+/* ── Animations ──────────────────────────────────────────────────── */
+@keyframes msv-fade-up { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes msv-shimmer {
+  0%   { background-position: -400px 0; }
+  100% { background-position: 400px 0; }
+}
+.msv__shimmer {
+  background: linear-gradient(90deg, var(--yellow) 0%, #e8b820 25%, var(--red) 50%, #e8b820 75%, var(--yellow) 100%);
+  background-size: 400px 100%;
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: msv-shimmer 3.5s linear infinite;
+  display: inline;
+}
+/* ── Hero ─────────────────────────────────────────────────── */
+.msv__hero { background: linear-gradient(135deg, #0c1930 0%, #0f2540 40%, #162d50 70%, #1a3560 100%); padding: 5.5rem 0 5rem; position: relative; overflow: hidden; }
+.msv__hero::before { content: ''; position: absolute; top: -30%; right: -5%; width: 700px; height: 700px; background: radial-gradient(circle, rgba(190,0,17,0.1) 0%, transparent 65%); pointer-events: none; }
+.msv__hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, rgba(250,207,57,0.4), transparent); }
+.msv__hero-inner { max-width: 780px; animation: msv-fade-up 0.7s ease-out both; }
+.msv__eyebrow { display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(190,0,17,0.15); border: 1px solid rgba(190,0,17,0.4); color: #ff6b7a; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.35rem 0.9rem; border-radius: 100px; margin-bottom: 1.5rem; }
+.msv__eyebrow::before { content: ''; width: 6px; height: 6px; background: var(--red); border-radius: 50%; box-shadow: 0 0 6px var(--red); }
+.msv__hero p { color: rgba(255,255,255,0.78) !important; font-size: clamp(1rem, 2.2vw, 1.15rem); max-width: 640px; margin-bottom: 2.2rem; line-height: 1.75; }
+/* ── Breadcrumb ───────────────────────────────────────────── */
+.msv__breadcrumb { padding: 0.85rem 0; border-bottom: 1px solid var(--border); background: var(--white); }
+.msv__breadcrumb-inner { display: flex; align-items: center; gap: 0.5rem; font-size: 0.8rem; color: var(--muted); flex-wrap: wrap; }
+.msv__breadcrumb-inner a { color: var(--red); text-decoration: none; }
+.msv__breadcrumb-inner a:hover { text-decoration: underline; }
+.msv__breadcrumb-inner span { color: var(--muted); }
+/* ── Buttons ─────────────────────────────────────────────────── */
+.msv__btn-group { display: flex; flex-wrap: wrap; gap: 0.85rem; }
+.msv__btn { display: inline-block; padding: 0.85rem 2rem; font-size: 0.92rem; font-weight: 700; border-radius: 6px; text-decoration: none !important; transition: transform 0.15s, box-shadow 0.15s; }
+.msv__btn:hover { transform: translateY(-1px); text-decoration: none !important; }
+.msv .msv__btn--primary { background: linear-gradient(135deg, var(--red) 0%, var(--red-deep) 100%); color: #ffffff !important; box-shadow: 0 4px 16px rgba(190,0,17,0.38); }
+.msv .msv__btn--primary:hover { box-shadow: 0 6px 22px rgba(190,0,17,0.48); color: #ffffff !important; }
+.msv .msv__btn--outline-white { background: transparent; color: #ffffff !important; border: 1.5px solid rgba(255,255,255,0.5); }
+.msv .msv__btn--outline-white:hover { background: rgba(255,255,255,0.1); color: #ffffff !important; }
+/* ── Trust bar ──────────────────────────────────────────────── */
+.msv__trust-bar { background: var(--white); border-bottom: 1px solid var(--border); padding: 1rem 0; box-shadow: var(--shadow-sm); }
+.msv__trust-bar-inner { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.75rem; }
+.msv__trust-item { display: flex; align-items: center; gap: 0.5rem; font-size: 0.82rem; font-weight: 600; color: var(--navy); white-space: nowrap; }
+.msv__trust-item::before { content: ''; width: 7px; height: 7px; background: linear-gradient(135deg, var(--red), var(--red-deep)); border-radius: 50%; flex-shrink: 0; }
+/* ── Key facts strip ─────────────────────────────────────────── */
+.msv__facts { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; margin-bottom: 3rem; }
+@media (max-width: 760px) { .msv__facts { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 420px) { .msv__facts { grid-template-columns: 1fr; } }
+.msv__fact { background: var(--white); padding: 1.5rem 1.3rem; text-align: center; }
+.msv__fact-icon { font-size: 1.5rem; display: block; margin-bottom: 0.5rem; }
+.msv__fact-label { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); display: block; margin-bottom: 0.25rem; }
+.msv__fact-value { font-size: 0.97rem; font-weight: 700; color: var(--navy); line-height: 1.35; display: block; }
+/* ── Alert box ───────────────────────────────────────────────── */
+.msv__alert { border-radius: 10px; padding: 1.3rem 1.5rem; display: flex; gap: 1rem; align-items: flex-start; margin-bottom: 2rem; }
+.msv__alert--warn { background: #fffbea; border: 1px solid #f0d060; }
+.msv__alert--info { background: #eef4ff; border: 1px solid #a0bfff; }
+.msv__alert--red { background: #fef2f2; border: 1px solid #fca5a5; }
+.msv__alert--green { background: #f0fdf4; border: 1px solid #86efac; }
+.msv__alert-icon { font-size: 1.4rem; flex-shrink: 0; margin-top: 0.1rem; }
+.msv__alert p { font-size: 0.9rem; color: var(--black); margin: 0; line-height: 1.65; }
+.msv__alert strong { color: var(--navy); }
+/* ── Cost table ──────────────────────────────────────────────── */
+.msv__cost-table { width: 100%; border-collapse: collapse; font-size: 0.88rem; margin: 2rem 0; }
+.msv__cost-table thead tr { background: var(--navy); }
+.msv__cost-table th { padding: 1rem 1.25rem; text-align: left; color: var(--white); font-weight: 700; border-bottom: 2px solid var(--yellow); white-space: nowrap; }
+.msv__cost-table td { padding: 0.85rem 1.25rem; border-bottom: 1px solid var(--border); color: var(--black); }
+.msv__cost-table tbody tr:nth-child(even) { background: #f9fafb; }
+.msv__cost-table .cost-item { font-weight: 600; color: var(--navy); }
+.msv__cost-table .cost-range { color: var(--muted); font-weight: 600; }
+.msv__cost-table .cost-high { color: var(--red); font-weight: 700; }
+/* ── Cost boxes ──────────────────────────────────────────────── */
+.msv__cost-box { background: var(--white); border: 1.5px solid var(--border); border-radius: 12px; padding: 2rem; margin-bottom: 2rem; text-align: center; }
+.msv__cost-box h3 { font-size: 1rem; margin-bottom: 0.5rem; color: var(--navy); }
+.msv__cost-box .cost-value { font-size: 2rem; font-weight: 800; color: var(--red); margin: 1rem 0; }
+.msv__cost-box .cost-label { font-size: 0.8rem; color: var(--muted); font-weight: 600; }
+.msv__cost-boxes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-bottom: 3rem; }
+@media (max-width: 760px) { .msv__cost-boxes { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 420px) { .msv__cost-boxes { grid-template-columns: 1fr; } }
+/* ── FAQs ────────────────────────────────────────────────– */
+.msv__faq-list { display: flex; flex-direction: column; gap: 0; border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+.msv__faq-list details { border-bottom: 1px solid var(--border); background: var(--white); }
+.msv__faq-list details:last-child { border-bottom: none; }
+.msv__faq-list summary { padding: 1.2rem 1.5rem; font-size: 0.97rem; font-weight: 700; color: var(--navy); cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+.msv__faq-list summary::-webkit-details-marker { display: none; }
+.msv__faq-list summary::after { content: '+'; font-size: 1.3rem; font-weight: 400; color: var(--red); flex-shrink: 0; transition: transform 0.2s; }
+.msv__faq-list details[open] summary::after { transform: rotate(45deg); }
+.msv__faq-list details[open] summary { color: var(--red); }
+.msv__faq-answer { padding: 0 1.5rem 1.3rem; font-size: 0.92rem; color: var(--muted); line-height: 1.75; }
+.msv__faq-answer p { color: var(--muted); font-size: 0.92rem; margin-bottom: 0.75rem; }
+.msv__faq-answer p:last-child { margin-bottom: 0; }
+/* ── CTA band ────────────────────────────────────────────────── */
+.msv__cta-band { background: linear-gradient(135deg, var(--navy) 0%, #0d2240 60%, #0a1d38 100%); padding: 5rem 0; text-align: center; }
+.msv__cta-band h2 { color: var(--white) !important; display: block; }
+.msv__cta-band h2::after { left: 50%; transform: translateX(-50%); background: linear-gradient(90deg, var(--yellow), #e8b820); }
+.msv__cta-band p { color: rgba(255,255,255,0.75) !important; max-width: 560px; margin: 1rem auto 2.2rem; font-size: 1rem; }
+.msv__cta-band .msv__btn-group { justify-content: center; }
+/* ── Related guides ──────────────────────────────────────────── */
+.msv__related { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; }
+@media (max-width: 860px) { .msv__related { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 420px) { .msv__related { grid-template-columns: 1fr; } }
+.msv__related-card { background: var(--white); border: 1px solid var(--border); border-radius: 10px; padding: 1.3rem 1.25rem; text-decoration: none !important; transition: box-shadow 0.2s, transform 0.2s; display: block; }
+.msv__related-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); text-decoration: none !important; }
+.msv__related-icon { font-size: 1.5rem; display: block; margin-bottom: 0.6rem; }
+.msv__related-title { font-size: 0.88rem; font-weight: 700; color: var(--navy); display: block; margin-bottom: 0.3rem; }
+.msv__related-desc { font-size: 0.8rem; color: var(--muted); line-height: 1.55; }
+/* ── Disclaimer ──────────────────────────────────────────────── */
+.msv__disclaimer { background: var(--cream); border-top: 1px solid var(--border); padding: 2rem 0; }
+.msv__disclaimer p { font-size: 0.78rem; color: var(--muted); margin: 0; line-height: 1.65; }
+
+/* ── Document checklist ─────────────────────────────────────── */
+.msv__doc-checklist { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin: 2rem 0; }
+@media (max-width: 760px) { .msv__doc-checklist { grid-template-columns: 1fr; } }
+.msv__doc-item { background: var(--white); border: 1.5px solid var(--border); border-radius: 10px; padding: 1.2rem; display: flex; gap: 0.8rem; align-items: flex-start; }
+.msv__doc-item.required { border-left: 4px solid var(--red); }
+.msv__doc-item.optional { border-left: 4px solid #a0bfff; background: #f9fbff; }
+.msv__doc-icon { font-size: 1.3rem; flex-shrink: 0; margin-top: 0.2rem; }
+.msv__doc-content h4 { font-size: 0.95rem; font-weight: 700; color: var(--navy); margin-bottom: 0.25rem; }
+.msv__doc-content p { font-size: 0.85rem; color: var(--muted); margin: 0; line-height: 1.6; }
+
+/* ── Comparison table ──────────────────────────────────────── */
+.msv__comparison-table { width: 100%; border-collapse: collapse; font-size: 0.85rem; margin: 2rem 0; }
+.msv__comparison-table thead tr { background: var(--navy-mid); }
+.msv__comparison-table th { padding: 0.9rem 1rem; text-align: left; color: var(--white); font-weight: 700; }
+.msv__comparison-table td { padding: 0.9rem 1rem; border-bottom: 1px solid var(--border); color: var(--black); }
+.msv__comparison-table tbody tr:nth-child(even) { background: #f9fafb; }
+.msv__comparison-table .required { color: var(--red); font-weight: 700; }
+.msv__comparison-table .not-required { color: #22863a; }
+
+/* ── Steps list ───────────────────────────────────────────── */
+.msv__steps { display: flex; flex-direction: column; gap: 1.5rem; margin: 2rem 0; }
+.msv__step { display: flex; gap: 1.2rem; }
+.msv__step-num { display: flex; align-items: center; justify-content: center; width: 36px; height: 36px; background: linear-gradient(135deg, var(--red), var(--red-deep)); color: var(--white); border-radius: 50%; font-weight: 700; font-size: 0.95rem; flex-shrink: 0; }
+.msv__step-content h4 { font-size: 0.95rem; font-weight: 700; color: var(--navy); margin-bottom: 0.3rem; }
+.msv__step-content p { font-size: 0.9rem; color: var(--muted); margin: 0 0 0.5rem; line-height: 1.65; }
+.msv__step-content ul { margin: 0.5rem 0 0; }
+.msv__step-content ul li { font-size: 0.85rem; padding: 0.2rem 0 0.2rem 1.2rem; }
+</style>
+
+<div class="msv">
+  <!-- Breadcrumb -->
+  <div class="msv__breadcrumb">
+    <div class="msv__container">
+      <div class="msv__breadcrumb-inner">
+        <a href="/">Home</a> <span>/</span>
+        <a href="/non-lucrative-visa-spain/">Non-Lucrative Visa</a> <span>/</span>
+        <a href="/non-lucrative-visa-renewal/">Renewal</a> <span>/</span>
+        <span>Renewal Documents</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="msv__hero">
+    <div class="msv__container">
+      <div class="msv__hero-inner">
+        <div class="msv__eyebrow">Non-Lucrative Visa</div>
+        <h1>Complete NLV Renewal Documents Checklist</h1>
+        <p>The definitive guide to all required documents, forms, and certificates needed to renew your Non-Lucrative visa in Spain. Step-by-step instructions on obtaining each document.</p>
+        <div class="msv__btn-group">
+          <a href="/non-lucrative-visa-renewal-requirements/" class="msv__btn msv__btn--primary">View Full Renewal Requirements</a>
+          <a href="https://dashboard.platinumlegalspain.com/nlv-renewal" class="msv__btn msv__btn--outline-white">Check Your Eligibility</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Bar -->
+  <div class="msv__trust-bar">
+    <div class="msv__container">
+      <div class="msv__trust-bar-inner">
+        <div class="msv__trust-item">10+ years immigration expertise</div>
+        <div class="msv__trust-item">Official Spanish documents</div>
+        <div class="msv__trust-item">Updated for 2024-2025</div>
+        <div class="msv__trust-item">Trusted by 50,000+ expats</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Key Facts Strip -->
+  <section class="msv__section">
+    <div class="msv__container">
+      <div class="msv__facts">
+        <div class="msv__fact">
+          <span class="msv__fact-icon">📋</span>
+          <span class="msv__fact-label">Required Forms</span>
+          <span class="msv__fact-value">EX-01 Application</span>
+        </div>
+        <div class="msv__fact">
+          <span class="msv__fact-icon">📄</span>
+          <span class="msv__fact-label">Total Documents</span>
+          <span class="msv__fact-value">10+ Items</span>
+        </div>
+        <div class="msv__fact">
+          <span class="msv__fact-icon">✓</span>
+          <span class="msv__fact-label">No Medical Test</span>
+          <span class="msv__fact-value">At Renewal Only</span>
+        </div>
+        <div class="msv__fact">
+          <span class="msv__fact-icon">⏱</span>
+          <span class="msv__fact-label">Renewal Window</span>
+          <span class="msv__fact-value">60 Days Before</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Alert Section -->
+  <section class="msv__section msv__section--cream">
+    <div class="msv__container--narrow">
+      <div class="msv__alert msv__alert--warn">
+        <span class="msv__alert-icon">⚠️</span>
+        <p><strong>Important Deadline:</strong> You can submit your NLV renewal application starting <strong>60 days before</strong> your current visa expires. Ensure all documents are prepared in advance to avoid delays or rejection.</p>
+      </div>
+
+      <div class="msv__alert msv__alert--green">
+        <span class="msv__alert-icon">✓</span>
+        <p><strong>Good News:</strong> Unlike the initial application, you <strong>do not need a new medical certificate</strong> at renewal—only a valid health insurance certificate. This simplifies the renewal process significantly.</p>
+      </div>
+
+      <div class="msv__alert msv__alert--info">
+        <span class="msv__alert-icon">ℹ️</span>
+        <p><strong>Translation Requirement:</strong> All documents issued outside Spain must be officially translated into Spanish by a <strong>certified translator (traductor jurado)</strong>. This is non-negotiable for approval.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Document Checklist -->
+  <section class="msv__section">
+    <div class="msv__container">
+      <div class="msv__section-hd">
+        <h2>Required Documents for NLV Renewal</h2>
+        <p>A comprehensive checklist of all documents needed to successfully renew your Non-Lucrative visa in Spain. Each document must be current, properly translated, and submitted in the correct format.</p>
+      </div>
+
+      <div class="msv__doc-checklist">
+        <div class="msv__doc-item required">
+          <span class="msv__doc-icon">📋</span>
+          <div class="msv__doc-content">
+            <h4>EX-01 Application Form</h4>
+            <p>Official Non-Lucrative visa renewal application form. Must be completed in triplicate, signed by the applicant, and submitted to the Oficina de Extranjería.</p>
+          </div>
+        </div>
+
+        <div class="msv__doc-item required">
+          <span class="msv__doc-icon">🛂</span>
+          <div class="msv__doc-content">
+            <h4>Passport & Copies</h4>
+            <p>Original passport plus 3 photocopies of all pages. Passport must be valid for at least 4 additional months beyond your planned renewal period.</p>
+          </div>
+        </div>
+
+        <div class="msv__doc-item required">
+          <span class="msv__doc-icon">💳</span>
+          <div class="msv__doc-content">
+            <h4>Current TIE/NIE Card</h4>
+            <p>Original or certified copy of your current TIE (Tarjeta de Identificación de Extranjero) or NIE (Número de Identidad de Extranjero) card showing valid residency status.</p>
+          </div>
+        </div>
+
+        <div class="msv__doc-item required">
+          <span class="msv__doc-icon">🏥</span>
+          <div class="msv__doc-content">
+            <h4>Health Insurance Certificate (Updated)</h4>
+            <p>Current health insurance certificate valid for the entire renewal period. Must cover medical and hospital care with minimum €600 annual deductible and be recognized by Spanish authorities.</p>
+          </div>
+        </div>
+
+        <div class="msv__doc-item required">
+          <span class="msv__doc-icon">💰</span>
+          <div class="msv__doc-content">
+            <h4>Proof of Income/Savings (Updated)</h4>
+            <p>Recent bank statements (last 6 months), pension certificates, investment account statements, or rental income documentation proving minimum €1,260-€1,350 monthly income. Must be translated.</p>
+          </div>
+        </div>
+
+        <div class="msv__doc-item required">
+          <span class="msv__doc-icon">📍</span>
+          <div class="msv__doc-content">
+            <h4>Padrón Certificate (Empadronamiento)</h4>
+            <p>Current padrón certificate proving continuous residence in Spain at your registered address. Obtain from your local municipal office (Ayuntamiento) in the last 3 months.</p>
+          </div>
+        </div>
+
+        <div class="msv__doc-item required">
+          <span class="msv__doc-icon">🏠</span>
+          <div class="msv__doc-content">
+            <h4>Proof of Address in Spain</h4>
+            <p>Recent utility bill, rental contract, property deed, or official letter from your municipality confirming your current address. Dated within last 3 months.</p>
+          </div>
+        </div>
+
+        <div class="msv__doc-item optional">
+          <span class="msv__doc-icon">📊</span>
+          <div class="msv__doc-content">
+            <h4>Tax Return / Modelo 720 (if applicable)</h4>
+            <p>If you have Spanish tax obligations or report foreign assets exceeding €50,000, provide your latest income tax return (Declaración de la Renta) or Modelo 720 declaration.</p>
+          </div>
+        </div>
+
+        <div class="msv__doc-item required">
+          <span class="msv__doc-icon">🖼️</span>
+          <div class="msv__doc-content">
+            <h4>Photographs (4x4 cm)</h4>
+            <p>2 recent color passport-style photographs (4x4 cm) with white background. Must be clear, face forward, taken within the last 6 months.</p>
+          </div>
+        </div>
+
+        <div class="msv__doc-item required">
+          <span class="msv__doc-icon">🧾</span>
+          <div class="msv__doc-content">
+            <h4>Application Fee Receipt</h4>
+            <p>Proof of payment for the NLV renewal application fee (varies by autonomous community, typically €120-€180). Keep the original receipt with your application.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Documents NOT Needed -->
+  <section class="msv__section msv__section--cream">
+    <div class="msv__container">
+      <div class="msv__section-hd">
+        <h2>Documents NOT Required at Renewal</h2>
+        <p>One of the major advantages of NLV renewal is that several documents required for the initial application are no longer needed, making the renewal process more straightforward.</p>
+      </div>
+
+      <ul style="font-size: 0.95rem; line-height: 1.8;">
+        <li><strong>Medical Certificate:</strong> Unlike the initial application, you do not need a new medical examination or health certificate at renewal. Your health insurance certificate is sufficient.</li>
+        <li><strong>Criminal Record Certificate:</strong> Usually not required at renewal, though immigration officials may request it in specific cases. Check with your local Oficina de Extranjería.</li>
+        <li><strong>Employment Contract:</strong> Not required for NLV renewal—the visa is specifically for non-employed individuals with passive income.</li>
+        <li><strong>Letter of Financial Independence:</strong> Proof of income documents replace this formal letter. Bank statements and pension certificates serve the same purpose.</li>
+        <li><strong>Original Visa Stamp:</strong> Your current TIE/NIE card serves as proof of your valid residency status; the original visa stamp is not needed.</li>
+        <li><strong>Housing Certification or Purchase Contract:</strong> Your padrón and proof of address serve this purpose at renewal.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Comparison Table -->
+  <section class="msv__section">
+    <div class="msv__container">
+      <div class="msv__section-hd">
+        <h2>Initial Application vs Renewal Documents</h2>
+        <p>Quick comparison showing which documents are required for initial NLV approval versus renewal.</p>
+      </div>
+
+      <table class="msv__comparison-table">
+        <thead>
+          <tr>
+            <th>Document</th>
+            <th>Initial Application</th>
+            <th>Renewal</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>EX-01 Form</td>
+            <td class="required">✓ Required</td>
+            <td class="required">✓ Required</td>
+            <td>Same form, different version</td>
+          </tr>
+          <tr>
+            <td>Passport & Copies</td>
+            <td class="required">✓ Required</td>
+            <td class="required">✓ Required</td>
+            <td>Must be valid for 4+ months</td>
+          </tr>
+          <tr>
+            <td>Medical Certificate</td>
+            <td class="required">✓ Required</td>
+            <td class="not-required">✗ Not Required</td>
+            <td>Major advantage of renewal</td>
+          </tr>
+          <tr>
+            <td>Health Insurance</td>
+            <td class="required">✓ Required</td>
+            <td class="required">✓ Required</td>
+            <td>Must be updated at renewal</td>
+          </tr>
+          <tr>
+            <td>Proof of Income</td>
+            <td class="required">✓ Required</td>
+            <td class="required">✓ Required</td>
+            <td>Must show current income</td>
+          </tr>
+          <tr>
+            <td>Criminal Record</td>
+            <td class="required">✓ Required</td>
+            <td class="not-required">✗ Rarely Required</td>
+            <td>May be requested in specific cases</td>
+          </tr>
+          <tr>
+            <td>Padrón Certificate</td>
+            <td class="required">✓ Required</td>
+            <td class="required">✓ Required</td>
+            <td>Proves continuous residence</td>
+          </tr>
+          <tr>
+            <td>TIE/NIE Card</td>
+            <td class="not-required">✗ Not Applicable</td>
+            <td class="required">✓ Required</td>
+            <td>Only for renewals (after initial approval)</td>
+          </tr>
+          <tr>
+            <td>Proof of Address</td>
+            <td class="required">✓ Required</td>
+            <td class="required">✓ Required</td>
+            <td>Utility bill or rental contract</td>
+          </tr>
+          <tr>
+            <td>Photographs</td>
+            <td class="required">✓ Required</td>
+            <td class="required">✓ Required</td>
+            <td>4x4 cm, recent, color</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- How to Obtain Each Document -->
+  <section class="msv__section msv__section--cream">
+    <div class="msv__container">
+      <div class="msv__section-hd">
+        <h2>How to Obtain Each Renewal Document in Spain</h2>
+        <p>Step-by-step guidance for obtaining and preparing each required document during your NLV renewal process.</p>
+      </div>
+
+      <div class="msv__steps">
+        <div class="msv__step">
+          <div class="msv__step-num">1</div>
+          <div class="msv__step-content">
+            <h4>EX-01 Application Form</h4>
+            <p>Download from the Ministerio de Inclusión, Seguridad Social y Migraciones website or collect in person from your Oficina de Extranjería. The form must be printed on official paper.</p>
+            <ul>
+              <li>Available at: <a href="https://www.inclusion.gob.es/">www.inclusion.gob.es</a></li>
+              <li>Search for "EX-01 Solicitud de autorización de residencia" (residence authorization request)</li>
+              <li>Print in triplicate and sign all copies</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="msv__step">
+          <div class="msv__step-num">2</div>
+          <div class="msv__step-content">
+            <h4>Bank Statements & Proof of Income</h4>
+            <p>Obtain the most recent 6 months of bank statements directly from your Spanish or foreign bank. Request the official stamped version if possible.</p>
+            <ul>
+              <li>Visit your bank branch or request online through their banking portal</li>
+              <li>Request statements dated within the last 3 months</li>
+              <li>Include statements showing regular income deposits (pension, rental income, investment returns)</li>
+              <li>If your income is in a foreign currency, provide current conversion rates</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="msv__step">
+          <div class="msv__step-num">3</div>
+          <div class="msv__step-content">
+            <h4>Padrón Certificate</h4>
+            <p>Obtain from your local municipal office (Ayuntamiento) in your city or town. Usually free or low cost.</p>
+            <ul>
+              <li>Visit the Oficina del Padrón during business hours or request online</li>
+              <li>Bring your TIE/NIE card and passport</li>
+              <li>Request a "Certificado del Registro de Empadronamiento" (registry certificate)</li>
+              <li>Must show your continuous residence at the same address</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="msv__step">
+          <div class="msv__step-num">4</div>
+          <div class="msv__step-content">
+            <h4>Health Insurance Certificate</h4>
+            <p>Request updated proof of insurance from your health insurance provider. Many providers can issue this digitally.</p>
+            <ul>
+              <li>Contact your insurance company (email, phone, or online portal)</li>
+              <li>Request a "Certificado de cobertura sanitaria" (health coverage certificate)</li>
+              <li>Verify it covers medical and hospital care with minimum €600 deductible</li>
+              <li>Must be valid for the entire renewal period</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="msv__step">
+          <div class="msv__step-num">5</div>
+          <div class="msv__step-content">
+            <h4>Proof of Address</h4>
+            <p>Collect recent utility bills, rental contracts, or official correspondence from your municipality confirming your address.</p>
+            <ul>
+              <li>Recent utility bill (electricity, water, gas) dated within last 3 months</li>
+              <li>OR certified copy of rental contract with current date</li>
+              <li>OR official letter from your town council confirming your address</li>
+              <li>Must show your current residential address in Spain</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="msv__step">
+          <div class="msv__step-num">6</div>
+          <div class="msv__step-content">
+            <h4>Passport Copies & Photographs</h4>
+            <p>Make high-quality copies of all passport pages and obtain new photographs meeting official specifications.</p>
+            <ul>
+              <li>Photocopy all passport pages (front, back, all entry/exit stamps)</li>
+              <li>Use a professional photo studio for 4x4 cm color photographs</li>
+              <li>Photos must have white background, be clear and in focus</li>
+              <li>Bring recently taken photographs (within last 6 months)</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="msv__step">
+          <div class="msv__step-num">7</div>
+          <div class="msv__step-content">
+            <h4>Application Fee Payment</h4>
+            <p>Pay the renewal fee at the specified location and obtain the payment receipt.</p>
+            <ul>
+              <li>Fee varies by autonomous community (typically €120-€180)</li>
+              <li>Payment methods vary—check with your provincial Oficina de Extranjería</li>
+              <li>May be paid at the immigration office, bank, or online</li>
+              <li>Keep the receipt as proof of payment</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="msv__step">
+          <div class="msv__step-num">8</div>
+          <div class="msv__step-content">
+            <h4>Official Translations</h4>
+            <p>Take all foreign documents to a certified translator (traductor jurado) for official Spanish translation.</p>
+            <ul>
+              <li>Bank statements, pension certificates, and foreign income documents must be translated</li>
+              <li>Hire a "traductor jurado" (official certified translator)</li>
+              <li>Translations typically cost €5-€15 per page</li>
+              <li>Allow 1-2 weeks for professional translation service</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Translation Requirements -->
+  <section class="msv__section">
+    <div class="msv__container">
+      <div class="msv__section-hd">
+        <h2>Translation Requirements for NLV Renewal</h2>
+        <p>Understanding Spain's strict translation requirements is crucial for a successful renewal. All documents issued outside Spain must be officially translated.</p>
+      </div>
+
+      <div class="msv__alert msv__alert--warn">
+        <span class="msv__alert-icon">⚠️</span>
+        <p><strong>Official Requirement:</strong> Only translations by a <strong>traductor jurado</strong> (officially certified translator) are accepted by Spanish immigration authorities. Self-translations, notary translations, or translations by non-certified individuals will be rejected.</p>
+      </div>
+
+      <h3 style="margin-top: 2rem; margin-bottom: 1rem;">Which Documents Require Translation</h3>
+      <ul>
+        <li>Bank statements and financial documents in any language other than Spanish</li>
+        <li>Pension certificates and retirement income documentation</li>
+        <li>Investment account statements or rental income proof</li>
+        <li>Employment termination letters or retirement certificates</li>
+        <li>Utility bills if in a foreign language</li>
+        <li>Rental contracts issued in a foreign language</li>
+        <li>Any government-issued document from outside Spain</li>
+      </ul>
+
+      <h3 style="margin-top: 2rem; margin-bottom: 1rem;">How to Find a Certified Translator</h3>
+      <ul>
+        <li><strong>Official Registry:</strong> Visit the <a href="https://www.justicia.gob.es/">Ministerio de Justicia website</a> to find certified translators in your province</li>
+        <li><strong>Local Colegio Profesional:</strong> Contact the Professional College of Translators in your autonomous community</li>
+        <li><strong>Immigration Office:</strong> Your local Oficina de Extranjería can provide a list of approved translators</li>
+        <li><strong>Cost:</strong> Expect to pay €5-€15 per page, with turnaround of 1-2 weeks for standard service</li>
+      </ul>
+
+      <h3 style="margin-top: 2rem; margin-bottom: 1rem;">Certification Requirements</h3>
+      <ul>
+        <li>The translator must sign and stamp each translated page with their official seal</li>
+        <li>Original document must be reviewed by the translator</li>
+        <li>Certified translations must clearly state the translator's name, number, and certification date</li>
+        <li>Keep copies of the translation certificates for your records</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Submission Location -->
+  <section class="msv__section msv__section--cream">
+    <div class="msv__container">
+      <div class="msv__section-hd">
+        <h2>Where to Submit NLV Renewal Documents</h2>
+        <p>Your renewal documents must be submitted to the correct immigration office in your province. Here's how to find yours and what to expect.</p>
+      </div>
+
+      <h3 style="margin-bottom: 1rem;">Oficina de Extranjería (Immigration Office)</h3>
+      <p>You must submit your renewal application to the Oficina de Extranjería (Immigration Office) in the province where you are registered as a resident. Each autonomous community manages these offices.</p>
+
+      <h3 style="margin-top: 2rem; margin-bottom: 1rem;">How to Locate Your Office</h3>
+      <ul>
+        <li>Visit: <a href="https://www.inclusion.gob.es/">www.inclusion.gob.es</a> - National Immigration Office website</li>
+        <li>Search by your autonomous community and city</li>
+        <li>Offices are typically found in provincial capitals</li>
+        <li>Some communities offer appointment scheduling online</li>
+      </ul>
+
+      <h3 style="margin-top: 2rem; margin-bottom: 1rem;">Document Submission Methods</h3>
+      <div style="background: var(--white); border: 1px solid var(--border); border-radius: 10px; padding: 1.5rem; margin-top: 1.5rem;">
+        <p><strong>In-Person Submission:</strong> Visit your Oficina de Extranjería during business hours with all required documents. Most offices now require appointments, which can be scheduled through their website.</p>
+        <p style="margin-top: 1rem;"><strong>Mail Submission:</strong> Some offices accept mailed applications via registered mail (correo certificado). Check with your specific office, as policies vary by autonomous community.</p>
+        <p style="margin-top: 1rem;"><strong>Electronic Submission:</strong> A few autonomous communities accept online submission through official portals. Check the website of your provincial Oficina de Extranjería.</p>
+      </div>
+
+      <h3 style="margin-top: 2rem; margin-bottom: 1rem;">Important Tips for Submission</h3>
+      <ul>
+        <li>Bring the original and all copies of the EX-01 form (usually in triplicate)</li>
+        <li>Submit all documents together in a secure folder or envelope</li>
+        <li>Request a receipt acknowledging submission of your documents</li>
+        <li>Keep copies of everything you submit for your records</li>
+        <li>Processing typically takes 2-4 weeks after submission</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Common Mistakes -->
+  <section class="msv__section">
+    <div class="msv__container">
+      <div class="msv__section-hd">
+        <h2>Common Document Mistakes at NLV Renewal</h2>
+        <p>Learn from others' mistakes. These are the most frequent document-related errors that result in application rejection or delays.</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem;">
+        <div style="background: #fef2f2; border-radius: 10px; padding: 1.5rem; border-left: 4px solid var(--red);">
+          <h4 style="color: var(--red); margin-bottom: 0.5rem;">Missing Official Translations</h4>
+          <p style="font-size: 0.9rem; color: var(--muted); margin: 0;">Submitting documents from abroad without certified Spanish translations is the #1 reason for rejection. Every foreign document must be translated by a "traductor jurado."</p>
+        </div>
+
+        <div style="background: #fef2f2; border-radius: 10px; padding: 1.5rem; border-left: 4px solid var(--red);">
+          <h4 style="color: var(--red); margin-bottom: 0.5rem;">Outdated Health Insurance</h4>
+          <p style="font-size: 0.9rem; color: var(--muted); margin: 0;">Submitting a health insurance certificate that expires before your renewal period ends. Insurance must be valid for the entire renewal term.</p>
+        </div>
+
+        <div style="background: #fef2f2; border-radius: 10px; padding: 1.5rem; border-left: 4px solid var(--red);">
+          <h4 style="color: var(--red); margin-bottom: 0.5rem;">Insufficient Proof of Income</h4>
+          <p style="font-size: 0.9rem; color: var(--muted); margin: 0;">Providing only 2-3 months of bank statements instead of 6 months, or not showing consistent income that meets the minimum requirements.</p>
+        </div>
+
+        <div style="background: #fef2f2; border-radius: 10px; padding: 1.5rem; border-left: 4px solid var(--red);">
+          <h4 style="color: var(--red); margin-bottom: 0.5rem;">Blurry or Poor Quality Copies</h4>
+          <p style="font-size: 0.9rem; color: var(--muted); margin: 0;">Submitting illegible photocopies of passport pages or documents. Use high-quality copying and ensure all text is clearly readable.</p>
+        </div>
+
+        <div style="background: #fef2f2; border-radius: 10px; padding: 1.5rem; border-left: 4px solid var(--red);">
+          <h4 style="color: var(--red); margin-bottom: 0.5rem;">Incomplete EX-01 Form</h4>
+          <p style="font-size: 0.9rem; color: var(--muted); margin: 0;">Failing to complete all required fields, missing signatures, or not providing the form in triplicate as required. Double-check every section.</p>
+        </div>
+
+        <div style="background: #fef2f2; border-radius: 10px; padding: 1.5rem; border-left: 4px solid var(--red);">
+          <h4 style="color: var(--red); margin-bottom: 0.5rem;">Missing Padrón Certificate</h4>
+          <p style="font-size: 0.9rem; color: var(--muted); margin: 0;">Forgetting to include the padrón certificate or submitting an outdated one. This document is essential and must be current (issued within 3 months).</p>
+        </div>
+
+        <div style="background: #fef2f2; border-radius: 10px; padding: 1.5rem; border-left: 4px solid var(--red);">
+          <h4 style="color: var(--red); margin-bottom: 0.5rem;">Photograph Issues</h4>
+          <p style="font-size: 0.9rem; color: var(--muted); margin: 0;">Using old photos (taken more than 6 months ago), photos with colored backgrounds, or incorrect size. Photos must be 4x4 cm, recent, clear, and professional.</p>
+        </div>
+
+        <div style="background: #fef2f2; border-radius: 10px; padding: 1.5rem; border-left: 4px solid var(--red);">
+          <h4 style="color: var(--red); margin-bottom: 0.5rem;">No Application Fee Receipt</h4>
+          <p style="font-size: 0.9rem; color: var(--muted); margin: 0;">Forgetting to keep the receipt from your fee payment or losing it during the submission process. Always keep this as proof of payment.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="msv__section msv__section--cream">
+    <div class="msv__container">
+      <div class="msv__section-hd">
+        <h2>Frequently Asked Questions</h2>
+        <p>Get answers to the most common questions about NLV renewal documents in Spain.</p>
+      </div>
+
+      <div class="msv__faq-list">
+        <details>
+          <summary>Do I need a medical certificate for NLV renewal?</summary>
+          <div class="msv__faq-answer">
+            <p>No, this is one of the biggest advantages of the NLV renewal process. Unlike the initial application which requires a medical examination, renewals only require a current health insurance certificate. You do not need to undergo a new medical exam for renewal.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>How long before my visa expires can I apply for renewal?</summary>
+          <div class="msv__faq-answer">
+            <p>You can submit your NLV renewal application starting 60 days before your current visa expires. It's recommended to begin gathering documents 3-4 months before expiration to ensure you have time to obtain all necessary paperwork and arrange official translations.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>What if my income has decreased since my initial application?</summary>
+          <div class="msv__faq-answer">
+            <p>Your income must still meet the minimum requirements at renewal (typically €1,260-€1,350 per month depending on your autonomous community). If your income has decreased below the threshold, renewal may be denied. Some cases allow for savings to make up the difference—check with your Oficina de Extranjería about your specific situation.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Can I renew my NLV while outside Spain?</summary>
+          <div class="msv__faq-answer">
+            <p>You may be able to submit documents by mail or through a representative, but requirements vary by autonomous community. Some offices require in-person submission. It's best to contact your local Oficina de Extranjería to confirm their specific procedures for remote renewal applications.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>How much does an NLV renewal cost?</summary>
+          <div class="msv__faq-answer">
+            <p>The application fee varies by autonomous community but typically ranges from €120-€180. Additional costs may include certified translations (€5-€15 per page), padrón certificate (free to €10), and photos (€5-€10). Total out-of-pocket cost for renewal is usually €200-€300 depending on your specific needs.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>What happens if I submit documents after my visa expires?</summary>
+          <div class="msv__faq-answer">
+            <p>Submitting after expiration is highly problematic and may result in deportation proceedings or fines. Always apply within 60 days before expiration. If your visa has already expired, contact your Oficina de Extranjería immediately for guidance on emergency procedures or extensions. Some autonomous communities may accept late applications in specific circumstances.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Do I need to provide my criminal record certificate at renewal?</summary>
+          <div class="msv__faq-answer">
+            <p>Usually no. Criminal records are typically required only at initial application. However, immigration authorities may request a criminal certificate in specific cases, particularly if there are concerns about your background or local legal issues. Check with your specific Oficina de Extranjería as policies vary by autonomous community.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>What if some of my required documents are outdated?</summary>
+          <div class="msv__faq-answer">
+            <p>Most documents used for renewal must be recent—typically issued or dated within the last 3 months. This includes the padrón certificate, proof of address (utility bills), bank statements, and health insurance certificate. Outdated documents will likely result in rejection, so plan to gather everything fresh closer to your submission date.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Can my family member or lawyer submit documents on my behalf?</summary>
+          <div class="msv__faq-answer">
+            <p>Policies vary by autonomous community. Some offices accept submissions by authorized representatives with a power of attorney (poder notarial), while others require in-person submission by the applicant. Check with your specific Oficina de Extranjería about their representation policy before planning to use a representative.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>What should I do if my documents are rejected?</summary>
+          <div class="msv__faq-answer">
+            <p>If documents are rejected, the immigration office should provide written explanation of the deficiency. Most commonly it's due to missing translations, outdated documents, or incomplete forms. You have the right to resubmit with corrected documents. Keep all correspondence and address the specific issues mentioned in the rejection notice.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Band -->
+  
+  <!-- ── Insurance Partners ──────────────────────────── -->
+  <section class="msv__section--cream" style="padding: 2.5rem 0;">
+    <div class="msv__container--narrow">
+      <div style="background:#fff;border:2px solid var(--border);border-radius:12px;padding:1.75rem 2rem;">
+        <p style="font-weight:700;color:var(--navy);margin:0 0 0.5rem;font-size:0.95rem;">Recommended insurance specialists</p>
+        <p style="color:var(--muted);font-size:0.9rem;margin:0;line-height:1.75;">
+          <a href="https://www.spanish-healthinsurance.com/myspanishvisa" target="_blank" rel="noopener" style="color:var(--red);font-weight:700;">Spanish Health Insurance</a> — visa-compliant private health insurance for English-speaking foreigners in Spain.<br>
+          <a href="https://www.247expatinsurance.com/myspanishvisa" target="_blank" rel="noopener" style="color:var(--red);font-weight:700;">247 Expat Insurance</a> — health and all types of expat insurance in Spain, tailored for international residents.
+        </p>
+      </div>
+    </div>
+  </section>
+  <section class="msv__cta-band">
+    <div class="msv__container">
+      <h2>Ready to Renew Your NLV?</h2>
+      <p>Don't let document issues delay or deny your renewal. Get expert guidance, templates, and step-by-step checklists to ensure your application is approved on the first submission.</p>
+      <div class="msv__btn-group">
+        <a href="/non-lucrative-visa-renewal/" class="msv__btn msv__btn--primary">View Complete Renewal Guide</a>
+        <a href="https://dashboard.platinumlegalspain.com/nlv-renewal" class="msv__btn msv__btn--outline-white">Check Your Eligibility</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Guides -->
+  <section class="msv__section msv__section--cream">
+    <div class="msv__container">
+      <div class="msv__section-hd">
+        <h2>Related NLV Guides & Resources</h2>
+        <p>Explore our comprehensive collection of guides covering every aspect of the Non-Lucrative visa in Spain.</p>
+      </div>
+
+      <div class="msv__related">
+        <a href="/non-lucrative-visa-spain/" class="msv__related-card">
+          <span class="msv__related-icon">🇪🇸</span>
+          <span class="msv__related-title">NLV Overview</span>
+          <span class="msv__related-desc">Complete introduction to the Non-Lucrative visa requirements and benefits.</span>
+        </a>
+
+        <a href="/non-lucrative-visa-renewal/" class="msv__related-card">
+          <span class="msv__related-icon">🔄</span>
+          <span class="msv__related-title">NLV Renewal Guide</span>
+          <span class="msv__related-desc">Full process guide for renewing your Non-Lucrative visa in Spain.</span>
+        </a>
+
+        <a href="/non-lucrative-visa-renewal-requirements/" class="msv__related-card">
+          <span class="msv__related-icon">✓</span>
+          <span class="msv__related-title">Renewal Requirements</span>
+          <span class="msv__related-desc">Eligibility criteria and requirements for successful NLV renewal.</span>
+        </a>
+
+        <a href="/non-lucrative-visa-renewal-timeline/" class="msv__related-card">
+          <span class="msv__related-icon">⏱</span>
+          <span class="msv__related-title">Renewal Timeline</span>
+          <span class="msv__related-desc">Important dates and deadlines for your NLV renewal process.</span>
+        </a>
+
+        <a href="/non-lucrative-visa-renewal-income-requirements/" class="msv__related-card">
+          <span class="msv__related-icon">💰</span>
+          <span class="msv__related-title">Income Requirements</span>
+          <span class="msv__related-desc">Detailed breakdown of income thresholds for NLV renewal.</span>
+        </a>
+
+        <a href="/non-lucrative-visa-renewal-health-insurance/" class="msv__related-card">
+          <span class="msv__related-icon">🏥</span>
+          <span class="msv__related-title">Health Insurance</span>
+          <span class="msv__related-desc">Requirements and options for health insurance at renewal.</span>
+        </a>
+
+        <a href="/non-lucrative-visa-documents/" class="msv__related-card">
+          <span class="msv__related-icon">📋</span>
+          <span class="msv__related-title">Initial Documents</span>
+          <span class="msv__related-desc">Documents needed for initial NLV application approval.</span>
+        </a>
+
+        <a href="/non-lucrative-visa-income-requirements/" class="msv__related-card">
+          <span class="msv__related-icon">💸</span>
+          <span class="msv__related-title">Income Guide</span>
+          <span class="msv__related-desc">Complete guide to proving sufficient income for NLV.</span>
+        </a>
+
+        <a href="/non-lucrative-visa-health-insurance/" class="msv__related-card">
+          <span class="msv__related-icon">⚕️</span>
+          <span class="msv__related-title">Health Insurance Options</span>
+          <span class="msv__related-desc">Compare health insurance plans approved for NLV.</span>
+        </a>
+
+        <a href="/non-lucrative-visa-tax-spain/" class="msv__related-card">
+          <span class="msv__related-icon">📊</span>
+          <span class="msv__related-title">Taxes on NLV</span>
+          <span class="msv__related-desc">Tax obligations and filing requirements for NLV holders.</span>
+        </a>
+
+        <a href="/long-term-residency-after-nlv/" class="msv__related-card">
+          <span class="msv__related-icon">🏠</span>
+          <span class="msv__related-title">Long-Term Residency</span>
+          <span class="msv__related-desc">Path from NLV to permanent residency in Spain.</span>
+        </a>
+
+        <a href="/permanent-residency-after-nlv/" class="msv__related-card">
+          <span class="msv__related-icon">📍</span>
+          <span class="msv__related-title">Permanent Residency</span>
+          <span class="msv__related-desc">Eligibility and requirements for permanent residency.</span>
+        </a>
+
+        <a href="/non-lucrative-visa-cost/" class="msv__related-card">
+          <span class="msv__related-icon">💶</span>
+          <span class="msv__related-title">NLV Costs</span>
+          <span class="msv__related-desc">Complete cost breakdown of NLV application and renewal.</span>
+        </a>
+
+        <a href="https://dashboard.platinumlegalspain.com/nlv-renewal" class="msv__related-card">
+          <span class="msv__related-icon">☑️</span>
+          <span class="msv__related-title">Eligibility Check</span>
+          <span class="msv__related-desc">Quick assessment of your NLV eligibility and options.</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Disclaimer -->
+  </div>
+</div>
+
+<!-- FRAGMENT_END -->
+</main>
+
+
+<!-- ═══════════════════════════════════════════════════
+     SITE FOOTER
+     ═══════════════════════════════════════════════════ -->
+<footer class="msv-footer" role="contentinfo">
+
+  <div class="msv-footer__top">
+
+    <!-- Brand column -->
+    <div class="msv-footer__brand">
+      <a href="/" class="msv-footer__logo" aria-label="My Spanish Visa"><img src="/assets/images/msv-logo-white.png" alt="My Spanish Visa" height="40" style="display:block;"></a>
+      <p class="msv-footer__tagline">
+        Specialist Spain visa &amp; residency guidance for English-speaking foreigners.
+        A service of Platinum Legal Spain.
+      </p>
+      <div class="msv-footer__trust">
+        <span class="msv-footer__trust-item">All English. No barriers.</span>
+        <span class="msv-footer__trust-item">Solicitors &amp; immigration specialists</span>
+        <span class="msv-footer__trust-item">100% online process</span>
+      </div>
+    </div>
+
+    <!-- Visas column -->
+    <div>
+      <div class="msv-footer__col-title">Visas</div>
+      <ul class="msv-footer__links">
+        <li><a href="/non-lucrative-visa-spain/">Non-Lucrative Visa</a></li>
+        <li><a href="/digital-nomad-visa-spain/">Digital Nomad Visa</a></li>
+        <li><a href="/student-visa-spain/">Student Visa</a></li>
+        <li><a href="/spain-visa-renewal/">Visa Renewals</a></li>
+        <li><a href="/best-visa-move-to-spain/">Compare All Visas</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/nlv">Apply: NLV</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/dnv">Apply: DNV</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/student-visa">Apply: Student Visa</a></li>
+      </ul>
+    </div>
+
+    <!-- Resources column -->
+    <div>
+      <div class="msv-footer__col-title">Resources</div>
+      <ul class="msv-footer__links">
+        <li><a href="/blog/">Blog &amp; Guides</a></li>
+        <li><a href="/move-to-spain/">Move to Spain Guide</a></li>
+        <li><a href="/visa-eligibility-quiz/">Eligibility Quiz</a></li>
+        <li><a href="/spain-visa-checklist/">Document Checklists</a></li>
+        <li><a href="/spain-visa-requirements/">Visa Requirements</a></li>
+        <li><a href="/spain-nie-number/">NIE Number Guide</a></li>
+        <li><a href="/spain-tie-card/">TIE Card Guide</a></li>
+      </ul>
+    </div>
+
+    <!-- Company column -->
+    <div>
+      <div class="msv-footer__col-title">Company</div>
+      <ul class="msv-footer__links">
+        <li><a href="/about-us/">About Us</a></li>
+        <li><a href="/testimonials/">Client Reviews</a></li>
+        <li><a href="/why-choose-us/">Why Choose Us</a></li>
+        <li><a href="/contact-us.html">Contact</a></li>
+        <li><a href="https://www.platinumlegalspain.com" rel="noopener">Platinum Legal Spain</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/nlv-renewal">Client Portal</a></li>
+      </ul>
+    </div>
+
+  </div><!-- /.msv-footer__top -->
+
+  <div class="msv-footer__bottom">
+    <div class="msv-footer__bottom-inner">
+      <p class="msv-footer__disclaimer">
+        <strong style="color:rgba(255,255,255,0.5);">Disclaimer:</strong>
+        My Spanish Visa provides visa processing support and is not a law firm. Content on this site is for informational purposes only and does not constitute legal advice. Immigration rules change frequently — always verify requirements with official sources or a qualified specialist. My Spanish Visa is a trading name of Platinum Legal Spain.
+      </p>
+      <span class="msv-footer__copyright">© 2026 My Spanish Visa. All rights reserved.</span>
+    </div>
+  </div>
+
+</footer>
+
+</body>
+</html>

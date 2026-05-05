@@ -1,0 +1,1423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- ═══════════════════════════════════════════════════════════════════
+       PAGE-SPECIFIC HEAD — replace block below per page:
+       <title>Nlv Tax Spain | My Spanish Visa</title>
+       <meta name="description" content="…">
+       <meta property="og:title" content="…">
+       <meta property="og:description" content="…">
+       <meta property="og:url" content="https://www.myspanishvisa.com/…">
+       <meta property="og:image" content="…">
+       <link rel="canonical" href="https://www.myspanishvisa.com/…">
+       <script type="application/ld+json">…</script>
+       ═══════════════════════════════════════════════════════════════════ -->
+  <title>My Spanish Visa — Spain Visa &amp; Residency Specialists</title>
+  <meta name="description" content="My Spanish Visa helps English-speaking foreigners move to Spain. Expert guidance on Non-Lucrative Visa, Digital Nomad Visa, Student Visa, renewals and more.">
+
+  <!-- Shared Open Graph defaults -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="My Spanish Visa">
+  <meta property="og:image" content="https://www.myspanishvisa.com/assets/images/og/og-myspanishvisa-default.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@myspanishvisa">
+
+  <style>
+/* ═══════════════════════════════════════════════════════════════
+   GLOBAL SHELL — nav + footer only.
+   Page-specific CSS lives inside each fragment's own <style> block.
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── iOS overflow safety ── */
+html, body { max-width: 100%; overflow-x: clip; margin: 0; padding: 0; }
+*, *::before, *::after { box-sizing: border-box; }
+
+/* ── Brand tokens (root-level so all fragments inherit) ── */
+:root {
+  --navy:      #0c1930;
+  --navy-mid:  #1a3a5c;
+  --red:       #be0011;
+  --red-deep:  #8c000d;
+  --yellow:    #facf39;
+  --cream:     #f8f7f4;
+  --white:     #ffffff;
+  --black:     #1a1a1a;
+  --muted:     #5a6478;
+  --border:    #dce3ed;
+  --shadow-sm: 0 2px 8px rgba(12,25,48,0.08);
+  --shadow-md: 0 6px 24px rgba(12,25,48,0.13);
+}
+
+body {
+  font-family: 'Inter', 'Segoe UI', system-ui, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.75;
+  color: var(--black);
+  background: #fff;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   SITE NAV
+   ───────────────────────────────────────────────────────────── */
+.msv-nav {
+  position: sticky;
+  top: 0;
+  z-index: 9000;
+  background: var(--navy);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 2px 12px rgba(12,25,48,0.22);
+}
+.msv-nav__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+  gap: 1.5rem;
+}
+
+/* Logo */
+.msv-nav__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+.msv-nav__logo-flag {
+  font-size: 1.3rem;
+  line-height: 1;
+}
+.msv-nav__logo-text {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+.msv-nav__logo-text span {
+  color: var(--yellow);
+}
+
+/* Links */
+.msv-nav__links {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.msv-nav__links > li {
+  position: relative;
+}
+.msv-nav__links > li > a,
+.msv-nav__links > li > button {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.5rem 0.9rem;
+  font-size: 0.87rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.85);
+  text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: color 0.15s, background 0.15s;
+  white-space: nowrap;
+  height: 64px;
+}
+.msv-nav__links > li > a:hover,
+.msv-nav__links > li > button:hover,
+.msv-nav__links > li:focus-within > a,
+.msv-nav__links > li:focus-within > button {
+  color: #fff;
+  background: rgba(255,255,255,0.08);
+}
+.msv-nav__chevron {
+  font-size: 0.65rem;
+  opacity: 0.7;
+  transition: transform 0.2s;
+}
+.msv-nav__links > li:focus-within .msv-nav__chevron,
+.msv-nav__links > li:hover .msv-nav__chevron {
+  transform: rotate(180deg);
+}
+
+/* Dropdown */
+.msv-nav__dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 230px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  box-shadow: var(--shadow-md);
+  padding: 0.5rem 0;
+  z-index: 200;
+}
+.msv-nav__links > li:hover .msv-nav__dropdown,
+.msv-nav__links > li:focus-within .msv-nav__dropdown {
+  display: block;
+}
+.msv-nav__dropdown a {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.6rem 1.1rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--navy);
+  text-decoration: none;
+  transition: background 0.12s;
+}
+.msv-nav__dropdown a:hover {
+  background: var(--cream);
+  color: var(--red);
+}
+.msv-nav__dropdown-icon {
+  width: 24px;
+  height: 24px;
+  background: var(--cream);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+.msv-nav__dropdown-divider {
+  height: 1px;
+  background: var(--border);
+  margin: 0.4rem 0;
+}
+
+/* CTA button */
+.msv-nav__cta {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.55rem 1.2rem;
+  background: var(--red);
+  color: #fff !important;
+  font-size: 0.85rem;
+  font-weight: 700;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.15s, box-shadow 0.15s;
+  white-space: nowrap;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(190,0,17,0.3);
+}
+.msv-nav__cta:hover {
+  background: var(--red-deep);
+  box-shadow: 0 4px 14px rgba(190,0,17,0.4);
+  text-decoration: none;
+}
+
+/* Hamburger */
+.msv-nav__burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.4rem;
+  border-radius: 5px;
+}
+.msv-nav__burger span {
+  width: 22px;
+  height: 2px;
+  background: #fff;
+  border-radius: 2px;
+  transition: transform 0.2s, opacity 0.2s;
+  display: block;
+}
+
+/* Mobile nav */
+.msv-nav__mobile {
+  display: none;
+  flex-direction: column;
+  background: var(--navy-mid);
+  padding: 1rem 1.5rem 1.5rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+.msv-nav__mobile.open { display: flex; }
+.msv-nav__mobile a {
+  padding: 0.65rem 0;
+  color: rgba(255,255,255,0.9);
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+.msv-nav__mobile a:hover { color: var(--yellow); }
+.msv-nav__mobile .msv-nav__mobile-sub {
+  padding-left: 1rem;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: rgba(255,255,255,0.7);
+}
+.msv-nav__mobile-cta {
+  margin-top: 1rem;
+  background: var(--red);
+  color: #fff !important;
+  border-radius: 6px;
+  text-align: center;
+  padding: 0.75rem 1rem !important;
+  border-bottom: none !important;
+}
+
+@media (max-width: 900px) {
+  .msv-nav__links { display: none; }
+  .msv-nav__cta { display: none; }
+  .msv-nav__burger { display: flex; }
+}
+@media (max-width: 480px) {
+  .msv-nav__inner { padding: 0 1rem; }
+}
+
+/* ─────────────────────────────────────────────────────────────
+   SITE FOOTER
+   ───────────────────────────────────────────────────────────── */
+.msv-footer {
+  background: var(--navy);
+  color: rgba(255,255,255,0.75);
+  overflow-x: clip;
+}
+.msv-footer__top {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem 3rem;
+  display: grid;
+  grid-template-columns: 280px 1fr 1fr 1fr;
+  gap: 3rem;
+}
+@media (max-width: 900px) {
+  .msv-footer__top { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
+}
+@media (max-width: 560px) {
+  .msv-footer__top { grid-template-columns: 1fr; gap: 2rem; padding: 3rem 1.2rem 2rem; }
+}
+
+.msv-footer__brand {}
+.msv-footer__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  margin-bottom: 1rem;
+}
+.msv-footer__logo-flag { font-size: 1.3rem; }
+.msv-footer__logo-text {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -0.01em;
+}
+.msv-footer__logo-text span { color: var(--yellow); }
+.msv-footer__tagline {
+  font-size: 0.83rem;
+  color: rgba(255,255,255,0.55);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+.msv-footer__trust {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+.msv-footer__trust-item {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.65);
+}
+.msv-footer__trust-item::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  background: var(--yellow);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.msv-footer__col-title {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.4);
+  margin-bottom: 1rem;
+}
+.msv-footer__links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.msv-footer__links a {
+  font-size: 0.87rem;
+  color: rgba(255,255,255,0.68);
+  text-decoration: none;
+  transition: color 0.15s;
+  display: inline-block;
+}
+.msv-footer__links a:hover {
+  color: var(--yellow);
+  text-decoration: none;
+}
+
+.msv-footer__bottom {
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+.msv-footer__bottom-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 1rem;
+  justify-content: space-between;
+}
+.msv-footer__disclaimer {
+  font-size: 0.73rem;
+  color: rgba(255,255,255,0.35);
+  line-height: 1.65;
+  max-width: 720px;
+}
+.msv-footer__copyright {
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.35);
+  white-space: nowrap;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   MAIN CONTENT AREA
+   ───────────────────────────────────────────────────────────── */
+main {
+  /* Fragments are self-contained; this wrapper just provides flow context */
+  position: relative;
+}
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════
+     SITE NAVIGATION
+     ═══════════════════════════════════════════════════ -->
+<header class="msv-nav" role="banner">
+  <div class="msv-nav__inner">
+
+    <!-- Logo -->
+    <a href="/" class="msv-nav__logo" aria-label="My Spanish Visa — Home"><img src="/assets/images/msv-logo-white.png" alt="My Spanish Visa" height="80" style="display:block;"></a>
+
+    <!-- Desktop links -->
+    <nav aria-label="Main navigation">
+      <ul class="msv-nav__links">
+
+        <li>
+          <button class="msv-nav__dropdown-trigger" aria-haspopup="true" aria-expanded="false">
+            Visas <span class="msv-nav__chevron">▾</span>
+          </button>
+          <div class="msv-nav__dropdown" role="menu">
+            <a href="/non-lucrative-visa-spain/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🏖️</span>Non-Lucrative Visa
+            </a>
+            <a href="/digital-nomad-visa-spain/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">💻</span>Digital Nomad Visa
+            </a>
+            <a href="/student-visa-spain/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🎓</span>Student Visa
+            </a>
+            <div class="msv-nav__dropdown-divider"></div>
+            <a href="/spain-visa-renewal/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🔄</span>Visa Renewals
+            </a>
+            <a href="/best-visa-move-to-spain/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">⚖️</span>Compare All Visas
+            </a>
+          </div>
+        </li>
+
+        <li>
+          <button aria-haspopup="true" aria-expanded="false">
+            Resources <span class="msv-nav__chevron">▾</span>
+          </button>
+          <div class="msv-nav__dropdown" role="menu">
+            <a href="/blog/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">📝</span>Blog &amp; Guides
+            </a>
+            <a href="/spain-visa-checklist/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">✅</span>Document Checklists
+            </a>
+            <a href="/move-to-spain/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🏠</span>Move to Spain Guide
+            </a>
+            <a href="/visa-eligibility-quiz/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🧭</span>Eligibility Quiz
+            </a>
+          </div>
+        </li>
+
+        <li><a href="/about-us/">About Us</a></li>
+        <li><a href="/testimonials/">Reviews</a></li>
+        <li><a href="/contact-us.html">Contact</a></li>
+
+      </ul>
+    </nav>
+
+    <!-- Desktop CTA -->
+    <a href="https://dashboard.platinumlegalspain.com/nlv" class="msv-nav__cta">
+      Start My Application →
+    </a>
+
+    <!-- Hamburger (mobile) -->
+    <button class="msv-nav__burger" aria-label="Open menu" aria-expanded="false" onclick="
+      var m=document.querySelector('.msv-nav__mobile');
+      var open=m.classList.toggle('open');
+      this.setAttribute('aria-expanded', open);
+    ">
+      <span></span><span></span><span></span>
+    </button>
+
+  </div><!-- /.msv-nav__inner -->
+
+  <!-- Mobile menu -->
+  <nav class="msv-nav__mobile" aria-label="Mobile navigation">
+    <a href="/non-lucrative-visa-spain/" class="msv-nav__mobile-sub">Non-Lucrative Visa</a>
+    <a href="/digital-nomad-visa-spain/" class="msv-nav__mobile-sub">Digital Nomad Visa</a>
+    <a href="/student-visa-spain/" class="msv-nav__mobile-sub">Student Visa</a>
+    <a href="/spain-visa-renewal/">Visa Renewals</a>
+    <a href="/best-visa-move-to-spain/">Compare All Visas</a>
+    <a href="/blog/">Blog &amp; Guides</a>
+    <a href="/about-us/">About Us</a>
+    <a href="/testimonials/">Reviews</a>
+    <a href="/contact-us.html">Contact</a>
+    <a href="https://dashboard.platinumlegalspain.com/nlv" class="msv-nav__mobile-cta">Start My Application →</a>
+  </nav>
+
+</header>
+
+
+<!-- ═══════════════════════════════════════════════════
+     PAGE CONTENT (fragment injected here)
+     ═══════════════════════════════════════════════════ -->
+<main>
+<!-- FRAGMENT_START -->
+<!-- ============================================================
+     MY SPANISH VISA — Non-Lucrative Visa Tax in Spain
+     Elementor Full-Width HTML Widget · April 2026
+     Parent page: /non-lucrative-visa-spain/ · Slug: /non-lucrative-visa-tax-spain/
+     ============================================================ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.myspanishvisa.com/non-lucrative-visa-tax-spain/#webpage",
+      "url": "https://www.myspanishvisa.com/non-lucrative-visa-tax-spain/",
+      "name": "Non-Lucrative Visa Tax in Spain 2026 | Tax Residency, Rates & Obligations | My Spanish Visa",
+      "description": "Complete guide to Spanish tax for Non-Lucrative Visa holders 2026. Tax residency rules, income tax rates, double taxation treaties, wealth tax, Modelo 720, and common tax mistakes to avoid.",
+      "inLanguage": "en",
+      "isPartOf": { "@id": "https://www.myspanishvisa.com/#website" },
+      "breadcrumb": { "@id": "https://www.myspanishvisa.com/non-lucrative-visa-tax-spain/#breadcrumb" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.myspanishvisa.com/non-lucrative-visa-tax-spain/#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.myspanishvisa.com" },
+        { "@type": "ListItem", "position": 2, "name": "Non-Lucrative Visa Spain", "item": "https://www.myspanishvisa.com/non-lucrative-visa-spain/" },
+        { "@type": "ListItem", "position": 3, "name": "Tax Obligations", "item": "https://www.myspanishvisa.com/non-lucrative-visa-tax-spain/" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Do NLV holders pay tax in Spain?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Once you become a Spanish tax resident (typically by being physically present in Spain for 183 days or more in a calendar year), you are liable for Spanish income tax on your worldwide income, regardless of where the income is earned. The NLV doesn't exempt you from tax obligations — it simply allows you to reside in Spain without working."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the Spanish tax residency rule for the NLV?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Spanish tax residency is established when you spend 183 days or more in Spain during a calendar year, OR when Spain is your centre of vital interests (your family, business, or economic activity is primarily in Spain), OR when your spouse and dependent children reside in Spain. Once resident, you must file a Spanish income tax return (Modelo 100) and declare worldwide income."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are the Spanish income tax rates for NLV residents?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Spanish income tax (IRPF) is progressive and ranges from 19% on the first €12,450 of taxable income to 47% on income exceeding €300,000 per year (2025 rates). The rate you pay depends on your total income level. Self-employed income and capital gains may be taxed at different rates. Pension income from abroad is taxable in Spain subject to double taxation treaties."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need to declare my UK pension in Spain?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Your UK State Pension and private pensions are taxable income in Spain once you become a tax resident. The UK-Spain double taxation treaty typically allows Spain to tax pension income, though you can claim foreign tax credits for any UK tax paid. You will need to declare the gross pension amount on your Spanish Modelo 100 tax return. File using the S1 form to coordinate with UK authorities."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is Modelo 720 and who must file it?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Modelo 720 is Spain's overseas assets declaration form. You must file it if you hold assets abroad (bank accounts, property, securities, pensions) worth more than €50,000 in aggregate. This applies to NLV residents with significant foreign assets. Failure to file or file accurately can result in substantial fines — up to 25% of the asset value. File it by March 31 each year."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I have to pay wealth tax as an NLV holder?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Spanish wealth tax (Impuesto sobre el Patrimonio) applies to tax residents on their worldwide assets above €600,000 (threshold varies by region). The tax rate ranges from 0.2% to 2.5% depending on total net wealth. However, Madrid and some other regions have abolished wealth tax for residents. Assets subject to wealth tax include real estate, vehicles, business interests, and investment portfolios."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Will I pay double tax on my income in Spain and my home country?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Double taxation treaties between Spain and major countries (UK, US, Canada, Australia) prevent double taxation on most income types. However, you must understand each treaty to avoid problems. Generally, you pay tax in the country where income is earned (with some exceptions for pensions), and claim a foreign tax credit in the other country. Professional tax advice is essential, especially for US citizens subject to FATCA and FBAR."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the Beckham Law and does it apply to NLV holders?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The Beckham Law (flat 24% tax rate) applies to high earners who work for a Spanish employer, not to NLV holders. Since NLV visas explicitly prohibit employment in Spain, you cannot use the Beckham Law. However, if you transition to a Digital Nomad Visa or employment visa later, you may be eligible for this preferential tax regime."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<!-- Open Graph / Social -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.myspanishvisa.com/nlv-tax-spain/">
+<meta property="og:title" content="My Spanish Visa">
+<meta property="og:description" content="Expert Spain visa guidance for English-speaking expats.">
+<meta property="og:image" content="https://www.myspanishvisa.com/assets/images/og/og-nlv-spain.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="My Spanish Visa">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@myspanishvisa">
+<meta name="twitter:title" content="My Spanish Visa">
+<meta name="twitter:description" content="Expert Spain visa guidance for English-speaking expats.">
+<meta name="twitter:image" content="https://www.myspanishvisa.com/assets/images/og/og-nlv-spain.jpg">
+
+<style>
+/* ── iOS Safari pinch-zoom overflow safety ─────────────────────────── */
+/* Prevents horizontal overflow when users pinch-zoom on iPhone/iPad.   */
+/* Top-level (also paste into theme Custom CSS / Elementor Site Settings) */
+html, body { max-width: 100%; overflow-x: clip; }
+/* Scoped wrapper safety */
+.msv, .msv-nav, .msv-topbar, .msv-footer, .msv-footer-cta,
+.pls-header, .pls-body, .pls-nlv, .pls-dnv, .pls-student {
+  max-width: 100%;
+  overflow-x: clip;
+  position: relative;
+}
+/* Cap all media inside the wrapper */
+.msv img, .msv video, .msv iframe,
+.msv-footer img, .msv-footer video, .msv-footer iframe {
+  max-width: 100%;
+  height: auto;
+}
+/* Never use 100vw — use 100% instead (dev reminder) */
+
+
+/* ── Reset & scope ─────────────────────────────────────────────────── */
+.msv *, .msv *::before, .msv *::after { box-sizing: border-box; margin: 0; padding: 0; }
+/* ── Tokens ──────────────────────────────────────────────────────── */
+.msv {
+  --navy: #0c1930; --navy-mid: #1a3a5c; --red: #be0011; --red-deep: #8c000d;
+  --yellow: #facf39; --cream: #f8f7f4; --white: #ffffff; --black: #1a1a1a;
+  --muted: #5a6478; --border: #dce3ed;
+  --shadow-sm: 0 2px 8px rgba(12,25,48,0.08); --shadow-md: 0 6px 24px rgba(12,25,48,0.13);
+  font-family: 'Inter', 'Segoe UI', system-ui, Arial, sans-serif;
+  font-size: 16px; line-height: 1.75; color: var(--black); width: 100%;
+}
+.msv__container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+.msv__container--narrow { max-width: 780px; margin: 0 auto; padding: 0 2rem; }
+@media (max-width: 640px) { .msv__container, .msv__container--narrow { padding: 0 1.2rem; } }
+/* ── Typography ──────────────────────────────────────────────────── */
+.msv h1 { font-size: clamp(2rem, 4.5vw, 3rem); font-weight: 800; line-height: 1.12; color: var(--white); letter-spacing: -0.025em; margin-bottom: 1.2rem; }
+.msv h2 { font-size: clamp(1.3rem, 2.5vw, 1.75rem); font-weight: 700; color: var(--navy); letter-spacing: -0.01em; margin-bottom: 0.5rem; position: relative; display: inline-block; padding-bottom: 0.5rem; }
+.msv h2::after { content: ''; position: absolute; bottom: 0; left: 0; width: 44px; height: 3px; background: linear-gradient(90deg, var(--red), var(--red-deep)); border-radius: 2px; }
+.msv h3 { font-size: 1.05rem; font-weight: 700; color: var(--navy); margin-bottom: 0.4rem; }
+.msv p { color: var(--black); margin-bottom: 1rem; font-size: 0.97rem; }
+.msv a { color: var(--red); text-decoration: none; }
+.msv a:hover { text-decoration: underline; }
+.msv ul { list-style: none; padding: 0; margin: 0 0 1rem; }
+.msv ul li { padding: 0.35rem 0 0.35rem 1.4rem; position: relative; font-size: 0.95rem; color: var(--black); }
+.msv ul li::before { content: ''; position: absolute; left: 0; top: 0.75rem; width: 7px; height: 7px; background: linear-gradient(135deg, var(--red), var(--red-deep)); border-radius: 50%; }
+/* ── Sections ─────────────────────────────────────────────────– */
+.msv__section { padding: 5rem 0; background: var(--white); }
+.msv__section--cream { padding: 5rem 0; background: linear-gradient(180deg, #f8f7f4 0%, #f2f4f8 100%); }
+.msv__section--dark { padding: 5rem 0; background: linear-gradient(135deg, var(--navy) 0%, #0d2240 55%, #0a1d38 100%); }
+.msv__section--dark h2 { color: var(--white) !important; }
+.msv__section--dark h2::after { background: linear-gradient(90deg, var(--yellow), #e8b820); }
+.msv__section--dark h3 { color: rgba(255,255,255,0.9) !important; }
+.msv .msv__section--dark p, .msv .msv__section--dark li { color: rgba(255,255,255,0.82); }
+.msv__section--dark ul li::before { background: linear-gradient(135deg, var(--yellow), #e8b820); }
+@media (max-width: 640px) { .msv__section, .msv__section--cream, .msv__section--dark { padding: 3.5rem 0; } }
+.msv__section-hd { margin-bottom: 3rem; }
+.msv__section-hd p { color: var(--muted); font-size: 1rem; margin-top: 0.75rem; line-height: 1.7; max-width: 600px; }
+/* ── Animations ──────────────────────────────────────────────────– */
+@keyframes msv-fade-up { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes msv-shimmer {
+  0%   { background-position: -400px 0; }
+  100% { background-position: 400px 0; }
+}
+.msv__shimmer {
+  background: linear-gradient(90deg, var(--yellow) 0%, #e8b820 25%, var(--red) 50%, #e8b820 75%, var(--yellow) 100%);
+  background-size: 400px 100%;
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: msv-shimmer 3.5s linear infinite;
+  display: inline;
+}
+/* ── Hero ─────────────────────────────────────────────────────– */
+.msv__hero { background: linear-gradient(135deg, #0c1930 0%, #0f2540 40%, #162d50 70%, #1a3560 100%); padding: 5.5rem 0 5rem; position: relative; overflow: hidden; }
+.msv__hero::before { content: ''; position: absolute; top: -30%; right: -5%; width: 700px; height: 700px; background: radial-gradient(circle, rgba(190,0,17,0.1) 0%, transparent 65%); pointer-events: none; }
+.msv__hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, rgba(250,207,57,0.4), transparent); }
+.msv__hero-inner { max-width: 780px; animation: msv-fade-up 0.7s ease-out both; }
+.msv__eyebrow { display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(190,0,17,0.15); border: 1px solid rgba(190,0,17,0.4); color: #ff6b7a; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.35rem 0.9rem; border-radius: 100px; margin-bottom: 1.5rem; }
+.msv__eyebrow::before { content: ''; width: 6px; height: 6px; background: var(--red); border-radius: 50%; box-shadow: 0 0 6px var(--red); }
+.msv__hero p { color: rgba(255,255,255,0.78) !important; font-size: clamp(1rem, 2.2vw, 1.15rem); max-width: 640px; margin-bottom: 2.2rem; line-height: 1.75; }
+/* ── Breadcrumb ───────────────────────────────────────────– */
+.msv__breadcrumb { padding: 0.85rem 0; border-bottom: 1px solid var(--border); background: var(--white); }
+.msv__breadcrumb-inner { display: flex; align-items: center; gap: 0.5rem; font-size: 0.8rem; color: var(--muted); flex-wrap: wrap; }
+.msv__breadcrumb-inner a { color: var(--red); text-decoration: none; }
+.msv__breadcrumb-inner a:hover { text-decoration: underline; }
+.msv__breadcrumb-inner span { color: var(--muted); }
+/* ── Buttons ─────────────────────────────────────────────────– */
+.msv__btn-group { display: flex; flex-wrap: wrap; gap: 0.85rem; }
+.msv__btn { display: inline-block; padding: 0.85rem 2rem; font-size: 0.92rem; font-weight: 700; border-radius: 6px; text-decoration: none !important; transition: transform 0.15s, box-shadow 0.15s; }
+.msv__btn:hover { transform: translateY(-1px); text-decoration: none !important; }
+.msv .msv__btn--primary { background: linear-gradient(135deg, var(--red) 0%, var(--red-deep) 100%); color: #ffffff !important; box-shadow: 0 4px 16px rgba(190,0,17,0.38); }
+.msv .msv__btn--primary:hover { box-shadow: 0 6px 22px rgba(190,0,17,0.48); color: #ffffff !important; }
+.msv .msv__btn--outline-white { background: transparent; color: #ffffff !important; border: 1.5px solid rgba(255,255,255,0.5); }
+.msv .msv__btn--outline-white:hover { background: rgba(255,255,255,0.1); color: #ffffff !important; }
+/* ── Trust bar ──────────────────────────────────────────────– */
+.msv__trust-bar { background: var(--white); border-bottom: 1px solid var(--border); padding: 1rem 0; box-shadow: var(--shadow-sm); }
+.msv__trust-bar-inner { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.75rem; }
+.msv__trust-item { display: flex; align-items: center; gap: 0.5rem; font-size: 0.82rem; font-weight: 600; color: var(--navy); white-space: nowrap; }
+.msv__trust-item::before { content: ''; width: 7px; height: 7px; background: linear-gradient(135deg, var(--red), var(--red-deep)); border-radius: 50%; flex-shrink: 0; }
+/* ── Key facts strip ─────────────────────────────────────────– */
+.msv__facts { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; margin-bottom: 3rem; }
+@media (max-width: 760px) { .msv__facts { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 420px) { .msv__facts { grid-template-columns: 1fr; } }
+.msv__fact { background: var(--white); padding: 1.5rem 1.3rem; text-align: center; }
+.msv__fact-icon { font-size: 1.5rem; display: block; margin-bottom: 0.5rem; }
+.msv__fact-label { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); display: block; margin-bottom: 0.25rem; }
+.msv__fact-value { font-size: 0.97rem; font-weight: 700; color: var(--navy); line-height: 1.35; display: block; }
+/* ── Alert box ───────────────────────────────────────────────– */
+.msv__alert { border-radius: 10px; padding: 1.3rem 1.5rem; display: flex; gap: 1rem; align-items: flex-start; margin-bottom: 2rem; }
+.msv__alert--warn { background: #fffbea; border: 1px solid #f0d060; }
+.msv__alert--info { background: #eef4ff; border: 1px solid #a0bfff; }
+.msv__alert--red { background: #fef2f2; border: 1px solid #fca5a5; }
+.msv__alert--green { background: #f0fdf4; border: 1px solid #86efac; }
+.msv__alert-icon { font-size: 1.4rem; flex-shrink: 0; margin-top: 0.1rem; }
+.msv__alert p { font-size: 0.9rem; color: var(--black); margin: 0; line-height: 1.65; }
+.msv__alert strong { color: var(--navy); }
+/* ── Tax table ──────────────────────────────────────────────– */
+.msv__tax-table { width: 100%; border-collapse: collapse; font-size: 0.88rem; margin: 2rem 0; }
+.msv__tax-table thead tr { background: var(--navy); }
+.msv__tax-table th { padding: 1rem 1.25rem; text-align: left; color: var(--white); font-weight: 700; border-bottom: 2px solid var(--yellow); white-space: nowrap; }
+.msv__tax-table td { padding: 0.85rem 1.25rem; border-bottom: 1px solid var(--border); color: var(--black); }
+.msv__tax-table tbody tr:nth-child(even) { background: #f9fafb; }
+.msv__tax-table .tax-band { font-weight: 600; color: var(--navy); }
+.msv__tax-table .tax-rate { color: var(--red); font-weight: 700; }
+/* ── Mistake cards ──────────────────────────────────────────– */
+.msv__mistake-cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin-bottom: 2rem; }
+@media (max-width: 760px) { .msv__mistake-cards { grid-template-columns: 1fr; } }
+.msv__mistake-card { background: #fef2f2; border: 1.5px solid #fca5a5; border-radius: 10px; padding: 1.5rem; }
+.msv__mistake-card h4 { font-size: 0.95rem; font-weight: 700; color: var(--red); margin-bottom: 0.5rem; }
+.msv__mistake-card p { font-size: 0.9rem; color: var(--black); margin: 0; line-height: 1.6; }
+/* ── FAQs ────────────────────────────────────────────────– */
+.msv__faq-list { display: flex; flex-direction: column; gap: 0; border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+.msv__faq-list details { border-bottom: 1px solid var(--border); background: var(--white); }
+.msv__faq-list details:last-child { border-bottom: none; }
+.msv__faq-list summary { padding: 1.2rem 1.5rem; font-size: 0.97rem; font-weight: 700; color: var(--navy); cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+.msv__faq-list summary::-webkit-details-marker { display: none; }
+.msv__faq-list summary::after { content: '+'; font-size: 1.3rem; font-weight: 400; color: var(--red); flex-shrink: 0; transition: transform 0.2s; }
+.msv__faq-list details[open] summary::after { transform: rotate(45deg); }
+.msv__faq-list details[open] summary { color: var(--red); }
+.msv__faq-answer { padding: 0 1.5rem 1.3rem; font-size: 0.92rem; color: var(--muted); line-height: 1.75; }
+.msv__faq-answer p { color: var(--muted); font-size: 0.92rem; margin-bottom: 0.75rem; }
+.msv__faq-answer p:last-child { margin-bottom: 0; }
+/* ── CTA band ────────────────────────────────────────────────– */
+.msv__cta-band { background: linear-gradient(135deg, var(--navy) 0%, #0d2240 60%, #0a1d38 100%); padding: 5rem 0; text-align: center; }
+.msv__cta-band h2 { color: var(--white) !important; display: block; }
+.msv__cta-band h2::after { left: 50%; transform: translateX(-50%); background: linear-gradient(90deg, var(--yellow), #e8b820); }
+.msv__cta-band p { color: rgba(255,255,255,0.75) !important; max-width: 560px; margin: 1rem auto 2.2rem; font-size: 1rem; }
+.msv__cta-band .msv__btn-group { justify-content: center; }
+/* ── Related guides ──────────────────────────────────────────– */
+.msv__related { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; }
+@media (max-width: 860px) { .msv__related { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 420px) { .msv__related { grid-template-columns: 1fr; } }
+.msv__related-card { background: var(--white); border: 1px solid var(--border); border-radius: 10px; padding: 1.3rem 1.25rem; text-decoration: none !important; transition: box-shadow 0.2s, transform 0.2s; display: block; }
+.msv__related-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); text-decoration: none !important; }
+.msv__related-icon { font-size: 1.5rem; display: block; margin-bottom: 0.6rem; }
+.msv__related-title { font-size: 0.88rem; font-weight: 700; color: var(--navy); display: block; margin-bottom: 0.3rem; }
+.msv__related-desc { font-size: 0.8rem; color: var(--muted); line-height: 1.55; }
+/* ── Disclaimer ──────────────────────────────────────────────– */
+.msv__disclaimer { background: var(--cream); border-top: 1px solid var(--border); padding: 2rem 0; }
+.msv__disclaimer p { font-size: 0.78rem; color: var(--muted); margin: 0; line-height: 1.65; }
+</style>
+
+<div class="msv">
+  <!-- ── Hero ─────────────────────────────────────────────────── -->
+  <section class="msv__hero">
+    <div class="msv__container">
+      <div class="msv__hero-inner">
+        <span class="msv__eyebrow">Non-Lucrative Visa</span>
+        <h1>Non-Lucrative Visa Tax in Spain: <span class="msv__shimmer">What You Need to Know in 2026</span></h1>
+        <p>Understand your Spanish tax obligations as an NLV holder. From income tax rates and tax residency rules to wealth tax, double taxation treaties, and critical filing deadlines — this guide covers everything you need to know to stay compliant and avoid costly mistakes.</p>
+        <div class="msv__btn-group">
+          <a href="/non-lucrative-visa-spain/" class="msv__btn msv__btn--outline-white">← Back to NLV guide</a>
+          <a href="https://dashboard.platinumlegalspain.com/nlv" class="msv__btn msv__btn--primary">Check eligibility →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Trust bar ─────────────────────────────────────────── -->
+  <div class="msv__trust-bar">
+    <div class="msv__container">
+      <div class="msv__trust-bar-inner">
+        <span class="msv__trust-item">183-day tax residency rule</span>
+        <span class="msv__trust-item">Progressive income tax 19%–47%</span>
+        <span class="msv__trust-item">Double taxation treaties</span>
+        <span class="msv__trust-item">Wealth tax above €600,000</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Key facts ─────────────────────────────────────────── -->
+  <section class="msv__section" style="padding-bottom:0;">
+    <div class="msv__container--narrow">
+      <div class="msv__facts">
+        <div class="msv__fact">
+          <span class="msv__fact-icon">📍</span>
+          <span class="msv__fact-label">Tax Residency Trigger</span>
+          <span class="msv__fact-value">183 days in Spain</span>
+        </div>
+        <div class="msv__fact">
+          <span class="msv__fact-icon">📊</span>
+          <span class="msv__fact-label">Income Tax Rate Range</span>
+          <span class="msv__fact-value">19%–47% progressive</span>
+        </div>
+        <div class="msv__fact">
+          <span class="msv__fact-icon">💼</span>
+          <span class="msv__fact-label">Wealth Tax Threshold</span>
+          <span class="msv__fact-value">€600,000 net assets</span>
+        </div>
+        <div class="msv__fact">
+          <span class="msv__fact-icon">📋</span>
+          <span class="msv__fact-label">Annual Filing Deadline</span>
+          <span class="msv__fact-value">June 30 (Modelo 100)</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Do NLV Holders Pay Tax? ─────────────────────────────── -->
+  <section class="msv__section">
+    <div class="msv__container--narrow">
+      <div class="msv__section-hd">
+        <h2>Do NLV Holders Pay Tax in Spain?</h2>
+        <p>The short answer is yes. While the Non-Lucrative Visa allows you to live in Spain without employment, it does not exempt you from Spanish tax obligations. Once you establish tax residency in Spain, you become liable for Spanish income tax on your worldwide income.</p>
+      </div>
+
+      <h3>Understanding Spanish Tax Residency</h3>
+      <p>You become a Spanish tax resident in any of these circumstances:</p>
+      <ul>
+        <li><strong>The 183-day rule:</strong> You spend 183 or more days in Spain during any calendar year. Days don't have to be consecutive.</li>
+        <li><strong>Centre of vital interests:</strong> Your family, business, or economic interests are primarily based in Spain, even if you spend fewer than 183 days there.</li>
+        <li><strong>Family ties test:</strong> Your spouse and dependent children reside in Spain, regardless of your own presence.</li>
+      </ul>
+      <p>Once you meet any of these criteria, Spain considers you a tax resident from January 1 of that year. You must file a Spanish tax return (Modelo 100) and declare all worldwide income — pensions, rental income, investment returns, dividends, and capital gains.</p>
+
+      <h3>Why This Matters for NLV Holders</h3>
+      <p>Many NLV holders assume they won't owe Spanish tax because they don't work in Spain. This is a dangerous misconception. The NLV simply permits residence without employment — it provides no tax immunity. In fact, tax residency applies to all income sources, wherever earned. A UK retiree receiving a pension in Spain is liable for Spanish tax on that pension. A US investor living in Spain must declare investment income. An Australian with rental properties back home must report that rental income to Spanish tax authorities.</p>
+    </div>
+  </section>
+
+  <!-- ── Alert: Tax Obligation ─────────────────────────────── -->
+  <section class="msv__section">
+    <div class="msv__container--narrow">
+      <div class="msv__alert msv__alert--warn">
+        <span class="msv__alert-icon">⚠️</span>
+        <p><strong>Critical:</strong> Even though the NLV doesn't allow you to work in Spain, you ARE still liable for Spanish tax on your worldwide income once you become a tax resident. Failure to file or intentional tax evasion can result in substantial fines, interest charges, and even criminal prosecution. Professional tax advice is essential.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Spanish Income Tax (IRPF) ─────────────────────────── -->
+  <section class="msv__section">
+    <div class="msv__container--narrow">
+      <div class="msv__section-hd">
+        <h2>Spanish Income Tax (IRPF) for NLV Holders</h2>
+        <p>Spanish income tax is called IRPF (Impuesto sobre la Renta de las Personas Físicas). It is a progressive tax system where higher earners pay a higher percentage. Tax rates for 2025 range from 19% to 47%.</p>
+      </div>
+
+      <h3>2025 Spanish Income Tax Bands</h3>
+      <div style="overflow-x: auto; border: 1px solid var(--border); border-radius: 12px;">
+        <table class="msv__tax-table">
+          <thead>
+            <tr>
+              <th>Taxable Income (EUR)</th>
+              <th style="text-align: center;">Tax Rate</th>
+              <th style="text-align: left;">Effective Tax (approx.)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="tax-band">€0–€12,450</td>
+              <td style="text-align: center;">19%</td>
+              <td>€2,365 max on band</td>
+            </tr>
+            <tr>
+              <td class="tax-band">€12,451–€20,200</td>
+              <td style="text-align: center;">24%</td>
+              <td>€1,860 max on band</td>
+            </tr>
+            <tr>
+              <td class="tax-band">€20,201–€35,200</td>
+              <td style="text-align: center;">30%</td>
+              <td>€4,500 max on band</td>
+            </tr>
+            <tr>
+              <td class="tax-band">€35,201–€60,000</td>
+              <td style="text-align: center;">37%</td>
+              <td>€9,193 max on band</td>
+            </tr>
+            <tr>
+              <td class="tax-band">€60,001–€300,000</td>
+              <td style="text-align: center;">45%</td>
+              <td>€108,000 max on band</td>
+            </tr>
+            <tr>
+              <td class="tax-band">€300,000+</td>
+              <td style="text-align: center;" class="tax-rate">47%</td>
+              <td>47% on each euro above</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>What Income Is Taxable in Spain?</h3>
+      <p>As a Spanish tax resident, you must declare and pay tax on all income sources:</p>
+      <ul>
+        <li><strong>Pensions:</strong> UK State Pension, private pensions, occupational pensions, retirement withdrawals.</li>
+        <li><strong>Rental income:</strong> From property in Spain or abroad, net of allowable expenses.</li>
+        <li><strong>Investment income:</strong> Interest on savings accounts, dividends from stocks and mutual funds, crypto gains.</li>
+        <li><strong>Capital gains:</strong> Profit from selling property, securities, or other assets. Generally taxed as ordinary income.</li>
+        <li><strong>Self-employment income:</strong> If you run a freelance business (though note NLV restrictions on work in Spain).</li>
+        <li><strong>UK State Pension & private pensions:</strong> Fully taxable in Spain, though double taxation treaties may apply credits.</li>
+      </ul>
+
+      <h3>Special Regime for Pensions</h3>
+      <p>Pensions receive special treatment in Spain. A portion of your pension may be tax-exempt depending on your age and the treaty country. Generally, pensions are treated as earned income and taxed at your marginal rate. However, the UK-Spain double taxation treaty provides rules determining which country taxes the pension. As a Spanish resident, Spain typically has primary taxing rights, but you may claim a foreign tax credit for UK taxes already paid. Remember that <a href="/non-lucrative-visa-health-insurance/">NLV health insurance</a> costs are not tax-deductible in Spain for most visa holders — budget for this separately. For more common queries, visit our <a href="/non-lucrative-visa-faq/">NLV FAQ hub</a>.</p>
+    </div>
+  </section>
+
+  <!-- ── Double Taxation Agreements ─────────────────────────── -->
+  <section class="msv__section--dark">
+    <div class="msv__container--narrow">
+      <div class="msv__section-hd">
+        <h2>Double Taxation Agreements (Treaties)</h2>
+        <p>Spain has comprehensive double taxation treaties with major countries. These treaties prevent you from paying tax twice on the same income and determine which country has the right to tax specific income types.</p>
+      </div>
+
+      <h3>UK-Spain Treaty</h3>
+      <p>The UK-Spain treaty is particularly relevant for British NLV holders. Key points:</p>
+      <ul>
+        <li><strong>Pensions:</strong> Spain has primary taxing rights on UK State Pensions and private pensions once you're a Spanish resident.</li>
+        <li><strong>Rental income:</strong> Taxed in the country where the property is located.</li>
+        <li><strong>Investment income:</strong> Dividends and interest typically taxed in the country of residence (Spain for residents).</li>
+        <li><strong>Capital gains:</strong> Generally taxed in the country where you reside.</li>
+        <li><strong>Foreign tax credits:</strong> You can claim a credit in Spain for income tax paid to the UK (and vice versa) to avoid double taxation.</li>
+      </ul>
+
+      <h3>US-Spain Treaty</h3>
+      <p>US citizens face additional complexity due to FATCA (Foreign Account Tax Compliance Act) and FBAR (Foreign Bank Account Report) requirements. The US-Spain treaty provides:</p>
+      <ul>
+        <li><strong>Worldwide income taxation:</strong> The US taxes its citizens on worldwide income regardless of residence. Spain also taxes residents on worldwide income. This creates dual taxation that requires careful planning.</li>
+        <li><strong>Foreign Earned Income Exclusion:</strong> US citizens may exclude up to $120,000 of foreign earned income (2023). However, most NLV holders don't earn income, so this typically doesn't apply.</li>
+        <li><strong>Foreign Tax Credits:</strong> US citizens can claim credits for Spanish taxes paid to reduce US tax liability.</li>
+        <li><strong>FATCA & FBAR:</strong> US citizens must report foreign financial accounts and assets to the IRS. Failure to file FBAR can result in penalties of up to 50% of account balances.</li>
+      </ul>
+
+      <h3>Canada, Australia, and Other Countries</h3>
+      <p>Canada, Australia, New Zealand, and most EU countries have treaties with Spain providing similar protections. The core principle is the same: Spain taxes residents on worldwide income, but treaties prevent double taxation and establish which country has primary taxing rights. Work with a tax adviser familiar with both your home country's tax rules and Spain's system.</p>
+    </div>
+  </section>
+
+  <!-- ── Wealth Tax ─────────────────────────────────────────── -->
+  <section class="msv__section">
+    <div class="msv__container--narrow">
+      <div class="msv__section-hd">
+        <h2>Wealth Tax (Impuesto sobre el Patrimonio)</h2>
+        <p>In addition to income tax, Spain imposes a wealth tax on the net value of assets owned by tax residents. This is separate from income tax and can represent a significant annual cost for NLV holders with substantial savings.</p>
+      </div>
+
+      <h3>Wealth Tax Basics</h3>
+      <ul>
+        <li><strong>Threshold:</strong> €600,000 net assets (the threshold is sometimes adjusted). Wealth tax only applies to the amount above this threshold.</li>
+        <li><strong>Tax rate:</strong> Ranges from 0.2% to 2.5% depending on the total net worth.</li>
+        <li><strong>What counts:</strong> Real estate, bank accounts, securities, vehicles, business interests, art, jewelry, and other valuable assets.</li>
+        <li><strong>Exemptions:</strong> Your primary residence receives a partial exemption; the value is reduced for wealth tax purposes.</li>
+        <li><strong>Filing:</strong> File annually via Modelo 714 if you exceed the threshold. Filing deadline is usually December 3.</li>
+      </ul>
+
+      <h3>Regional Variations</h3>
+      <p>Wealth tax rules vary significantly by region. Some autonomous communities have abolished or suspended wealth tax entirely. Madrid, for example, has eliminated wealth tax for residents. If you're considering where to base yourself in Spain, wealth tax implications should factor into your decision. A gestor (tax adviser) can guide you on regional options.</p>
+
+      <h3>Typical NLV Holder Implications</h3>
+      <p>If you're moving to Spain with €500,000 in savings, you won't owe wealth tax initially (below threshold). However, if you have €800,000, you'd owe wealth tax on €200,000 at rates starting at 0.2%, or roughly €400–€5,000 per year depending on the region and your full asset value. This is a real cost many NLV applicants overlook.</p>
+    </div>
+  </section>
+
+  <!-- ── Beckham Law ─────────────────────────────────────────── -->
+  <section class="msv__section">
+    <div class="msv__container--narrow">
+      <div class="msv__section-hd">
+        <h2>The Beckham Law: Why It Doesn't Apply to NLV Holders</h2>
+        <p>Spain's "Beckham Law" (Régimen Especial de Trabajadores Desplazados) offers a preferential 24% flat tax rate on employment income. However, this regime is not available to NLV holders — and for good reason.</p>
+      </div>
+
+      <h3>What Is the Beckham Law?</h3>
+      <p>The Beckham Law is a special tax regime available to high-earning employees who are newly resident in Spain. Instead of paying progressive income tax (up to 47%), they pay a flat 24% rate on Spanish-sourced employment income. It was designed to attract skilled workers and executives to Spain. The name comes from footballer David Beckham, who famously benefited from the regime when he signed with Real Madrid.</p>
+
+      <h3>Who Qualifies?</h3>
+      <p>To qualify, you must:</p>
+      <ul>
+        <li>Be a new Spanish tax resident (not been resident in Spain in the prior 10 years).</li>
+        <li>Have an employment contract with a Spanish employer for a position in Spain.</li>
+        <li>Earn at least a certain threshold income (typically €600,000 or more annually).</li>
+        <li>Remain a Spanish tax resident for the full benefit period.</li>
+      </ul>
+
+      <h3>Why NLV Holders Cannot Use It</h3>
+      <p>The NLV visa explicitly prohibits employment in Spain. You cannot work, even part-time, for any Spanish employer. Therefore, you cannot obtain a Spanish employment contract, and you automatically disqualify from the Beckham Law. If you're planning to work in Spain, you need a different visa — such as the <a href="/digital-nomad-visa-spain/">Digital Nomad Visa</a> or a standard work visa for your profession.</p>
+
+      <div class="msv__alert msv__alert--info">
+        <span class="msv__alert-icon">ℹ️</span>
+        <p><strong>If you're considering working in Spain:</strong> NLV holders do NOT qualify for the Beckham Law because it requires a Spanish employment contract. If you're considering working in Spain, explore the Digital Nomad Visa (suitable for remote work) or a standard employment visa. These may offer better tax treatment and more flexibility.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Tax Filing & Deadlines ─────────────────────────────– -->
+  <section class="msv__section">
+    <div class="msv__container--narrow">
+      <div class="msv__section-hd">
+        <h2>Tax Filing & Deadlines for NLV Residents</h2>
+        <p>Spain has strict tax filing deadlines and specific forms for different types of declarations. Missing these deadlines can result in substantial fines and penalties.</p>
+      </div>
+
+      <h3>Key Tax Forms You'll Need</h3>
+      <ul>
+        <li><strong>Modelo 100 (Annual Income Tax Return):</strong> The main annual tax return declaring all worldwide income, deductions, and tax credits. Filing period: April 1–June 30 each year. Mandatory for tax residents with income above minimal thresholds.</li>
+        <li><strong>Modelo 720 (Overseas Assets Declaration):</strong> Required if you hold assets abroad (bank accounts, property, securities) totaling more than €50,000 in aggregate. Filing deadline: March 31 annually. Non-filing or inaccurate filing can result in fines up to 25% of asset value.</li>
+        <li><strong>Modelo 714 (Wealth Tax):</strong> Required if your net assets exceed €600,000. Filing deadline: typically December 3. Regional variations apply.</li>
+        <li><strong>Modelo 210 (Non-residents earning income):</strong> If you're still considered non-resident but have Spanish-sourced income, you may need to file this form.</li>
+      </ul>
+
+      <h3>Why You Need a Spanish Tax Adviser</h3>
+      <p>Spanish tax law is complex, and forms must be filed in Spanish. Most NLV holders hire a Spanish tax adviser (gestor/asesor fiscal) to prepare and file their returns. This typically costs €500–€1,500 per year depending on income complexity. For UK residents with pensions, US citizens with FATCA obligations, or those with overseas rental income, this is money well spent.</p>
+
+      <h3>Typical Filing Timeline</h3>
+      <ul>
+        <li><strong>December 3:</strong> Wealth tax (Modelo 714) deadline.</li>
+        <li><strong>March 31:</strong> Overseas assets (Modelo 720) deadline.</li>
+        <li><strong>April 1–June 30:</strong> Annual income tax (Modelo 100) filing window.</li>
+      </ul>
+
+      <p>Mark these dates clearly. Late filing attracts penalties starting at 1% of the tax owed, up to 20% for serious delays. Non-filing is considered tax evasion and can trigger criminal investigations.</p>
+    </div>
+  </section>
+
+  <!-- ── Common Tax Mistakes ─────────────────────────────── -->
+  <section class="msv__section">
+    <div class="msv__container--narrow">
+      <div class="msv__section-hd">
+        <h2>Common Tax Mistakes NLV Holders Make</h2>
+        <p>Understanding what NOT to do is as important as knowing what to do. Here are the most frequent tax mistakes that cost NLV holders thousands of euros in penalties and back taxes.</p>
+      </div>
+
+      <div class="msv__mistake-cards">
+        <div class="msv__mistake-card">
+          <h4>❌ "I don't work, so I don't need to file tax"</h4>
+          <p>Wrong. You must file if you have any income — pensions, rental income, investment income, or capital gains — even if you don't work. Non-filing is tax evasion and can result in criminal charges.</p>
+        </div>
+        <div class="msv__mistake-card">
+          <h4>❌ "I only need to declare income earned in Spain"</h4>
+          <p>Wrong. Spanish tax residents must declare worldwide income — pensions from abroad, rental income from foreign property, investment returns, everything. Your entire global income is taxable in Spain.</p>
+        </div>
+        <div class="msv__mistake-card">
+          <h4>❌ "Modelo 720 is optional since I only have one bank account"</h4>
+          <p>Wrong. If your total overseas assets exceed €50,000 (including bank accounts, investments, foreign property), you must file Modelo 720. The March 31 deadline is firm. Missing it triggers automatic penalties.</p>
+        </div>
+        <div class="msv__mistake-card">
+          <h4>❌ "My UK pension isn't taxable in Spain"</h4>
+          <p>Wrong. Your UK State Pension and private pensions are fully taxable as Spanish income. The UK-Spain treaty determines which country taxes it, but as a Spanish resident, Spain typically has rights. You'll owe Spanish income tax on the full pension amount.</p>
+        </div>
+        <div class="msv__mistake-card">
+          <h4>❌ "I don't need a tax adviser — I can handle it myself"</h4>
+          <p>Risky. Spanish tax law is complex, forms are in Spanish, and errors are common. A gestor typically costs €500–€1,500/year but can save you thousands by avoiding mistakes and penalties. Essential for UK/US retirees and those with overseas assets.</p>
+        </div>
+        <div class="msv__mistake-card">
+          <h4>❌ "Wealth tax doesn't apply to me"</h4>
+          <p>Check your region. If you have more than €600,000 in net assets and live in a region with wealth tax, you owe it annually. Madrid has abolished wealth tax, but most regions still impose it. This is a material ongoing cost.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── UK State Pension & Spanish Tax ─────────────────────– -->
+  <section class="msv__section">
+    <div class="msv__container--narrow">
+      <div class="msv__section-hd">
+        <h2>UK State Pension & Spanish Tax</h2>
+        <p>If you're a UK retiree moving to Spain on the NLV, understanding how your State Pension is taxed is critical. Many British NLV holders don't realize they'll owe Spanish income tax on their pension.</p>
+      </div>
+
+      <h3>How UK Pensions Are Taxed in Spain</h3>
+      <ul>
+        <li><strong>Taxable in Spain:</strong> Your full UK State Pension and private pensions are taxable income in Spain once you become a tax resident. The amount is subject to Spanish income tax at your marginal rate (19%–47%).</li>
+        <li><strong>Coordination:</strong> The UK-Spain double taxation treaty determines which country taxes the pension. Generally, Spain (as your country of residence) has primary taxing rights.</li>
+        <li><strong>UK tax treatment:</strong> The UK does not tax UK pensions for residents abroad (except in limited cases), so you typically only owe Spanish tax.</li>
+        <li><strong>Personal allowance:</strong> Spain does not provide a personal allowance like the UK. You pay tax on your full pension from the first euro of income.</li>
+      </ul>
+
+      <h3>Practical Example</h3>
+      <p>Sarah, age 68, moves to Spain on the NLV. She receives a UK State Pension of £11,500/year (approximately €13,500). Once a Spanish tax resident, she must declare this €13,500 on her Modelo 100. At the lowest Spanish tax band (19%), she owes roughly €2,565 in Spanish tax. She pays no UK tax on the pension. Net income after Spanish tax: €10,935.</p>
+
+      <h3>S1 Form & Healthcare Coordination</h3>
+      <p>When you move to Spain, file an S1 form with the UK Department for Work and Pensions (DWP). This notifies Spanish authorities that your UK pension should be registered with Spanish tax authorities and healthcare systems. It's crucial for coordinating tax and healthcare rights.</p>
+
+      <h3>What About Frozen Pensions?</h3>
+      <p>Some countries don't uprate UK pensions for residents abroad (Canada, Australia, New Zealand, etc.). If you've lived abroad long-term, your pension may be frozen. Spain does NOT freeze pensions — your UK pension will continue to increase with annual upratings. This is an advantage for NLV applicants.</p>
+    </div>
+  </section>
+
+  <!-- ── US Citizens & NLV Tax ─────────────────────────────– -->
+  <section class="msv__section">
+    <div class="msv__container--narrow">
+      <div class="msv__section-hd">
+        <h2>US Citizens & NLV Tax Obligations</h2>
+        <p>US citizens face unique tax challenges as NLV residents in Spain. The US taxes its citizens on worldwide income regardless of where they live, which can create complex dual-taxation situations.</p>
+      </div>
+
+      <h3>FATCA & FBAR Requirements</h3>
+      <p>FATCA (Foreign Account Tax Compliance Act) and FBAR (Foreign Bank Account Report) requirements are non-negotiable:</p>
+      <ul>
+        <li><strong>FBAR Filing:</strong> If you have foreign bank or financial accounts totaling more than $10,000 at any point during the year, you must file FBAR with the US Treasury. This is separate from your US tax return. Deadline: April 15 (with extension to October 15). Failure to file can result in penalties up to 50% of account balances.</li>
+        <li><strong>FATCA Form 8938:</strong> If your foreign assets exceed certain thresholds (typically $200,000 for single filers), you must file Form 8938 with your US tax return. This reports all foreign financial assets.</li>
+        <li><strong>Reportable Accounts:</strong> Spanish banks must report your account balances and transactions to the US IRS under FATCA agreements. You cannot hide accounts.</li>
+      </ul>
+
+      <h3>US-Spain Tax Treaty</h3>
+      <p>The US-Spain treaty helps reduce (but not eliminate) double taxation:</p>
+      <ul>
+        <li><strong>Foreign Earned Income Exclusion:</strong> US citizens can exclude up to $120,000 (2023) of foreign earned income. Most NLV holders don't earn income, so this doesn't apply.</li>
+        <li><strong>Foreign Tax Credits:</strong> You can claim credits for Spanish taxes paid against your US tax liability. This is complex and requires careful planning with a tax adviser.</li>
+        <li><strong>Worldwide Income Taxation:</strong> The US taxes all income worldwide. Spain taxes residents on worldwide income. This can result in dual taxation unless properly managed with credits and treaty provisions.</li>
+      </ul>
+
+      <h3>Example: Dual Taxation</h3>
+      <p>Michael, a US citizen, moves to Spain on the NLV. He has a US pension of $30,000/year and investment income of $10,000/year from US stocks. Spain taxes him on this $40,000 at Spanish rates (roughly 24% = €9,600). The US also taxes him on the $40,000 at US rates (roughly 24% = $9,600). Without treaty credits, he pays roughly $19,200 total. With proper foreign tax credits, he can reduce this significantly — but it requires careful filing and a tax adviser who understands both systems.</p>
+
+      <h3>Why You Need a Specialist</h3>
+      <p>US citizens should work with a tax adviser (CPA or expatriate tax specialist) who understands both US and Spanish tax law. This person should be comfortable with FATCA, FBAR, and treaty provisions. The cost ($1,500–$3,000+ per year) is well worth avoiding penalties, back taxes, and interest.</p>
+    </div>
+  </section>
+
+  <!-- ── CTA Band ────────────────────────────────────────── -->
+  <section class="msv__cta-band">
+    <div class="msv__container--narrow">
+      <h2>Get Professional Tax Guidance Before You Apply</h2>
+      <p>Spanish tax is complex, especially for UK retirees and US citizens. A qualified tax adviser can help you understand your obligations, plan for tax residency, and avoid costly mistakes.</p>
+      <div class="msv__btn-group">
+        <a href="/guide/healthcare-spain/" class="msv__btn msv__btn--outline-white">← Healthcare guide</a>
+        <a href="/non-lucrative-visa-requirements/" class="msv__btn msv__btn--primary">View NLV requirements →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FAQs ────────────────────────────────────────────── -->
+  <section class="msv__section">
+    <div class="msv__container--narrow">
+      <div class="msv__section-hd">
+        <h2>Frequently Asked Questions</h2>
+      </div>
+
+      <div class="msv__faq-list">
+        <details>
+          <summary>Do NLV holders pay tax in Spain?</summary>
+          <div class="msv__faq-answer">
+            <p>Yes. Once you become a Spanish tax resident (typically by spending 183 days in Spain or having your centre of vital interests there), you are liable for Spanish income tax on your worldwide income. The NLV does not exempt you from tax — it simply allows you to reside in Spain without working.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>What is the Spanish tax residency rule for NLV holders?</summary>
+          <div class="msv__faq-answer">
+            <p>You become a Spanish tax resident when you spend 183 or more days in Spain during a calendar year, OR when your centre of vital interests (family, business, economic activity) is in Spain, OR when your spouse and dependents live in Spain. Once resident, you must file Spanish income tax returns and declare worldwide income.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>What are the Spanish income tax rates?</summary>
+          <div class="msv__faq-answer">
+            <p>Spanish income tax (IRPF) is progressive, ranging from 19% on the first €12,450 of taxable income to 47% on income exceeding €300,000. Rates for 2025 are: 19% (€0–€12,450), 24% (€12,451–€20,200), 30% (€20,201–€35,200), 37% (€35,201–€60,000), 45% (€60,001–€300,000), and 47% (€300,000+).</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Do I need to declare my UK pension in Spain?</summary>
+          <div class="msv__faq-answer">
+            <p>Yes. Your UK State Pension and private pensions are fully taxable as Spanish income once you become a Spanish tax resident. You must declare the gross pension amount on your Modelo 100 annual tax return. The UK-Spain treaty typically allows Spain to tax pension income. File an S1 form with the UK DWP to coordinate with Spanish authorities.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>What is Modelo 720 and do I need to file it?</summary>
+          <div class="msv__faq-answer">
+            <p>Modelo 720 is Spain's overseas assets declaration form. You must file it if you hold assets abroad totaling more than €50,000 in aggregate (bank accounts, property, investments, pensions). Filing deadline is March 31 annually. Failure to file or filing inaccurately can result in substantial fines — up to 25% of the asset value.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Will I pay wealth tax on my savings in Spain?</summary>
+          <div class="msv__faq-answer">
+            <p>Possibly. Spanish wealth tax applies to tax residents with net assets above €600,000 (threshold varies by region). Tax rates range from 0.2% to 2.5% depending on total net wealth. However, some regions have abolished or suspended wealth tax — Madrid, for example, has no wealth tax. Check your planned region.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Can I use the Beckham Law as an NLV holder?</summary>
+          <div class="msv__faq-answer">
+            <p>No. The Beckham Law (24% flat tax rate) requires a Spanish employment contract. Since NLV visas prohibit employment in Spain, you cannot qualify. If you plan to work in Spain later, explore the Digital Nomad Visa or a standard work visa, which may offer better tax treatment.</p>
+        </details>
+
+        <details>
+          <summary>What should US citizens know about Spanish taxes?</summary>
+          <div class="msv__faq-answer">
+            <p>US citizens face dual taxation challenges: the US taxes worldwide income, and Spain taxes residents on worldwide income. FATCA and FBAR filing requirements are mandatory. The US-Spain treaty provides foreign tax credits to reduce double taxation, but proper planning is essential. Work with a tax adviser who understands both US and Spanish tax law.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Related Guides ──────────────────────────────────── -->
+  <section class="msv__section">
+    <div class="msv__container">
+      <div class="msv__section-hd">
+        <h2>Related NLV Guides</h2>
+      </div>
+
+      <div style="margin-bottom: 2rem;">
+        <div class="msv__related">
+          <a href="/non-lucrative-visa-requirements/" class="msv__related-card">
+            <span class="msv__related-icon">✓</span>
+            <span class="msv__related-title">NLV Requirements</span>
+            <span class="msv__related-desc">Income thresholds, age limits, health insurance, and financial proof needed for the NLV.</span>
+          </a>
+          <a href="/non-lucrative-visa-income-requirements/" class="msv__related-card">
+            <span class="msv__related-icon">💰</span>
+            <span class="msv__related-title">Income Requirements</span>
+            <span class="msv__related-desc">Minimum income levels, proof requirements, and income documentation guidelines.</span>
+          </a>
+          <a href="/non-lucrative-visa-documents/" class="msv__related-card">
+            <span class="msv__related-icon">📄</span>
+            <span class="msv__related-title">Documents Checklist</span>
+            <span class="msv__related-desc">Complete list of required documents, translations, apostilles, and submission guidelines.</span>
+          </a>
+          <a href="/guide/healthcare-spain/" class="msv__related-card">
+            <span class="msv__related-icon">🏥</span>
+            <span class="msv__related-title">Healthcare in Spain</span>
+            <span class="msv__related-desc">Private insurance, public healthcare access, costs, and coverage for NLV residents.</span>
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <div class="msv__related">
+          <a href="/non-lucrative-visa-application-process/" class="msv__related-card">
+            <span class="msv__related-icon">📋</span>
+            <span class="msv__related-title">Application Process</span>
+            <span class="msv__related-desc">Step-by-step guide to applying for the NLV, from initial consulate contact to visa issuance.</span>
+          </a>
+          <a href="/non-lucrative-visa-timeline/" class="msv__related-card">
+            <span class="msv__related-icon">⏱️</span>
+            <span class="msv__related-title">Timeline & Wait Times</span>
+            <span class="msv__related-desc">Realistic processing times, delays to expect, and how to track your application.</span>
+          </a>
+          <a href="/non-lucrative-visa-cost/" class="msv__related-card">
+            <span class="msv__related-icon">💳</span>
+            <span class="msv__related-title">Cost & Fees</span>
+            <span class="msv__related-desc">Complete breakdown of NLV costs, health insurance, translations, and professional fees.</span>
+          </a>
+          <a href="/non-lucrative-visa-renewal/" class="msv__related-card">
+            <span class="msv__related-icon">🔄</span>
+            <span class="msv__related-title">Renewal & Extension</span>
+            <span class="msv__related-desc">How to renew your NLV, timelines, costs, and requirements for continued residency.</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Additional Resources ─────────────────────────────– -->
+  <section class="msv__section">
+    <div class="msv__container--narrow">
+      <div class="msv__section-hd">
+        <h2>Resources for Specific Situations</h2>
+      </div>
+
+      <div style="margin-bottom: 2rem;">
+        <div class="msv__related">
+          <a href="/non-lucrative-visa-uk/" class="msv__related-card">
+            <span class="msv__related-icon">🇬🇧</span>
+            <span class="msv__related-title">UK Citizens Guide</span>
+            <span class="msv__related-desc">NLV-specific guidance for British applicants, UK pensions, NHS healthcare coordination, and taxes.</span>
+          </a>
+          <a href="/non-lucrative-visa-americans/" class="msv__related-card">
+            <span class="msv__related-icon">🇺🇸</span>
+            <span class="msv__related-title">US Citizens Guide</span>
+            <span class="msv__related-desc">NLV guidance for Americans, FATCA, FBAR, IRS filing, and US-Spain tax coordination.</span>
+          </a>
+          <a href="/digital-nomad-visa-spain/" class="msv__related-card">
+            <span class="msv__related-icon">💻</span>
+            <span class="msv__related-title">Digital Nomad Visa</span>
+            <span class="msv__related-desc">Alternative visa for remote workers with different tax and employment benefits.</span>
+          </a>
+          <a href="https://dashboard.platinumlegalspain.com/nlv" class="msv__related-card">
+            <span class="msv__related-icon">✓</span>
+            <span class="msv__related-title">Eligibility Check</span>
+            <span class="msv__related-desc">Quick assessment to see if the NLV is right for you and your situation.</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- FRAGMENT_END -->
+</main>
+
+
+<!-- ═══════════════════════════════════════════════════
+     SITE FOOTER
+     ═══════════════════════════════════════════════════ -->
+<footer class="msv-footer" role="contentinfo">
+
+  <div class="msv-footer__top">
+
+    <!-- Brand column -->
+    <div class="msv-footer__brand">
+      <a href="/" class="msv-footer__logo" aria-label="My Spanish Visa"><img src="/assets/images/msv-logo-white.png" alt="My Spanish Visa" height="40" style="display:block;"></a>
+      <p class="msv-footer__tagline">
+        Specialist Spain visa &amp; residency guidance for English-speaking foreigners.
+        A service of Platinum Legal Spain.
+      </p>
+      <div class="msv-footer__trust">
+        <span class="msv-footer__trust-item">All English. No barriers.</span>
+        <span class="msv-footer__trust-item">Solicitors &amp; immigration specialists</span>
+        <span class="msv-footer__trust-item">100% online process</span>
+      </div>
+    </div>
+
+    <!-- Visas column -->
+    <div>
+      <div class="msv-footer__col-title">Visas</div>
+      <ul class="msv-footer__links">
+        <li><a href="/non-lucrative-visa-spain/">Non-Lucrative Visa</a></li>
+        <li><a href="/digital-nomad-visa-spain/">Digital Nomad Visa</a></li>
+        <li><a href="/student-visa-spain/">Student Visa</a></li>
+        <li><a href="/spain-visa-renewal/">Visa Renewals</a></li>
+        <li><a href="/best-visa-move-to-spain/">Compare All Visas</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/nlv">Apply: NLV</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/dnv">Apply: DNV</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/student-visa">Apply: Student Visa</a></li>
+      </ul>
+    </div>
+
+    <!-- Resources column -->
+    <div>
+      <div class="msv-footer__col-title">Resources</div>
+      <ul class="msv-footer__links">
+        <li><a href="/blog/">Blog &amp; Guides</a></li>
+        <li><a href="/move-to-spain/">Move to Spain Guide</a></li>
+        <li><a href="/visa-eligibility-quiz/">Eligibility Quiz</a></li>
+        <li><a href="/spain-visa-checklist/">Document Checklists</a></li>
+        <li><a href="/spain-visa-requirements/">Visa Requirements</a></li>
+        <li><a href="/spain-nie-number/">NIE Number Guide</a></li>
+        <li><a href="/spain-tie-card/">TIE Card Guide</a></li>
+      </ul>
+    </div>
+
+    <!-- Company column -->
+    <div>
+      <div class="msv-footer__col-title">Company</div>
+      <ul class="msv-footer__links">
+        <li><a href="/about-us/">About Us</a></li>
+        <li><a href="/testimonials/">Client Reviews</a></li>
+        <li><a href="/why-choose-us/">Why Choose Us</a></li>
+        <li><a href="/contact-us.html">Contact</a></li>
+        <li><a href="https://www.platinumlegalspain.com" rel="noopener">Platinum Legal Spain</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/nlv">Client Portal</a></li>
+      </ul>
+    </div>
+
+  </div><!-- /.msv-footer__top -->
+
+  <div class="msv-footer__bottom">
+    <div class="msv-footer__bottom-inner">
+      <p class="msv-footer__disclaimer">
+        <strong style="color:rgba(255,255,255,0.5);">Disclaimer:</strong>
+        My Spanish Visa provides visa processing support and is not a law firm. Content on this site is for informational purposes only and does not constitute legal advice. Immigration rules change frequently — always verify requirements with official sources or a qualified specialist. My Spanish Visa is a trading name of Platinum Legal Spain.
+      </p>
+      <span class="msv-footer__copyright">© 2026 My Spanish Visa. All rights reserved.</span>
+    </div>
+  </div>
+
+</footer>
+
+</body>
+</html>

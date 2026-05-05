@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>My Spanish Visa — Spain Visa Options: SEO Metadata & JSON-LD Schema</title>
+<style>
+/* ── iOS Safari pinch-zoom overflow safety ─────────────────────────── */
+/* Prevents horizontal overflow when users pinch-zoom on iPhone/iPad.   */
+/* Top-level (also paste into theme Custom CSS / Elementor Site Settings) */
+html, body { max-width: 100%; overflow-x: clip; }
+/* Scoped wrapper safety */
+.msv, .msv-nav, .msv-topbar, .msv-footer, .msv-footer-cta,
+.pls-header, .pls-body, .pls-nlv, .pls-dnv, .pls-student {
+  max-width: 100%;
+  overflow-x: clip;
+  position: relative;
+}
+/* Cap all media inside the wrapper */
+.msv img, .msv video, .msv iframe,
+.msv-footer img, .msv-footer video, .msv-footer iframe {
+  max-width: 100%;
+  height: auto;
+}
+/* Never use 100vw — use 100% instead (dev reminder) */
+
+
+  body { font-family: 'Segoe UI', Arial, sans-serif; max-width: 900px; margin: 2rem auto; padding: 0 1.5rem; color: #1a1a1a; line-height: 1.7; }
+  h1 { font-size: 1.5rem; color: #0c1930; border-bottom: 3px solid #be0011; padding-bottom: 0.5rem; }
+  h2 { font-size: 1.15rem; color: #0c1930; margin-top: 2.5rem; border-left: 4px solid #be0011; padding-left: 0.75rem; }
+  h3 { font-size: 0.95rem; color: #5a6478; text-transform: uppercase; letter-spacing: 0.05em; margin-top: 1.5rem; }
+  table { width: 100%; border-collapse: collapse; margin: 1rem 0 1.5rem; font-size: 0.9rem; }
+  th { background: #0c1930; color: #fff; padding: 0.6rem 0.9rem; text-align: left; }
+  td { padding: 0.6rem 0.9rem; border-bottom: 1px solid #dce3ed; vertical-align: top; }
+  tr:nth-child(even) td { background: #f8f7f4; }
+  code { background: #f2f4f8; padding: 0.15rem 0.4rem; border-radius: 4px; font-size: 0.85rem; }
+  pre { background: #0c1930; color: #e8edf6; padding: 1.5rem; border-radius: 8px; overflow-x: auto; font-size: 0.82rem; line-height: 1.6; white-space: pre; }
+  .note { background: #fff8e6; border-left: 4px solid #facf39; padding: 0.75rem 1rem; border-radius: 0 6px 6px 0; font-size: 0.88rem; margin: 1rem 0; }
+  .section { margin-bottom: 3rem; }
+</style>
+</head>
+<body>
+
+<h1>My Spanish Visa — Spain Visa Options: SEO Metadata &amp; JSON-LD Schema</h1>
+<p style="color:#5a6478; font-size:0.9rem;">Reference document for WordPress implementation · April 2026</p>
+
+<!-- ═══════════════════════════════════
+     1. SEO METADATA
+════════════════════════════════════ -->
+<div class="section">
+<h2>1. SEO Metadata</h2>
+<table>
+  <tr><th>Field</th><th>Value</th></tr>
+  <tr><td><strong>Page slug</strong></td><td><code>/spain-visa-options/</code></td></tr>
+  <tr><td><strong>SEO title</strong></td><td>Spain Visa Options for English Speakers | Compare All Routes</td></tr>
+  <tr><td><strong>Meta description</strong></td><td>Compare every Spain visa option available to English-speaking foreigners. Non-Lucrative Visa, Digital Nomad Visa, Student Visa, and renewals — explained clearly, side by side.</td></tr>
+  <tr><td><strong>Meta description length</strong></td><td>~158 characters</td></tr>
+  <tr><td><strong>H1 (on page)</strong></td><td>Find the Right Visa for Your Move to Spain</td></tr>
+  <tr><td><strong>Primary keyword</strong></td><td>Spain visa options</td></tr>
+  <tr><td><strong>Secondary keywords</strong></td><td>which Spain visa do I need, Spain visa comparison, Spain visa for English speakers, Non-Lucrative vs Digital Nomad Visa Spain, move to Spain visa options</td></tr>
+  <tr><td><strong>Canonical URL</strong></td><td><code>https://www.myspanishvisa.com/spain-visa-options/</code></td></tr>
+  <tr><td><strong>OG title</strong></td><td>Spain Visa Options for English Speakers | Compare All Routes</td></tr>
+  <tr><td><strong>OG description</strong></td><td>Not sure which Spain visa is right for you? Compare every route side by side — NLV, Digital Nomad, Student, and renewals — with key facts, processing times, and direct links to start.</td></tr>
+  <tr><td><strong>OG image</strong></td><td>MSV brand hero image (1200×630px recommended)</td></tr>
+  <tr><td><strong>Index / Follow</strong></td><td>index, follow</td></tr>
+</table>
+</div>
+
+<!-- ═══════════════════════════════════
+     2. PAGE STRUCTURE
+════════════════════════════════════ -->
+<div class="section">
+<h2>2. Page Structure Summary</h2>
+<table>
+  <tr><th>Section</th><th>Content</th><th>Funnel role</th></tr>
+  <tr><td>Hero</td><td>H1 · sub-headline · Check Eligibility + Book Consultation CTAs</td><td>Awareness → action</td></tr>
+  <tr><td>Trust bar</td><td>4 fully managed routes · Backed by Platinum Legal Spain · Specialist guidance · 100% online</td><td>Credibility</td></tr>
+  <tr><td>Visa option cards (2×2)</td><td>NLV / DNV / Student / Not Sure — each with key facts block + dashboard CTA</td><td>Route identification</td></tr>
+  <tr><td>Comparison table</td><td>NLV vs DNV vs Student — right to work, duration, family, processing</td><td>Comparison / decision</td></tr>
+  <tr><td>Renewal band</td><td>Already in Spain? NLV Renewal + DNV Renewal dashboard links</td><td>Existing clients</td></tr>
+  <tr><td>Not Sure band</td><td>Navy CTA block — Eligibility Check + Consultation</td><td>Catch-all conversion</td></tr>
+  <tr><td>FAQs (5)</td><td>Which visa, can I work on NLV, NLV vs DNV, family, processing times</td><td>SEO + objection handling</td></tr>
+  <tr><td>Final CTA</td><td>Eligibility Check + Consultation</td><td>Final conversion</td></tr>
+</table>
+</div>
+
+<!-- ═══════════════════════════════════
+     3. INTERNAL LINKS
+════════════════════════════════════ -->
+<div class="section">
+<h2>3. Internal Link Map</h2>
+<table>
+  <tr><th>Anchor text</th><th>Target URL</th><th>Location</th></tr>
+  <tr><td>Check My Eligibility — Free</td><td>/eligibility-check/</td><td>Hero, Not Sure band, Final CTA</td></tr>
+  <tr><td>Book a Free Consultation</td><td>/book-consultation/</td><td>Hero, Not Sure card, Not Sure band, Final CTA</td></tr>
+  <tr><td>Create Account &amp; Start Eligibility Check (NLV)</td><td>https://dashboard.platinumlegalspain.com/nlv</td><td>NLV card</td></tr>
+  <tr><td>Create Account &amp; Start Eligibility Check (DNV)</td><td>https://dashboard.platinumlegalspain.com/dnv</td><td>DNV card</td></tr>
+  <tr><td>Create Account &amp; Start Eligibility Check (Student)</td><td>https://dashboard.platinumlegalspain.com/student-visa</td><td>Student card</td></tr>
+  <tr><td>Start NLV Renewal</td><td>https://dashboard.platinumlegalspain.com/nlv-renewal</td><td>Renewal band</td></tr>
+  <tr><td>Start DNV Renewal</td><td>https://dashboard.platinumlegalspain.com/dnv-renewal</td><td>Renewal band</td></tr>
+  <tr><td>Read the full NLV guide</td><td>/non-lucrative-visa-spain/</td><td>NLV card</td></tr>
+  <tr><td>Read the full DNV guide</td><td>/spain-digital-nomad-visa/ <em>(confirm slug)</em></td><td>DNV card</td></tr>
+  <tr><td>Read the full student visa guide</td><td>/spain-student-visa/ <em>(confirm slug)</em></td><td>Student card</td></tr>
+</table>
+<div class="note">⚠️ DNV and Student pillar page slugs need confirming — update once WordPress slugs are set.</div>
+</div>
+
+<!-- ═══════════════════════════════════
+     4. JSON-LD SCHEMA
+════════════════════════════════════ -->
+<div class="section">
+<h2>4. JSON-LD Schema</h2>
+<div class="note">This schema is already embedded inside <strong>spain-visa-options.html</strong> as a <code>&lt;script type="application/ld+json"&gt;</code> tag — invisible to visitors. If adding separately in WordPress, paste into the page <code>&lt;head&gt;</code> via RankMath → Custom Schema or Insert Headers and Footers.</div>
+
+<h3>Schema Block 1 — WebPage + BreadcrumbList</h3>
+<pre>{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.myspanishvisa.com/spain-visa-options/#webpage",
+      "url": "https://www.myspanishvisa.com/spain-visa-options/",
+      "name": "Spain Visa Options for English Speakers | Compare All Routes",
+      "description": "Compare every Spain visa option available to English-speaking foreigners. Non-Lucrative Visa, Digital Nomad Visa, Student Visa, and renewals — explained clearly, side by side.",
+      "inLanguage": "en",
+      "isPartOf": {
+        "@id": "https://www.myspanishvisa.com/#website"
+      },
+      "breadcrumb": {
+        "@id": "https://www.myspanishvisa.com/spain-visa-options/#breadcrumb"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.myspanishvisa.com/spain-visa-options/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.myspanishvisa.com"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Spain Visa Options",
+          "item": "https://www.myspanishvisa.com/spain-visa-options/"
+        }
+      ]
+    }
+  ]
+}</pre>
+
+<h3>Schema Block 2 — FAQPage</h3>
+<pre>{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Which Spain visa is right for me?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The right visa depends on why you are moving and whether you plan to work. If you have passive income or are retired, the Non-Lucrative Visa is typically the most suitable route. If you work remotely for clients outside Spain, the Digital Nomad Visa may be the better fit. If you are coming to study, the Student Visa covers language schools, universities, and accredited private institutions. Our free eligibility check helps you confirm the right route in around five minutes at https://www.myspanishvisa.com/eligibility-check/"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I work in Spain on the Non-Lucrative Visa?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The Non-Lucrative Visa does not permit you to carry out any professional or employment activity in Spain. It is intended for people who can support themselves financially without working — typically retirees, those with investment income, rental income, or sufficient savings. If you plan to work remotely, the Digital Nomad Visa is the appropriate route."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between the Digital Nomad Visa and the Non-Lucrative Visa?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The key difference is the right to work. The Digital Nomad Visa allows you to live in Spain while continuing to work remotely for employers or clients based outside Spain. The Non-Lucrative Visa does not permit any work activity. Both allow you to live in Spain as a legal resident, but they are designed for different situations. The income thresholds and documentation requirements also differ between the two routes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can my family move to Spain with me on a visa?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, on both the Non-Lucrative and Digital Nomad Visa routes. Qualifying family members — typically a spouse or civil partner and dependent children — can be included in your application as dependants. Each family member will need their own documentation, and their inclusion will affect the income threshold required."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does a Spain visa application take?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Processing times vary by visa type and consulate. Non-Lucrative Visa applications typically take between 4 and 12 weeks at a Spanish consulate abroad. Digital Nomad Visa applications submitted through the UGE are legally required to be processed within 20 working days. Student Visa applications generally take 4 to 8 weeks. We advise all clients to begin the process well in advance of their intended move date."
+      }
+    }
+  ]
+}</pre>
+</div>
+
+<!-- ═══════════════════════════════════
+     5. WORDPRESS CHECKLIST
+════════════════════════════════════ -->
+<div class="section">
+<h2>5. WordPress Implementation Checklist</h2>
+<table>
+  <tr><th>#</th><th>Task</th><th>Where</th></tr>
+  <tr><td>1</td><td>Set page slug to <code>/spain-visa-options/</code></td><td>WordPress page settings</td></tr>
+  <tr><td>2</td><td>Set SEO title: <em>Spain Visa Options for English Speakers | Compare All Routes</em></td><td>RankMath / Yoast → Title</td></tr>
+  <tr><td>3</td><td>Set meta description (~158 chars)</td><td>RankMath / Yoast → Meta description</td></tr>
+  <tr><td>4</td><td>Set canonical URL to <code>https://www.myspanishvisa.com/spain-visa-options/</code></td><td>RankMath / Yoast → Advanced</td></tr>
+  <tr><td>5</td><td>Schema already embedded in spain-visa-options.html — no separate paste needed</td><td>HTML widget &lt;script&gt; tag</td></tr>
+  <tr><td>6</td><td>Confirm and update DNV pillar page slug (currently /spain-digital-nomad-visa/)</td><td>HTML widget + schema</td></tr>
+  <tr><td>7</td><td>Confirm and update Student pillar page slug (currently /spain-student-visa/)</td><td>HTML widget + schema</td></tr>
+  <tr><td>8</td><td>Add page to main navigation as "Visa Options" or "Spain Visa Options"</td><td>WordPress Menus</td></tr>
+  <tr><td>9</td><td>Add page to XML sitemap</td><td>RankMath / Yoast sitemap settings</td></tr>
+  <tr><td>10</td><td>Validate schema at <a href="https://search.google.com/test/rich-results" target="_blank">Google Rich Results Test</a></td><td>Post-publish</td></tr>
+  <tr><td>11</td><td>Internal links: ensure NLV, DNV, Student, About Us, Contact pages all link to /spain-visa-options/ where appropriate</td><td>Each page HTML widget</td></tr>
+</table>
+</div>
+
+</body>
+</html>

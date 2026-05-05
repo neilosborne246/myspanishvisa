@@ -1,0 +1,1860 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- ═══════════════════════════════════════════════════════════════════
+       PAGE-SPECIFIC HEAD — replace block below per page:
+       <title>Homepage | My Spanish Visa</title>
+       <meta name="description" content="…">
+       <meta property="og:title" content="…">
+       <meta property="og:description" content="…">
+       <meta property="og:url" content="https://www.myspanishvisa.com/…">
+       <meta property="og:image" content="…">
+       <link rel="canonical" href="https://www.myspanishvisa.com/…">
+       <script type="application/ld+json">…</script>
+       ═══════════════════════════════════════════════════════════════════ -->
+  <title>My Spanish Visa — Spain Visa &amp; Residency Specialists</title>
+  <meta name="description" content="My Spanish Visa helps English-speaking foreigners move to Spain. Expert guidance on Non-Lucrative Visa, Digital Nomad Visa, Student Visa, renewals and more.">
+
+  <!-- Shared Open Graph defaults -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="My Spanish Visa">
+  <meta property="og:image" content="https://www.myspanishvisa.com/assets/images/og/og-myspanishvisa-default.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@myspanishvisa">
+
+  <style>
+/* ═══════════════════════════════════════════════════════════════
+   GLOBAL SHELL — nav + footer only.
+   Page-specific CSS lives inside each fragment's own <style> block.
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── iOS overflow safety ── */
+html, body { max-width: 100%; overflow-x: clip; margin: 0; padding: 0; }
+*, *::before, *::after { box-sizing: border-box; }
+
+/* ── Brand tokens (root-level so all fragments inherit) ── */
+:root {
+  --navy:      #0c1930;
+  --navy-mid:  #1a3a5c;
+  --red:       #be0011;
+  --red-deep:  #8c000d;
+  --yellow:    #facf39;
+  --cream:     #f8f7f4;
+  --white:     #ffffff;
+  --black:     #1a1a1a;
+  --muted:     #5a6478;
+  --border:    #dce3ed;
+  --shadow-sm: 0 2px 8px rgba(12,25,48,0.08);
+  --shadow-md: 0 6px 24px rgba(12,25,48,0.13);
+}
+
+body {
+  font-family: 'Inter', 'Segoe UI', system-ui, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.75;
+  color: var(--black);
+  background: #fff;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   SITE NAV
+   ───────────────────────────────────────────────────────────── */
+.msv-nav {
+  position: sticky;
+  top: 0;
+  z-index: 9000;
+  background: var(--navy);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 2px 12px rgba(12,25,48,0.22);
+}
+.msv-nav__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+  gap: 1.5rem;
+}
+
+/* Logo */
+.msv-nav__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+.msv-nav__logo-flag {
+  font-size: 1.3rem;
+  line-height: 1;
+}
+.msv-nav__logo-text {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+.msv-nav__logo-text span {
+  color: var(--yellow);
+}
+
+/* Links */
+.msv-nav__links {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.msv-nav__links > li {
+  position: relative;
+}
+.msv-nav__links > li > a,
+.msv-nav__links > li > button {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.5rem 0.9rem;
+  font-size: 0.87rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.85);
+  text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: color 0.15s, background 0.15s;
+  white-space: nowrap;
+  height: 64px;
+}
+.msv-nav__links > li > a:hover,
+.msv-nav__links > li > button:hover,
+.msv-nav__links > li:focus-within > a,
+.msv-nav__links > li:focus-within > button {
+  color: #fff;
+  background: rgba(255,255,255,0.08);
+}
+.msv-nav__chevron {
+  font-size: 0.65rem;
+  opacity: 0.7;
+  transition: transform 0.2s;
+}
+.msv-nav__links > li:focus-within .msv-nav__chevron,
+.msv-nav__links > li:hover .msv-nav__chevron {
+  transform: rotate(180deg);
+}
+
+/* Dropdown */
+.msv-nav__dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 230px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  box-shadow: var(--shadow-md);
+  padding: 0.5rem 0;
+  z-index: 200;
+}
+.msv-nav__links > li:hover .msv-nav__dropdown,
+.msv-nav__links > li:focus-within .msv-nav__dropdown {
+  display: block;
+}
+.msv-nav__dropdown a {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.6rem 1.1rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--navy);
+  text-decoration: none;
+  transition: background 0.12s;
+}
+.msv-nav__dropdown a:hover {
+  background: var(--cream);
+  color: var(--red);
+}
+.msv-nav__dropdown-icon {
+  width: 24px;
+  height: 24px;
+  background: var(--cream);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+.msv-nav__dropdown-divider {
+  height: 1px;
+  background: var(--border);
+  margin: 0.4rem 0;
+}
+
+/* CTA button */
+.msv-nav__cta {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.55rem 1.2rem;
+  background: var(--red);
+  color: #fff !important;
+  font-size: 0.85rem;
+  font-weight: 700;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.15s, box-shadow 0.15s;
+  white-space: nowrap;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(190,0,17,0.3);
+}
+.msv-nav__cta:hover {
+  background: var(--red-deep);
+  box-shadow: 0 4px 14px rgba(190,0,17,0.4);
+  text-decoration: none;
+}
+
+/* Hamburger */
+.msv-nav__burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.4rem;
+  border-radius: 5px;
+}
+.msv-nav__burger span {
+  width: 22px;
+  height: 2px;
+  background: #fff;
+  border-radius: 2px;
+  transition: transform 0.2s, opacity 0.2s;
+  display: block;
+}
+
+/* Mobile nav */
+.msv-nav__mobile {
+  display: none;
+  flex-direction: column;
+  background: var(--navy-mid);
+  padding: 1rem 1.5rem 1.5rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+.msv-nav__mobile.open { display: flex; }
+.msv-nav__mobile a {
+  padding: 0.65rem 0;
+  color: rgba(255,255,255,0.9);
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+.msv-nav__mobile a:hover { color: var(--yellow); }
+.msv-nav__mobile .msv-nav__mobile-sub {
+  padding-left: 1rem;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: rgba(255,255,255,0.7);
+}
+.msv-nav__mobile-cta {
+  margin-top: 1rem;
+  background: var(--red);
+  color: #fff !important;
+  border-radius: 6px;
+  text-align: center;
+  padding: 0.75rem 1rem !important;
+  border-bottom: none !important;
+}
+
+@media (max-width: 900px) {
+  .msv-nav__links { display: none; }
+  .msv-nav__cta { display: none; }
+  .msv-nav__burger { display: flex; }
+}
+@media (max-width: 480px) {
+  .msv-nav__inner { padding: 0 1rem; }
+}
+
+/* ─────────────────────────────────────────────────────────────
+   SITE FOOTER
+   ───────────────────────────────────────────────────────────── */
+.msv-footer {
+  background: var(--navy);
+  color: rgba(255,255,255,0.75);
+  overflow-x: clip;
+}
+.msv-footer__top {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem 3rem;
+  display: grid;
+  grid-template-columns: 280px 1fr 1fr 1fr;
+  gap: 3rem;
+}
+@media (max-width: 900px) {
+  .msv-footer__top { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
+}
+@media (max-width: 560px) {
+  .msv-footer__top { grid-template-columns: 1fr; gap: 2rem; padding: 3rem 1.2rem 2rem; }
+}
+
+.msv-footer__brand {}
+.msv-footer__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  margin-bottom: 1rem;
+}
+.msv-footer__logo-flag { font-size: 1.3rem; }
+.msv-footer__logo-text {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -0.01em;
+}
+.msv-footer__logo-text span { color: var(--yellow); }
+.msv-footer__tagline {
+  font-size: 0.83rem;
+  color: rgba(255,255,255,0.55);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+.msv-footer__trust {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+.msv-footer__trust-item {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.65);
+}
+.msv-footer__trust-item::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  background: var(--yellow);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.msv-footer__col-title {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.4);
+  margin-bottom: 1rem;
+}
+.msv-footer__links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.msv-footer__links a {
+  font-size: 0.87rem;
+  color: rgba(255,255,255,0.68);
+  text-decoration: none;
+  transition: color 0.15s;
+  display: inline-block;
+}
+.msv-footer__links a:hover {
+  color: var(--yellow);
+  text-decoration: none;
+}
+
+.msv-footer__bottom {
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+.msv-footer__bottom-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 1rem;
+  justify-content: space-between;
+}
+.msv-footer__disclaimer {
+  font-size: 0.73rem;
+  color: rgba(255,255,255,0.35);
+  line-height: 1.65;
+  max-width: 720px;
+}
+.msv-footer__copyright {
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.35);
+  white-space: nowrap;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   MAIN CONTENT AREA
+   ───────────────────────────────────────────────────────────── */
+main {
+  /* Fragments are self-contained; this wrapper just provides flow context */
+  position: relative;
+}
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════
+     SITE NAVIGATION
+     ═══════════════════════════════════════════════════ -->
+<header class="msv-nav" role="banner">
+  <div class="msv-nav__inner">
+
+    <!-- Logo -->
+    <a href="/" class="msv-nav__logo" aria-label="My Spanish Visa — Home"><img src="/assets/images/msv-logo-white.png" alt="My Spanish Visa" height="64" style="display:block;"></a>
+
+    <!-- Desktop links -->
+    <nav aria-label="Main navigation">
+      <ul class="msv-nav__links">
+
+        <li>
+          <button class="msv-nav__dropdown-trigger" aria-haspopup="true" aria-expanded="false">
+            Visas <span class="msv-nav__chevron">▾</span>
+          </button>
+          <div class="msv-nav__dropdown" role="menu">
+            <a href="/non-lucrative-visa-spain/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🏖️</span>Non-Lucrative Visa
+            </a>
+            <a href="/digital-nomad-visa-spain/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">💻</span>Digital Nomad Visa
+            </a>
+            <a href="/student-visa-spain/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🎓</span>Student Visa
+            </a>
+            <div class="msv-nav__dropdown-divider"></div>
+            <a href="/spain-visa-renewal/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🔄</span>Visa Renewals
+            </a>
+            <a href="/best-visa-move-to-spain/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">⚖️</span>Compare All Visas
+            </a>
+          </div>
+        </li>
+
+        <li>
+          <button aria-haspopup="true" aria-expanded="false">
+            Resources <span class="msv-nav__chevron">▾</span>
+          </button>
+          <div class="msv-nav__dropdown" role="menu">
+            <a href="/blog/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">📝</span>Blog &amp; Guides
+            </a>
+            <a href="/spain-visa-checklist/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">✅</span>Document Checklists
+            </a>
+            <a href="/move-to-spain/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🏠</span>Move to Spain Guide
+            </a>
+            <a href="/visa-eligibility-quiz/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🧭</span>Eligibility Quiz
+            </a>
+          </div>
+        </li>
+
+        <li><a href="/about-us/">About Us</a></li>
+        <li><a href="/testimonials/">Reviews</a></li>
+        <li><a href="/contact-us.html">Contact</a></li>
+
+      </ul>
+    </nav>
+
+    <!-- Desktop CTA -->
+    <a href="https://dashboard.platinumlegalspain.com/nlv" class="msv-nav__cta">
+      Start My Application →
+    </a>
+
+    <!-- Hamburger (mobile) -->
+    <button class="msv-nav__burger" aria-label="Open menu" aria-expanded="false" onclick="
+      var m=document.querySelector('.msv-nav__mobile');
+      var open=m.classList.toggle('open');
+      this.setAttribute('aria-expanded', open);
+    ">
+      <span></span><span></span><span></span>
+    </button>
+
+  </div><!-- /.msv-nav__inner -->
+
+  <!-- Mobile menu -->
+  <nav class="msv-nav__mobile" aria-label="Mobile navigation">
+    <a href="/non-lucrative-visa-spain/" class="msv-nav__mobile-sub">Non-Lucrative Visa</a>
+    <a href="/digital-nomad-visa-spain/" class="msv-nav__mobile-sub">Digital Nomad Visa</a>
+    <a href="/student-visa-spain/" class="msv-nav__mobile-sub">Student Visa</a>
+    <a href="/spain-visa-renewal/">Visa Renewals</a>
+    <a href="/best-visa-move-to-spain/">Compare All Visas</a>
+    <a href="/blog/">Blog &amp; Guides</a>
+    <a href="/about-us/">About Us</a>
+    <a href="/testimonials/">Reviews</a>
+    <a href="/contact-us.html">Contact</a>
+    <a href="https://dashboard.platinumlegalspain.com/nlv" class="msv-nav__mobile-cta">Start My Application →</a>
+  </nav>
+
+</header>
+
+
+<!-- ═══════════════════════════════════════════════════
+     PAGE CONTENT (fragment injected here)
+     ═══════════════════════════════════════════════════ -->
+<main>
+<!-- FRAGMENT_START -->
+<!-- ============================================================
+     MY SPANISH VISA — Homepage
+     Elementor Full-Width HTML Widget · April 2026
+     Paste this entire block into an Elementor HTML widget
+     set to Full Width / Stretch to Full Width
+     ============================================================ -->
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.myspanishvisa.com/#webpage",
+      "url": "https://www.myspanishvisa.com/",
+      "name": "My Spanish Visa | Spain Visa & Residency for English Speakers",
+      "description": "Spain visa and residency guidance for English-speaking foreigners. Non-Lucrative Visa, Digital Nomad Visa, Student Visa and renewals — fully managed online by Platinum Legal Spain.",
+      "inLanguage": "en",
+      "isPartOf": { "@id": "https://www.myspanishvisa.com/#website" }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://www.myspanishvisa.com/#organization",
+      "name": "My Spanish Visa",
+      "alternateName": "Platinum Legal Spain",
+      "url": "https://www.myspanishvisa.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.myspanishvisa.com/assets/images/msv-logo.png"
+      },
+      "description": "Expert Spain visa and residency guidance for English-speaking foreigners. Non-Lucrative Visa, Digital Nomad Visa, Student Visa and renewals — fully managed online.",
+      "areaServed": { "@type": "Country", "name": "Spain" },
+      "serviceType": ["Spain Visa Applications","Spain Residency Guidance","Non-Lucrative Visa Spain","Digital Nomad Visa Spain","Spain Student Visa","Spain Visa Renewals"],
+      "knowsLanguage": "en",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer support",
+        "availableLanguage": "English",
+        "url": "https://www.myspanishvisa.com/book-consultation/"
+      },
+      "sameAs": [
+        "https://www.platinumlegalspain.com",
+        "https://www.facebook.com/myspanishvisa",
+        "https://www.instagram.com/myspanishvisa",
+        "https://www.linkedin.com/company/my-spanish-visa"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.myspanishvisa.com/#website",
+      "url": "https://www.myspanishvisa.com",
+      "name": "My Spanish Visa",
+      "description": "Spain visa and residency guidance for English-speaking foreigners",
+      "inLanguage": "en",
+      "publisher": { "@id": "https://www.myspanishvisa.com/#organization" },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://www.myspanishvisa.com/?s={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the easiest visa to get for Spain?",
+          "acceptedAnswer": { "@type": "Answer", "text": "There is no single easiest visa — it depends on your circumstances. The Non-Lucrative Visa suits those with passive income or savings. The Digital Nomad Visa suits remote workers. The right visa is the one you qualify for and that matches how you plan to live in Spain." }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I work on a Spain Non-Lucrative Visa?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. The Non-Lucrative Visa does not permit you to work for Spanish employers or operate as a self-employed professional in Spain. If you work remotely for a non-Spanish employer, the Digital Nomad Visa may be a better fit." }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does a Spain visa application take?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Processing times vary. The Non-Lucrative Visa and Student Visa are typically processed within 4-8 weeks via the Spanish consulate. The Digital Nomad Visa applied via the UGE in Spain is usually processed in around 20 working days." }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I apply for a Spanish visa from inside Spain?",
+          "acceptedAnswer": { "@type": "Answer", "text": "It depends on the visa. The Digital Nomad Visa can be applied for from inside Spain via the UGE (Unidad de Grandes Empresas), entirely online. Most other visas must be applied for from your home country through the Spanish consulate." }
+        },
+        {
+          "@type": "Question",
+          "name": "What is a NIE and do I need one?",
+          "acceptedAnswer": { "@type": "Answer", "text": "The NIE (Número de Identificación de Extranjero) is a tax identification number for foreigners in Spain. You need it to open a bank account, buy property, sign a lease, or deal with any official matter in Spain." }
+        },
+        {
+          "@type": "Question",
+          "name": "What nationalities do you help?",
+          "acceptedAnswer": { "@type": "Answer", "text": "We help English-speaking foreigners from any non-EU nationality, most commonly from the UK, USA, Canada, Australia, Ireland, South Africa, and New Zealand." }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens if my visa application is rejected?",
+          "acceptedAnswer": { "@type": "Answer", "text": "A rejection is not necessarily the end. You may be able to appeal or reapply with corrected documentation. Our team reviews all documents before submission to reduce the risk of rejection." }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does a Spanish visa application take?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Processing times vary by visa type and consulate. The Non-Lucrative Visa typically takes 4-10 weeks after your appointment. The Digital Nomad Visa takes 4-10 weeks from a home country consulate, or up to 20 business days if applied from within Spain. Student visas take 4-8 weeks. Appointment waiting times (before submission) can add several weeks on top."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between the NLV and the Digital Nomad Visa?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The Non-Lucrative Visa is for people who want to live in Spain without working — they must demonstrate passive income only. The Digital Nomad Visa is for remote workers and freelancers who work for clients or employers outside Spain. If you work remotely, the DNV is the legally correct option."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I move to Spain from the UK after Brexit?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. UK nationals can still move to Spain but now need a visa for stays longer than 90 days, as the UK is no longer an EU member. The most popular options are the Non-Lucrative Visa for those with passive income, and the Digital Nomad Visa for remote workers. The application process is the same as for other non-EU nationals."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<!-- Open Graph / Social -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.myspanishvisa.com/homepage/">
+<meta property="og:title" content="My Spanish Visa">
+<meta property="og:description" content="Expert Spain visa guidance for English-speaking expats.">
+<meta property="og:image" content="https://www.myspanishvisa.com/assets/images/og/og-myspanishvisa-default.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="My Spanish Visa">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@myspanishvisa">
+<meta name="twitter:title" content="My Spanish Visa">
+<meta name="twitter:description" content="Expert Spain visa guidance for English-speaking expats.">
+<meta name="twitter:image" content="https://www.myspanishvisa.com/assets/images/og/og-myspanishvisa-default.jpg">
+
+<style>
+/* ── iOS Safari pinch-zoom overflow safety ─────────────────────────── */
+/* Prevents horizontal overflow when users pinch-zoom on iPhone/iPad.   */
+/* Top-level (also paste into theme Custom CSS / Elementor Site Settings) */
+html, body { max-width: 100%; overflow-x: clip; }
+/* Scoped wrapper safety */
+.msv, .msv-nav, .msv-topbar, .msv-footer, .msv-footer-cta,
+.pls-header, .pls-body, .pls-nlv, .pls-dnv, .pls-student {
+  max-width: 100%;
+  overflow-x: clip;
+  position: relative;
+}
+/* Cap all media inside the wrapper */
+.msv img, .msv video, .msv iframe,
+.msv-footer img, .msv-footer video, .msv-footer iframe {
+  max-width: 100%;
+  height: auto;
+}
+/* Never use 100vw — use 100% instead (dev reminder) */
+
+
+/* ── Reset & scope ─────────────────────────────────────────────────── */
+.msv *, .msv *::before, .msv *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ── Tokens ─────────────────────────────────────────────────────────── */
+.msv {
+  --navy:       #0c1930;
+  --navy-mid:   #1a3a5c;
+  --navy-light: #1e4975;
+  --red:        #be0011;
+  --red-deep:   #8c000d;
+  --yellow:     #facf39;
+  --cream:      #f8f7f4;
+  --white:      #ffffff;
+  --black:      #1a1a1a;
+  --muted:      #5a6478;
+  --border:     #dce3ed;
+  --row-alt:    #f2f5fb;
+  --info-bg:    #e8edf6;
+  --shadow-sm:  0 2px 8px rgba(12,25,48,0.08);
+  --shadow-md:  0 6px 24px rgba(12,25,48,0.13);
+  --shadow-lg:  0 12px 40px rgba(12,25,48,0.18);
+
+  font-family: 'Inter', 'Segoe UI', system-ui, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.75;
+  color: var(--black);
+  width: 100%;
+}
+
+/* ── Inner container ──────────────────────────────────────────────── */
+.msv__container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+@media (max-width: 640px) {
+  .msv__container { padding: 0 1.2rem; }
+}
+
+/* ── Typography ───────────────────────────────────────────────────── */
+.msv h1 {
+  font-size: clamp(2.2rem, 5vw, 3.4rem);
+  font-weight: 800;
+  line-height: 1.1;
+  color: var(--white);
+  letter-spacing: -0.025em;
+  margin-bottom: 1.3rem;
+}
+.msv h2 {
+  font-size: clamp(1.4rem, 2.8vw, 1.9rem);
+  font-weight: 700;
+  color: var(--navy);
+  letter-spacing: -0.01em;
+  margin-bottom: 0.5rem;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 0.5rem;
+}
+.msv h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 48px; height: 3px;
+  background: linear-gradient(90deg, var(--red), var(--red-deep));
+  border-radius: 2px;
+}
+.msv h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 0.4rem;
+}
+.msv p { color: var(--black); margin-bottom: 1rem; font-size: 0.97rem; }
+.msv a { color: var(--red); text-decoration: none; }
+.msv a:hover { text-decoration: underline; }
+
+/* ── Sections ─────────────────────────────────────────────────────── */
+.msv__section { padding: 6rem 0; background: var(--white); }
+.msv__section--cream {
+  padding: 6rem 0;
+  background: linear-gradient(180deg, #f8f7f4 0%, #f2f4f8 100%);
+}
+.msv__section--dark {
+  padding: 6rem 0;
+  background: linear-gradient(135deg, var(--navy) 0%, #0d2240 55%, #0a1d38 100%);
+}
+.msv__section--dark h2 { color: var(--white) !important; }
+.msv__section--dark h2::after { background: linear-gradient(90deg, var(--yellow), #e8b820); }
+.msv__section--dark h3 { color: rgba(255,255,255,0.9) !important; }
+.msv__section--dark p  { color: rgba(255,255,255,0.82); }
+@media (max-width: 640px) {
+  .msv__section,
+  .msv__section--cream,
+  .msv__section--dark { padding: 3.5rem 0; }
+}
+
+/* ── Section heading wrapper ──────────────────────────────────────── */
+.msv__section-hd { margin-bottom: 3.5rem; }
+.msv__section-hd p { color: var(--muted); font-size: 1rem; margin-top: 1rem; line-height: 1.7; max-width: 600px; }
+.msv__section--dark .msv__section-hd p { color: rgba(255,255,255,0.6); }
+.msv__section-hd--centre { text-align: center; }
+.msv__section-hd--centre p { margin-left: auto; margin-right: auto; }
+.msv__section-hd--centre h2 { display: block; }
+.msv__section-hd--centre h2::after { left: 50%; transform: translateX(-50%); }
+
+/* ── Hero ─────────────────────────────────────────────────────────── */
+.msv__hero {
+  background: linear-gradient(135deg, #0c1930 0%, #0f2540 40%, #162d50 70%, #1a3560 100%);
+  padding: 7rem 0 6rem;
+  position: relative;
+  overflow: hidden;
+}
+.msv__hero::before {
+  content: '';
+  position: absolute;
+  top: -30%; right: -5%;
+  width: 700px; height: 700px;
+  background: radial-gradient(circle, rgba(190,0,17,0.1) 0%, transparent 65%);
+  pointer-events: none;
+}
+.msv__hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(250,207,57,0.4), transparent);
+}
+.msv__hero-inner { max-width: 820px; }
+.msv__eyebrow {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  background: rgba(190,0,17,0.15); border: 1px solid rgba(190,0,17,0.4);
+  color: #ff6b7a; font-size: 0.72rem; font-weight: 700;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  padding: 0.35rem 0.9rem; border-radius: 100px; margin-bottom: 1.6rem;
+}
+.msv__eyebrow::before {
+  content: '';
+  width: 6px; height: 6px;
+  background: var(--red); border-radius: 50%;
+  box-shadow: 0 0 6px var(--red);
+}
+.msv__hero-sub {
+  font-size: clamp(1rem, 2.2vw, 1.2rem);
+  color: rgba(255,255,255,0.78) !important;
+  max-width: 640px; margin-bottom: 2.5rem; line-height: 1.75;
+}
+.msv__hero p { color: rgba(255,255,255,0.78) !important; }
+.msv__hero-trust {
+  font-size: 0.82rem; color: rgba(255,255,255,0.42);
+  margin-top: 2.2rem; padding-top: 1.25rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  letter-spacing: 0.03em;
+}
+
+/* ── Buttons ──────────────────────────────────────────────────────── */
+.msv__btn-group { display: flex; flex-wrap: wrap; gap: 0.85rem; }
+.msv__btn {
+  display: inline-block; padding: 0.9rem 2.1rem;
+  font-size: 0.93rem; font-weight: 700; border-radius: 6px;
+  text-decoration: none !important; cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.15s;
+  letter-spacing: 0.01em;
+}
+.msv__btn:hover { transform: translateY(-1px); text-decoration: none !important; }
+.msv .msv__btn--primary {
+  background: linear-gradient(135deg, var(--red) 0%, var(--red-deep) 100%);
+  color: #ffffff !important;
+  box-shadow: 0 4px 16px rgba(190,0,17,0.38);
+}
+.msv .msv__btn--primary:hover { box-shadow: 0 6px 22px rgba(190,0,17,0.48); color: #ffffff !important; }
+.msv .msv__btn--ghost {
+  background: rgba(255,255,255,0.07); color: #ffffff !important;
+  border: 1.5px solid rgba(255,255,255,0.3); backdrop-filter: blur(4px);
+}
+.msv .msv__btn--ghost:hover { background: rgba(255,255,255,0.13); color: #ffffff !important; }
+.msv .msv__btn--navy {
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%);
+  color: #ffffff !important; box-shadow: var(--shadow-sm);
+}
+.msv .msv__btn--navy:hover { box-shadow: var(--shadow-md); color: #ffffff !important; }
+.msv .msv__btn--outline {
+  background: transparent; color: var(--navy) !important; border: 2px solid var(--navy);
+}
+.msv .msv__btn--outline:hover { background: var(--navy); color: #ffffff !important; }
+.msv .msv__btn--outline-white {
+  background: transparent; color: #ffffff !important;
+  border: 1.5px solid rgba(255,255,255,0.5);
+}
+.msv .msv__btn--outline-white:hover { background: rgba(255,255,255,0.1); color: #ffffff !important; }
+.msv .msv__btn--red-outline {
+  background: transparent; color: var(--red) !important; border: 2px solid var(--red);
+}
+.msv .msv__btn--red-outline:hover { background: var(--red); color: #ffffff !important; }
+
+/* ── Trust bar ────────────────────────────────────────────────────── */
+.msv__trust-bar {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  padding: 1.1rem 0;
+  box-shadow: var(--shadow-sm);
+}
+.msv__trust-bar-inner {
+  display: flex; flex-wrap: wrap;
+  justify-content: center; gap: 1.75rem;
+}
+.msv__trust-item {
+  display: flex; align-items: center; gap: 0.5rem;
+  font-size: 0.82rem; font-weight: 600;
+  color: var(--navy); white-space: nowrap;
+}
+.msv__trust-item::before {
+  content: '';
+  width: 7px; height: 7px;
+  background: linear-gradient(135deg, var(--red), var(--red-deep));
+  border-radius: 50%; flex-shrink: 0;
+}
+
+/* ── Visa pathway cards ───────────────────────────────────────────── */
+.msv__pathways {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.75rem;
+  margin: 0;
+}
+@media (max-width: 700px) { .msv__pathways { grid-template-columns: 1fr; } }
+
+.msv__pathway-card {
+  display: flex; flex-direction: column;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  border-top: 5px solid var(--navy);
+  padding: 2.2rem 2rem 2rem;
+  box-shadow: var(--shadow-sm);
+  text-decoration: none; color: inherit;
+  transition: box-shadow 0.2s, transform 0.2s;
+  position: relative; overflow: hidden;
+}
+.msv__pathway-card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-4px);
+  text-decoration: none;
+}
+.msv__pathway-card:nth-child(1) { border-top-color: #1a3560; }
+.msv__pathway-card:nth-child(2) { border-top-color: #2a7a5e; }
+.msv__pathway-card:nth-child(3) { border-top-color: var(--red); }
+.msv__pathway-card:nth-child(4) { border-top-color: #5b4fcf; }
+
+.msv__pathway-icon { font-size: 2.2rem; margin-bottom: 1rem; display: block; line-height: 1; }
+.msv__pathway-tag {
+  display: inline-block;
+  font-size: 0.68rem; font-weight: 800;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--muted); margin-bottom: 0.5rem;
+}
+.msv__pathway-title {
+  font-size: 1.2rem; font-weight: 800;
+  color: var(--navy); line-height: 1.25;
+  margin-bottom: 0.4rem;
+}
+.msv__pathway-who {
+  font-size: 0.9rem; color: var(--muted);
+  margin-bottom: 1.2rem; line-height: 1.6;
+}
+.msv__pathway-bullets {
+  list-style: none; padding: 0; margin: 0 0 1.6rem;
+  flex: 1;
+}
+.msv__pathway-bullets li {
+  display: flex; align-items: flex-start; gap: 0.6rem;
+  font-size: 0.88rem; color: var(--black);
+  padding: 0.35rem 0;
+  border-bottom: 1px solid rgba(220,227,237,0.6);
+}
+.msv__pathway-bullets li:last-child { border-bottom: none; }
+.msv__pathway-bullets li::before {
+  content: '✓'; color: #27ae60;
+  font-weight: 800; font-size: 0.82rem;
+  flex-shrink: 0; margin-top: 0.18rem;
+}
+.msv__pathway-cta {
+  font-size: 0.88rem; font-weight: 700;
+  color: var(--navy);
+  display: flex; align-items: center; gap: 0.4rem;
+  margin-top: auto;
+}
+.msv__pathway-cta::after { content: '→'; font-size: 1rem; }
+.msv__pathway-card:hover .msv__pathway-cta { color: var(--red); }
+
+/* ── USP / Why us cards ───────────────────────────────────────────── */
+.msv__usp-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin: 0;
+}
+@media (max-width: 860px) { .msv__usp-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 540px) { .msv__usp-grid { grid-template-columns: 1fr; } }
+
+.msv__usp-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 2.2rem 1.8rem;
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.msv__usp-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+.msv__usp-icon {
+  width: 52px; height: 52px;
+  background: linear-gradient(135deg, var(--info-bg), #dce8f5);
+  border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.5rem;
+  margin-bottom: 1.2rem;
+}
+.msv__usp-title { font-size: 1rem; font-weight: 700; color: var(--navy); margin-bottom: 0.5rem; }
+.msv__usp-card p { font-size: 0.9rem; color: var(--muted); line-height: 1.7; margin: 0; }
+
+/* ── How it works steps ───────────────────────────────────────────── */
+.msv__how-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin: 0;
+  position: relative;
+}
+@media (max-width: 760px) { .msv__how-grid { grid-template-columns: 1fr; } }
+.msv__how-grid::before {
+  content: '';
+  position: absolute;
+  top: 26px; left: calc(16.66% + 1rem); right: calc(16.66% + 1rem);
+  height: 2px;
+  background: linear-gradient(90deg, var(--border), var(--navy-light), var(--border));
+  pointer-events: none;
+}
+@media (max-width: 760px) { .msv__how-grid::before { display: none; } }
+
+.msv__how-step {
+  display: flex; flex-direction: column; align-items: center;
+  text-align: center; gap: 1rem;
+}
+.msv__how-num {
+  width: 52px; height: 52px;
+  background: linear-gradient(135deg, var(--navy), var(--navy-mid));
+  color: #ffffff;
+  font-size: 1.1rem; font-weight: 800;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 4px 14px rgba(12,25,48,0.25);
+  position: relative; z-index: 1;
+}
+.msv__how-title { font-size: 1rem; font-weight: 700; color: var(--navy); margin-bottom: 0.3rem; }
+.msv__how-step p { font-size: 0.88rem; color: var(--muted); line-height: 1.65; margin: 0; max-width: 240px; }
+
+/* ── Lead magnet CTA band ─────────────────────────────────────────── */
+.msv__lead-band {
+  background: linear-gradient(135deg, #0c1930 0%, #0f2540 50%, #0c1930 100%);
+  padding: 4.5rem 0;
+  position: relative; overflow: hidden;
+}
+.msv__lead-band::before {
+  content: '';
+  position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+  width: 800px; height: 800px;
+  background: radial-gradient(circle, rgba(250,207,57,0.05) 0%, transparent 60%);
+  pointer-events: none;
+}
+.msv__lead-band-inner {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 2.5rem; flex-wrap: wrap;
+  position: relative;
+}
+.msv__lead-band-text { flex: 1; min-width: 280px; }
+.msv__lead-band-text h2 {
+  color: #ffffff !important; font-size: clamp(1.3rem, 3vw, 1.9rem);
+  display: block; padding-bottom: 0; margin-bottom: 0.7rem;
+}
+.msv__lead-band-text h2::after { display: none; }
+.msv__lead-band-text p { color: rgba(255,255,255,0.68); margin: 0; font-size: 1rem; }
+.msv__lead-band-actions { flex-shrink: 0; }
+
+/* ── Stat strip ───────────────────────────────────────────────────── */
+.msv__stat-strip {
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%);
+  padding: 3.5rem 0;
+}
+.msv__stat-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  text-align: center;
+}
+@media (max-width: 720px) { .msv__stat-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 420px) { .msv__stat-grid { grid-template-columns: 1fr; } }
+
+.msv__stat-number {
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  font-weight: 900; color: var(--yellow);
+  letter-spacing: -0.03em; line-height: 1;
+  display: block; margin-bottom: 0.35rem;
+}
+.msv__stat-label {
+  font-size: 0.82rem; font-weight: 600;
+  color: rgba(255,255,255,0.65);
+  line-height: 1.45;
+  display: block;
+}
+
+/* ── Final CTA section ────────────────────────────────────────────── */
+.msv__final-cta {
+  background: linear-gradient(135deg, var(--navy) 0%, #0f2540 50%, #0c1930 100%);
+  padding: 6rem 0;
+  text-align: center;
+  position: relative; overflow: hidden;
+}
+.msv__final-cta::before {
+  content: '';
+  position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+  width: 700px; height: 700px;
+  background: radial-gradient(circle, rgba(190,0,17,0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+.msv__final-cta h2 {
+  color: #ffffff !important; font-size: clamp(1.7rem, 3.5vw, 2.5rem);
+  display: block; padding-bottom: 0; margin-bottom: 1rem;
+}
+.msv__final-cta h2::after { display: none; }
+.msv__final-cta p { color: rgba(255,255,255,0.7); max-width: 560px; margin: 0 auto 2.4rem; font-size: 1.05rem; }
+.msv__final-cta .msv__btn-group { justify-content: center; }
+
+/* ── Disclaimer ───────────────────────────────────────────────────── */
+.msv__disclaimer {
+  background: #f5f5f5;
+  border-top: 1px solid var(--border);
+  padding: 2rem 0;
+}
+.msv__disclaimer p {
+  font-size: 0.8rem; color: #777;
+  line-height: 1.6; margin-bottom: 0.5rem;
+}
+.msv__disclaimer p:last-child { margin-bottom: 0; }
+
+/* ── Animated text effects ────────────────────────────────────────── */
+
+/* Spain — red pulse glow */
+@keyframes msv-red-pulse {
+  0%   { color: #be0011; text-shadow: 0 0 12px rgba(190,0,17,0.0); }
+  50%  { color: #ff2235; text-shadow: 0 0 28px rgba(190,0,17,0.65), 0 0 60px rgba(190,0,17,0.25); }
+  100% { color: #be0011; text-shadow: 0 0 12px rgba(190,0,17,0.0); }
+}
+.msv__spark {
+  display: inline;
+  animation: msv-red-pulse 3s ease-in-out infinite;
+  color: #be0011;
+}
+
+/* "Done Right" — animated red→gold gradient shimmer */
+@keyframes msv-shimmer {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+.msv__shimmer {
+  display: inline;
+  background: linear-gradient(90deg, #be0011 0%, #facf39 40%, #ff6b35 70%, #be0011 100%);
+  background-size: 250% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: msv-shimmer 4s ease infinite;
+}
+
+/* Section heading highlight — navy→teal electric underline glow */
+@keyframes msv-blue-glow {
+  0%   { color: #1e4975; text-shadow: 0 0 0px rgba(30,73,117,0); }
+  50%  { color: #3a8fd6; text-shadow: 0 0 18px rgba(58,143,214,0.55), 0 0 40px rgba(30,73,117,0.2); }
+  100% { color: #1e4975; text-shadow: 0 0 0px rgba(30,73,117,0); }
+}
+.msv__blue-spark {
+  display: inline;
+  animation: msv-blue-glow 4s ease-in-out infinite;
+  color: #1e4975;
+}
+
+/* Lead band heading — white shimmer */
+@keyframes msv-white-shimmer {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+.msv__white-shimmer {
+  display: inline;
+  background: linear-gradient(90deg, #ffffff 0%, #facf39 45%, #ffffff 100%);
+  background-size: 250% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: msv-white-shimmer 4.5s ease infinite;
+}
+
+/* Staggered fade-in for H1 on load */
+@keyframes msv-fade-up {
+  0%   { opacity: 0; transform: translateY(14px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+.msv__hero h1 {
+  animation: msv-fade-up 0.7s ease forwards;
+}
+.msv__hero .msv__eyebrow {
+  animation: msv-fade-up 0.5s ease forwards;
+}
+.msv__hero .msv__hero-sub {
+  animation: msv-fade-up 0.9s ease 0.15s both;
+}
+.msv__hero .msv__btn-group {
+  animation: msv-fade-up 0.9s ease 0.3s both;
+}
+
+/* ── Note box ─────────────────────────────────────────────────────── */
+.msv__note {
+  background: var(--info-bg);
+  border-left: 4px solid var(--navy-light);
+  border-radius: 0 8px 8px 0;
+  padding: 1.1rem 1.5rem;
+  margin: 1.8rem 0;
+  font-size: 0.92rem; line-height: 1.7; color: var(--navy);
+}
+
+/* ── Portal feature strip ─────────────────────────────────────────── */
+.msv__portal-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+@media (max-width: 760px) { .msv__portal-grid { grid-template-columns: 1fr; gap: 2rem; } }
+.msv__portal-features {
+  display: flex; flex-direction: column; gap: 1.5rem;
+}
+.msv__portal-feature {
+  display: flex; align-items: flex-start; gap: 1.1rem;
+}
+.msv__portal-feature-icon {
+  width: 44px; height: 44px; flex-shrink: 0;
+  background: linear-gradient(135deg, var(--navy), var(--navy-mid));
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.2rem;
+}
+.msv__portal-feature-body h3 { font-size: 0.97rem; font-weight: 700; color: var(--navy); margin-bottom: 0.2rem; }
+.msv__portal-feature-body p { font-size: 0.88rem; color: var(--muted); line-height: 1.6; margin: 0; }
+.msv__portal-visual {
+  background: linear-gradient(135deg, var(--navy) 0%, #0f2540 60%, #1a3560 100%);
+  border-radius: 16px;
+  padding: 2.5rem 2rem;
+  box-shadow: var(--shadow-lg);
+  position: relative; overflow: hidden;
+}
+.msv__portal-visual::before {
+  content: '';
+  position: absolute; top: -30%; right: -20%;
+  width: 300px; height: 300px;
+  background: radial-gradient(circle, rgba(250,207,57,0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+.msv__portal-badge {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  background: rgba(250,207,57,0.15); border: 1px solid rgba(250,207,57,0.3);
+  color: var(--yellow); font-size: 0.7rem; font-weight: 700;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  padding: 0.3rem 0.8rem; border-radius: 100px;
+  margin-bottom: 1.2rem;
+}
+.msv__portal-visual h3 {
+  font-size: 1.3rem; font-weight: 800; color: #ffffff !important;
+  margin-bottom: 0.6rem; line-height: 1.3;
+}
+.msv__portal-visual p { color: rgba(255,255,255,0.65); font-size: 0.9rem; margin-bottom: 1.6rem; }
+.msv__portal-status-list {
+  list-style: none; padding: 0; margin: 0 0 1.8rem;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 10px; overflow: hidden;
+}
+.msv__portal-status-list li {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0.7rem 1rem;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+  font-size: 0.85rem; color: rgba(255,255,255,0.8);
+}
+.msv__portal-status-list li:last-child { border-bottom: none; }
+.msv__portal-dot {
+  width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0;
+}
+.msv__portal-dot--green { background: #27ae60; box-shadow: 0 0 6px rgba(39,174,96,0.6); }
+.msv__portal-dot--amber { background: #f39c12; box-shadow: 0 0 6px rgba(243,156,18,0.5); }
+.msv__portal-dot--blue  { background: #3498db; box-shadow: 0 0 6px rgba(52,152,219,0.5); }
+
+/* ── FAQ section ──────────────────────────────────────────────────── */
+.msv__faq { margin: 1.5rem 0; }
+.msv__faq-item {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  margin-bottom: 0.85rem;
+  overflow: hidden;
+  background: var(--white);
+  box-shadow: var(--shadow-sm);
+}
+.msv__faq-q {
+  display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+  padding: 1.25rem 1.6rem;
+  font-size: 0.96rem; font-weight: 700; color: var(--navy);
+  cursor: pointer; user-select: none;
+}
+.msv__faq-q::after { content: '+'; font-size: 1.3rem; font-weight: 400; color: var(--red); flex-shrink: 0; line-height: 1; }
+.msv__faq-a { padding: 0 1.6rem 1.25rem; font-size: 0.92rem; color: var(--muted); line-height: 1.75; }
+</style>
+
+<div class="msv">
+
+  <!-- ═══════════════════════════════════════════
+       HERO
+  ═══════════════════════════════════════════ -->
+  <section class="msv__hero">
+    <div class="msv__container">
+      <div class="msv__hero-inner">
+        <div class="msv__eyebrow">Spain Visa &amp; Residency Specialists</div>
+        <h1>Your Move to <span class="msv__spark">Spain</span>,<br><span class="msv__shimmer">Done Right</span></h1>
+        <p class="msv__hero-sub">
+          Expert visa and residency guidance for English-speaking foreigners.
+          We manage your entire application — from choosing the right route to landing in Spain —
+          so you can focus on the move, not the paperwork.
+        </p>
+        <div class="msv__btn-group">
+          <a href="https://dashboard.platinumlegalspain.com/nlv" class="msv__btn msv__btn--primary">Start Free Eligibility Check</a>
+          <a href="#visa-options" class="msv__btn msv__btn--ghost">Browse Visa Options</a>
+        </div>
+        <p class="msv__hero-trust">
+          Non-Lucrative Visa &nbsp;·&nbsp; Digital Nomad Visa &nbsp;·&nbsp; Student Visa &nbsp;·&nbsp; Renewals &nbsp;·&nbsp; Residency Guidance
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       TRUST BAR
+  ═══════════════════════════════════════════ -->
+  <div class="msv__trust-bar">
+    <div class="msv__container">
+      <div class="msv__trust-bar-inner">
+        <div class="msv__trust-item">English-speaking specialist team</div>
+        <div class="msv__trust-item">Fully managed online process</div>
+        <div class="msv__trust-item">Free eligibility check</div>
+        <div class="msv__trust-item">Pay in 3 instalments</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+       VISA PATHWAY SELECTOR
+  ═══════════════════════════════════════════ -->
+  <section class="msv__section" id="visa-options">
+    <div class="msv__container">
+      <div class="msv__section-hd msv__section-hd--centre">
+        <h2>Find the <span class="msv__blue-spark">Right Visa</span> for Your Move</h2>
+        <p>Every situation is different. Select the visa that best fits how you plan to live, work, or study in Spain — and we'll handle the rest.</p>
+      </div>
+
+      <div class="msv__pathways">
+
+        <!-- NLV -->
+        <a href="/non-lucrative-visa-spain/" class="msv__pathway-card">
+          <span class="msv__pathway-icon">🏡</span>
+          <span class="msv__pathway-tag">Most Popular</span>
+          <div class="msv__pathway-title">Non-Lucrative Visa</div>
+          <p class="msv__pathway-who">For retirees, early retirees, and those with passive income who want to live in Spain without working.</p>
+          <ul class="msv__pathway-bullets">
+            <li>Pension, rental income, savings or investments</li>
+            <li>No permission to work for Spanish employers</li>
+            <li>Minimum income ~€2,259/month (2026)</li>
+            <li>1-year visa, renewable as 2-year residency</li>
+          </ul>
+          <span class="msv__pathway-cta">Explore the Non-Lucrative Visa</span>
+        </a>
+
+        <!-- DNV -->
+        <a href="/digital-nomad-visa-spain/" class="msv__pathway-card">
+          <span class="msv__pathway-icon">💻</span>
+          <span class="msv__pathway-tag">Remote Workers &amp; Freelancers</span>
+          <div class="msv__pathway-title">Digital Nomad Visa</div>
+          <p class="msv__pathway-who">For remote employees and self-employed professionals whose clients and employers are based outside Spain.</p>
+          <ul class="msv__pathway-bullets">
+            <li>Work remotely for non-Spanish companies</li>
+            <li>In-Spain UGE route — 3-year permit, fully online</li>
+            <li>Minimum income ~€2,850/month (2026)</li>
+            <li>Optional Beckham Law flat-rate tax regime</li>
+          </ul>
+          <span class="msv__pathway-cta">Explore the Digital Nomad Visa</span>
+        </a>
+
+        <!-- Student -->
+        <a href="/student-visa-spain/" class="msv__pathway-card">
+          <span class="msv__pathway-icon">🎓</span>
+          <span class="msv__pathway-tag">Students &amp; Language Learners</span>
+          <div class="msv__pathway-title">Student Visa</div>
+          <p class="msv__pathway-who">For those enrolling at Spanish universities, language schools, or private institutions for courses over 90 days.</p>
+          <ul class="msv__pathway-bullets">
+            <li>Valid for full degree programmes and language courses</li>
+            <li>Financial requirement ~€600/month</li>
+            <li>Applied via your local Spanish consulate</li>
+            <li>Limited part-time work permitted (up to 30 hrs/week)</li>
+          </ul>
+          <span class="msv__pathway-cta">Explore the Student Visa</span>
+        </a>
+
+        <!-- Renewal -->
+        <a href="/spain-visa-renewal/" class="msv__pathway-card">
+          <span class="msv__pathway-icon">🔄</span>
+          <span class="msv__pathway-tag">Already in Spain</span>
+          <div class="msv__pathway-title">Visa Renewal &amp; Residency</div>
+          <p class="msv__pathway-who">For those approaching the end of their initial visa or TIE, or looking to change status or progress toward long-term residency.</p>
+          <ul class="msv__pathway-bullets">
+            <li>NLV, DNV and student renewals managed</li>
+            <li>TIE applications and replacements</li>
+            <li>Change of residency status</li>
+            <li>Guidance toward permanent residency</li>
+          </ul>
+          <span class="msv__pathway-cta">Explore Renewals &amp; Residency</span>
+        </a>
+
+      </div>
+
+      <div class="msv__note" style="margin-top:2.5rem;">
+        <strong>Not sure which route is right for you?</strong>
+        Take our free eligibility check — 5 minutes to confirm which visa fits your situation before you commit to anything.
+        <br><a href="/visa-eligibility-quiz/" style="color: var(--navy-light); font-weight:700;">Start Free Eligibility Check →</a>
+      </div>
+
+      <div style="margin-top: 3rem; padding-top: 3rem; border-top: 1px solid var(--border);">
+        <p style="font-size: 0.95rem; color: var(--muted); margin-bottom: 1.5rem;"><strong>Additional Resources:</strong></p>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+          <a href="/compare-spain-visas/" style="padding: 1rem; border: 1px solid var(--border); border-radius: 6px; text-decoration: none; color: var(--navy); font-weight: 600; transition: all 0.2s;">📊 Compare Visa Options</a>
+          <a href="/spain-non-lucrative-visa-income-calculator/" style="padding: 1rem; border: 1px solid var(--border); border-radius: 6px; text-decoration: none; color: var(--navy); font-weight: 600; transition: all 0.2s;">💰 NLV Income Calculator</a>
+          <a href="/spain-digital-nomad-visa-income-calculator/" style="padding: 1rem; border: 1px solid var(--border); border-radius: 6px; text-decoration: none; color: var(--navy); font-weight: 600; transition: all 0.2s;">💼 DNV Income Calculator</a>
+          <a href="/spain-tax-calculator/" style="padding: 1rem; border: 1px solid var(--border); border-radius: 6px; text-decoration: none; color: var(--navy); font-weight: 600; transition: all 0.2s;">🧮 Spain Tax Calculator</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       STAT STRIP
+  ═══════════════════════════════════════════ -->
+  <div class="msv__stat-strip">
+    <div class="msv__container">
+      <div class="msv__stat-grid">
+        <div>
+          <span class="msv__stat-number">4</span>
+          <span class="msv__stat-label">Visa routes<br>fully managed</span>
+        </div>
+        <div>
+          <span class="msv__stat-number">100%</span>
+          <span class="msv__stat-label">Online process —<br>no office visits</span>
+        </div>
+        <div>
+          <span class="msv__stat-number">3</span>
+          <span class="msv__stat-label">Instalment options<br>on all services</span>
+        </div>
+        <div>
+          <span class="msv__stat-number">EN</span>
+          <span class="msv__stat-label">English-speaking<br>specialists only</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+       WHY MY SPANISH VISA
+  ═══════════════════════════════════════════ -->
+  <section class="msv__section--cream">
+    <div class="msv__container">
+      <div class="msv__section-hd msv__section-hd--centre">
+        <h2>Why Use <span class="msv__spark">My Spanish Visa</span></h2>
+        <p>Spain's immigration system is complex, paper-heavy, and unforgiving of errors. We exist to make the process straightforward for English-speaking foreigners.</p>
+      </div>
+
+      <div class="msv__usp-grid">
+
+        <div class="msv__usp-card">
+          <div class="msv__usp-icon">✅</div>
+          <div class="msv__usp-title">The right visa, first time</div>
+          <p>We assess your income, employment status, and plans before recommending a route. No surprises — you know you're applying for the right visa before anything starts.</p>
+        </div>
+
+        <div class="msv__usp-card">
+          <div class="msv__usp-icon">📂</div>
+          <div class="msv__usp-title">We manage everything</div>
+          <p>Documents, apostilles, sworn translations, consulate packs, UGE submissions — all coordinated and reviewed by our team through your secure client portal.</p>
+        </div>
+
+        <div class="msv__usp-card">
+          <div class="msv__usp-icon">🌍</div>
+          <div class="msv__usp-title">Built for English speakers</div>
+          <p>No language barrier. No confusion about Spanish bureaucracy. Our entire process is in clear English, designed for foreigners who are navigating this for the first time.</p>
+        </div>
+
+        <div class="msv__usp-card">
+          <div class="msv__usp-icon">⚡</div>
+          <div class="msv__usp-title">Fast online process</div>
+          <p>Your application is managed entirely online through your client portal. We file electronically where possible — no unnecessary delays, no unnecessary trips.</p>
+        </div>
+
+        <div class="msv__usp-card">
+          <div class="msv__usp-icon">🛡️</div>
+          <div class="msv__usp-title">Errors are expensive — we prevent them</div>
+          <p>A rejected application can delay your move by months. Our team reviews every document before submission to reduce the risk of rejection or requests for corrections.</p>
+        </div>
+
+        <div class="msv__usp-card">
+          <div class="msv__usp-icon">💳</div>
+          <div class="msv__usp-title">Flexible payment</div>
+          <p>All services can be split across 3 card payments, timed to the stages of your application. Start without paying everything upfront.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       HOW IT WORKS
+  ═══════════════════════════════════════════ -->
+  <section class="msv__section">
+    <div class="msv__container">
+      <div class="msv__section-hd msv__section-hd--centre">
+        <h2>How It Works</h2>
+        <p>From your first question to your visa approval — a simple, supported process from start to finish.</p>
+      </div>
+
+      <div class="msv__how-grid">
+
+        <div class="msv__how-step">
+          <div class="msv__how-num">1</div>
+          <div>
+            <div class="msv__how-title"><a href="/visa-eligibility-quiz/" style="color: var(--navy); text-decoration: none;">Free Eligibility Check</a></div>
+            <p>Five minutes to confirm which visa fits your situation — income, employment type, and plans for Spain. No commitment required.</p>
+          </div>
+        </div>
+
+        <div class="msv__how-step">
+          <div class="msv__how-num">2</div>
+          <div>
+            <div class="msv__how-title">We Build Your Application</div>
+            <p>Your specialist manages every document — apostilles, translations, consulate pack or UGE submission — reviewed before anything goes anywhere.</p>
+          </div>
+        </div>
+
+        <div class="msv__how-step">
+          <div class="msv__how-num">3</div>
+          <div>
+            <div class="msv__how-title">Approval &amp; Arrival</div>
+            <p>Once approved, we guide you through your next steps in Spain — NIE, TIE, padrón, and what to expect on arrival.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div style="text-align:center; margin-top: 3.5rem;">
+        <a href="/how-it-works/" class="msv__btn msv__btn--outline">See the Full Process</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       CLIENT PORTAL
+  ═══════════════════════════════════════════ -->
+  <section class="msv__section--cream">
+    <div class="msv__container">
+      <div class="msv__portal-grid">
+
+        <div>
+          <div class="msv__section-hd">
+            <h2>Your Application, Always in View</h2>
+            <p>Every client gets access to a secure online portal — 24/7. Track progress, upload documents, send messages, and book time with a specialist. Everything in one place, in plain English.</p>
+          </div>
+          <div class="msv__portal-features">
+
+            <div class="msv__portal-feature">
+              <div class="msv__portal-feature-icon">📊</div>
+              <div class="msv__portal-feature-body">
+                <h3>Real-time progress tracking</h3>
+                <p>See exactly where your application is at every stage — no chasing emails, no uncertainty about what's happening next.</p>
+              </div>
+            </div>
+
+            <div class="msv__portal-feature">
+              <div class="msv__portal-feature-icon">📁</div>
+              <div class="msv__portal-feature-body">
+                <h3>Secure document upload</h3>
+                <p>Upload your documents directly through the portal. Our team reviews and handles apostilles, translations, and submissions from there.</p>
+              </div>
+            </div>
+
+            <div class="msv__portal-feature">
+              <div class="msv__portal-feature-icon">📅</div>
+              <div class="msv__portal-feature-body">
+                <h3>Book a specialist directly</h3>
+                <p>Need to talk something through? Book a video or phone call with your immigration specialist straight from your dashboard — at a time that suits you.</p>
+              </div>
+            </div>
+
+            <div class="msv__portal-feature">
+              <div class="msv__portal-feature-icon">🌐</div>
+              <div class="msv__portal-feature-body">
+                <h3>Accessible from anywhere, 24/7</h3>
+                <p>Whether you're in London, New York, or already in Spain — your portal is always open. No office hours, no hold music, no waiting.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="msv__portal-visual">
+          <div class="msv__portal-badge">🔒 Secure Client Portal</div>
+          <h3>Your Application Dashboard</h3>
+          <p>Everything tracked, everything documented, everything accessible at any time.</p>
+          <ul class="msv__portal-status-list">
+            <li>
+              <span>Eligibility Check</span>
+              <div style="display:flex;align-items:center;gap:0.5rem;">
+                <span style="font-size:0.78rem;color:rgba(255,255,255,0.5);">Complete</span>
+                <div class="msv__portal-dot msv__portal-dot--green"></div>
+              </div>
+            </li>
+            <li>
+              <span>Document Pack</span>
+              <div style="display:flex;align-items:center;gap:0.5rem;">
+                <span style="font-size:0.78rem;color:rgba(255,255,255,0.5);">In review</span>
+                <div class="msv__portal-dot msv__portal-dot--amber"></div>
+              </div>
+            </li>
+            <li>
+              <span>Apostille &amp; Translations</span>
+              <div style="display:flex;align-items:center;gap:0.5rem;">
+                <span style="font-size:0.78rem;color:rgba(255,255,255,0.5);">In progress</span>
+                <div class="msv__portal-dot msv__portal-dot--blue"></div>
+              </div>
+            </li>
+            <li>
+              <span>Application Submission</span>
+              <div style="display:flex;align-items:center;gap:0.5rem;">
+                <span style="font-size:0.78rem;color:rgba(255,255,255,0.5);">Pending</span>
+                <div class="msv__portal-dot" style="background:rgba(255,255,255,0.2);"></div>
+              </div>
+            </li>
+            <li>
+              <span>Visa Approval</span>
+              <div style="display:flex;align-items:center;gap:0.5rem;">
+                <span style="font-size:0.78rem;color:rgba(255,255,255,0.5);">Pending</span>
+                <div class="msv__portal-dot" style="background:rgba(255,255,255,0.2);"></div>
+              </div>
+            </li>
+          </ul>
+          <a href="https://dashboard.platinumlegalspain.com/nlv" class="msv__btn msv__btn--primary" style="display:block;text-align:center;">Book a Specialist Call</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       LEAD MAGNET BAND
+  ═══════════════════════════════════════════ -->
+  <div class="msv__lead-band">
+    <div class="msv__container">
+      <div class="msv__lead-band-inner">
+        <div class="msv__lead-band-text">
+          <h2>Not Sure Which <span class="msv__white-shimmer">Visa You Need?</span></h2>
+          <p>Take our free 5-minute eligibility check. We'll tell you which visa fits your situation — and whether you're ready to apply — before you spend a penny.</p>
+        </div>
+        <div class="msv__lead-band-actions">
+          <a href="https://dashboard.platinumlegalspain.com/nlv" class="msv__btn msv__btn--primary" style="font-size:1rem; padding: 1rem 2.2rem;">Start Free Eligibility Check</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+       FAQ — SEO CAPTURE
+  ═══════════════════════════════════════════ -->
+  <section class="msv__section">
+    <div class="msv__container">
+      <div class="msv__section-hd msv__section-hd--centre">
+        <h2>Frequently Asked Questions</h2>
+        <p>Common questions from people planning their move to Spain. For anything not covered here, our team is happy to help.</p>
+      </div>
+
+      <div style="max-width: 780px; margin: 0 auto;">
+        <div class="msv__faq">
+
+          <div class="msv__faq-item">
+            <div class="msv__faq-q">What is the easiest visa to get for Spain?</div>
+            <div class="msv__faq-a">
+              There's no single "easiest" visa — it depends entirely on your circumstances. The Non-Lucrative Visa suits those with passive income or savings. The Digital Nomad Visa suits remote workers. The Student Visa is for course enrolment. The right visa is the one you qualify for and that matches how you plan to live in Spain. Our free eligibility check helps you confirm this in minutes.
+            </div>
+          </div>
+
+          <div class="msv__faq-item">
+            <div class="msv__faq-q">Can I work on a Spain Non-Lucrative Visa?</div>
+            <div class="msv__faq-a">
+              No. The Non-Lucrative Visa does not permit you to work for Spanish employers or operate as a self-employed professional in Spain. It is designed for people who can financially support themselves through passive income, pensions, savings, or investments without needing to earn money in Spain. If you work remotely for a non-Spanish employer, the Digital Nomad Visa may be a better fit.
+            </div>
+          </div>
+
+          <div class="msv__faq-item">
+            <div class="msv__faq-q">How long does a Spain visa application take?</div>
+            <div class="msv__faq-a">
+              Processing times vary by route and consulate. The Non-Lucrative Visa and Student Visa are typically processed within 4–8 weeks by the Spanish consulate in your home country. The Digital Nomad Visa applied via the UGE in Spain is usually processed in around 20 working days. Consulate wait times for appointments can add to these timelines, particularly in the UK and US.
+            </div>
+          </div>
+
+          <div class="msv__faq-item">
+            <div class="msv__faq-q">Can I apply for a Spanish visa from inside Spain?</div>
+            <div class="msv__faq-a">
+              It depends on the visa. The Digital Nomad Visa can be applied for from inside Spain via the UGE (Unidad de Grandes Empresas) — entirely online, without visiting a consulate. Most other visas, including the Non-Lucrative Visa and Student Visa, must be applied for from your home country through the local Spanish consulate before you travel.
+            </div>
+          </div>
+
+          <div class="msv__faq-item">
+            <div class="msv__faq-q">Do I need to speak Spanish to apply for a visa?</div>
+            <div class="msv__faq-a">
+              No — you don't need to speak Spanish to apply. However, your supporting documents will need to be translated into Spanish by a sworn translator, and some consulate appointments may involve questions in Spanish. We manage all translations as part of our service, so you don't need to deal with the language barrier directly.
+            </div>
+          </div>
+
+          <div class="msv__faq-item">
+            <div class="msv__faq-q">What is a NIE and do I need one?</div>
+            <div class="msv__faq-a">
+              The NIE (Número de Identificación de Extranjero) is a tax identification number issued to foreigners in Spain. You'll need it to open a bank account, buy property, sign a lease, or deal with any official or financial matter in Spain. Once you have a visa and arrive in Spain, your NIE is usually obtained as part of your TIE (residency card) registration. We guide all clients through this process after arrival.
+            </div>
+          </div>
+
+          <div class="msv__faq-item">
+            <div class="msv__faq-q">What nationalities do you help?</div>
+            <div class="msv__faq-a">
+              We help English-speaking foreigners from any non-EU nationality — most commonly from the UK, USA, Canada, Australia, Ireland, South Africa, and New Zealand. Post-Brexit, UK nationals require a visa for stays of more than 90 days. Our services are available regardless of where you're currently based.
+            </div>
+          </div>
+
+          <div class="msv__faq-item">
+            <div class="msv__faq-q">What happens if my visa application is rejected?</div>
+            <div class="msv__faq-a">
+              A rejection is not necessarily the end. You may be able to appeal the decision or reapply with additional or corrected documentation. Our team reviews all documents before submission to reduce the risk of rejection. If you have already received a rejection and need guidance on next steps, we offer a consultation to assess your options.
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       FINAL CTA
+  ═══════════════════════════════════════════ -->
+  <section class="msv__final-cta">
+    <div class="msv__container">
+      <h2>Ready to Make <span class="msv__shimmer">Your Move?</span></h2>
+      <p>Speak with a Spain visa specialist. We'll confirm which route is right for you and map out exactly what your application involves.</p>
+      <div class="msv__btn-group" style="justify-content:center;">
+        <a href="https://dashboard.platinumlegalspain.com/nlv" class="msv__btn msv__btn--primary">Book a Consultation</a>
+        <a href="https://dashboard.platinumlegalspain.com/nlv" class="msv__btn msv__btn--outline-white">Start Free Eligibility Check</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       DISCLAIMER
+  ═══════════════════════════════════════════ -->
+  </div>
+
+</div>
+<!-- end .msv -->
+
+<!-- FRAGMENT_END -->
+</main>
+
+
+<!-- ═══════════════════════════════════════════════════
+     SITE FOOTER
+     ═══════════════════════════════════════════════════ -->
+<footer class="msv-footer" role="contentinfo">
+
+  <div class="msv-footer__top">
+
+    <!-- Brand column -->
+    <div class="msv-footer__brand">
+      <a href="/" class="msv-footer__logo" aria-label="My Spanish Visa"><img src="/assets/images/msv-logo-white.png" alt="My Spanish Visa" height="40" style="display:block;"></a>
+      <p class="msv-footer__tagline">
+        Specialist Spain visa &amp; residency guidance for English-speaking foreigners.
+        A service of Platinum Legal Spain.
+      </p>
+      <div class="msv-footer__trust">
+        <span class="msv-footer__trust-item">All English. No barriers.</span>
+        <span class="msv-footer__trust-item">Solicitors &amp; immigration specialists</span>
+        <span class="msv-footer__trust-item">100% online process</span>
+      </div>
+    </div>
+
+    <!-- Visas column -->
+    <div>
+      <div class="msv-footer__col-title">Visas</div>
+      <ul class="msv-footer__links">
+        <li><a href="/non-lucrative-visa-spain/">Non-Lucrative Visa</a></li>
+        <li><a href="/digital-nomad-visa-spain/">Digital Nomad Visa</a></li>
+        <li><a href="/student-visa-spain/">Student Visa</a></li>
+        <li><a href="/spain-visa-renewal/">Visa Renewals</a></li>
+        <li><a href="/best-visa-move-to-spain/">Compare All Visas</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/nlv">Apply: NLV</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/dnv">Apply: DNV</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/student-visa">Apply: Student Visa</a></li>
+      </ul>
+    </div>
+
+    <!-- Resources column -->
+    <div>
+      <div class="msv-footer__col-title">Resources</div>
+      <ul class="msv-footer__links">
+        <li><a href="/blog/">Blog &amp; Guides</a></li>
+        <li><a href="/move-to-spain/">Move to Spain Guide</a></li>
+        <li><a href="/visa-eligibility-quiz/">Eligibility Quiz</a></li>
+        <li><a href="/spain-visa-checklist/">Document Checklists</a></li>
+        <li><a href="/spain-visa-requirements/">Visa Requirements</a></li>
+        <li><a href="/spain-nie-number/">NIE Number Guide</a></li>
+        <li><a href="/spain-tie-card/">TIE Card Guide</a></li>
+      </ul>
+    </div>
+
+    <!-- Company column -->
+    <div>
+      <div class="msv-footer__col-title">Company</div>
+      <ul class="msv-footer__links">
+        <li><a href="/about-us/">About Us</a></li>
+        <li><a href="/testimonials/">Client Reviews</a></li>
+        <li><a href="/why-choose-us/">Why Choose Us</a></li>
+        <li><a href="/contact-us.html">Contact</a></li>
+        <li><a href="https://www.platinumlegalspain.com" rel="noopener">Platinum Legal Spain</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/nlv">Client Portal</a></li>
+      </ul>
+    </div>
+
+  </div><!-- /.msv-footer__top -->
+
+  <div class="msv-footer__bottom">
+    <div class="msv-footer__bottom-inner">
+      <p class="msv-footer__disclaimer">
+        <strong style="color:rgba(255,255,255,0.5);">Disclaimer:</strong>
+        My Spanish Visa provides visa processing support and is not a law firm. Content on this site is for informational purposes only and does not constitute legal advice. Immigration rules change frequently — always verify requirements with official sources or a qualified specialist. My Spanish Visa is a trading name of Platinum Legal Spain.
+      </p>
+      <span class="msv-footer__copyright">© 2026 My Spanish Visa. All rights reserved.</span>
+    </div>
+  </div>
+
+</footer>
+
+</body>
+</html>

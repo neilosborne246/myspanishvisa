@@ -1,0 +1,1434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- ═══════════════════════════════════════════════════════════════════
+       PAGE-SPECIFIC HEAD — replace block below per page:
+       <title>Nlv Application Process | My Spanish Visa</title>
+       <meta name="description" content="…">
+       <meta property="og:title" content="…">
+       <meta property="og:description" content="…">
+       <meta property="og:url" content="https://www.myspanishvisa.com/…">
+       <meta property="og:image" content="…">
+       <link rel="canonical" href="https://www.myspanishvisa.com/…">
+       <script type="application/ld+json">…</script>
+       ═══════════════════════════════════════════════════════════════════ -->
+  <title>My Spanish Visa — Spain Visa &amp; Residency Specialists</title>
+  <meta name="description" content="My Spanish Visa helps English-speaking foreigners move to Spain. Expert guidance on Non-Lucrative Visa, Digital Nomad Visa, Student Visa, renewals and more.">
+
+  <!-- Shared Open Graph defaults -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="My Spanish Visa">
+  <meta property="og:image" content="https://www.myspanishvisa.com/assets/images/og/og-myspanishvisa-default.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@myspanishvisa">
+
+  <style>
+/* ═══════════════════════════════════════════════════════════════
+   GLOBAL SHELL — nav + footer only.
+   Page-specific CSS lives inside each fragment's own <style> block.
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── iOS overflow safety ── */
+html, body { max-width: 100%; overflow-x: clip; margin: 0; padding: 0; }
+*, *::before, *::after { box-sizing: border-box; }
+
+/* ── Brand tokens (root-level so all fragments inherit) ── */
+:root {
+  --navy:      #0c1930;
+  --navy-mid:  #1a3a5c;
+  --red:       #be0011;
+  --red-deep:  #8c000d;
+  --yellow:    #facf39;
+  --cream:     #f8f7f4;
+  --white:     #ffffff;
+  --black:     #1a1a1a;
+  --muted:     #5a6478;
+  --border:    #dce3ed;
+  --shadow-sm: 0 2px 8px rgba(12,25,48,0.08);
+  --shadow-md: 0 6px 24px rgba(12,25,48,0.13);
+}
+
+body {
+  font-family: 'Inter', 'Segoe UI', system-ui, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.75;
+  color: var(--black);
+  background: #fff;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   SITE NAV
+   ───────────────────────────────────────────────────────────── */
+.msv-nav {
+  position: sticky;
+  top: 0;
+  z-index: 9000;
+  background: var(--navy);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 2px 12px rgba(12,25,48,0.22);
+}
+.msv-nav__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+  gap: 1.5rem;
+}
+
+/* Logo */
+.msv-nav__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+.msv-nav__logo-flag {
+  font-size: 1.3rem;
+  line-height: 1;
+}
+.msv-nav__logo-text {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+.msv-nav__logo-text span {
+  color: var(--yellow);
+}
+
+/* Links */
+.msv-nav__links {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.msv-nav__links > li {
+  position: relative;
+}
+.msv-nav__links > li > a,
+.msv-nav__links > li > button {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.5rem 0.9rem;
+  font-size: 0.87rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.85);
+  text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: color 0.15s, background 0.15s;
+  white-space: nowrap;
+  height: 64px;
+}
+.msv-nav__links > li > a:hover,
+.msv-nav__links > li > button:hover,
+.msv-nav__links > li:focus-within > a,
+.msv-nav__links > li:focus-within > button {
+  color: #fff;
+  background: rgba(255,255,255,0.08);
+}
+.msv-nav__chevron {
+  font-size: 0.65rem;
+  opacity: 0.7;
+  transition: transform 0.2s;
+}
+.msv-nav__links > li:focus-within .msv-nav__chevron,
+.msv-nav__links > li:hover .msv-nav__chevron {
+  transform: rotate(180deg);
+}
+
+/* Dropdown */
+.msv-nav__dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 230px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  box-shadow: var(--shadow-md);
+  padding: 0.5rem 0;
+  z-index: 200;
+}
+.msv-nav__links > li:hover .msv-nav__dropdown,
+.msv-nav__links > li:focus-within .msv-nav__dropdown {
+  display: block;
+}
+.msv-nav__dropdown a {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.6rem 1.1rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--navy);
+  text-decoration: none;
+  transition: background 0.12s;
+}
+.msv-nav__dropdown a:hover {
+  background: var(--cream);
+  color: var(--red);
+}
+.msv-nav__dropdown-icon {
+  width: 24px;
+  height: 24px;
+  background: var(--cream);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+.msv-nav__dropdown-divider {
+  height: 1px;
+  background: var(--border);
+  margin: 0.4rem 0;
+}
+
+/* CTA button */
+.msv-nav__cta {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.55rem 1.2rem;
+  background: var(--red);
+  color: #fff !important;
+  font-size: 0.85rem;
+  font-weight: 700;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.15s, box-shadow 0.15s;
+  white-space: nowrap;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(190,0,17,0.3);
+}
+.msv-nav__cta:hover {
+  background: var(--red-deep);
+  box-shadow: 0 4px 14px rgba(190,0,17,0.4);
+  text-decoration: none;
+}
+
+/* Hamburger */
+.msv-nav__burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.4rem;
+  border-radius: 5px;
+}
+.msv-nav__burger span {
+  width: 22px;
+  height: 2px;
+  background: #fff;
+  border-radius: 2px;
+  transition: transform 0.2s, opacity 0.2s;
+  display: block;
+}
+
+/* Mobile nav */
+.msv-nav__mobile {
+  display: none;
+  flex-direction: column;
+  background: var(--navy-mid);
+  padding: 1rem 1.5rem 1.5rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+.msv-nav__mobile.open { display: flex; }
+.msv-nav__mobile a {
+  padding: 0.65rem 0;
+  color: rgba(255,255,255,0.9);
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+.msv-nav__mobile a:hover { color: var(--yellow); }
+.msv-nav__mobile .msv-nav__mobile-sub {
+  padding-left: 1rem;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: rgba(255,255,255,0.7);
+}
+.msv-nav__mobile-cta {
+  margin-top: 1rem;
+  background: var(--red);
+  color: #fff !important;
+  border-radius: 6px;
+  text-align: center;
+  padding: 0.75rem 1rem !important;
+  border-bottom: none !important;
+}
+
+@media (max-width: 900px) {
+  .msv-nav__links { display: none; }
+  .msv-nav__cta { display: none; }
+  .msv-nav__burger { display: flex; }
+}
+@media (max-width: 480px) {
+  .msv-nav__inner { padding: 0 1rem; }
+}
+
+/* ─────────────────────────────────────────────────────────────
+   SITE FOOTER
+   ───────────────────────────────────────────────────────────── */
+.msv-footer {
+  background: var(--navy);
+  color: rgba(255,255,255,0.75);
+  overflow-x: clip;
+}
+.msv-footer__top {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem 3rem;
+  display: grid;
+  grid-template-columns: 280px 1fr 1fr 1fr;
+  gap: 3rem;
+}
+@media (max-width: 900px) {
+  .msv-footer__top { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
+}
+@media (max-width: 560px) {
+  .msv-footer__top { grid-template-columns: 1fr; gap: 2rem; padding: 3rem 1.2rem 2rem; }
+}
+
+.msv-footer__brand {}
+.msv-footer__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  margin-bottom: 1rem;
+}
+.msv-footer__logo-flag { font-size: 1.3rem; }
+.msv-footer__logo-text {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -0.01em;
+}
+.msv-footer__logo-text span { color: var(--yellow); }
+.msv-footer__tagline {
+  font-size: 0.83rem;
+  color: rgba(255,255,255,0.55);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+.msv-footer__trust {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+.msv-footer__trust-item {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.65);
+}
+.msv-footer__trust-item::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  background: var(--yellow);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.msv-footer__col-title {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.4);
+  margin-bottom: 1rem;
+}
+.msv-footer__links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.msv-footer__links a {
+  font-size: 0.87rem;
+  color: rgba(255,255,255,0.68);
+  text-decoration: none;
+  transition: color 0.15s;
+  display: inline-block;
+}
+.msv-footer__links a:hover {
+  color: var(--yellow);
+  text-decoration: none;
+}
+
+.msv-footer__bottom {
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+.msv-footer__bottom-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 1rem;
+  justify-content: space-between;
+}
+.msv-footer__disclaimer {
+  font-size: 0.73rem;
+  color: rgba(255,255,255,0.35);
+  line-height: 1.65;
+  max-width: 720px;
+}
+.msv-footer__copyright {
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.35);
+  white-space: nowrap;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   MAIN CONTENT AREA
+   ───────────────────────────────────────────────────────────── */
+main {
+  /* Fragments are self-contained; this wrapper just provides flow context */
+  position: relative;
+}
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════
+     SITE NAVIGATION
+     ═══════════════════════════════════════════════════ -->
+<header class="msv-nav" role="banner">
+  <div class="msv-nav__inner">
+
+    <!-- Logo -->
+    <a href="/" class="msv-nav__logo" aria-label="My Spanish Visa — Home"><img src="/assets/images/msv-logo-white.png" alt="My Spanish Visa" height="64" style="display:block;"></a>
+
+    <!-- Desktop links -->
+    <nav aria-label="Main navigation">
+      <ul class="msv-nav__links">
+
+        <li>
+          <button class="msv-nav__dropdown-trigger" aria-haspopup="true" aria-expanded="false">
+            Visas <span class="msv-nav__chevron">▾</span>
+          </button>
+          <div class="msv-nav__dropdown" role="menu">
+            <a href="/non-lucrative-visa-spain/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🏖️</span>Non-Lucrative Visa
+            </a>
+            <a href="/digital-nomad-visa-spain/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">💻</span>Digital Nomad Visa
+            </a>
+            <a href="/student-visa-spain/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🎓</span>Student Visa
+            </a>
+            <div class="msv-nav__dropdown-divider"></div>
+            <a href="/spain-visa-renewal/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🔄</span>Visa Renewals
+            </a>
+            <a href="/best-visa-move-to-spain/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">⚖️</span>Compare All Visas
+            </a>
+          </div>
+        </li>
+
+        <li>
+          <button aria-haspopup="true" aria-expanded="false">
+            Resources <span class="msv-nav__chevron">▾</span>
+          </button>
+          <div class="msv-nav__dropdown" role="menu">
+            <a href="/blog/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">📝</span>Blog &amp; Guides
+            </a>
+            <a href="/spain-visa-checklist/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">✅</span>Document Checklists
+            </a>
+            <a href="/move-to-spain/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🏠</span>Move to Spain Guide
+            </a>
+            <a href="/visa-eligibility-quiz/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🧭</span>Eligibility Quiz
+            </a>
+          </div>
+        </li>
+
+        <li><a href="/about-us/">About Us</a></li>
+        <li><a href="/testimonials/">Reviews</a></li>
+        <li><a href="/contact-us.html">Contact</a></li>
+
+      </ul>
+    </nav>
+
+    <!-- Desktop CTA -->
+    <a href="https://dashboard.platinumlegalspain.com/nlv" class="msv-nav__cta">
+      Start My Application →
+    </a>
+
+    <!-- Hamburger (mobile) -->
+    <button class="msv-nav__burger" aria-label="Open menu" aria-expanded="false" onclick="
+      var m=document.querySelector('.msv-nav__mobile');
+      var open=m.classList.toggle('open');
+      this.setAttribute('aria-expanded', open);
+    ">
+      <span></span><span></span><span></span>
+    </button>
+
+  </div><!-- /.msv-nav__inner -->
+
+  <!-- Mobile menu -->
+  <nav class="msv-nav__mobile" aria-label="Mobile navigation">
+    <a href="/non-lucrative-visa-spain/" class="msv-nav__mobile-sub">Non-Lucrative Visa</a>
+    <a href="/digital-nomad-visa-spain/" class="msv-nav__mobile-sub">Digital Nomad Visa</a>
+    <a href="/student-visa-spain/" class="msv-nav__mobile-sub">Student Visa</a>
+    <a href="/spain-visa-renewal/">Visa Renewals</a>
+    <a href="/best-visa-move-to-spain/">Compare All Visas</a>
+    <a href="/blog/">Blog &amp; Guides</a>
+    <a href="/about-us/">About Us</a>
+    <a href="/testimonials/">Reviews</a>
+    <a href="/contact-us.html">Contact</a>
+    <a href="https://dashboard.platinumlegalspain.com/nlv" class="msv-nav__mobile-cta">Start My Application →</a>
+  </nav>
+
+</header>
+
+
+<!-- ═══════════════════════════════════════════════════
+     PAGE CONTENT (fragment injected here)
+     ═══════════════════════════════════════════════════ -->
+<main>
+<!-- FRAGMENT_START -->
+<!-- ============================================================
+     MY SPANISH VISA — Non-Lucrative Visa Application Process
+     Elementor Full-Width HTML Widget · April 2026
+     Parent page: /non-lucrative-visa-spain/ · Slug: /non-lucrative-visa-application-process/
+     ============================================================ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.myspanishvisa.com/non-lucrative-visa-application-process/#webpage",
+      "url": "https://www.myspanishvisa.com/non-lucrative-visa-application-process/",
+      "name": "How to Apply for the Non-Lucrative Visa Spain | Step-by-Step Process | My Spanish Visa",
+      "description": "Step-by-step guide to applying for the Non-Lucrative Visa Spain. From eligibility check through document preparation, consulate appointment, and post-arrival TIE registration — the full NLV application process explained.",
+      "inLanguage": "en",
+      "isPartOf": { "@id": "https://www.myspanishvisa.com/#website" },
+      "breadcrumb": { "@id": "https://www.myspanishvisa.com/non-lucrative-visa-application-process/#breadcrumb" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.myspanishvisa.com/non-lucrative-visa-application-process/#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.myspanishvisa.com" },
+        { "@type": "ListItem", "position": 2, "name": "Non-Lucrative Visa Spain", "item": "https://www.myspanishvisa.com/non-lucrative-visa-spain/" },
+        { "@type": "ListItem", "position": 3, "name": "Application Process", "item": "https://www.myspanishvisa.com/non-lucrative-visa-application-process/" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Where do I apply for the Non-Lucrative Visa?",
+          "acceptedAnswer": { "@type": "Answer", "text": "You must apply at the Spanish consulate with jurisdiction over your place of residence in your home country. You cannot apply from within Spain. For UK residents this is typically the Spanish Consulate in London or BLS Manchester. For US residents, the relevant consulate depends on your state of residence — there are consulates in New York, Los Angeles, Miami, Houston, Chicago, San Francisco, Boston, and Washington DC." }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I apply for the NLV from inside Spain?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. The Non-Lucrative Visa must be applied for from outside Spain, at the Spanish consulate in your country of residence. You cannot convert a tourist visa or Schengen entry into an NLV while in Spain. You must apply from your home country, receive the visa, and then enter Spain on that visa." }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does the NLV application process take from start to finish?",
+          "acceptedAnswer": { "@type": "Answer", "text": "From the point you begin preparing your documents to the point you receive your visa typically takes 3 to 6 months in total. Document preparation takes 4 to 8 weeks (depending on criminal record processing times and apostilles). Consulate processing after submission takes 6 to 12 weeks depending on the consulate. After approval, you must enter Spain and apply for your TIE card within 30 days of arrival." }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens after my NLV is approved?",
+          "acceptedAnswer": { "@type": "Answer", "text": "You will receive a visa sticker in your passport. You must enter Spain within the validity period of this visa (usually 90 days). Once in Spain, you have 30 days to apply for your TIE card (Tarjeta de Identidad de Extranjero) at the local Extranjería office. You should also register on the padrón at your local town hall. The TIE card is your official residence ID in Spain." }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need a consulate appointment for the NLV?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Most Spanish consulates require you to book an appointment in advance to submit your NLV application in person. Appointment availability varies — London and New York can have long waiting times, sometimes several weeks or even months ahead. Some consulates use external services like BLS International for appointment scheduling. Book your appointment as early as possible and prepare your documents to be ready by that date." }
+        },
+        {
+          "@type": "Question",
+          "name": "How long before my planned move date should I start the NLV process?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Start at least 3-4 months before your target departure. This allows time for document gathering (criminal records alone take 4-8 weeks), apostilling, translating, health insurance setup, and the consulate appointment plus processing. For complex family applications or slower consulates, allow 5-6 months."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I start the NLV application online, or does everything require in-person appointments?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Document preparation can largely be done remotely. The consulate visa appointment itself requires your physical presence. After arriving in Spain, the TIE card application also requires in-person attendance at the Policía Nacional."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is there a Spanish language requirement for the NLV?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "There is no Spanish language test or requirement for the Non-Lucrative Visa. Language requirements only arise if you later apply for Spanish citizenship (DELE A2 exam required for naturalisation)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What if my consulate appointment is cancelled or rescheduled?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Consulate appointments can occasionally be rescheduled. Most documents have sufficient validity that a 2-4 week reschedule doesn't require restarting, but check validity periods of medical certificates (3 months) and padrón certificates (3 months) if already obtained."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I be at my Spanish property during NLV processing?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "As a tourist within the 90/180 Schengen rule, you can be in Spain during processing. You cannot start formal residence until the NLV is issued. Many applicants visit Spain to find accommodation and set up practical matters while waiting."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<!-- Open Graph / Social -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.myspanishvisa.com/nlv-application-process/">
+<meta property="og:title" content="My Spanish Visa">
+<meta property="og:description" content="Expert Spain visa guidance for English-speaking expats.">
+<meta property="og:image" content="https://www.myspanishvisa.com/assets/images/og/og-nlv-spain.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="My Spanish Visa">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@myspanishvisa">
+<meta name="twitter:title" content="My Spanish Visa">
+<meta name="twitter:description" content="Expert Spain visa guidance for English-speaking expats.">
+<meta name="twitter:image" content="https://www.myspanishvisa.com/assets/images/og/og-nlv-spain.jpg">
+<style>
+/* ── iOS Safari pinch-zoom overflow safety ─────────────────────────── */
+/* Prevents horizontal overflow when users pinch-zoom on iPhone/iPad.   */
+/* Top-level (also paste into theme Custom CSS / Elementor Site Settings) */
+html, body { max-width: 100%; overflow-x: clip; }
+/* Scoped wrapper safety */
+.msv, .msv-nav, .msv-topbar, .msv-footer, .msv-footer-cta,
+.pls-header, .pls-body, .pls-nlv, .pls-dnv, .pls-student {
+  max-width: 100%;
+  overflow-x: clip;
+  position: relative;
+}
+/* Cap all media inside the wrapper */
+.msv img, .msv video, .msv iframe,
+.msv-footer img, .msv-footer video, .msv-footer iframe {
+  max-width: 100%;
+  height: auto;
+}
+/* Never use 100vw — use 100% instead (dev reminder) */
+
+
+.msv *, .msv *::before, .msv *::after { box-sizing: border-box; margin: 0; padding: 0; }
+.msv {
+  --navy: #0c1930; --navy-mid: #1a3a5c; --red: #be0011; --red-deep: #8c000d;
+  --yellow: #facf39; --cream: #f8f7f4; --white: #ffffff; --black: #1a1a1a;
+  --muted: #5a6478; --border: #dce3ed;
+  --shadow-sm: 0 2px 8px rgba(12,25,48,0.08); --shadow-md: 0 6px 24px rgba(12,25,48,0.13);
+  font-family: 'Inter', 'Segoe UI', system-ui, Arial, sans-serif;
+  font-size: 16px; line-height: 1.75; color: var(--black); width: 100%;
+}
+.msv__container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+.msv__container--narrow { max-width: 780px; margin: 0 auto; padding: 0 2rem; }
+@media (max-width: 640px) { .msv__container, .msv__container--narrow { padding: 0 1.2rem; } }
+.msv h1 { font-size: clamp(2rem, 4.5vw, 3rem); font-weight: 800; line-height: 1.12; color: var(--white); letter-spacing: -0.025em; margin-bottom: 1.2rem; }
+.msv h2 { font-size: clamp(1.3rem, 2.5vw, 1.75rem); font-weight: 700; color: var(--navy); letter-spacing: -0.01em; margin-bottom: 0.5rem; position: relative; display: inline-block; padding-bottom: 0.5rem; }
+.msv h2::after { content: ''; position: absolute; bottom: 0; left: 0; width: 44px; height: 3px; background: linear-gradient(90deg, var(--red), var(--red-deep)); border-radius: 2px; }
+.msv h3 { font-size: 1.05rem; font-weight: 700; color: var(--navy); margin-bottom: 0.4rem; }
+.msv p { color: var(--black); margin-bottom: 1rem; font-size: 0.97rem; }
+.msv a { color: var(--red); text-decoration: none; }
+.msv a:hover { text-decoration: underline; }
+.msv ul { list-style: none; padding: 0; margin: 0 0 1rem; }
+.msv ul li { padding: 0.35rem 0 0.35rem 1.4rem; position: relative; font-size: 0.95rem; color: var(--black); }
+.msv ul li::before { content: ''; position: absolute; left: 0; top: 0.75rem; width: 7px; height: 7px; background: linear-gradient(135deg, var(--red), var(--red-deep)); border-radius: 50%; }
+.msv__section { padding: 5rem 0; background: var(--white); }
+.msv__section--cream { padding: 5rem 0; background: linear-gradient(180deg, #f8f7f4 0%, #f2f4f8 100%); }
+.msv__section--dark { padding: 5rem 0; background: linear-gradient(135deg, var(--navy) 0%, #0d2240 55%, #0a1d38 100%); }
+.msv__section--dark h2 { color: var(--white) !important; }
+.msv__section--dark h2::after { background: linear-gradient(90deg, var(--yellow), #e8b820); }
+.msv__section--dark h3 { color: rgba(255,255,255,0.9) !important; }
+.msv .msv__section--dark p, .msv .msv__section--dark li { color: rgba(255,255,255,0.82); }
+.msv__section--dark ul li::before { background: linear-gradient(135deg, var(--yellow), #e8b820); }
+@media (max-width: 640px) { .msv__section, .msv__section--cream, .msv__section--dark { padding: 3.5rem 0; } }
+.msv__section-hd { margin-bottom: 3rem; }
+.msv__section-hd p { color: var(--muted); font-size: 1rem; margin-top: 0.75rem; line-height: 1.7; max-width: 600px; }
+@keyframes msv-fade-up { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes msv-shimmer { 0% { background-position: -400px 0; } 100% { background-position: 400px 0; } }
+.msv__shimmer { background: linear-gradient(90deg, var(--yellow) 0%, #e8b820 25%, var(--red) 50%, #e8b820 75%, var(--yellow) 100%); background-size: 400px 100%; -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; animation: msv-shimmer 3.5s linear infinite; display: inline; }
+.msv__hero { background: linear-gradient(135deg, #0c1930 0%, #0f2540 40%, #162d50 70%, #1a3560 100%); padding: 5.5rem 0 5rem; position: relative; overflow: hidden; }
+.msv__hero::before { content: ''; position: absolute; top: -30%; right: -5%; width: 700px; height: 700px; background: radial-gradient(circle, rgba(190,0,17,0.1) 0%, transparent 65%); pointer-events: none; }
+.msv__hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, rgba(250,207,57,0.4), transparent); }
+.msv__hero-inner { max-width: 780px; animation: msv-fade-up 0.7s ease-out both; }
+.msv__eyebrow { display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(190,0,17,0.15); border: 1px solid rgba(190,0,17,0.4); color: #ff6b7a; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.35rem 0.9rem; border-radius: 100px; margin-bottom: 1.5rem; }
+.msv__eyebrow::before { content: ''; width: 6px; height: 6px; background: var(--red); border-radius: 50%; box-shadow: 0 0 6px var(--red); }
+.msv__hero p { color: rgba(255,255,255,0.78) !important; font-size: clamp(1rem, 2.2vw, 1.15rem); max-width: 640px; margin-bottom: 2.2rem; line-height: 1.75; }
+.msv__trust-bar { background: var(--white); border-bottom: 1px solid var(--border); padding: 1rem 0; box-shadow: var(--shadow-sm); }
+.msv__trust-bar-inner { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.75rem; }
+.msv__trust-item { display: flex; align-items: center; gap: 0.5rem; font-size: 0.82rem; font-weight: 600; color: var(--navy); white-space: nowrap; }
+.msv__trust-item::before { content: ''; width: 7px; height: 7px; background: linear-gradient(135deg, var(--red), var(--red-deep)); border-radius: 50%; flex-shrink: 0; }
+.msv__btn-group { display: flex; flex-wrap: wrap; gap: 0.85rem; }
+.msv__btn { display: inline-block; padding: 0.85rem 2rem; font-size: 0.92rem; font-weight: 700; border-radius: 6px; text-decoration: none !important; transition: transform 0.15s, box-shadow 0.15s; }
+.msv__btn:hover { transform: translateY(-1px); text-decoration: none !important; }
+.msv .msv__btn--primary { background: linear-gradient(135deg, var(--red) 0%, var(--red-deep) 100%); color: #ffffff !important; box-shadow: 0 4px 16px rgba(190,0,17,0.38); }
+.msv .msv__btn--primary:hover { box-shadow: 0 6px 22px rgba(190,0,17,0.48); color: #ffffff !important; }
+.msv .msv__btn--outline-white { background: transparent; color: #ffffff !important; border: 1.5px solid rgba(255,255,255,0.5); }
+.msv .msv__btn--outline-white:hover { background: rgba(255,255,255,0.1); color: #ffffff !important; }
+.msv__alert { border-radius: 10px; padding: 1.3rem 1.5rem; display: flex; gap: 1rem; align-items: flex-start; margin-bottom: 2rem; }
+.msv__alert--warn { background: #fffbea; border: 1px solid #f0d060; }
+.msv__alert--info { background: #eef4ff; border: 1px solid #a0bfff; }
+.msv__alert-icon { font-size: 1.4rem; flex-shrink: 0; margin-top: 0.1rem; }
+.msv__alert p { font-size: 0.9rem; color: var(--black); margin: 0; line-height: 1.65; }
+.msv__alert strong { color: var(--navy); }
+.msv__faq-list { display: flex; flex-direction: column; gap: 0; border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+.msv__faq-list details { border-bottom: 1px solid var(--border); background: var(--white); }
+.msv__faq-list details:last-child { border-bottom: none; }
+.msv__faq-list summary { padding: 1.2rem 1.5rem; font-size: 0.97rem; font-weight: 700; color: var(--navy); cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+.msv__faq-list summary::-webkit-details-marker { display: none; }
+.msv__faq-list summary::after { content: '+'; font-size: 1.3rem; font-weight: 400; color: var(--red); flex-shrink: 0; transition: transform 0.2s; }
+.msv__faq-list details[open] summary::after { transform: rotate(45deg); }
+.msv__faq-list details[open] summary { color: var(--red); }
+.msv__faq-answer { padding: 0 1.5rem 1.3rem; font-size: 0.92rem; color: var(--muted); line-height: 1.75; }
+.msv__faq-answer p { color: var(--muted); font-size: 0.92rem; margin-bottom: 0.75rem; }
+.msv__faq-answer p:last-child { margin-bottom: 0; }
+.msv__cta-band { background: linear-gradient(135deg, var(--navy) 0%, #0d2240 60%, #0a1d38 100%); padding: 5rem 0; text-align: center; }
+.msv__cta-band h2 { color: var(--white) !important; display: block; }
+.msv__cta-band h2::after { left: 50%; transform: translateX(-50%); background: linear-gradient(90deg, var(--yellow), #e8b820); }
+.msv__cta-band p { color: rgba(255,255,255,0.75) !important; max-width: 560px; margin: 1rem auto 2.2rem; font-size: 1rem; }
+.msv__cta-band .msv__btn-group { justify-content: center; }
+.msv__related { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; }
+@media (max-width: 860px) { .msv__related { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 420px) { .msv__related { grid-template-columns: 1fr; } }
+.msv__related-card { background: var(--white); border: 1px solid var(--border); border-radius: 10px; padding: 1.3rem 1.25rem; text-decoration: none !important; transition: box-shadow 0.2s, transform 0.2s; display: block; }
+.msv__related-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); text-decoration: none !important; }
+.msv__related-icon { font-size: 1.5rem; display: block; margin-bottom: 0.6rem; }
+.msv__related-title { font-size: 0.88rem; font-weight: 700; color: var(--navy); display: block; margin-bottom: 0.3rem; }
+.msv__related-desc { font-size: 0.8rem; color: var(--muted); line-height: 1.55; }
+.msv__disclaimer { background: var(--cream); border-top: 1px solid var(--border); padding: 2rem 0; }
+.msv__disclaimer p { font-size: 0.78rem; color: var(--muted); margin: 0; line-height: 1.65; }
+/* ── Timeline steps ──────────────────────────────────────── */
+.msv__timeline { position: relative; padding-left: 3rem; }
+.msv__timeline::before { content: ''; position: absolute; left: 18px; top: 0; bottom: 0; width: 3px; background: linear-gradient(180deg, var(--red), var(--red-deep), var(--navy)); border-radius: 2px; }
+.msv__timeline-step { position: relative; margin-bottom: 2.5rem; }
+.msv__timeline-step:last-child { margin-bottom: 0; }
+.msv__timeline-dot { position: absolute; left: -3rem; top: 0.25rem; width: 38px; height: 38px; border-radius: 50%; background: linear-gradient(135deg, var(--red), var(--red-deep)); color: #fff; font-size: 0.82rem; font-weight: 800; display: flex; align-items: center; justify-content: center; box-shadow: 0 3px 12px rgba(190,0,17,0.35); z-index: 1; }
+.msv__timeline-step h3 { font-size: 1.05rem; font-weight: 800; color: var(--navy); margin-bottom: 0.4rem; }
+.msv__timeline-step p { font-size: 0.92rem; color: var(--muted); margin-bottom: 0.6rem; line-height: 1.7; }
+.msv__timeline-meta { display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.75rem; font-weight: 700; color: var(--red); background: #fef2f2; padding: 0.25rem 0.7rem; border-radius: 100px; margin-bottom: 0.75rem; }
+</style>
+<div class="msv">
+  <!-- ── Hero ─────────────────────────────────────────────────── -->
+  <section class="msv__hero">
+    <div class="msv__container">
+      <div class="msv__hero-inner">
+        <span class="msv__eyebrow">Non-Lucrative Visa</span>
+        <h1>How to Apply for the NLV: <span class="msv__shimmer">The Step-by-Step Process</span></h1>
+        <p>The NLV application follows a clear sequence — from confirming your eligibility through to collecting your TIE card in Spain. This guide walks you through every stage, whether you are applying independently or with our support.</p>
+        <div class="msv__btn-group">
+          <a href="/non-lucrative-visa-spain/" class="msv__btn msv__btn--outline-white">← Back to NLV guide</a>
+          <a href="https://dashboard.platinumlegalspain.com/nlv" class="msv__btn msv__btn--primary">Start my application →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Trust bar ─────────────────────────────────────────── -->
+  <div class="msv__trust-bar">
+    <div class="msv__container">
+      <div class="msv__trust-bar-inner">
+        <span class="msv__trust-item">Apply from your home country</span>
+        <span class="msv__trust-item">3–6 months start to finish</span>
+        <span class="msv__trust-item">TIE card within 30 days of arrival</span>
+        <span class="msv__trust-item">Online portal tracks everything</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Process overview ─────────────────────────────────── -->
+  <section class="msv__section">
+    <div class="msv__container--narrow">
+      <div class="msv__section-hd">
+        <h2>The NLV Application Process — Start to Finish</h2>
+        <p>Whether you apply through My Spanish Visa or prepare independently, the process follows the same sequence. Here is every step.</p>
+      </div>
+
+      <div class="msv__alert msv__alert--info">
+        <span class="msv__alert-icon">💡</span>
+        <p><strong>You cannot apply from inside Spain.</strong> The NLV must be applied for at the Spanish consulate in your country of residence. You cannot convert a tourist entry or Schengen visa into an NLV while already in Spain.</p>
+      </div>
+
+      <div class="msv__timeline">
+        <!-- Step 1 -->
+        <div class="msv__timeline-step">
+          <div class="msv__timeline-dot">1</div>
+          <span class="msv__timeline-meta">⏱ Week 1</span>
+          <h3>Confirm Your Eligibility</h3>
+          <p>Before committing time and money to the application, confirm that you meet the core requirements: sufficient passive income, non-EU nationality, clean criminal record, and no intention to work in Spain.</p>
+          <p>With My Spanish Visa, this starts with our <strong>free eligibility quiz</strong> — a five-minute assessment that gives you a clear answer based on your income, household size, and nationality. No commitment, no cost.</p>
+          <p style="font-size: 0.85rem;"><a href="https://dashboard.platinumlegalspain.com/nlv" style="color: var(--red); font-weight: 700;">Take the free eligibility check →</a></p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="msv__timeline-step">
+          <div class="msv__timeline-dot">2</div>
+          <span class="msv__timeline-meta">⏱ Week 1–2</span>
+          <h3>Specialist Onboarding Call</h3>
+          <p>Once eligibility is confirmed, you book a one-to-one call with one of our NLV specialists. On this call, we map out your full application: which documents you need, which consulate you will apply through, realistic timelines, and any specifics for your situation (dual income sources, dependants, pre-existing health conditions, etc.).</p>
+          <p>If you are applying independently, this is the stage where you should research your specific consulate's requirements, document formats, and appointment booking process.</p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="msv__timeline-step">
+          <div class="msv__timeline-dot">3</div>
+          <span class="msv__timeline-meta">⏱ Weeks 2–8</span>
+          <h3>Document Preparation</h3>
+          <p>This is the most time-consuming and error-prone stage. You need to gather, apostille, and translate every document on the checklist. The timeline depends on how quickly you can obtain your criminal record certificate, medical certificate, and financial evidence.</p>
+
+          <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--navy); margin-top: 1.2rem; margin-bottom: 0.5rem;">Document Ordering Strategy</h4>
+          <p>Don't order documents sequentially — order them in parallel. Request your criminal record and medical certificate simultaneously while gathering financial documents. This overlapping timeline shaves 2–3 weeks off the total preparation period. Start with the documents that typically take longest: criminal records, apostilles, and sworn translations.</p>
+
+          <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--navy); margin-top: 1.2rem; margin-bottom: 0.5rem;">Key Documents to Prepare</h4>
+          <ul>
+            <li><strong>Criminal record certificate</strong> (ACRO in UK, FBI in USA) — allow 2–5 weeks. Order as soon as you decide to apply.</li>
+            <li><strong>Medical certificate</strong> from your GP or private clinic — typically 1–2 weeks to arrange and receive. Confirms you have no communicable diseases.</li>
+            <li><strong>Bank statements</strong> covering the last 6–12 months — request certified copies from your bank. Show regular passive income at or above the required threshold.</li>
+            <li><strong>Pension letters or investment statements</strong> — from each income source, showing annual amounts and stability.</li>
+            <li><strong>Private health insurance certificate</strong> (visa-compliant) — must explicitly cover Spain and meet Spanish requirements. Not all travel or expat insurance qualifies.</li>
+            <li><strong>Proof of accommodation in Spain</strong> — tenancy agreement, property deed, or hosted accommodation letter. Can be arranged after visa approval if needed initially.</li>
+            <li><strong>Apostilles</strong> for all required documents — official certificates of authenticity issued by your country's government.</li>
+            <li><strong>Sworn translations into Spanish</strong> — certified by official translators. Non-certified translations are rejected.</li>
+          </ul>
+
+          <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--navy); margin-top: 1.2rem; margin-bottom: 0.5rem;">Quality Control & Consulate Compliance</h4>
+          <p>Through My Spanish Visa, we manage your entire document checklist via your secure client portal. We coordinate apostilles, connect you with approved sworn translators, and check every document for consulate compliance before submission. Your NLV package includes €100 of certified translation costs per applicant. If preparing independently, remember that a single formatting error or missing document can cause your application to be rejected or delayed significantly.</p>
+
+          <p style="font-size: 0.85rem;"><a href="/non-lucrative-visa-documents/" style="color: var(--red); font-weight: 700;">See the full document checklist →</a></p>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="msv__timeline-step">
+          <div class="msv__timeline-dot">4</div>
+          <span class="msv__timeline-meta">⏱ Week 6–10</span>
+          <h3>Book Your Consulate Appointment</h3>
+          <p>Book your appointment with the Spanish consulate that has jurisdiction over your place of residence. Appointment availability varies significantly — London and New York can have waiting times of several weeks or even months. Smaller consulates (Houston, Boston, Dublin) typically have shorter waiting times.</p>
+
+          <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--navy); margin-top: 1.2rem; margin-bottom: 0.5rem;">Finding Your Consulate</h4>
+          <p>Your relevant consulate is determined by your place of residence, not where you might like to move or have family. Residents in the north of the UK apply through Manchester (BLS); those in the south apply through London. In the USA, consulates are divided by state jurisdiction — check the Spanish consulate website for your state.</p>
+
+          <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--navy); margin-top: 1.2rem; margin-bottom: 0.5rem;">Booking Strategy</h4>
+          <p>Book your appointment early — ideally as soon as you begin document preparation. You can always reschedule if your documents aren't ready, but waiting too long to book can delay your entire application by months. An appointment date in the future gives you a firm deadline and a concrete target for document completion. Most consulates allow free rescheduling if booked through their system.</p>
+
+          <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--navy); margin-top: 1.2rem; margin-bottom: 0.5rem;">Appointment Systems Vary</h4>
+          <p>Some consulates use their own internal booking systems; others use external services. The UK uses BLS International for appointment scheduling. Some US consulates use VFS Global or their own systems. Check your specific consulate's website for their current appointment booking process — this information is usually under "services" or "visa applications."</p>
+
+          <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--navy); margin-top: 1.2rem; margin-bottom: 0.5rem;">Biometric Collection</h4>
+          <p>Some consulates require biometric collection (fingerprints and photograph) as a separate step before or after your main appointment. If your consulate requires this, it may involve an additional visit or a separate appointment. Ask about biometrics when you book — don't be surprised if you need two appointments instead of one.</p>
+
+          <p style="font-size: 0.85rem;"><a href="/non-lucrative-visa-uk/" style="color: var(--red); font-weight: 700;">UK citizens (London/Manchester BLS) →</a> · <a href="/non-lucrative-visa-americans/" style="color: var(--red); font-weight: 700;">Americans (New York, LA, Miami) →</a></p>
+        </div>
+
+        <!-- Step 5 -->
+        <div class="msv__timeline-step">
+          <div class="msv__timeline-dot">5</div>
+          <span class="msv__timeline-meta">⏱ Appointment day</span>
+          <h3>Attend Your Consulate Appointment</h3>
+          <p>You attend the consulate in person with your complete application pack. This is the one step only you can do — but with proper preparation, it should be straightforward.</p>
+          <p>Through My Spanish Visa, we prepare your full application pack and brief you before the appointment: what to expect, what the officer may ask, how to present your financial documentation, and what to bring. You walk in prepared, not guessing.</p>
+          <p>At the appointment, the consulate officer will:</p>
+          <ul>
+            <li>Check that all required documents are present and correctly formatted</li>
+            <li>Verify your identity against your passport</li>
+            <li>May ask basic questions about your plans in Spain and your financial situation</li>
+            <li>Accept your application and issue a receipt</li>
+          </ul>
+        </div>
+
+        <!-- Step 6 -->
+        <div class="msv__timeline-step">
+          <div class="msv__timeline-dot">6</div>
+          <span class="msv__timeline-meta">⏱ 6–12 weeks after submission</span>
+          <h3>Wait for the Decision</h3>
+          <p>After submission, the consulate forwards your application to the relevant Spanish immigration authority for assessment. Processing typically takes between 6 and 12 weeks, though it can be longer during busy periods or if additional information is requested.</p>
+          <p>During this time, the consulate may contact you to request additional documents or clarification. With My Spanish Visa, we track the progress and handle any follow-up communication on your behalf.</p>
+          <p style="font-size: 0.85rem;"><a href="/non-lucrative-visa-timeline/" style="color: var(--red); font-weight: 700;">See processing times by consulate →</a></p>
+        </div>
+
+        <!-- Step 7 -->
+        <div class="msv__timeline-step">
+          <div class="msv__timeline-dot">7</div>
+          <span class="msv__timeline-meta">⏱ After approval</span>
+          <h3>Collect Your Visa and Enter Spain</h3>
+          <p>Once approved, the consulate will contact you to collect your passport with the NLV visa sticker. You must enter Spain within the validity period of this visa — typically 90 days from the date of issue.</p>
+          <p>Plan your move carefully: you need to arrive in Spain with enough time to complete your post-arrival registrations before the visa entry window closes.</p>
+        </div>
+
+        <!-- Step 8 -->
+        <div class="msv__timeline-step">
+          <div class="msv__timeline-dot">8</div>
+          <span class="msv__timeline-meta">⏱ Within 30 days of arrival</span>
+          <h3>Apply for Your TIE Card and Register</h3>
+          <p>Within 30 days of arriving in Spain, you must:</p>
+          <ul>
+            <li><strong>Apply for your TIE card</strong> (Tarjeta de Identidad de Extranjero) at the local Extranjería or police station. The TIE is your official foreign resident ID card in Spain.</li>
+            <li><strong>Register on the padrón</strong> at your local town hall (ayuntamiento). The padrón is the municipal register — it confirms your address in Spain and is required for many other registrations.</li>
+          </ul>
+          <p>My Spanish Visa supports you through these post-arrival steps. We guide you through the TIE appointment booking, document preparation, and padrón registration so you don't have to navigate Spanish bureaucracy alone.</p>
+          <p style="font-size: 0.85rem;"><a href="/guide/tie-card-spain/" style="color: var(--red); font-weight: 700;">TIE card guide →</a> · <a href="/guide/empadronamiento-spain/" style="color: var(--red); font-weight: 700;">Padrón guide →</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── With MSV vs DIY ─────────────────────────────────── -->
+  <section class="msv__section--dark">
+    <div class="msv__container--narrow">
+      <div class="msv__section-hd">
+        <h2>Applying With My Spanish Visa vs Going It Alone</h2>
+        <p style="color: rgba(255,255,255,0.82);">Many people apply for the NLV independently. But here is what changes when you work with us.</p>
+      </div>
+
+      <div style="overflow-x: auto; border: 1.5px solid rgba(255,255,255,0.15); border-radius: 12px;">
+        <table style="width: 100%; border-collapse: collapse; font-size: 0.88rem;">
+          <thead>
+            <tr style="background: rgba(255,255,255,0.08);">
+              <th style="padding: 1rem 1.25rem; text-align: left; color: var(--white); font-weight: 700; border-bottom: 2px solid var(--yellow);"></th>
+              <th style="padding: 1rem 1.25rem; text-align: center; color: var(--yellow); font-weight: 700; border-bottom: 2px solid var(--yellow);">With My Spanish Visa</th>
+              <th style="padding: 1rem 1.25rem; text-align: center; color: rgba(255,255,255,0.6); font-weight: 700; border-bottom: 2px solid var(--yellow);">Applying Independently</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+              <td style="padding: 0.85rem 1.25rem; font-weight: 600; color: rgba(255,255,255,0.9);">Eligibility check</td>
+              <td style="padding: 0.85rem 1.25rem; text-align: center; color: rgba(255,255,255,0.75);">Free quiz + specialist call</td>
+              <td style="padding: 0.85rem 1.25rem; text-align: center; color: rgba(255,255,255,0.5);">Self-assessed from public info</td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+              <td style="padding: 0.85rem 1.25rem; font-weight: 600; color: rgba(255,255,255,0.9);">Document preparation</td>
+              <td style="padding: 0.85rem 1.25rem; text-align: center; color: rgba(255,255,255,0.75);">Managed via client portal</td>
+              <td style="padding: 0.85rem 1.25rem; text-align: center; color: rgba(255,255,255,0.5);">You manage everything</td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+              <td style="padding: 0.85rem 1.25rem; font-weight: 600; color: rgba(255,255,255,0.9);">Apostille coordination</td>
+              <td style="padding: 0.85rem 1.25rem; text-align: center; color: rgba(255,255,255,0.75);">We guide step-by-step</td>
+              <td style="padding: 0.85rem 1.25rem; text-align: center; color: rgba(255,255,255,0.5);">You research and manage</td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+              <td style="padding: 0.85rem 1.25rem; font-weight: 600; color: rgba(255,255,255,0.9);">Translations</td>
+              <td style="padding: 0.85rem 1.25rem; text-align: center; color: rgba(255,255,255,0.75);">€100 included per applicant</td>
+              <td style="padding: 0.85rem 1.25rem; text-align: center; color: rgba(255,255,255,0.5);">You find and pay separately</td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+              <td style="padding: 0.85rem 1.25rem; font-weight: 600; color: rgba(255,255,255,0.9);">Compliance check</td>
+              <td style="padding: 0.85rem 1.25rem; text-align: center; color: rgba(255,255,255,0.75);">Every doc checked pre-submission</td>
+              <td style="padding: 0.85rem 1.25rem; text-align: center; color: rgba(255,255,255,0.5);">No safety net</td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+              <td style="padding: 0.85rem 1.25rem; font-weight: 600; color: rgba(255,255,255,0.9);">Consulate briefing</td>
+              <td style="padding: 0.85rem 1.25rem; text-align: center; color: rgba(255,255,255,0.75);">Pre-appointment prep session</td>
+              <td style="padding: 0.85rem 1.25rem; text-align: center; color: rgba(255,255,255,0.5);">Walk in unguided</td>
+            </tr>
+            <tr>
+              <td style="padding: 0.85rem 1.25rem; font-weight: 600; color: rgba(255,255,255,0.9);">Post-arrival support</td>
+              <td style="padding: 0.85rem 1.25rem; text-align: center; color: rgba(255,255,255,0.75);">TIE + padrón guidance</td>
+              <td style="padding: 0.85rem 1.25rem; text-align: center; color: rgba(255,255,255,0.5);">You navigate alone</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Before You Apply ──────────────────────────────────── -->
+  <section class="msv__section">
+    <div class="msv__container--narrow">
+      <div class="msv__section-hd">
+        <h2>Before You Apply: The Pre-Application Checklist</h2>
+        <p>Before you start gathering documents or booking a consulate appointment, take time to prepare strategically. This section covers what you should understand and plan for before the application process formally begins.</p>
+      </div>
+
+      <h3>Understanding the NIE (Número de Identidad de Extranjero)</h3>
+      <p>The NIE is your foreigner identification number in Spain. You do not obtain a NIE before arriving — instead, you get one after your NLV visa is approved and you arrive in Spain. The NIE is printed on your TIE card. Some people confuse the NIE with the visa application, but they are separate processes that happen in sequence. You cannot request a NIE before your visa is approved.</p>
+
+      <h3>Document Timeline: Plan for 4–8 Weeks</h3>
+      <p>The biggest bottleneck in most NLV applications is obtaining and verifying documents. Here's why you should plan ahead:</p>
+      <ul>
+        <li><strong>Criminal record certificates</strong> (ACRO certificate in the UK, FBI background check in the USA) can take 2–5 weeks, sometimes longer if you've had multiple addresses. Order these first.</li>
+        <li><strong>Medical certificates</strong> from your GP or private clinic typically take 1–2 weeks to arrange and schedule.</li>
+        <li><strong>Apostilles</strong> (official authentication certificates for your documents) must be obtained from the issuing authority in your country. This can take 1–3 weeks depending on the agency.</li>
+        <li><strong>Sworn translations</strong> into Spanish must be done by certified translators. Even if you speak Spanish fluently, you cannot self-translate official documents. Budget 1–2 weeks for professional translation.</li>
+      </ul>
+      <p>The timeline overlaps — you can be obtaining criminal records while waiting for medical certificates — but don't wait to start. Begin document collection as soon as you decide to apply.</p>
+
+      <h3>Apostille and Translation Requirements</h3>
+      <p>Many applicants misunderstand apostilles and translations. An apostille is not a translation; it is a certificate of authenticity issued by your country's government confirming that a document is genuine. Every official document in your NLV application must be apostilled by the issuing authority or notarised in your home country.</p>
+      <p>Once apostilled, documents must be translated into Spanish by a certified, sworn translator (traductor jurado). The translator will stamp and sign the translation to certify it. Non-certified translations are not accepted by Spanish consulates. This is an expense to budget for — typically €20–50 per document depending on length.</p>
+      <p><strong>Note:</strong> Some documents (like passport copies or bank statements) may not require apostilles depending on your consulate. Always check with your specific consulate's checklist before paying for unnecessary apostilles.</p>
+
+      <h3>Financial Documentation Preparation</h3>
+      <p>The NLV requires proof of passive income — typically €28,800 per year for a single applicant (as of 2026), with more required for dependants. The consulate will examine 6–12 months of bank statements. Prepare now by:</p>
+      <ul>
+        <li>Requesting certified bank statements from your bank covering the full requested period</li>
+        <li>Preparing pension letters or annuity statements from all income sources</li>
+        <li>Organizing investment account statements if your income comes from dividends or interest</li>
+        <li>Gathering any rental income documentation if applicable</li>
+      </ul>
+      <p>Ensure your account names match your passport exactly. If you have changed your name, have a marriage certificate or deed poll to prove the name change.</p>
+
+      <h3>Health Insurance: Plan Early</h3>
+      <p>You must have Spanish health insurance or approved private international health insurance with Spanish coverage before or at the time you apply. "Approved" means it covers standard healthcare in Spain and meets Spanish requirements. Many standard travel or expat insurance policies are rejected by consulates.</p>
+      <p>Begin researching and securing health insurance 2–3 weeks before your consulate appointment. Some policies have waiting periods before coverage starts, so don't wait until the last minute.</p>
+
+      <h3>Address Proof and Accommodation Planning</h3>
+      <p>You must provide proof of where you will live in Spain — typically a tenancy agreement, property deed, or a letter from a Spanish resident confirming they will host you. This doesn't need to be finalized immediately, but you should have a plan. Many applicants book Airbnb stays or arrange temporary accommodation through family friends in Spain to satisfy this requirement initially.</p>
+    </div>
+  </section>
+
+  <!-- ── Consulate-Specific Differences ────────────────────── -->
+  <section class="msv__section--cream">
+    <div class="msv__container--narrow">
+      <div class="msv__section-hd">
+        <h2>Consulate-Specific Differences: What Varies by Location</h2>
+        <p>While the NLV process is standardized across all Spanish consulates, some specific requirements and processes vary by location. Here's an overview of key differences.</p>
+      </div>
+
+      <h3>UK Consulates (London & Manchester via BLS)</h3>
+      <p>UK citizens apply through the Spanish Consulate General in London or, if in the north, through BLS Manchester. Both use BLS International for appointment scheduling. Waiting times for appointments can be 4–12 weeks depending on season. Document requirements are clearly detailed on the consulate website, and they accept applications in English with certified Spanish translations. Criminal record certificates (ACRO) must be from the UK Home Office.</p>
+
+      <h3>US Consulates</h3>
+      <p>The USA has Spanish consulates in New York, Los Angeles, Miami, Houston, Chicago, San Francisco, Boston, and Washington DC. Each consulate maintains its own appointment system and document checklist. New York typically has longer waiting times (8–16 weeks) than smaller consulates like Houston or Boston. FBI background checks are required and typically take 3–4 weeks. Some US consulates accept electronic signatures on certain documents; others require originals.</p>
+
+      <h3>Canadian and Australian Consulates</h3>
+      <p>Canada has consulates in Montreal, Vancouver, and Toronto. Australia's applicants typically apply through the Spanish Consulate in Sydney. Both countries' consulates follow similar processes to the UK and USA but with slightly different document requirements and processing speeds. Processing typically takes 8–12 weeks after submission.</p>
+
+      <h3>EU/EEA Consulates</h3>
+      <p>Most EU and EEA countries have Spanish consulates in capital cities and major population centers. Non-EU/EEA nationals applying through these consulates may face different requirements — some consulates require additional background checks or employment history verification beyond standard criminal records.</p>
+
+      <h3>Key Differences to Research Before Applying</h3>
+      <ul>
+        <li><strong>Appointment systems:</strong> Some use online booking; others use third-party services (BLS, VFS).</li>
+        <li><strong>Processing times:</strong> Major consulates are often busier; timelines range from 6–16 weeks.</li>
+        <li><strong>Document acceptance:</strong> Some accept scans + apostille; others require originals.</li>
+        <li><strong>Language requirements:</strong> Some require all documents in Spanish; others accept English + certified translations.</li>
+        <li><strong>Biometric appointments:</strong> A few consulates require a separate biometric collection appointment before final submission.</li>
+      </ul>
+      <p>Always check your specific consulate's official website and requirements before beginning your application. Requirements change, and consulate websites are the authoritative source.</p>
+    </div>
+  </section>
+
+  <!-- ── What Happens After Submission ─────────────────────── -->
+  <section class="msv__section">
+    <div class="msv__container--narrow">
+      <div class="msv__section-hd">
+        <h2>What Happens After Submission: The Waiting Period</h2>
+        <p>After you submit your application at the consulate, you enter a waiting period where the consulate forwards your file to Spanish immigration authorities for assessment. Here's what you should expect during this time.</p>
+      </div>
+
+      <h3>Processing Timelines: 6–12 Weeks (Typically)</h3>
+      <p>From the date you submit your application, the consulate will forward it to the relevant Spanish immigration office (typically the provincial delegation of the National Police or the Regional Immigration Office). Processing takes 6–12 weeks on average, though it can be faster (4 weeks) or slower (14+ weeks) depending on:</p>
+      <ul>
+        <li>The consulate's workload at that time</li>
+        <li>The completeness of your application (missing documents cause delays)</li>
+        <li>Any requests for additional information or clarification</li>
+        <li>Background check results from your home country</li>
+      </ul>
+
+      <h3>What Happens to Your Application During Processing</h3>
+      <p>Your application undergoes several checks:</p>
+      <ul>
+        <li><strong>Administrative review:</strong> Consulate staff verify all documents are present and meet formatting requirements.</li>
+        <li><strong>Financial verification:</strong> Spanish immigration authorities may verify your bank statements and income sources, sometimes contacting your financial institutions.</li>
+        <li><strong>Criminal record check:</strong> Your background check is cross-referenced with Spanish and international databases.</li>
+        <li><strong>Medical assessment:</strong> Your medical certificate is reviewed to ensure you have no communicable diseases or health issues that would bar entry.</li>
+        <li><strong>Accommodation verification:</strong> Your proof of accommodation may be verified.</li>
+      </ul>
+
+      <h3>Communication During Processing</h3>
+      <p>In most cases, you will not hear anything during the waiting period unless the consulate needs additional information. If they request more documents or clarification, they will contact you by email or phone. Respond quickly to any requests — delays in your response can extend the overall timeline.</p>
+      <p>Some consulates provide a tracking system or reference number that allows you to check your application status online. Others do not — you may need to contact the consulate directly to ask for updates.</p>
+
+      <h3>What Causes Processing Delays</h3>
+      <p>Common reasons for delays include:</p>
+      <ul>
+        <li>Missing documents or improperly formatted submissions</li>
+        <li>Requests for additional financial documentation (consulates sometimes want more months of statements)</li>
+        <li>Delays from your home country in verifying criminal records</li>
+        <li>High application volumes during peak seasons (summer, autumn)</li>
+        <li>Mistakes on your application forms that require correction</li>
+        <li>Incomplete apostilles or poor-quality translations</li>
+      </ul>
+      <p>This is why pre-submission review by a specialist (or careful self-review) is important — catching errors before submission prevents delays.</p>
+
+      <h3>When to Follow Up</h3>
+      <p>If you haven't heard anything after 10 weeks, send a polite email to the consulate with your application reference number asking for a status update. Consulates are busy, and a gentle reminder can sometimes accelerate a review. Do not be alarmed if you don't hear anything — silence typically means your application is progressing normally.</p>
+    </div>
+  </section>
+
+  <!-- ── What Happens After Approval ──────────────────────── -->
+  <section class="msv__section--dark">
+    <div class="msv__container--narrow">
+      <div class="msv__section-hd">
+        <h2>What Happens After Approval: The 90-Day Window</h2>
+        <p>Your visa has been approved. The consulate will notify you to collect your passport with your NLV visa sticker. What happens next, and what you need to do before and after you arrive in Spain.</p>
+      </div>
+
+      <h3>Your Visa is a Sticker, Not a Card</h3>
+      <p>When you collect your passport, you'll find your NLV visa as a physical sticker (vignette) inside your passport. This sticker is your entry visa. It is valid for 90 days from the date of issue. Within this 90-day window, you must travel to Spain and make your first entry on this visa.</p>
+
+      <h3>The 90-Day Entry Window: Plan Your Move</h3>
+      <p>Once you receive your visa, you have exactly 90 days to enter Spain. After 90 days, the visa expires and is no longer valid for entry. If you miss the window, you would need to reapply, which is a costly and time-consuming process.</p>
+      <p>Plan your move carefully: you need to book flights, arrange accommodation, coordinate any logistics, and have enough time to complete your post-arrival registrations (TIE card application, padrón registration) within 30 days of arrival.</p>
+
+      <h3>Collecting Your Passport from the Consulate</h3>
+      <p>The consulate will typically send you an email or letter confirming your visa is ready for collection. You must collect it in person from the consulate with valid ID (usually your passport itself, even though your visa is in it). Some consulates allow collection by a designated family member or trusted person with a power of attorney, but confirm this with your consulate.</p>
+      <p>Do not delay collecting your passport — the sooner you have it, the sooner you can plan and book your travel.</p>
+
+      <h3>Before You Travel to Spain</h3>
+      <p>Before your flight, ensure you have:</p>
+      <ul>
+        <li>Your passport with the NLV visa sticker in good condition</li>
+        <li>Booked accommodation or arranged with a host where you will live</li>
+        <li>Travel insurance and health insurance that covers your first days in Spain</li>
+        <li>Any prescriptions or essential medications</li>
+        <li>Copies of key documents (birth certificate, marriage certificate if applicable) — the originals stay in your home country</li>
+      </ul>
+
+      <h3>Arriving in Spain on Your NLV</h3>
+      <p>When you arrive at Spanish border control (typically at an airport), you will show:</p>
+      <ul>
+        <li>Your passport with the NLV visa</li>
+        <li>A valid return ticket or onward travel plan (though this is rarely checked for NLV holders)</li>
+        <li>Proof of accommodation</li>
+      </ul>
+      <p>The immigration officer will stamp your passport, recording your entry date. Keep this stamp safe — you will need to reference your exact entry date when applying for your TIE card within 30 days.</p>
+
+      <h3>The First 30 Days: Critical Registrations</h3>
+      <p>You have 30 days from your entry date to apply for your TIE card (Tarjeta de Identidad de Extranjero) at your local Extranjería office or police station. This is a legal requirement. Failing to apply within 30 days can result in fines and complications with your residency status.</p>
+      <p>You should also register on the <strong>padrón</strong> (municipal register) at your local town hall (ayuntamiento) as soon as you arrive. This confirms your address in Spain and is required for many subsequent registrations (healthcare enrollment, bank accounts, tax registration, etc.).</p>
+      <p>See our <a href="/guide/tie-card-spain/" style="color: var(--yellow); font-weight: 700;">TIE card guide</a> and <a href="/guide/empadronamiento-spain/" style="color: var(--yellow); font-weight: 700;">padrón registration guide</a> for step-by-step instructions.</p>
+
+      <h3>After You Have Your TIE Card</h3>
+      <p>Once you have your TIE card (usually 1–2 weeks after application, though timelines vary), you are legally established as a resident of Spain. Your TIE number becomes your identification for all Spanish administrative purposes. You can now open a Spanish bank account, register for healthcare, register for taxes (if applicable), and obtain a Spanish tax identification number (NIF).</p>
+    </div>
+  </section>
+
+  <!-- ── Common Application Mistakes ───────────────────────── -->
+  <section class="msv__section--cream">
+    <div class="msv__container--narrow">
+      <div class="msv__section-hd">
+        <h2>Common Application Mistakes (and How to Avoid Them)</h2>
+        <p>We've reviewed hundreds of NLV applications. Here are the most common errors we see — and how to avoid them.</p>
+      </div>
+
+      <h3>Mistake #1: Incomplete or Missing Documents</h3>
+      <p>The most common reason for rejection or delays is missing documents. Applicants miss requirements listed in the consulate checklist, assume documents from one consulate apply to another, or forget that dependant family members need their own separate documentation packages. Always download your specific consulate's official checklist and check off every item before your appointment.</p>
+
+      <h3>Mistake #2: Poor Quality or Improperly Formatted Translations</h3>
+      <p>Non-certified translations are rejected immediately. Some applicants attempt to translate documents themselves or use online translation tools. Consulates require certified sworn translations (traducciones juradas) by official translators. Budget time and money for professional translation — do not cut corners here.</p>
+
+      <h3>Mistake #3: Wrong Type of Health Insurance</h3>
+      <p>Standard travel insurance, expat insurance, or policies that exclude Spain are rejected. Your health insurance must explicitly cover healthcare in Spain and meet Spanish requirements for coverage type and minimum amounts. Research your insurance before applying, and request a certificate from your insurer confirming it meets Spanish visa requirements.</p>
+
+      <h3>Mistake #4: Banking Irregularities or Unexplained Large Transfers</h3>
+      <p>Consulates scrutinize your bank statements for unusual activity. If you have large one-time transfers into your account, be ready to explain them. Deposits that look like loans (which you then repay) are viewed with suspicion — the income must appear stable and regular. Clean up your finances before applying, and document where significant funds come from.</p>
+
+      <h3>Mistake #5: Using Outdated Consulate Requirements</h3>
+      <p>NLV requirements and consulate procedures change periodically. Using an old blog post, guidebook, or outdated information from a friend's application can lead you to prepare the wrong documents or miss new requirements. Always verify requirements directly from your consulate's official website 2–3 weeks before your appointment.</p>
+
+      <h3>Mistake #6: Booking Your Consulate Appointment Too Late</h3>
+      <p>Major consulates (London, New York) can have waiting times of 8–16 weeks. If you wait until your documents are perfect to book an appointment, you've added months to your timeline. Book your appointment early — even before your documents are ready — knowing you can reschedule if needed. An appointment date in the future gives you a concrete deadline to work toward.</p>
+
+      <h3>Mistake #7: Not Planning for Document Validity Dates</h3>
+      <p>If your criminal record certificate expires between when you apply and when the consulate reviews your application, it becomes invalid and must be re-obtained. Plan your document timeline so everything is current at the time of your appointment, not the time you start preparing. This sometimes means delaying the order of certain documents so they don't expire before use.</p>
+
+      <p style="font-size: 0.85rem;"><a href="/non-lucrative-visa-mistakes/" style="color: var(--red); font-weight: 700;">Read the full guide to NLV application mistakes →</a></p>
+    </div>
+  </section>
+
+  <!-- ── FAQs ───────────────────────────────────────────────── -->
+  <section class="msv__section--cream">
+    <div class="msv__container--narrow">
+      <div class="msv__section-hd">
+        <h2>Frequently Asked Questions</h2>
+      </div>
+      <div class="msv__faq-list">
+        <details>
+          <summary>Where do I apply for the Non-Lucrative Visa?</summary>
+          <div class="msv__faq-answer">
+            <p>At the Spanish consulate with jurisdiction over your place of residence. For UK residents this is typically London or Manchester (BLS). For US residents, the relevant consulate depends on your state — New York, Los Angeles, Miami, Houston, Chicago, and others.</p>
+          </div>
+        </details>
+        <details>
+          <summary>Can I apply for the NLV from inside Spain?</summary>
+          <div class="msv__faq-answer">
+            <p>No. The NLV must be applied for from outside Spain. You cannot convert a tourist visa or Schengen entry into an NLV while already in Spain.</p>
+          </div>
+        </details>
+        <details>
+          <summary>How long does the NLV application process take from start to finish?</summary>
+          <div class="msv__faq-answer">
+            <p>Typically 3 to 6 months total. Document preparation takes 4–8 weeks, and consulate processing takes 6–12 weeks after submission. The total timeline depends on your consulate and how quickly you can gather documents.</p>
+          </div>
+        </details>
+        <details>
+          <summary>What happens after my NLV is approved?</summary>
+          <div class="msv__faq-answer">
+            <p>You receive a visa sticker in your passport. Enter Spain within the validity window (usually 90 days), then apply for your TIE card within 30 days of arrival and register on the padrón at your local town hall.</p>
+          </div>
+        </details>
+        <details>
+          <summary>Do I need a consulate appointment for the NLV?</summary>
+          <div class="msv__faq-answer">
+            <p>Yes. Most consulates require an in-person appointment booked in advance. Availability varies — London and New York can have waiting times of several weeks. Book early and plan your document timeline around the appointment date.</p>
+          </div>
+        </details>
+        <details>
+          <summary>What if one of my documents expires during the application process?</summary>
+          <div class="msv__faq-answer">
+            <p>This is a common problem, particularly with criminal record certificates and medical certificates. Time your document ordering carefully so everything is current at your consulate appointment and remains current during the processing period. If a document expires before the consulate reviews it, you may need to obtain a replacement. Plan with a buffer — if your criminal record is valid for 6 months, order it early enough that it won't expire before processing completes.</p>
+          </div>
+        </details>
+        <details>
+          <summary>Can someone apply for the NLV on my behalf or represent me at the appointment?</summary>
+          <div class="msv__faq-answer">
+            <p>You must attend your consulate appointment in person with your original passport and signed application forms. Some consulates may allow a spouse or authorized representative to collect your approval documents after the visa is granted, but the application submission appointment itself is in-person only. No proxy applications are allowed.</p>
+          </div>
+        </details>
+        <details>
+          <summary>What language should my documents be in, and do they all need to be translated?</summary>
+          <div class="msv__faq-answer">
+            <p>Official documents must be in Spanish or have certified Spanish translations. This includes your birth certificate, marriage certificate (if applicable), criminal record, medical certificate, and financial documents. Your passport does not need translation. Some financial institutions can provide statements in English or Spanish — request Spanish versions directly when possible to reduce translation costs. Consulate requirements vary slightly, so check your specific consulate's website to confirm which documents require translation.</p>
+          </div>
+        </details>
+        <details>
+          <summary>How long before my planned move date should I start the NLV process?</summary>
+          <div class="msv__faq-answer">
+            <p>Start at least 3-4 months before your target departure. This allows time for document gathering (criminal records alone take 4-8 weeks), apostilling, translating, health insurance setup, and the consulate appointment plus processing. For complex family applications or slower consulates, allow 5-6 months.</p>
+          </div>
+        </details>
+        <details>
+          <summary>Can I start the NLV application online, or does everything require in-person appointments?</summary>
+          <div class="msv__faq-answer">
+            <p>Document preparation can largely be done remotely. The consulate visa appointment itself requires your physical presence. After arriving in Spain, the TIE card application also requires in-person attendance at the Policía Nacional.</p>
+          </div>
+        </details>
+        <details>
+          <summary>Is there a Spanish language requirement for the NLV?</summary>
+          <div class="msv__faq-answer">
+            <p>There is no Spanish language test or requirement for the Non-Lucrative Visa. Language requirements only arise if you later apply for Spanish citizenship (DELE A2 exam required for naturalisation).</p>
+          </div>
+        </details>
+        <details>
+          <summary>What if my consulate appointment is cancelled or rescheduled?</summary>
+          <div class="msv__faq-answer">
+            <p>Consulate appointments can occasionally be rescheduled. Most documents have sufficient validity that a 2-4 week reschedule doesn't require restarting, but check validity periods of medical certificates (3 months) and padrón certificates (3 months) if already obtained.</p>
+          </div>
+        </details>
+        <details>
+          <summary>Can I be at my Spanish property during NLV processing?</summary>
+          <div class="msv__faq-answer">
+            <p>As a tourist within the 90/180 Schengen rule, you can be in Spain during processing. You cannot start formal residence until the NLV is issued. Many applicants visit Spain to find accommodation and set up practical matters while waiting.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Related guides ──────────────────────────────────────── -->
+  <section class="msv__section">
+    <div class="msv__container--narrow">
+      <div class="msv__section-hd">
+        <h2>Related NLV Guides</h2>
+      </div>
+      <div class="msv__related">
+        <a href="/non-lucrative-visa-documents/" class="msv__related-card">
+          <span class="msv__related-icon">📄</span>
+          <span class="msv__related-title">Document Checklist</span>
+          <span class="msv__related-desc">Every document, apostille, and translation you need — explained clearly.</span>
+        </a>
+        <a href="/non-lucrative-visa-timeline/" class="msv__related-card">
+          <span class="msv__related-icon">⏱️</span>
+          <span class="msv__related-title">Processing Times</span>
+          <span class="msv__related-desc">Current timelines by consulate — what to expect and when.</span>
+        </a>
+        <a href="/non-lucrative-visa-cost/" class="msv__related-card">
+          <span class="msv__related-icon">💸</span>
+          <span class="msv__related-title">Cost & Fees</span>
+          <span class="msv__related-desc">Everything you will pay — consulate fees, translations, insurance, and service.</span>
+        </a>
+        <a href="/guide/tie-card-spain/" class="msv__related-card">
+          <span class="msv__related-icon">🪪</span>
+          <span class="msv__related-title">TIE Card Spain</span>
+          <span class="msv__related-desc">How to apply for your residence card within 30 days of arriving in Spain.</span>
+        </a>
+      </div>
+      <div class="msv__related" style="margin-top: 1.2rem;">
+        <a href="/non-lucrative-visa-renewal/" class="msv__related-card">
+          <span class="msv__related-icon">🔄</span>
+          <span class="msv__related-title">NLV Renewal</span>
+          <span class="msv__related-desc">After year one — how renewal works, what changes, and when to apply.</span>
+        </a>
+        <a href="/non-lucrative-visa-tax-spain/" class="msv__related-card">
+          <span class="msv__related-icon">🧾</span>
+          <span class="msv__related-title">NLV Tax Guide</span>
+          <span class="msv__related-desc">Tax obligations start once you arrive — understand them before you move.</span>
+        </a>
+        <a href="/non-lucrative-visa-requirements/" class="msv__related-card">
+          <span class="msv__related-icon">📋</span>
+          <span class="msv__related-title">NLV Requirements</span>
+          <span class="msv__related-desc">Full eligibility criteria — make sure you qualify before you begin.</span>
+        </a>
+        <a href="/non-lucrative-visa-faq/" class="msv__related-card">
+          <span class="msv__related-icon">❓</span>
+          <span class="msv__related-title">NLV FAQ Hub</span>
+          <span class="msv__related-desc">50+ questions answered about the non lucrative visa Spain.</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CTA band ────────────────────────────────────────────── -->
+  
+  <!-- ── Insurance Partners ──────────────────────────── -->
+  <section class="msv__section--cream" style="padding: 2.5rem 0;">
+    <div class="msv__container--narrow">
+      <div style="background:#fff;border:2px solid var(--border);border-radius:12px;padding:1.75rem 2rem;">
+        <p style="font-weight:700;color:var(--navy);margin:0 0 0.5rem;font-size:0.95rem;">Recommended insurance specialists</p>
+        <p style="color:var(--muted);font-size:0.9rem;margin:0;line-height:1.75;">
+          <a href="https://www.spanish-healthinsurance.com/myspanishvisa" target="_blank" rel="noopener" style="color:var(--red);font-weight:700;">Spanish Health Insurance</a> — visa-compliant private health insurance for English-speaking foreigners in Spain.<br>
+          <a href="https://www.247expatinsurance.com/myspanishvisa" target="_blank" rel="noopener" style="color:var(--red);font-weight:700;">247 Expat Insurance</a> — health and all types of expat insurance in Spain, tailored for international residents.
+        </p>
+      </div>
+    </div>
+  </section>
+  <section class="msv__cta-band">
+    <div class="msv__container">
+      <h2>Ready to Start Your NLV Application?</h2>
+      <p>Take our free eligibility check — then let our specialists handle the documents, translations, and consulate preparation while you focus on planning your move.</p>
+      <div class="msv__btn-group">
+        <a href="https://dashboard.platinumlegalspain.com/nlv" class="msv__btn msv__btn--primary">Start Free Eligibility Check →</a>
+        <a href="https://dashboard.platinumlegalspain.com/nlv" class="msv__btn msv__btn--outline-white">Book a Consultation</a>
+      </div>
+    </div>
+  </section>
+</div>
+<!-- end .msv -->
+<!-- FRAGMENT_END -->
+</main>
+
+
+<!-- ═══════════════════════════════════════════════════
+     SITE FOOTER
+     ═══════════════════════════════════════════════════ -->
+<footer class="msv-footer" role="contentinfo">
+
+  <div class="msv-footer__top">
+
+    <!-- Brand column -->
+    <div class="msv-footer__brand">
+      <a href="/" class="msv-footer__logo" aria-label="My Spanish Visa"><img src="/assets/images/msv-logo-white.png" alt="My Spanish Visa" height="40" style="display:block;"></a>
+      <p class="msv-footer__tagline">
+        Specialist Spain visa &amp; residency guidance for English-speaking foreigners.
+        A service of Platinum Legal Spain.
+      </p>
+      <div class="msv-footer__trust">
+        <span class="msv-footer__trust-item">All English. No barriers.</span>
+        <span class="msv-footer__trust-item">Solicitors &amp; immigration specialists</span>
+        <span class="msv-footer__trust-item">100% online process</span>
+      </div>
+    </div>
+
+    <!-- Visas column -->
+    <div>
+      <div class="msv-footer__col-title">Visas</div>
+      <ul class="msv-footer__links">
+        <li><a href="/non-lucrative-visa-spain/">Non-Lucrative Visa</a></li>
+        <li><a href="/digital-nomad-visa-spain/">Digital Nomad Visa</a></li>
+        <li><a href="/student-visa-spain/">Student Visa</a></li>
+        <li><a href="/spain-visa-renewal/">Visa Renewals</a></li>
+        <li><a href="/best-visa-move-to-spain/">Compare All Visas</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/nlv">Apply: NLV</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/dnv">Apply: DNV</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/student-visa">Apply: Student Visa</a></li>
+      </ul>
+    </div>
+
+    <!-- Resources column -->
+    <div>
+      <div class="msv-footer__col-title">Resources</div>
+      <ul class="msv-footer__links">
+        <li><a href="/blog/">Blog &amp; Guides</a></li>
+        <li><a href="/move-to-spain/">Move to Spain Guide</a></li>
+        <li><a href="/visa-eligibility-quiz/">Eligibility Quiz</a></li>
+        <li><a href="/spain-visa-checklist/">Document Checklists</a></li>
+        <li><a href="/spain-visa-requirements/">Visa Requirements</a></li>
+        <li><a href="/spain-nie-number/">NIE Number Guide</a></li>
+        <li><a href="/spain-tie-card/">TIE Card Guide</a></li>
+      </ul>
+    </div>
+
+    <!-- Company column -->
+    <div>
+      <div class="msv-footer__col-title">Company</div>
+      <ul class="msv-footer__links">
+        <li><a href="/about-us/">About Us</a></li>
+        <li><a href="/testimonials/">Client Reviews</a></li>
+        <li><a href="/why-choose-us/">Why Choose Us</a></li>
+        <li><a href="/contact-us.html">Contact</a></li>
+        <li><a href="https://www.platinumlegalspain.com" rel="noopener">Platinum Legal Spain</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/nlv">Client Portal</a></li>
+      </ul>
+    </div>
+
+  </div><!-- /.msv-footer__top -->
+
+  <div class="msv-footer__bottom">
+    <div class="msv-footer__bottom-inner">
+      <p class="msv-footer__disclaimer">
+        <strong style="color:rgba(255,255,255,0.5);">Disclaimer:</strong>
+        My Spanish Visa provides visa processing support and is not a law firm. Content on this site is for informational purposes only and does not constitute legal advice. Immigration rules change frequently — always verify requirements with official sources or a qualified specialist. My Spanish Visa is a trading name of Platinum Legal Spain.
+      </p>
+      <span class="msv-footer__copyright">© 2026 My Spanish Visa. All rights reserved.</span>
+    </div>
+  </div>
+
+</footer>
+
+</body>
+</html>

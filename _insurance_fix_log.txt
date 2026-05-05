@@ -1,0 +1,270 @@
+MSV Insurance Fix Log
+  Deleted: 3 file(s)
+  Modified: 67 file(s)
+  Total replacements: 359
+======================================================================
+REDIRECTED: blog-axa-spain-health-insurance-visa.html
+REDIRECTED: blog-cigna-allianz-health-insurance-spain.html
+REDIRECTED: blog-sanitas-health-insurance-spain-review.html
+
+FILE: best-health-insurance-nlv-spain.html  [41 change(s)]
+  broker-card-tag (dark) fixed: 1
+  broker-card-light-tag fixed: 1
+  broker card description (Sanitas ref) fixed: 1
+  brand lists replaced: 11
+  solo brand mentions replaced: 27
+
+FILE: blog-best-health-insurance-digital-nomad-visa.html  [11 change(s)]
+  brand lists replaced: 2
+  solo brand mentions replaced: 9
+
+FILE: blog-best-private-health-insurance-spain-expats-2026.html  [16 change(s)]
+  solo brand mentions replaced: 16
+
+FILE: blog-category-health-insurance.html  [7 change(s)]
+  brand lists replaced: 5
+  solo brand mentions replaced: 2
+
+FILE: blog-driving-in-spain-expat-guide.html  [3 change(s)]
+  brand lists replaced: 1
+  solo brand mentions replaced: 2
+
+FILE: blog-family-health-insurance-spain.html  [3 change(s)]
+  brand lists replaced: 1
+  solo brand mentions replaced: 1
+  partner referral block injected
+
+FILE: blog-first-30-days-spain-post-arrival-checklist.html  [2 change(s)]
+  brand lists replaced: 1
+  solo brand mentions replaced: 1
+
+FILE: blog-health-insurance-spain-cost-guide.html  [6 change(s)]
+  brand lists replaced: 2
+  solo brand mentions replaced: 3
+  partner referral block injected
+
+FILE: blog-health-insurance-spain-for-retirees.html  [4 change(s)]
+  brand lists replaced: 2
+  solo brand mentions replaced: 1
+  partner referral block injected
+
+FILE: blog-health-insurance-spain-pre-existing-conditions.html  [5 change(s)]
+  solo brand mentions replaced: 4
+  partner referral block injected
+
+FILE: blog-healthcare-spain-expats-guide.html  [2 change(s)]
+  brand lists replaced: 1
+  solo brand mentions replaced: 1
+
+FILE: blog-nlv-health-insurance-requirements.html  [11 change(s)]
+  brand lists replaced: 5
+  solo brand mentions replaced: 6
+
+FILE: blog-no-copay-health-insurance-spain-visa.html  [3 change(s)]
+  solo brand mentions replaced: 3
+
+FILE: blog-non-lucrative-visa-spain-health-insurance-requirements.html  [2 change(s)]
+  brand lists replaced: 2
+
+FILE: blog-private-health-insurance-spain-expat.html  [7 change(s)]
+  insurer comparison section replaced: 1
+  solo brand mentions replaced: 6
+
+FILE: blog-student-visa-spain-health-insurance.html  [1 change(s)]
+  brand lists replaced: 1
+
+FILE: blog-visa-compliant-health-insurance-spain.html  [1 change(s)]
+  brand lists replaced: 1
+
+FILE: dnv-canada.html  [7 change(s)]
+  brand lists replaced: 2
+  solo brand mentions replaced: 5
+
+FILE: dnv-checklist-printable.html  [1 change(s)]
+  brand lists replaced: 1
+
+FILE: dnv-checklist.html  [7 change(s)]
+  brand lists replaced: 3
+  solo brand mentions replaced: 4
+
+FILE: dnv-chicago.html  [7 change(s)]
+  brand lists replaced: 2
+  solo brand mentions replaced: 5
+
+FILE: dnv-documents.html  [5 change(s)]
+  brand lists replaced: 1
+  solo brand mentions replaced: 4
+
+FILE: dnv-faq.html  [5 change(s)]
+  brand lists replaced: 2
+  solo brand mentions replaced: 3
+
+FILE: dnv-health-insurance.html  [11 change(s)]
+  brand lists replaced: 3
+  solo brand mentions replaced: 8
+
+FILE: dnv-los-angeles.html  [5 change(s)]
+  brand lists replaced: 1
+  solo brand mentions replaced: 4
+
+FILE: dnv-manchester.html  [7 change(s)]
+  brand lists replaced: 2
+  solo brand mentions replaced: 5
+
+FILE: dnv-miami.html  [13 change(s)]
+  brand lists replaced: 2
+  solo brand mentions replaced: 11
+
+FILE: dnv-mistakes.html  [9 change(s)]
+  brand lists replaced: 2
+  solo brand mentions replaced: 7
+
+FILE: dnv-requirements.html  [1 change(s)]
+  brand lists replaced: 1
+
+FILE: dnv-uk.html  [11 change(s)]
+  brand lists replaced: 2
+  solo brand mentions replaced: 9
+
+FILE: dnv-usa.html  [9 change(s)]
+  brand lists replaced: 1
+  solo brand mentions replaced: 8
+
+FILE: faq.html  [1 change(s)]
+  brand lists replaced: 1
+
+FILE: guide-buying-a-car-in-spain.html  [6 change(s)]
+  brand lists replaced: 1
+  solo brand mentions replaced: 5
+
+FILE: guide-healthcare-spain.html  [15 change(s)]
+  brand lists replaced: 3
+  solo brand mentions replaced: 11
+  partner referral block injected
+
+FILE: living-in-spain-as-a-foreigner.html  [1 change(s)]
+  brand lists replaced: 1
+
+FILE: living-in-spain-on-nlv.html  [1 change(s)]
+  brand lists replaced: 1
+
+FILE: moving-to-spain-from-uk.html  [2 change(s)]
+  brand lists replaced: 1
+  solo brand mentions replaced: 1
+
+FILE: moving-to-spain-from-usa.html  [1 change(s)]
+  brand lists replaced: 1
+
+FILE: nlv-americans.html  [5 change(s)]
+  solo brand mentions replaced: 5
+
+FILE: nlv-australia.html  [11 change(s)]
+  brand lists replaced: 2
+  solo brand mentions replaced: 9
+
+FILE: nlv-canada.html  [3 change(s)]
+  brand lists replaced: 1
+  solo brand mentions replaced: 2
+
+FILE: nlv-children.html  [2 change(s)]
+  brand lists replaced: 1
+  solo brand mentions replaced: 1
+
+FILE: nlv-family.html  [5 change(s)]
+  brand lists replaced: 3
+  solo brand mentions replaced: 2
+
+FILE: nlv-health-insurance-mistakes.html  [2 change(s)]
+  broker-card-tag (dark) fixed: 1
+  broker card description (Sanitas ref) fixed: 1
+
+FILE: nlv-health-insurance.html  [4 change(s)]
+  broker-card-tag (dark) fixed: 1
+  broker-card-light-tag fixed: 1
+  broker card description (Sanitas ref) fixed: 1
+  brand lists replaced: 1
+
+FILE: nlv-mistakes.html  [2 change(s)]
+  brand lists replaced: 1
+  solo brand mentions replaced: 1
+
+FILE: nlv-pillar-page.html  [2 change(s)]
+  brand lists replaced: 1
+  solo brand mentions replaced: 1
+
+FILE: nlv-renewal-health-insurance.html  [7 change(s)]
+  broker-card-tag (dark) fixed: 1
+  broker-card-light-tag fixed: 1
+  broker card description (Sanitas ref) fixed: 1
+  brand lists replaced: 3
+  solo brand mentions replaced: 1
+
+FILE: nlv-renewal-requirements.html  [2 change(s)]
+  brand lists replaced: 2
+
+FILE: nlv-south-africa.html  [7 change(s)]
+  brand lists replaced: 1
+  solo brand mentions replaced: 6
+
+FILE: no-copay-health-insurance-nlv.html  [12 change(s)]
+  broker-card-tag (dark) fixed: 1
+  broker card description (Sanitas ref) fixed: 1
+  brand lists replaced: 1
+  solo brand mentions replaced: 9
+
+FILE: non-lucrative-visa-spain-chicago.html  [2 change(s)]
+  brand lists replaced: 1
+  solo brand mentions replaced: 1
+
+FILE: non-lucrative-visa-spain-los-angeles.html  [1 change(s)]
+  brand lists replaced: 1
+
+FILE: non-lucrative-visa-spain-miami.html  [2 change(s)]
+  brand lists replaced: 1
+  solo brand mentions replaced: 1
+
+FILE: non-lucrative-visa-spain-new-york.html  [2 change(s)]
+  brand lists replaced: 1
+  solo brand mentions replaced: 1
+
+FILE: retire-to-spain-from-australia.html  [2 change(s)]
+  brand lists replaced: 1
+  solo brand mentions replaced: 1
+
+FILE: retire-to-spain-from-canada.html  [3 change(s)]
+  brand lists replaced: 2
+  solo brand mentions replaced: 1
+
+FILE: retire-to-spain-from-uk.html  [14 change(s)]
+  brand lists replaced: 5
+  solo brand mentions replaced: 9
+
+FILE: retire-to-spain-from-usa.html  [1 change(s)]
+  brand lists replaced: 1
+
+FILE: spain-digital-nomad-visa-uk.html  [3 change(s)]
+  brand lists replaced: 3
+
+FILE: spain-digital-nomad-visa-us-citizens.html  [2 change(s)]
+  brand lists replaced: 2
+
+FILE: spain-non-lucrative-visa-uk.html  [1 change(s)]
+  brand lists replaced: 1
+
+FILE: student-visa-spain-cost.html  [3 change(s)]
+  broker card description (Sanitas ref) fixed: 1
+  brand lists replaced: 1
+  solo brand mentions replaced: 1
+
+FILE: student-visa-spain-family-dependants.html  [3 change(s)]
+  solo brand mentions replaced: 3
+
+FILE: student-visa-spain-health-insurance.html  [2 change(s)]
+  broker card description (Sanitas ref) fixed: 1
+  brand lists replaced: 1
+
+FILE: travel-during-nlv-renewal.html  [1 change(s)]
+  solo brand mentions replaced: 1
+
+FILE: travel-insurance-nlv-spain.html  [3 change(s)]
+  solo brand mentions replaced: 3

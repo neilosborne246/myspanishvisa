@@ -1,0 +1,1832 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- ═══════════════════════════════════════════════════════════════════
+       PAGE-SPECIFIC HEAD — replace block below per page:
+       <title>Student Visa Spain Documents | My Spanish Visa</title>
+       <meta name="description" content="…">
+       <meta property="og:title" content="…">
+       <meta property="og:description" content="…">
+       <meta property="og:url" content="https://www.myspanishvisa.com/…">
+       <meta property="og:image" content="…">
+       <link rel="canonical" href="https://www.myspanishvisa.com/…">
+       <script type="application/ld+json">…</script>
+       ═══════════════════════════════════════════════════════════════════ -->
+  <title>My Spanish Visa — Spain Visa &amp; Residency Specialists</title>
+  <meta name="description" content="My Spanish Visa helps English-speaking foreigners move to Spain. Expert guidance on Non-Lucrative Visa, Digital Nomad Visa, Student Visa, renewals and more.">
+
+  <!-- Shared Open Graph defaults -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="My Spanish Visa">
+  <meta property="og:image" content="https://www.myspanishvisa.com/assets/images/og/og-myspanishvisa-default.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@myspanishvisa">
+
+  <style>
+/* ═══════════════════════════════════════════════════════════════
+   GLOBAL SHELL — nav + footer only.
+   Page-specific CSS lives inside each fragment's own <style> block.
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── iOS overflow safety ── */
+html, body { max-width: 100%; overflow-x: clip; margin: 0; padding: 0; }
+*, *::before, *::after { box-sizing: border-box; }
+
+/* ── Brand tokens (root-level so all fragments inherit) ── */
+:root {
+  --navy:      #0c1930;
+  --navy-mid:  #1a3a5c;
+  --red:       #be0011;
+  --red-deep:  #8c000d;
+  --yellow:    #facf39;
+  --cream:     #f8f7f4;
+  --white:     #ffffff;
+  --black:     #1a1a1a;
+  --muted:     #5a6478;
+  --border:    #dce3ed;
+  --shadow-sm: 0 2px 8px rgba(12,25,48,0.08);
+  --shadow-md: 0 6px 24px rgba(12,25,48,0.13);
+}
+
+body {
+  font-family: 'Inter', 'Segoe UI', system-ui, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.75;
+  color: var(--black);
+  background: #fff;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   SITE NAV
+   ───────────────────────────────────────────────────────────── */
+.msv-nav {
+  position: sticky;
+  top: 0;
+  z-index: 9000;
+  background: var(--navy);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 2px 12px rgba(12,25,48,0.22);
+}
+.msv-nav__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+  gap: 1.5rem;
+}
+
+/* Logo */
+.msv-nav__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+.msv-nav__logo-flag {
+  font-size: 1.3rem;
+  line-height: 1;
+}
+.msv-nav__logo-text {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+.msv-nav__logo-text span {
+  color: var(--yellow);
+}
+
+/* Links */
+.msv-nav__links {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.msv-nav__links > li {
+  position: relative;
+}
+.msv-nav__links > li > a,
+.msv-nav__links > li > button {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.5rem 0.9rem;
+  font-size: 0.87rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.85);
+  text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: color 0.15s, background 0.15s;
+  white-space: nowrap;
+  height: 64px;
+}
+.msv-nav__links > li > a:hover,
+.msv-nav__links > li > button:hover,
+.msv-nav__links > li:focus-within > a,
+.msv-nav__links > li:focus-within > button {
+  color: #fff;
+  background: rgba(255,255,255,0.08);
+}
+.msv-nav__chevron {
+  font-size: 0.65rem;
+  opacity: 0.7;
+  transition: transform 0.2s;
+}
+.msv-nav__links > li:focus-within .msv-nav__chevron,
+.msv-nav__links > li:hover .msv-nav__chevron {
+  transform: rotate(180deg);
+}
+
+/* Dropdown */
+.msv-nav__dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 230px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  box-shadow: var(--shadow-md);
+  padding: 0.5rem 0;
+  z-index: 200;
+}
+.msv-nav__links > li:hover .msv-nav__dropdown,
+.msv-nav__links > li:focus-within .msv-nav__dropdown {
+  display: block;
+}
+.msv-nav__dropdown a {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.6rem 1.1rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--navy);
+  text-decoration: none;
+  transition: background 0.12s;
+}
+.msv-nav__dropdown a:hover {
+  background: var(--cream);
+  color: var(--red);
+}
+.msv-nav__dropdown-icon {
+  width: 24px;
+  height: 24px;
+  background: var(--cream);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+.msv-nav__dropdown-divider {
+  height: 1px;
+  background: var(--border);
+  margin: 0.4rem 0;
+}
+
+/* CTA button */
+.msv-nav__cta {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.55rem 1.2rem;
+  background: var(--red);
+  color: #fff !important;
+  font-size: 0.85rem;
+  font-weight: 700;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.15s, box-shadow 0.15s;
+  white-space: nowrap;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(190,0,17,0.3);
+}
+.msv-nav__cta:hover {
+  background: var(--red-deep);
+  box-shadow: 0 4px 14px rgba(190,0,17,0.4);
+  text-decoration: none;
+}
+
+/* Hamburger */
+.msv-nav__burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.4rem;
+  border-radius: 5px;
+}
+.msv-nav__burger span {
+  width: 22px;
+  height: 2px;
+  background: #fff;
+  border-radius: 2px;
+  transition: transform 0.2s, opacity 0.2s;
+  display: block;
+}
+
+/* Mobile nav */
+.msv-nav__mobile {
+  display: none;
+  flex-direction: column;
+  background: var(--navy-mid);
+  padding: 1rem 1.5rem 1.5rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+.msv-nav__mobile.open { display: flex; }
+.msv-nav__mobile a {
+  padding: 0.65rem 0;
+  color: rgba(255,255,255,0.9);
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+.msv-nav__mobile a:hover { color: var(--yellow); }
+.msv-nav__mobile .msv-nav__mobile-sub {
+  padding-left: 1rem;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: rgba(255,255,255,0.7);
+}
+.msv-nav__mobile-cta {
+  margin-top: 1rem;
+  background: var(--red);
+  color: #fff !important;
+  border-radius: 6px;
+  text-align: center;
+  padding: 0.75rem 1rem !important;
+  border-bottom: none !important;
+}
+
+@media (max-width: 900px) {
+  .msv-nav__links { display: none; }
+  .msv-nav__cta { display: none; }
+  .msv-nav__burger { display: flex; }
+}
+@media (max-width: 480px) {
+  .msv-nav__inner { padding: 0 1rem; }
+}
+
+/* ─────────────────────────────────────────────────────────────
+   SITE FOOTER
+   ───────────────────────────────────────────────────────────── */
+.msv-footer {
+  background: var(--navy);
+  color: rgba(255,255,255,0.75);
+  overflow-x: clip;
+}
+.msv-footer__top {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem 3rem;
+  display: grid;
+  grid-template-columns: 280px 1fr 1fr 1fr;
+  gap: 3rem;
+}
+@media (max-width: 900px) {
+  .msv-footer__top { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
+}
+@media (max-width: 560px) {
+  .msv-footer__top { grid-template-columns: 1fr; gap: 2rem; padding: 3rem 1.2rem 2rem; }
+}
+
+.msv-footer__brand {}
+.msv-footer__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  margin-bottom: 1rem;
+}
+.msv-footer__logo-flag { font-size: 1.3rem; }
+.msv-footer__logo-text {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -0.01em;
+}
+.msv-footer__logo-text span { color: var(--yellow); }
+.msv-footer__tagline {
+  font-size: 0.83rem;
+  color: rgba(255,255,255,0.55);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+.msv-footer__trust {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+.msv-footer__trust-item {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.65);
+}
+.msv-footer__trust-item::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  background: var(--yellow);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.msv-footer__col-title {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.4);
+  margin-bottom: 1rem;
+}
+.msv-footer__links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.msv-footer__links a {
+  font-size: 0.87rem;
+  color: rgba(255,255,255,0.68);
+  text-decoration: none;
+  transition: color 0.15s;
+  display: inline-block;
+}
+.msv-footer__links a:hover {
+  color: var(--yellow);
+  text-decoration: none;
+}
+
+.msv-footer__bottom {
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+.msv-footer__bottom-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 1rem;
+  justify-content: space-between;
+}
+.msv-footer__disclaimer {
+  font-size: 0.73rem;
+  color: rgba(255,255,255,0.35);
+  line-height: 1.65;
+  max-width: 720px;
+}
+.msv-footer__copyright {
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.35);
+  white-space: nowrap;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   MAIN CONTENT AREA
+   ───────────────────────────────────────────────────────────── */
+main {
+  /* Fragments are self-contained; this wrapper just provides flow context */
+  position: relative;
+}
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════
+     SITE NAVIGATION
+     ═══════════════════════════════════════════════════ -->
+<header class="msv-nav" role="banner">
+  <div class="msv-nav__inner">
+
+    <!-- Logo -->
+    <a href="/" class="msv-nav__logo" aria-label="My Spanish Visa — Home"><img src="/assets/images/msv-logo-white.png" alt="My Spanish Visa" height="80" style="display:block;"></a>
+
+    <!-- Desktop links -->
+    <nav aria-label="Main navigation">
+      <ul class="msv-nav__links">
+
+        <li>
+          <button class="msv-nav__dropdown-trigger" aria-haspopup="true" aria-expanded="false">
+            Visas <span class="msv-nav__chevron">▾</span>
+          </button>
+          <div class="msv-nav__dropdown" role="menu">
+            <a href="/non-lucrative-visa-spain/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🏖️</span>Non-Lucrative Visa
+            </a>
+            <a href="/digital-nomad-visa-spain/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">💻</span>Digital Nomad Visa
+            </a>
+            <a href="/student-visa-spain/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🎓</span>Student Visa
+            </a>
+            <div class="msv-nav__dropdown-divider"></div>
+            <a href="/spain-visa-renewal/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🔄</span>Visa Renewals
+            </a>
+            <a href="/best-visa-move-to-spain/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">⚖️</span>Compare All Visas
+            </a>
+          </div>
+        </li>
+
+        <li>
+          <button aria-haspopup="true" aria-expanded="false">
+            Resources <span class="msv-nav__chevron">▾</span>
+          </button>
+          <div class="msv-nav__dropdown" role="menu">
+            <a href="/blog/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">📝</span>Blog &amp; Guides
+            </a>
+            <a href="/spain-visa-checklist/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">✅</span>Document Checklists
+            </a>
+            <a href="/move-to-spain/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🏠</span>Move to Spain Guide
+            </a>
+            <a href="/visa-eligibility-quiz/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🧭</span>Eligibility Quiz
+            </a>
+          </div>
+        </li>
+
+        <li><a href="/about-us/">About Us</a></li>
+        <li><a href="/testimonials/">Reviews</a></li>
+        <li><a href="/contact-us.html">Contact</a></li>
+
+      </ul>
+    </nav>
+
+    <!-- Desktop CTA -->
+    <a href="https://dashboard.platinumlegalspain.com/student-visa" class="msv-nav__cta">
+      Start My Application →
+    </a>
+
+    <!-- Hamburger (mobile) -->
+    <button class="msv-nav__burger" aria-label="Open menu" aria-expanded="false" onclick="
+      var m=document.querySelector('.msv-nav__mobile');
+      var open=m.classList.toggle('open');
+      this.setAttribute('aria-expanded', open);
+    ">
+      <span></span><span></span><span></span>
+    </button>
+
+  </div><!-- /.msv-nav__inner -->
+
+  <!-- Mobile menu -->
+  <nav class="msv-nav__mobile" aria-label="Mobile navigation">
+    <a href="/non-lucrative-visa-spain/" class="msv-nav__mobile-sub">Non-Lucrative Visa</a>
+    <a href="/digital-nomad-visa-spain/" class="msv-nav__mobile-sub">Digital Nomad Visa</a>
+    <a href="/student-visa-spain/" class="msv-nav__mobile-sub">Student Visa</a>
+    <a href="/spain-visa-renewal/">Visa Renewals</a>
+    <a href="/best-visa-move-to-spain/">Compare All Visas</a>
+    <a href="/blog/">Blog &amp; Guides</a>
+    <a href="/about-us/">About Us</a>
+    <a href="/testimonials/">Reviews</a>
+    <a href="/contact-us.html">Contact</a>
+    <a href="https://dashboard.platinumlegalspain.com/student-visa" class="msv-nav__mobile-cta">Start My Application →</a>
+  </nav>
+
+</header>
+
+
+<!-- ═══════════════════════════════════════════════════
+     PAGE CONTENT (fragment injected here)
+     ═══════════════════════════════════════════════════ -->
+<main>
+<!-- FRAGMENT_START -->
+<!-- ============================================================
+     MY SPANISH VISA — Student Visa Spain Documents Checklist
+     Elementor Full-Width HTML Widget · April 2026
+     Parent page: /student-visa-spain/ · Slug: /student-visa-spain-documents/
+     ============================================================ -->
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.myspanishvisa.com/student-visa-spain-documents/#webpage",
+      "url": "https://www.myspanishvisa.com/student-visa-spain-documents/",
+      "name": "Spain Student Visa Documents Checklist 2026 — Every Document You Need | My Spanish Visa",
+      "description": "The complete document checklist for a Spain Student Visa application — every form, certificate, apostille, and translation explained. Professional document preparation available.",
+      "inLanguage": "en",
+      "isPartOf": { "@id": "https://www.myspanishvisa.com/#website" },
+      "breadcrumb": { "@id": "https://www.myspanishvisa.com/student-visa-spain-documents/#breadcrumb" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.myspanishvisa.com/student-visa-spain-documents/#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.myspanishvisa.com" },
+        { "@type": "ListItem", "position": 2, "name": "Student Visa Spain", "item": "https://www.myspanishvisa.com/student-visa-spain/" },
+        { "@type": "ListItem", "position": 3, "name": "Documents Checklist", "item": "https://www.myspanishvisa.com/student-visa-spain-documents/" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Do all student visa documents need an apostille?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No, not all documents need an apostille. Most certificates issued by official bodies (birth certificates, criminal records, educational qualifications) require apostille if they are from outside Spain. However, items like bank statements and acceptance letters typically do not. Check your specific consulate's requirements as they vary."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is a sworn translator and why do I need one?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A sworn translator (traductor jurado) is officially recognised by the Spanish Ministry of Foreign Affairs. Only translations by sworn translators are legally accepted by Spanish consulates. They are not optional — if a document needs translation, it must be done by a sworn translator. Costs typically range from €30–80 per document."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I use a digital acceptance letter from my Spanish university?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Some consulates accept digital acceptance letters, but most still require the original printed letter with the university's official stamp and signature. Check your specific consulate's website before relying on a digital version. It is safer to request an original printed letter from your institution."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What if my consulate asks for documents not on this checklist?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Different consulates have slightly different requirements. This checklist covers the core documents required by most consulates (London, Manchester/BLS, New York, Los Angeles, etc.), but variations do exist. Always check your specific consulate's website first. If they ask for something additional, contact My Spanish Visa for guidance."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need original documents or are certified copies acceptable?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most consulates require originals for the initial application appointment, though some will accept certified copies for certain documents. Check your consulate's specific requirements. You will typically need at least originals of: passport, acceptance letter, financial documents, and accommodation proof. Keep copies for your records."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How recent must my bank statements be?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Bank statements should typically be from within the last 3 months of your application date. Some consulates accept statements up to 6 months old. If you have provided very recent bank statements (within weeks), there is no need to update them unless your consulate specifically requires them dated closer to your appointment."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How recent does the medical certificate need to be for a student visa?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The medical certificate should be obtained close to your consulate appointment — typically within 3 months. Don't obtain it months in advance as it may expire before your appointment date."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need to translate my university transcripts or academic history?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Previous academic transcripts may be required by the educational institution for admission purposes but are not always required by the consulate for the student visa itself. If requested by the consulate, they would need a sworn translation. Check your consulate's specific document list."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "My acceptance letter is in Spanish — do I need it translated back to English for my application?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. A Spanish-language acceptance letter from a Spanish institution is already in the appropriate language for the consulate. You don't need to translate Spanish documents into English for a Spanish consulate application."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I submit my student visa application documents by post or does it need to be in person?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most Spanish consulates require in-person attendance for student visa applications. The consular officer needs to verify original documents and take biometric data in some cases. Some consulates accept initial applications by post but require in-person attendance for document verification. Check your specific consulate's procedures."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<!-- Open Graph / Social -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.myspanishvisa.com/student-visa-spain-documents/">
+<meta property="og:title" content="My Spanish Visa">
+<meta property="og:description" content="Expert Spain visa guidance for English-speaking expats.">
+<meta property="og:image" content="https://www.myspanishvisa.com/assets/images/og/og-student-visa-spain.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="My Spanish Visa">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@myspanishvisa">
+<meta name="twitter:title" content="My Spanish Visa">
+<meta name="twitter:description" content="Expert Spain visa guidance for English-speaking expats.">
+<meta name="twitter:image" content="https://www.myspanishvisa.com/assets/images/og/og-student-visa-spain.jpg">
+
+<style>
+/* ── iOS Safari pinch-zoom overflow safety ─────────────────────────── */
+/* Prevents horizontal overflow when users pinch-zoom on iPhone/iPad.   */
+/* Top-level (also paste into theme Custom CSS / Elementor Site Settings) */
+html, body { max-width: 100%; overflow-x: clip; }
+/* Scoped wrapper safety */
+.msv, .msv-nav, .msv-topbar, .msv-footer, .msv-footer-cta,
+.pls-header, .pls-body, .pls-nlv, .pls-dnv, .pls-student {
+  max-width: 100%;
+  overflow-x: clip;
+  position: relative;
+}
+/* Cap all media inside the wrapper */
+.msv img, .msv video, .msv iframe,
+.msv-footer img, .msv-footer video, .msv-footer iframe {
+  max-width: 100%;
+  height: auto;
+}
+/* Never use 100vw — use 100% instead (dev reminder) */
+
+
+/* ── Reset & scope ─────────────────────────────────────────────────── */
+.msv *, .msv *::before, .msv *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* ── Tokens ──────────────────────────────────────────────────────── */
+.msv {
+  --navy: #0c1930; --navy-mid: #1a3a5c; --red: #be0011; --red-deep: #8c000d;
+  --yellow: #facf39; --cream: #f8f7f4; --white: #ffffff; --black: #1a1a1a;
+  --muted: #5a6478; --border: #dce3ed;
+  --shadow-sm: 0 2px 8px rgba(12,25,48,0.08); --shadow-md: 0 6px 24px rgba(12,25,48,0.13);
+  font-family: 'Inter', 'Segoe UI', system-ui, Arial, sans-serif;
+  font-size: 16px; line-height: 1.75; color: var(--black); width: 100%;
+}
+.msv__container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+.msv__container--narrow { max-width: 780px; margin: 0 auto; padding: 0 2rem; }
+@media (max-width: 640px) { .msv__container, .msv__container--narrow { padding: 0 1.2rem; } }
+
+/* ── Typography ──────────────────────────────────────────────────── */
+.msv h1 { font-size: clamp(2rem, 4.5vw, 3rem); font-weight: 800; line-height: 1.12; color: var(--white); letter-spacing: -0.025em; margin-bottom: 1.2rem; }
+.msv h2 { font-size: clamp(1.3rem, 2.5vw, 1.75rem); font-weight: 700; color: var(--navy); letter-spacing: -0.01em; margin-bottom: 0.5rem; position: relative; display: inline-block; padding-bottom: 0.5rem; }
+.msv h2::after { content: ''; position: absolute; bottom: 0; left: 0; width: 44px; height: 3px; background: linear-gradient(90deg, var(--red), var(--red-deep)); border-radius: 2px; }
+.msv h3 { font-size: 1.05rem; font-weight: 700; color: var(--navy); margin-bottom: 0.4rem; }
+.msv p { color: var(--black); margin-bottom: 1rem; font-size: 0.97rem; }
+.msv a { color: var(--red); text-decoration: none; }
+.msv a:hover { text-decoration: underline; }
+.msv ul { list-style: none; padding: 0; margin: 0 0 1rem; }
+.msv ul li { padding: 0.35rem 0 0.35rem 1.4rem; position: relative; font-size: 0.95rem; color: var(--black); }
+.msv ul li::before { content: ''; position: absolute; left: 0; top: 0.75rem; width: 7px; height: 7px; background: linear-gradient(135deg, var(--red), var(--red-deep)); border-radius: 50%; }
+
+/* ── Sections ─────────────────────────────────────────────────── */
+.msv__section { padding: 5rem 0; background: var(--white); }
+.msv__section--cream { padding: 5rem 0; background: linear-gradient(180deg, #f8f7f4 0%, #f2f4f8 100%); }
+.msv__section--dark { padding: 5rem 0; background: linear-gradient(135deg, var(--navy) 0%, #0d2240 55%, #0a1d38 100%); }
+.msv__section--dark h2 { color: var(--white) !important; }
+.msv__section--dark h2::after { background: linear-gradient(90deg, var(--yellow), #e8b820); }
+.msv__section--dark h3 { color: rgba(255,255,255,0.9) !important; }
+.msv .msv__section--dark p, .msv .msv__section--dark li { color: rgba(255,255,255,0.82); }
+.msv__section--dark ul li::before { background: linear-gradient(135deg, var(--yellow), #e8b820); }
+@media (max-width: 640px) { .msv__section, .msv__section--cream, .msv__section--dark { padding: 3.5rem 0; } }
+.msv__section-hd { margin-bottom: 3rem; }
+.msv__section-hd p { color: var(--muted); font-size: 1rem; margin-top: 0.75rem; line-height: 1.7; max-width: 600px; }
+
+/* ── Animations ──────────────────────────────────────────────────── */
+@keyframes msv-fade-up { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes msv-shimmer {
+  0%   { background-position: -400px 0; }
+  100% { background-position: 400px 0; }
+}
+.msv__shimmer {
+  background: linear-gradient(90deg, var(--yellow) 0%, #e8b820 25%, var(--red) 50%, #e8b820 75%, var(--yellow) 100%);
+  background-size: 400px 100%;
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: msv-shimmer 3.5s linear infinite;
+  display: inline;
+}
+
+/* ── Hero ─────────────────────────────────────────────────────── */
+.msv__hero { background: linear-gradient(135deg, #0c1930 0%, #0f2540 40%, #162d50 70%, #1a3560 100%); padding: 5.5rem 0 5rem; position: relative; overflow: hidden; }
+.msv__hero::before { content: ''; position: absolute; top: -30%; right: -5%; width: 700px; height: 700px; background: radial-gradient(circle, rgba(190,0,17,0.1) 0%, transparent 65%); pointer-events: none; }
+.msv__hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, rgba(250,207,57,0.4), transparent); }
+.msv__hero-inner { max-width: 780px; animation: msv-fade-up 0.7s ease-out both; }
+.msv__eyebrow { display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(190,0,17,0.15); border: 1px solid rgba(190,0,17,0.4); color: #ff6b7a; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.35rem 0.9rem; border-radius: 100px; margin-bottom: 1.5rem; }
+.msv__eyebrow::before { content: ''; width: 6px; height: 6px; background: var(--red); border-radius: 50%; box-shadow: 0 0 6px var(--red); }
+.msv__hero p { color: rgba(255,255,255,0.78) !important; font-size: clamp(1rem, 2.2vw, 1.15rem); max-width: 640px; margin-bottom: 2.2rem; line-height: 1.75; }
+
+/* ── Breadcrumb ───────────────────────────────────────────────── */
+.msv__breadcrumb { padding: 0.85rem 0; border-bottom: 1px solid var(--border); background: var(--white); }
+.msv__breadcrumb-inner { display: flex; align-items: center; gap: 0.5rem; font-size: 0.8rem; color: var(--muted); flex-wrap: wrap; }
+.msv__breadcrumb-inner a { color: var(--red); text-decoration: none; }
+.msv__breadcrumb-inner a:hover { text-decoration: underline; }
+.msv__breadcrumb-inner span { color: var(--muted); }
+
+/* ── Buttons ─────────────────────────────────────────────────── */
+.msv__btn-group { display: flex; flex-wrap: wrap; gap: 0.85rem; }
+.msv__btn { display: inline-block; padding: 0.85rem 2rem; font-size: 0.92rem; font-weight: 700; border-radius: 6px; text-decoration: none !important; transition: transform 0.15s, box-shadow 0.15s; }
+.msv__btn:hover { transform: translateY(-1px); text-decoration: none !important; }
+.msv .msv__btn--primary { background: linear-gradient(135deg, var(--red) 0%, var(--red-deep) 100%); color: #ffffff !important; box-shadow: 0 4px 16px rgba(190,0,17,0.38); }
+.msv .msv__btn--primary:hover { box-shadow: 0 6px 22px rgba(190,0,17,0.48); color: #ffffff !important; }
+.msv .msv__btn--outline-white { background: transparent; color: #ffffff !important; border: 1.5px solid rgba(255,255,255,0.5); }
+.msv .msv__btn--outline-white:hover { background: rgba(255,255,255,0.1); color: #ffffff !important; }
+
+/* ── Trust bar ──────────────────────────────────────────────── */
+.msv__trust-bar { background: var(--white); border-bottom: 1px solid var(--border); padding: 1rem 0; box-shadow: var(--shadow-sm); }
+.msv__trust-bar-inner { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.75rem; }
+.msv__trust-item { display: flex; align-items: center; gap: 0.5rem; font-size: 0.82rem; font-weight: 600; color: var(--navy); white-space: nowrap; }
+.msv__trust-item::before { content: ''; width: 7px; height: 7px; background: linear-gradient(135deg, var(--red), var(--red-deep)); border-radius: 50%; flex-shrink: 0; }
+
+/* ── Key facts strip ─────────────────────────────────────────── */
+.msv__facts { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; margin-bottom: 3rem; }
+@media (max-width: 760px) { .msv__facts { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 420px) { .msv__facts { grid-template-columns: 1fr; } }
+.msv__fact { background: var(--white); padding: 1.5rem 1.3rem; text-align: center; }
+.msv__fact-icon { font-size: 1.5rem; display: block; margin-bottom: 0.5rem; }
+.msv__fact-label { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); display: block; margin-bottom: 0.25rem; }
+.msv__fact-value { font-size: 0.97rem; font-weight: 700; color: var(--navy); line-height: 1.35; display: block; }
+
+/* ── Document card grid ──────────────────────────────────────── */
+.msv__doc-grid { display: grid; grid-template-columns: 1fr; gap: 1.3rem; margin-top: 1.5rem; }
+.msv__doc-card { background: var(--white); border: 1.5px solid var(--border); border-radius: 12px; padding: 2rem 2.25rem; box-shadow: var(--shadow-sm); position: relative; overflow: hidden; }
+.msv__doc-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--red), var(--red-deep)); }
+.msv__doc-card-header { display: grid; grid-template-columns: auto 1fr; gap: 1rem; align-items: start; margin-bottom: 1.25rem; }
+.msv__doc-icon { font-size: 1.8rem; display: flex; align-items: center; justify-content: center; width: 48px; height: 48px; background: rgba(190,0,17,0.08); border-radius: 10px; flex-shrink: 0; }
+.msv__doc-title { margin-bottom: 0; }
+.msv__doc-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1rem; }
+.msv__doc-tag { display: inline-flex; align-items: center; gap: 0.4rem; background: #fef2f2; border: 1px solid #fca5a5; color: #be0011; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; padding: 0.2rem 0.65rem; border-radius: 100px; }
+.msv__doc-tag.msv__doc-tag--required { background: #fef2f2; border-color: #dc2626; color: #dc2626; }
+.msv__doc-tag.msv__doc-tag--optional { background: #f0f9ff; border-color: #0ea5e9; color: #0284c7; }
+.msv__doc-tag.msv__doc-tag--apostille { background: #fef3c7; border-color: #eab308; color: #92400e; }
+.msv__doc-tag.msv__doc-tag--translation { background: #dbeafe; border-color: #0284c7; color: #0c63e4; }
+.msv__doc-desc { font-size: 0.92rem; color: var(--muted); margin-bottom: 1rem; line-height: 1.7; }
+.msv__doc-details { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1rem; font-size: 0.88rem; }
+@media (max-width: 640px) { .msv__doc-details { grid-template-columns: 1fr; } }
+.msv__doc-detail-item { background: #f9fafb; border-radius: 8px; padding: 1rem; border-left: 3px solid var(--red); }
+.msv__doc-detail-label { font-weight: 700; color: var(--navy); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.35rem; display: block; }
+.msv__doc-detail-value { color: var(--muted); line-height: 1.6; }
+
+/* ── Alert box ───────────────────────────────────────────────── */
+.msv__alert { border-radius: 10px; padding: 1.3rem 1.5rem; display: flex; gap: 1rem; align-items: flex-start; margin-bottom: 2rem; }
+.msv__alert--warn { background: #fffbea; border: 1px solid #f0d060; }
+.msv__alert--info { background: #eef4ff; border: 1px solid #a0bfff; }
+.msv__alert--red { background: #fef2f2; border: 1px solid #fca5a5; }
+.msv__alert-icon { font-size: 1.4rem; flex-shrink: 0; margin-top: 0.1rem; }
+.msv__alert p { font-size: 0.9rem; color: var(--black); margin: 0; line-height: 1.65; }
+.msv__alert strong { color: var(--navy); }
+
+/* ── Step blocks ─────────────────────────────────────────────── */
+.msv__steps { display: flex; flex-direction: column; gap: 1.5rem; }
+.msv__step { display: flex; gap: 1.5rem; align-items: flex-start; }
+.msv__step-num { width: 44px; height: 44px; flex-shrink: 0; border-radius: 50%; background: linear-gradient(135deg, var(--red), var(--red-deep)); color: #fff; font-size: 0.9rem; font-weight: 800; display: flex; align-items: center; justify-content: center; margin-top: 0.1rem; }
+.msv__step-body h3 { font-size: 1rem; font-weight: 700; color: var(--navy); margin-bottom: 0.3rem; }
+.msv__step-body p { font-size: 0.9rem; color: var(--muted); margin: 0; line-height: 1.65; }
+
+/* ── Warning cards ───────────────────────────────────────────── */
+.msv__mistake-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.3rem; margin-top: 1.5rem; }
+@media (max-width: 640px) { .msv__mistake-grid { grid-template-columns: 1fr; } }
+.msv__mistake-card { background: #fff1f2; border: 1.5px solid #fca5a5; border-radius: 12px; padding: 1.5rem; display: flex; gap: 0.9rem; align-items: flex-start; }
+.msv__mistake-icon { font-size: 1.5rem; flex-shrink: 0; margin-top: 0.05rem; }
+.msv__mistake-title { font-size: 0.95rem; font-weight: 700; color: #be0011; margin-bottom: 0.3rem; }
+.msv__mistake-desc { font-size: 0.87rem; color: #7f1d1d; line-height: 1.6; margin: 0; }
+
+/* ── FAQs ────────────────────────────────────────────────────── */
+.msv__faq-list { display: flex; flex-direction: column; gap: 0; border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+.msv__faq-list details { border-bottom: 1px solid var(--border); background: var(--white); }
+.msv__faq-list details:last-child { border-bottom: none; }
+.msv__faq-list summary { padding: 1.2rem 1.5rem; font-size: 0.97rem; font-weight: 700; color: var(--navy); cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+.msv__faq-list summary::-webkit-details-marker { display: none; }
+.msv__faq-list summary::after { content: '+'; font-size: 1.3rem; font-weight: 400; color: var(--red); flex-shrink: 0; transition: transform 0.2s; }
+.msv__faq-list details[open] summary::after { transform: rotate(45deg); }
+.msv__faq-list details[open] summary { color: var(--red); }
+.msv__faq-answer { padding: 0 1.5rem 1.3rem; font-size: 0.92rem; color: var(--muted); line-height: 1.75; }
+.msv__faq-answer p { color: var(--muted); font-size: 0.92rem; margin-bottom: 0.75rem; }
+.msv__faq-answer p:last-child { margin-bottom: 0; }
+
+/* ── CTA band ────────────────────────────────────────────────── */
+.msv__cta-band { background: linear-gradient(135deg, var(--navy) 0%, #0d2240 60%, #0a1d38 100%); padding: 5rem 0; text-align: center; }
+.msv__cta-band h2 { color: var(--white) !important; display: block; }
+.msv__cta-band h2::after { left: 50%; transform: translateX(-50%); background: linear-gradient(90deg, var(--yellow), #e8b820); }
+.msv__cta-band p { color: rgba(255,255,255,0.75) !important; max-width: 560px; margin: 1rem auto 2.2rem; font-size: 1rem; }
+.msv__cta-band .msv__btn-group { justify-content: center; }
+
+/* ── Related guides ──────────────────────────────────────────── */
+.msv__related { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; }
+@media (max-width: 860px) { .msv__related { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 420px) { .msv__related { grid-template-columns: 1fr; } }
+.msv__related-card { background: var(--white); border: 1px solid var(--border); border-radius: 10px; padding: 1.3rem 1.25rem; text-decoration: none !important; transition: box-shadow 0.2s, transform 0.2s; display: block; }
+.msv__related-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); text-decoration: none !important; }
+.msv__related-icon { font-size: 1.5rem; display: block; margin-bottom: 0.6rem; }
+.msv__related-title { font-size: 0.88rem; font-weight: 700; color: var(--navy); display: block; margin-bottom: 0.3rem; }
+.msv__related-desc { font-size: 0.8rem; color: var(--muted); line-height: 1.55; }
+
+/* ── Disclaimer ──────────────────────────────────────────────── */
+.msv__disclaimer { background: var(--cream); border-top: 1px solid var(--border); padding: 2rem 0; }
+.msv__disclaimer p { font-size: 0.78rem; color: var(--muted); margin: 0; line-height: 1.65; }
+</style>
+
+<div class="msv">
+
+  <!-- ── Hero ─────────────────────────────────────────────────── -->
+  <section class="msv__hero">
+    <div class="msv__container">
+      <div class="msv__hero-inner">
+        <span class="msv__eyebrow">Student Visa Spain</span>
+        <h1>The Complete <span class="msv__shimmer">Student Visa Documents Checklist</span></h1>
+        <p>Getting documents wrong is the #1 cause of visa delays and refusals. This guide lists every document you need, explains what each one is, and shows you exactly how to prepare it — apostilles, sworn translations, and all.</p>
+        <div class="msv__btn-group">
+          <a href="https://dashboard.platinumlegalspain.com/student-visa" class="msv__btn msv__btn--primary">Get a Personalised Checklist</a>
+          <a href="/student-visa-spain/" class="msv__btn msv__btn--outline-white">← Back to Student Visa Guide</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Trust bar ─────────────────────────────────────────── -->
+  <div class="msv__trust-bar">
+    <div class="msv__container">
+      <div class="msv__trust-bar-inner">
+        <span class="msv__trust-item">All documents must be in Spanish</span>
+        <span class="msv__trust-item">Apostille required for most certificates</span>
+        <span class="msv__trust-item">Sworn translations only — no exceptions</span>
+        <span class="msv__trust-item">Consulate-specific variations exist</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Key facts ─────────────────────────────────────────── -->
+  <section class="msv__section" style="padding-bottom:0;">
+    <div class="msv__container--narrow">
+      <div class="msv__facts">
+        <div class="msv__fact">
+          <span class="msv__fact-icon">📋</span>
+          <span class="msv__fact-label">Typical documents</span>
+          <span class="msv__fact-value">8–12 documents</span>
+        </div>
+        <div class="msv__fact">
+          <span class="msv__fact-icon">✍️</span>
+          <span class="msv__fact-label">Translations</span>
+          <span class="msv__fact-value">Sworn translator required</span>
+        </div>
+        <div class="msv__fact">
+          <span class="msv__fact-icon">⚖️</span>
+          <span class="msv__fact-label">Apostilles</span>
+          <span class="msv__fact-value">Most certificates need one</span>
+        </div>
+        <div class="msv__fact">
+          <span class="msv__fact-icon">⏱️</span>
+          <span class="msv__fact-label">Prep time</span>
+          <span class="msv__fact-value">Allow 4–6 weeks</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Master Checklist ──────────────────────────────────── -->
+  <section class="msv__section">
+    <div class="msv__container--narrow">
+      <div class="msv__section-hd">
+        <h2>The Master Document Checklist</h2>
+        <p>Every document is explained below. Click on each to see what it is, who issues it, and how to prepare it for submission.</p>
+      </div>
+
+      <div class="msv__doc-grid">
+        <!-- Document 1: Visa Application Form -->
+        <div class="msv__doc-card">
+          <div class="msv__doc-header">
+            <div class="msv__doc-icon">📝</div>
+            <div>
+              <h3 class="msv__doc-title">Visa Application Form</h3>
+              <div class="msv__doc-tags">
+                <span class="msv__doc-tag msv__doc-tag--required">Required</span>
+              </div>
+            </div>
+          </div>
+          <p class="msv__doc-desc">The national visa application form specific to your consulate. This is completed at or before your appointment and is your formal application to the Spanish state for a student residence permit.</p>
+          <div class="msv__doc-details">
+            <div class="msv__doc-detail-item">
+              <span class="msv__doc-detail-label">Who issues it</span>
+              <span class="msv__doc-detail-value">Your Spanish consulate (available on their website or at the consulate)</span>
+            </div>
+            <div class="msv__doc-detail-item">
+              <span class="msv__doc-detail-label">Apostille needed</span>
+              <span class="msv__doc-detail-value">No</span>
+            </div>
+            <div class="msv__doc-detail-item">
+              <span class="msv__doc-detail-label">Translation needed</span>
+              <span class="msv__doc-detail-value">No (form is already in Spanish or English)</span>
+            </div>
+            <div class="msv__doc-detail-item">
+              <span class="msv__doc-detail-label">Original or copy</span>
+              <span class="msv__doc-detail-value">Original, signed and dated</span>
+            </div>
+          </div>
+          <p style="font-size: 0.87rem; color: var(--muted); margin: 0;"><strong>Note:</strong> Download the form from your consulate's website and complete it carefully. All sections must be filled in. The form must be signed in blue ink (not black). Some consulates now offer digital submission — check their website.</p>
+        </div>
+
+        <!-- Document 2: Valid Passport -->
+        <div class="msv__doc-card">
+          <div class="msv__doc-header">
+            <div class="msv__doc-icon">🛂</div>
+            <div>
+              <h3 class="msv__doc-title">Valid Passport</h3>
+              <div class="msv__doc-tags">
+                <span class="msv__doc-tag msv__doc-tag--required">Required</span>
+              </div>
+            </div>
+          </div>
+          <p class="msv__doc-desc">Your passport must be valid for the entire duration of your stay in Spain. It is the primary proof of identity and nationality for the visa application.</p>
+          <div class="msv__doc-details">
+            <div class="msv__doc-detail-item">
+              <span class="msv__doc-detail-label">Who issues it</span>
+              <span class="msv__doc-detail-value">Your country's passport office or equivalent authority</span>
+            </div>
+            <div class="msv__doc-detail-item">
+              <span class="msv__doc-detail-label">Apostille needed</span>
+              <span class="msv__doc-detail-value">No (passport is not apostilled)</span>
+            </div>
+            <div class="msv__doc-detail-item">
+              <span class="msv__doc-detail-label">Translation needed</span>
+              <span class="msv__doc-detail-value">No</span>
+            </div>
+            <div class="msv__doc-detail-item">
+              <span class="msv__doc-detail-label">Original or copy</span>
+              <span class="msv__doc-detail-value">Original + certified copy of photo page</span>
+            </div>
+          </div>
+          <p style="font-size: 0.87rem; color: var(--muted); margin: 0;"><strong>Requirements:</strong> Minimum 1 year validity remaining. At least 2 blank pages. No damage or stains. Bring both the original passport and a certified photocopy of the identification page to your appointment.</p>
+        </div>
+
+        <!-- Document 3: Passport Photographs -->
+        <div class="msv__doc-card">
+          <div class="msv__doc-header">
+            <div class="msv__doc-icon">📸</div>
+            <div>
+              <h3 class="msv__doc-title">Passport Photographs</h3>
+              <div class="msv__doc-tags">
+                <span class="msv__doc-tag msv__doc-tag--required">Required</span>
+              </div>
+            </div>
+          </div>
+          <p class="msv__doc-desc">Recent photographs meeting Spanish consulate specifications. These are used for your visa stamp and residency documentation.</p>
+          <div class="msv__doc-details">
+            <div class="msv__doc-detail-item">
+              <span class="msv__doc-detail-label">Who issues it</span>
+              <span class="msv__doc-detail-value">You (obtain from a professional photographer or passport photo service)</span>
+            </div>
+            <div class="msv__doc-detail-item">
+              <span class="msv__doc-detail-label">Apostille needed</span>
+              <span class="msv__doc-detail-value">No</span>
+            </div>
+            <div class="msv__doc-detail-item">
+              <span class="msv__doc-detail-label">Translation needed</span>
+              <span class="msv__doc-detail-value">No</span>
+            </div>
+            <div class="msv__doc-detail-item">
+              <span class="msv__doc-detail-label">Original or copy</span>
+              <span class="msv__doc-detail-value">Original printed photos</span>
+            </div>
+          </div>
+          <p style="font-size: 0.87rem; color: var(--muted); margin: 0;"><strong>Specifications:</strong> Usually 4x4 cm or passport size (consulate-specific). Colour or black and white accepted. Taken within the last 6 months. Plain white or light background. Face clearly visible. No glasses or hats. Obtain 4–6 copies to be safe — different consulates may require different quantities.</p>
+        </div>
+
+        <!-- Document 4: Acceptance Letter -->
+        <div class="msv__doc-card">
+          <div class="msv__doc-header">
+            <div class="msv__doc-icon">✉️</div>
+            <div>
+              <h3 class="msv__doc-title">Acceptance/Enrolment Letter</h3>
+              <div class="msv__doc-tags">
+                <span class="msv__doc-tag msv__doc-tag--required">Required</span>
+                <span class="msv__doc-tag msv__doc-tag--translation">Translation needed</span>
+              </div>
+            </div>
+          </div>
+          <p class="msv__doc-desc">Official confirmation from your Spanish educational institution that you have been accepted onto a course and are enrolled. This proves your purpose of stay.</p>
+          <div class="msv__doc-details">
+            <div class="msv__doc-detail-item">
+              <span class="msv__doc-detail-label">Who issues it</span>
+              <span class="msv__doc-detail-value">Your Spanish university, college, or registered school</span>
+            </div>
+            <div class="msv__doc-detail-item">
+              <span class="msv__doc-detail-label">Apostille needed</span>
+              <span class="msv__doc-detail-value">No</span>
+            </div>
+            <div class="msv__doc-detail-item">
+              <span class="msv__doc-detail-label">Translation needed</span>
+              <span class="msv__doc-detail-value">Only if originally in a language other than Spanish</span>
+            </div>
+            <div class="msv__doc-detail-item">
+              <span class="msv__doc-detail-label">Original or copy</span>
+              <span class="msv__doc-detail-value">Original on official letterhead with stamp</span>
+            </div>
+          </div>
+          <p style="font-size: 0.87rem; color: var(--muted); margin: 0;"><strong>Important:</strong> Most consulates require the original printed letter on the institution's official letterhead with an official stamp or signature. Digital letters are increasingly accepted, but check your consulate first. The letter must confirm: your full name, course title, start date, end date, and that you are a confirmed student. If already in Spanish, no translation is needed.</p>
+        </div>
+
+        <!-- Document 5: Proof of Financial Means -->
+        <div class="msv__doc-card">
+          <div class="msv__doc-header">
+            <div class="msv__doc-icon">💰</div>
+            <div>
+              <h3 class="msv__doc-title">Proof of Financial Means</h3>
+              <div class="msv__doc-tags">
+                <span class="msv__doc-tag msv__doc-tag--required">Required</span>
+                <span class="msv__doc-tag msv__doc-tag--translation">Translation needed</span>
+              </div>
+            </div>
+          </div>
+          <p class="msv__doc-desc">Evidence that you can financially support yourself during your studies. This is to prove you won't become a burden on Spain's public services.</p>
+          <div class="msv__doc-details">
+            <div class="msv__doc-detail-item">
+              <span class="msv__doc-detail-label">Who issues it</span>
+              <span class="msv__doc-detail-value">Your bank, parents, employer, or scholarship provider</span>
+            </div>
+            <div class="msv__doc-detail-item">
+              <span class="msv__doc-detail-label">Apostille needed</span>
+              <span class="msv__doc-detail-value">No (bank statements not apostilled)</span>
+            </div>
+            <div class="msv__doc-detail-item">
+              <span class="msv__doc-detail-label">Translation needed</span>
+              <span class="msv__doc-detail-value">Yes, if not in Spanish or English</span>
+            </div>
+            <div class="msv__doc-detail-item">
+              <span class="msv__doc-detail-label">Original or copy</span>
+              <span class="msv__doc-detail-value">Original bank statements or official letters</span>
+            </div>
+          </div>
+          <p style="font-size: 0.87rem; color: var(--muted); margin-top: 1rem; margin-bottom: 0;"><strong>Options — provide one or more:</strong></p>
+          <ul style="margin-top: 0.5rem; margin-bottom: 0;">
+            <li><strong>Bank statements:</strong> 3–6 months of recent statements showing sufficient funds. Check <a href="/student-visa-spain-financial-requirements/">financial requirements</a> for current thresholds.</li>
+            <li><strong>Scholarship letter:</strong> Official confirmation from your scholarship provider stating the amount and duration of funding.</li>
+            <li><strong>Parental support:</strong> If parents are funding you, they must provide a letter (notarised in their home country and apostilled) confirming financial support. Some consulates also require a notarised statement from the bank where the funds are held.</li>
+          </ul>
+        </div>
+
+        <!-- Document 6: Health Insurance Certificate -->
+        <div class="msv__doc-card">
+          <div class="msv__doc-header">
+            <div class="msv__doc-icon">🏥</div>
+            <div>
+              <h3 class="msv__doc-title">Private Health Insurance Certificate</h3>
+              <div class="msv__doc-tags">
+                <span class="msv__doc-tag msv__doc-tag--required">Required</span>
+                <span class="msv__doc-tag msv__doc-tag--translation">Translation needed</span>
+              </div>
+            </div>
+          </div>
+          <p class="msv__doc-desc">Proof of comprehensive health insurance covering your full stay in Spain. This is mandatory for all student visa applications.</p>
+          <div class="msv__doc-details">
+            <div class="msv__doc-detail-item">
+              <span class="msv__doc-detail-label">Who issues it</span>
+              <span class="msv__doc-detail-value">An insurance broker or health insurance company</span>
+            </div>
+            <div class="msv__doc-detail-item">
+              <span class="msv__doc-detail-label">Apostille needed</span>
+              <span class="msv__doc-detail-value">No</span>
+            </div>
+            <div class="msv__doc-detail-item">
+              <span class="msv__doc-detail-label">Translation needed</span>
+              <span class="msv__doc-detail-value">Yes, if not in Spanish or English</span>
+            </div>
+            <div class="msv__doc-detail-item">
+              <span class="msv__doc-detail-label">Original or copy</span>
+              <span class="msv__doc-detail-value">Certified copy or original certificate</span>
+            </div>
+          </div>
+          <p style="font-size: 0.87rem; color: var(--muted); margin-top: 1rem; margin-bottom: 0;"><strong>Requirements:</strong> Full coverage across all of Spain. No copay required. Coverage for the entire duration of your visa. Medical assistance and emergency services included. <a href="/student-visa-spain-health-insurance/">Learn more about health insurance</a>.</p>
+          <p style="font-size: 0.87rem; color: var(--muted); margin: 0.75rem 0 0;"><strong>Broker links:</strong> <a href="https://www.247expatinsurance.com/myspanishvisa" target="_blank" rel="noopener">247 Expat Insurance</a> and <a href="https://www.spanish-healthinsurance.com/myspanishvisa" target="_blank" rel="noopener">Spanish Health Insurance</a> specialise in student visa cover and can confirm visa compliance before you purchase.</p>
+        </div>
+
+        <!-- Document 7: Criminal Record Certificate -->
+        <div class="msv__doc-card">
+          <div class="msv__doc-header">
+            <div class="msv__doc-icon">📜</div>
+            <div>
+              <h3 class="msv__doc-title">Criminal Record Certificate</h3>
+              <div class="msv__doc-tags">
+                <span class="msv__doc-tag msv__doc-tag--required">Required</span>
+                <span class="msv__doc-tag msv__doc-tag--apostille">Apostille needed</span>
+                <span class="msv__doc-tag msv__doc-tag--translation">Translation needed</span>
+              </div>
+            </div>
+          </div>
+          <p class="msv__doc-desc">Official confirmation from authorities that you have no criminal convictions. Required from every country you have lived in for more than a short visit during the past 5 years.</p>
+          <div class="msv__doc-details">
+            <div class="msv__doc-detail-item">
+              <span class="msv__doc-detail-label">Who issues it</span>
+              <span class="msv__doc-detail-value">Police national authorities or equivalent in your home country</span>
+            </div>
+            <div class="msv__doc-detail-item">
+              <span class="msv__doc-detail-label">Apostille needed</span>
+              <span class="msv__doc-detail-value">Yes (all countries)</span>
+            </div>
+            <div class="msv__doc-detail-item">
+              <span class="msv__doc-detail-label">Translation needed</span>
+              <span class="msv__doc-detail-value">Yes (sworn translation if not in Spanish/English)</span>
+            </div>
+            <div class="msv__doc-detail-item">
+              <span class="msv__doc-detail-label">Original or copy</span>
+              <span class="msv__doc-detail-value">Original apostilled certificate</span>
+            </div>
+          </div>
+          <p style="font-size: 0.87rem; color: var(--muted); margin: 0;"><strong>Process:</strong> Request from your home country's police or justice ministry. Processing time varies (2–8 weeks typically). Once received, take it to your country's authority that issues apostilles (usually at the same office or a designated court). Then have it sworn translated into Spanish. Allow 4–6 weeks total for all three steps.</p>
+        </div>
+
+        <!-- Document 8: Medical Certificate -->
+        <div class="msv__doc-card">
+          <div class="msv__doc-header">
+            <div class="msv__doc-icon">⚕️</div>
+            <div>
+              <h3 class="msv__doc-title">Medical Certificate</h3>
+              <div class="msv__doc-tags">
+                <span class="msv__doc-tag msv__doc-tag--required">Required</span>
+                <span class="msv__doc-tag msv__doc-tag--apostille">Apostille needed</span>
+                <span class="msv__doc-tag msv__doc-tag--translation">Translation needed</span>
+              </div>
+            </div>
+          </div>
+          <p class="msv__doc-desc">Medical clearance confirming you are in good health and free from contagious diseases. Must be completed using the Spanish prescribed medical form.</p>
+          <div class="msv__doc-details">
+            <div class="msv__doc-detail-item">
+              <span class="msv__doc-detail-label">Who issues it</span>
+              <span class="msv__doc-detail-value">A doctor authorised by your consulate or Spain</span>
+            </div>
+            <div class="msv__doc-detail-item">
+              <span class="msv__doc-detail-label">Apostille needed</span>
+              <span class="msv__doc-detail-value">Yes</span>
+            </div>
+            <div class="msv__doc-detail-item">
+              <span class="msv__doc-detail-label">Translation needed</span>
+              <span class="msv__doc-detail-value">Yes, if completed in English</span>
+            </div>
+            <div class="msv__doc-detail-item">
+              <span class="msv__doc-detail-label">Original or copy</span>
+              <span class="msv__doc-detail-value">Original signed by doctor + apostille</span>
+            </div>
+          </div>
+          <p style="font-size: 0.87rem; color: var(--muted); margin: 0;"><strong>Process:</strong> Consulates usually provide the official form (modelo de certificado médico). Download it from your consulate's website. Schedule an appointment with a doctor recognised by the Spanish health system or your consulate. The doctor completes the form, signs it, and provides the original. Take it to the appropriate authority for apostille. Have it sworn translated if needed.</p>
+        </div>
+
+        <!-- Document 9: Proof of Accommodation -->
+        <div class="msv__doc-card">
+          <div class="msv__doc-header">
+            <div class="msv__doc-icon">🏠</div>
+            <div>
+              <h3 class="msv__doc-title">Proof of Accommodation</h3>
+              <div class="msv__doc-tags">
+                <span class="msv__doc-tag msv__doc-tag--required">Required</span>
+                <span class="msv__doc-tag msv__doc-tag--translation">Translation needed</span>
+              </div>
+            </div>
+          </div>
+          <p class="msv__doc-desc">Evidence that you have arranged housing for your stay in Spain. This can be student halls, a private rental, or accommodation with a host family.</p>
+          <div class="msv__doc-details">
+            <div class="msv__doc-detail-item">
+              <span class="msv__doc-detail-label">Who issues it</span>
+              <span class="msv__doc-detail-value">Your university, landlord, or host family</span>
+            </div>
+            <div class="msv__doc-detail-item">
+              <span class="msv__doc-detail-label">Apostille needed</span>
+              <span class="msv__doc-detail-value">No</span>
+            </div>
+            <div class="msv__doc-detail-item">
+              <span class="msv__doc-detail-label">Translation needed</span>
+              <span class="msv__doc-detail-value">Yes, if not in Spanish or English</span>
+            </div>
+            <div class="msv__doc-detail-item">
+              <span class="msv__doc-detail-label">Original or copy</span>
+              <span class="msv__doc-detail-value">Original contract or confirmation letter</span>
+            </div>
+          </div>
+          <p style="font-size: 0.87rem; color: var(--muted); margin: 0;"><strong>Options:</strong> Student halls confirmation letter from your university • Rental contract (contrato de arrendamiento) with landlord's signature and contact details • Host family letter confirming accommodation • Even a confirmation of a booking for initial weeks (if finding permanent housing later). Must cover the full period of your studies or at least the initial months.</p>
+        </div>
+
+        <!-- Document 10: Proof of Tuition Payment -->
+        <div class="msv__doc-card">
+          <div class="msv__doc-header">
+            <div class="msv__doc-icon">🎓</div>
+            <div>
+              <h3 class="msv__doc-title">Proof of Tuition Payment</h3>
+              <div class="msv__doc-tags">
+                <span class="msv__doc-tag msv__doc-tag--optional">Often required</span>
+                <span class="msv__doc-tag msv__doc-tag--translation">Translation needed</span>
+              </div>
+            </div>
+          </div>
+          <p class="msv__doc-desc">Some consulates and institutions require proof that you have paid (or will pay) tuition fees. This varies significantly by consulate.</p>
+          <div class="msv__doc-details">
+            <div class="msv__doc-detail-item">
+              <span class="msv__doc-detail-label">Who issues it</span>
+              <span class="msv__doc-detail-value">Your institution's finance or admissions department</span>
+            </div>
+            <div class="msv__doc-detail-item">
+              <span class="msv__doc-detail-label">Apostille needed</span>
+              <span class="msv__doc-detail-value">No</span>
+            </div>
+            <div class="msv__doc-detail-item">
+              <span class="msv__doc-detail-label">Translation needed</span>
+              <span class="msv__doc-detail-value">Yes, if not in Spanish or English</span>
+            </div>
+            <div class="msv__doc-detail-item">
+              <span class="msv__doc-detail-label">Original or copy</span>
+              <span class="msv__doc-detail-value">Original receipt or institution letter</span>
+            </div>
+          </div>
+          <p style="font-size: 0.87rem; color: var(--muted); margin: 0;"><strong>Check your consulate:</strong> Not all consulates require this. Some only require it if payment is pending. Others accept a payment schedule or commitment letter from the institution. Clarify with your consulate's website or by email before your appointment.</p>
+        </div>
+
+        <!-- Document 11: Consulate Fee Receipt -->
+        <div class="msv__doc-card">
+          <div class="msv__doc-header">
+            <div class="msv__doc-icon">💳</div>
+            <div>
+              <h3 class="msv__doc-title">Consulate Fee Receipt</h3>
+              <div class="msv__doc-tags">
+                <span class="msv__doc-tag msv__doc-tag--required">Required</span>
+              </div>
+            </div>
+          </div>
+          <p class="msv__doc-desc">Proof that you have paid the visa application fee to the consulate. Fees vary by nationality and consulate.</p>
+          <div class="msv__doc-details">
+            <div class="msv__doc-detail-item">
+              <span class="msv__doc-detail-label">Who issues it</span>
+              <span class="msv__doc-detail-value">Your consulate (or authorised payment centre)</span>
+            </div>
+            <div class="msv__doc-detail-item">
+              <span class="msv__doc-detail-label">Apostille needed</span>
+              <span class="msv__doc-detail-value">No</span>
+            </div>
+            <div class="msv__doc-detail-item">
+              <span class="msv__doc-detail-label">Translation needed</span>
+              <span class="msv__doc-detail-value">No</span>
+            </div>
+            <div class="msv__doc-detail-item">
+              <span class="msv__doc-detail-label">Original or copy</span>
+              <span class="msv__doc-detail-value">Original receipt</span>
+            </div>
+          </div>
+          <p style="font-size: 0.87rem; color: var(--muted); margin: 0;"><strong>Fees:</strong> Typically EUR 80–200 depending on nationality and consulate. Some consulates allow online payment; others require in-person or bank transfer payment. Payment usually must be made before your appointment. Keep the receipt as proof for your appointment.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Apostille Explained ──────────────────────────────── -->
+  <section class="msv__section--cream">
+    <div class="msv__container--narrow">
+      <div class="msv__section-hd">
+        <h2>What is an Apostille and Which Documents Need One?</h2>
+        <p>An apostille is the internationally recognised certification that confirms a document is authentic and was issued by an official authority. It is required for specific documents.</p>
+      </div>
+
+      <h3 style="margin-top: 0; margin-bottom: 1.2rem; font-size: 1.05rem;">Which documents need apostille:</h3>
+      <ul style="margin-bottom: 2rem;">
+        <li>Criminal record certificate — ALWAYS</li>
+        <li>Medical certificate — ALWAYS</li>
+        <li>Birth certificate (if requested) — YES</li>
+        <li>Educational qualification certificates (if requested) — YES</li>
+        <li>Parental support letters — YES (notarised first, then apostilled)</li>
+      </ul>
+
+      <h3 style="margin-top: 0; margin-bottom: 1.2rem; font-size: 1.05rem;">Which documents do NOT need apostille:</h3>
+      <ul style="margin-bottom: 2rem;">
+        <li>Passport — NO (not apostilled)</li>
+        <li>Bank statements — NO</li>
+        <li>Acceptance letters — NO</li>
+        <li>Health insurance certificates — NO</li>
+        <li>Proof of accommodation — NO</li>
+      </ul>
+
+      <h3 style="margin-top: 0; margin-bottom: 1.2rem; font-size: 1.05rem;">How to get an apostille:</h3>
+      <div class="msv__steps" style="margin-bottom: 1.5rem;">
+        <div class="msv__step">
+          <div class="msv__step-num">1</div>
+          <div class="msv__step-body">
+            <h3>Identify the issuing authority</h3>
+            <p>Find which government office issued the original document (police for criminal records, court for medical certificates, etc.). Contact them for the apostille process.</p>
+          </div>
+        </div>
+        <div class="msv__step">
+          <div class="msv__step-num">2</div>
+          <div class="msv__step-body">
+            <h3>Apply for apostille</h3>
+            <p><strong>UK:</strong> The Hague Apostille Office at the Court of Appeal. Submit online or by post. Processing time: 2–4 weeks. Fee: around GBP 5–10.</p>
+            <p><strong>USA:</strong> Secretary of State office in the state where document was issued. Most offer apostille services. Processing time: 1–3 weeks. Fee: typically USD 10–25.</p>
+            <p><strong>Other countries:</strong> Contact the equivalent authority in your country. Hague Convention countries have designated apostille authorities.</p>
+          </div>
+        </div>
+        <div class="msv__step">
+          <div class="msv__step-num">3</div>
+          <div class="msv__step-body">
+            <h3>Receive apostilled document</h3>
+            <p>You will receive the original document with an apostille certificate attached (usually stapled). This is the document to use for your visa application.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="msv__alert msv__alert--info">
+        <span class="msv__alert-icon">ℹ️</span>
+        <p><strong>Processing time:</strong> Allow 4–6 weeks from the time you request the original document to when you have the apostilled and translated version in hand. Some authorities are faster; some slower. Plan ahead.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Sworn Translations ─────────────────────────────────── -->
+  <section class="msv__section">
+    <div class="msv__container--narrow">
+      <div class="msv__section-hd">
+        <h2>Sworn Translations — What You Need to Know</h2>
+        <p>If a document is not in Spanish or English, it must be translated by an officially recognised sworn translator.</p>
+      </div>
+
+      <h3 style="margin-top: 0; margin-bottom: 1rem; font-size: 1.05rem;">What is a sworn translator?</h3>
+      <p>A sworn translator (traductor jurado) is officially recognised by the Spanish Ministry of Foreign Affairs. Their seal and signature make the translation legally valid in Spain. Regular translations from Google Translate, online services, or unregistered translators are not accepted by consulates.</p>
+
+      <h3 style="margin-top: 1.5rem; margin-bottom: 1rem; font-size: 1.05rem;">Which documents need sworn translation?</h3>
+      <ul style="margin-bottom: 2rem;">
+        <li>Acceptance letter (if not originally in Spanish or English)</li>
+        <li>Financial documents / bank statements (if not in Spanish or English)</li>
+        <li>Criminal record certificate (after apostille)</li>
+        <li>Medical certificate (after apostille)</li>
+        <li>Proof of accommodation (if rental contract not in Spanish or English)</li>
+        <li>Any other official document not in Spanish or English</li>
+      </ul>
+
+      <h3 style="margin-top: 1.5rem; margin-bottom: 1rem; font-size: 1.05rem;">How to find a sworn translator:</h3>
+      <p><strong>In your home country:</strong> Search for "traductor jurado [language]" in your country. Many countries maintain registers of officially recognised translators. Check your country's justice ministry or professional translator associations.</p>
+      <p><strong>Cost:</strong> Typically EUR 30–80 per document depending on length and language pair. Some translators charge per word rather than per document.</p>
+      <p><strong>Timeline:</strong> Usually 3–7 working days. Arrange well in advance.</p>
+
+      <div class="msv__alert msv__alert--warn">
+        <span class="msv__alert-icon">⚠️</span>
+        <p><strong>Common mistake:</strong> Using an online translation service, AI translator, or even a professional translator who is not officially recognised. Consulates will reject these. Only use a sworn translator officially recognised in Spain.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Consulate Variations ────────────────────────────────── -->
+  <section class="msv__section--cream">
+    <div class="msv__container--narrow">
+      <div class="msv__section-hd">
+        <h2>Consulate-Specific Document Variations</h2>
+        <p>Although this checklist is comprehensive, different Spanish consulates have slightly different requirements. Always check your specific consulate first.</p>
+      </div>
+
+      <div class="msv__alert msv__alert--info">
+        <span class="msv__alert-icon">ℹ️</span>
+        <p><strong>Key consulates and their websites:</strong> Check your consulate's requirements section BEFORE requesting any documents. The UK (London, Manchester via BLS), USA (New York, Los Angeles, Chicago, Miami, Denver, Houston, San Francisco), Canada, Australia, and other major countries each have their own specifications. A few documents vary between consulates:</p>
+      </div>
+
+      <ul style="margin-bottom: 2rem; margin-top: 1.5rem;">
+        <li><strong>Tuition payment:</strong> Some consulates require it; others do not.</li>
+        <li><strong>Acceptance letter format:</strong> Digital vs. printed original varies by consulate.</li>
+        <li><strong>Birth certificate:</strong> Some consulates require an apostilled birth certificate; others do not.</li>
+        <li><strong>Financial thresholds:</strong> The minimum amount required varies by consulate and by academic level (bachelor's vs. master's).</li>
+        <li><strong>Medical certificate:</strong> Some consulates may have different medical forms or only require it in certain cases.</li>
+      </ul>
+
+      <p style="margin-bottom: 0;"><strong>What to do:</strong> Visit your consulate's official website. Download their student visa requirements document. If anything is unclear, email the consulate directly. Do not guess. Getting it wrong means your application is rejected and you lose your appointment slot.</p>
+    </div>
+  </section>
+
+  <!-- ── Document Preparation Timeline ─────────────────────── -->
+  <section class="msv__section">
+    <div class="msv__container--narrow">
+      <div class="msv__section-hd">
+        <h2>Document Preparation Timeline</h2>
+        <p>Start early. This timeline shows when to begin each step so that everything is ready 2–3 weeks before your consulate appointment.</p>
+      </div>
+
+      <div class="msv__steps">
+        <div class="msv__step">
+          <div class="msv__step-num">3–4 months before</div>
+          <div class="msv__step-body">
+            <h3>Request criminal record certificate</h3>
+            <p>Contact the police or justice authority in each country you have lived in. Processing times vary (2–8 weeks). Begin immediately — this is often the longest item.</p>
+          </div>
+        </div>
+        <div class="msv__step">
+          <div class="msv__step-num">2–3 months before</div>
+          <div class="msv__step-body">
+            <h3>Arrange apostilles</h3>
+            <p>Once you have the criminal record certificate, apply for its apostille. Simultaneously, book a medical examination and request the medical form from your consulate if needed. Schedule the medical appointment.</p>
+          </div>
+        </div>
+        <div class="msv__step">
+          <div class="msv__step-num">2–3 months before</div>
+          <div class="msv__step-body">
+            <h3>Arrange sworn translations</h3>
+            <p>Contact sworn translators for any documents that need translation. Give them a timeline. Once documents are apostilled, send them to translators immediately.</p>
+          </div>
+        </div>
+        <div class="msv__step">
+          <div class="msv__step-num">2 months before</div>
+          <div class="msv__step-body">
+            <h3>Collect financial documents</h3>
+            <p>Request 3–6 months of bank statements from your bank. Obtain scholarship letter if applicable. Arrange parental support letter if needed (must be notarised and apostilled).</p>
+          </div>
+        </div>
+        <div class="msv__step">
+          <div class="msv__step-num">2 months before</div>
+          <div class="msv__step-body">
+            <h3>Secure accommodation proof</h3>
+            <p>Confirm your student halls offer or sign a rental contract. Obtain signed confirmation letter from your institution or landlord.</p>
+          </div>
+        </div>
+        <div class="msv__step">
+          <div class="msv__step-num">6–8 weeks before</div>
+          <div class="msv__step-body">
+            <h3>Obtain acceptance letter</h3>
+            <p>Request official acceptance/enrolment letter from your Spanish university. Confirm it shows your name, course, start date, and end date.</p>
+          </div>
+        </div>
+        <div class="msv__step">
+          <div class="msv__step-num">6 weeks before</div>
+          <div class="msv__step-body">
+            <h3>Get medical examination</h3>
+            <p>Attend your booked medical appointment. Obtain the original signed medical certificate. Arrange its apostille immediately.</p>
+          </div>
+        </div>
+        <div class="msv__step">
+          <div class="msv__step-num">6 weeks before</div>
+          <div class="msv__step-body">
+            <h3>Arrange health insurance</h3>
+            <p>Contact health insurance providers. Obtain quotes. Purchase a policy that meets consulate requirements. Receive your insurance certificate.</p>
+          </div>
+        </div>
+        <div class="msv__step">
+          <div class="msv__step-num">4 weeks before</div>
+          <div class="msv__step-body">
+            <h3>Verify consulate requirements</h3>
+            <p>Visit your consulate's website. Download the official student visa requirements. Check you have or can obtain everything listed. Email the consulate if anything is unclear.</p>
+          </div>
+        </div>
+        <div class="msv__step">
+          <div class="msv__step-num">4 weeks before</div>
+          <div class="msv__step-body">
+            <h3>Pay consulate fee</h3>
+            <p>Pay the visa application fee (usually EUR 80–200). Obtain and keep the receipt. Some consulates require this before you can book your appointment.</p>
+          </div>
+        </div>
+        <div class="msv__step">
+          <div class="msv__step-num">3–4 weeks before</div>
+          <div class="msv__step-body">
+            <h3>Book your consulate appointment</h3>
+            <p>Visit your consulate's website and book your visa appointment. Slots can fill up quickly, especially in summer. Choose a date when you are certain all documents will be ready.</p>
+          </div>
+        </div>
+        <div class="msv__step">
+          <div class="msv__step-num">2 weeks before</div>
+          <div class="msv__step-body">
+            <h3>Final document check</h3>
+            <p>Compile all documents. Verify each against the consulate's checklist. Check translations are complete. Ensure all apostilles are present. Make copies for your records. Organise them in the order requested by your consulate.</p>
+          </div>
+        </div>
+        <div class="msv__step">
+          <div class="msv__step-num">1 week before</div>
+          <div class="msv__step-body">
+            <h3>Review everything once more</h3>
+            <p>Go through every single document. Check signatures, dates, spelling of your name. Verify nothing has expired. Ensure you have originals, photocopies, and certified copies as required. Prepare your presentation file or folder.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Common Mistakes ─────────────────────────────────── -->
+  <section class="msv__section--cream">
+    <div class="msv__container--narrow">
+      <div class="msv__section-hd">
+        <h2>Common Document Mistakes That Delay or Reject Applications</h2>
+        <p>These are the most frequent problems that cause refusals or delays. Avoid them.</p>
+      </div>
+
+      <div class="msv__mistake-grid">
+        <div class="msv__mistake-card">
+          <span class="msv__mistake-icon">❌</span>
+          <div>
+            <h3 class="msv__mistake-title">Expired passport</h3>
+            <p class="msv__mistake-desc">Your passport does not have 12 months validity remaining. Result: outright rejection. Renew your passport first.</p>
+          </div>
+        </div>
+
+        <div class="msv__mistake-card">
+          <span class="msv__mistake-icon">❌</span>
+          <div>
+            <h3 class="msv__mistake-title">Missing apostille</h3>
+            <p class="msv__mistake-desc">Criminal record or medical certificate submitted without apostille. Result: rejection or significant delay as you must obtain and resubmit it.</p>
+          </div>
+        </div>
+
+        <div class="msv__mistake-card">
+          <span class="msv__mistake-icon">❌</span>
+          <div>
+            <h3 class="msv__mistake-title">Non-sworn translation</h3>
+            <p class="msv__mistake-desc">Translation done by a non-official translator or online service. Result: immediate rejection of that document. Consulates are strict on this.</p>
+          </div>
+        </div>
+
+        <div class="msv__mistake-card">
+          <span class="msv__mistake-icon">❌</span>
+          <div>
+            <h3 class="msv__mistake-title">Acceptance letter not original</h3>
+            <p class="msv__mistake-desc">Submitting a digital copy or personal printout instead of the original on the institution's official letterhead. Result: rejection. Request the original from your university.</p>
+          </div>
+        </div>
+
+        <div class="msv__mistake-card">
+          <span class="msv__mistake-icon">❌</span>
+          <div>
+            <h3 class="msv__mistake-title">Insufficient financial documents</h3>
+            <p class="msv__mistake-desc">Bank statements are too old, from only 1 month, or show insufficient balance for the required threshold. Result: rejection. Provide recent statements covering at least 3 months.</p>
+          </div>
+        </div>
+
+        <div class="msv__mistake-card">
+          <span class="msv__mistake-icon">❌</span>
+          <div>
+            <h3 class="msv__mistake-title">Wrong health insurance policy</h3>
+            <p class="msv__mistake-desc">Policy does not meet consulate requirements (copay present, limited coverage, short duration). Result: rejection. Consult a broker to ensure compliance.</p>
+          </div>
+        </div>
+
+        <div class="msv__mistake-card">
+          <span class="msv__mistake-icon">❌</span>
+          <div>
+            <h3 class="msv__mistake-title">Incomplete application form</h3>
+            <p class="msv__mistake-desc">Form submitted with blank sections or signed in black pen instead of blue. Result: returned for resubmission. Complete the form fully and use blue ink.</p>
+          </div>
+        </div>
+
+        <div class="msv__mistake-card">
+          <span class="msv__mistake-icon">❌</span>
+          <div>
+            <h3 class="msv__mistake-title">Consulate-specific requirements ignored</h3>
+            <p class="msv__mistake-desc">You submitted documents that your specific consulate did not ask for, or omitted ones it required. Result: rejection or delay. Always check your consulate's checklist first.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Document Management Service ──────────────────────── -->
+  <section class="msv__section">
+    <div class="msv__container--narrow">
+      <div class="msv__section-hd">
+        <h2>Let My Spanish Visa Manage Your Documents</h2>
+        <p>Preparing documents is time-consuming and mistakes are costly. Our document coordination service handles everything — from tracking timelines to coordinating translations and apostilles.</p>
+      </div>
+
+      <div style="background: linear-gradient(135deg, #f8f7f4 0%, #eef4ff 100%); border-radius: 14px; padding: 2.5rem 2.75rem; margin-bottom: 2rem; border: 1px solid var(--border);">
+        <h3 style="font-size: 1.1rem; font-weight: 800; color: var(--navy); margin-bottom: 1rem; margin-top: 0;">What we handle for you:</h3>
+        <ul style="margin-bottom: 0; font-size: 0.93rem;">
+          <li>A personalised checklist based on your specific consulate and circumstances</li>
+          <li>Timeline management — reminders at each stage</li>
+          <li>Coordination with sworn translators</li>
+          <li>Apostille application guidance</li>
+          <li>Document review before submission</li>
+          <li>Health insurance broker coordination</li>
+          <li>Consulate liaison if issues arise</li>
+        </ul>
+      </div>
+
+      <div class="msv__btn-group" style="margin-bottom: 0;">
+        <a href="https://dashboard.platinumlegalspain.com/student-visa" class="msv__btn msv__btn--primary">Book a Consultation</a>
+        <a href="https://dashboard.platinumlegalspain.com/student-visa" class="msv__btn msv__btn--outline-white" style="color: var(--navy) !important; border-color: var(--border) !important; background: var(--white) !important;">Check Your Eligibility</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FAQs ──────────────────────────────────────────────── -->
+  <section class="msv__section--cream">
+    <div class="msv__container--narrow">
+      <div class="msv__section-hd">
+        <h2>Frequently Asked Questions</h2>
+        <p>Answers to the most common questions about student visa documents.</p>
+      </div>
+
+      <div class="msv__faq-list">
+        <details open>
+          <summary>Do all documents need an apostille?</summary>
+          <div class="msv__faq-answer">
+            <p>No. Only official certificates issued by government authorities typically need apostille: criminal records, medical certificates, birth certificates, and educational qualifications (if requested). Bank statements, acceptance letters, proof of accommodation, and insurance certificates do not need apostille.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>What is a sworn translator and why do I need one?</summary>
+          <div class="msv__faq-answer">
+            <p>A sworn translator (traductor jurado) is officially recognised by the Spanish Ministry of Foreign Affairs. Only their translations are legally accepted by consulates. If a document is not in Spanish or English, it must be translated by a sworn translator — no exceptions. Regular translations, even from professional translators who are not officially recognised, are rejected.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Can I use a digital acceptance letter from my university?</summary>
+          <div class="msv__faq-answer">
+            <p>Most consulates still prefer the original printed letter on official letterhead with a stamp or signature. Some have begun accepting digital versions (PDF with digital signature), but check your specific consulate's website first. If in doubt, request an original printed letter. It is safer and less likely to cause delays.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>What if my consulate asks for something not on this checklist?</summary>
+          <div class="msv__faq-answer">
+            <p>Different consulates have slightly different requirements. This checklist covers the core documents required by most consulates globally, but variations do exist. Always download your specific consulate's official requirements document from their website. If they ask for something additional, contact them for clarification or reach out to My Spanish Visa for guidance.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Do I need original documents or are certified copies acceptable?</summary>
+          <div class="msv__faq-answer">
+            <p>Most consulates require originals for your appointment, particularly: passport, acceptance letter, criminal record certificate, medical certificate, and proof of accommodation. Some documents like bank statements may be originals or certified copies. Always check your consulate's instructions. Bring both originals and photocopies.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>How recent must my bank statements be?</summary>
+          <div class="msv__faq-answer">
+            <p>Bank statements should typically be dated within 3 months of your visa appointment. Some consulates accept statements up to 6 months old. If you have provided very recent statements (within 2–4 weeks), you do not need to update them unless your consulate specifically requests fresher ones. Clarify with your consulate if unsure.</p>
+          </div>
+        </details>
+        <details>
+          <summary>How recent does the medical certificate need to be for a student visa?</summary>
+          <div class="msv__faq-answer">
+            <p>The medical certificate should be obtained close to your consulate appointment — typically within 3 months. Don't obtain it months in advance as it may expire before your appointment date.</p>
+          </div>
+        </details>
+        <details>
+          <summary>Do I need to translate my university transcripts or academic history?</summary>
+          <div class="msv__faq-answer">
+            <p>Previous academic transcripts may be required by the educational institution for admission purposes but are not always required by the consulate for the student visa itself. If requested by the consulate, they would need a sworn translation. Check your consulate's specific document list.</p>
+          </div>
+        </details>
+        <details>
+          <summary>My acceptance letter is in Spanish — do I need it translated back to English for my application?</summary>
+          <div class="msv__faq-answer">
+            <p>No. A Spanish-language acceptance letter from a Spanish institution is already in the appropriate language for the consulate. You don't need to translate Spanish documents into English for a Spanish consulate application.</p>
+          </div>
+        </details>
+        <details>
+          <summary>Can I submit my student visa application documents by post or does it need to be in person?</summary>
+          <div class="msv__faq-answer">
+            <p>Most Spanish consulates require in-person attendance for student visa applications. The consular officer needs to verify original documents and take biometric data in some cases. Some consulates accept initial applications by post but require in-person attendance for document verification. Check your specific consulate's procedures.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Related guides ────────────────────────────────────── -->
+  <section class="msv__section">
+    <div class="msv__container--narrow">
+      <div class="msv__section-hd">
+        <h2>Related Student Visa Guides</h2>
+        <p>Learn more about other aspects of the Spain student visa.</p>
+      </div>
+
+      <div class="msv__related">
+        <a href="/student-visa-spain/" class="msv__related-card">
+          <span class="msv__related-icon">🎓</span>
+          <span class="msv__related-title">Student Visa Guide</span>
+          <span class="msv__related-desc">Complete overview of the student visa, eligibility, requirements, and timeline.</span>
+        </a>
+        <a href="/student-visa-spain-financial-requirements/" class="msv__related-card">
+          <span class="msv__related-icon">💰</span>
+          <span class="msv__related-title">Financial Requirements</span>
+          <span class="msv__related-desc">Minimum funds required, thresholds by consulate, and how to prove financial means.</span>
+        </a>
+        <a href="/student-visa-spain-health-insurance/" class="msv__related-card">
+          <span class="msv__related-icon">🏥</span>
+          <span class="msv__related-title">Health Insurance</span>
+          <span class="msv__related-desc">Insurance requirements, policy types, and specialist brokers for student visas.</span>
+        </a>
+        <a href="/student-visa-spain-processing-time/" class="msv__related-card">
+          <span class="msv__related-icon">⏱️</span>
+          <span class="msv__related-title">Processing Time</span>
+          <span class="msv__related-desc">How long visa decisions take by consulate and how to check your status.</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CTA band ──────────────────────────────────────────── -->
+  <section class="msv__cta-band">
+    <div class="msv__container--narrow">
+      <h2>Ready to prepare your student visa documents?</h2>
+      <p>We will guide you through every step and ensure your documents meet your consulate's exact requirements.</p>
+      <div class="msv__btn-group">
+        <a href="https://dashboard.platinumlegalspain.com/student-visa" class="msv__btn msv__btn--primary">Book a Consultation</a>
+        <a href="https://dashboard.platinumlegalspain.com/student-visa" class="msv__btn msv__btn--outline-white">Check Your Eligibility</a>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<!-- FRAGMENT_END -->
+</main>
+
+
+<!-- ═══════════════════════════════════════════════════
+     SITE FOOTER
+     ═══════════════════════════════════════════════════ -->
+<footer class="msv-footer" role="contentinfo">
+
+  <div class="msv-footer__top">
+
+    <!-- Brand column -->
+    <div class="msv-footer__brand">
+      <a href="/" class="msv-footer__logo" aria-label="My Spanish Visa"><img src="/assets/images/msv-logo-white.png" alt="My Spanish Visa" height="40" style="display:block;"></a>
+      <p class="msv-footer__tagline">
+        Specialist Spain visa &amp; residency guidance for English-speaking foreigners.
+        A service of Platinum Legal Spain.
+      </p>
+      <div class="msv-footer__trust">
+        <span class="msv-footer__trust-item">All English. No barriers.</span>
+        <span class="msv-footer__trust-item">Solicitors &amp; immigration specialists</span>
+        <span class="msv-footer__trust-item">100% online process</span>
+      </div>
+    </div>
+
+    <!-- Visas column -->
+    <div>
+      <div class="msv-footer__col-title">Visas</div>
+      <ul class="msv-footer__links">
+        <li><a href="/non-lucrative-visa-spain/">Non-Lucrative Visa</a></li>
+        <li><a href="/digital-nomad-visa-spain/">Digital Nomad Visa</a></li>
+        <li><a href="/student-visa-spain/">Student Visa</a></li>
+        <li><a href="/spain-visa-renewal/">Visa Renewals</a></li>
+        <li><a href="/best-visa-move-to-spain/">Compare All Visas</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/nlv">Apply: NLV</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/dnv">Apply: DNV</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/student-visa">Apply: Student Visa</a></li>
+      </ul>
+    </div>
+
+    <!-- Resources column -->
+    <div>
+      <div class="msv-footer__col-title">Resources</div>
+      <ul class="msv-footer__links">
+        <li><a href="/blog/">Blog &amp; Guides</a></li>
+        <li><a href="/move-to-spain/">Move to Spain Guide</a></li>
+        <li><a href="/visa-eligibility-quiz/">Eligibility Quiz</a></li>
+        <li><a href="/spain-visa-checklist/">Document Checklists</a></li>
+        <li><a href="/spain-visa-requirements/">Visa Requirements</a></li>
+        <li><a href="/spain-nie-number/">NIE Number Guide</a></li>
+        <li><a href="/spain-tie-card/">TIE Card Guide</a></li>
+      </ul>
+    </div>
+
+    <!-- Company column -->
+    <div>
+      <div class="msv-footer__col-title">Company</div>
+      <ul class="msv-footer__links">
+        <li><a href="/about-us/">About Us</a></li>
+        <li><a href="/testimonials/">Client Reviews</a></li>
+        <li><a href="/why-choose-us/">Why Choose Us</a></li>
+        <li><a href="/contact-us.html">Contact</a></li>
+        <li><a href="https://www.platinumlegalspain.com" rel="noopener">Platinum Legal Spain</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/student-visa">Client Portal</a></li>
+      </ul>
+    </div>
+
+  </div><!-- /.msv-footer__top -->
+
+  <div class="msv-footer__bottom">
+    <div class="msv-footer__bottom-inner">
+      <p class="msv-footer__disclaimer">
+        <strong style="color:rgba(255,255,255,0.5);">Disclaimer:</strong>
+        My Spanish Visa provides visa processing support and is not a law firm. Content on this site is for informational purposes only and does not constitute legal advice. Immigration rules change frequently — always verify requirements with official sources or a qualified specialist. My Spanish Visa is a trading name of Platinum Legal Spain.
+      </p>
+      <span class="msv-footer__copyright">© 2026 My Spanish Visa. All rights reserved.</span>
+    </div>
+  </div>
+
+</footer>
+
+</body>
+</html>

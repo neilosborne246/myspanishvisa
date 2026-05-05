@@ -1,0 +1,1571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- ═══════════════════════════════════════════════════════════════════
+       PAGE-SPECIFIC HEAD — replace block below per page:
+       <title>Living In Spain On Nlv | My Spanish Visa</title>
+       <meta name="description" content="…">
+       <meta property="og:title" content="…">
+       <meta property="og:description" content="…">
+       <meta property="og:url" content="https://www.myspanishvisa.com/…">
+       <meta property="og:image" content="…">
+       <link rel="canonical" href="https://www.myspanishvisa.com/…">
+       <script type="application/ld+json">…</script>
+       ═══════════════════════════════════════════════════════════════════ -->
+  <title>My Spanish Visa — Spain Visa &amp; Residency Specialists</title>
+  <meta name="description" content="My Spanish Visa helps English-speaking foreigners move to Spain. Expert guidance on Non-Lucrative Visa, Digital Nomad Visa, Student Visa, renewals and more.">
+
+  <!-- Shared Open Graph defaults -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="My Spanish Visa">
+  <meta property="og:image" content="https://www.myspanishvisa.com/assets/images/og/og-myspanishvisa-default.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@myspanishvisa">
+
+  <style>
+/* ═══════════════════════════════════════════════════════════════
+   GLOBAL SHELL — nav + footer only.
+   Page-specific CSS lives inside each fragment's own <style> block.
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── iOS overflow safety ── */
+html, body { max-width: 100%; overflow-x: clip; margin: 0; padding: 0; }
+*, *::before, *::after { box-sizing: border-box; }
+
+/* ── Brand tokens (root-level so all fragments inherit) ── */
+:root {
+  --navy:      #0c1930;
+  --navy-mid:  #1a3a5c;
+  --red:       #be0011;
+  --red-deep:  #8c000d;
+  --yellow:    #facf39;
+  --cream:     #f8f7f4;
+  --white:     #ffffff;
+  --black:     #1a1a1a;
+  --muted:     #5a6478;
+  --border:    #dce3ed;
+  --shadow-sm: 0 2px 8px rgba(12,25,48,0.08);
+  --shadow-md: 0 6px 24px rgba(12,25,48,0.13);
+}
+
+body {
+  font-family: 'Inter', 'Segoe UI', system-ui, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.75;
+  color: var(--black);
+  background: #fff;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   SITE NAV
+   ───────────────────────────────────────────────────────────── */
+.msv-nav {
+  position: sticky;
+  top: 0;
+  z-index: 9000;
+  background: var(--navy);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 2px 12px rgba(12,25,48,0.22);
+}
+.msv-nav__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+  gap: 1.5rem;
+}
+
+/* Logo */
+.msv-nav__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+.msv-nav__logo-flag {
+  font-size: 1.3rem;
+  line-height: 1;
+}
+.msv-nav__logo-text {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+.msv-nav__logo-text span {
+  color: var(--yellow);
+}
+
+/* Links */
+.msv-nav__links {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.msv-nav__links > li {
+  position: relative;
+}
+.msv-nav__links > li > a,
+.msv-nav__links > li > button {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.5rem 0.9rem;
+  font-size: 0.87rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.85);
+  text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: color 0.15s, background 0.15s;
+  white-space: nowrap;
+  height: 64px;
+}
+.msv-nav__links > li > a:hover,
+.msv-nav__links > li > button:hover,
+.msv-nav__links > li:focus-within > a,
+.msv-nav__links > li:focus-within > button {
+  color: #fff;
+  background: rgba(255,255,255,0.08);
+}
+.msv-nav__chevron {
+  font-size: 0.65rem;
+  opacity: 0.7;
+  transition: transform 0.2s;
+}
+.msv-nav__links > li:focus-within .msv-nav__chevron,
+.msv-nav__links > li:hover .msv-nav__chevron {
+  transform: rotate(180deg);
+}
+
+/* Dropdown */
+.msv-nav__dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 230px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  box-shadow: var(--shadow-md);
+  padding: 0.5rem 0;
+  z-index: 200;
+}
+.msv-nav__links > li:hover .msv-nav__dropdown,
+.msv-nav__links > li:focus-within .msv-nav__dropdown {
+  display: block;
+}
+.msv-nav__dropdown a {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.6rem 1.1rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--navy);
+  text-decoration: none;
+  transition: background 0.12s;
+}
+.msv-nav__dropdown a:hover {
+  background: var(--cream);
+  color: var(--red);
+}
+.msv-nav__dropdown-icon {
+  width: 24px;
+  height: 24px;
+  background: var(--cream);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+.msv-nav__dropdown-divider {
+  height: 1px;
+  background: var(--border);
+  margin: 0.4rem 0;
+}
+
+/* CTA button */
+.msv-nav__cta {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.55rem 1.2rem;
+  background: var(--red);
+  color: #fff !important;
+  font-size: 0.85rem;
+  font-weight: 700;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.15s, box-shadow 0.15s;
+  white-space: nowrap;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(190,0,17,0.3);
+}
+.msv-nav__cta:hover {
+  background: var(--red-deep);
+  box-shadow: 0 4px 14px rgba(190,0,17,0.4);
+  text-decoration: none;
+}
+
+/* Hamburger */
+.msv-nav__burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.4rem;
+  border-radius: 5px;
+}
+.msv-nav__burger span {
+  width: 22px;
+  height: 2px;
+  background: #fff;
+  border-radius: 2px;
+  transition: transform 0.2s, opacity 0.2s;
+  display: block;
+}
+
+/* Mobile nav */
+.msv-nav__mobile {
+  display: none;
+  flex-direction: column;
+  background: var(--navy-mid);
+  padding: 1rem 1.5rem 1.5rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+.msv-nav__mobile.open { display: flex; }
+.msv-nav__mobile a {
+  padding: 0.65rem 0;
+  color: rgba(255,255,255,0.9);
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+.msv-nav__mobile a:hover { color: var(--yellow); }
+.msv-nav__mobile .msv-nav__mobile-sub {
+  padding-left: 1rem;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: rgba(255,255,255,0.7);
+}
+.msv-nav__mobile-cta {
+  margin-top: 1rem;
+  background: var(--red);
+  color: #fff !important;
+  border-radius: 6px;
+  text-align: center;
+  padding: 0.75rem 1rem !important;
+  border-bottom: none !important;
+}
+
+@media (max-width: 900px) {
+  .msv-nav__links { display: none; }
+  .msv-nav__cta { display: none; }
+  .msv-nav__burger { display: flex; }
+}
+@media (max-width: 480px) {
+  .msv-nav__inner { padding: 0 1rem; }
+}
+
+/* ─────────────────────────────────────────────────────────────
+   SITE FOOTER
+   ───────────────────────────────────────────────────────────── */
+.msv-footer {
+  background: var(--navy);
+  color: rgba(255,255,255,0.75);
+  overflow-x: clip;
+}
+.msv-footer__top {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem 3rem;
+  display: grid;
+  grid-template-columns: 280px 1fr 1fr 1fr;
+  gap: 3rem;
+}
+@media (max-width: 900px) {
+  .msv-footer__top { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
+}
+@media (max-width: 560px) {
+  .msv-footer__top { grid-template-columns: 1fr; gap: 2rem; padding: 3rem 1.2rem 2rem; }
+}
+
+.msv-footer__brand {}
+.msv-footer__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  margin-bottom: 1rem;
+}
+.msv-footer__logo-flag { font-size: 1.3rem; }
+.msv-footer__logo-text {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -0.01em;
+}
+.msv-footer__logo-text span { color: var(--yellow); }
+.msv-footer__tagline {
+  font-size: 0.83rem;
+  color: rgba(255,255,255,0.55);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+.msv-footer__trust {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+.msv-footer__trust-item {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.65);
+}
+.msv-footer__trust-item::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  background: var(--yellow);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.msv-footer__col-title {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.4);
+  margin-bottom: 1rem;
+}
+.msv-footer__links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.msv-footer__links a {
+  font-size: 0.87rem;
+  color: rgba(255,255,255,0.68);
+  text-decoration: none;
+  transition: color 0.15s;
+  display: inline-block;
+}
+.msv-footer__links a:hover {
+  color: var(--yellow);
+  text-decoration: none;
+}
+
+.msv-footer__bottom {
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+.msv-footer__bottom-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 1rem;
+  justify-content: space-between;
+}
+.msv-footer__disclaimer {
+  font-size: 0.73rem;
+  color: rgba(255,255,255,0.35);
+  line-height: 1.65;
+  max-width: 720px;
+}
+.msv-footer__copyright {
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.35);
+  white-space: nowrap;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   MAIN CONTENT AREA
+   ───────────────────────────────────────────────────────────── */
+main {
+  /* Fragments are self-contained; this wrapper just provides flow context */
+  position: relative;
+}
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════
+     SITE NAVIGATION
+     ═══════════════════════════════════════════════════ -->
+<header class="msv-nav" role="banner">
+  <div class="msv-nav__inner">
+
+    <!-- Logo -->
+    <a href="/" class="msv-nav__logo" aria-label="My Spanish Visa — Home"><img src="/assets/images/msv-logo-white.png" alt="My Spanish Visa" height="80" style="display:block;"></a>
+
+    <!-- Desktop links -->
+    <nav aria-label="Main navigation">
+      <ul class="msv-nav__links">
+
+        <li>
+          <button class="msv-nav__dropdown-trigger" aria-haspopup="true" aria-expanded="false">
+            Visas <span class="msv-nav__chevron">▾</span>
+          </button>
+          <div class="msv-nav__dropdown" role="menu">
+            <a href="/non-lucrative-visa-spain/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🏖️</span>Non-Lucrative Visa
+            </a>
+            <a href="/digital-nomad-visa-spain/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">💻</span>Digital Nomad Visa
+            </a>
+            <a href="/student-visa-spain/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🎓</span>Student Visa
+            </a>
+            <div class="msv-nav__dropdown-divider"></div>
+            <a href="/spain-visa-renewal/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🔄</span>Visa Renewals
+            </a>
+            <a href="/best-visa-move-to-spain/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">⚖️</span>Compare All Visas
+            </a>
+          </div>
+        </li>
+
+        <li>
+          <button aria-haspopup="true" aria-expanded="false">
+            Resources <span class="msv-nav__chevron">▾</span>
+          </button>
+          <div class="msv-nav__dropdown" role="menu">
+            <a href="/blog/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">📝</span>Blog &amp; Guides
+            </a>
+            <a href="/spain-visa-checklist/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">✅</span>Document Checklists
+            </a>
+            <a href="/move-to-spain/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🏠</span>Move to Spain Guide
+            </a>
+            <a href="/visa-eligibility-quiz/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🧭</span>Eligibility Quiz
+            </a>
+          </div>
+        </li>
+
+        <li><a href="/about-us/">About Us</a></li>
+        <li><a href="/testimonials/">Reviews</a></li>
+        <li><a href="/contact-us.html">Contact</a></li>
+
+      </ul>
+    </nav>
+
+    <!-- Desktop CTA -->
+    <a href="https://dashboard.platinumlegalspain.com/nlv" class="msv-nav__cta">
+      Start My Application →
+    </a>
+
+    <!-- Hamburger (mobile) -->
+    <button class="msv-nav__burger" aria-label="Open menu" aria-expanded="false" onclick="
+      var m=document.querySelector('.msv-nav__mobile');
+      var open=m.classList.toggle('open');
+      this.setAttribute('aria-expanded', open);
+    ">
+      <span></span><span></span><span></span>
+    </button>
+
+  </div><!-- /.msv-nav__inner -->
+
+  <!-- Mobile menu -->
+  <nav class="msv-nav__mobile" aria-label="Mobile navigation">
+    <a href="/non-lucrative-visa-spain/" class="msv-nav__mobile-sub">Non-Lucrative Visa</a>
+    <a href="/digital-nomad-visa-spain/" class="msv-nav__mobile-sub">Digital Nomad Visa</a>
+    <a href="/student-visa-spain/" class="msv-nav__mobile-sub">Student Visa</a>
+    <a href="/spain-visa-renewal/">Visa Renewals</a>
+    <a href="/best-visa-move-to-spain/">Compare All Visas</a>
+    <a href="/blog/">Blog &amp; Guides</a>
+    <a href="/about-us/">About Us</a>
+    <a href="/testimonials/">Reviews</a>
+    <a href="/contact-us.html">Contact</a>
+    <a href="https://dashboard.platinumlegalspain.com/nlv" class="msv-nav__mobile-cta">Start My Application →</a>
+  </nav>
+
+</header>
+
+
+<!-- ═══════════════════════════════════════════════════
+     PAGE CONTENT (fragment injected here)
+     ═══════════════════════════════════════════════════ -->
+<main>
+<!-- FRAGMENT_START -->
+<!-- Living in Spain on Non-Lucrative Visa: Comprehensive Guide -->
+
+<!-- Comment block: Page metadata -->
+<!--
+  Page: Living in Spain on Non-Lucrative Visa
+  Slug: /living-in-spain-on-nlv/
+  Primary Keyword: living in Spain on non lucrative visa
+  Parent: /non-lucrative-visa-spain/
+  Type: Elementor Full-Width HTML Widget
+  Content Length: ~4,200 words
+  Last Updated: 2026-04-11
+-->
+
+<style>
+/* ── iOS Safari pinch-zoom overflow safety ─────────────────────────── */
+/* Prevents horizontal overflow when users pinch-zoom on iPhone/iPad.   */
+/* Top-level (also paste into theme Custom CSS / Elementor Site Settings) */
+html, body { max-width: 100%; overflow-x: clip; }
+/* Scoped wrapper safety */
+.msv, .msv-nav, .msv-topbar, .msv-footer, .msv-footer-cta,
+.pls-header, .pls-body, .pls-nlv, .pls-dnv, .pls-student {
+  max-width: 100%;
+  overflow-x: clip;
+  position: relative;
+}
+/* Cap all media inside the wrapper */
+.msv img, .msv video, .msv iframe,
+.msv-footer img, .msv-footer video, .msv-footer iframe {
+  max-width: 100%;
+  height: auto;
+}
+/* Never use 100vw — use 100% instead (dev reminder) */
+
+
+/* ── Reset & scope ─────────────────────────────────────────────────── */
+.msv *, .msv *::before, .msv *::after { box-sizing: border-box; margin: 0; padding: 0; }
+/* ── Tokens ──────────────────────────────────────────────────────── */
+.msv {
+  --navy: #0c1930; --navy-mid: #1a3a5c; --red: #be0011; --red-deep: #8c000d;
+  --yellow: #facf39; --cream: #f8f7f4; --white: #ffffff; --black: #1a1a1a;
+  --muted: #5a6478; --border: #dce3ed;
+  --shadow-sm: 0 2px 8px rgba(12,25,48,0.08); --shadow-md: 0 6px 24px rgba(12,25,48,0.13);
+  font-family: 'Inter', 'Segoe UI', system-ui, Arial, sans-serif;
+  font-size: 16px; line-height: 1.75; color: var(--black); width: 100%;
+}
+.msv__container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+.msv__container--narrow { max-width: 780px; margin: 0 auto; padding: 0 2rem; }
+@media (max-width: 640px) { .msv__container, .msv__container--narrow { padding: 0 1.2rem; } }
+/* ── Typography ──────────────────────────────────────────────────── */
+.msv h1 { font-size: clamp(2rem, 4.5vw, 3rem); font-weight: 800; line-height: 1.12; color: var(--white); letter-spacing: -0.025em; margin-bottom: 1.2rem; }
+.msv h2 { font-size: clamp(1.3rem, 2.5vw, 1.75rem); font-weight: 700; color: var(--navy); letter-spacing: -0.01em; margin-bottom: 0.5rem; position: relative; display: inline-block; padding-bottom: 0.5rem; }
+.msv h2::after { content: ''; position: absolute; bottom: 0; left: 0; width: 44px; height: 3px; background: linear-gradient(90deg, var(--red), var(--red-deep)); border-radius: 2px; }
+.msv h3 { font-size: 1.05rem; font-weight: 700; color: var(--navy); margin-bottom: 0.4rem; }
+.msv p { color: var(--black); margin-bottom: 1rem; font-size: 0.97rem; }
+.msv a { color: var(--red); text-decoration: none; }
+.msv a:hover { text-decoration: underline; }
+.msv ul { list-style: none; padding: 0; margin: 0 0 1rem; }
+.msv ul li { padding: 0.35rem 0 0.35rem 1.4rem; position: relative; font-size: 0.95rem; color: var(--black); }
+.msv ul li::before { content: ''; position: absolute; left: 0; top: 0.75rem; width: 7px; height: 7px; background: linear-gradient(135deg, var(--red), var(--red-deep)); border-radius: 50%; }
+/* ── Sections ─────────────────────────────────────────────────── */
+.msv__section { padding: 5rem 0; background: var(--white); }
+.msv__section--cream { padding: 5rem 0; background: linear-gradient(180deg, #f8f7f4 0%, #f2f4f8 100%); }
+.msv__section--dark { padding: 5rem 0; background: linear-gradient(135deg, var(--navy) 0%, #0d2240 55%, #0a1d38 100%); }
+.msv__section--dark h2 { color: var(--white) !important; }
+.msv__section--dark h2::after { background: linear-gradient(90deg, var(--yellow), #e8b820); }
+.msv__section--dark h3 { color: rgba(255,255,255,0.9) !important; }
+.msv .msv__section--dark p, .msv .msv__section--dark li { color: rgba(255,255,255,0.82); }
+.msv__section--dark ul li::before { background: linear-gradient(135deg, var(--yellow), #e8b820); }
+@media (max-width: 640px) { .msv__section, .msv__section--cream, .msv__section--dark { padding: 3.5rem 0; } }
+.msv__section-hd { margin-bottom: 3rem; }
+.msv__section-hd p { color: var(--muted); font-size: 1rem; margin-top: 0.75rem; line-height: 1.7; max-width: 600px; }
+/* ── Animations ──────────────────────────────────────────────────── */
+@keyframes msv-fade-up { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes msv-shimmer {
+  0%   { background-position: -400px 0; }
+  100% { background-position: 400px 0; }
+}
+.msv__shimmer {
+  background: linear-gradient(90deg, var(--yellow) 0%, #e8b820 25%, var(--red) 50%, #e8b820 75%, var(--yellow) 100%);
+  background-size: 400px 100%;
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: msv-shimmer 3.5s linear infinite;
+  display: inline;
+}
+/* ── Hero ─────────────────────────────────────────────────────── */
+.msv__hero { background: linear-gradient(135deg, #0c1930 0%, #0f2540 40%, #162d50 70%, #1a3560 100%); padding: 5.5rem 0 5rem; position: relative; overflow: hidden; }
+.msv__hero::before { content: ''; position: absolute; top: -30%; right: -5%; width: 700px; height: 700px; background: radial-gradient(circle, rgba(190,0,17,0.1) 0%, transparent 65%); pointer-events: none; }
+.msv__hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, rgba(250,207,57,0.4), transparent); }
+.msv__hero-inner { max-width: 780px; animation: msv-fade-up 0.7s ease-out both; }
+.msv__eyebrow { display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(190,0,17,0.15); border: 1px solid rgba(190,0,17,0.4); color: #ff6b7a; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.35rem 0.9rem; border-radius: 100px; margin-bottom: 1.5rem; }
+.msv__eyebrow::before { content: ''; width: 6px; height: 6px; background: var(--red); border-radius: 50%; box-shadow: 0 0 6px var(--red); }
+.msv__hero p { color: rgba(255,255,255,0.78) !important; font-size: clamp(1rem, 2.2vw, 1.15rem); max-width: 640px; margin-bottom: 2.2rem; line-height: 1.75; }
+/* ── Breadcrumb ───────────────────────────────────────────── */
+.msv__breadcrumb { padding: 0.85rem 0; border-bottom: 1px solid var(--border); background: var(--white); }
+.msv__breadcrumb-inner { display: flex; align-items: center; gap: 0.5rem; font-size: 0.8rem; color: var(--muted); flex-wrap: wrap; }
+.msv__breadcrumb-inner a { color: var(--red); text-decoration: none; }
+.msv__breadcrumb-inner a:hover { text-decoration: underline; }
+.msv__breadcrumb-inner span { color: var(--muted); }
+/* ── Buttons ─────────────────────────────────────────────────── */
+.msv__btn-group { display: flex; flex-wrap: wrap; gap: 0.85rem; }
+.msv__btn { display: inline-block; padding: 0.85rem 2rem; font-size: 0.92rem; font-weight: 700; border-radius: 6px; text-decoration: none !important; transition: transform 0.15s, box-shadow 0.15s; }
+.msv__btn:hover { transform: translateY(-1px); text-decoration: none !important; }
+.msv .msv__btn--primary { background: linear-gradient(135deg, var(--red) 0%, var(--red-deep) 100%); color: #ffffff !important; box-shadow: 0 4px 16px rgba(190,0,17,0.38); }
+.msv .msv__btn--primary:hover { box-shadow: 0 6px 22px rgba(190,0,17,0.48); color: #ffffff !important; }
+.msv .msv__btn--outline-white { background: transparent; color: #ffffff !important; border: 1.5px solid rgba(255,255,255,0.5); }
+.msv .msv__btn--outline-white:hover { background: rgba(255,255,255,0.1); color: #ffffff !important; }
+/* ── Trust bar ──────────────────────────────────────────────── */
+.msv__trust-bar { background: var(--white); border-bottom: 1px solid var(--border); padding: 1rem 0; box-shadow: var(--shadow-sm); }
+.msv__trust-bar-inner { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.75rem; }
+.msv__trust-item { display: flex; align-items: center; gap: 0.5rem; font-size: 0.82rem; font-weight: 600; color: var(--navy); white-space: nowrap; }
+.msv__trust-item::before { content: ''; width: 7px; height: 7px; background: linear-gradient(135deg, var(--red), var(--red-deep)); border-radius: 50%; flex-shrink: 0; }
+/* ── Key facts strip ─────────────────────────────────────────── */
+.msv__facts { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; margin-bottom: 3rem; }
+@media (max-width: 760px) { .msv__facts { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 420px) { .msv__facts { grid-template-columns: 1fr; } }
+.msv__fact { background: var(--white); padding: 1.5rem 1.3rem; text-align: center; }
+.msv__fact-icon { font-size: 1.5rem; display: block; margin-bottom: 0.5rem; }
+.msv__fact-label { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); display: block; margin-bottom: 0.25rem; }
+.msv__fact-value { font-size: 0.97rem; font-weight: 700; color: var(--navy); line-height: 1.35; display: block; }
+/* ── Alert box ───────────────────────────────────────────────── */
+.msv__alert { border-radius: 10px; padding: 1.3rem 1.5rem; display: flex; gap: 1rem; align-items: flex-start; margin-bottom: 2rem; }
+.msv__alert--warn { background: #fffbea; border: 1px solid #f0d060; }
+.msv__alert--info { background: #eef4ff; border: 1px solid #a0bfff; }
+.msv__alert--red { background: #fef2f2; border: 1px solid #fca5a5; }
+.msv__alert--green { background: #f0fdf4; border: 1px solid #86efac; }
+.msv__alert-icon { font-size: 1.4rem; flex-shrink: 0; margin-top: 0.1rem; }
+.msv__alert p { font-size: 0.9rem; color: var(--black); margin: 0; line-height: 1.65; }
+.msv__alert strong { color: var(--navy); }
+/* ── Cost table ──────────────────────────────────────────────── */
+.msv__cost-table { width: 100%; border-collapse: collapse; font-size: 0.88rem; margin: 2rem 0; }
+.msv__cost-table thead tr { background: var(--navy); }
+.msv__cost-table th { padding: 1rem 1.25rem; text-align: left; color: var(--white); font-weight: 700; border-bottom: 2px solid var(--yellow); white-space: nowrap; }
+.msv__cost-table td { padding: 0.85rem 1.25rem; border-bottom: 1px solid var(--border); color: var(--black); }
+.msv__cost-table tbody tr:nth-child(even) { background: #f9fafb; }
+.msv__cost-table .cost-item { font-weight: 600; color: var(--navy); }
+.msv__cost-table .cost-range { color: var(--muted); font-weight: 600; }
+.msv__cost-table .cost-high { color: var(--red); font-weight: 700; }
+/* ── Cost boxes ──────────────────────────────────────────────── */
+.msv__cost-box { background: var(--white); border: 1.5px solid var(--border); border-radius: 12px; padding: 2rem; margin-bottom: 2rem; text-align: center; }
+.msv__cost-box h3 { font-size: 1rem; margin-bottom: 0.5rem; color: var(--navy); }
+.msv__cost-box .cost-value { font-size: 2rem; font-weight: 800; color: var(--red); margin: 1rem 0; }
+.msv__cost-box .cost-label { font-size: 0.8rem; color: var(--muted); font-weight: 600; }
+.msv__cost-boxes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-bottom: 3rem; }
+@media (max-width: 760px) { .msv__cost-boxes { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 420px) { .msv__cost-boxes { grid-template-columns: 1fr; } }
+/* ── FAQs ────────────────────────────────────────────────– */
+.msv__faq-list { display: flex; flex-direction: column; gap: 0; border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+.msv__faq-list details { border-bottom: 1px solid var(--border); background: var(--white); }
+.msv__faq-list details:last-child { border-bottom: none; }
+.msv__faq-list summary { padding: 1.2rem 1.5rem; font-size: 0.97rem; font-weight: 700; color: var(--navy); cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+.msv__faq-list summary::-webkit-details-marker { display: none; }
+.msv__faq-list summary::after { content: '+'; font-size: 1.3rem; font-weight: 400; color: var(--red); flex-shrink: 0; transition: transform 0.2s; }
+.msv__faq-list details[open] summary::after { transform: rotate(45deg); }
+.msv__faq-list details[open] summary { color: var(--red); }
+.msv__faq-answer { padding: 0 1.5rem 1.3rem; font-size: 0.92rem; color: var(--muted); line-height: 1.75; }
+.msv__faq-answer p { color: var(--muted); font-size: 0.92rem; margin-bottom: 0.75rem; }
+.msv__faq-answer p:last-child { margin-bottom: 0; }
+/* ── CTA band ────────────────────────────────────────────────── */
+.msv__cta-band { background: linear-gradient(135deg, var(--navy) 0%, #0d2240 60%, #0a1d38 100%); padding: 5rem 0; text-align: center; }
+.msv__cta-band h2 { color: var(--white) !important; display: block; }
+.msv__cta-band h2::after { left: 50%; transform: translateX(-50%); background: linear-gradient(90deg, var(--yellow), #e8b820); }
+.msv__cta-band p { color: rgba(255,255,255,0.75) !important; max-width: 560px; margin: 1rem auto 2.2rem; font-size: 1rem; }
+.msv__cta-band .msv__btn-group { justify-content: center; }
+/* ── Related guides ──────────────────────────────────────────── */
+.msv__related { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; }
+@media (max-width: 860px) { .msv__related { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 420px) { .msv__related { grid-template-columns: 1fr; } }
+.msv__related-card { background: var(--white); border: 1px solid var(--border); border-radius: 10px; padding: 1.3rem 1.25rem; text-decoration: none !important; transition: box-shadow 0.2s, transform 0.2s; display: block; }
+.msv__related-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); text-decoration: none !important; }
+.msv__related-icon { font-size: 1.5rem; display: block; margin-bottom: 0.6rem; }
+.msv__related-title { font-size: 0.88rem; font-weight: 700; color: var(--navy); display: block; margin-bottom: 0.3rem; }
+.msv__related-desc { font-size: 0.8rem; color: var(--muted); line-height: 1.55; }
+/* ── Disclaimer ──────────────────────────────────────────────── */
+.msv__disclaimer { background: var(--cream); border-top: 1px solid var(--border); padding: 2rem 0; }
+.msv__disclaimer p { font-size: 0.78rem; color: var(--muted); margin: 0; line-height: 1.65; }
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://myspanishvisa.com/living-in-spain-on-nlv/",
+      "url": "https://myspanishvisa.com/living-in-spain-on-nlv/",
+      "name": "Living in Spain on Non-Lucrative Visa",
+      "description": "Complete guide to daily life, bureaucracy, work restrictions, banking, healthcare, and settling in Spain on the NLV.",
+      "isPartOf": {
+        "@id": "https://myspanishvisa.com/"
+      },
+      "breadcrumb": {
+        "@id": "https://myspanishvisa.com/living-in-spain-on-nlv/#breadcrumb"
+      },
+      "inLanguage": "en-US",
+      "keywords": "living in Spain on non lucrative visa, NLV daily life, settling Spain, expat guide",
+      "mainEntity": {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Can I work while on the Non-Lucrative Visa?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The NLV strictly prohibits employment and self-employment in Spain. You cannot work for a Spanish employer, operate a Spanish business, or provide freelance services to Spanish clients. However, you may work remotely for foreign companies or clients outside Spain without special permission, though this is a grey area legally. Any work must be reported to tax authorities."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What are the first steps after arriving in Spain on an NLV?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Your immediate priorities are: (1) Register with municipal authorities to obtain a NIE number, (2) Register on the padrón (municipal registry), (3) Open a Spanish bank account, (4) Register with the Spanish health system (Seguridad Social), (5) Obtain your TIE card (residence permit). These must be completed within the first few weeks."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is healthcare accessible on the NLV?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Once registered on the padrón and with the health system, NLV holders access Spain's public healthcare system free or at minimal cost. Private healthcare is also excellent and affordable. Dental and some specialist services may require private insurance. Health coverage is reliable but requires proper registration and documentation."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How much does it cost to live in Spain on an NLV?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Monthly costs vary by location and lifestyle. In smaller towns: EUR 1,000-1,500. Mid-sized cities: EUR 1,500-2,200. Major cities like Madrid/Barcelona: EUR 2,000-3,500+. Costs include rent, utilities, food, transport, and entertainment. The required income threshold is EUR 27,360 annually (or EUR 2,280/month for one person)."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do I need to learn Spanish to live on the NLV?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "While not technically required, learning Spanish is highly recommended. Basic conversational Spanish helps with bureaucracy, daily interactions, making friends, and cultural integration. Many expat communities exist where English is spoken, but your quality of life and integration improve significantly with language skills."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What happens with my NLV after 5 years?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "After 5 years of continuous residence on the NLV, you become eligible to apply for Long-Term Residency (LTR), which grants indefinite residence rights. You can also explore converting to a work permit if your circumstances change. An NLV can be renewed indefinitely as long as you maintain the income requirement and don't work in Spain."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I bring family members on the NLV?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Family members (spouse, children, dependent relatives) can join you through the Family Reunification process. They don't need separate NIE numbers initially and can access healthcare through your registration. Each family member requires separate documentation and registration, with income requirements scaling by household size."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What are the main challenges of moving to Spain on the NLV?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Common challenges include bureaucratic complexity (NIE, TIE, padrón registration), language barriers, culture shock and social adjustment, the ban on employment, healthcare registration delays, banking documentation requirements, and seasonal climate changes. Proper planning, patience, and community connections help overcome these obstacles."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://myspanishvisa.com/living-in-spain-on-nlv/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://myspanishvisa.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Non-Lucrative Visa",
+          "item": "https://myspanishvisa.com/non-lucrative-visa-spain/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Living in Spain on NLV",
+          "item": "https://myspanishvisa.com/living-in-spain-on-nlv/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<!-- Open Graph / Social -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.myspanishvisa.com/living-in-spain-on-nlv/">
+<meta property="og:title" content="My Spanish Visa">
+<meta property="og:description" content="Expert Spain visa guidance for English-speaking expats.">
+<meta property="og:image" content="https://www.myspanishvisa.com/assets/images/og/og-nlv-spain.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="My Spanish Visa">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@myspanishvisa">
+<meta name="twitter:title" content="My Spanish Visa">
+<meta name="twitter:description" content="Expert Spain visa guidance for English-speaking expats.">
+<meta name="twitter:image" content="https://www.myspanishvisa.com/assets/images/og/og-nlv-spain.jpg">
+
+<div class="msv">
+  <!-- Hero section -->
+  <section class="msv__hero">
+    <div class="msv__container">
+      <div class="msv__hero-inner">
+        <div class="msv__eyebrow">Live & Thrive</div>
+        <h1>Living in Spain on the Non-Lucrative Visa</h1>
+        <p>From your first day navigating Spanish bureaucracy to settling into daily life, understand what it really takes to build a fulfilling life on the NLV. Expert insights on work restrictions, banking, healthcare, community, and long-term residency.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust bar -->
+  <div class="msv__trust-bar">
+    <div class="msv__trust-bar-inner">
+      <div class="msv__trust-item">Expert-reviewed guidance</div>
+      <div class="msv__trust-item">Based on real expat experiences</div>
+      <div class="msv__trust-item">Covers 2026 regulations</div>
+      <div class="msv__trust-item">Practical action steps</div>
+    </div>
+  </div>
+
+  <!-- Key facts -->
+  <section class="msv__section">
+    <div class="msv__container">
+      <div class="msv__facts">
+        <div class="msv__fact">
+          <span class="msv__fact-icon">📋</span>
+          <span class="msv__fact-label">Primary Keyword Focus</span>
+          <span class="msv__fact-value">Living in Spain on Non-Lucrative Visa</span>
+        </div>
+        <div class="msv__fact">
+          <span class="msv__fact-icon">⏱️</span>
+          <span class="msv__fact-label">Initial Setup Time</span>
+          <span class="msv__fact-value">4-8 weeks</span>
+        </div>
+        <div class="msv__fact">
+          <span class="msv__fact-icon">💰</span>
+          <span class="msv__fact-label">Monthly Living Cost Range</span>
+          <span class="msv__fact-value">EUR 1,200-3,500</span>
+        </div>
+        <div class="msv__fact">
+          <span class="msv__fact-icon">🏛️</span>
+          <span class="msv__fact-label">Work Prohibition</span>
+          <span class="msv__fact-value">Strictly enforced</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What life is really like section -->
+  <section class="msv__section">
+    <div class="msv__container--narrow">
+      <h2>What Life Is Really Like on the NLV</h2>
+      <p>Living on the Non-Lucrative Visa means enjoying Spain's Mediterranean lifestyle, world-class healthcare, and rich culture while maintaining financial independence. But it's not a permanent vacation—it requires adjustment, bureaucratic persistence, and intentional community-building.</p>
+
+      <p>The first weeks are intense. Between securing your NIE, navigating Spanish banking, registering with healthcare, and finding accommodation, you'll experience a baptism by bureaucracy. Patience, organization, and realistic expectations are essential. Many newcomers report initial overwhelm followed by growing confidence as systems become familiar.</p>
+
+      <p>Long-term, the NLV offers stability. Spain's cost of living remains reasonable compared to Northern Europe or North America. The healthcare system is excellent once you're registered. The climate supports an active outdoor lifestyle. And if you stay five years, you gain access to Long-Term Residency (indefinite stay rights).</p>
+
+      <p>The trade-off: you cannot work for Spanish employers or operate a Spanish business. This forces many NLV holders to maintain remote work for foreign companies or live off savings and investments. Social integration requires effort, particularly around language and cultural adaptation.</p>
+
+      <div class="msv__alert msv__alert--info">
+        <div class="msv__alert-icon">ℹ️</div>
+        <div>
+          <p><strong>Realistic Timeline:</strong> Expect 2-4 months for full bureaucratic setup, 6+ months for comfortable social integration, and 12+ months to feel genuinely settled. This varies based on language skills, existing networks, and flexibility.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- First month tasks section -->
+  <section class="msv__section--cream">
+    <div class="msv__container--narrow">
+      <h2>Your First Month Action Plan</h2>
+      <p>The first 30 days determine your success. Prioritize these tasks in order:</p>
+
+      <h3>Week 1: Essential Registration</h3>
+      <ul>
+        <li><strong>NIE (Foreigner Identification Number):</strong> Apply at your nearest Comisaría Nacional de Policía. Required for all subsequent registrations.</li>
+        <li><strong>Padrón (Municipal Registry):</strong> Register with your municipal town hall once you have accommodation. Proves tax residency and enables healthcare access.</li>
+        <li><strong>Accommodation Documentation:</strong> Secure a rental contract or proof of residence—essential for all bureaucratic processes.</li>
+      </ul>
+
+      <h3>Week 2-3: Financial & Medical Setup</h3>
+      <ul>
+        <li><strong>Spanish Bank Account:</strong> Major banks (BBVA, CaixaBank, Santander) welcome NLV holders. Bring passport, NIE, and proof of padrón registration. Many accounts are free.</li>
+        <li><strong>Healthcare Registration:</strong> Contact your local Centro de Salud. You'll need padrón proof and NIE. Full public healthcare access is granted upon registration.</li>
+        <li><strong>Tax ID:</strong> If applicable, register for Spanish income tax purposes with the Agencia Tributaria.</li>
+      </ul>
+
+      <h3>Week 3-4: Residence Permit & Integration</h3>
+      <ul>
+        <li><strong>TIE Card (Tarjeta de Identidad de Extranjero):</strong> Apply at your provincial immigration office (usually 2-4 week processing). Required for some banking and legal transactions.</li>
+        <li><strong>Library & Services:</strong> Register for local libraries, gym memberships, or community centers to begin social integration.</li>
+        <li><strong>Language Classes:</strong> Enroll in Spanish lessons, even basic conversation classes.</li>
+      </ul>
+
+      <div class="msv__alert msv__alert--warn">
+        <div class="msv__alert-icon">⚠️</div>
+        <div>
+          <p><strong>Documentation Checklist:</strong> Always carry your passport, NIE proof, padrón certificate, and TIE (once obtained). These are required for banking, healthcare, and official interactions. Maintain digital copies as backup.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Work prohibition section -->
+  <section class="msv__section">
+    <div class="msv__container--narrow">
+      <h2>The Work Prohibition: What You Can & Cannot Do</h2>
+      <p>The NLV explicitly prohibits employment and self-employment in Spain. This is the single most important restriction to understand.</p>
+
+      <h3>What You Cannot Do</h3>
+      <ul>
+        <li>Work for any Spanish employer (full-time, part-time, or freelance)</li>
+        <li>Operate a Spanish business or company</li>
+        <li>Provide services to Spanish clients (even freelance/remote)</li>
+        <li>Earn income from Spain-based activities</li>
+        <li>Hold directorships in Spanish companies</li>
+        <li>Conduct business from a Spanish office or address</li>
+      </ul>
+
+      <h3>What You Can Do (Legally Grey Areas)</h3>
+      <ul>
+        <li>Work remotely for foreign companies/clients outside Spain</li>
+        <li>Earn investment income (dividends, interest, rental from outside Spain)</li>
+        <li>Manage personal investments and savings</li>
+        <li>Teach private lessons (limited, not as formal employment)</li>
+        <li>Write or create content for non-Spanish audiences</li>
+      </ul>
+
+      <p>The grey area is significant. Many NLV holders remotely work for foreign companies while residing in Spain. Immigration authorities generally tolerate this if taxes are properly declared and no local economic activity occurs. However, it remains technically problematic. Always consult a Spanish tax lawyer if you plan remote income.</p>
+
+      <p>The penalties for undeclared work are severe: fines, visa cancellation, deportation, and 10-year re-entry bans. The risk isn't worth it. If you must work, explore converting to a work permit or considering alternative visas.</p>
+
+      <div class="msv__alert msv__alert--red">
+        <div class="msv__alert-icon">🚫</div>
+        <div>
+          <p><strong>Critical:</strong> Immigration authorities conduct investigations. If you work locally under the NLV, you risk losing your visa, being fined, and facing deportation. Declare all income and consult professionals before working.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Daily life & routine -->
+  <section class="msv__section--cream">
+    <div class="msv__container--narrow">
+      <h2>Daily Life & Routine on the NLV</h2>
+
+      <h3>Time & Culture</h3>
+      <p>Spanish life moves differently. The siesta (afternoon rest) is real in smaller towns. Dinner is late—8-9 PM is normal. Shopping closes 2-5 PM midday. Shops close Sundays in smaller cities. Social interactions prioritize relationship-building over efficiency. This requires mental adjustment, especially for those from high-pace environments.</p>
+
+      <h3>Social Life & Community</h3>
+      <p>Building a genuine social circle takes time. Expat groups (Facebook communities, InterNations) provide quick connections but can feel transient. Deep friendships develop through Spanish language classes, hobby groups, volunteering, or work communities. Don't underestimate the importance of intentional community-building—isolation is a real risk for digital nomads and remote workers.</p>
+
+      <h3>Pace & Lifestyle</h3>
+      <p>Spain's lifestyle emphasizes outdoor living, family time, and social gatherings. Plazas fill with people evening. Cafés are social hubs where spending 2 hours over coffee is normal. Walking and public transport are primary transport modes in cities. This creates a slower, more social rhythm many find refreshing but others find frustratingly inefficient.</p>
+
+      <h3>Seasonal Changes</h3>
+      <p>Northern regions (Galicia, Asturias) have mild, rainy winters. Central Spain gets hot summers (35-40°C in Madrid) and mild winters. Southern Mediterranean regions rarely see freezing temperatures. Many NLV holders experience seasonal mood changes or use winter for travel. Plan your location based on climate preference.</p>
+    </div>
+  </section>
+
+  <!-- Healthcare section -->
+  <section class="msv__section">
+    <div class="msv__container--narrow">
+      <h2>Healthcare Access on the NLV</h2>
+
+      <p>Spain's healthcare system ranks among Europe's best. Once you're registered on the padrón and with Seguridad Social, you access public healthcare free or at minimal cost.</p>
+
+      <h3>Public Healthcare (Seguridad Social)</h3>
+      <ul>
+        <li>Free GP visits and specialist referrals</li>
+        <li>Free emergency care</li>
+        <li>Subsidized medications (typically EUR 1-5 per prescription)</li>
+        <li>Free preventive care and health checks</li>
+        <li>All age-related screenings included</li>
+      </ul>
+
+      <h3>Private Healthcare</h3>
+      <p>Private insurance costs EUR 50-150/month depending on age and coverage. Quality is excellent, wait times shorter, and many doctors speak English. Popular providers: established private health insurers in Spain.</p>
+
+      <h3>Dental & Vision</h3>
+      <p>Public healthcare excludes most dental work and glasses. Budget EUR 500-2,000/year for dental (or EUR 30-50/month for dental insurance). Vision correction averages EUR 150-300 for glasses.</p>
+
+      <h3>Registration Process</h3>
+      <p>You'll need padrón certification and NIE. Visit your Centro de Salud, get assigned a doctor, and receive your health card (usually instant or within weeks). This card works across all public facilities throughout Spain.</p>
+
+      <div class="msv__alert msv__alert--green">
+        <div class="msv__alert-icon">✓</div>
+        <div>
+          <p><strong>Pro Tip:</strong> Register with public healthcare immediately. Private insurance is affordable and can complement public coverage for faster access and English-speaking doctors if needed.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Banking & Finance -->
+  <section class="msv__section--cream">
+    <div class="msv__container--narrow">
+      <h2>Banking & Finance for NLV Holders</h2>
+
+      <h3>Opening a Spanish Bank Account</h3>
+      <p>Required documents: Valid passport, NIE (or NIE appointment letter), proof of residence (padrón or rental contract). Major banks welcome NLV holders. Most accounts are free with no minimum balance. Online banking is standard. International transfers take 2-5 business days.</p>
+
+      <h3>Costs & Fees</h3>
+      <ul>
+        <li>Account opening: Free</li>
+        <li>Monthly maintenance: EUR 0-15 (usually free for basic accounts)</li>
+        <li>Debit card: Free or EUR 10-30/year</li>
+        <li>International transfers: EUR 5-25 depending on amount</li>
+        <li>Cash withdrawals at other banks: EUR 1-3</li>
+      </ul>
+
+      <h3>Tax Reporting</h3>
+      <p>All foreign income must be declared to the Agencia Tributaria (Spanish tax authority). Expected annual declarations of foreign assets, pensions, and income. Non-residents paying Spanish taxes face complex requirements—consider hiring a gestor (tax advisor). Filing fees: EUR 200-600/year depending on complexity.</p>
+
+      <h3>Currency & Transfers</h3>
+      <p>Spain uses the Euro. Monthly transfers from foreign accounts are normal and tax-reportable. Wise (formerly TransferWise) and Revolut offer competitive international transfer rates. Avoid high-fee services; use peer-to-peer transfer platforms when possible.</p>
+
+      <div class="msv__alert msv__alert--info">
+        <div class="msv__alert-icon">ℹ️</div>
+        <div>
+          <p><strong>Currency Strategy:</strong> Keep some funds in foreign currency (USD, GBP) if your home country is outside the Eurozone. Exchange rates fluctuate. Use platforms like Wise for better rates than banks.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Learning Spanish -->
+  <section class="msv__section">
+    <div class="msv__container--narrow">
+      <h2>Learning Spanish</h2>
+
+      <p>While not mandatory for NLV approval, Spanish is crucial for quality of life. Official registration and healthcare require at least basic Spanish-speaking ability. Deep integration—friendships, volunteer work, community participation—all require language.</p>
+
+      <h3>Getting Started</h3>
+      <ul>
+        <li><strong>Formal Classes:</strong> Public universities offer affordable Spanish courses. Private academies cost EUR 200-500/month.</li>
+        <li><strong>Apps:</strong> Duolingo, Babbel, Rosetta Stone help with basics (EUR 10-30/month).</li>
+        <li><strong>Language Exchange:</strong> Tandem and Conversation Exchange connect you with native speakers for free language partners.</li>
+        <li><strong>Immersion:</strong> Join Spanish clubs, attend classes, volunteer—immersion accelerates learning.</li>
+      </ul>
+
+      <h3>Timeline & Realism</h3>
+      <p>Basic conversational Spanish (A2 level) takes 3-6 months of regular study. Intermediate fluency (B1) requires 9-18 months. Proficiency beyond that demands years. Most NLV holders reach survival-level Spanish within 3 months and useful conversational Spanish within a year.</p>
+
+      <h3>Motivation & Persistence</h3>
+      <p>Language learning is challenging at any age. Success requires consistency, accepting mistakes as part of learning, and finding joy in small progress. The social and cultural rewards—deeper relationships, better healthcare navigation, improved employment flexibility—far outweigh the effort invested.</p>
+    </div>
+  </section>
+
+  <!-- Making friends & community -->
+  <section class="msv__section--cream">
+    <div class="msv__container--narrow">
+      <h2>Making Friends & Community</h2>
+
+      <p>Isolation is a real risk on the NLV, particularly for single people or those without built-in work communities. Intentional effort to build community is essential for long-term satisfaction.</p>
+
+      <h3>Expat Communities</h3>
+      <p>Most major Spanish cities have active expat networks (InterNations, Meetup, Facebook groups). These provide instant friendships but can feel transient. Benefits: easy connection, shared language, immediate social options. Risks: lack of depth, constant turnover, echo chambers.</p>
+
+      <h3>Spanish Integration</h3>
+      <p>Deeper friendships come from Spanish language classes, hobby clubs (sports, art, volunteer organizations), cultural activities, and neighborhood cafés. Spanish friendships develop slower but last longer. The key is regular, intentional presence in community spaces.</p>
+
+      <h3>Digital & Remote Community</h3>
+      <p>If you work remotely, you might maintain friendships through online communities (Slack channels, Discord servers, video calls). These are real but don't replace in-person connection. Balance remote friendships with local presence.</p>
+
+      <h3>Volunteer & Purpose</h3>
+      <p>Volunteering (language tutoring, environmental organizations, social causes) provides community, purpose, and cultural integration. Many NLV holders find meaning through volunteer work despite the work prohibition.</p>
+
+      <div class="msv__alert msv__alert--info">
+        <div class="msv__alert-icon">💡</div>
+        <div>
+          <p><strong>Community-Building Strategy:</strong> Combine expat connections (for quick friendships) with Spanish integration (for depth). Attend regular meetups, take Spanish classes, volunteer, and be consistent in showing up to the same spaces. Real friendships take 6-18 months to develop.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Driving in Spain -->
+  <section class="msv__section">
+    <div class="msv__container--narrow">
+      <h2>Driving in Spain</h2>
+
+      <h3>License & Registration</h3>
+      <p>Your home country license is valid for tourism. To become a resident, exchange your license at the DGT (Dirección General de Tráfico) within your first year. Cost: EUR 20-30. No tests required if your home country has reciprocal agreements.</p>
+
+      <h3>Car Ownership</h3>
+      <p>Buying a car requires NIE, a Spanish bank account, and proof of residence. Used cars from private sellers or dealers are common. Annual ITV (technical inspection) costs EUR 40-50. Insurance: EUR 300-600/year depending on age and vehicle.</p>
+
+      <h3>Driving Culture & Rules</h3>
+      <p>Spanish driving is generally safe but more aggressive than Northern Europe. Roundabouts are common. Speed limits: 50 km/h in towns, 90 km/h on regional roads, 120 km/h on motorways (some 110 km/h). Traffic fines are steep (EUR 100-600). Seatbelts mandatory.</p>
+
+      <h3>Public Transport Alternative</h3>
+      <p>In cities, excellent public transport (buses, metro, trains) makes car ownership unnecessary. Monthly transit passes cost EUR 20-60 depending on city. Intercity trains and buses are affordable and reliable, making car ownership optional unless living in rural areas.</p>
+    </div>
+  </section>
+
+  <!-- Groceries & daily costs -->
+  <section class="msv__section--cream">
+    <div class="msv__container--narrow">
+      <h2>Groceries, Shopping & Daily Costs</h2>
+
+      <h3>Cost Breakdown (Monthly Estimates for One Person)</h3>
+      <ul>
+        <li><strong>Groceries:</strong> EUR 200-300 (depending on diet and shopping habits)</li>
+        <li><strong>Utilities:</strong> EUR 60-120 (electricity, water, gas, internet)</li>
+        <li><strong>Dining Out:</strong> EUR 100-300 (lunch EUR 10-15, dinner EUR 15-30)</li>
+        <li><strong>Transport:</strong> EUR 20-60 (public transit pass or car costs)</li>
+        <li><strong>Healthcare:</strong> EUR 30-100 (private insurance, out-of-pocket)</li>
+        <li><strong>Miscellaneous:</strong> EUR 200-400 (hobbies, entertainment, haircuts)</li>
+      </ul>
+
+      <h3>Grocery Shopping</h3>
+      <p>Supermarkets: Mercadona, Carrefour, Lidl, Día offer competitive prices. Markets (mercados) offer fresh, local, and cheaper produce. Shopping daily at local markets is normal and economical. Organic and specialty items cost significantly more.</p>
+
+      <h3>Restaurant & Café Culture</h3>
+      <p>Spain's café culture is incredibly affordable. Coffee: EUR 1-2. Lunch menu (menú del día): EUR 8-15 (includes appetizer, main, dessert, drink). Dinner at nice restaurants: EUR 20-35. Tipping is not expected but rounding up is customary.</p>
+
+      <h3>Regional Variations</h3>
+      <p>Rural areas and smaller towns are 20-40% cheaper than Madrid, Barcelona, or coastal cities. Valencia and Seville offer Mediterranean quality of life at lower costs. Coastal and mountain regions vary widely based on tourism demand.</p>
+
+      <div class="msv__alert msv__alert--green">
+        <div class="msv__alert-icon">✓</div>
+        <div>
+          <p><strong>Money-Saving Tips:</strong> Shop at Mercadona and Lidl for everyday items. Use menú del día for lunch (EUR 8-15 vs EUR 25+ for full price dining). Take advantage of happy hours (18:00-20:00) for discounted drinks.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Internet & connectivity -->
+  <section class="msv__section">
+    <div class="msv__container--narrow">
+      <h2>Internet & Connectivity</h2>
+
+      <h3>Home Internet</h3>
+      <p>Fiber (fibra óptica) and ADSL are standard. Major providers: Vodafone, Movistar, Orange. Typical costs: EUR 35-60/month for home internet. Contracts often require 6-12 month commitment. Installation is usually free or EUR 50-100. Speeds: 100-500 Mbps depending on provider and location.</p>
+
+      <h3>Mobile Service</h3>
+      <p>Spain has excellent mobile networks (Vodafone, Movistar, Orange) and low-cost alternatives (Yoigo, Puedo, Lowi). Monthly unlimited plans: EUR 20-40. You'll need an NIE to activate service. eSIM is available from some providers. International roaming within EU is included at no extra cost.</p>
+
+      <h3>Backup & Reliability</h3>
+      <p>Internet is generally reliable in urban and suburban areas. Rural areas may have slower speeds or inconsistent service. Digital nomads should verify fiber availability before committing to a location. Consider mobile hotspot as backup, especially for remote work.</p>
+
+      <h3>Setup & Registration</h3>
+      <p>Provide passport, NIE, and proof of residence to activate service. Most setup is handled online. Installation appointments typically occur within 2-4 weeks. Change of provider: contact new provider; they typically handle the transfer.</p>
+    </div>
+  </section>
+
+  <!-- Post-arrival bureaucracy -->
+  <section class="msv__section--cream">
+    <div class="msv__container--narrow">
+      <h2>Post-Arrival Bureaucracy: TIE Card & Beyond</h2>
+
+      <h3>TIE Card (Tarjeta de Identidad de Extranjero)</h3>
+      <p>Your official residence permit. Application submitted within 30 days of arrival at your provincial immigration office. Processing: 2-6 weeks. Cost: approximately EUR 10. Required for some banking, rentals, and legal transactions. Renewal: every 5 years.</p>
+
+      <h3>Padrón (Municipal Registry)</h3>
+      <p>Proof of tax residency. Register at your municipal town hall with a valid rental contract or property deed. Instant issuance. Essential for healthcare, banking, and utilities. Update if you move. Annual declarations may be required.</p>
+
+      <h3>Tax Registration</h3>
+      <p>File annual income tax returns (Declaración de la Renta) by June 30 each year. Required if earning over EUR 22,000/year or if you have Spanish-source income. Complex for non-residents; hire a gestor (EUR 200-600/year). Consider tax residency implications if you're from another EU country.</p>
+
+      <h3>Annual Renewal</h3>
+      <p>The NLV doesn't require annual formal renewal if it was issued for 5 years. However, authorities may require income verification during TIE renewal (every 5 years). Keep all bank statements and income documentation accessible. Renewal requires proof of continued financial sufficiency.</p>
+
+      <div class="msv__alert msv__alert--warn">
+        <div class="msv__alert-icon">⚠️</div>
+        <div>
+          <p><strong>Documentation Archive:</strong> Keep originals and copies of all immigration documents (passport, NIE, TIE, padrón certificates, health registration, bank statements). Create a digital backup stored securely. Spanish bureaucracy can require historical documentation years later.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seasons & climate adjustment -->
+  <section class="msv__section">
+    <div class="msv__container--narrow">
+      <h2>Seasons & Climate Adjustment</h2>
+
+      <h3>Regional Climate Variations</h3>
+      <ul>
+        <li><strong>Northern Coast (Galicia, Asturias):</strong> Mild winters (5-10°C), cool summers (18-22°C), frequent rain. Similar to UK/Irish weather. Lush, green landscapes.</li>
+        <li><strong>Central Spain (Madrid, Castilla):</strong> Cold winters (0-8°C, occasional snow), hot summers (30-40°C). Distinct seasons. Dry, clear air.</li>
+        <li><strong>Mediterranean (Barcelona, Valencia, Costa del Sol):</strong> Mild winters (8-14°C), very hot summers (28-35°C). Minimal rain May-September. Year-round outdoor lifestyle.</li>
+        <li><strong>Southern Inland (Seville, Córdoba):</strong> Very hot summers (35-40°C), mild winters. Challenging heat in July-August.</li>
+      </ul>
+
+      <h3>Seasonal Adjustments</h3>
+      <p>Winter heating can be expensive if poorly insulated. Many apartments have minimal heating systems. Plan for EUR 30-80/month in winter heating costs. Summer air conditioning is standard. UV intensity is high—sunscreen and hydration essential.</p>
+
+      <h3>Psychological Impact</h3>
+      <p>Lack of seasonal transition can disorient people from four-season climates. Perpetual sun in southern Spain feels energizing to some, isolating to others. Seasonal Affective Disorder (SAD) is less common in Spain but affects some, especially in cloudier northern regions.</p>
+
+      <h3>Planning Strategy</h3>
+      <p>Choose your location partly based on climate preference. Plan travel during challenging seasonal periods if needed. Engage in seasonal activities (beach in summer, indoor activities in winter). Connect with communities that celebrate seasonal festivals and holidays.</p>
+    </div>
+  </section>
+
+  <!-- Culture shock & expectations -->
+  <section class="msv__section--cream">
+    <div class="msv__container--narrow">
+      <h2>Culture Shock & Realistic Expectations</h2>
+
+      <h3>Common Culture Shock Phases</h3>
+      <ul>
+        <li><strong>Honeymoon (Weeks 1-4):</strong> Everything is exciting, novel, and charming. Reality hasn't set in.</li>
+        <li><strong>Disillusionment (Weeks 4-16):</strong> Bureaucracy frustrates, language barriers annoy, cultural differences feel alienating. This is normal.</li>
+        <li><strong>Adjustment (Months 4-12):</strong> You understand systems, build routines, make friends. Frustration decreases. Homesickness peaks around month 3-4.</li>
+        <li><strong>Integration (Month 12+):</strong> Spain feels less foreign. You have communities, routines, and perspective. Some never fully integrate; others become essentially Spanish in mindset.</li>
+      </ul>
+
+      <h3>Common Frustrations</h3>
+      <ul>
+        <li>Bureaucratic inefficiency and circular requirements</li>
+        <li>Language barriers in official settings</li>
+        <li>Different concept of time and punctuality</li>
+        <li>Limited English outside major cities and tourism zones</li>
+        <li>Homesickness for familiar food and family</li>
+        <li>Administrative complexity (NIE, TIE, padrón, taxes)</li>
+      </ul>
+
+      <h3>Coping Strategies</h3>
+      <p>Expect culture shock—it's not weakness, it's normal. Maintain connection to home through video calls, but don't over-rely on expat bubbles. Journaling helps process emotions. Give yourself permission to have bad days. Join communities early (language classes, hobby groups). Set realistic expectations: Spain won't be perfect, but it's beautiful in different ways.</p>
+
+      <div class="msv__alert msv__alert--info">
+        <div class="msv__alert-icon">💭</div>
+        <div>
+          <p><strong>Perspective Shift:</strong> Spain operates on different values (family, relationships, presence) than efficiency-obsessed cultures. This can be frustrating initially. With time, many NLV holders find this pace more fulfilling than their previous lives.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Long-term settling in -->
+  <section class="msv__section">
+    <div class="msv__container--narrow">
+      <h2>Long-Term Settling In & Beyond Year 1</h2>
+
+      <h3>Building Roots (Months 12-36)</h3>
+      <p>Year one is survival mode. Years two and three are about depth. You'll develop favorite restaurants, recognize regular people at cafés, have trusted professionals (doctor, plumber, accountant). Language fluency improves significantly. Friendships deepen. The question shifts from "Can I survive here?" to "Do I want to stay?"</p>
+
+      <h3>Community Integration</h3>
+      <p>Active participation in local life accelerates settling. Consider: joining sports clubs, volunteering with local organizations, enrolling in adult education classes, becoming a regular at neighborhood hangouts. These build genuine social fabric beyond expat circles.</p>
+
+      <h3>Financial Stability</h3>
+      <p>Year one expenses often exceed budget due to setup costs and inefficiency. By year two-three, you understand costs and optimize spending. Healthcare costs stabilize once you have established doctors and routines. Budget accuracy improves significantly after the first year of learning your actual spending patterns.</p>
+
+      <h3>Considering Long-Term Residency (LTR)</h3>
+      <p>After five years of continuous residence on the NLV, you're eligible for Long-Term Residency (Residencia de Larga Duración). This grants indefinite stay rights even if income drops below the threshold. Application requires proof of 5 consecutive years on the NLV. Processing: 2-4 months. Strongly recommended for anyone planning to stay long-term.</p>
+
+      <h3>Future Pathways</h3>
+      <ul>
+        <li><strong>Continue on NLV:</strong> Renew every 5 years as long as income requirement is met and you don't work in Spain.</li>
+        <li><strong>Long-Term Residency:</strong> After 5 years, convert to LTR for indefinite stay security.</li>
+        <li><strong>Work Permit:</strong> If circumstances change and you want to work, convert to an employment visa (requires job offer).</li>
+        <li><strong>Spanish Citizenship:</strong> After 10 years of residence, you're eligible for Spanish citizenship (renewable every 5 years).</li>
+        <li><strong>Return Home:</strong> Always an option. No penalties for leaving; just cancel your TIE at departure.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Rights and limitations -->
+  <section class="msv__section--cream">
+    <div class="msv__container--narrow">
+      <h2>Rights & Limitations of NLV Holders</h2>
+
+      <h3>Your Rights</h3>
+      <ul>
+        <li>Unrestricted residency in Spain (as long as income requirement is maintained)</li>
+        <li>Access to public healthcare once registered</li>
+        <li>Bank account and financial services access</li>
+        <li>Rental and property purchase in most regions</li>
+        <li>Enrollment in Spanish universities and education</li>
+        <li>Participation in Spanish civic life (associations, volunteer work)</li>
+        <li>Freedom to travel within Schengen area</li>
+        <li>Tax residency status in Spain</li>
+      </ul>
+
+      <h3>Your Limitations</h3>
+      <ul>
+        <li>Cannot work for Spanish employers or clients</li>
+        <li>Cannot operate Spanish businesses</li>
+        <li>Cannot hold certain public office positions</li>
+        <li>Limited voting rights in national elections (EU citizens can vote in local elections)</li>
+        <li>Must maintain income requirement (subject to verification)</li>
+        <li>TIE card must be renewed every 5 years</li>
+        <li>Cannot claim unemployment benefits</li>
+        <li>Deportable if convicted of serious crimes</li>
+      </ul>
+
+      <h3>Income Verification</h3>
+      <p>Currently, Spanish authorities conduct limited verification of the income requirement. However, this can change. Maintain bank statements, investment records, and pension documentation as proof. Be prepared to demonstrate income if requested. Tax authority databases also track your declared income.</p>
+
+      <div class="msv__alert msv__alert--info">
+        <div class="msv__alert-icon">ℹ️</div>
+        <div>
+          <p><strong>Forward Planning:</strong> If your income may drop below the EUR 27,360 threshold (EUR 2,280/month), consider converting to Long-Term Residency or exploring work permit conversion before the shortfall occurs. Options exist, but proactive planning is essential.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ section -->
+  <section class="msv__section">
+    <div class="msv__container--narrow">
+      <h2>Frequently Asked Questions</h2>
+
+      <div class="msv__faq-list">
+        <details>
+          <summary>Can I work while on the Non-Lucrative Visa?</summary>
+          <div class="msv__faq-answer">
+            <p>The NLV strictly prohibits employment and self-employment in Spain. You cannot work for a Spanish employer, operate a Spanish business, or provide services to Spanish clients. Many NLV holders remotely work for foreign companies, which is technically a grey area legally—consult a tax lawyer before pursuing this. Undeclared work carries severe penalties: fines, visa cancellation, and deportation.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>What are the first steps after arriving in Spain on an NLV?</summary>
+          <div class="msv__faq-answer">
+            <p>Priority order: (1) Secure housing and proof of residence, (2) Apply for NIE (Foreigner ID) at the police station, (3) Register on the padrón (municipal registry) at your town hall, (4) Open a Spanish bank account at a major bank, (5) Register with the health system (Seguridad Social) at your Centro de Salud, (6) Apply for TIE card (residence permit) at the provincial immigration office. These should be completed within 4-8 weeks.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Is healthcare accessible and affordable on the NLV?</summary>
+          <div class="msv__faq-answer">
+            <p>Yes. Once registered on the padrón and with the health system, you access Spain's excellent public healthcare system free or at minimal cost. GP visits, emergency care, hospitalizations, and most specialist treatments are free. Medications are subsidized (EUR 1-5 per prescription). Dental and vision care are excluded from public coverage. Private healthcare and insurance are also very affordable (EUR 50-150/month).</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>How much does it cost to live in Spain on an NLV monthly?</summary>
+          <div class="msv__faq-answer">
+            <p>Living costs vary by location. In smaller towns: EUR 1,000-1,500/month. Mid-sized cities: EUR 1,500-2,200. Major cities (Madrid, Barcelona): EUR 2,000-3,500+. This includes rent, utilities, food, transport, healthcare, and entertainment. The official income requirement is EUR 27,360 annually (EUR 2,280/month), which is the bare minimum. Plan for EUR 3,000+ monthly for comfortable living, especially if you value dining out and travel.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Do I need to learn Spanish to live on the NLV?</summary>
+          <div class="msv__faq-answer">
+            <p>While not technically required for visa approval, Spanish is highly recommended. Basic conversational Spanish helps navigate bureaucracy, healthcare, and daily interactions. For deep social integration and friendship-building, Spanish is essential. Many expat communities speak English, but quality of life and integration improve significantly with language skills. Most people reach basic conversational level within 3-6 months of regular study.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>What happens with my NLV after 5 years?</summary>
+          <div class="msv__faq-answer">
+            <p>After 5 years of continuous residence on the NLV, you become eligible to apply for Long-Term Residency (Residencia de Larga Duración), which grants indefinite stay rights. This is highly recommended for anyone planning long-term residence. You can continue renewing the NLV indefinitely as long as you maintain the income requirement and don't work in Spain. You're also eligible to apply for Spanish citizenship after 10 years of residence.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Can I bring family members on the NLV?</summary>
+          <div class="msv__faq-answer">
+            <p>Family members (spouse, children, dependent parents, siblings) can join through Family Reunification. They don't require separate NIE numbers initially but must register individually. Each family member needs separate documentation. Income requirements scale with household size (approximately EUR 2,600-3,000/month for a couple, EUR 3,500+ for family of four). Consult immigration authorities for specific requirements.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>What are the biggest challenges of moving to Spain on the NLV?</summary>
+          <div class="msv__faq-answer">
+            <p>Common challenges: (1) Bureaucratic complexity and circular requirements (NIE, TIE, padrón, taxes), (2) Language barriers in official settings and daily interactions, (3) Culture shock and adjustment period (typically 6-12 months), (4) Work prohibition limiting income options, (5) Healthcare registration delays and documentation requirements, (6) Banking and financial administration for non-residents, (7) Social integration taking time, (8) Climate adjustment depending on location. Proper planning, patience, professional guidance, and community connections help overcome these challenges.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Band -->
+  <section class="msv__cta-band">
+    <div class="msv__container">
+      <h2>Ready to Begin Your NLV Journey?</h2>
+      <p>Understand the visa requirements, income thresholds, application process, and eligibility criteria before you move. Our comprehensive guides walk you through every step.</p>
+      <div class="msv__btn-group">
+        <a href="/non-lucrative-visa-spain/" class="msv__btn msv__btn--primary">NLV Complete Guide</a>
+        <a href="https://dashboard.platinumlegalspain.com/nlv" class="msv__btn msv__btn--outline-white">Check Your Eligibility</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Guides -->
+  <section class="msv__section">
+    <div class="msv__container">
+      <h2 style="margin-bottom: 2rem;">Related Guides & Resources</h2>
+      <div class="msv__related">
+        <a href="/non-lucrative-visa-spain/" class="msv__related-card">
+          <span class="msv__related-icon">📋</span>
+          <span class="msv__related-title">NLV Complete Overview</span>
+          <span class="msv__related-desc">Full requirements, eligibility, and application process</span>
+        </a>
+        <a href="/non-lucrative-visa-renewal/" class="msv__related-card">
+          <span class="msv__related-icon">🔄</span>
+          <span class="msv__related-title">NLV Renewal Process</span>
+          <span class="msv__related-desc">How to renew every 5 years</span>
+        </a>
+        <a href="/non-lucrative-visa-health-insurance/" class="msv__related-card">
+          <span class="msv__related-icon">🏥</span>
+          <span class="msv__related-title">Health Insurance & Healthcare</span>
+          <span class="msv__related-desc">Public and private healthcare access</span>
+        </a>
+        <a href="/non-lucrative-visa-tax-spain/" class="msv__related-card">
+          <span class="msv__related-icon">💵</span>
+          <span class="msv__related-title">Tax Obligations & Planning</span>
+          <span class="msv__related-desc">Income tax, declarations, and residency tax</span>
+        </a>
+        <a href="/best-cities-for-nlv-spain/" class="msv__related-card">
+          <span class="msv__related-icon">🏙️</span>
+          <span class="msv__related-title">Best Cities & Regions</span>
+          <span class="msv__related-desc">Where to live: cost, lifestyle, climate</span>
+        </a>
+        <a href="/cost-of-living-spain-retirees/" class="msv__related-card">
+          <span class="msv__related-icon">💰</span>
+          <span class="msv__related-title">Cost of Living Breakdown</span>
+          <span class="msv__related-desc">Detailed monthly expense analysis</span>
+        </a>
+        <a href="/non-lucrative-visa-requirements/" class="msv__related-card">
+          <span class="msv__related-icon">✅</span>
+          <span class="msv__related-title">NLV Requirements Checklist</span>
+          <span class="msv__related-desc">What you need to qualify</span>
+        </a>
+        <a href="/non-lucrative-visa-income-requirements/" class="msv__related-card">
+          <span class="msv__related-icon">💳</span>
+          <span class="msv__related-title">Income & Financial Requirements</span>
+          <span class="msv__related-desc">EUR 27,360 annual threshold explained</span>
+        </a>
+        <a href="/long-term-residency-after-nlv/" class="msv__related-card">
+          <span class="msv__related-icon">🔐</span>
+          <span class="msv__related-title">Long-Term Residency After 5 Years</span>
+          <span class="msv__related-desc">Convert to indefinite stay</span>
+        </a>
+        <a href="/convert-nlv-to-work-permit/" class="msv__related-card">
+          <span class="msv__related-icon">💼</span>
+          <span class="msv__related-title">Converting NLV to Work Permit</span>
+          <span class="msv__related-desc">If you want to start working</span>
+        </a>
+        <a href="/non-lucrative-visa-cost/" class="msv__related-card">
+          <span class="msv__related-icon">⚖️</span>
+          <span class="msv__related-title">NLV Application Costs</span>
+          <span class="msv__related-desc">Fees, processing, and hidden costs</span>
+        </a>
+        <a href="/guide/healthcare-spain/" class="msv__related-card">
+          <span class="msv__related-icon">👨‍⚕️</span>
+          <span class="msv__related-title">Spain Healthcare System</span>
+          <span class="msv__related-desc">How public and private healthcare works</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Disclaimer -->
+  </section>
+
+</div>
+
+<!-- FRAGMENT_END -->
+</main>
+
+
+<!-- ═══════════════════════════════════════════════════
+     SITE FOOTER
+     ═══════════════════════════════════════════════════ -->
+<footer class="msv-footer" role="contentinfo">
+
+  <div class="msv-footer__top">
+
+    <!-- Brand column -->
+    <div class="msv-footer__brand">
+      <a href="/" class="msv-footer__logo" aria-label="My Spanish Visa"><img src="/assets/images/msv-logo-white.png" alt="My Spanish Visa" height="40" style="display:block;"></a>
+      <p class="msv-footer__tagline">
+        Specialist Spain visa &amp; residency guidance for English-speaking foreigners.
+        A service of Platinum Legal Spain.
+      </p>
+      <div class="msv-footer__trust">
+        <span class="msv-footer__trust-item">All English. No barriers.</span>
+        <span class="msv-footer__trust-item">Solicitors &amp; immigration specialists</span>
+        <span class="msv-footer__trust-item">100% online process</span>
+      </div>
+    </div>
+
+    <!-- Visas column -->
+    <div>
+      <div class="msv-footer__col-title">Visas</div>
+      <ul class="msv-footer__links">
+        <li><a href="/non-lucrative-visa-spain/">Non-Lucrative Visa</a></li>
+        <li><a href="/digital-nomad-visa-spain/">Digital Nomad Visa</a></li>
+        <li><a href="/student-visa-spain/">Student Visa</a></li>
+        <li><a href="/spain-visa-renewal/">Visa Renewals</a></li>
+        <li><a href="/best-visa-move-to-spain/">Compare All Visas</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/nlv">Apply: NLV</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/dnv">Apply: DNV</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/student-visa">Apply: Student Visa</a></li>
+      </ul>
+    </div>
+
+    <!-- Resources column -->
+    <div>
+      <div class="msv-footer__col-title">Resources</div>
+      <ul class="msv-footer__links">
+        <li><a href="/blog/">Blog &amp; Guides</a></li>
+        <li><a href="/move-to-spain/">Move to Spain Guide</a></li>
+        <li><a href="/visa-eligibility-quiz/">Eligibility Quiz</a></li>
+        <li><a href="/spain-visa-checklist/">Document Checklists</a></li>
+        <li><a href="/spain-visa-requirements/">Visa Requirements</a></li>
+        <li><a href="/spain-nie-number/">NIE Number Guide</a></li>
+        <li><a href="/spain-tie-card/">TIE Card Guide</a></li>
+      </ul>
+    </div>
+
+    <!-- Company column -->
+    <div>
+      <div class="msv-footer__col-title">Company</div>
+      <ul class="msv-footer__links">
+        <li><a href="/about-us/">About Us</a></li>
+        <li><a href="/testimonials/">Client Reviews</a></li>
+        <li><a href="/why-choose-us/">Why Choose Us</a></li>
+        <li><a href="/contact-us.html">Contact</a></li>
+        <li><a href="https://www.platinumlegalspain.com" rel="noopener">Platinum Legal Spain</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/nlv">Client Portal</a></li>
+      </ul>
+    </div>
+
+  </div><!-- /.msv-footer__top -->
+
+  <div class="msv-footer__bottom">
+    <div class="msv-footer__bottom-inner">
+      <p class="msv-footer__disclaimer">
+        <strong style="color:rgba(255,255,255,0.5);">Disclaimer:</strong>
+        My Spanish Visa provides visa processing support and is not a law firm. Content on this site is for informational purposes only and does not constitute legal advice. Immigration rules change frequently — always verify requirements with official sources or a qualified specialist. My Spanish Visa is a trading name of Platinum Legal Spain.
+      </p>
+      <span class="msv-footer__copyright">© 2026 My Spanish Visa. All rights reserved.</span>
+    </div>
+  </div>
+
+</footer>
+
+</body>
+</html>

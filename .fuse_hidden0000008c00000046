@@ -1,0 +1,1840 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- ═══════════════════════════════════════════════════════════════════
+       PAGE-SPECIFIC HEAD — replace block below per page:
+       <title>Dnv Los Angeles | My Spanish Visa</title>
+       <meta name="description" content="…">
+       <meta property="og:title" content="…">
+       <meta property="og:description" content="…">
+       <meta property="og:url" content="https://www.myspanishvisa.com/…">
+       <meta property="og:image" content="…">
+       <link rel="canonical" href="https://www.myspanishvisa.com/…">
+       <script type="application/ld+json">…</script>
+       ═══════════════════════════════════════════════════════════════════ -->
+  <title>My Spanish Visa — Spain Visa &amp; Residency Specialists</title>
+  <meta name="description" content="My Spanish Visa helps English-speaking foreigners move to Spain. Expert guidance on Non-Lucrative Visa, Digital Nomad Visa, Student Visa, renewals and more.">
+
+  <!-- Shared Open Graph defaults -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="My Spanish Visa">
+  <meta property="og:image" content="https://www.myspanishvisa.com/assets/images/og/og-myspanishvisa-default.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@myspanishvisa">
+
+  <style>
+/* ═══════════════════════════════════════════════════════════════
+   GLOBAL SHELL — nav + footer only.
+   Page-specific CSS lives inside each fragment's own <style> block.
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── iOS overflow safety ── */
+html, body { max-width: 100%; overflow-x: clip; margin: 0; padding: 0; }
+*, *::before, *::after { box-sizing: border-box; }
+
+/* ── Brand tokens (root-level so all fragments inherit) ── */
+:root {
+  --navy:      #0c1930;
+  --navy-mid:  #1a3a5c;
+  --red:       #be0011;
+  --red-deep:  #8c000d;
+  --yellow:    #facf39;
+  --cream:     #f8f7f4;
+  --white:     #ffffff;
+  --black:     #1a1a1a;
+  --muted:     #5a6478;
+  --border:    #dce3ed;
+  --shadow-sm: 0 2px 8px rgba(12,25,48,0.08);
+  --shadow-md: 0 6px 24px rgba(12,25,48,0.13);
+}
+
+body {
+  font-family: 'Inter', 'Segoe UI', system-ui, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.75;
+  color: var(--black);
+  background: #fff;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   SITE NAV
+   ───────────────────────────────────────────────────────────── */
+.msv-nav {
+  position: sticky;
+  top: 0;
+  z-index: 9000;
+  background: var(--navy);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 2px 12px rgba(12,25,48,0.22);
+}
+.msv-nav__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  gap: 1.5rem;
+}
+
+/* Logo */
+.msv-nav__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+.msv-nav__logo-flag {
+  font-size: 1.3rem;
+  line-height: 1;
+}
+.msv-nav__logo-text {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+.msv-nav__logo-text span {
+  color: var(--yellow);
+}
+
+/* Links */
+.msv-nav__links {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.msv-nav__links > li {
+  position: relative;
+}
+.msv-nav__links > li > a,
+.msv-nav__links > li > button {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.5rem 0.9rem;
+  font-size: 0.87rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.85);
+  text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: color 0.15s, background 0.15s;
+  white-space: nowrap;
+  height: 80px;
+}
+.msv-nav__links > li > a:hover,
+.msv-nav__links > li > button:hover,
+.msv-nav__links > li:focus-within > a,
+.msv-nav__links > li:focus-within > button {
+  color: #fff;
+  background: rgba(255,255,255,0.08);
+}
+.msv-nav__chevron {
+  font-size: 0.65rem;
+  opacity: 0.7;
+  transition: transform 0.2s;
+}
+.msv-nav__links > li:focus-within .msv-nav__chevron,
+.msv-nav__links > li:hover .msv-nav__chevron {
+  transform: rotate(180deg);
+}
+
+/* Dropdown */
+.msv-nav__dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 230px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  box-shadow: var(--shadow-md);
+  padding: 0.5rem 0;
+  z-index: 200;
+}
+.msv-nav__links > li:hover .msv-nav__dropdown,
+.msv-nav__links > li:focus-within .msv-nav__dropdown {
+  display: block;
+}
+.msv-nav__dropdown a {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.6rem 1.1rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--navy);
+  text-decoration: none;
+  transition: background 0.12s;
+}
+.msv-nav__dropdown a:hover {
+  background: var(--cream);
+  color: var(--red);
+}
+.msv-nav__dropdown-icon {
+  width: 24px;
+  height: 24px;
+  background: var(--cream);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+.msv-nav__dropdown-divider {
+  height: 1px;
+  background: var(--border);
+  margin: 0.4rem 0;
+}
+
+/* CTA button */
+.msv-nav__cta {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.55rem 1.2rem;
+  background: var(--red);
+  color: #fff !important;
+  font-size: 0.85rem;
+  font-weight: 700;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.15s, box-shadow 0.15s;
+  white-space: nowrap;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(190,0,17,0.3);
+}
+.msv-nav__cta:hover {
+  background: var(--red-deep);
+  box-shadow: 0 4px 14px rgba(190,0,17,0.4);
+  text-decoration: none;
+}
+
+/* Hamburger */
+.msv-nav__burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.4rem;
+  border-radius: 5px;
+}
+.msv-nav__burger span {
+  width: 22px;
+  height: 2px;
+  background: #fff;
+  border-radius: 2px;
+  transition: transform 0.2s, opacity 0.2s;
+  display: block;
+}
+
+/* Mobile nav */
+.msv-nav__mobile {
+  display: none;
+  flex-direction: column;
+  background: var(--navy-mid);
+  padding: 1rem 1.5rem 1.5rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+.msv-nav__mobile.open { display: flex; }
+.msv-nav__mobile a {
+  padding: 0.65rem 0;
+  color: rgba(255,255,255,0.9);
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+.msv-nav__mobile a:hover { color: var(--yellow); }
+.msv-nav__mobile .msv-nav__mobile-sub {
+  padding-left: 1rem;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: rgba(255,255,255,0.7);
+}
+.msv-nav__mobile-cta {
+  margin-top: 1rem;
+  background: var(--red);
+  color: #fff !important;
+  border-radius: 6px;
+  text-align: center;
+  padding: 0.75rem 1rem !important;
+  border-bottom: none !important;
+}
+
+@media (max-width: 900px) {
+  .msv-nav__links { display: none; }
+  .msv-nav__cta { display: none; }
+  .msv-nav__burger { display: flex; }
+}
+@media (max-width: 480px) {
+  .msv-nav__inner { padding: 0 1rem; }
+}
+
+/* ─────────────────────────────────────────────────────────────
+   SITE FOOTER
+   ───────────────────────────────────────────────────────────── */
+.msv-footer {
+  background: var(--navy);
+  color: rgba(255,255,255,0.75);
+  overflow-x: clip;
+}
+.msv-footer__top {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem 3rem;
+  display: grid;
+  grid-template-columns: 280px 1fr 1fr 1fr;
+  gap: 3rem;
+}
+@media (max-width: 900px) {
+  .msv-footer__top { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
+}
+@media (max-width: 560px) {
+  .msv-footer__top { grid-template-columns: 1fr; gap: 2rem; padding: 3rem 1.2rem 2rem; }
+}
+
+.msv-footer__brand {}
+.msv-footer__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  margin-bottom: 1rem;
+}
+.msv-footer__logo-flag { font-size: 1.3rem; }
+.msv-footer__logo-text {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -0.01em;
+}
+.msv-footer__logo-text span { color: var(--yellow); }
+.msv-footer__tagline {
+  font-size: 0.83rem;
+  color: rgba(255,255,255,0.55);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+.msv-footer__trust {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+.msv-footer__trust-item {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.65);
+}
+.msv-footer__trust-item::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  background: var(--yellow);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.msv-footer__col-title {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.4);
+  margin-bottom: 1rem;
+}
+.msv-footer__links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.msv-footer__links a {
+  font-size: 0.87rem;
+  color: rgba(255,255,255,0.68);
+  text-decoration: none;
+  transition: color 0.15s;
+  display: inline-block;
+}
+.msv-footer__links a:hover {
+  color: var(--yellow);
+  text-decoration: none;
+}
+
+.msv-footer__bottom {
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+.msv-footer__bottom-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 1rem;
+  justify-content: space-between;
+}
+.msv-footer__disclaimer {
+  font-size: 0.73rem;
+  color: rgba(255,255,255,0.35);
+  line-height: 1.65;
+  max-width: 720px;
+}
+.msv-footer__copyright {
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.35);
+  white-space: nowrap;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   MAIN CONTENT AREA
+   ───────────────────────────────────────────────────────────── */
+main {
+  /* Fragments are self-contained; this wrapper just provides flow context */
+  position: relative;
+}
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════
+     SITE NAVIGATION
+     ═══════════════════════════════════════════════════ -->
+<header class="msv-nav" role="banner">
+  <div class="msv-nav__inner">
+
+    <!-- Logo -->
+    <a href="/" class="msv-nav__logo" aria-label="My Spanish Visa — Home"><img src="/assets/images/msv-logo-white.png" alt="My Spanish Visa" height="64" style="display:block;"></a>
+
+    <!-- Desktop links -->
+    <nav aria-label="Main navigation">
+      <ul class="msv-nav__links">
+
+        <li>
+          <button class="msv-nav__dropdown-trigger" aria-haspopup="true" aria-expanded="false">
+            Visas <span class="msv-nav__chevron">▾</span>
+          </button>
+          <div class="msv-nav__dropdown" role="menu">
+            <a href="/nlv-pillar-page.html" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🏖️</span>Non-Lucrative Visa
+            </a>
+            <a href="/dnv-pillar-page.html" role="menuitem">
+              <span class="msv-nav__dropdown-icon">💻</span>Digital Nomad Visa
+            </a>
+            <a href="/student-visa-pillar-page.html" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🎓</span>Student Visa
+            </a>
+            <div class="msv-nav__dropdown-divider"></div>
+            <a href="/spanish-residency-renewal.html" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🔄</span>Visa Renewals
+            </a>
+            <a href="/best-visa-move-to-spain.html" role="menuitem">
+              <span class="msv-nav__dropdown-icon">⚖️</span>Compare All Visas
+            </a>
+          </div>
+        </li>
+
+        <li>
+          <button aria-haspopup="true" aria-expanded="false">
+            Resources <span class="msv-nav__chevron">▾</span>
+          </button>
+          <div class="msv-nav__dropdown" role="menu">
+            <a href="/blog-index.html" role="menuitem">
+              <span class="msv-nav__dropdown-icon">📝</span>Blog &amp; Guides
+            </a>
+            <a href="/spain-visa-options.html" role="menuitem">
+              <span class="msv-nav__dropdown-icon">✅</span>Document Checklists
+            </a>
+            <a href="/move-to-spain.html" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🏠</span>Move to Spain Guide
+            </a>
+            <a href="/visa-eligibility-quiz.html" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🧭</span>Eligibility Quiz
+            </a>
+          </div>
+        </li>
+
+        <li><a href="/about-us.html">About Us</a></li>
+        <li><a href="/testimonials.html">Reviews</a></li>
+        <li><a href="/contact-us.html">Contact</a></li>
+
+      </ul>
+    </nav>
+
+    <!-- Desktop CTA -->
+    <a href="https://dashboard.platinumlegalspain.com/dnv" class="msv-nav__cta">
+      Start My Application →
+    </a>
+
+    <!-- Hamburger (mobile) -->
+    <button class="msv-nav__burger" aria-label="Open menu" aria-expanded="false" onclick="
+      var m=document.querySelector('.msv-nav__mobile');
+      var open=m.classList.toggle('open');
+      this.setAttribute('aria-expanded', open);
+    ">
+      <span></span><span></span><span></span>
+    </button>
+
+  </div><!-- /.msv-nav__inner -->
+
+  <!-- Mobile menu -->
+  <nav class="msv-nav__mobile" aria-label="Mobile navigation">
+    <a href="/nlv-pillar-page.html" class="msv-nav__mobile-sub">Non-Lucrative Visa</a>
+    <a href="/dnv-pillar-page.html" class="msv-nav__mobile-sub">Digital Nomad Visa</a>
+    <a href="/student-visa-pillar-page.html" class="msv-nav__mobile-sub">Student Visa</a>
+    <a href="/spanish-residency-renewal.html">Visa Renewals</a>
+    <a href="/best-visa-move-to-spain.html">Compare All Visas</a>
+    <a href="/blog-index.html">Blog &amp; Guides</a>
+    <a href="/about-us.html">About Us</a>
+    <a href="/testimonials.html">Reviews</a>
+    <a href="/contact-us.html">Contact</a>
+    <a href="https://dashboard.platinumlegalspain.com/dnv" class="msv-nav__mobile-cta">Start My Application →</a>
+  </nav>
+
+</header>
+
+
+<!-- ═══════════════════════════════════════════════════
+     PAGE CONTENT (fragment injected here)
+     ═══════════════════════════════════════════════════ -->
+<main>
+<!-- FRAGMENT_START -->
+<!-- SEO Meta Tags -->
+<!-- title: Spain Digital Nomad Visa from Los Angeles: Consulate Guide 2026 | My Spanish Visa -->
+<!-- description: Applying for Spain's Digital Nomad Visa from Los Angeles — consulate address, jurisdiction (CA, AZ, NV, HI, NM, UT, CO), appointment booking, processing times, and tips for Southern California applicants. -->
+<!-- canonical: https://www.myspanishvisa.com/dnv-los-angeles/ -->
+<!-- og:title: Spain Digital Nomad Visa from Los Angeles: Consulate Guide 2026 -->
+<!-- og:description: Complete guide for CA, AZ, NV, HI, NM, UT, CO applicants — LA consulate details, FBI check, income requirements, and step-by-step process. -->
+<!-- og:url: https://www.myspanishvisa.com/dnv-los-angeles/ -->
+<!-- og:type: article -->
+<!-- article:published_time: 2026-04-23 -->
+<!-- article:modified_time: 2026-04-23 -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.myspanishvisa.com/dnv-los-angeles/",
+      "url": "https://www.myspanishvisa.com/dnv-los-angeles/",
+      "name": "Spain Digital Nomad Visa from Los Angeles: Consulate Guide 2026 | My Spanish Visa",
+      "description": "Applying for Spain's Digital Nomad Visa from Los Angeles — consulate address, jurisdiction (which states), appointment booking, processing times, and tips for Southern California applicants."
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Which consulate covers Los Angeles for the Spain Digital Nomad Visa?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The Consulate General of Spain in Los Angeles, located at 5055 Wilshire Blvd, Suite 960, Los Angeles, CA 90036, covers applicants residing in California, Arizona, Nevada, Hawaii, New Mexico, Utah, and Colorado. You must apply at the consulate covering your state of legal residence, not your work location."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I book a Digital Nomad Visa appointment at the LA consulate?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Appointments are booked through the official LA consulate website at spanishconsulate-la.org. Navigate to the visa section and select National Visa then the Digital Nomad category. Appointment slots are released periodically and can fill quickly — check the system at different times of day and multiple days per week. Current wait times typically range from 4 to 12 weeks for an appointment slot."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does it take to get a Spain Digital Nomad Visa from Los Angeles?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Total timeline from starting your application to receiving your visa is typically 3 to 5 months. This includes document preparation (4-8 weeks), appointment wait time (4-12 weeks), and consulate processing after submission (4-10 weeks). Plan well in advance of your intended move date."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need an FBI background check or a state check for the Spain DNV?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You need a federal FBI Identity History Summary (background check), not a state-level police check. The FBI check must cover the past 5 years and must be apostilled by the US Department of State. A California state check is not sufficient. Request your FBI check via the FBI's website or through a channeler service to speed up processing — channelers typically return results in 1-3 business days versus several weeks for direct FBI requests."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need sworn translations of my documents for the LA consulate?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. All documents in English (including FBI background checks, bank statements, employment letters, tax returns, and health insurance certificates) must be accompanied by a sworn (certified) Spanish translation. A sworn translator is a professional certified to produce legally valid translations. General translation apps or uncertified translators are not accepted."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I apply for the Digital Nomad Visa from inside Spain instead?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. If you are already legally present in Spain (e.g., as a tourist), you can apply for the Digital Nomad Visa through the Unidad de Grandes Empresas (UGE) from within Spain rather than at the LA consulate. The in-Spain route requires the same documents but results in a residence permit rather than a visa. Processing through UGE can sometimes be faster than the consulate route."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What income evidence do freelancers need for the Spain Digital Nomad Visa?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Freelancers and self-employed applicants need: (1) client contracts showing ongoing remote work relationships, (2) recent invoices (last 3-6 months) demonstrating income, (3) bank statements showing consistent deposits of at least $2,800/month, and (4) 1099 forms from the prior tax year as corroboration. An accountant letter confirming your self-employment income and business continuity is also strongly recommended."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I apply for the Beckham Law as an American DNV holder?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Americans who obtain the Digital Nomad Visa and establish tax residency in Spain can elect the Beckham Law special tax regime, which provides a flat 24% income tax rate on Spanish-sourced income up to €600,000 per year. You must apply within 6 months of registering with Social Security. The Spain-US Tax Treaty and US worldwide income obligations complicate this — professional tax advice for your specific situation is essential."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I bring my family with me on the Spain Digital Nomad Visa?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Spouses or unmarried partners in a registered partnership, and dependent children under 18, can apply as family unit members alongside the main applicant. Each family member needs their own set of documents: passport, criminal record check, health insurance, and proof of family relationship. The main applicant's income threshold increases for each family member added."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens if my Spain Digital Nomad Visa application is denied?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "If denied, you will receive a written refusal stating the reason(s). You have the right to appeal (recurso de reposicion) within one month of the refusal, or a judicial appeal within two months. Common denial reasons include insufficient income evidence, non-compliant health insurance, missing apostilles, or incomplete translations. Addressing the stated deficiencies and reapplying is often more efficient than appealing."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Consulate General of Spain in Los Angeles",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "5055 Wilshire Blvd, Suite 960",
+        "addressLocality": "Los Angeles",
+        "addressRegion": "CA",
+        "postalCode": "90036",
+        "addressCountry": "US"
+      },
+      "url": "https://www.spanishconsulate-la.org"
+    }
+  ]
+}
+</script>
+<!-- Open Graph / Social -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.myspanishvisa.com/dnv-los-angeles/">
+<meta property="og:title" content="My Spanish Visa">
+<meta property="og:description" content="Expert Spain visa guidance for English-speaking expats.">
+<meta property="og:image" content="https://www.myspanishvisa.com/assets/images/og/og-dnv-spain.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="My Spanish Visa">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@myspanishvisa">
+<meta name="twitter:title" content="My Spanish Visa">
+<meta name="twitter:description" content="Expert Spain visa guidance for English-speaking expats.">
+<meta name="twitter:image" content="https://www.myspanishvisa.com/assets/images/og/og-dnv-spain.jpg">
+
+<style>
+:root {
+  --navy: #0c1930;
+  --red: #be0011;
+  --yellow: #facf39;
+  --cream: #f8f7f4;
+  --muted: #5a6478;
+  --border: #dce3ed;
+  --white: #ffffff;
+  --radius: 8px;
+  --radius-lg: 14px;
+  --shadow-sm: 0 2px 8px rgba(12,25,48,0.08);
+  --shadow-md: 0 4px 20px rgba(12,25,48,0.12);
+  --transition: 0.25s ease;
+}
+
+.msv { font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif; color: var(--navy); line-height: 1.7; }
+.msv *, .msv *::before, .msv *::after { box-sizing: border-box; }
+
+.msv .dnv-hero {
+  background: linear-gradient(135deg, var(--navy) 0%, #1a3560 100%);
+  color: var(--white);
+  padding: 72px 24px 64px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.msv .dnv-hero::before {
+  content: '';
+  position: absolute;
+  top: -40px; right: -40px;
+  width: 320px; height: 320px;
+  background: var(--yellow);
+  opacity: 0.05;
+  border-radius: 50%;
+}
+.msv .dnv-hero .breadcrumb {
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.65);
+  margin-bottom: 20px;
+  letter-spacing: 0.02em;
+}
+.msv .dnv-hero .breadcrumb a { color: var(--yellow); text-decoration: none; }
+.msv .dnv-hero .breadcrumb a:hover { text-decoration: underline; }
+.msv .dnv-hero h1 {
+  font-size: clamp(1.75rem, 4vw, 2.75rem);
+  font-weight: 800;
+  line-height: 1.2;
+  margin: 0 auto 20px;
+  max-width: 820px;
+}
+.msv .dnv-hero .hero-meta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 24px;
+}
+.msv .dnv-hero .hero-badge {
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 30px;
+  padding: 6px 16px;
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+.msv .dnv-hero .hero-badge.accent { background: var(--yellow); color: var(--navy); border-color: var(--yellow); }
+
+.msv .page-container { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
+.msv .content-grid {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 40px;
+  padding: 52px 0 60px;
+}
+@media (max-width: 900px) {
+  .msv .content-grid { grid-template-columns: 1fr; }
+  .msv .sidebar { order: -1; }
+}
+
+.msv .sidebar-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  margin-bottom: 24px;
+  box-shadow: var(--shadow-sm);
+}
+.msv .sidebar-card h3 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin: 0 0 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+.msv .sidebar-card .consulate-detail { margin-bottom: 10px; font-size: 0.88rem; line-height: 1.5; }
+.msv .sidebar-card .consulate-detail strong { color: var(--muted); display: block; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 2px; }
+.msv .quick-links a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 0;
+  font-size: 0.88rem;
+  color: var(--navy);
+  text-decoration: none;
+  border-bottom: 1px solid var(--border);
+  font-weight: 500;
+  transition: color var(--transition);
+}
+.msv .quick-links a:last-child { border-bottom: none; }
+.msv .quick-links a:hover { color: var(--red); }
+.msv .quick-links a::before { content: '\2192'; color: var(--red); font-weight: 700; }
+
+.msv .timeline-widget { background: var(--cream); border-radius: var(--radius); padding: 18px; }
+.msv .timeline-step {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 14px;
+  align-items: flex-start;
+}
+.msv .timeline-step:last-child { margin-bottom: 0; }
+.msv .timeline-dot {
+  width: 28px; height: 28px;
+  background: var(--navy);
+  color: var(--white);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.72rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+.msv .timeline-text { font-size: 0.84rem; line-height: 1.5; }
+.msv .timeline-text strong { display: block; font-weight: 700; color: var(--navy); }
+
+.msv .cta-band {
+  background: linear-gradient(135deg, var(--navy) 0%, #1a3560 100%);
+  color: var(--white);
+  padding: 48px 24px;
+  text-align: center;
+  border-radius: var(--radius-lg);
+  margin: 40px 0;
+}
+.msv .cta-band h2 { font-size: 1.5rem; font-weight: 800; margin: 0 0 10px; border: none; display: block; padding: 0; }
+.msv .cta-band p { margin: 0 auto 24px; max-width: 520px; opacity: 0.85; font-size: 0.95rem; }
+.msv .cta-buttons { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+.msv .btn {
+  display: inline-block;
+  padding: 14px 28px;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 0.92rem;
+  text-decoration: none;
+  transition: all var(--transition);
+  cursor: pointer;
+  border: none;
+}
+.msv .btn-primary { background: var(--yellow); color: var(--navy); }
+.msv .btn-primary:hover { background: #e8bc2a; transform: translateY(-1px); }
+.msv .btn-outline { background: transparent; color: var(--white); border: 2px solid rgba(255,255,255,0.5); }
+.msv .btn-outline:hover { border-color: var(--white); background: rgba(255,255,255,0.1); }
+
+.msv .main-content h2 {
+  font-size: 1.55rem;
+  font-weight: 800;
+  color: var(--navy);
+  margin: 44px 0 16px;
+  padding-bottom: 10px;
+  border-bottom: 3px solid var(--yellow);
+  display: inline-block;
+}
+.msv .main-content h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin: 28px 0 10px;
+}
+.msv .main-content h4 { font-size: 1rem; font-weight: 700; color: var(--navy); margin: 20px 0 8px; }
+.msv .main-content p { margin: 0 0 16px; color: #2c3e5a; }
+.msv .main-content ul, .msv .main-content ol { padding-left: 22px; margin: 0 0 16px; color: #2c3e5a; }
+.msv .main-content li { margin-bottom: 7px; }
+.msv .main-content a { color: var(--red); font-weight: 600; }
+
+.msv .info-box {
+  border-radius: var(--radius);
+  padding: 20px 22px;
+  margin: 24px 0;
+  border-left: 4px solid;
+}
+.msv .info-box.tip { background: #edf6ff; border-color: #3b82f6; }
+.msv .info-box.warning { background: #fff8e6; border-color: var(--yellow); }
+.msv .info-box.danger { background: #fff0f0; border-color: var(--red); }
+.msv .info-box.success { background: #edfdf4; border-color: #10b981; }
+.msv .info-box strong { display: block; margin-bottom: 6px; font-size: 0.88rem; text-transform: uppercase; letter-spacing: 0.05em; }
+.msv .info-box.tip strong { color: #1d4ed8; }
+.msv .info-box.warning strong { color: #b45309; }
+.msv .info-box.danger strong { color: var(--red); }
+.msv .info-box.success strong { color: #065f46; }
+.msv .info-box p { margin: 0; font-size: 0.92rem; color: #2c3e5a; }
+
+.msv .req-table { width: 100%; border-collapse: collapse; margin: 20px 0 28px; font-size: 0.88rem; }
+.msv .req-table th { background: var(--navy); color: var(--white); padding: 11px 14px; text-align: left; font-weight: 600; }
+.msv .req-table td { padding: 10px 14px; border-bottom: 1px solid var(--border); vertical-align: top; color: #2c3e5a; }
+.msv .req-table tr:last-child td { border-bottom: none; }
+.msv .req-table tr:nth-child(even) td { background: var(--cream); }
+
+.msv .step-list { list-style: none; padding: 0; margin: 0 0 24px; }
+.msv .step-item { display: flex; gap: 18px; padding: 18px 0; border-bottom: 1px solid var(--border); align-items: flex-start; }
+.msv .step-item:last-child { border-bottom: none; }
+.msv .step-num {
+  width: 36px; height: 36px;
+  background: var(--red);
+  color: var(--white);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.88rem;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+.msv .step-content h4 { margin: 0 0 6px; font-size: 1rem; font-weight: 700; color: var(--navy); }
+.msv .step-content p { margin: 0; font-size: 0.9rem; color: var(--muted); }
+
+.msv .faq-section { margin: 40px 0; }
+.msv .faq-item {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+.msv .faq-question {
+  width: 100%;
+  background: var(--white);
+  border: none;
+  padding: 18px 20px;
+  text-align: left;
+  font-size: 0.97rem;
+  font-weight: 600;
+  color: var(--navy);
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  transition: background var(--transition);
+  font-family: inherit;
+}
+.msv .faq-question:hover { background: var(--cream); }
+.msv .faq-question .faq-icon {
+  width: 24px; height: 24px;
+  background: var(--navy);
+  color: var(--white);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1rem;
+  line-height: 1;
+  flex-shrink: 0;
+  transition: transform var(--transition), background var(--transition);
+}
+.msv .faq-item.open .faq-icon { transform: rotate(45deg); background: var(--red); }
+.msv .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; background: var(--cream); }
+.msv .faq-item.open .faq-answer { max-height: 600px; }
+.msv .faq-answer-inner { padding: 18px 20px; font-size: 0.92rem; line-height: 1.75; color: #2c3e5a; }
+.msv .faq-answer-inner a { color: var(--red); font-weight: 600; }
+
+.msv .income-highlight {
+  background: var(--navy);
+  color: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 28px 30px;
+  margin: 24px 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+.msv .income-col { flex: 1; min-width: 160px; }
+.msv .income-col .label { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; opacity: 0.65; margin-bottom: 6px; }
+.msv .income-col .value { font-size: 1.6rem; font-weight: 800; color: var(--yellow); }
+.msv .income-col .note { font-size: 0.8rem; opacity: 0.7; margin-top: 4px; }
+
+.msv .checklist { list-style: none; padding: 0; margin: 0 0 20px; }
+.msv .checklist li { display: flex; gap: 10px; padding: 8px 0; border-bottom: 1px solid var(--border); font-size: 0.9rem; align-items: flex-start; color: #2c3e5a; }
+.msv .checklist li:last-child { border-bottom: none; }
+.msv .checklist li::before { content: '\2713'; color: #10b981; font-weight: 700; margin-top: 1px; flex-shrink: 0; }
+
+.msv .jurisdiction-card { background: var(--cream); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px 22px; margin: 20px 0; }
+.msv .jurisdiction-card h3 { margin: 0 0 14px; font-size: 1rem; }
+.msv .state-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.msv .state-chip { background: var(--navy); color: var(--white); font-size: 0.78rem; font-weight: 600; padding: 4px 12px; border-radius: 20px; }
+
+.msv .compare-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 20px 0; }
+@media (max-width: 600px) { .msv .compare-grid { grid-template-columns: 1fr; } }
+.msv .compare-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px; }
+.msv .compare-card h4 { margin: 0 0 10px; font-size: 0.9rem; font-weight: 700; }
+.msv .compare-card ul { padding-left: 18px; margin: 0; font-size: 0.86rem; color: #2c3e5a; }
+.msv .compare-card li { margin-bottom: 5px; }
+
+.msv .tip-callout { display: flex; gap: 14px; background: var(--cream); border: 1px solid var(--border); border-radius: var(--radius); padding: 16px 18px; margin: 16px 0; align-items: flex-start; }
+.msv .tip-callout .tip-icon { font-size: 1.3rem; flex-shrink: 0; }
+.msv .tip-callout p { margin: 0; font-size: 0.9rem; color: #2c3e5a; }
+.msv .tip-callout a { color: var(--red); font-weight: 600; }
+
+.msv .related-links { list-style: none; padding: 0; margin: 0; }
+.msv .related-links li { padding: 8px 0; border-bottom: 1px solid var(--border); }
+.msv .related-links li:last-child { border-bottom: none; }
+.msv .related-links a { color: var(--navy); text-decoration: none; font-weight: 600; font-size: 0.92rem; }
+.msv .related-links a:hover { color: var(--red); }
+</style>
+
+<div class="msv">
+
+  <section class="dnv-hero">
+    <div class="page-container">
+      <p class="breadcrumb">
+        <a href="/">Home</a> &rsaquo; <a href="/dnv-pillar-page.html">Digital Nomad Visa Spain</a> &rsaquo; Los Angeles Consulate Guide
+      </p>
+      <h1>Spain Digital Nomad Visa from Los Angeles: The Complete Consulate Guide</h1>
+      <p style="max-width:680px;margin:0 auto;opacity:0.85;font-size:1.05rem;">Everything Southern California, Arizona, Nevada, and Hawaii applicants need to know about applying for Spain's Digital Nomad Visa through the LA consulate &mdash; appointments, documents, income requirements, and timelines.</p>
+      <div class="hero-meta">
+        <span class="hero-badge accent">Updated April 2026</span>
+        <span class="hero-badge">LA Consulate: 5055 Wilshire Blvd</span>
+        <span class="hero-badge">Processing: 4&ndash;10 weeks after submission</span>
+        <span class="hero-badge">Covers CA, AZ, NV, HI, NM, UT, CO</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="page-container">
+    <div class="content-grid">
+
+      <main class="main-content">
+
+        <h2>The LA Consulate and Its Jurisdiction</h2>
+        <p>If you live in California, Arizona, Nevada, Hawaii, New Mexico, Utah, or Colorado and want to apply for Spain's <a href="/dnv-pillar-page.html">Digital Nomad Visa (DNV)</a>, the <strong>Consulate General of Spain in Los Angeles</strong> is your designated point of application. Under Spanish consular rules, you must apply at the consulate whose territory covers your state of <em>legal residence</em> &mdash; not where you happen to be staying or working when you submit your application.</p>
+
+        <div class="jurisdiction-card">
+          <h3>States Covered by the LA Consulate</h3>
+          <div class="state-chips">
+            <span class="state-chip">California</span>
+            <span class="state-chip">Arizona</span>
+            <span class="state-chip">Nevada</span>
+            <span class="state-chip">Hawaii</span>
+            <span class="state-chip">New Mexico</span>
+            <span class="state-chip">Utah</span>
+            <span class="state-chip">Colorado</span>
+          </div>
+          <p style="margin-top:14px;font-size:0.88rem;color:var(--muted);">Residents of other US states should apply at the Spanish consulate serving their state. Texas residents use the Houston consulate; Illinois and Midwest residents use Chicago; Florida residents use Miami.</p>
+        </div>
+
+        <p>The consulate is located at <strong>5055 Wilshire Blvd, Suite 960, Los Angeles, CA 90036</strong>, in the Mid-Wilshire/Miracle Mile corridor. It is open Monday through Friday, 9am&ndash;1pm for appointments. There is no walk-in visa service in the afternoons. Paid street parking is available on Wilshire; the nearest Metro stop is Wilshire/La Brea on the E Line.</p>
+
+        <div class="info-box tip">
+          <strong>Which Consulate Is Right for You?</strong>
+          <p>Your jurisdiction is determined by your state of legal residence &mdash; specifically the address on your driver's licence or state ID. If you recently moved between states, ensure your ID is updated before booking. Applying at the wrong consulate risks your appointment being cancelled and your documents returned without processing.</p>
+        </div>
+
+        <h2>Booking Your Appointment at the LA Consulate</h2>
+        <p>All Digital Nomad Visa appointments at the LA consulate are booked through the official portal at <strong>spanishconsulate-la.org</strong>. There is no walk-in option and no phone booking &mdash; the online system is the only route to securing an appointment.</p>
+
+        <h3>Step-by-Step: Navigating the Appointment System</h3>
+        <ol>
+          <li>Go to spanishconsulate-la.org and click <em>Visa Services</em></li>
+          <li>Select <em>National Visa</em> (not Schengen &mdash; the DNV is a long-stay visa, Type D)</li>
+          <li>Choose the Digital Nomad / Teletrabajador de Car&aacute;cter Internacional category</li>
+          <li>Select the number of applicants (include family members applying simultaneously)</li>
+          <li>Choose from available dates and times</li>
+          <li>Complete the appointment form and save your confirmation number</li>
+        </ol>
+
+        <h3>Appointment Wait Times in 2026</h3>
+        <p>The LA consulate handles visa demand from seven western US states, making it one of the busiest Spanish consulates in North America. As of early 2026, appointment slots for the Digital Nomad Visa typically become available <strong>4 to 12 weeks out</strong>. During peak periods &mdash; particularly January to March and September to October &mdash; waits at the upper end of that range are common.</p>
+
+        <div class="info-box warning">
+          <strong>Appointment Strategy: How to Get a Slot Faster</strong>
+          <p>New appointment slots are released throughout the week at irregular intervals &mdash; there is no single &ldquo;release day.&rdquo; Checking the portal first thing in the morning (around 7&ndash;8am PT) and again in the early evening tends to yield better availability. Some applicants check multiple times per day. Once you have an appointment confirmed, do not cancel unless absolutely necessary &mdash; cancellations do not guarantee a faster replacement slot.</p>
+        </div>
+
+        <div class="tip-callout">
+          <span class="tip-icon">&#128161;</span>
+          <p><strong>Book first, then gather documents.</strong> You can secure an appointment before your full document set is ready. This is actually the recommended approach &mdash; appointment slots disappear quickly, and most documents (FBI check with apostille, sworn translations, health insurance) take several weeks to obtain. Use the waiting period to finalise everything.</p>
+        </div>
+
+        <h2>Complete Document Checklist for LA Consulate Applicants</h2>
+        <p>The Spain <a href="/dnv-documents.html">Digital Nomad Visa document list</a> is extensive. Every document in English must be accompanied by a sworn Spanish translation. Every public document (background check, birth certificate, marriage certificate) must carry the appropriate apostille. Bring originals plus two complete sets of photocopies to your appointment.</p>
+
+        <table class="req-table">
+          <thead>
+            <tr>
+              <th>Document</th>
+              <th>Specification</th>
+              <th>Source</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>National Visa Application Form EX-01</strong></td>
+              <td>Completed online at the Spanish government portal, printed, signed in ink</td>
+              <td>sede.administracionespublicas.gob.es</td>
+            </tr>
+            <tr>
+              <td><strong>Valid Passport</strong></td>
+              <td>Minimum 1 year validity; 2 blank pages; photocopy of data page included</td>
+              <td>US Department of State</td>
+            </tr>
+            <tr>
+              <td><strong>Passport Photos</strong></td>
+              <td>2 recent colour photos, white background, 35mm x 45mm</td>
+              <td>Any photo studio or qualifying pharmacy</td>
+            </tr>
+            <tr>
+              <td><strong>FBI Background Check</strong></td>
+              <td>Federal Identity History Summary; covers last 5 years; apostilled by US Dept of State; sworn Spanish translation required</td>
+              <td>FBI.gov or FBI-approved channeler</td>
+            </tr>
+            <tr>
+              <td><strong>Medical Certificate</strong></td>
+              <td>Signed by licensed physician confirming no contagious disease; sworn Spanish translation required</td>
+              <td>Your GP or urgent care clinic</td>
+            </tr>
+            <tr>
+              <td><strong>Health Insurance Certificate</strong></td>
+              <td>Valid in Spain; no copayments; minimum 1 year coverage; no gaps; policy in your name</td>
+              <td>Spain-compliant insurer (see <a href="/dnv-health-insurance.html">DNV health insurance guide</a>)</td>
+            </tr>
+            <tr>
+              <td><strong>Proof of Income</strong></td>
+              <td>Bank statements (last 3&ndash;6 months) plus pay stubs/invoices plus W-2 or 1099; must evidence $2,800+/month</td>
+              <td>Your bank, employer, accountant</td>
+            </tr>
+            <tr>
+              <td><strong>Employer Letter / Client Contracts</strong></td>
+              <td>On company letterhead; confirms remote work arrangement, salary, and company outside Spain</td>
+              <td>Your employer HR or your clients</td>
+            </tr>
+            <tr>
+              <td><strong>Company Evidence (if self-employed)</strong></td>
+              <td>LLC operating agreement, articles of incorporation, or equivalent business registration</td>
+              <td>Your state Secretary of State</td>
+            </tr>
+            <tr>
+              <td><strong>Sworn Spanish Translations</strong></td>
+              <td>Required for all English-language documents; certified sworn translator only</td>
+              <td>Certified sworn translator</td>
+            </tr>
+            <tr>
+              <td><strong>Visa Fee</strong></td>
+              <td>Approximately $140&ndash;$190 USD (verify current fee before your appointment)</td>
+              <td>Paid at consulate at time of submission</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="info-box tip">
+          <strong>Two Sets of Photocopies</strong>
+          <p>Bring originals of all documents plus two complete sets of photocopies. The consulate retains one set; you keep the originals (most are returned) and a personal copy. Failing to bring photocopies is one of the most common reasons appointments are disrupted or incomplete submissions returned.</p>
+        </div>
+
+        <h2>Income Requirements: The Numbers for 2026</h2>
+        <p>Spain's <a href="/dnv-income-requirements.html">Digital Nomad Visa income threshold</a> is set at 200% of Spain's Salario M&iacute;nimo Interprofesional (SMI). For 2026, this is approximately <strong>&euro;2,646/month</strong> gross. At an exchange rate of roughly 1.06 USD/EUR, that translates to approximately <strong>$2,800/month</strong>.</p>
+
+        <div class="income-highlight">
+          <div class="income-col">
+            <div class="label">Minimum Monthly Income</div>
+            <div class="value">&euro;2,646</div>
+            <div class="note">200% of Spain's 2026 SMI</div>
+          </div>
+          <div class="income-col">
+            <div class="label">USD Equivalent (approx.)</div>
+            <div class="value">~$2,800</div>
+            <div class="note">Based on 2026 exchange rates</div>
+          </div>
+          <div class="income-col">
+            <div class="label">With Spouse / Partner</div>
+            <div class="value">+&euro;993</div>
+            <div class="note">75% SMI per adult dependent</div>
+          </div>
+          <div class="income-col">
+            <div class="label">Per Child Added</div>
+            <div class="value">+&euro;331</div>
+            <div class="note">25% SMI per minor child</div>
+          </div>
+        </div>
+
+        <h3>Income Evidence for Employees</h3>
+        <p>If you work for a US company on a remote basis, your income evidence package should include:</p>
+        <ul class="checklist">
+          <li>Employment contract or signed offer letter showing your annual salary</li>
+          <li>Recent pay stubs (minimum last 3 months, ideally 6)</li>
+          <li>W-2 from the most recent tax year</li>
+          <li>Employer letter on company letterhead confirming remote arrangement, your role, salary, and employment duration</li>
+          <li>Bank statements showing regular salary deposits matching the documented amount</li>
+        </ul>
+
+        <h3>Income Evidence for Freelancers and Self-Employed Applicants</h3>
+        <p>Freelancers face more scrutiny because income can be variable month-to-month. A strong freelance application includes:</p>
+        <ul class="checklist">
+          <li>Active client contracts (ideally with at least 12 months remaining, or at-will with established history)</li>
+          <li>Invoices issued to clients in the last 3&ndash;6 months</li>
+          <li>1099-NEC or 1099-MISC from the prior tax year</li>
+          <li>Schedule C from your federal tax return showing business income</li>
+          <li>Bank statements showing consistent income deposits over at least 6 months</li>
+          <li>Letter from your accountant or CPA confirming self-employment income and ongoing business continuity</li>
+        </ul>
+
+        <div class="info-box tip">
+          <strong>Consistency Matters More Than a Single Peak Month</strong>
+          <p>The consulate is looking for evidence of stable, ongoing income &mdash; not just a recent spike. If your bank statements show large month-to-month fluctuations, accompany them with a written explanation. Consistent monthly deposits of roughly the same amount tell a clearer story than a mix of high and low months without context.</p>
+        </div>
+
+        <h2>The FBI Background Check: US-Specific Requirement</h2>
+        <p>Unlike European applicants who use national police clearances, US applicants must provide a <strong>federal FBI Identity History Summary</strong>. A California Department of Justice background check or any other state-level check is <em>not</em> acceptable for Spanish visa purposes.</p>
+
+        <h3>How to Obtain Your FBI Check</h3>
+        <ol>
+          <li><strong>Option A &mdash; Direct FBI Request:</strong> Submit fingerprints and ID documents directly to the FBI. Processing time is typically 8&ndash;14 weeks. Instructions at fbi.gov/identity-history-summary-checks.</li>
+          <li><strong>Option B &mdash; FBI-Approved Channeler (Recommended):</strong> Use an FBI-approved channeler. Channelers take your fingerprints, submit electronically, and return results in 1&ndash;3 business days. Costs approximately $50&ndash;$75 including the FBI fee. The full list of approved channelers is on the FBI website.</li>
+          <li><strong>Apostille from US Department of State:</strong> Once you have your FBI results, mail the original document to the US Department of State Authentications Office with the apostille application and fee. Standard processing is 6&ndash;8 weeks; expedited service is available for an additional fee.</li>
+          <li><strong>Sworn Spanish Translation:</strong> The apostilled FBI check must then be translated by a certified sworn Spanish translator.</li>
+        </ol>
+
+        <div class="info-box warning">
+          <strong>Validity Window &mdash; Plan Your Timing Carefully</strong>
+          <p>Your FBI check must generally be dated within 3&ndash;6 months at the time of your consulate appointment (confirm current requirements with the consulate when you book). Since the entire process from fingerprints to apostilled, translated document can take 2&ndash;3 months, start your FBI check as the very first step in your application &mdash; ideally the same week you book your appointment.</p>
+        </div>
+
+        <h2>Apostilles for US Documents</h2>
+        <p>An apostille is a standardised international certification authenticating public documents for use abroad. Both the US and Spain are signatories to the 1961 Hague Apostille Convention. You will need apostilles on:</p>
+        <ul>
+          <li><strong>FBI background check</strong> &mdash; apostilled by the <strong>US Department of State</strong> (not a state authority)</li>
+          <li><strong>Birth certificates</strong> (if needed for family applications) &mdash; apostilled by the Secretary of State of the issuing state</li>
+          <li><strong>Marriage certificate</strong> (if applicable) &mdash; apostilled by the Secretary of State of the state where it was issued</li>
+        </ul>
+
+        <div class="tip-callout">
+          <span class="tip-icon">&#128203;</span>
+          <p><strong>California Apostilles:</strong> The California Secretary of State issues apostilles for California-issued documents via their online portal. Standard processing is 5&ndash;10 business days; expedited service is available. For documents issued in Arizona, Nevada, Hawaii, New Mexico, Utah, or Colorado, contact the relevant state Secretary of State directly.</p>
+        </div>
+
+        <h2>Health Insurance: The No-Copayment Rule</h2>
+        <p>Spain requires DNV applicants to hold health insurance meeting strict criteria. See our full <a href="/dnv-health-insurance.html">DNV health insurance guide</a> for comprehensive advice, but the essential requirements are:</p>
+        <ul class="checklist">
+          <li>Policy must be valid and usable in Spain (territorial coverage)</li>
+          <li>No copayments (copago cero) &mdash; the insurer pays 100%</li>
+          <li>Coverage for the full intended stay (minimum 12 months)</li>
+          <li>No coverage exclusions, waiting periods, or gaps</li>
+          <li>Certificate available in Spanish or with sworn translation</li>
+          <li>Policy must name you specifically (group policies generally not accepted)</li>
+        </ul>
+
+        <p>Most US domestic health insurance plans &mdash; including employer-sponsored plans, ACA marketplace plans, and Medicare &mdash; do <em>not</em> meet these requirements. You will need a dedicated international or Spanish expat health insurance policy from providers such as a leading private insurer, a leading private insurer established private health insurers in Spain Care, a leading private insurer Global, or a leading private insurer.</p>
+
+        <div class="info-box danger">
+          <strong>The No-Copayment Requirement: A Common Stumbling Block</strong>
+          <p>No copayments means the insurer pays 100% of covered costs &mdash; no excess, no deductible, no per-visit charge. Standard international travel insurance policies typically have excesses of $500&ndash;$2,500 and therefore do not qualify. Verify explicitly that the policy certificate states &ldquo;no copayments&rdquo; or &ldquo;sin copago&rdquo; before purchasing. Ask the insurer to provide a certificate specifically confirming this for visa purposes.</p>
+        </div>
+
+        <h2>The Employer Letter: What It Must Include</h2>
+        <p>Your employer (or, for freelancers, your primary clients) must provide a letter confirming your remote work arrangement. For employees, this letter should be on official company letterhead and include:</p>
+        <ul>
+          <li>Your full legal name and job title</li>
+          <li>Your annual or monthly gross salary</li>
+          <li>Confirmation that your role is fully remote and may be performed from Spain</li>
+          <li>Statement that the company is incorporated and primarily operating outside Spain</li>
+          <li>Your employment start date and type of contract (permanent or fixed-term)</li>
+          <li>A contact name, title, and signature from HR or a director</li>
+          <li>Company address and EIN (Employer Identification Number)</li>
+        </ul>
+
+        <p>See our <a href="/dnv-documents.html">DNV documents guide</a> for a template employer letter you can adapt for your own circumstances.</p>
+
+        <h2>Step-by-Step Application Process from Los Angeles</h2>
+        <ul class="step-list">
+          <li class="step-item">
+            <div class="step-num">1</div>
+            <div class="step-content">
+              <h4>Book Your Appointment (Do This First)</h4>
+              <p>Go to spanishconsulate-la.org and secure a National Visa appointment in the Digital Nomad category. Given 4&ndash;12 week wait times, book before your complete document set is ready. Save your confirmation number carefully.</p>
+            </div>
+          </li>
+          <li class="step-item">
+            <div class="step-num">2</div>
+            <div class="step-content">
+              <h4>Start Your FBI Background Check Immediately</h4>
+              <p>Use an FBI-approved channeler for fastest results (1&ndash;3 business days). Then apply for the US Department of State apostille &mdash; allow 6&ndash;8 weeks or use expedited processing. This step has the longest lead time and must be started early.</p>
+            </div>
+          </li>
+          <li class="step-item">
+            <div class="step-num">3</div>
+            <div class="step-content">
+              <h4>Purchase Spain-Compliant Health Insurance</h4>
+              <p>Research and purchase a plan with no copayments valid in Spain for at least 12 months. Obtain a certificate confirming &ldquo;no copayments&rdquo; in Spanish. Confirm coverage starts from your intended arrival date.</p>
+            </div>
+          </li>
+          <li class="step-item">
+            <div class="step-num">4</div>
+            <div class="step-content">
+              <h4>Gather All Income and Employment Documents</h4>
+              <p>Collect bank statements, pay stubs, W-2s or 1099s, employment contracts or client agreements, and obtain your employer letter on company letterhead. Self-employed applicants should also gather LLC documents, invoices, and an accountant letter.</p>
+            </div>
+          </li>
+          <li class="step-item">
+            <div class="step-num">5</div>
+            <div class="step-content">
+              <h4>Commission Sworn Spanish Translations</h4>
+              <p>Send all English-language documents to a certified sworn translator. Allow 5&ndash;10 business days. Do not use uncertified translators or machine translation services &mdash; these will be rejected. My Spanish Visa can connect you with vetted sworn translators.</p>
+            </div>
+          </li>
+          <li class="step-item">
+            <div class="step-num">6</div>
+            <div class="step-content">
+              <h4>Complete the EX-01 Application Form</h4>
+              <p>Download, complete, and print the EX-01 National Visa application form from the Spanish government portal (sede.administracionespublicas.gob.es). Sign in blue or black ink. Bring two copies to your appointment.</p>
+            </div>
+          </li>
+          <li class="step-item">
+            <div class="step-num">7</div>
+            <div class="step-content">
+              <h4>Attend Your Consulate Appointment</h4>
+              <p>Arrive 10 minutes early at 5055 Wilshire Blvd with originals and two sets of photocopies of all documents. Pay the visa fee. Your biometrics may be taken. You will receive a reference number for tracking your application.</p>
+            </div>
+          </li>
+          <li class="step-item">
+            <div class="step-num">8</div>
+            <div class="step-content">
+              <h4>Wait for Consulate Processing (4&ndash;10 Weeks)</h4>
+              <p>Processing typically takes 4 to 10 weeks after submission. You can check status via the consulate website using your reference number. Do not book non-refundable flights or accommodation until you have written confirmation of visa approval.</p>
+            </div>
+          </li>
+          <li class="step-item">
+            <div class="step-num">9</div>
+            <div class="step-content">
+              <h4>Collect Your Visa and Travel to Spain</h4>
+              <p>Return to the consulate to collect your passport with the visa affixed. Your DNV is initially valid for 1 year. Within 30 days of arriving in Spain, apply at the Oficina de Extranjer&iacute;a for your TIE residence card.</p>
+            </div>
+          </li>
+        </ul>
+
+        <div class="cta-band">
+          <h2>Not Sure If You Qualify?</h2>
+          <p>Check your eligibility in under 3 minutes with our free tool &mdash; then speak with a specialist if you want personalised guidance for your LA consulate application.</p>
+          <div class="cta-buttons">
+            <a href="/dnv-eligibility.html" class="btn btn-primary">Check My Eligibility Free</a>
+            <a href="/contact-us.html" class="btn btn-outline">Book a Free Consultation</a>
+          </div>
+        </div>
+
+        <h2>After You Arrive: Key Steps in the First 30 Days</h2>
+        <p>Your Digital Nomad Visa is your entry document, but several administrative steps are required after you arrive in Spain:</p>
+        <ul>
+          <li><strong>TIE Card Application:</strong> Apply at the Oficina de Extranjer&iacute;a within 30 days of arrival. This is your physical residence card and is essential for banking, renting, and registering with services.</li>
+          <li><strong>Empadronamiento:</strong> Register your address at your local Ayuntamiento (town hall). Required for many subsequent administrative processes and for public services.</li>
+          <li><strong>NIE Number:</strong> Your foreign identification number is assigned automatically through the TIE process.</li>
+          <li><strong>Spanish Bank Account:</strong> Most landlords require a Spanish bank account for rent payments; also needed for Spanish utility bills and services.</li>
+          <li><strong>Beckham Law Application:</strong> If you want to elect the special tax regime, apply within 6 months of Social Security registration. See below for details.</li>
+          <li><strong>Aut&oacute;nomo Registration:</strong> If you plan to invoice Spanish clients or formally register as self-employed in Spain, you may need to register as aut&oacute;nomo. Seek advice on whether this is necessary for your situation.</li>
+        </ul>
+
+        <h2>Beckham Law: Tax Benefits for US Digital Nomads in Spain</h2>
+        <p>Spain's <strong>Beckham Law</strong> (R&eacute;gimen Especial para Trabajadores Desplazados a Espa&ntilde;a, Article 93 LIRPF) offers a flat income tax rate of <strong>24%</strong> on Spanish-sourced income up to &euro;600,000/year. It is available to Digital Nomad Visa holders during their first 6 years of Spanish tax residency.</p>
+
+        <p>For many American DNV holders, the Beckham Law offers a substantially lower rate than Spain's standard progressive tax rates (which reach 47% at higher income levels). However, US citizens are subject to worldwide income taxation regardless of where they live. The interaction of the Beckham Law, the Spain&ndash;US Tax Treaty, the Foreign Earned Income Exclusion (FEIE), and the Foreign Tax Credit (FTC) is complex and highly individual.</p>
+
+        <div class="info-box warning">
+          <strong>Cross-Border Tax Advice is Essential for Americans</strong>
+          <p>Do not assume the Beckham Law eliminates your US tax obligations. It does not &mdash; the IRS taxes US citizens on worldwide income. The question is how much offset you can claim through treaty provisions and exclusions. Consult a dual-qualified US/Spain tax professional before making any decisions. My Spanish Visa can refer you to qualified cross-border tax advisers who work with American DNV holders regularly.</p>
+        </div>
+
+        <h2>Consulate Route vs Applying from Inside Spain</h2>
+        <div class="compare-grid">
+          <div class="compare-card">
+            <h4 style="color:var(--navy);">LA Consulate Route (Visa)</h4>
+            <ul>
+              <li>Apply from the US before moving</li>
+              <li>Standard appointment at the LA consulate</li>
+              <li>4&ndash;12 weeks for appointment; 4&ndash;10 weeks processing</li>
+              <li>Receive a national visa (Type D) affixed to passport</li>
+              <li>Then obtain TIE card after arrival</li>
+              <li>Best route if you are currently based in the US</li>
+            </ul>
+          </div>
+          <div class="compare-card">
+            <h4 style="color:var(--navy);">In-Spain Route (UGE)</h4>
+            <ul>
+              <li>Apply while legally present in Spain (e.g., tourist)</li>
+              <li>Through the Unidad de Grandes Empresas (UGE)</li>
+              <li>Often faster processing than the consulate route</li>
+              <li>Results in a residence permit directly</li>
+              <li>Same documents required</li>
+              <li>Best if already in Spain within your Schengen allowance</li>
+            </ul>
+          </div>
+        </div>
+
+        <p>See our dedicated guide to <a href="/dnv-apply-in-spain.html">applying for the DNV from inside Spain</a> for full details of the UGE route.</p>
+
+        <h2>Nationality Notes: Non-US Nationals Living in California</h2>
+        <p>The LA consulate serves not only US citizens but anyone legally residing within its seven-state jurisdiction. A few important notes for non-US nationals based in California and the surrounding states:</p>
+        <ul>
+          <li><strong>US Permanent Residents (Green Card holders):</strong> Apply at the consulate covering your state of residence, same as US citizens. The DNV requirements are identical.</li>
+          <li><strong>Non-US nationals residing in California:</strong> If you are, for example, a British or Canadian national living in LA, you apply at the LA consulate &mdash; not a consulate in your home country. However, you will typically need criminal record checks from both the US (FBI) <em>and</em> your home country (e.g., ACRO for UK nationals, RCMP for Canadians).</li>
+          <li><strong>Dual Nationals:</strong> You may apply with either passport. Using your US passport is simplest if you are primarily resident in the US.</li>
+          <li><strong>Recent State Movers:</strong> If you recently moved from another state (e.g., from Texas to California), ensure your state ID or driver's licence reflects your California address before booking your appointment.</li>
+        </ul>
+
+        <section class="faq-section">
+          <h2>Frequently Asked Questions: Spain DNV from Los Angeles</h2>
+
+          <div class="faq-item">
+            <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+              Which consulate covers Los Angeles for the Spain Digital Nomad Visa?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                The Consulate General of Spain in Los Angeles at 5055 Wilshire Blvd, Suite 960, Los Angeles, CA 90036, covers applicants residing in California, Arizona, Nevada, Hawaii, New Mexico, Utah, and Colorado. Your jurisdiction is determined by your state of legal residence &mdash; the address on your ID or driver's licence &mdash; not where you are physically located when you apply.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+              How do I book a Digital Nomad Visa appointment at the LA consulate?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Appointments are booked at spanishconsulate-la.org under the National Visa &rsaquo; Digital Nomad category. There is no phone booking or walk-in option. Slots are released periodically &mdash; checking early morning and early evening tends to yield the best availability. Current wait times are typically 4&ndash;12 weeks. Book as early as possible, even before you have all your documents ready.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+              How long does the entire Spain Digital Nomad Visa process take from LA?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Plan for 3&ndash;5 months total from starting your application to arriving in Spain. Document preparation including FBI check with apostille typically takes 4&ndash;8 weeks; appointment wait is 4&ndash;12 weeks; consulate processing after submission is 4&ndash;10 weeks. Some applicants complete the process in 3 months if they move quickly and are organised; others take 5 or more months. Never book non-refundable travel until you have written visa approval.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+              Do I need an FBI background check or a California state background check?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                You need a federal FBI Identity History Summary &mdash; not a California DOJ or any other state-level check. The FBI check must then be apostilled by the US Department of State (not a state apostille) and accompanied by a sworn Spanish translation. Using an FBI-approved channeler service typically delivers results in 1&ndash;3 business days and is strongly recommended over submitting directly to the FBI (which can take 8&ndash;14 weeks).
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+              Do my English-language documents need sworn Spanish translations?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Yes &mdash; all documents in English require sworn (certified) Spanish translations. This includes your FBI background check, employment letter, bank statements, health insurance certificate, and tax documents. A sworn translator is a professional formally certified to produce legally valid translations. Machine translations (Google Translate, DeepL) and translations by non-certified individuals are not accepted and will cause your application to be rejected or returned. My Spanish Visa can refer you to vetted sworn translators.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+              Can I apply for the Digital Nomad Visa from inside Spain instead of the LA consulate?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Yes. If you are legally present in Spain &mdash; for example, during a tourist visit within your 90-day Schengen allowance &mdash; you can apply through the Unidad de Grandes Empresas (UGE), which handles in-country DNV applications. The UGE route typically processes faster than the consulate route and issues a residence permit directly, skipping the separate TIE card step. The same documents are required. See our guide to <a href="/dnv-apply-in-spain.html">applying for the DNV inside Spain</a>.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+              What income evidence do freelancers and self-employed applicants need for the LA consulate?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Freelancers should provide: active client contracts showing ongoing work relationships, recent invoices from the last 3&ndash;6 months, 1099 forms from the prior tax year, Schedule C from your federal tax return, bank statements showing consistent income deposits, and a letter from your accountant confirming self-employment income and business continuity. The key is demonstrating that your income is stable and genuinely ongoing &mdash; not just a recent spike or one-off payment. See our full guide to <a href="/dnv-income-requirements.html">DNV income requirements</a>.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+              Can I benefit from Spain's Beckham Law as an American holding the Digital Nomad Visa?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Yes &mdash; Americans who become tax resident in Spain via the DNV can elect Spain's Special Tax Regime (Beckham Law) within 6 months of Social Security registration. This provides a flat 24% income tax rate on Spanish-sourced income up to &euro;600,000/year for up to 6 years. However, the US taxes citizens on worldwide income regardless of residency, so you need specialist cross-border tax advice to understand how the FEIE, Foreign Tax Credit, and the Spain&ndash;US Tax Treaty interact with the Beckham Law in your specific circumstances.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+              Can I bring my family with me on the Spain Digital Nomad Visa?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Yes. Your spouse or registered partner and dependent children under 18 can apply as family unit members alongside your main application at the LA consulate. Each family member needs their own passport, criminal record check, health insurance, and proof of the family relationship (marriage certificate, birth certificates &mdash; all apostilled and with sworn translations). The main applicant's income threshold increases by 75% of Spain's SMI per adult dependent and 25% per minor child. Apply simultaneously for the smoothest outcome. See our <a href="/dnv-family.html">DNV family application guide</a>.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+              What happens if my Spain Digital Nomad Visa application is denied by the LA consulate?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                A denial comes with a written explanation of the reason(s). You have the right to file an administrative appeal (recurso de reposici&oacute;n) within one month, or a judicial appeal (recurso contencioso-administrativo) within two months. In most cases, addressing the specific deficiencies and reapplying is more efficient than a formal appeal. The most common denial reasons are insufficient or inconsistent income evidence, non-compliant health insurance (policies with copayments), missing apostilles, and incomplete or non-sworn translations. Professional legal assistance at the appeal or reapplication stage significantly improves success rates.
+              </div>
+            </div>
+          </div>
+
+        </section>
+
+        <div class="cta-band">
+          <h2>Ready to Start Your Application?</h2>
+          <p>My Spanish Visa's expert team has helped hundreds of US-based clients navigate the Spain Digital Nomad Visa process from preparation to approval. We handle document coordination, translation referrals, and consulate submission strategy.</p>
+          <div class="cta-buttons">
+            <a href="/contact-us.html" class="btn btn-primary">Book a Free Consultation</a>
+            <a href="/dnv-requirements.html" class="btn btn-outline">View Full DNV Requirements</a>
+          </div>
+        </div>
+
+        <h2>Common Reasons for DNV Rejection at the LA Consulate</h2>
+        <p>Understanding why applications get rejected helps you prepare a stronger submission. Based on the most frequently cited grounds for refusal at US consulates (including the LA consulate), here are the most common issues and how to prevent them:</p>
+
+        <table class="req-table">
+          <thead>
+            <tr>
+              <th>Rejection Reason</th>
+              <th>How to Avoid It</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Insufficient income evidence</strong></td>
+              <td>Provide 6 months of bank statements (not just 3), ensure all deposits are clearly visible, include employer letter AND pay stubs AND W-2/1099 — do not rely on a single document type</td>
+            </tr>
+            <tr>
+              <td><strong>Health insurance with copayments</strong></td>
+              <td>Explicitly verify the policy has zero copayments before purchasing; request a letter from the insurer confirming &ldquo;no copayments&rdquo; or &ldquo;sin copago&rdquo; in writing</td>
+            </tr>
+            <tr>
+              <td><strong>FBI check not apostilled or expired</strong></td>
+              <td>Use US Dept of State apostille (not a state apostille); ensure the check was issued within 3&ndash;6 months of your appointment date</td>
+            </tr>
+            <tr>
+              <td><strong>Non-sworn translations</strong></td>
+              <td>Use only formally certified sworn (jurado) translators; keep their credentials documentation</td>
+            </tr>
+            <tr>
+              <td><strong>Employer letter missing required details</strong></td>
+              <td>Follow the required elements checklist exactly; confirm the letter explicitly states the work can be performed from Spain and the employer is non-Spanish</td>
+            </tr>
+            <tr>
+              <td><strong>Income is variable/inconsistent</strong></td>
+              <td>Include a written explanation for any income fluctuations; provide a longer history (12 months) if income has been irregular</td>
+            </tr>
+            <tr>
+              <td><strong>Application form errors or missing sections</strong></td>
+              <td>Review the EX-01 form carefully; do not leave sections blank; include your full legal name exactly as on your passport</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Renewing Your Digital Nomad Visa from Spain</h2>
+        <p>Your Spain Digital Nomad Visa is initially issued for <strong>1 year</strong>. Before it expires, you can renew for residence permits of up to <strong>2 years at a time</strong>, up to a maximum total of 5 years. After 5 years of continuous legal residence, you may qualify for long-term EU residency; after 10 years, Spanish citizenship becomes possible.</p>
+
+        <p>Renewal is handled from within Spain at the Oficina de Extranjer&iacute;a &mdash; you do not need to return to the LA consulate. The renewal documents are broadly similar to the initial application: updated income evidence, renewed health insurance, updated criminal record check, and evidence that you have been resident in Spain. See our detailed <a href="/dnv-renewal.html">DNV renewal guide</a> for the complete process.</p>
+
+        <div class="info-box tip">
+          <strong>Start Your Renewal 2&ndash;3 Months Before Expiry</strong>
+          <p>Do not wait until the last minute to start your renewal application. The renewal appointment system in Spain can have queues, and gathering updated documents takes time. Starting 2&ndash;3 months before your current permit expires gives you a comfortable buffer and ensures you remain in legal status throughout.</p>
+        </div>
+
+        <h2>Why Southern California Digital Nomads Love Spain</h2>
+        <p>Spain is an increasingly popular destination for California-based remote workers for several practical and lifestyle reasons:</p>
+        <ul>
+          <li><strong>Time zone compatibility:</strong> Spain (CET/CEST) is 9 hours ahead of PST (8 hours ahead of PDT). This means a California-based remote worker's European morning often overlaps with their US colleagues' late afternoon, making video calls and real-time collaboration manageable for many roles.</li>
+          <li><strong>Direct flights from LAX:</strong> Los Angeles International Airport has direct flights to Madrid Barajas (roughly 11 hours) and Barcelona El Prat. American Airlines, Iberia, and other carriers serve this route.</li>
+          <li><strong>Cost of living advantages:</strong> While major Spanish cities have seen rising costs, living costs in cities like Valencia, Seville, Malaga, and Granada remain substantially lower than in Los Angeles &mdash; particularly for housing and food.</li>
+          <li><strong>Mediterranean lifestyle:</strong> Spain&rsquo;s climate, food culture, outdoor lifestyle, and pace of life are particularly attractive to Southern Californians already accustomed to sunshine and outdoor activities.</li>
+          <li><strong>Strong expat communities:</strong> Madrid, Barcelona, Valencia, and the Costa del Sol all have well-established English-speaking expat communities, making the transition smoother for first-time expats.</li>
+          <li><strong>Quality of life metrics:</strong> Spain consistently ranks highly for quality of life, healthcare quality (rated among the world&rsquo;s best), and safety in international comparisons.</li>
+        </ul>
+
+        <h2>Popular Destinations for LA Applicants Moving to Spain</h2>
+        <p>California-based DNV applicants often have strong views on where in Spain they want to live. Here are the most popular choices and what to expect:</p>
+        <ul>
+          <li><strong>Madrid:</strong> Spain&rsquo;s capital offers the most job market depth (useful if you later transition to local employment), excellent infrastructure, and a cosmopolitan lifestyle. Monthly housing costs for a 1-bedroom apartment in a good neighbourhood: &euro;1,200&ndash;&euro;1,800/month.</li>
+          <li><strong>Barcelona:</strong> Mediterranean coastal city with strong tech/startup ecosystem, excellent English-language expat community, beautiful architecture, and beach access. More expensive than Madrid; 1-bedroom: &euro;1,300&ndash;&euro;2,000/month.</li>
+          <li><strong>Valencia:</strong> Spain&rsquo;s third city is a favourite among digital nomads for its combination of affordability, Mediterranean climate, beach, food culture, and growing expat community. 1-bedroom: &euro;800&ndash;&euro;1,300/month.</li>
+          <li><strong>Seville:</strong> Andalusia&rsquo;s capital combines culture, sunshine, and relative affordability. Popular with those who want authentic Spanish culture. 1-bedroom: &euro;700&ndash;&euro;1,100/month.</li>
+          <li><strong>Malaga &amp; Costa del Sol:</strong> Warm, sunny, and increasingly popular with northern European and American expats. Malaga city has a growing digital nomad scene. 1-bedroom: &euro;750&ndash;&euro;1,200/month.</li>
+        </ul>
+
+        <h2>Related Guides</h2>
+        <ul class="related-links">
+          <li><a href="/dnv-pillar-page.html">Spain Digital Nomad Visa: Complete Overview</a></li>
+          <li><a href="/dnv-requirements.html">Digital Nomad Visa Requirements</a></li>
+          <li><a href="/dnv-income-requirements.html">DNV Income Requirements Explained</a></li>
+          <li><a href="/dnv-documents.html">DNV Document Checklist</a></li>
+          <li><a href="/dnv-health-insurance.html">DNV Health Insurance Guide</a></li>
+          <li><a href="/dnv-family.html">Bringing Family on the Digital Nomad Visa</a></li>
+          <li><a href="/dnv-apply-in-spain.html">Applying for the DNV Inside Spain</a></li>
+          <li><a href="/dnv-usa.html">Spain Digital Nomad Visa for US Citizens</a></li>
+          <li><a href="/dnv-renewal.html">DNV Renewal Guide</a></li>
+          <li><a href="/dnv-tax-spain.html">DNV Tax Guide (Beckham Law)</a></li>
+        </ul>
+
+        <h2>Preparing for Your Move: Practical Logistics for LA-Based Applicants</h2>
+        <p>Once your visa is approved and you are preparing to move, here are the practical logistics most Los Angeles-based applicants need to address:</p>
+
+        <h3>Housing in Spain Before You Arrive</h3>
+        <p>Securing accommodation before arrival in Spain is important &mdash; you need a Spanish address for your TIE card and empadronamiento (address registration) processes. Consider:</p>
+        <ul>
+          <li><strong>Short-term furnished rentals:</strong> Book 1&ndash;3 months of a furnished apartment through platforms like Uniplaces, Spotahome, Nestpick, or direct rental sites. This gives you time to explore and find a permanent flat without committing to a long-term lease before you arrive.</li>
+          <li><strong>Long-term rental contracts:</strong> Standard Spanish rental contracts run 5 years (with updates to the Urban Leasing Act). You will typically need your NIE/TIE, bank account, employment evidence, and possibly a Spanish guarantor or deposit equivalent. Many landlords in major cities have experience with foreign renters.</li>
+          <li><strong>Important:</strong> Many Madrid and Barcelona landlords require proof of income and a Spanish bank account before signing. Setting up a Spanish bank account quickly after arrival is a priority.</li>
+        </ul>
+
+        <h3>Moving Your Belongings</h3>
+        <p>Shipping personal effects from Los Angeles to Spain involves several practical considerations:</p>
+        <ul>
+          <li>Air freight is fast but expensive; sea freight (20&ndash;45 days transit) is more economical for larger volumes</li>
+          <li>Spain allows non-EU residents importing personal effects for the first time to bring household goods duty-free under the &ldquo;household removal&rdquo; provisions, provided you hold a valid residence permit and have owned the items for 6+ months</li>
+          <li>Electronics purchased in the US (120V, 60Hz) require voltage adapters or transformer for use in Spain (220V, 50Hz)</li>
+          <li>If bringing a US-registered vehicle to Spain, EU registration and homologation requirements apply &mdash; complex and often not cost-effective for most vehicles</li>
+        </ul>
+
+        <h3>Banking and Financial Preparation</h3>
+        <ul>
+          <li>Open a Spanish bank account within your first week: Santander, BBVA, CaixaBank, Sabadell, and Bankinter all offer foreigner-friendly services. Bring your passport, TIE/NIE, and empadronamiento certificate.</li>
+          <li>Consider a multi-currency account (Wise, Revolut) as a bridge before your Spanish account is set up</li>
+          <li>Notify your US bank of your international move before departure to avoid card blocks</li>
+          <li>US credit cards with no foreign transaction fees (Chase Sapphire, Capital One Venture, etc.) are widely accepted in Spain and useful during the transition period</li>
+          <li>Keep your US bank account active for receiving USD income; use international transfer services (Wise, BBVA Send, Xe) for currency conversion</li>
+        </ul>
+
+        <h3>Healthcare Transition</h3>
+        <p>Your visa health insurance covers you from day one in Spain. Longer-term, once you hold a TIE and register with Social Security (if working under the Beckham Law or as aut&oacute;nomo), you may gain access to Spain&rsquo;s public healthcare system. Until then, your international private insurance is your primary healthcare resource. Register with a local private clinic (cl&iacute;nica privada) early to establish a primary care relationship.</p>
+
+        <h2>Time Zone and Work Schedule: LA to Spain</h2>
+        <p>One of the most frequently asked questions by LA-based applicants is how to manage the time difference with US employers and clients after the move:</p>
+        <ul>
+          <li><strong>Standard time (winter):</strong> Spain is CET (UTC+1); Los Angeles is PST (UTC-8). Difference: 9 hours. A 9am LA call is 6pm Madrid time.</li>
+          <li><strong>Daylight saving:</strong> Spain observes CEST (UTC+2); LA observes PDT (UTC-7). Difference: 8 hours during most of European summer.</li>
+          <li><strong>Practical working pattern:</strong> Many LA-based remote workers in Spain adopt a split schedule &mdash; personal time and errands in the Spanish morning, then starting work around 1&ndash;2pm Madrid time (which is 5&ndash;6am LA time) when the US starts to come online. By 8&ndash;9pm Madrid time, they are overlapping with the full LA working day.</li>
+          <li><strong>Asynchronous-first teams:</strong> If your company culture is async-first (common in tech, media, and many modern remote organisations), the time zone difference may not require a shifted schedule at all.</li>
+          <li><strong>Client expectations:</strong> If you have clients who expect real-time availability during US business hours, discuss this openly before the move. Many European-based US expats work modified schedules successfully; the key is alignment with your employer or clients.</li>
+        </ul>
+
+      </main>
+
+      <aside class="sidebar">
+
+        <div class="sidebar-card">
+          <h3>LA Consulate Details</h3>
+          <div class="consulate-detail">
+            <strong>Address</strong>
+            5055 Wilshire Blvd, Suite 960<br>Los Angeles, CA 90036
+          </div>
+          <div class="consulate-detail">
+            <strong>Phone</strong>
+            +1 (323) 938-0158
+          </div>
+          <div class="consulate-detail">
+            <strong>Appointments</strong>
+            spanishconsulate-la.org
+          </div>
+          <div class="consulate-detail">
+            <strong>Visa Hours</strong>
+            Mon&ndash;Fri, 9:00am&ndash;1:00pm
+          </div>
+          <div class="consulate-detail">
+            <strong>Jurisdiction</strong>
+            CA, AZ, NV, HI, NM, UT, CO
+          </div>
+          <div class="consulate-detail">
+            <strong>Appointment Wait</strong>
+            Typically 4&ndash;12 weeks
+          </div>
+          <div class="consulate-detail">
+            <strong>Processing Time</strong>
+            4&ndash;10 weeks after submission
+          </div>
+        </div>
+
+        <div class="sidebar-card">
+          <h3>Application Timeline</h3>
+          <div class="timeline-widget">
+            <div class="timeline-step">
+              <div class="timeline-dot">1</div>
+              <div class="timeline-text"><strong>Week 1&ndash;2</strong>Book appointment; start FBI check</div>
+            </div>
+            <div class="timeline-step">
+              <div class="timeline-dot">2</div>
+              <div class="timeline-text"><strong>Week 2&ndash;8</strong>Gather all documents; purchase health insurance</div>
+            </div>
+            <div class="timeline-step">
+              <div class="timeline-dot">3</div>
+              <div class="timeline-text"><strong>Week 4&ndash;12</strong>Wait for appointment slot</div>
+            </div>
+            <div class="timeline-step">
+              <div class="timeline-dot">4</div>
+              <div class="timeline-text"><strong>Week 8&ndash;14</strong>Commission sworn translations; obtain apostilles</div>
+            </div>
+            <div class="timeline-step">
+              <div class="timeline-dot">5</div>
+              <div class="timeline-text"><strong>Appointment</strong>Submit at consulate; pay fee</div>
+            </div>
+            <div class="timeline-step">
+              <div class="timeline-dot">6</div>
+              <div class="timeline-text"><strong>+4&ndash;10 weeks</strong>Consulate processes application</div>
+            </div>
+            <div class="timeline-step">
+              <div class="timeline-dot">7</div>
+              <div class="timeline-text"><strong>Approval</strong>Collect visa; book travel to Spain</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="sidebar-card">
+          <h3>Quick Links</h3>
+          <div class="quick-links">
+            <a href="/dnv-pillar-page.html">DNV Overview</a>
+            <a href="/dnv-requirements.html">DNV Requirements</a>
+            <a href="/dnv-income-requirements.html">Income Requirements</a>
+            <a href="/dnv-documents.html">Document Checklist</a>
+            <a href="/dnv-health-insurance.html">Health Insurance Guide</a>
+            <a href="/dnv-family.html">Family Application</a>
+            <a href="/dnv-apply-in-spain.html">Apply Inside Spain</a>
+            <a href="/dnv-eligibility.html">Eligibility Check</a>
+          </div>
+        </div>
+
+        <div class="sidebar-card" style="background:var(--navy);border-color:var(--navy);">
+          <h3 style="color:var(--yellow);">Free Consultation</h3>
+          <p style="color:rgba(255,255,255,0.85);font-size:0.88rem;margin:0 0 16px;">Speak with a Spain visa specialist about your LA consulate application.</p>
+          <a href="/contact-us.html" class="btn btn-primary" style="display:block;text-align:center;width:100%;">Book Now &mdash; It's Free</a>
+        </div>
+
+      </aside>
+    </div>
+  </div>
+
+  <div class="page-container" style="padding-bottom:48px;">
+    <div style="background:var(--cream);border:1px solid var(--border);border-radius:var(--radius-lg);padding:28px 32px;margin-top:0;">
+      <h2 style="font-size:1.1rem;font-weight:800;color:var(--navy);margin:0 0 12px;border:none;display:block;padding:0;">Disclaimer</h2>
+      <p style="font-size:0.86rem;color:var(--muted);margin:0;line-height:1.7;">The information on this page is provided for general guidance only and is based on information available as of April 2026. Spain&rsquo;s Digital Nomad Visa requirements, processing times, consulate procedures, and income thresholds are subject to change. Always verify current requirements directly with the Consulate General of Spain in Los Angeles or with a qualified Spain immigration lawyer before submitting your application. My Spanish Visa provides information and facilitation services; we are not a law firm and this is not legal advice. Consulate contact details, processing times, and fees should be confirmed with the consulate at the time of booking.</p>
+    </div>
+  </div>
+
+</div>
+
+<script>
+(function(){
+  var items = document.querySelectorAll('.msv .faq-item');
+  items.forEach(function(item){
+    var btn = item.querySelector('.faq-question');
+    if(btn){
+      btn.addEventListener('click', function(){
+        var isOpen = item.classList.contains('open');
+        items.forEach(function(el){ el.classList.remove('open'); });
+        if(!isOpen){ item.classList.add('open'); }
+      });
+    }
+  });
+})();
+</script>
+
+<!-- FRAGMENT_END -->
+</main>
+
+
+<!-- ═══════════════════════════════════════════════════
+     SITE FOOTER
+     ═══════════════════════════════════════════════════ -->
+
+<section style="background:#f8f7f4;padding:2rem 1.5rem;border-top:1px solid #dce3ed;">
+  <div style="max-width:820px;margin:0 auto;">
+    <div style="background:#fff;border:2px solid #dce3ed;border-radius:12px;padding:1.75rem 2rem;">
+      <p style="font-weight:700;color:#0c1930;margin:0 0 0.5rem;font-size:0.95rem;">Recommended insurance specialists</p>
+      <p style="color:#5a6478;font-size:0.9rem;margin:0;line-height:1.8;">
+        <a href="https://www.spanish-healthinsurance.com/myspanishvisa" target="_blank" rel="noopener" style="color:#be0011;font-weight:700;">Spanish Health Insurance</a> — visa-compliant private health insurance for English-speaking foreigners in Spain.<br>
+        <a href="https://www.247expatinsurance.com/myspanishvisa" target="_blank" rel="noopener" style="color:#be0011;font-weight:700;">247 Expat Insurance</a> — health and all types of expat insurance in Spain, tailored for international residents.
+      </p>
+    </div>
+  </div>
+</section>
+<footer class="msv-footer" role="contentinfo">
+
+  <div class="msv-footer__top">
+
+    <!-- Brand column -->
+    <div class="msv-footer__brand">
+      <a href="/" class="msv-footer__logo" aria-label="My Spanish Visa"><img src="/assets/images/msv-logo-white.png" alt="My Spanish Visa" height="40" style="display:block;"></a>
+      <p class="msv-footer__tagline">
+        Specialist Spain visa &amp; residency guidance for English-speaking foreigners.
+        A service of Platinum Legal Spain.
+      </p>
+      <div class="msv-footer__trust">
+        <span class="msv-footer__trust-item">All English. No barriers.</span>
+        <span class="msv-footer__trust-item">Solicitors &amp; immigration specialists</span>
+        <span class="msv-footer__trust-item">100% online process</span>
+      </div>
+    </div>
+
+    <!-- Visas column -->
+    <div>
+      <div class="msv-footer__col-title">Visas</div>
+      <ul class="msv-footer__links">
+        <li><a href="/nlv-pillar-page.html">Non-Lucrative Visa</a></li>
+        <li><a href="/dnv-pillar-page.html">Digital Nomad Visa</a></li>
+        <li><a href="/student-visa-pillar-page.html">Student Visa</a></li>
+        <li><a href="/spanish-residency-renewal.html">Visa Renewals</a></li>
+        <li><a href="/best-visa-move-to-spain.html">Compare All Visas</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/nlv">Apply: NLV</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/dnv">Apply: DNV</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/student-visa">Apply: Student Visa</a></li>
+      </ul>
+    </div>
+
+    <!-- Resources column -->
+    <div>
+      <div class="msv-footer__col-title">Resources</div>
+      <ul class="msv-footer__links">
+        <li><a href="/blog-index.html">Blog &amp; Guides</a></li>
+        <li><a href="/move-to-spain.html">Move to Spain Guide</a></li>
+        <li><a href="/visa-eligibility-quiz.html">Eligibility Quiz</a></li>
+        <li><a href="/spain-visa-options.html">Document Checklists</a></li>
+        <li><a href="/spain-visa-options.html">Visa Requirements</a></li>
+        <li><a href="/nie-number-spain.html">NIE Number Guide</a></li>
+        <li><a href="/tie-card-spain.html">TIE Card Guide</a></li>
+      </ul>
+    </div>
+
+    <!-- Company column -->
+    <div>
+      <div class="msv-footer__col-title">Company</div>
+      <ul class="msv-footer__links">
+        <li><a href="/about-us.html">About Us</a></li>
+        <li><a href="/testimonials.html">Client Reviews</a></li>
+        <li><a href="/why-choose-us.html">Why Choose Us</a></li>
+        <li><a href="/contact-us.html">Contact</a></li>
+        <li><a href="https://www.platinumlegalspain.com" rel="noopener">Platinum Legal Spain</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/dnv">Client Portal</a></li>
+      </ul>
+    </div>
+
+  </div><!-- /.msv-footer__top -->
+
+  <div class="msv-footer__bottom">
+    <div class="msv-footer__bottom-inner">
+      <p class="msv-footer__disclaimer">
+        <strong style="color:rgba(255,255,255,0.5);">Disclaimer:</strong>
+        My Spanish Visa provides visa processing support and is not a law firm. Content on this site is for informational purposes only and does not constitute legal advice. Immigration rules change frequently — always verify requirements with official sources or a qualified specialist. My Spanish Visa is a trading name of Platinum Legal Spain.
+      </p>
+      <span class="msv-footer__copyright">© 2026 My Spanish Visa. All rights reserved.</span>
+    </div>
+  </div>
+
+</footer>
+
+</body>
+</html>

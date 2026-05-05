@@ -1,0 +1,1756 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- ═══════════════════════════════════════════════════════════════════
+       PAGE-SPECIFIC HEAD — replace block below per page:
+       <title>Cost Of Living Spain Retirees | My Spanish Visa</title>
+       <meta name="description" content="…">
+       <meta property="og:title" content="…">
+       <meta property="og:description" content="…">
+       <meta property="og:url" content="https://www.myspanishvisa.com/…">
+       <meta property="og:image" content="…">
+       <link rel="canonical" href="https://www.myspanishvisa.com/…">
+       <script type="application/ld+json">…</script>
+       ═══════════════════════════════════════════════════════════════════ -->
+  <title>My Spanish Visa — Spain Visa &amp; Residency Specialists</title>
+  <meta name="description" content="My Spanish Visa helps English-speaking foreigners move to Spain. Expert guidance on Non-Lucrative Visa, Digital Nomad Visa, Student Visa, renewals and more.">
+
+  <!-- Shared Open Graph defaults -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="My Spanish Visa">
+  <meta property="og:image" content="https://www.myspanishvisa.com/assets/images/og/og-myspanishvisa-default.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@myspanishvisa">
+
+  <style>
+/* ═══════════════════════════════════════════════════════════════
+   GLOBAL SHELL — nav + footer only.
+   Page-specific CSS lives inside each fragment's own <style> block.
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── iOS overflow safety ── */
+html, body { max-width: 100%; overflow-x: clip; margin: 0; padding: 0; }
+*, *::before, *::after { box-sizing: border-box; }
+
+/* ── Brand tokens (root-level so all fragments inherit) ── */
+:root {
+  --navy:      #0c1930;
+  --navy-mid:  #1a3a5c;
+  --red:       #be0011;
+  --red-deep:  #8c000d;
+  --yellow:    #facf39;
+  --cream:     #f8f7f4;
+  --white:     #ffffff;
+  --black:     #1a1a1a;
+  --muted:     #5a6478;
+  --border:    #dce3ed;
+  --shadow-sm: 0 2px 8px rgba(12,25,48,0.08);
+  --shadow-md: 0 6px 24px rgba(12,25,48,0.13);
+}
+
+body {
+  font-family: 'Inter', 'Segoe UI', system-ui, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.75;
+  color: var(--black);
+  background: #fff;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   SITE NAV
+   ───────────────────────────────────────────────────────────── */
+.msv-nav {
+  position: sticky;
+  top: 0;
+  z-index: 9000;
+  background: var(--navy);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 2px 12px rgba(12,25,48,0.22);
+}
+.msv-nav__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  gap: 1.5rem;
+}
+
+/* Logo */
+.msv-nav__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+.msv-nav__logo-flag {
+  font-size: 1.3rem;
+  line-height: 1;
+}
+.msv-nav__logo-text {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+.msv-nav__logo-text span {
+  color: var(--yellow);
+}
+
+/* Links */
+.msv-nav__links {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.msv-nav__links > li {
+  position: relative;
+}
+.msv-nav__links > li > a,
+.msv-nav__links > li > button {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.5rem 0.9rem;
+  font-size: 0.87rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.85);
+  text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: color 0.15s, background 0.15s;
+  white-space: nowrap;
+  height: 80px;
+}
+.msv-nav__links > li > a:hover,
+.msv-nav__links > li > button:hover,
+.msv-nav__links > li:focus-within > a,
+.msv-nav__links > li:focus-within > button {
+  color: #fff;
+  background: rgba(255,255,255,0.08);
+}
+.msv-nav__chevron {
+  font-size: 0.65rem;
+  opacity: 0.7;
+  transition: transform 0.2s;
+}
+.msv-nav__links > li:focus-within .msv-nav__chevron,
+.msv-nav__links > li:hover .msv-nav__chevron {
+  transform: rotate(180deg);
+}
+
+/* Dropdown */
+.msv-nav__dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 230px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  box-shadow: var(--shadow-md);
+  padding: 0.5rem 0;
+  z-index: 200;
+}
+.msv-nav__links > li:hover .msv-nav__dropdown,
+.msv-nav__links > li:focus-within .msv-nav__dropdown {
+  display: block;
+}
+.msv-nav__dropdown a {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.6rem 1.1rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--navy);
+  text-decoration: none;
+  transition: background 0.12s;
+}
+.msv-nav__dropdown a:hover {
+  background: var(--cream);
+  color: var(--red);
+}
+.msv-nav__dropdown-icon {
+  width: 24px;
+  height: 24px;
+  background: var(--cream);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+.msv-nav__dropdown-divider {
+  height: 1px;
+  background: var(--border);
+  margin: 0.4rem 0;
+}
+
+/* CTA button */
+.msv-nav__cta {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.55rem 1.2rem;
+  background: var(--red);
+  color: #fff !important;
+  font-size: 0.85rem;
+  font-weight: 700;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.15s, box-shadow 0.15s;
+  white-space: nowrap;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(190,0,17,0.3);
+}
+.msv-nav__cta:hover {
+  background: var(--red-deep);
+  box-shadow: 0 4px 14px rgba(190,0,17,0.4);
+  text-decoration: none;
+}
+
+/* Hamburger */
+.msv-nav__burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.4rem;
+  border-radius: 5px;
+}
+.msv-nav__burger span {
+  width: 22px;
+  height: 2px;
+  background: #fff;
+  border-radius: 2px;
+  transition: transform 0.2s, opacity 0.2s;
+  display: block;
+}
+
+/* Mobile nav */
+.msv-nav__mobile {
+  display: none;
+  flex-direction: column;
+  background: var(--navy-mid);
+  padding: 1rem 1.5rem 1.5rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+.msv-nav__mobile.open { display: flex; }
+.msv-nav__mobile a {
+  padding: 0.65rem 0;
+  color: rgba(255,255,255,0.9);
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+.msv-nav__mobile a:hover { color: var(--yellow); }
+.msv-nav__mobile .msv-nav__mobile-sub {
+  padding-left: 1rem;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: rgba(255,255,255,0.7);
+}
+.msv-nav__mobile-cta {
+  margin-top: 1rem;
+  background: var(--red);
+  color: #fff !important;
+  border-radius: 6px;
+  text-align: center;
+  padding: 0.75rem 1rem !important;
+  border-bottom: none !important;
+}
+
+@media (max-width: 900px) {
+  .msv-nav__links { display: none; }
+  .msv-nav__cta { display: none; }
+  .msv-nav__burger { display: flex; }
+}
+@media (max-width: 480px) {
+  .msv-nav__inner { padding: 0 1rem; }
+}
+
+/* ─────────────────────────────────────────────────────────────
+   SITE FOOTER
+   ───────────────────────────────────────────────────────────── */
+.msv-footer {
+  background: var(--navy);
+  color: rgba(255,255,255,0.75);
+  overflow-x: clip;
+}
+.msv-footer__top {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem 3rem;
+  display: grid;
+  grid-template-columns: 280px 1fr 1fr 1fr;
+  gap: 3rem;
+}
+@media (max-width: 900px) {
+  .msv-footer__top { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
+}
+@media (max-width: 560px) {
+  .msv-footer__top { grid-template-columns: 1fr; gap: 2rem; padding: 3rem 1.2rem 2rem; }
+}
+
+.msv-footer__brand {}
+.msv-footer__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  margin-bottom: 1rem;
+}
+.msv-footer__logo-flag { font-size: 1.3rem; }
+.msv-footer__logo-text {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -0.01em;
+}
+.msv-footer__logo-text span { color: var(--yellow); }
+.msv-footer__tagline {
+  font-size: 0.83rem;
+  color: rgba(255,255,255,0.55);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+.msv-footer__trust {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+.msv-footer__trust-item {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.65);
+}
+.msv-footer__trust-item::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  background: var(--yellow);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.msv-footer__col-title {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.4);
+  margin-bottom: 1rem;
+}
+.msv-footer__links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.msv-footer__links a {
+  font-size: 0.87rem;
+  color: rgba(255,255,255,0.68);
+  text-decoration: none;
+  transition: color 0.15s;
+  display: inline-block;
+}
+.msv-footer__links a:hover {
+  color: var(--yellow);
+  text-decoration: none;
+}
+
+.msv-footer__bottom {
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+.msv-footer__bottom-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 1rem;
+  justify-content: space-between;
+}
+.msv-footer__disclaimer {
+  font-size: 0.73rem;
+  color: rgba(255,255,255,0.35);
+  line-height: 1.65;
+  max-width: 720px;
+}
+.msv-footer__copyright {
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.35);
+  white-space: nowrap;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   MAIN CONTENT AREA
+   ───────────────────────────────────────────────────────────── */
+main {
+  /* Fragments are self-contained; this wrapper just provides flow context */
+  position: relative;
+}
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════
+     SITE NAVIGATION
+     ═══════════════════════════════════════════════════ -->
+<header class="msv-nav" role="banner">
+  <div class="msv-nav__inner">
+
+    <!-- Logo -->
+    <a href="/" class="msv-nav__logo" aria-label="My Spanish Visa — Home"><img src="/assets/images/msv-logo-white.png" alt="My Spanish Visa" height="64" style="display:block;"></a>
+
+    <!-- Desktop links -->
+    <nav aria-label="Main navigation">
+      <ul class="msv-nav__links">
+
+        <li>
+          <button class="msv-nav__dropdown-trigger" aria-haspopup="true" aria-expanded="false">
+            Visas <span class="msv-nav__chevron">▾</span>
+          </button>
+          <div class="msv-nav__dropdown" role="menu">
+            <a href="/nlv-pillar-page.html" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🏖️</span>Non-Lucrative Visa
+            </a>
+            <a href="/dnv-pillar-page.html" role="menuitem">
+              <span class="msv-nav__dropdown-icon">💻</span>Digital Nomad Visa
+            </a>
+            <a href="/student-visa-pillar-page.html" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🎓</span>Student Visa
+            </a>
+            <div class="msv-nav__dropdown-divider"></div>
+            <a href="/spanish-residency-renewal.html" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🔄</span>Visa Renewals
+            </a>
+            <a href="/best-visa-move-to-spain.html" role="menuitem">
+              <span class="msv-nav__dropdown-icon">⚖️</span>Compare All Visas
+            </a>
+          </div>
+        </li>
+
+        <li>
+          <button aria-haspopup="true" aria-expanded="false">
+            Resources <span class="msv-nav__chevron">▾</span>
+          </button>
+          <div class="msv-nav__dropdown" role="menu">
+            <a href="/blog-index.html" role="menuitem">
+              <span class="msv-nav__dropdown-icon">📝</span>Blog &amp; Guides
+            </a>
+            <a href="/spain-visa-options.html" role="menuitem">
+              <span class="msv-nav__dropdown-icon">✅</span>Document Checklists
+            </a>
+            <a href="/move-to-spain.html" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🏠</span>Move to Spain Guide
+            </a>
+            <a href="/visa-eligibility-quiz.html" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🧭</span>Eligibility Quiz
+            </a>
+          </div>
+        </li>
+
+        <li><a href="/about-us.html">About Us</a></li>
+        <li><a href="/testimonials.html">Reviews</a></li>
+        <li><a href="/contact-us.html">Contact</a></li>
+
+      </ul>
+    </nav>
+
+    <!-- Desktop CTA -->
+    <a href="https://dashboard.platinumlegalspain.com/nlv" class="msv-nav__cta">
+      Start My Application →
+    </a>
+
+    <!-- Hamburger (mobile) -->
+    <button class="msv-nav__burger" aria-label="Open menu" aria-expanded="false" onclick="
+      var m=document.querySelector('.msv-nav__mobile');
+      var open=m.classList.toggle('open');
+      this.setAttribute('aria-expanded', open);
+    ">
+      <span></span><span></span><span></span>
+    </button>
+
+  </div><!-- /.msv-nav__inner -->
+
+  <!-- Mobile menu -->
+  <nav class="msv-nav__mobile" aria-label="Mobile navigation">
+    <a href="/nlv-pillar-page.html" class="msv-nav__mobile-sub">Non-Lucrative Visa</a>
+    <a href="/dnv-pillar-page.html" class="msv-nav__mobile-sub">Digital Nomad Visa</a>
+    <a href="/student-visa-pillar-page.html" class="msv-nav__mobile-sub">Student Visa</a>
+    <a href="/spanish-residency-renewal.html">Visa Renewals</a>
+    <a href="/best-visa-move-to-spain.html">Compare All Visas</a>
+    <a href="/blog-index.html">Blog &amp; Guides</a>
+    <a href="/about-us.html">About Us</a>
+    <a href="/testimonials.html">Reviews</a>
+    <a href="/contact-us.html">Contact</a>
+    <a href="https://dashboard.platinumlegalspain.com/nlv" class="msv-nav__mobile-cta">Start My Application →</a>
+  </nav>
+
+</header>
+
+
+<!-- ═══════════════════════════════════════════════════
+     PAGE CONTENT (fragment injected here)
+     ═══════════════════════════════════════════════════ -->
+<main>
+<!-- FRAGMENT_START -->
+<!-- MySpanishVisa.com - Cost of Living Spain Retirees Page -->
+<!--
+  Elementor Full-Width HTML Widget
+  Page: Cost of Living Spain Retirees
+  Slug: /cost-of-living-spain-retirees/
+  Primary Keyword: cost of living Spain retirees
+  Parent: /non-lucrative-visa-spain/
+-->
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Cost of Living Spain for Retirees | Full Budget Breakdown 2026",
+  "description": "Complete guide to cost of living in Spain for retirees. Detailed breakdown of rent, utilities, food, healthcare, transport & taxes. Monthly budget examples €1,200-€3,000+.",
+  "url": "https://myspanishvisa.com/cost-of-living-spain-retirees/",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "My Spanish Visa",
+    "url": "https://myspanishvisa.com"
+  },
+  "mainEntity": {
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the average cost of living in Spain for retirees?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The average cost of living for retirees in Spain ranges from €1,200-€1,500 monthly for a budget lifestyle, €2,000-€2,500 for comfortable living, and €3,000+ for luxury. Costs vary significantly by city, with Madrid and Barcelona being most expensive, while Andalusia and southern regions offer lower costs."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How much should I budget for rent in Spain as a retiree?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Rental costs vary by city and apartment size. Studios range €300-€600/month, 1-bedroom apartments €400-€800, and 2-bedroom apartments €500-€1,100. In major cities like Madrid or Barcelona expect 30-40% higher prices. Regional areas and smaller cities offer the best value for retirees."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are the hidden costs retirees don't expect in Spain?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Hidden costs include residency permit paperwork (€50-€200), annual NIE registration fees (€0-€50), property registration taxes (0.5-1.5%), vehicle registration (8-12% of purchase price), bank account fees (€2-€10/month), and professional services for tax returns (€150-€400 annually). Budget an extra €200-€300 monthly for unexpected expenses."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does Spain's cost of living compare to the UK and USA?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Spain is significantly cheaper than the UK and USA. A comfortable €2,000/month in Spain equals approximately £1,800 (UK) or $2,200 (USA). Rent is 30-50% cheaper, groceries 20-35% cheaper, and dining out 25-40% cheaper. Many retirees save 20-30% annually by moving from the UK or USA to Spain."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is private health insurance expensive for retirees in Spain?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Private health insurance for retirees costs €80-€200/month depending on age, health status, and coverage. Those over 65 may pay €150-€300/month. Many retirees use Spain's public healthcare system (€1,000-€2,500/year for non-EU residents) or combine public coverage with supplementary private insurance (€30-€50/month)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the most affordable region for retirees in Spain?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The most affordable regions are Andalusia (Málaga, Granada, Sevilla), Extremadura, Castilla-La Mancha, and the Balearic Islands' smaller towns. Retirees can live comfortably on €1,200-€1,500/month in these areas, with rent as low as €300-€400 for a 1-bedroom apartment. These regions also offer excellent weather and lower living costs than northern Spain."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How much should I save for the Non-Lucrative Visa income requirement?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The Non-Lucrative Visa requires €27,792/year (€2,316/month) for the main applicant and additional amounts for dependents. This income must be stable and documented. Most financial advisors recommend having 12+ months of income savings (€33,000+) plus an emergency fund of €5,000-€10,000 before applying."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are seasonal cost variations in Spain?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Summer (June-August) and December increase costs by 10-15% due to tourism. Heating costs peak in winter (€50-€80/month in northern regions). Spring and fall offer the lowest prices. Tourist season also inflates restaurant and activity prices. Plan your arrival in low seasons to optimize costs."
+        }
+      }
+    ]
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://myspanishvisa.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Non-Lucrative Visa Spain",
+        "item": "https://myspanishvisa.com/non-lucrative-visa-spain/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Cost of Living Spain for Retirees",
+        "item": "https://myspanishvisa.com/cost-of-living-spain-retirees/"
+      }
+    ]
+  }
+}
+</script>
+<!-- Open Graph / Social -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.myspanishvisa.com/cost-of-living-spain-retirees/">
+<meta property="og:title" content="My Spanish Visa">
+<meta property="og:description" content="Expert Spain visa guidance for English-speaking expats.">
+<meta property="og:image" content="https://www.myspanishvisa.com/assets/images/og/og-retire-spain.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="My Spanish Visa">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@myspanishvisa">
+<meta name="twitter:title" content="My Spanish Visa">
+<meta name="twitter:description" content="Expert Spain visa guidance for English-speaking expats.">
+<meta name="twitter:image" content="https://www.myspanishvisa.com/assets/images/og/og-retire-spain.jpg">
+
+<style>
+/* ── iOS Safari pinch-zoom overflow safety ─────────────────────────── */
+/* Prevents horizontal overflow when users pinch-zoom on iPhone/iPad.   */
+/* Top-level (also paste into theme Custom CSS / Elementor Site Settings) */
+html, body { max-width: 100%; overflow-x: clip; }
+/* Scoped wrapper safety */
+.msv, .msv-nav, .msv-topbar, .msv-footer, .msv-footer-cta,
+.pls-header, .pls-body, .pls-nlv, .pls-dnv, .pls-student {
+  max-width: 100%;
+  overflow-x: clip;
+  position: relative;
+}
+/* Cap all media inside the wrapper */
+.msv img, .msv video, .msv iframe,
+.msv-footer img, .msv-footer video, .msv-footer iframe {
+  max-width: 100%;
+  height: auto;
+}
+/* Never use 100vw — use 100% instead (dev reminder) */
+
+
+/* ── Reset & scope ─────────────────────────────────────────────────── */
+.msv *, .msv *::before, .msv *::after { box-sizing: border-box; margin: 0; padding: 0; }
+/* ── Tokens ──────────────────────────────────────────────────────── */
+.msv {
+  --navy: #0c1930; --navy-mid: #1a3a5c; --red: #be0011; --red-deep: #8c000d;
+  --yellow: #facf39; --cream: #f8f7f4; --white: #ffffff; --black: #1a1a1a;
+  --muted: #5a6478; --border: #dce3ed;
+  --shadow-sm: 0 2px 8px rgba(12,25,48,0.08); --shadow-md: 0 6px 24px rgba(12,25,48,0.13);
+  font-family: 'Inter', 'Segoe UI', system-ui, Arial, sans-serif;
+  font-size: 16px; line-height: 1.75; color: var(--black); width: 100%;
+}
+.msv__container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+.msv__container--narrow { max-width: 780px; margin: 0 auto; padding: 0 2rem; }
+@media (max-width: 640px) { .msv__container, .msv__container--narrow { padding: 0 1.2rem; } }
+/* ── Typography ──────────────────────────────────────────────────── */
+.msv h1 { font-size: clamp(2rem, 4.5vw, 3rem); font-weight: 800; line-height: 1.12; color: var(--white); letter-spacing: -0.025em; margin-bottom: 1.2rem; }
+.msv h2 { font-size: clamp(1.3rem, 2.5vw, 1.75rem); font-weight: 700; color: var(--navy); letter-spacing: -0.01em; margin-bottom: 0.5rem; position: relative; display: inline-block; padding-bottom: 0.5rem; }
+.msv h2::after { content: ''; position: absolute; bottom: 0; left: 0; width: 44px; height: 3px; background: linear-gradient(90deg, var(--red), var(--red-deep)); border-radius: 2px; }
+.msv h3 { font-size: 1.05rem; font-weight: 700; color: var(--navy); margin-bottom: 0.4rem; }
+.msv p { color: var(--black); margin-bottom: 1rem; font-size: 0.97rem; }
+.msv a { color: var(--red); text-decoration: none; }
+.msv a:hover { text-decoration: underline; }
+.msv ul { list-style: none; padding: 0; margin: 0 0 1rem; }
+.msv ul li { padding: 0.35rem 0 0.35rem 1.4rem; position: relative; font-size: 0.95rem; color: var(--black); }
+.msv ul li::before { content: ''; position: absolute; left: 0; top: 0.75rem; width: 7px; height: 7px; background: linear-gradient(135deg, var(--red), var(--red-deep)); border-radius: 50%; }
+/* ── Sections ─────────────────────────────────────────────────── */
+.msv__section { padding: 5rem 0; background: var(--white); }
+.msv__section--cream { padding: 5rem 0; background: linear-gradient(180deg, #f8f7f4 0%, #f2f4f8 100%); }
+.msv__section--dark { padding: 5rem 0; background: linear-gradient(135deg, var(--navy) 0%, #0d2240 55%, #0a1d38 100%); }
+.msv__section--dark h2 { color: var(--white) !important; }
+.msv__section--dark h2::after { background: linear-gradient(90deg, var(--yellow), #e8b820); }
+.msv__section--dark h3 { color: rgba(255,255,255,0.9) !important; }
+.msv .msv__section--dark p, .msv .msv__section--dark li { color: rgba(255,255,255,0.82); }
+.msv__section--dark ul li::before { background: linear-gradient(135deg, var(--yellow), #e8b820); }
+@media (max-width: 640px) { .msv__section, .msv__section--cream, .msv__section--dark { padding: 3.5rem 0; } }
+.msv__section-hd { margin-bottom: 3rem; }
+.msv__section-hd p { color: var(--muted); font-size: 1rem; margin-top: 0.75rem; line-height: 1.7; max-width: 600px; }
+/* ── Animations ──────────────────────────────────────────────────── */
+@keyframes msv-fade-up { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes msv-shimmer {
+  0%   { background-position: -400px 0; }
+  100% { background-position: 400px 0; }
+}
+.msv__shimmer {
+  background: linear-gradient(90deg, var(--yellow) 0%, #e8b820 25%, var(--red) 50%, #e8b820 75%, var(--yellow) 100%);
+  background-size: 400px 100%;
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: msv-shimmer 3.5s linear infinite;
+  display: inline;
+}
+/* ── Hero ─────────────────────────────────────────────────────── */
+.msv__hero { background: linear-gradient(135deg, #0c1930 0%, #0f2540 40%, #162d50 70%, #1a3560 100%); padding: 5.5rem 0 5rem; position: relative; overflow: hidden; }
+.msv__hero::before { content: ''; position: absolute; top: -30%; right: -5%; width: 700px; height: 700px; background: radial-gradient(circle, rgba(190,0,17,0.1) 0%, transparent 65%); pointer-events: none; }
+.msv__hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, rgba(250,207,57,0.4), transparent); }
+.msv__hero-inner { max-width: 780px; animation: msv-fade-up 0.7s ease-out both; }
+.msv__eyebrow { display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(190,0,17,0.15); border: 1px solid rgba(190,0,17,0.4); color: #ff6b7a; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.35rem 0.9rem; border-radius: 100px; margin-bottom: 1.5rem; }
+.msv__eyebrow::before { content: ''; width: 6px; height: 6px; background: var(--red); border-radius: 50%; box-shadow: 0 0 6px var(--red); }
+.msv__hero p { color: rgba(255,255,255,0.78) !important; font-size: clamp(1rem, 2.2vw, 1.15rem); max-width: 640px; margin-bottom: 2.2rem; line-height: 1.75; }
+/* ── Breadcrumb ───────────────────────────────────────────── */
+.msv__breadcrumb { padding: 0.85rem 0; border-bottom: 1px solid var(--border); background: var(--white); }
+.msv__breadcrumb-inner { display: flex; align-items: center; gap: 0.5rem; font-size: 0.8rem; color: var(--muted); flex-wrap: wrap; }
+.msv__breadcrumb-inner a { color: var(--red); text-decoration: none; }
+.msv__breadcrumb-inner a:hover { text-decoration: underline; }
+.msv__breadcrumb-inner span { color: var(--muted); }
+/* ── Buttons ─────────────────────────────────────────────────── */
+.msv__btn-group { display: flex; flex-wrap: wrap; gap: 0.85rem; }
+.msv__btn { display: inline-block; padding: 0.85rem 2rem; font-size: 0.92rem; font-weight: 700; border-radius: 6px; text-decoration: none !important; transition: transform 0.15s, box-shadow 0.15s; }
+.msv__btn:hover { transform: translateY(-1px); text-decoration: none !important; }
+.msv .msv__btn--primary { background: linear-gradient(135deg, var(--red) 0%, var(--red-deep) 100%); color: #ffffff !important; box-shadow: 0 4px 16px rgba(190,0,17,0.38); }
+.msv .msv__btn--primary:hover { box-shadow: 0 6px 22px rgba(190,0,17,0.48); color: #ffffff !important; }
+.msv .msv__btn--outline-white { background: transparent; color: #ffffff !important; border: 1.5px solid rgba(255,255,255,0.5); }
+.msv .msv__btn--outline-white:hover { background: rgba(255,255,255,0.1); color: #ffffff !important; }
+/* ── Trust bar ──────────────────────────────────────────────── */
+.msv__trust-bar { background: var(--white); border-bottom: 1px solid var(--border); padding: 1rem 0; box-shadow: var(--shadow-sm); }
+.msv__trust-bar-inner { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.75rem; }
+.msv__trust-item { display: flex; align-items: center; gap: 0.5rem; font-size: 0.82rem; font-weight: 600; color: var(--navy); white-space: nowrap; }
+.msv__trust-item::before { content: ''; width: 7px; height: 7px; background: linear-gradient(135deg, var(--red), var(--red-deep)); border-radius: 50%; flex-shrink: 0; }
+/* ── Key facts strip ─────────────────────────────────────────── */
+.msv__facts { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; margin-bottom: 3rem; }
+@media (max-width: 760px) { .msv__facts { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 420px) { .msv__facts { grid-template-columns: 1fr; } }
+.msv__fact { background: var(--white); padding: 1.5rem 1.3rem; text-align: center; }
+.msv__fact-icon { font-size: 1.5rem; display: block; margin-bottom: 0.5rem; }
+.msv__fact-label { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); display: block; margin-bottom: 0.25rem; }
+.msv__fact-value { font-size: 0.97rem; font-weight: 700; color: var(--navy); line-height: 1.35; display: block; }
+/* ── Alert box ───────────────────────────────────────────────── */
+.msv__alert { border-radius: 10px; padding: 1.3rem 1.5rem; display: flex; gap: 1rem; align-items: flex-start; margin-bottom: 2rem; }
+.msv__alert--warn { background: #fffbea; border: 1px solid #f0d060; }
+.msv__alert--info { background: #eef4ff; border: 1px solid #a0bfff; }
+.msv__alert--red { background: #fef2f2; border: 1px solid #fca5a5; }
+.msv__alert--green { background: #f0fdf4; border: 1px solid #86efac; }
+.msv__alert-icon { font-size: 1.4rem; flex-shrink: 0; margin-top: 0.1rem; }
+.msv__alert p { font-size: 0.9rem; color: var(--black); margin: 0; line-height: 1.65; }
+.msv__alert strong { color: var(--navy); }
+/* ── Cost table ──────────────────────────────────────────────── */
+.msv__cost-table { width: 100%; border-collapse: collapse; font-size: 0.88rem; margin: 2rem 0; }
+.msv__cost-table thead tr { background: var(--navy); }
+.msv__cost-table th { padding: 1rem 1.25rem; text-align: left; color: var(--white); font-weight: 700; border-bottom: 2px solid var(--yellow); white-space: nowrap; }
+.msv__cost-table td { padding: 0.85rem 1.25rem; border-bottom: 1px solid var(--border); color: var(--black); }
+.msv__cost-table tbody tr:nth-child(even) { background: #f9fafb; }
+.msv__cost-table .cost-item { font-weight: 600; color: var(--navy); }
+.msv__cost-table .cost-range { color: var(--muted); font-weight: 600; }
+.msv__cost-table .cost-high { color: var(--red); font-weight: 700; }
+/* ── Cost boxes ──────────────────────────────────────────────── */
+.msv__cost-box { background: var(--white); border: 1.5px solid var(--border); border-radius: 12px; padding: 2rem; margin-bottom: 2rem; text-align: center; }
+.msv__cost-box h3 { font-size: 1rem; margin-bottom: 0.5rem; color: var(--navy); }
+.msv__cost-box .cost-value { font-size: 2rem; font-weight: 800; color: var(--red); margin: 1rem 0; }
+.msv__cost-box .cost-label { font-size: 0.8rem; color: var(--muted); font-weight: 600; }
+.msv__cost-boxes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-bottom: 3rem; }
+@media (max-width: 760px) { .msv__cost-boxes { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 420px) { .msv__cost-boxes { grid-template-columns: 1fr; } }
+/* ── FAQs ────────────────────────────────────────────────– */
+.msv__faq-list { display: flex; flex-direction: column; gap: 0; border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+.msv__faq-list details { border-bottom: 1px solid var(--border); background: var(--white); }
+.msv__faq-list details:last-child { border-bottom: none; }
+.msv__faq-list summary { padding: 1.2rem 1.5rem; font-size: 0.97rem; font-weight: 700; color: var(--navy); cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+.msv__faq-list summary::-webkit-details-marker { display: none; }
+.msv__faq-list summary::after { content: '+'; font-size: 1.3rem; font-weight: 400; color: var(--red); flex-shrink: 0; transition: transform 0.2s; }
+.msv__faq-list details[open] summary::after { transform: rotate(45deg); }
+.msv__faq-list details[open] summary { color: var(--red); }
+.msv__faq-answer { padding: 0 1.5rem 1.3rem; font-size: 0.92rem; color: var(--muted); line-height: 1.75; }
+.msv__faq-answer p { color: var(--muted); font-size: 0.92rem; margin-bottom: 0.75rem; }
+.msv__faq-answer p:last-child { margin-bottom: 0; }
+/* ── CTA band ────────────────────────────────────────────────── */
+.msv__cta-band { background: linear-gradient(135deg, var(--navy) 0%, #0d2240 60%, #0a1d38 100%); padding: 5rem 0; text-align: center; }
+.msv__cta-band h2 { color: var(--white) !important; display: block; }
+.msv__cta-band h2::after { left: 50%; transform: translateX(-50%); background: linear-gradient(90deg, var(--yellow), #e8b820); }
+.msv__cta-band p { color: rgba(255,255,255,0.75) !important; max-width: 560px; margin: 1rem auto 2.2rem; font-size: 1rem; }
+.msv__cta-band .msv__btn-group { justify-content: center; }
+/* ── Related guides ──────────────────────────────────────────── */
+.msv__related { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; }
+@media (max-width: 860px) { .msv__related { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 420px) { .msv__related { grid-template-columns: 1fr; } }
+.msv__related-card { background: var(--white); border: 1px solid var(--border); border-radius: 10px; padding: 1.3rem 1.25rem; text-decoration: none !important; transition: box-shadow 0.2s, transform 0.2s; display: block; }
+.msv__related-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); text-decoration: none !important; }
+.msv__related-icon { font-size: 1.5rem; display: block; margin-bottom: 0.6rem; }
+.msv__related-title { font-size: 0.88rem; font-weight: 700; color: var(--navy); display: block; margin-bottom: 0.3rem; }
+.msv__related-desc { font-size: 0.8rem; color: var(--muted); line-height: 1.55; }
+/* ── Disclaimer ──────────────────────────────────────────────── */
+.msv__disclaimer { background: var(--cream); border-top: 1px solid var(--border); padding: 2rem 0; }
+.msv__disclaimer p { font-size: 0.78rem; color: var(--muted); margin: 0; line-height: 1.65; }
+</style>
+
+<div class="msv">
+  <!-- Hero Section -->
+  <section class="msv__hero">
+    <div class="msv__container">
+      <div class="msv__hero-inner">
+        <span class="msv__eyebrow">Complete Cost Breakdown</span>
+        <h1>Cost of Living in Spain for Retirees</h1>
+        <p>Discover detailed budgets, rent by city, utilities, healthcare costs, and how to live comfortably on your Non-Lucrative Visa income. Complete financial guide for planning your Spanish retirement.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Bar -->
+  <div class="msv__trust-bar">
+    <div class="msv__container">
+      <div class="msv__trust-bar-inner">
+        <div class="msv__trust-item">5,000+ Expats Guided</div>
+        <div class="msv__trust-item">2026 Current Data</div>
+        <div class="msv__trust-item">City-by-City Breakdown</div>
+        <div class="msv__trust-item">Income Threshold Aligned</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Breadcrumb -->
+  <div class="msv__breadcrumb">
+    <div class="msv__container">
+      <div class="msv__breadcrumb-inner">
+        <a href="/">Home</a>
+        <span>/</span>
+        <a href="/nlv-pillar-page.html">Non-Lucrative Visa Spain</a>
+        <span>/</span>
+        <span>Cost of Living for Retirees</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Key Facts -->
+  <section class="msv__section">
+    <div class="msv__container">
+      <div class="msv__facts">
+        <div class="msv__fact">
+          <div class="msv__fact-icon">💶</div>
+          <div class="msv__fact-label">Budget Monthly</div>
+          <div class="msv__fact-value">€1,200–€1,500</div>
+        </div>
+        <div class="msv__fact">
+          <div class="msv__fact-icon">🏠</div>
+          <div class="msv__fact-label">Studio Rent Range</div>
+          <div class="msv__fact-value">€300–€600</div>
+        </div>
+        <div class="msv__fact">
+          <div class="msv__fact-icon">🍽️</div>
+          <div class="msv__fact-label">Monthly Groceries</div>
+          <div class="msv__fact-value">€250–€400</div>
+        </div>
+        <div class="msv__fact">
+          <div class="msv__fact-icon">🏥</div>
+          <div class="msv__fact-label">Health Insurance</div>
+          <div class="msv__fact-value">€100–€200/mo</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Introduction -->
+  <section class="msv__section">
+    <div class="msv__container--narrow">
+      <div class="msv__section-hd">
+        <h2>Understanding Your Retirement Budget in Spain</h2>
+        <p>Spain is one of Europe's most affordable destinations for retirees, offering excellent quality of life at a fraction of UK or US costs. This comprehensive guide breaks down every expense category, from rent and utilities to healthcare and dining, so you can accurately plan your monthly budget and verify income requirements for the Non-Lucrative Visa.</p>
+      </div>
+
+      <div class="msv__alert msv__alert--info">
+        <div class="msv__alert-icon">ℹ️</div>
+        <p><strong>Key Insight:</strong> The Non-Lucrative Visa requires €27,792/year (€2,316/month) in stable documented income. Most retirees comfortably exceed this threshold while maintaining a lifestyle superior to their home countries. This guide aligns cost breakdowns with NLV income requirements.</p>
+      </div>
+
+      <p>Whether you're considering early retirement, relocating after 50, or planning a slower lifestyle abroad, Spain's cost structure makes it attractive. A comfortable retirement—including dining out, travel within Spain, and entertainment—costs €2,000–€2,500 monthly, leaving significant buffer against the NLV minimum. This guide is updated for 2026 with real rental, utility, and healthcare data.</p>
+    </div>
+  </section>
+
+  <!-- Monthly Budget Examples -->
+  <section class="msv__section--cream">
+    <div class="msv__container">
+      <div class="msv__section-hd">
+        <h2>Monthly Budget Scenarios for Retirees</h2>
+        <p>Real-world monthly spending breakdowns for three lifestyle profiles in average Spanish cities (e.g., Valencia, Málaga, Granada). Costs vary by region; major cities (Madrid, Barcelona) are 30–40% higher.</p>
+      </div>
+
+      <div class="msv__cost-boxes">
+        <div class="msv__cost-box">
+          <h3>Budget Retiree</h3>
+          <div class="cost-value">€1,200–€1,500</div>
+          <div class="cost-label">Monthly Total</div>
+          <p style="font-size: 0.85rem; color: var(--muted); margin-top: 1rem; line-height: 1.6;">Studio apartment, local groceries, public healthcare, minimal dining out, local transport. Minimal travel, entertainment on a budget.</p>
+        </div>
+        <div class="msv__cost-box">
+          <h3>Comfortable Living</h3>
+          <div class="cost-value">€2,000–€2,500</div>
+          <div class="cost-label">Monthly Total</div>
+          <p style="font-size: 0.85rem; color: var(--muted); margin-top: 1rem; line-height: 1.6;">1-bedroom apartment, dining out 2–3x/week, private health insurance, monthly travel within Spain, hobbies and activities.</p>
+        </div>
+        <div class="msv__cost-box">
+          <h3>Luxury Lifestyle</h3>
+          <div class="cost-value">€3,000+</div>
+          <div class="cost-label">Monthly Total</div>
+          <p style="font-size: 0.85rem; color: var(--muted); margin-top: 1rem; line-height: 1.6;">2-bedroom apartment, frequent dining out, premium healthcare, international travel, private services, premium activities.</p>
+        </div>
+      </div>
+
+      <table class="msv__cost-table">
+        <thead>
+          <tr>
+            <th>Expense Category</th>
+            <th>Budget</th>
+            <th>Comfortable</th>
+            <th>Luxury</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="cost-item">Rent (1-bed avg)</td>
+            <td class="cost-range">€400–€500</td>
+            <td class="cost-range">€550–€700</td>
+            <td class="cost-range">€800–€1,200</td>
+          </tr>
+          <tr>
+            <td class="cost-item">Utilities</td>
+            <td class="cost-range">€80–€100</td>
+            <td class="cost-range">€100–€130</td>
+            <td class="cost-range">€150–€200</td>
+          </tr>
+          <tr>
+            <td class="cost-item">Groceries</td>
+            <td class="cost-range">€250–€300</td>
+            <td class="cost-range">€350–€450</td>
+            <td class="cost-range">€500–€700</td>
+          </tr>
+          <tr>
+            <td class="cost-item">Dining Out</td>
+            <td class="cost-range">€75–€100</td>
+            <td class="cost-range">€200–€300</td>
+            <td class="cost-range">€400–€600</td>
+          </tr>
+          <tr>
+            <td class="cost-item">Healthcare Insurance</td>
+            <td class="cost-range">€50–€80</td>
+            <td class="cost-range">€120–€180</td>
+            <td class="cost-range">€200–€350</td>
+          </tr>
+          <tr>
+            <td class="cost-item">Transport/Mobility</td>
+            <td class="cost-range">€30–€50</td>
+            <td class="cost-range">€60–€100</td>
+            <td class="cost-range">€150–€250</td>
+          </tr>
+          <tr>
+            <td class="cost-item">Entertainment/Travel</td>
+            <td class="cost-range">€50–€75</td>
+            <td class="cost-range">€200–€300</td>
+            <td class="cost-range">€400–€600</td>
+          </tr>
+          <tr>
+            <td class="cost-item">Communications</td>
+            <td class="cost-range">€20–€30</td>
+            <td class="cost-range">€30–€50</td>
+            <td class="cost-range">€50–€80</td>
+          </tr>
+          <tr>
+            <td class="cost-item">Misc./Buffer</td>
+            <td class="cost-range">€100–€150</td>
+            <td class="cost-range">€200–€300</td>
+            <td class="cost-range">€300–€500</td>
+          </tr>
+          <tr style="background: #f0f4f8;">
+            <td class="cost-item" style="font-weight: 800;">TOTAL MONTHLY</td>
+            <td class="cost-high">€1,200–€1,500</td>
+            <td class="cost-high">€2,000–€2,500</td>
+            <td class="cost-high">€3,000+</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Detailed Cost Breakdown -->
+  <section class="msv__section">
+    <div class="msv__container">
+      <div class="msv__section-hd">
+        <h2>Detailed Cost Breakdown by Category</h2>
+        <p>Deep dive into each expense category with region-specific data, seasonal variations, and cost-saving tips.</p>
+      </div>
+
+      <!-- Housing -->
+      <div style="margin-bottom: 3rem;">
+        <h3 style="margin-bottom: 1rem; color: var(--navy);">Housing & Rent</h3>
+        <p>Rental costs are the largest expense for most retirees. Prices vary significantly by city, neighborhood, and property type. Major cities (Madrid, Barcelona, Bilbao) command 40–50% premiums; regional cities and coastal areas offer better value.</p>
+        <table class="msv__cost-table">
+          <thead>
+            <tr>
+              <th>City / Region</th>
+              <th>Studio (€/mo)</th>
+              <th>1-Bedroom (€/mo)</th>
+              <th>2-Bedroom (€/mo)</th>
+              <th>Cost Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="cost-item">Madrid (City Center)</td>
+              <td class="cost-range">€500–€700</td>
+              <td class="cost-range">€700–€900</td>
+              <td class="cost-range">€900–€1,200</td>
+              <td>Highest cost, vibrant services</td>
+            </tr>
+            <tr>
+              <td class="cost-item">Madrid (Suburbs)</td>
+              <td class="cost-range">€350–€450</td>
+              <td class="cost-range">€450–€600</td>
+              <td class="cost-range">€600–€800</td>
+              <td>Metro accessible, lower costs</td>
+            </tr>
+            <tr>
+              <td class="cost-item">Barcelona (City)</td>
+              <td class="cost-range">€550–€750</td>
+              <td class="cost-range">€750–€950</td>
+              <td class="cost-range">€950–€1,300</td>
+              <td>Tourist pressure, premium pricing</td>
+            </tr>
+            <tr>
+              <td class="cost-item">Barcelona (Suburbs)</td>
+              <td class="cost-range">€350–€500</td>
+              <td class="cost-range">€500–€650</td>
+              <td class="cost-range">€700–€900</td>
+              <td>Good train links, affordable</td>
+            </tr>
+            <tr>
+              <td class="cost-item">Valencia (Entire City)</td>
+              <td class="cost-range">€300–€450</td>
+              <td class="cost-range">€400–€600</td>
+              <td class="cost-range">€500–€800</td>
+              <td>Beach city, very affordable</td>
+            </tr>
+            <tr>
+              <td class="cost-item">Málaga / Costa del Sol</td>
+              <td class="cost-range">€300–€450</td>
+              <td class="cost-range">€400–€550</td>
+              <td class="cost-range">€550–€800</td>
+              <td>Expat hub, good climate, affordable</td>
+            </tr>
+            <tr>
+              <td class="cost-item">Granada (Andalusia)</td>
+              <td class="cost-range">€280–€380</td>
+              <td class="cost-range">€350–€480</td>
+              <td class="cost-range">€450–€650</td>
+              <td>University city, budget-friendly</td>
+            </tr>
+            <tr>
+              <td class="cost-item">Seville (Andalusia)</td>
+              <td class="cost-range">€280–€380</td>
+              <td class="cost-range">€350–€500</td>
+              <td class="cost-range">€500–€700</td>
+              <td>Historic charm, excellent value</td>
+            </tr>
+            <tr>
+              <td class="cost-item">Bilbao (Basque Country)</td>
+              <td class="cost-range">€350–€480</td>
+              <td class="cost-range">€480–€650</td>
+              <td class="cost-range">€650–€900</td>
+              <td>Modern city, rainy, moderate costs</td>
+            </tr>
+            <tr>
+              <td class="cost-item">Rural / Small Towns</td>
+              <td class="cost-range">€200–€350</td>
+              <td class="cost-range">€300–€400</td>
+              <td class="cost-range">€400–€550</td>
+              <td>Minimal services, very cheap</td>
+            </tr>
+          </tbody>
+        </table>
+        <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--muted);"><strong>Tips:</strong> Negotiating annual rent contracts often yields 10–15% discounts. Furnished apartments rent 15–25% higher but save on furnishing costs. Neighborhoods outside city centers (but well-connected) offer 30–40% savings. Consider proximity to healthcare, shops, and services when budgeting for location.</p>
+      </div>
+
+      <!-- Utilities -->
+      <div style="margin-bottom: 3rem;">
+        <h3 style="margin-bottom: 1rem; color: var(--navy);">Utilities (Electricity, Water, Gas, Internet)</h3>
+        <p>Spain has moderate utility costs, with seasonal variation based on heating in winter (rare in south) and air-conditioning in summer.</p>
+        <ul style="margin-bottom: 1.5rem;">
+          <li><strong>Electricity:</strong> €40–€80/month. Summer AC and winter heating push costs up. Average €60/month in moderate climates. Higher in northern regions.</li>
+          <li><strong>Gas (if applicable):</strong> €20–€40/month for heating in northern regions. Minimal or zero in southern Spain.</li>
+          <li><strong>Water:</strong> €15–€30/month depending on usage and region.</li>
+          <li><strong>Internet/Phone:</strong> €30–€60/month. Fiber broadband is standard in cities; quality is excellent. Mobile plans: €15–€40/month.</li>
+          <li><strong>Combined Average:</strong> €100–€150/month for a typical 1-bedroom apartment.</li>
+        </ul>
+        <p style="font-size: 0.9rem; color: var(--muted);"><strong>Savings Tips:</strong> LED lighting and efficient appliances reduce electricity costs. Unmetered water contracts can save money if usage is moderate. Many providers offer bundled internet+phone discounts. Shop around annually; rates vary by province.</p>
+      </div>
+
+      <!-- Groceries & Food -->
+      <div style="margin-bottom: 3rem;">
+        <h3 style="margin-bottom: 1rem; color: var(--navy);">Groceries & Food Budget</h3>
+        <p>Spain has excellent quality produce at low prices, especially in markets. Retirees on budget diets spend €250–€350/month; those preferring restaurants or premium products spend more.</p>
+        <table class="msv__cost-table">
+          <thead>
+            <tr>
+              <th>Item Category</th>
+              <th>Weekly Cost (Budget)</th>
+              <th>Weekly Cost (Comfortable)</th>
+              <th>Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="cost-item">Produce (fruits, vegetables)</td>
+              <td class="cost-range">€12–€18</td>
+              <td class="cost-range">€18–€25</td>
+              <td>Markets 30–40% cheaper than supermarkets</td>
+            </tr>
+            <tr>
+              <td class="cost-item">Bread, Grains, Pasta</td>
+              <td class="cost-range">€8–€12</td>
+              <td class="cost-range">€12–€18</td>
+              <td>Pan is cheap; bread culture strong</td>
+            </tr>
+            <tr>
+              <td class="cost-item">Meat, Poultry, Fish</td>
+              <td class="cost-range">€15–€22</td>
+              <td class="cost-range">€25–€35</td>
+              <td>Quality high; butchers cheaper than supermarkets</td>
+            </tr>
+            <tr>
+              <td class="cost-item">Dairy, Cheese, Eggs</td>
+              <td class="cost-range">€8–€12</td>
+              <td class="cost-range">€12–€20</td>
+              <td>Excellent Spanish cheese at modest prices</td>
+            </tr>
+            <tr>
+              <td class="cost-item">Pantry Items (oil, salt, spices)</td>
+              <td class="cost-range">€5–€8</td>
+              <td class="cost-range">€8–€12</td>
+              <td>Spanish olive oil affordable and premium quality</td>
+            </tr>
+            <tr>
+              <td class="cost-item">Beverages (coffee, tea, wine)</td>
+              <td class="cost-range">€6–€10</td>
+              <td class="cost-range">€10–€18</td>
+              <td>Wine very cheap; coffee culture strong</td>
+            </tr>
+            <tr style="background: #f0f4f8;">
+              <td class="cost-item" style="font-weight: 800;">WEEKLY TOTAL</td>
+              <td class="cost-high">€54–€82</td>
+              <td class="cost-high">€85–€128</td>
+              <td></td>
+            </tr>
+            <tr style="background: #f0f4f8;">
+              <td class="cost-item" style="font-weight: 800;">MONTHLY TOTAL</td>
+              <td class="cost-high">€230–€350</td>
+              <td class="cost-high">€360–€550</td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+        <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--muted);"><strong>Dining Out:</strong> Menu del día (lunch special) €9–€14. Dinner in mid-range restaurant €15–€25 per person. Street tapas €2–€4. Coffee and pastry €2–€3.</p>
+      </div>
+
+      <!-- Healthcare -->
+      <div style="margin-bottom: 3rem;">
+        <h3 style="margin-bottom: 1rem; color: var(--navy);">Healthcare Costs for Retirees</h3>
+        <p>Spain has excellent healthcare. Non-EU citizens (including UK retirees post-Brexit) can use public healthcare with a residence permit for €1,000–€2,500/year (varying by region), or purchase private insurance.</p>
+        <ul style="margin-bottom: 1.5rem;">
+          <li><strong>Public Healthcare Registration:</strong> €1,000–€2,500/year depending on region and income. Covers most services; small copays apply.</li>
+          <li><strong>Private Health Insurance (under 65):</strong> €80–€120/month. Covers doctors, specialists, hospitalization, and prescriptions.</li>
+          <li><strong>Private Health Insurance (65+):</strong> €150–€300/month depending on health history and coverage level.</li>
+          <li><strong>Out-of-Pocket Costs:</strong> Doctor visit (private) €40–€80. Dentist €50–€120 per visit. Prescription copays €2–€10.</li>
+          <li><strong>Pharmacy Costs:</strong> Generally 30–50% cheaper than UK/USA. Common medications €5–€30 per box.</li>
+        </ul>
+        <p style="font-size: 0.9rem; color: var(--muted);"><strong>Strategy:</strong> Most retirees combine public healthcare registration with supplementary private insurance for specialists and faster access. This hybrid approach costs €100–€150/month and provides peace of mind.</p>
+      </div>
+
+      <!-- Transport -->
+      <div style="margin-bottom: 3rem;">
+        <h3 style="margin-bottom: 1rem; color: var(--navy);">Transport & Mobility</h3>
+        <p>Spain has excellent public transport in cities. Car ownership is optional; many retirees rely on buses, metro, and trains.</p>
+        <ul style="margin-bottom: 1.5rem;">
+          <li><strong>City Transit Monthly Pass:</strong> €30–€60. Metro, bus, tram included. Madrid: €54/month. Barcelona: €57/month. Valencia: €45/month.</li>
+          <li><strong>Car Ownership:</strong> If purchasing a used car (€5,000–€10,000), budget €80–€150/month for insurance, fuel, and maintenance. Fuel: €1.20–€1.40/liter. Registration and taxes: €500–€1,000 annually.</li>
+          <li><strong>Taxi/Rideshare:</strong> Madrid/Barcelona taxi: €2.50–€3.50 initial fare + €1/km. Uber similar. Occasional use only.</li>
+          <li><strong>Long-Distance Train/Bus:</strong> Spain has excellent rail (Renfe) and bus networks. Madrid–Barcelona train €40–€80 (2.5 hours). Budget €100–€200/month for occasional travel.</li>
+        </ul>
+        <p style="font-size: 0.9rem; color: var(--muted);"><strong>Recommendation:</strong> If you don't drive or prefer not to manage car logistics, public transit is reliable and cheap. If you travel frequently within Spain, a car may be worth it.</p>
+      </div>
+
+      <!-- Dining & Entertainment -->
+      <div style="margin-bottom: 3rem;">
+        <h3 style="margin-bottom: 1rem; color: var(--navy);">Dining Out & Entertainment</h3>
+        <p>Spain's culture of cheap, quality dining is a huge advantage. Social life is affordable.</p>
+        <ul style="margin-bottom: 1.5rem;">
+          <li><strong>Menu del Día (Lunch Special):</strong> €9–€14 includes appetizer, main, dessert, and drink. Available weekdays at most restaurants.</li>
+          <li><strong>Casual Dinner:</strong> €15–€25 per person at mid-range restaurants. Fine dining: €40–€80+.</li>
+          <li><strong>Tapas & Drinks:</strong> €3–€5 per tapa. Drinks €2–€4 (wine, beer). Common to order 4–6 tapas to share.</li>
+          <li><strong>Theater, Cinema, Museums:</strong> Movie ticket €7–€9. Museum entry €3–€15. Theater €15–€40. Many cities offer free museum hours.</li>
+          <li><strong>Sports & Hobbies:</strong> Gym membership €30–€50/month. Tennis, golf, water sports available at modest rates.</li>
+          <li><strong>Festivals & Events:</strong> Most are free or very cheap. Spain has hundreds of local fiestas annually.</li>
+        </ul>
+        <p style="font-size: 0.9rem; color: var(--muted);"><strong>Retiree Advantage:</strong> Many cultural venues offer senior discounts (10–20%). Weekday dining is cheaper than weekends. Social clubs and expat networks often organize group outings with better pricing.</p>
+      </div>
+
+      <!-- Taxes & Bureaucracy -->
+      <div style="margin-bottom: 3rem;">
+        <h3 style="margin-bottom: 1rem; color: var(--navy);">Taxes & Bureaucratic Costs</h3>
+        <p>Spain has income taxes and administrative fees that retirees should budget for.</p>
+        <ul style="margin-bottom: 1.5rem;">
+          <li><strong>Income Tax (for residents earning in Spain):</strong> Tax-free up to €15,000/year; then progressive rates 20–45%. Most retirees receiving pensions are not taxed if income is below threshold or sourced abroad.</li>
+          <li><strong>Wealth Tax:</strong> Non-residents: none. Residents with assets over €600,000: 0.2–3.75% on assets over threshold.</li>
+          <li><strong>Property Tax (IBI):</strong> 0.4–1.1% of cadastral value annually. On €200,000 property: €800–€2,200/year.</li>
+          <li><strong>VAT (IVA):</strong> 21% standard rate (food 10%, medicines 4%). Included in prices shown above.</li>
+          <li><strong>Residency & Bureaucracy Costs:</strong> NIE card (ID number): €50–€100 once. Annual residency registration: €0–€50. Tax return preparation (gestoría): €150–€400/year if using an accountant.</li>
+          <li><strong>Annual Renewal/Compliance:</strong> Budget €200–€400/year for occasional permits, registrations, professional advice.</li>
+        </ul>
+        <p style="font-size: 0.9rem; color: var(--muted);"><strong>Important:</strong> Non-EU retirees should hire a Spanish tax accountant (gestor) for €150–€300/year to ensure compliance and optimize tax treatment of foreign pensions. Many banks offer no-cost tax filing assistance.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Regional Cost Comparison -->
+  <section class="msv__section--cream">
+    <div class="msv__container">
+      <div class="msv__section-hd">
+        <h2>Spain vs. Other Popular Retirement Destinations</h2>
+        <p>How Spain's costs stack up against the UK, USA, and Australia for retirees.</p>
+      </div>
+
+      <table class="msv__cost-table">
+        <thead>
+          <tr>
+            <th>Lifestyle Category</th>
+            <th>Spain (€)</th>
+            <th>Spain (£ equiv)</th>
+            <th>UK (£)</th>
+            <th>USA ($)</th>
+            <th>Australia ($AUD)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="cost-item">1-Bed Apartment Monthly</td>
+            <td class="cost-range">€500</td>
+            <td class="cost-range">£450</td>
+            <td class="cost-range">£800–£1,200</td>
+            <td class="cost-range">$800–$1,400</td>
+            <td class="cost-range">$1,200–$1,600</td>
+          </tr>
+          <tr>
+            <td class="cost-item">Monthly Groceries</td>
+            <td class="cost-range">€280</td>
+            <td class="cost-range">£250</td>
+            <td class="cost-range">£350–£450</td>
+            <td class="cost-range">$400–$550</td>
+            <td class="cost-range">$500–$700</td>
+          </tr>
+          <tr>
+            <td class="cost-item">Utilities (avg)</td>
+            <td class="cost-range">€120</td>
+            <td class="cost-range">£110</td>
+            <td class="cost-range">£200–£300</td>
+            <td class="cost-range">$250–$400</td>
+            <td class="cost-range">$300–$500</td>
+          </tr>
+          <tr>
+            <td class="cost-item">Health Insurance (65+)</td>
+            <td class="cost-range">€150–€200</td>
+            <td class="cost-range">£140–£180</td>
+            <td class="cost-range">Free (NHS)</td>
+            <td class="cost-range">$200–$400</td>
+            <td class="cost-range">$300–$500</td>
+          </tr>
+          <tr>
+            <td class="cost-item">Dining Out (avg)</td>
+            <td class="cost-range">€15–€20</td>
+            <td class="cost-range">£13–£18</td>
+            <td class="cost-range">£20–£30</td>
+            <td class="cost-range">$25–$40</td>
+            <td class="cost-range">$30–$50</td>
+          </tr>
+          <tr style="background: #f0f4f8;">
+            <td class="cost-item" style="font-weight: 800;">Comfortable Monthly (est)</td>
+            <td class="cost-high">€2,000–€2,500</td>
+            <td class="cost-high">£1,800–£2,250</td>
+            <td class="cost-high">£2,500–£3,500</td>
+            <td class="cost-high">$3,000–$4,500</td>
+            <td class="cost-high">$3,500–$5,000</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="msv__alert msv__alert--green" style="margin-top: 2rem;">
+        <div class="msv__alert-icon">✓</div>
+        <p><strong>Savings Summary:</strong> A comfortable €2,000/month in Spain equals approximately £1,800 (UK), $2,200 (USA), or $2,800 AUD (Australia). Most retirees relocating from English-speaking countries save 20–35% in living costs while enjoying superior weather, culture, and healthcare. The Non-Lucrative Visa income threshold (€27,792/year) is modest given these realities.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hidden Costs Section -->
+  <section class="msv__section">
+    <div class="msv__container--narrow">
+      <div class="msv__section-hd">
+        <h2>Hidden Costs Retirees Don't Expect</h2>
+        <p>Budget for these often-overlooked expenses to avoid surprises.</p>
+      </div>
+
+      <div class="msv__alert msv__alert--warn">
+        <div class="msv__alert-icon">!</div>
+        <p><strong>Bureaucratic Surprise:</strong> First-year residency involves paperwork, permits, and professional services totaling €500–€1,500. After that, costs drop significantly.</p>
+      </div>
+
+      <ul style="margin-bottom: 2rem;">
+        <li><strong>Residency Paperwork & Permits:</strong> €50–€200 for NIE card, residence permit registration, and documentation. Accountants charge €200–€500 to set up your Spanish tax identification. First year total: €500–€1,000.</li>
+        <li><strong>Bank Account Fees:</strong> Most Spanish banks charge €2–€10/month for accounts. International transfers cost €10–€30 per transaction. Currency exchange fees can add 1–2% to transfers.</li>
+        <li><strong>Professional Services:</strong> Spanish tax return (gestoría): €150–€300/year. Legal advice for property purchase: €300–€800. Healthcare administration: varies.</li>
+        <li><strong>Property Registration & Taxes:</strong> If purchasing property, registrar fees: 0.5–1.5% of purchase price. Property transfer tax: 6–10% depending on region. Annual property tax (IBI): 0.4–1.1% of value.</li>
+        <li><strong>Vehicle Registration & Taxes:</strong> Importing a car costs €1,000–€3,000 in registration and customs. Annual vehicle tax: €150–€500 depending on engine size. Insurance: €40–€100/month.</li>
+        <li><strong>Home Maintenance & Utilities Setup:</strong> Initial deposits for water, electricity, gas, internet: €100–€300 total. Annual maintenance of apartment or house: 1–2% of property value.</li>
+        <li><strong>Dental & Vision:</strong> Not covered by public healthcare or basic private insurance. Dental cleaning: €50–€100. Crown/filling: €200–€400. Glasses: €60–€150. Budget €20–€50/month if needed.</li>
+        <li><strong>Medicines & Prescriptions:</strong> Even with public healthcare, copays can add up. Chronic medications: €5–€30 per prescription. Budget €30–€60/month if you have ongoing health needs.</li>
+        <li><strong>Travel & Visitation:</strong> Plan for flights home every 1–2 years. EU budget airlines €60–€200 round-trip. Long-haul flights (USA, Australia): €600–€1,200. Budget €200–€500/year.</li>
+        <li><strong>Emergency Funds & Replacements:</strong> Unexpected appliance repairs, car issues, medical emergencies. Budget €200–€300/month buffer, or €2,500–€3,600 annually.</li>
+      </ul>
+
+      <p><strong>Total Hidden Cost Budget:</strong> Year 1: €1,500–€2,500. Years 2+: €400–€800/month.</p>
+    </div>
+  </section>
+
+  <!-- Cost-Saving Tips -->
+  <section class="msv__section--cream">
+    <div class="msv__container">
+      <div class="msv__section-hd">
+        <h2>Proven Cost-Saving Strategies for Spanish Retirees</h2>
+        <p>Expert tips to stretch your budget and live better in Spain.</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem;">
+        <div>
+          <h3 style="color: var(--navy); margin-bottom: 1rem;">Housing</h3>
+          <ul style="margin-bottom: 0;">
+            <li>Negotiate 12-month leases for 10–15% discounts</li>
+            <li>Choose neighborhoods outside city centers</li>
+            <li>Consider shared apartments with other expats</li>
+            <li>Rent unfurnished (often 10–15% cheaper)</li>
+            <li>Avoid high seasons (June–August, December)</li>
+          </ul>
+        </div>
+        <div>
+          <h3 style="color: var(--navy); margin-bottom: 1rem;">Food & Dining</h3>
+          <ul style="margin-bottom: 0;">
+            <li>Shop at local markets, not supermarkets (30–40% cheaper)</li>
+            <li>Take advantage of menu del día (lunch special)</li>
+            <li>Buy seasonal produce</li>
+            <li>Cook at home 5–6 days per week</li>
+            <li>Join expat food co-ops for bulk purchases</li>
+          </ul>
+        </div>
+        <div>
+          <h3 style="color: var(--navy); margin-bottom: 1rem;">Healthcare</h3>
+          <ul style="margin-bottom: 0;">
+            <li>Register for public healthcare (€1,000–€2,500/year)</li>
+            <li>Use generic (genérico) medications</li>
+            <li>Schedule preventive checkups through public system</li>
+            <li>Buy supplementary insurance only for specialists</li>
+            <li>Negotiate dentistry prices; many offer discounts</li>
+          </ul>
+        </div>
+        <div>
+          <h3 style="color: var(--navy); margin-bottom: 1rem;">Transport & Travel</h3>
+          <ul style="margin-bottom: 0;">
+            <li>Use public transport; buy monthly passes</li>
+            <li>Avoid car ownership if possible</li>
+            <li>Book long-distance trains/buses in advance</li>
+            <li>Travel off-season for flights</li>
+            <li>Use Renfe (Spanish rail) senior discounts (25%+)</li>
+          </ul>
+        </div>
+        <div>
+          <h3 style="color: var(--navy); margin-bottom: 1rem;">Utilities & Banking</h3>
+          <ul style="margin-bottom: 0;">
+            <li>Switch providers annually for best rates</li>
+            <li>Use LED lighting and efficient appliances</li>
+            <li>Bundle internet+phone+TV for discounts</li>
+            <li>Use online banks (lower fees)</li>
+            <li>Make international transfers in bulk</li>
+          </ul>
+        </div>
+        <div>
+          <h3 style="color: var(--navy); margin-bottom: 1rem;">Lifestyle & Entertainment</h3>
+          <ul style="margin-bottom: 0;">
+            <li>Join expat and retiree social groups (free/cheap)</li>
+            <li>Attend free cultural events and fiestas</li>
+            <li>Use senior discounts at museums (10–20%)</li>
+            <li>Volunteer or teach English (earn extra money)</li>
+            <li>Join fitness groups and hobby clubs</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seasonal Cost Variations -->
+  <section class="msv__section">
+    <div class="msv__container--narrow">
+      <div class="msv__section-hd">
+        <h2>Seasonal Cost Variations in Spain</h2>
+        <p>Plan your spending around seasonal price changes.</p>
+      </div>
+
+      <ul style="margin-bottom: 2rem;">
+        <li><strong>Summer (June–August):</strong> Peak tourism inflates restaurant prices (+15–25%), accommodation (+20–30%), attraction fees (+10–20%), and domestic travel costs (+20%). Utilities: higher AC bills (+20–30%). Best time to visit from abroad; worst for local budget.</li>
+        <li><strong>Winter (December–February):</strong> Heating costs spike in northern regions (+30–50% on electricity). Ski resorts and mountain areas expensive. December holiday season increases dining/entertainment costs (+20%). Southern Spain unaffected; best budget destination in winter.</li>
+        <li><strong>Spring (March–May):</strong> Low tourist season. Prices drop 10–15% across accommodation, dining, and activities. Utilities moderate. Excellent time to relocate and sign long-term housing contracts.</li>
+        <li><strong>Fall (September–November):</strong> Transition season. Prices 5–10% above spring but below summer. School term starts; family-oriented activities cheaper. Good for budgeters.</li>
+      </ul>
+
+      <p><strong>Strategic Timing:</strong> If flexibility allows, arrive in spring or fall, avoid summer/December tourism, and negotiate annual rent contracts in low seasons for maximum discounts.</p>
+    </div>
+  </section>
+
+  <!-- Alignment with NLV Income Thresholds -->
+  <section class="msv__section--cream">
+    <div class="msv__container">
+      <div class="msv__section-hd">
+        <h2>How Your Budget Aligns with Non-Lucrative Visa Income Requirements</h2>
+        <p>Understanding the relationship between NLV thresholds and real retirement costs.</p>
+      </div>
+
+      <div class="msv__alert msv__alert--info">
+        <div class="msv__alert-icon">ℹ️</div>
+        <p><strong>Key Numbers:</strong> Non-Lucrative Visa requires €27,792/year (€2,316/month) for the main applicant. Couple: €41,688/year (€3,474/month). These are documented, stable income thresholds—not funds required.</p>
+      </div>
+
+      <h3 style="margin-bottom: 1rem; color: var(--navy);">Income vs. Cost Scenarios</h3>
+      <table class="msv__cost-table">
+        <thead>
+          <tr>
+            <th>Annual Income (NLV Basis)</th>
+            <th>Monthly Equivalent</th>
+            <th>Recommended Spending</th>
+            <th>Lifestyle Comfort</th>
+            <th>Annual Buffer/Savings</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="cost-item">€27,792 (Minimum)</td>
+            <td class="cost-range">€2,316</td>
+            <td class="cost-range">€1,600–€1,800</td>
+            <td>Budget to modest comfort</td>
+            <td class="cost-range">€500–€750</td>
+          </tr>
+          <tr>
+            <td class="cost-item">€35,000</td>
+            <td class="cost-range">€2,917</td>
+            <td class="cost-range">€2,000–€2,200</td>
+            <td>Comfortable, dining out often</td>
+            <td class="cost-range">€850–€1,100</td>
+          </tr>
+          <tr>
+            <td class="cost-item">€40,000</td>
+            <td class="cost-range">€3,333</td>
+            <td class="cost-range">€2,300–€2,600</td>
+            <td>Comfortable, leisure travel</td>
+            <td class="cost-range">€750–€1,000</td>
+          </tr>
+          <tr>
+            <td class="cost-item">€50,000</td>
+            <td class="cost-range">€4,167</td>
+            <td class="cost-range">€2,800–€3,200</td>
+            <td>Comfortable to luxury</td>
+            <td class="cost-range">€1,000–€1,300</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p style="margin-top: 2rem; color: var(--black);"><strong>Key Insight:</strong> The NLV minimum (€27,792/year) assumes significant buffer for savings, taxes, and emergencies. A retiree with €35,000–€40,000 annual income enjoys excellent comfort in Spain while maintaining financial security. Those with €50,000+ can live luxuriously while saving.</p>
+
+      <p style="margin-bottom: 2rem; color: var(--black);"><strong>Recommendation:</strong> Apply with documented income of at least €35,000/year if possible. This provides comfortable living expenses, buffer for unexpected costs, and room to save or invest. Couples should aim for combined €50,000+.</p>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="msv__section">
+    <div class="msv__container">
+      <div class="msv__section-hd">
+        <h2>Frequently Asked Questions</h2>
+        <p>Common questions from retirees considering Spain.</p>
+      </div>
+
+      <div class="msv__faq-list">
+        <details>
+          <summary>What is the average cost of living in Spain for retirees?</summary>
+          <div class="msv__faq-answer">
+            <p>The average cost ranges from €1,200–€1,500/month for a budget lifestyle, €2,000–€2,500/month for comfortable living, and €3,000+/month for luxury. These averages are for individual retirees in secondary cities; major cities (Madrid, Barcelona) cost 30–40% more. Regional variations are significant—Andalusia and eastern coast offer best value.</p>
+          </div>
+        </details>
+        <details>
+          <summary>How much should I budget for rent in Spain?</summary>
+          <summary>What's the typical monthly rent for different apartment sizes?</summary>
+          <div class="msv__faq-answer">
+            <p><strong>Studio:</strong> €300–€600/month (regional average). <strong>1-Bedroom:</strong> €400–€800/month. <strong>2-Bedroom:</strong> €500–€1,100/month. Prices vary by city: Madrid/Barcelona 40–50% higher; Granada/Seville 20–30% lower. Furnished apartments rent 15–25% higher. Negotiating annual leases yields 10–15% discounts.</p>
+          </div>
+        </details>
+        <details>
+          <summary>Are utilities expensive in Spain?</summary>
+          <div class="msv__faq-answer">
+            <p>No. Combined utilities (electricity, water, gas, internet) cost €100–€150/month for a typical 1-bedroom apartment. Electricity is €40–€80/month depending on climate and usage. Water: €15–€30. Internet/phone: €30–€60 (excellent fiber broadband available). Gas for heating minimal in southern Spain; more significant in northern regions.</p>
+          </div>
+        </details>
+        <details>
+          <summary>What are the hidden costs retirees don't expect?</summary>
+          <div class="msv__faq-answer">
+            <p>Hidden costs include: residency paperwork/permits (€500–€1,000 first year), tax professional services (€150–€400/year), bank fees (€2–€10/month), international money transfers (€10–€30 per transfer), property taxes if owning (0.4–1.1% of value annually), vehicle registration if buying a car (€500–€1,000 + annual tax), dental and vision care (not covered by public healthcare), emergency reserves (€200–€300/month). Budget an extra €200–€300/month first year for unexpected expenses, then €100–€150/month ongoing.</p>
+          </div>
+        </details>
+        <details>
+          <summary>How does Spain compare to the UK and USA in cost?</summary>
+          <div class="msv__faq-answer">
+            <p>Spain is 25–35% cheaper than the UK and 30–40% cheaper than the USA. A comfortable €2,000/month in Spain equals approximately £1,800/month (UK) or $2,200/month (USA). Rent is 30–50% cheaper, groceries 20–35% cheaper, dining out 25–40% cheaper, and healthcare significantly cheaper (especially for those over 65). Many UK and US retirees save 20–30% annually by moving to Spain.</p>
+          </div>
+        </details>
+        <details>
+          <summary>Is private health insurance expensive for retirees?</summary>
+          <div class="msv__faq-answer">
+            <p>Private health insurance costs €80–€200/month depending on age and coverage. Those over 65 may pay €150–€300/month. Many retirees opt for public healthcare registration (€1,000–€2,500/year) plus supplementary private insurance for specialists (€30–€50/month). This hybrid approach provides excellent coverage at modest cost. Spain's healthcare quality is excellent, especially for retirees.</p>
+          </div>
+        </details>
+        <details>
+          <summary>What is the most affordable region for retirees in Spain?</summary>
+          <div class="msv__faq-answer">
+            <p>The most affordable regions are: Andalusia (Málaga, Granada, Seville—especially inland), Extremadura (Cáceres, Badajoz), Castilla-La Mancha (Toledo, Cuenca), and smaller coastal towns. Retirees comfortably live on €1,200–€1,500/month in these regions with rent as low as €300–€450 for 1-bedroom apartments. These regions offer excellent weather, lower costs than the north, and strong expat communities.</p>
+          </div>
+        </details>
+        <details>
+          <summary>What are seasonal cost variations in Spain?</summary>
+          <div class="msv__faq-answer">
+            <p>Summer (June–August) inflates costs 15–25% due to tourism (rent, dining, activities). Winter (December–February) increases heating costs in northern regions and December holidays. Spring (March–May) and fall (September–November) are cheapest seasons. If flexibility allows, relocate in spring or fall and negotiate annual housing contracts in low seasons for maximum savings.</p>
+        </details>
+        <details>
+          <summary>How should I budget if I'm receiving a UK or US pension?</summary>
+          <div class="msv__faq-answer">
+            <p>UK State Pension (average £175–£230/week) or US Social Security (average $1,800–$2,200/month) typically exceeds NLV requirements and is taxed favorably in Spain. Combined with property income, savings interest, or pensions, most UK/US retirees exceed the €27,792/year (€2,316/month) threshold comfortably. Use a Spanish tax accountant to optimize treatment of foreign pensions. Currency fluctuations (GBP/USD to EUR) impact real purchasing power; budget conservatively.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Guides -->
+  <section class="msv__section--cream">
+    <div class="msv__container">
+      <div class="msv__section-hd">
+        <h2>Related Guides & Resources</h2>
+        <p>Explore related content to plan your Spanish retirement comprehensively.</p>
+      </div>
+
+      <div class="msv__related">
+        <a href="/nlv-pillar-page.html" class="msv__related-card">
+          <div class="msv__related-icon">📋</div>
+          <span class="msv__related-title">Non-Lucrative Visa Spain</span>
+          <span class="msv__related-desc">Complete guide to NLV requirements, application, and benefits</span>
+        </a>
+        <a href="/living-in-spain-on-nlv.html" class="msv__related-card">
+          <div class="msv__related-icon">🏡</div>
+          <span class="msv__related-title">Living in Spain on NLV</span>
+          <span class="msv__related-desc">Day-to-day realities, culture, and practical tips for NLV holders</span>
+        </a>
+        <a href="/best-cities-for-nlv-spain.html" class="msv__related-card">
+          <div class="msv__related-icon">🌆</div>
+          <span class="msv__related-title">Best Cities for NLV in Spain</span>
+          <span class="msv__related-desc">Regional comparison: cost, climate, expat communities, and amenities</span>
+        </a>
+        <a href="/nlv-income-requirements.html" class="msv__related-card">
+          <div class="msv__related-icon">💰</div>
+          <span class="msv__related-title">NLV Income Requirements</span>
+          <span class="msv__related-desc">Detailed breakdown of required documented income by household size</span>
+        </a>
+        <a href="/nlv-savings-requirements.html" class="msv__related-card">
+          <div class="msv__related-icon">🏦</div>
+          <span class="msv__related-title">NLV Savings Requirements</span>
+          <span class="msv__related-desc">Understanding minimum financial reserves and documentation needed</span>
+        </a>
+        <a href="/nlv-tax-spain.html" class="msv__related-card">
+          <div class="msv__related-icon">📊</div>
+          <span class="msv__related-title">Taxes on Non-Lucrative Visa</span>
+          <span class="msv__related-desc">Tax treatment, obligations, and optimization strategies for NLV residents</span>
+        </a>
+        <a href="/nlv-health-insurance.html" class="msv__related-card">
+          <div class="msv__related-icon">🏥</div>
+          <span class="msv__related-title">Health Insurance on NLV</span>
+          <span class="msv__related-desc">Public healthcare, private insurance, and cost optimization</span>
+        </a>
+        <a href="/nlv-cost.html" class="msv__related-card">
+          <div class="msv__related-icon">💵</div>
+          <span class="msv__related-title">Non-Lucrative Visa Costs</span>
+          <span class="msv__related-desc">Application fees, processing costs, and first-year expenses</span>
+        </a>
+        <a href="/nlv-renewal.html" class="msv__related-card">
+          <div class="msv__related-icon">🔄</div>
+          <span class="msv__related-title">NLV Renewal Process</span>
+          <span class="msv__related-desc">Steps, documentation, timelines, and renewal challenges</span>
+        </a>
+        <a href="/nlv-requirements.html" class="msv__related-card">
+          <div class="msv__related-icon">✓</div>
+          <span class="msv__related-title">NLV Requirements Checklist</span>
+          <span class="msv__related-desc">Complete list of application documents and eligibility criteria</span>
+        </a>
+        <a href="/nlv-faq.html" class="msv__related-card">
+          <div class="msv__related-icon">❓</div>
+          <span class="msv__related-title">Non-Lucrative Visa FAQ</span>
+          <span class="msv__related-desc">Answers to 50+ common questions about NLV eligibility and process</span>
+        </a>
+        <a href="/long-term-residency-after-nlv.html" class="msv__related-card">
+          <div class="msv__related-icon">🎯</div>
+          <span class="msv__related-title">Long-Term Residency After NLV</span>
+          <span class="msv__related-desc">Path from NLV to permanent residence and EU residency card</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Band -->
+  
+  <!-- ── Insurance Partners ──────────────────────────── -->
+  <section class="msv__section--cream" style="padding: 2.5rem 0;">
+    <div class="msv__container--narrow">
+      <div style="background:#fff;border:2px solid var(--border);border-radius:12px;padding:1.75rem 2rem;">
+        <p style="font-weight:700;color:var(--navy);margin:0 0 0.5rem;font-size:0.95rem;">Recommended insurance specialists</p>
+        <p style="color:var(--muted);font-size:0.9rem;margin:0;line-height:1.75;">
+          <a href="https://www.spanish-healthinsurance.com/myspanishvisa" target="_blank" rel="noopener" style="color:var(--red);font-weight:700;">Spanish Health Insurance</a> — visa-compliant private health insurance for English-speaking foreigners in Spain.<br>
+          <a href="https://www.247expatinsurance.com/myspanishvisa" target="_blank" rel="noopener" style="color:var(--red);font-weight:700;">247 Expat Insurance</a> — health and all types of expat insurance in Spain, tailored for international residents.
+        </p>
+      </div>
+    </div>
+  </section>
+  <section class="msv__cta-band">
+    <div class="msv__container--narrow">
+      <h2>Ready to Plan Your Spanish Retirement?</h2>
+      <p>Use this cost breakdown alongside our Income & Savings Requirements guides to build a complete financial picture. Take our Eligibility Check to see if you qualify for the Non-Lucrative Visa today.</p>
+      <div class="msv__btn-group">
+        <a href="https://dashboard.platinumlegalspain.com/nlv" class="msv__btn msv__btn--primary">Check Eligibility</a>
+        <a href="/guide-healthcare-spain.html" class="msv__btn msv__btn--outline-white">Healthcare Guide</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Disclaimer -->
+  </section>
+</div>
+
+<!-- FRAGMENT_END -->
+</main>
+
+
+<!-- ═══════════════════════════════════════════════════
+     SITE FOOTER
+     ═══════════════════════════════════════════════════ -->
+<footer class="msv-footer" role="contentinfo">
+
+  <div class="msv-footer__top">
+
+    <!-- Brand column -->
+    <div class="msv-footer__brand">
+      <a href="/" class="msv-footer__logo" aria-label="My Spanish Visa"><img src="/assets/images/msv-logo-white.png" alt="My Spanish Visa" height="40" style="display:block;"></a>
+      <p class="msv-footer__tagline">
+        Specialist Spain visa &amp; residency guidance for English-speaking foreigners.
+        A service of Platinum Legal Spain.
+      </p>
+      <div class="msv-footer__trust">
+        <span class="msv-footer__trust-item">All English. No barriers.</span>
+        <span class="msv-footer__trust-item">Solicitors &amp; immigration specialists</span>
+        <span class="msv-footer__trust-item">100% online process</span>
+      </div>
+    </div>
+
+    <!-- Visas column -->
+    <div>
+      <div class="msv-footer__col-title">Visas</div>
+      <ul class="msv-footer__links">
+        <li><a href="/nlv-pillar-page.html">Non-Lucrative Visa</a></li>
+        <li><a href="/dnv-pillar-page.html">Digital Nomad Visa</a></li>
+        <li><a href="/student-visa-pillar-page.html">Student Visa</a></li>
+        <li><a href="/spanish-residency-renewal.html">Visa Renewals</a></li>
+        <li><a href="/best-visa-move-to-spain.html">Compare All Visas</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/nlv">Apply: NLV</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/dnv">Apply: DNV</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/student-visa">Apply: Student Visa</a></li>
+      </ul>
+    </div>
+
+    <!-- Resources column -->
+    <div>
+      <div class="msv-footer__col-title">Resources</div>
+      <ul class="msv-footer__links">
+        <li><a href="/blog-index.html">Blog &amp; Guides</a></li>
+        <li><a href="/move-to-spain.html">Move to Spain Guide</a></li>
+        <li><a href="/visa-eligibility-quiz.html">Eligibility Quiz</a></li>
+        <li><a href="/spain-visa-options.html">Document Checklists</a></li>
+        <li><a href="/spain-visa-options.html">Visa Requirements</a></li>
+        <li><a href="/nie-number-spain.html">NIE Number Guide</a></li>
+        <li><a href="/tie-card-spain.html">TIE Card Guide</a></li>
+      </ul>
+    </div>
+
+    <!-- Company column -->
+    <div>
+      <div class="msv-footer__col-title">Company</div>
+      <ul class="msv-footer__links">
+        <li><a href="/about-us.html">About Us</a></li>
+        <li><a href="/testimonials.html">Client Reviews</a></li>
+        <li><a href="/why-choose-us.html">Why Choose Us</a></li>
+        <li><a href="/contact-us.html">Contact</a></li>
+        <li><a href="https://www.platinumlegalspain.com" rel="noopener">Platinum Legal Spain</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/nlv">Client Portal</a></li>
+      </ul>
+    </div>
+
+  </div><!-- /.msv-footer__top -->
+
+  <div class="msv-footer__bottom">
+    <div class="msv-footer__bottom-inner">
+      <p class="msv-footer__disclaimer">
+        <strong style="color:rgba(255,255,255,0.5);">Disclaimer:</strong>
+        My Spanish Visa provides visa processing support and is not a law firm. Content on this site is for informational purposes only and does not constitute legal advice. Immigration rules change frequently — always verify requirements with official sources or a qualified specialist. My Spanish Visa is a trading name of Platinum Legal Spain.
+      </p>
+      <span class="msv-footer__copyright">© 2026 My Spanish Visa. All rights reserved.</span>
+    </div>
+  </div>
+
+</footer>
+
+</body>
+</html>

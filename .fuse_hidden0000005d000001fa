@@ -1,0 +1,1248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- ═══════════════════════════════════════════════════════════════════
+       PAGE-SPECIFIC HEAD — replace block below per page:
+       <title>Nlv Residency Citizenship Pathway | My Spanish Visa</title>
+       <meta name="description" content="…">
+       <meta property="og:title" content="…">
+       <meta property="og:description" content="…">
+       <meta property="og:url" content="https://www.myspanishvisa.com/…">
+       <meta property="og:image" content="…">
+       <link rel="canonical" href="https://www.myspanishvisa.com/…">
+       <script type="application/ld+json">…</script>
+       ═══════════════════════════════════════════════════════════════════ -->
+  <title>My Spanish Visa — Spain Visa &amp; Residency Specialists</title>
+  <meta name="description" content="My Spanish Visa helps English-speaking foreigners move to Spain. Expert guidance on Non-Lucrative Visa, Digital Nomad Visa, Student Visa, renewals and more.">
+
+  <!-- Shared Open Graph defaults -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="My Spanish Visa">
+  <meta property="og:image" content="https://www.myspanishvisa.com/assets/images/og/og-myspanishvisa-default.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@myspanishvisa">
+
+  <style>
+/* ═══════════════════════════════════════════════════════════════
+   GLOBAL SHELL — nav + footer only.
+   Page-specific CSS lives inside each fragment's own <style> block.
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── iOS overflow safety ── */
+html, body { max-width: 100%; overflow-x: clip; margin: 0; padding: 0; }
+*, *::before, *::after { box-sizing: border-box; }
+
+/* ── Brand tokens (root-level so all fragments inherit) ── */
+:root {
+  --navy:      #0c1930;
+  --navy-mid:  #1a3a5c;
+  --red:       #be0011;
+  --red-deep:  #8c000d;
+  --yellow:    #facf39;
+  --cream:     #f8f7f4;
+  --white:     #ffffff;
+  --black:     #1a1a1a;
+  --muted:     #5a6478;
+  --border:    #dce3ed;
+  --shadow-sm: 0 2px 8px rgba(12,25,48,0.08);
+  --shadow-md: 0 6px 24px rgba(12,25,48,0.13);
+}
+
+body {
+  font-family: 'Inter', 'Segoe UI', system-ui, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.75;
+  color: var(--black);
+  background: #fff;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   SITE NAV
+   ───────────────────────────────────────────────────────────── */
+.msv-nav {
+  position: sticky;
+  top: 0;
+  z-index: 9000;
+  background: var(--navy);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 2px 12px rgba(12,25,48,0.22);
+}
+.msv-nav__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+  gap: 1.5rem;
+}
+
+/* Logo */
+.msv-nav__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+.msv-nav__logo-flag {
+  font-size: 1.3rem;
+  line-height: 1;
+}
+.msv-nav__logo-text {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+.msv-nav__logo-text span {
+  color: var(--yellow);
+}
+
+/* Links */
+.msv-nav__links {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.msv-nav__links > li {
+  position: relative;
+}
+.msv-nav__links > li > a,
+.msv-nav__links > li > button {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.5rem 0.9rem;
+  font-size: 0.87rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.85);
+  text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: color 0.15s, background 0.15s;
+  white-space: nowrap;
+  height: 64px;
+}
+.msv-nav__links > li > a:hover,
+.msv-nav__links > li > button:hover,
+.msv-nav__links > li:focus-within > a,
+.msv-nav__links > li:focus-within > button {
+  color: #fff;
+  background: rgba(255,255,255,0.08);
+}
+.msv-nav__chevron {
+  font-size: 0.65rem;
+  opacity: 0.7;
+  transition: transform 0.2s;
+}
+.msv-nav__links > li:focus-within .msv-nav__chevron,
+.msv-nav__links > li:hover .msv-nav__chevron {
+  transform: rotate(180deg);
+}
+
+/* Dropdown */
+.msv-nav__dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 230px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  box-shadow: var(--shadow-md);
+  padding: 0.5rem 0;
+  z-index: 200;
+}
+.msv-nav__links > li:hover .msv-nav__dropdown,
+.msv-nav__links > li:focus-within .msv-nav__dropdown {
+  display: block;
+}
+.msv-nav__dropdown a {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.6rem 1.1rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--navy);
+  text-decoration: none;
+  transition: background 0.12s;
+}
+.msv-nav__dropdown a:hover {
+  background: var(--cream);
+  color: var(--red);
+}
+.msv-nav__dropdown-icon {
+  width: 24px;
+  height: 24px;
+  background: var(--cream);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+.msv-nav__dropdown-divider {
+  height: 1px;
+  background: var(--border);
+  margin: 0.4rem 0;
+}
+
+/* CTA button */
+.msv-nav__cta {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.55rem 1.2rem;
+  background: var(--red);
+  color: #fff !important;
+  font-size: 0.85rem;
+  font-weight: 700;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.15s, box-shadow 0.15s;
+  white-space: nowrap;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(190,0,17,0.3);
+}
+.msv-nav__cta:hover {
+  background: var(--red-deep);
+  box-shadow: 0 4px 14px rgba(190,0,17,0.4);
+  text-decoration: none;
+}
+
+/* Hamburger */
+.msv-nav__burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.4rem;
+  border-radius: 5px;
+}
+.msv-nav__burger span {
+  width: 22px;
+  height: 2px;
+  background: #fff;
+  border-radius: 2px;
+  transition: transform 0.2s, opacity 0.2s;
+  display: block;
+}
+
+/* Mobile nav */
+.msv-nav__mobile {
+  display: none;
+  flex-direction: column;
+  background: var(--navy-mid);
+  padding: 1rem 1.5rem 1.5rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+.msv-nav__mobile.open { display: flex; }
+.msv-nav__mobile a {
+  padding: 0.65rem 0;
+  color: rgba(255,255,255,0.9);
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+.msv-nav__mobile a:hover { color: var(--yellow); }
+.msv-nav__mobile .msv-nav__mobile-sub {
+  padding-left: 1rem;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: rgba(255,255,255,0.7);
+}
+.msv-nav__mobile-cta {
+  margin-top: 1rem;
+  background: var(--red);
+  color: #fff !important;
+  border-radius: 6px;
+  text-align: center;
+  padding: 0.75rem 1rem !important;
+  border-bottom: none !important;
+}
+
+@media (max-width: 900px) {
+  .msv-nav__links { display: none; }
+  .msv-nav__cta { display: none; }
+  .msv-nav__burger { display: flex; }
+}
+@media (max-width: 480px) {
+  .msv-nav__inner { padding: 0 1rem; }
+}
+
+/* ─────────────────────────────────────────────────────────────
+   SITE FOOTER
+   ───────────────────────────────────────────────────────────── */
+.msv-footer {
+  background: var(--navy);
+  color: rgba(255,255,255,0.75);
+  overflow-x: clip;
+}
+.msv-footer__top {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem 3rem;
+  display: grid;
+  grid-template-columns: 280px 1fr 1fr 1fr;
+  gap: 3rem;
+}
+@media (max-width: 900px) {
+  .msv-footer__top { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
+}
+@media (max-width: 560px) {
+  .msv-footer__top { grid-template-columns: 1fr; gap: 2rem; padding: 3rem 1.2rem 2rem; }
+}
+
+.msv-footer__brand {}
+.msv-footer__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  margin-bottom: 1rem;
+}
+.msv-footer__logo-flag { font-size: 1.3rem; }
+.msv-footer__logo-text {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -0.01em;
+}
+.msv-footer__logo-text span { color: var(--yellow); }
+.msv-footer__tagline {
+  font-size: 0.83rem;
+  color: rgba(255,255,255,0.55);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+.msv-footer__trust {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+.msv-footer__trust-item {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.65);
+}
+.msv-footer__trust-item::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  background: var(--yellow);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.msv-footer__col-title {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.4);
+  margin-bottom: 1rem;
+}
+.msv-footer__links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.msv-footer__links a {
+  font-size: 0.87rem;
+  color: rgba(255,255,255,0.68);
+  text-decoration: none;
+  transition: color 0.15s;
+  display: inline-block;
+}
+.msv-footer__links a:hover {
+  color: var(--yellow);
+  text-decoration: none;
+}
+
+.msv-footer__bottom {
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+.msv-footer__bottom-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 1rem;
+  justify-content: space-between;
+}
+.msv-footer__disclaimer {
+  font-size: 0.73rem;
+  color: rgba(255,255,255,0.35);
+  line-height: 1.65;
+  max-width: 720px;
+}
+.msv-footer__copyright {
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.35);
+  white-space: nowrap;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   MAIN CONTENT AREA
+   ───────────────────────────────────────────────────────────── */
+main {
+  /* Fragments are self-contained; this wrapper just provides flow context */
+  position: relative;
+}
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════
+     SITE NAVIGATION
+     ═══════════════════════════════════════════════════ -->
+<header class="msv-nav" role="banner">
+  <div class="msv-nav__inner">
+
+    <!-- Logo -->
+    <a href="/" class="msv-nav__logo" aria-label="My Spanish Visa — Home"><img src="/assets/images/msv-logo-white.png" alt="My Spanish Visa" height="80" style="display:block;"></a>
+
+    <!-- Desktop links -->
+    <nav aria-label="Main navigation">
+      <ul class="msv-nav__links">
+
+        <li>
+          <button class="msv-nav__dropdown-trigger" aria-haspopup="true" aria-expanded="false">
+            Visas <span class="msv-nav__chevron">▾</span>
+          </button>
+          <div class="msv-nav__dropdown" role="menu">
+            <a href="/non-lucrative-visa-spain/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🏖️</span>Non-Lucrative Visa
+            </a>
+            <a href="/digital-nomad-visa-spain/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">💻</span>Digital Nomad Visa
+            </a>
+            <a href="/student-visa-spain/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🎓</span>Student Visa
+            </a>
+            <div class="msv-nav__dropdown-divider"></div>
+            <a href="/spain-visa-renewal/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🔄</span>Visa Renewals
+            </a>
+            <a href="/best-visa-move-to-spain/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">⚖️</span>Compare All Visas
+            </a>
+          </div>
+        </li>
+
+        <li>
+          <button aria-haspopup="true" aria-expanded="false">
+            Resources <span class="msv-nav__chevron">▾</span>
+          </button>
+          <div class="msv-nav__dropdown" role="menu">
+            <a href="/blog/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">📝</span>Blog &amp; Guides
+            </a>
+            <a href="/spain-visa-checklist/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">✅</span>Document Checklists
+            </a>
+            <a href="/move-to-spain/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🏠</span>Move to Spain Guide
+            </a>
+            <a href="/visa-eligibility-quiz/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🧭</span>Eligibility Quiz
+            </a>
+          </div>
+        </li>
+
+        <li><a href="/about-us/">About Us</a></li>
+        <li><a href="/testimonials/">Reviews</a></li>
+        <li><a href="/contact-us.html">Contact</a></li>
+
+      </ul>
+    </nav>
+
+    <!-- Desktop CTA -->
+    <a href="https://dashboard.platinumlegalspain.com/nlv" class="msv-nav__cta">
+      Start My Application →
+    </a>
+
+    <!-- Hamburger (mobile) -->
+    <button class="msv-nav__burger" aria-label="Open menu" aria-expanded="false" onclick="
+      var m=document.querySelector('.msv-nav__mobile');
+      var open=m.classList.toggle('open');
+      this.setAttribute('aria-expanded', open);
+    ">
+      <span></span><span></span><span></span>
+    </button>
+
+  </div><!-- /.msv-nav__inner -->
+
+  <!-- Mobile menu -->
+  <nav class="msv-nav__mobile" aria-label="Mobile navigation">
+    <a href="/non-lucrative-visa-spain/" class="msv-nav__mobile-sub">Non-Lucrative Visa</a>
+    <a href="/digital-nomad-visa-spain/" class="msv-nav__mobile-sub">Digital Nomad Visa</a>
+    <a href="/student-visa-spain/" class="msv-nav__mobile-sub">Student Visa</a>
+    <a href="/spain-visa-renewal/">Visa Renewals</a>
+    <a href="/best-visa-move-to-spain/">Compare All Visas</a>
+    <a href="/blog/">Blog &amp; Guides</a>
+    <a href="/about-us/">About Us</a>
+    <a href="/testimonials/">Reviews</a>
+    <a href="/contact-us.html">Contact</a>
+    <a href="https://dashboard.platinumlegalspain.com/nlv" class="msv-nav__mobile-cta">Start My Application →</a>
+  </nav>
+
+</header>
+
+
+<!-- ═══════════════════════════════════════════════════
+     PAGE CONTENT (fragment injected here)
+     ═══════════════════════════════════════════════════ -->
+<main>
+<!-- FRAGMENT_START -->
+<!-- ============================================================
+     MY SPANISH VISA — NLV to Residency to Citizenship Pathway
+     Elementor Full-Width HTML Widget · April 2026
+     Slug: /nlv-residency-citizenship-pathway/
+     ============================================================ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.myspanishvisa.com/nlv-residency-citizenship-pathway/#webpage",
+      "url": "https://www.myspanishvisa.com/nlv-residency-citizenship-pathway/",
+      "name": "From NLV to Spanish Citizenship: The Complete Pathway | My Spanish Visa",
+      "description": "Your complete roadmap from Non-Lucrative Visa to permanent residency to Spanish citizenship. Timeline, requirements, and what to expect at each stage.",
+      "inLanguage": "en",
+      "isPartOf": { "@id": "https://www.myspanishvisa.com/#website" },
+      "breadcrumb": { "@id": "https://www.myspanishvisa.com/nlv-residency-citizenship-pathway/#breadcrumb" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.myspanishvisa.com/nlv-residency-citizenship-pathway/#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.myspanishvisa.com" },
+        { "@type": "ListItem", "position": 2, "name": "Non-Lucrative Visa Spain", "item": "https://www.myspanishvisa.com/non-lucrative-visa-spain/" },
+        { "@type": "ListItem", "position": 3, "name": "NLV to Citizenship Pathway", "item": "https://www.myspanishvisa.com/nlv-residency-citizenship-pathway/" }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "name": "How to Progress from Non-Lucrative Visa to Spanish Citizenship",
+      "description": "The complete step-by-step pathway from NLV to permanent residency to Spanish citizenship.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Obtain the Non-Lucrative Visa",
+          "text": "Apply for the NLV at your country's Spanish consulate with income evidence, health insurance, apostilled documents, and criminal record check. Initial visa is valid for 1 year."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Arrive in Spain and get TIE card",
+          "text": "Enter Spain within the visa validity window, register on the padron, and apply for your TIE residence card within 30 days."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "First Renewal (Year 2–3)",
+          "text": "Renew your NLV before expiry for a 2-year extension. Maintain income threshold, valid health insurance, and Spanish residency (183+ days/year)."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Second Renewal (Year 4–5)",
+          "text": "Renew again for another 2 years. Continue meeting all NLV requirements. Begin preparing for permanent residency application."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Apply for Permanent Residency (Year 5+)",
+          "text": "After 5 years of continuous legal residence, apply for long-term EU residency (Residencia de Larga Duración). No expiry on residency rights."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 6,
+          "name": "Apply for Spanish Citizenship (Year 10, or earlier for some nationalities)",
+          "text": "After 10 years (2 years for Latin Americans and certain other nationalities), apply for Spanish nationality. Requires language test, civic test, and integration evidence."
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How long does it take to get Spanish citizenship from the NLV?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For most nationalities (UK, US, Canadian, Australian), the pathway is: 1 year NLV + first 2-year renewal + second 2-year renewal = 5 years for permanent residency, then 5 more years = 10 years total for citizenship. Citizens of Latin American countries, Philippines, Equatorial Guinea, Andorra, and Portugal qualify after just 2 years of legal residence. Those married to Spanish nationals can apply after 1 year."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need to spend 183 days per year in Spain on the NLV?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes and no. Technically the NLV doesn't specify a minimum days-per-year requirement. However, to maintain Spanish tax residency (which you likely want for legal clarity) and to qualify for the 5-year permanent residency path, you should spend at least 183 days per year in Spain and not be absent for more than 6 consecutive months or 10 months cumulatively across any 5-year period."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+<!-- Open Graph / Social -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.myspanishvisa.com/nlv-residency-citizenship-pathway/">
+<meta property="og:title" content="From NLV to Spanish Citizenship: The Complete Pathway | My Spanish Visa">
+<meta property="og:description" content="Your complete roadmap from Non-Lucrative Visa to permanent residency to Spanish citizenship. Timeline, requirements, and what to expect at each stage.">
+<meta property="og:image" content="https://www.myspanishvisa.com/assets/images/og/og-nlv-pathway.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="My Spanish Visa">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@myspanishvisa">
+<meta name="twitter:title" content="NLV to Spanish Citizenship: Complete Roadmap | My Spanish Visa">
+<meta name="twitter:description" content="Your complete roadmap from Non-Lucrative Visa to permanent residency to Spanish citizenship.">
+<meta name="twitter:image" content="https://www.myspanishvisa.com/assets/images/og/og-nlv-pathway.jpg">
+
+<style>
+/* ── iOS Safari pinch-zoom overflow safety ─────────────────────────── */
+html, body { max-width: 100%; overflow-x: clip; }
+.msv, .msv-nav, .msv-topbar, .msv-footer, .msv-footer-cta,
+.pls-header, .pls-body, .pls-nlv, .pls-dnv, .pls-student {
+  max-width: 100%;
+  overflow-x: clip;
+  position: relative;
+}
+.msv img, .msv video, .msv iframe,
+.msv-footer img, .msv-footer video, .msv-footer iframe {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ── Reset & scope ─────────────────────────────────────────────────── */
+.msv *, .msv *::before, .msv *::after { box-sizing: border-box; margin: 0; padding: 0; }
+/* ── Tokens ──────────────────────────────────────────────────────── */
+.msv {
+  --navy: #0c1930; --navy-mid: #1a3a5c; --red: #be0011; --red-deep: #8c000d;
+  --yellow: #facf39; --cream: #f8f7f4; --white: #ffffff; --black: #1a1a1a;
+  --muted: #5a6478; --border: #dce3ed;
+  --shadow-sm: 0 2px 8px rgba(12,25,48,0.08); --shadow-md: 0 6px 24px rgba(12,25,48,0.13);
+  font-family: 'Inter', 'Segoe UI', system-ui, Arial, sans-serif;
+  font-size: 16px; line-height: 1.75; color: var(--black); width: 100%;
+}
+.msv__container { max-width: 1280px; margin: 0 auto; padding: 0 2rem; }
+.msv__container--narrow { max-width: 1040px; margin: 0 auto; padding: 0 2rem; }
+@media (max-width: 640px) { .msv__container, .msv__container--narrow { padding: 0 1.2rem; } }
+/* ── Typography ──────────────────────────────────────────────────── */
+.msv h1 { font-size: clamp(2rem, 4.5vw, 3rem); font-weight: 800; line-height: 1.12; color: var(--white); letter-spacing: -0.025em; margin-bottom: 1.2rem; }
+.msv h2 { font-size: clamp(1.3rem, 2.5vw, 1.75rem); font-weight: 700; color: var(--navy); letter-spacing: -0.01em; margin-bottom: 0.5rem; position: relative; display: inline-block; padding-bottom: 0.5rem; }
+.msv h2::after { content: ''; position: absolute; bottom: 0; left: 0; width: 44px; height: 3px; background: linear-gradient(90deg, var(--red), var(--red-deep)); border-radius: 2px; }
+.msv h3 { font-size: 1.05rem; font-weight: 700; color: var(--navy); margin-bottom: 0.4rem; }
+.msv p { color: var(--black); margin-bottom: 1rem; font-size: 0.97rem; }
+.msv a { color: var(--red); text-decoration: none; }
+.msv a:hover { text-decoration: underline; }
+.msv ul { list-style: none; padding: 0; margin: 0 0 1rem; }
+.msv ul li { padding: 0.35rem 0 0.35rem 1.4rem; position: relative; font-size: 0.95rem; color: var(--black); }
+.msv ul li::before { content: ''; position: absolute; left: 0; top: 0.75rem; width: 7px; height: 7px; background: linear-gradient(135deg, var(--red), var(--red-deep)); border-radius: 50%; }
+/* ── Sections ─────────────────────────────────────────────────── */
+.msv__section { padding: 5rem 0; background: var(--white); }
+.msv__section--cream { padding: 5rem 0; background: linear-gradient(180deg, #f8f7f4 0%, #f2f4f8 100%); }
+.msv__section--dark { padding: 5rem 0; background: linear-gradient(135deg, var(--navy) 0%, #0d2240 55%, #0a1d38 100%); }
+.msv__section--dark h2 { color: var(--white) !important; }
+.msv__section--dark h2::after { background: linear-gradient(90deg, var(--yellow), #e8b820); }
+.msv__section--dark h3 { color: rgba(255,255,255,0.9) !important; }
+.msv .msv__section--dark p, .msv .msv__section--dark li { color: rgba(255,255,255,0.82); }
+.msv__section--dark ul li::before { background: linear-gradient(135deg, var(--yellow), #e8b820); }
+@media (max-width: 640px) { .msv__section, .msv__section--cream, .msv__section--dark { padding: 3.5rem 0; } }
+.msv__section-hd { margin-bottom: 3rem; }
+.msv__section-hd p { color: var(--muted); font-size: 1rem; margin-top: 0.75rem; line-height: 1.7; max-width: 600px; }
+/* ── Animations ──────────────────────────────────────────────────── */
+@keyframes msv-fade-up { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes msv-shimmer {
+  0%   { background-position: -400px 0; }
+  100% { background-position: 400px 0; }
+}
+.msv__shimmer {
+  background: linear-gradient(90deg, var(--yellow) 0%, #e8b820 25%, var(--red) 50%, #e8b820 75%, var(--yellow) 100%);
+  background-size: 400px 100%;
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: msv-shimmer 3.5s linear infinite;
+  display: inline;
+}
+/* ── Hero ─────────────────────────────────────────────────────── */
+.msv__hero { background: linear-gradient(135deg, #0c1930 0%, #0f2540 40%, #162d50 70%, #1a3560 100%); padding: 5.5rem 0 5rem; position: relative; overflow: hidden; }
+.msv__hero::before { content: ''; position: absolute; top: -30%; right: -5%; width: 700px; height: 700px; background: radial-gradient(circle, rgba(190,0,17,0.1) 0%, transparent 65%); pointer-events: none; }
+.msv__hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, rgba(250,207,57,0.4), transparent); }
+.msv__hero-inner { max-width: 780px; animation: msv-fade-up 0.7s ease-out both; }
+.msv__eyebrow { display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(190,0,17,0.15); border: 1px solid rgba(190,0,17,0.4); color: #ff6b7a; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.35rem 0.9rem; border-radius: 100px; margin-bottom: 1.5rem; }
+.msv__eyebrow::before { content: ''; width: 6px; height: 6px; background: var(--red); border-radius: 50%; box-shadow: 0 0 6px var(--red); }
+.msv__hero p { color: rgba(255,255,255,0.78) !important; font-size: clamp(1rem, 2.2vw, 1.15rem); max-width: 640px; margin-bottom: 2.2rem; line-height: 1.75; }
+/* ── Trust bar ──────────────────────────────────────────────── */
+.msv__trust-bar { background: var(--white); border-bottom: 1px solid var(--border); padding: 1rem 0; box-shadow: var(--shadow-sm); }
+.msv__trust-bar-inner { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.75rem; }
+.msv__trust-item { display: flex; align-items: center; gap: 0.5rem; font-size: 0.82rem; font-weight: 600; color: var(--navy); white-space: nowrap; }
+.msv__trust-item::before { content: ''; width: 7px; height: 7px; background: linear-gradient(135deg, var(--red), var(--red-deep)); border-radius: 50%; flex-shrink: 0; }
+/* ── Alert box ───────────────────────────────────────────────── */
+.msv__alert { border-radius: 10px; padding: 1.3rem 1.5rem; display: flex; gap: 1rem; align-items: flex-start; margin-bottom: 2rem; }
+.msv__alert--warn { background: #fffbea; border: 1px solid #f0d060; }
+.msv__alert--info { background: #eef4ff; border: 1px solid #a0bfff; }
+.msv__alert--green { background: #f0fdf4; border: 1px solid #86efac; }
+.msv__alert-icon { font-size: 1.4rem; flex-shrink: 0; margin-top: 0.1rem; }
+.msv__alert p { font-size: 0.9rem; color: var(--black); margin: 0; line-height: 1.65; }
+.msv__alert strong { color: var(--navy); }
+/* ── Timeline ────────────────────────────────────────────────── */
+.msv__timeline { position: relative; padding-left: 2rem; }
+.msv__timeline::before { content: ''; position: absolute; left: 0.6rem; top: 0; bottom: 0; width: 2px; background: linear-gradient(180deg, var(--red), var(--navy)); }
+.msv__timeline-item { position: relative; margin-bottom: 2.5rem; }
+.msv__timeline-item:last-child { margin-bottom: 0; }
+.msv__timeline-dot { position: absolute; left: -1.7rem; top: 0.25rem; width: 18px; height: 18px; border-radius: 50%; background: var(--red); border: 3px solid var(--white); box-shadow: 0 0 0 2px var(--red); }
+.msv__timeline-dot--gold { background: var(--yellow); box-shadow: 0 0 0 2px var(--yellow); }
+.msv__timeline-year { font-size: 0.72rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; color: var(--red); margin-bottom: 0.3rem; }
+.msv__timeline-title { font-size: 1.1rem; font-weight: 800; color: var(--navy); margin-bottom: 0.5rem; }
+.msv__timeline-body { font-size: 0.92rem; color: var(--muted); line-height: 1.7; }
+.msv__timeline-body ul { margin-top: 0.5rem; }
+.msv__timeline-body ul li { font-size: 0.88rem; color: var(--muted); }
+.msv__timeline-body ul li::before { background: linear-gradient(135deg, var(--muted), #3d4a5c); }
+/* ── Stage cards ─────────────────────────────────────────────── */
+.msv__stage-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 2rem; }
+@media (max-width: 760px) { .msv__stage-cards { grid-template-columns: 1fr; } }
+.msv__stage-card { background: var(--white); border: 1.5px solid var(--border); border-radius: 14px; padding: 2rem; }
+.msv__stage-card--highlight { border-color: var(--yellow); background: #fffdf0; }
+.msv__stage-badge { display: inline-block; font-size: 0.7rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; padding: 0.22rem 0.75rem; border-radius: 100px; background: var(--navy); color: var(--white); margin-bottom: 0.75rem; }
+.msv__stage-badge--gold { background: var(--yellow); color: var(--navy); }
+/* ── Costs table ─────────────────────────────────────────────── */
+.msv__cost-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; margin: 1.5rem 0; }
+.msv__cost-table th { background: var(--navy); color: var(--white); padding: 0.85rem 1.2rem; text-align: left; font-weight: 700; }
+.msv__cost-table td { padding: 0.8rem 1.2rem; border-bottom: 1px solid var(--border); }
+.msv__cost-table tbody tr:nth-child(even) { background: #f4f6fa; }
+.msv__cost-table .cost-stage { font-weight: 700; color: var(--navy); }
+.msv__cost-table .cost-amount { font-weight: 700; color: var(--red); }
+/* ── Comparison table ────────────────────────────────────────── */
+.msv__comparison-table { width: 100%; border-collapse: collapse; font-size: 0.88rem; margin: 2rem 0; background: var(--white); border-radius: 12px; overflow: hidden; box-shadow: 0 4px 18px rgba(12,25,48,0.12); }
+.msv__comparison-table thead tr { background: var(--navy); }
+.msv__comparison-table th { padding: 1rem 1.25rem; text-align: left; color: #ffffff !important; font-weight: 700; }
+.msv__comparison-table tbody tr:nth-child(odd) { background: var(--white); }
+.msv__comparison-table tbody tr:nth-child(even) { background: #f4f6fa; }
+.msv__comparison-table td { padding: 0.85rem 1.25rem; border-bottom: 1px solid var(--border); color: var(--black) !important; }
+.msv__comparison-table .table-feature { font-weight: 700; color: var(--navy) !important; }
+.msv__comparison-table .good { color: #16a34a !important; font-weight: 600; }
+/* ── Mistake cards ───────────────────────────────────────────── */
+.msv__mistakes { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+@media (max-width: 640px) { .msv__mistakes { grid-template-columns: 1fr; } }
+.msv__mistake-card { background: #fef2f2; border: 1.5px solid #fca5a5; border-radius: 10px; padding: 1.5rem; }
+.msv__mistake-card h3 { color: #991b1b; font-size: 1rem; margin-bottom: 0.8rem; }
+.msv__mistake-card p { font-size: 0.9rem; color: #7f1d1d; margin-bottom: 0.5rem; }
+/* ── Buttons ─────────────────────────────────────────────────── */
+.msv__btn-group { display: flex; flex-wrap: wrap; gap: 0.85rem; }
+.msv__btn { display: inline-block; padding: 0.85rem 2rem; font-size: 0.92rem; font-weight: 700; border-radius: 6px; text-decoration: none !important; transition: transform 0.15s, box-shadow 0.15s; }
+.msv__btn:hover { transform: translateY(-1px); text-decoration: none !important; }
+.msv .msv__btn--primary { background: linear-gradient(135deg, var(--red) 0%, var(--red-deep) 100%); color: #ffffff !important; box-shadow: 0 4px 16px rgba(190,0,17,0.38); }
+.msv .msv__btn--primary:hover { box-shadow: 0 6px 22px rgba(190,0,17,0.48); color: #ffffff !important; }
+.msv .msv__btn--outline-white { background: transparent; color: #ffffff !important; border: 1.5px solid rgba(255,255,255,0.5); }
+.msv .msv__btn--outline-white:hover { background: rgba(255,255,255,0.1); color: #ffffff !important; }
+/* ── FAQs ──────────────────────────────────────────────────── */
+.msv__faq-list { display: flex; flex-direction: column; gap: 0; border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+.msv__faq-list details { border-bottom: 1px solid var(--border); background: var(--white); }
+.msv__faq-list details:last-child { border-bottom: none; }
+.msv__faq-list summary { padding: 1.2rem 1.5rem; font-size: 0.97rem; font-weight: 700; color: var(--navy); cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+.msv__faq-list summary::-webkit-details-marker { display: none; }
+.msv__faq-list summary::after { content: '+'; font-size: 1.3rem; font-weight: 400; color: var(--red); flex-shrink: 0; transition: transform 0.2s; }
+.msv__faq-list details[open] summary::after { transform: rotate(45deg); }
+.msv__faq-list details[open] summary { color: var(--red); }
+.msv__faq-answer { padding: 0 1.5rem 1.3rem; font-size: 0.92rem; color: var(--muted); line-height: 1.75; }
+.msv__faq-answer p { color: var(--muted); font-size: 0.92rem; margin-bottom: 0.75rem; }
+.msv__faq-answer p:last-child { margin-bottom: 0; }
+/* ── CTA band ────────────────────────────────────────────────── */
+.msv__cta-band { background: linear-gradient(135deg, var(--navy) 0%, #0d2240 60%, #0a1d38 100%); padding: 5rem 0; text-align: center; }
+.msv__cta-band h2 { color: var(--white) !important; display: block; }
+.msv__cta-band h2::after { left: 50%; transform: translateX(-50%); background: linear-gradient(90deg, var(--yellow), #e8b820); }
+.msv__cta-band p { color: rgba(255,255,255,0.75) !important; max-width: 560px; margin: 1rem auto 2.2rem; font-size: 1rem; }
+.msv__cta-band .msv__btn-group { justify-content: center; }
+/* ── Related guides ──────────────────────────────────────────── */
+.msv__related { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; }
+@media (max-width: 860px) { .msv__related { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 420px) { .msv__related { grid-template-columns: 1fr; } }
+.msv__related-card { background: var(--white); border: 1px solid var(--border); border-radius: 10px; padding: 1.3rem 1.25rem; text-decoration: none !important; transition: box-shadow 0.2s, transform 0.2s; display: block; }
+.msv__related-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); text-decoration: none !important; }
+.msv__related-icon { font-size: 1.5rem; display: block; margin-bottom: 0.6rem; }
+.msv__related-title { font-size: 0.88rem; font-weight: 700; color: var(--navy); display: block; margin-bottom: 0.3rem; }
+.msv__related-desc { font-size: 0.8rem; color: var(--muted); line-height: 1.55; }
+/* ── Disclaimer ──────────────────────────────────────────────── */
+.msv__disclaimer { background: var(--cream); border-top: 1px solid var(--border); padding: 2rem 0; }
+.msv__disclaimer p { font-size: 0.78rem; color: var(--muted); margin: 0; line-height: 1.65; }
+</style>
+
+<div class="msv">
+
+  <!-- ── Hero ─────────────────────────────────────────────────── -->
+  <section class="msv__hero">
+    <div class="msv__container">
+      <div class="msv__hero-inner">
+        <span class="msv__eyebrow">NLV · Residency · Citizenship</span>
+        <h1>From Non-Lucrative Visa to Spanish Citizenship — <span class="msv__shimmer">Your Complete Roadmap</span></h1>
+        <p>The definitive guide to the full immigration journey: from your first NLV application to Spanish permanent residency to citizenship. Every stage, every requirement, every cost — mapped out in one place.</p>
+        <div class="msv__btn-group">
+          <a href="https://www.myspanishvisa.com/get-started/" class="msv__btn msv__btn--primary">Start Free Eligibility Check →</a>
+          <a href="https://www.myspanishvisa.com/book-consultation/" class="msv__btn msv__btn--outline-white">Book a Consultation</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Trust bar ──────────────────────────────────────────────── -->
+  <div class="msv__trust-bar">
+    <div class="msv__trust-bar-inner">
+      <div class="msv__trust-item">Full 10-year pathway mapped</div>
+      <div class="msv__trust-item">Fast-track nationalities covered</div>
+      <div class="msv__trust-item">Costs at every stage</div>
+      <div class="msv__trust-item">Updated April 2026</div>
+    </div>
+  </div>
+
+  <!-- ── Timeline Overview ──────────────────────────────────────── -->
+  <section class="msv__section">
+    <div class="msv__container--narrow">
+      <div class="msv__section-hd">
+        <h2>The Full Timeline at a Glance</h2>
+        <p>From your first NLV application to Spanish citizenship — here's the complete journey for most English-speaking nationalities.</p>
+      </div>
+
+      <div class="msv__timeline">
+        <div class="msv__timeline-item">
+          <div class="msv__timeline-dot"></div>
+          <div class="msv__timeline-year">Year 0 → Year 1</div>
+          <div class="msv__timeline-title">Stage 1: Non-Lucrative Visa (Initial 1 Year)</div>
+          <div class="msv__timeline-body">
+            <p>Apply for the NLV at the Spanish consulate in your home country. Prove passive income (~€2,400/month), hold health insurance, submit apostilled documents and criminal record certificate. Once approved, move to Spain, register on the padrón, and collect your TIE residence card within 30 days.</p>
+            <ul>
+              <li>Visa validity: 1 year from entry into Spain</li>
+              <li>No work permitted</li>
+              <li>Establish Spanish tax residency by spending 183+ days/year</li>
+              <li>Begin building your 5-year residency clock from arrival</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="msv__timeline-item">
+          <div class="msv__timeline-dot"></div>
+          <div class="msv__timeline-year">Year 1 → Year 3</div>
+          <div class="msv__timeline-title">Stage 2: First Renewal (2 Years)</div>
+          <div class="msv__timeline-body">
+            <p>Renew your NLV before expiry — ideally 60–90 days ahead. File your renewal application (solicitud de renovación) at the Extranjería in Spain. Continue to evidence passive income at the required threshold and maintain valid health insurance. Your new TIE will be issued for 2 years.</p>
+            <ul>
+              <li>Renewal duration: 2 years</li>
+              <li>Same income and insurance requirements as initial NLV</li>
+              <li>Continue spending 183+ days/year in Spain to maintain residency timeline</li>
+              <li>File your first Spanish tax return (declaración de la renta) for the prior year</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="msv__timeline-item">
+          <div class="msv__timeline-dot"></div>
+          <div class="msv__timeline-year">Year 3 → Year 5</div>
+          <div class="msv__timeline-title">Stage 3: Second Renewal (2 Years)</div>
+          <div class="msv__timeline-body">
+            <p>Renew again under the same conditions as the first renewal. At this stage, you are building toward 5 years of continuous legal residence — the threshold for permanent residency. Maintain all requirements and keep careful records of your time in Spain vs. abroad.</p>
+            <ul>
+              <li>Renewal duration: 2 more years</li>
+              <li>No more than 6 consecutive months outside Spain at any time</li>
+              <li>Total absences from Spain must not exceed 10 months across the 5-year period</li>
+              <li>Begin preparing documents for permanent residency application</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="msv__timeline-item">
+          <div class="msv__timeline-dot msv__timeline-dot--gold"></div>
+          <div class="msv__timeline-year">Year 5+</div>
+          <div class="msv__timeline-title">Stage 4: Long-Term EU Residency (Permanent)</div>
+          <div class="msv__timeline-body">
+            <p>After 5 years of continuous legal residence, you become eligible for Residencia de Larga Duración (long-term EU residency), also commonly called permanent residency. This status has no expiry on your rights (the card is renewed every 5 years), and crucially — it removes the income requirement and the no-work restriction. You can now work in Spain freely.</p>
+            <ul>
+              <li>5 years of continuous legal residence required</li>
+              <li>No annual income threshold after approval</li>
+              <li>Right to work without any restrictions</li>
+              <li>Card valid for 5 years, indefinitely renewable</li>
+              <li>Residency in any EU member state may contribute to this (subject to rules)</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="msv__timeline-item">
+          <div class="msv__timeline-dot msv__timeline-dot--gold"></div>
+          <div class="msv__timeline-year">Year 10 (general) / Year 2 (fast-track)</div>
+          <div class="msv__timeline-title">Stage 5: Spanish Citizenship</div>
+          <div class="msv__timeline-body">
+            <p>The culmination of the journey: Spanish nationality, an EU passport, and full freedom of movement across 27 EU member states. Most English-speaking nationalities (UK, US, Canada, Australia) must wait 10 years of legal residence. See the fast-track section below for nationalities with a 2-year pathway.</p>
+            <ul>
+              <li>Pass DELE A2 Spanish language test</li>
+              <li>Pass CCSE civic knowledge test</li>
+              <li>No criminal record in Spain or home country</li>
+              <li>Evidence of genuine integration (tax returns, community ties)</li>
+              <li>Renounce home-country citizenship if required (depends on your nationality and Spain's treaties)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Citizenship Fast Tracks ────────────────────────────────── -->
+  <section class="msv__section--cream">
+    <div class="msv__container--narrow">
+      <div class="msv__section-hd">
+        <h2>Citizenship Fast Tracks</h2>
+        <p>Spain offers significantly reduced residency periods before citizenship for certain nationalities — one of the most generous provisions in European citizenship law.</p>
+      </div>
+
+      <div style="overflow-x: auto;">
+        <table class="msv__comparison-table">
+          <thead>
+            <tr>
+              <th>Route</th>
+              <th>Nationalities / Criteria</th>
+              <th>Years Required</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="table-feature">General route</td>
+              <td>UK, US, Canada, Australia, most non-listed nationalities</td>
+              <td>10 years</td>
+            </tr>
+            <tr>
+              <td class="table-feature">Ibero-American fast track</td>
+              <td>All Latin American countries, Philippines, Equatorial Guinea, Andorra, Portugal</td>
+              <td class="good">2 years</td>
+            </tr>
+            <tr>
+              <td class="table-feature">Sephardic Jewish heritage</td>
+              <td>Descendants of Sephardic Jews expelled from Spain in 1492 (special law)</td>
+              <td class="good">2 years</td>
+            </tr>
+            <tr>
+              <td class="table-feature">Gibraltar nationals</td>
+              <td>British subjects born in Gibraltar</td>
+              <td class="good">2 years</td>
+            </tr>
+            <tr>
+              <td class="table-feature">Married to Spanish national</td>
+              <td>Spouse of a Spanish citizen</td>
+              <td class="good">1 year</td>
+            </tr>
+            <tr>
+              <td class="table-feature">Born in Spain</td>
+              <td>Foreign nationals born on Spanish territory</td>
+              <td class="good">1 year</td>
+            </tr>
+            <tr>
+              <td class="table-feature">Refugee status</td>
+              <td>Those granted refugee protection in Spain</td>
+              <td class="good">5 years</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="msv__alert msv__alert--info">
+        <span class="msv__alert-icon">ℹ️</span>
+        <p><strong>Note on dual nationality:</strong> Spain generally requires applicants to renounce their original nationality upon naturalisation — but there are exceptions. Citizens of countries with which Spain has dual nationality treaties (mainly Ibero-American countries and the Philippines) can retain both. UK, US, Canadian, and Australian citizens would typically need to renounce their home-country citizenship, though rules vary. Seek specialist legal advice before proceeding.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Costs at Each Stage ────────────────────────────────────── -->
+  <section class="msv__section">
+    <div class="msv__container--narrow">
+      <div class="msv__section-hd">
+        <h2>Costs at Every Stage</h2>
+        <p>A realistic cost breakdown for each stage of the journey, excluding legal fees which vary by complexity.</p>
+      </div>
+      <div style="overflow-x: auto;">
+        <table class="msv__cost-table">
+          <thead>
+            <tr>
+              <th>Stage</th>
+              <th>Key Government Fees</th>
+              <th>Document Costs (approx.)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="cost-stage">Initial NLV Application</td>
+              <td class="cost-amount">€80–€150 consulate fee</td>
+              <td>€300–€700 (apostilles, translations, medical cert)</td>
+            </tr>
+            <tr>
+              <td class="cost-stage">TIE Card (initial)</td>
+              <td class="cost-amount">~€16 (Tasa 790)</td>
+              <td>Minimal — photos and travel</td>
+            </tr>
+            <tr>
+              <td class="cost-stage">First Renewal (Year 1)</td>
+              <td class="cost-amount">~€20 (Tasa 052)</td>
+              <td>€100–€200 (updated documents)</td>
+            </tr>
+            <tr>
+              <td class="cost-stage">Second Renewal (Year 3)</td>
+              <td class="cost-amount">~€20 (Tasa 052)</td>
+              <td>€100–€200</td>
+            </tr>
+            <tr>
+              <td class="cost-stage">Permanent Residency Application</td>
+              <td class="cost-amount">~€20 (Tasa 052)</td>
+              <td>€150–€300 (certificates, translations)</td>
+            </tr>
+            <tr>
+              <td class="cost-stage">Citizenship Application</td>
+              <td class="cost-amount">~€100 (Civil Registry)</td>
+              <td>€300–€600 (language test, civic test, certificates)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="font-size: 0.85rem; color: var(--muted);">Legal and advisory fees not included above. Professional assistance is strongly recommended at each stage to avoid delays and errors. Annual health insurance (€700–€2,500/year) is a major ongoing cost during the NLV years.</p>
+    </div>
+  </section>
+
+  <!-- ── Common Mistakes ────────────────────────────────────────── -->
+  <section class="msv__section--cream">
+    <div class="msv__container--narrow">
+      <div class="msv__section-hd">
+        <h2>Common Mistakes That Reset the Clock</h2>
+        <p>These errors can invalidate years of residency and force you to restart your pathway.</p>
+      </div>
+      <div class="msv__mistakes">
+        <div class="msv__mistake-card">
+          <h3>Extended absences from Spain</h3>
+          <p>Being absent from Spain for more than 6 consecutive months — or more than 10 months cumulatively across the 5-year period — can break your "continuous residence" requirement and restart the permanent residency clock. Always track your days.</p>
+        </div>
+        <div class="msv__mistake-card">
+          <h3>Late or missed renewal</h3>
+          <p>Allowing your NLV to lapse (even by days) creates a gap in legal status. This can mean the period after expiry doesn't count toward your 5-year residency total, and you may face fines or forced departure. Renew at least 60 days early.</p>
+        </div>
+        <div class="msv__mistake-card">
+          <h3>Working on the NLV</h3>
+          <p>Working in any capacity — employed or self-employed — while on the NLV is a serious breach. If discovered by Spanish immigration authorities, your visa can be cancelled and you may be barred from reapplying. The work prohibition is absolute.</p>
+        </div>
+        <div class="msv__mistake-card">
+          <h3>Tax residency issues</h3>
+          <p>Failing to file Spanish tax returns (declaración de la renta) when required, or attempting to claim non-residency while physically living in Spain, can create problems with both your immigration status and any future citizenship application, which scrutinises your tax history.</p>
+        </div>
+        <div class="msv__mistake-card">
+          <h3>Not registering on the padrón</h3>
+          <p>Your padrón registration is often used as evidence of continuous residence in Spain. Gaps in padrón registration — or never registering — can complicate permanent residency and citizenship applications where you need to prove where you lived and for how long.</p>
+        </div>
+        <div class="msv__mistake-card">
+          <h3>Criminal convictions</h3>
+          <p>Any criminal conviction in Spain during your residency period — no matter how minor — can affect your renewal, permanent residency, and citizenship applications. Maintain a clean record in Spain and keep your original-country criminal record certificates updated as required.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FAQ ────────────────────────────────────────────────────── -->
+  <section class="msv__section">
+    <div class="msv__container--narrow">
+      <div class="msv__section-hd">
+        <h2>Frequently Asked Questions</h2>
+      </div>
+      <div class="msv__faq-list">
+        <details>
+          <summary>How long does it take to get Spanish citizenship from the NLV?</summary>
+          <div class="msv__faq-answer">
+            <p>For most English-speaking nationalities (UK, US, Canada, Australia), the standard pathway is: 1 year initial NLV + 2-year first renewal + 2-year second renewal = 5 years to permanent residency, then 5 more years = <strong>10 years total</strong> for citizenship. Citizens of Latin American countries, Philippines, Equatorial Guinea, Andorra, and Portugal qualify after just <strong>2 years</strong>. Those married to Spanish nationals qualify after <strong>1 year</strong>.</p>
+          </div>
+        </details>
+        <details>
+          <summary>Do I need to spend 183 days per year in Spain on the NLV?</summary>
+          <div class="msv__faq-answer">
+            <p>The NLV itself doesn't specify a 183-day minimum, but you should plan to meet this for two reasons: (1) spending 183+ days/year is what establishes Spanish tax residency, which is important for legal clarity and your relationship with the Agencia Tributaria; (2) to qualify for the 5-year permanent residency pathway, you must not have been absent for more than 6 consecutive months or 10 months cumulatively across any 5-year period. Regular extended absences risk disrupting your residency timeline.</p>
+          </div>
+        </details>
+        <details>
+          <summary>Does permanent residency in Spain mean I can work?</summary>
+          <div class="msv__faq-answer">
+            <p>Yes. Long-term EU residency (Residencia de Larga Duración) — what is commonly called permanent residency — removes the work prohibition that applies during your NLV years. With permanent residency, you can take employment in Spain, start a business, work as an autónomo, or do nothing — the choice is entirely yours. You no longer need to prove passive income. This is one of the most significant benefits of reaching the 5-year milestone.</p>
+          </div>
+        </details>
+        <details>
+          <summary>Do I need to renounce my British/US/Australian citizenship to get a Spanish passport?</summary>
+          <div class="msv__faq-answer">
+            <p>Generally yes for UK, US, Canadian, and Australian citizens — Spain requires renunciation of citizenship not covered by special bilateral treaties. This is a major decision that requires careful personal and financial planning. Some people opt to obtain permanent residency (which doesn't require renunciation) without pursuing citizenship. Others accept renunciation for the significant benefits of EU citizenship and freedom of movement. The law around this is nuanced and you should take specialist legal advice.</p>
+          </div>
+        </details>
+        <details>
+          <summary>What language and civic tests are required for Spanish citizenship?</summary>
+          <div class="msv__faq-answer">
+            <p>You must pass two tests to qualify for naturalisation: (1) the <strong>DELE A2</strong> Spanish language exam (administered by Instituto Cervantes) — this is the second lowest level and most applicants find it accessible after living in Spain for years; and (2) the <strong>CCSE</strong> (Conocimientos Constitucionales y Socioculturales de España) civic knowledge test, which covers Spanish history, culture, law, and geography. Both are taken at Instituto Cervantes centres. Preparation courses and practice materials are widely available.</p>
+          </div>
+        </details>
+        <details>
+          <summary>Can I switch from NLV to a work visa without losing my residency history?</summary>
+          <div class="msv__faq-answer">
+            <p>Yes. If your circumstances change — for example, you start working remotely or take up employment — you can change your visa category without losing the residency years you've accumulated. The 5-year permanent residency clock counts continuous legal residence, not continuous residence under any particular visa type. A change from NLV to DNV (or another category) maintains your residency history, provided there are no gaps in your legal status. Get specialist advice before any change to ensure continuity.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CTA Band ────────────────────────────────────────────────── -->
+  <section class="msv__cta-band">
+    <div class="msv__container--narrow">
+      <h2>Ready to Start Your Journey?</h2>
+      <p>Whether you're at the beginning of the pathway or mid-way through, our immigration specialists can guide you through every stage — from NLV application to permanent residency to citizenship.</p>
+      <div class="msv__btn-group">
+        <a href="https://www.myspanishvisa.com/get-started/" class="msv__btn msv__btn--primary">Start Free Eligibility Check →</a>
+        <a href="https://www.myspanishvisa.com/book-consultation/" class="msv__btn msv__btn--outline-white">Book a Consultation</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Related Pages ───────────────────────────────────────────── -->
+  <section class="msv__section--cream">
+    <div class="msv__container">
+      <div class="msv__section-hd">
+        <h2>Related Guides</h2>
+      </div>
+      <div class="msv__related">
+        <a href="/non-lucrative-visa-spain/" class="msv__related-card">
+          <span class="msv__related-icon">🏡</span>
+          <span class="msv__related-title">Non-Lucrative Visa Spain</span>
+          <span class="msv__related-desc">The complete guide to income requirements, documents, and the application process.</span>
+        </a>
+        <a href="/dnv-work-permit-residency-pathway/" class="msv__related-card">
+          <span class="msv__related-icon">💻</span>
+          <span class="msv__related-title">DNV to Residency Pathway</span>
+          <span class="msv__related-desc">Your progression guide from Digital Nomad Visa to long-term residency in Spain.</span>
+        </a>
+        <a href="/faq/" class="msv__related-card">
+          <span class="msv__related-icon">❓</span>
+          <span class="msv__related-title">Spain Visa FAQs</span>
+          <span class="msv__related-desc">Common questions about visas, residency, documents, and moving to Spain.</span>
+        </a>
+        <a href="https://dashboard.platinumlegalspain.com/nlv" class="msv__related-card">
+          <span class="msv__related-icon">🤝</span>
+          <span class="msv__related-title">Get Expert Help</span>
+          <span class="msv__related-desc">Work with our specialists at Platinum Legal Spain for your immigration journey.</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</div><!-- /.msv -->
+
+<!-- FRAGMENT_END -->
+</main>
+
+
+<!-- ═══════════════════════════════════════════════════
+     SITE FOOTER
+     ═══════════════════════════════════════════════════ -->
+<footer class="msv-footer" role="contentinfo">
+
+  <div class="msv-footer__top">
+
+    <!-- Brand column -->
+    <div class="msv-footer__brand">
+      <a href="/" class="msv-footer__logo" aria-label="My Spanish Visa"><img src="/assets/images/msv-logo-white.png" alt="My Spanish Visa" height="40" style="display:block;"></a>
+      <p class="msv-footer__tagline">
+        Specialist Spain visa &amp; residency guidance for English-speaking foreigners.
+        A service of Platinum Legal Spain.
+      </p>
+      <div class="msv-footer__trust">
+        <span class="msv-footer__trust-item">All English. No barriers.</span>
+        <span class="msv-footer__trust-item">Solicitors &amp; immigration specialists</span>
+        <span class="msv-footer__trust-item">100% online process</span>
+      </div>
+    </div>
+
+    <!-- Visas column -->
+    <div>
+      <div class="msv-footer__col-title">Visas</div>
+      <ul class="msv-footer__links">
+        <li><a href="/non-lucrative-visa-spain/">Non-Lucrative Visa</a></li>
+        <li><a href="/digital-nomad-visa-spain/">Digital Nomad Visa</a></li>
+        <li><a href="/student-visa-spain/">Student Visa</a></li>
+        <li><a href="/spain-visa-renewal/">Visa Renewals</a></li>
+        <li><a href="/best-visa-move-to-spain/">Compare All Visas</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/nlv">Apply: NLV</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/dnv">Apply: DNV</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/student-visa">Apply: Student Visa</a></li>
+      </ul>
+    </div>
+
+    <!-- Resources column -->
+    <div>
+      <div class="msv-footer__col-title">Resources</div>
+      <ul class="msv-footer__links">
+        <li><a href="/blog/">Blog &amp; Guides</a></li>
+        <li><a href="/move-to-spain/">Move to Spain Guide</a></li>
+        <li><a href="/visa-eligibility-quiz/">Eligibility Quiz</a></li>
+        <li><a href="/spain-visa-checklist/">Document Checklists</a></li>
+        <li><a href="/spain-visa-requirements/">Visa Requirements</a></li>
+        <li><a href="/spain-nie-number/">NIE Number Guide</a></li>
+        <li><a href="/spain-tie-card/">TIE Card Guide</a></li>
+      </ul>
+    </div>
+
+    <!-- Company column -->
+    <div>
+      <div class="msv-footer__col-title">Company</div>
+      <ul class="msv-footer__links">
+        <li><a href="/about-us/">About Us</a></li>
+        <li><a href="/testimonials/">Client Reviews</a></li>
+        <li><a href="/why-choose-us/">Why Choose Us</a></li>
+        <li><a href="/contact-us.html">Contact</a></li>
+        <li><a href="https://www.platinumlegalspain.com" rel="noopener">Platinum Legal Spain</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/nlv">Client Portal</a></li>
+      </ul>
+    </div>
+
+  </div><!-- /.msv-footer__top -->
+
+  <div class="msv-footer__bottom">
+    <div class="msv-footer__bottom-inner">
+      <p class="msv-footer__disclaimer">
+        <strong style="color:rgba(255,255,255,0.5);">Disclaimer:</strong>
+        My Spanish Visa provides visa processing support and is not a law firm. Content on this site is for informational purposes only and does not constitute legal advice. Immigration rules change frequently — always verify requirements with official sources or a qualified specialist. My Spanish Visa is a trading name of Platinum Legal Spain.
+      </p>
+      <span class="msv-footer__copyright">© 2026 My Spanish Visa. All rights reserved.</span>
+    </div>
+  </div>
+
+</footer>
+
+</body>
+</html>

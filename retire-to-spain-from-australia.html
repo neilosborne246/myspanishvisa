@@ -1,0 +1,1630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="dns-prefetch" href="https://js-eu1.hsforms.net">
+  <link rel="dns-prefetch" href="https://dashboard.platinumlegalspain.com">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- ═══════════════════════════════════════════════════════════════════
+       PAGE-SPECIFIC HEAD — replace block below per page:
+       <title>Retire To Spain From Australia | My Spanish Visa</title>
+       <meta name="description" content="…">
+       <meta property="og:title" content="…">
+       <meta property="og:description" content="…">
+       <meta property="og:url" content="https://www.myspanishvisa.com/…">
+       <meta property="og:image" content="…">
+       <link rel="canonical" href="https://www.myspanishvisa.com/retire-to-spain-from-australia/">>
+       <script type="application/ld+json">…</script>
+       ═══════════════════════════════════════════════════════════════════ -->
+  <title>Retire to Spain from Australia | My Spanish Visa</title>
+  <meta name="description" content="Retire to Spain from Australia. Practical guide for retirees planning to move to Spain from abroad.">
+  <link rel="canonical" href="https://www.myspanishvisa.com/retire-to-spain-from-australia/">
+
+  <!-- Shared Open Graph defaults -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="My Spanish Visa">
+  <meta property="og:image" content="https://www.myspanishvisa.com/assets/images/og/og-myspanishvisa-default.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@myspanishvisa">
+
+  <style>
+/* ═══════════════════════════════════════════════════════════════
+   GLOBAL SHELL — nav + footer only.
+   Page-specific CSS lives inside each fragment's own <style> block.
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── iOS overflow safety ── */
+html, body { max-width: 100%; overflow-x: clip; margin: 0; padding: 0; }
+*, *::before, *::after { box-sizing: border-box; }
+
+/* ── Brand tokens (root-level so all fragments inherit) ── */
+:root {
+  --navy:      #0c1930;
+  --navy-mid:  #1a3a5c;
+  --red:       #be0011;
+  --red-deep:  #8c000d;
+  --yellow:    #facf39;
+  --cream:     #f8f7f4;
+  --white:     #ffffff;
+  --black:     #1a1a1a;
+  --muted:     #5a6478;
+  --border:    #dce3ed;
+  --shadow-sm: 0 2px 8px rgba(12,25,48,0.08);
+  --shadow-md: 0 6px 24px rgba(12,25,48,0.13);
+}
+
+body {
+  font-family: 'Inter', 'Segoe UI', system-ui, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.75;
+  color: var(--black);
+  background: #fff;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   SITE NAV
+   ───────────────────────────────────────────────────────────── */
+.msv-nav {
+  position: sticky;
+  top: 0;
+  z-index: 9000;
+  background: var(--navy);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 2px 12px rgba(12,25,48,0.22);
+}
+.msv-nav__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 90px;
+  gap: 1.5rem;
+}
+
+/* Logo */
+.msv-nav__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+.msv-nav__logo-flag {
+  font-size: 1.3rem;
+  line-height: 1;
+}
+.msv-nav__logo-text {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+.msv-nav__logo-text span {
+  color: var(--yellow);
+}
+
+/* Links */
+.msv-nav__links {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.msv-nav__links > li {
+  position: relative;
+}
+.msv-nav__links > li > a,
+.msv-nav__links > li > button {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.5rem 0.9rem;
+  font-size: 0.87rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.85);
+  text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: color 0.15s, background 0.15s;
+  white-space: nowrap;
+  height: 90px;
+}
+.msv-nav__links > li > a:hover,
+.msv-nav__links > li > button:hover,
+.msv-nav__links > li:focus-within > a,
+.msv-nav__links > li:focus-within > button {
+  color: #fff;
+  background: rgba(255,255,255,0.08);
+}
+.msv-nav__chevron {
+  font-size: 0.65rem;
+  opacity: 0.7;
+  transition: transform 0.2s;
+}
+.msv-nav__links > li:focus-within .msv-nav__chevron,
+.msv-nav__links > li:hover .msv-nav__chevron {
+  transform: rotate(180deg);
+}
+
+/* Dropdown */
+.msv-nav__dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 230px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  box-shadow: var(--shadow-md);
+  padding: 0.5rem 0;
+  z-index: 200;
+}
+.msv-nav__links > li:hover .msv-nav__dropdown,
+.msv-nav__links > li:focus-within .msv-nav__dropdown {
+  display: block;
+}
+.msv-nav__dropdown a {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.6rem 1.1rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--navy);
+  text-decoration: none;
+  transition: background 0.12s;
+}
+.msv-nav__dropdown a:hover {
+  background: var(--cream);
+  color: var(--red);
+}
+.msv-nav__dropdown-icon {
+  width: 24px;
+  height: 24px;
+  background: var(--cream);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+.msv-nav__dropdown-divider {
+  height: 1px;
+  background: var(--border);
+  margin: 0.4rem 0;
+}
+
+/* CTA button */
+.msv-nav__cta {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.55rem 1.2rem;
+  background: var(--red);
+  color: #fff !important;
+  font-size: 0.85rem;
+  font-weight: 700;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.15s, box-shadow 0.15s;
+  white-space: nowrap;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(190,0,17,0.3);
+}
+.msv-nav__cta:hover {
+  background: var(--red-deep);
+  box-shadow: 0 4px 14px rgba(190,0,17,0.4);
+  text-decoration: none;
+}
+
+/* Hamburger */
+.msv-nav__burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.4rem;
+  border-radius: 5px;
+}
+.msv-nav__burger span {
+  width: 22px;
+  height: 2px;
+  background: #fff;
+  border-radius: 2px;
+  transition: transform 0.2s, opacity 0.2s;
+  display: block;
+}
+
+/* Mobile nav */
+.msv-nav__mobile {
+  display: none;
+  flex-direction: column;
+  background: var(--navy-mid);
+  padding: 1rem 1.5rem 1.5rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+.msv-nav__mobile.open { display: flex; }
+.msv-nav__mobile a {
+  padding: 0.65rem 0;
+  color: rgba(255,255,255,0.9);
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+.msv-nav__mobile a:hover { color: var(--yellow); }
+.msv-nav__mobile .msv-nav__mobile-sub {
+  padding-left: 1rem;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: rgba(255,255,255,0.7);
+}
+.msv-nav__mobile-cta {
+  margin-top: 1rem;
+  background: var(--red);
+  color: #fff !important;
+  border-radius: 6px;
+  text-align: center;
+  padding: 0.75rem 1rem !important;
+  border-bottom: none !important;
+}
+
+@media (max-width: 900px) {
+  .msv-nav__links { display: none; }
+  .msv-nav__cta { display: none; }
+  .msv-nav__burger { display: flex; }
+}
+@media (max-width: 480px) {
+  .msv-nav__inner { padding: 0 1rem; }
+}
+
+/* ─────────────────────────────────────────────────────────────
+   SITE FOOTER
+   ───────────────────────────────────────────────────────────── */
+.msv-footer {
+  background: var(--navy);
+  color: rgba(255,255,255,0.75);
+  overflow-x: clip;
+}
+.msv-footer__top {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem 3rem;
+  display: grid;
+  grid-template-columns: 280px 1fr 1fr 1fr;
+  gap: 3rem;
+}
+@media (max-width: 900px) {
+  .msv-footer__top { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
+}
+@media (max-width: 560px) {
+  .msv-footer__top { grid-template-columns: 1fr; gap: 2rem; padding: 3rem 1.2rem 2rem; }
+}
+
+.msv-footer__brand {}
+.msv-footer__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  margin-bottom: 1rem;
+}
+.msv-footer__logo-flag { font-size: 1.3rem; }
+.msv-footer__logo-text {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -0.01em;
+}
+.msv-footer__logo-text span { color: var(--yellow); }
+.msv-footer__tagline {
+  font-size: 0.83rem;
+  color: rgba(255,255,255,0.55);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+.msv-footer__trust {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+.msv-footer__trust-item {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.65);
+}
+.msv-footer__trust-item::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  background: var(--yellow);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.msv-footer__col-title {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.4);
+  margin-bottom: 1rem;
+}
+.msv-footer__links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.msv-footer__links a {
+  font-size: 0.87rem;
+  color: rgba(255,255,255,0.68);
+  text-decoration: none;
+  transition: color 0.15s;
+  display: inline-block;
+}
+.msv-footer__links a:hover {
+  color: var(--yellow);
+  text-decoration: none;
+}
+
+.msv-footer__bottom {
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+.msv-footer__bottom-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 1rem;
+  justify-content: space-between;
+}
+.msv-footer__disclaimer {
+  font-size: 0.73rem;
+  color: rgba(255,255,255,0.35);
+  line-height: 1.65;
+  max-width: 720px;
+}
+.msv-footer__copyright {
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.35);
+  white-space: nowrap;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   MAIN CONTENT AREA
+   ───────────────────────────────────────────────────────────── */
+main {
+  /* Fragments are self-contained; this wrapper just provides flow context */
+  position: relative;
+}
+  </style>
+  <link rel="icon" type="image/png" href="/assets/images/msv-favicon.png">
+  <link rel="apple-touch-icon" href="/assets/images/msv-favicon.png">
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════
+     SITE NAVIGATION
+     ═══════════════════════════════════════════════════ -->
+<header class="msv-nav" role="banner">
+  <div class="msv-nav__inner">
+    <a href="/" class="msv-nav__logo" aria-label="My Spanish Visa — Home"><img src="/assets/images/msv-logo-white.png" alt="My Spanish Visa" height="72" style="display:block;"></a>
+    <nav aria-label="Main navigation">
+      <ul class="msv-nav__links">
+        <li>
+          <button class="msv-nav__dropdown-trigger" aria-haspopup="true" aria-expanded="false">Visas <span class="msv-nav__chevron">▾</span></button>
+          <div class="msv-nav__dropdown" role="menu">
+            <a href="/non-lucrative-visa-spain.html" role="menuitem"><span class="msv-nav__dropdown-icon">🏖️</span>Non-Lucrative Visa</a>
+            <a href="/digital-nomad-visa-spain.html" role="menuitem"><span class="msv-nav__dropdown-icon">💻</span>Digital Nomad Visa</a>
+            <a href="/student-visa-spain.html" role="menuitem"><span class="msv-nav__dropdown-icon">🎓</span>Student Visa</a>
+            <div class="msv-nav__dropdown-divider"></div>
+            <a href="/spain-visa-renewal.html" role="menuitem"><span class="msv-nav__dropdown-icon">🔄</span>Visa Renewals</a>
+            <a href="/best-visa-move-to-spain.html" role="menuitem"><span class="msv-nav__dropdown-icon">⚖️</span>Compare All Visas</a>
+          </div>
+        </li>
+        <li>
+          <button aria-haspopup="true" aria-expanded="false">Resources <span class="msv-nav__chevron">▾</span></button>
+          <div class="msv-nav__dropdown" role="menu">
+            <a href="/blog-index.html" role="menuitem"><span class="msv-nav__dropdown-icon">📝</span>Blog &amp; Guides</a>
+            <a href="/blog-spain-visa-document-checklist-2026.html" role="menuitem"><span class="msv-nav__dropdown-icon">✅</span>Document Checklists</a>
+            <a href="/move-to-spain.html" role="menuitem"><span class="msv-nav__dropdown-icon">🏠</span>Move to Spain Guide</a>
+            <a href="/book-consultation.html" role="menuitem"><span class="msv-nav__dropdown-icon">🧭</span>Eligibility Quiz</a>
+          </div>
+        </li>
+        <li><a href="/about-us.html">About Us</a></li>
+        <li><a href="/contact-us.html">Contact</a></li>
+      </ul>
+    </nav>
+    <a href="/book-consultation.html" class="msv-nav__cta">Start My Application →</a>
+    <button class="msv-nav__burger" aria-label="Open menu" aria-expanded="false" onclick="var m=document.querySelector('.msv-nav__mobile');var open=m.classList.toggle('open');this.setAttribute('aria-expanded',open);">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <nav class="msv-nav__mobile" aria-label="Mobile navigation">
+    <a href="/non-lucrative-visa-spain.html" class="msv-nav__mobile-sub">Non-Lucrative Visa</a>
+    <a href="/digital-nomad-visa-spain.html" class="msv-nav__mobile-sub">Digital Nomad Visa</a>
+    <a href="/student-visa-spain.html" class="msv-nav__mobile-sub">Student Visa</a>
+    <a href="/spain-visa-renewal.html">Visa Renewals</a>
+    <a href="/best-visa-move-to-spain.html">Compare All Visas</a>
+    <a href="/blog-index.html">Blog &amp; Guides</a>
+    <a href="/about-us.html">About Us</a>    <a href="/contact-us.html">Contact</a>
+    <a href="/book-consultation.html" class="msv-nav__mobile-cta">Start My Application →</a>
+  </nav>
+</header>
+
+<!-- ═══════════════════════════════════════════════════
+     PAGE CONTENT (fragment injected here)
+     ═══════════════════════════════════════════════════ -->
+<main>
+<!-- FRAGMENT_START -->
+<!-- Retire to Spain from Australia - My Spanish Visa -->
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.myspanishvisa.com/retire-to-spain-from-australia/",
+      "url": "https://www.myspanishvisa.com/retire-to-spain-from-australia/",
+      "name": "Retire to Spain from Australia 2026 | Complete Guide for Australians | My Spanish Visa",
+      "description": "Everything Australian retirees need to know about retiring to Spain — visa options, financial requirements, healthcare, superannuation, taxes, cost of living, and the best places to retire.",
+      "inLanguage": "en",
+      "isPartOf": {
+        "@id": "https://www.myspanishvisa.com/#website"
+      },
+      "breadcrumb": {
+        "@id": "https://www.myspanishvisa.com/retire-to-spain-from-australia/#breadcrumb"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://www.myspanishvisa.com/images/retire-australia-og.jpg",
+        "width": 1200,
+        "height": 630
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.myspanishvisa.com/retire-to-spain-from-australia/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.myspanishvisa.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Retire to Spain from Australia",
+          "item": "https://www.myspanishvisa.com/retire-to-spain-from-australia/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.myspanishvisa.com/retire-to-spain-from-australia/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Can Australian retirees retire to Spain permanently?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, Australian retirees can retire to Spain permanently using the Non-Lucrative Visa. This visa is specifically designed for people with sufficient income or savings who don't need to work in Spain. You'll need to prove a minimum monthly income (approximately AUD 4,000–5,000) or lump sum savings (around AUD 56,000+) to qualify. After 5 years, you can apply for permanent residency."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What's the best visa for Australian retirees?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The Non-Lucrative Visa is the best option for Australian retirees. It allows you to live in Spain without working, requires no job offers, and is relatively straightforward to obtain if you meet the financial requirements. The visa is typically granted for 1 year initially and can be renewed annually or converted to a 3-year residence permit."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does it cost to retire in Spain from Australia?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Monthly living costs in Spain range from AUD 2,500–4,500 depending on location and lifestyle, significantly lower than Australian cities. A comfortable retirement in popular areas like Valencia or the Costa del Sol costs 40–50% less than Sydney or Melbourne. You'll also need approximately AUD 56,000–75,000 in savings to qualify for the Non-Lucrative Visa."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Australia have a tax treaty with Spain?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No, Australia does not have a tax treaty with Spain. This is critical for retirees. You may be liable for taxes in both countries on certain income types. Spanish property rental income, local employment, and pension income could trigger tax obligations in Spain. Consult a tax advisor experienced in Australia-Spain taxation before retiring."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I access my Australian superannuation while living in Spain?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Generally, you cannot access your superannuation before preservation age while living overseas. However, if you've reached preservation age (typically 60–67 depending on birth year), you can withdraw funds as a lump sum or income stream, even while living in Spain. Foreign Resident Withholding Tax (21.45%) applies to lump sum withdrawals. Seek advice from a registered tax agent before planning withdrawals."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Will my Age Pension continue if I retire to Spain?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Australia's Age Pension is portable, meaning you can receive it while living in Spain. However, it's means-tested and assessed differently for overseas residents. Your payment may be reduced or suspended if you have substantial Spanish income or assets. Notify Centrelink of your move and confirm ongoing eligibility before departing Australia."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What healthcare will I have in Spain?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You'll need private health insurance in Spain initially, as Medicare Australia doesn't cover overseas treatment. After registering as a resident (empadronamiento) and obtaining a NIE, you can access Spain's public healthcare system, though you may choose private insurance for faster access to specialists. Private insurance costs AUD 100–300+ monthly depending on age and coverage."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What documents do I need from Australia for a Spanish visa?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Key Australian documents required include: Australian Federal Police (AFP) national background check, original passport, proof of funds from Australian banks (bank statements), medical certificate from an Australian doctor, and any documents requiring Hague Apostille certification via DFAT. The AFP check and other documents must be apostilled by the Australian Department of Foreign Affairs and Trade."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does the Non-Lucrative Visa application take?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The Non-Lucrative Visa typically takes 4–8 weeks to process through the Spanish consulate, though processing times vary. You'll need an appointment at the relevant consulate (Sydney, Melbourne, or Brisbane typically handle Australian applications). It's wise to start the application 3–4 months before your planned move to allow for document gathering and any unexpected delays."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I move to Spain if I have rental income from Australia?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, you can have rental income from Australian properties while on a Non-Lucrative Visa. However, this income counts toward Spanish tax obligations and may affect your Age Pension means test. Spanish tax rules are complex—rental income earned by Spanish residents may trigger Spanish tax liability. Professional tax advice is essential to understand your obligations in both countries."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<!-- Open Graph / Social -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.myspanishvisa.com/retire-to-spain-from-australia/">
+<meta property="og:title" content="My Spanish Visa">
+<meta property="og:description" content="Expert Spain visa guidance for English-speaking expats.">
+<meta property="og:image" content="https://www.myspanishvisa.com/assets/images/og/og-retire-spain.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="My Spanish Visa">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@myspanishvisa">
+<meta name="twitter:title" content="My Spanish Visa">
+<meta name="twitter:description" content="Expert Spain visa guidance for English-speaking expats.">
+<meta name="twitter:image" content="https://www.myspanishvisa.com/assets/images/og/og-retire-spain.jpg">
+
+<style>
+/* ── iOS Safari pinch-zoom overflow safety ─────────────────────────── */
+/* Prevents horizontal overflow when users pinch-zoom on iPhone/iPad.   */
+/* Top-level (also paste into theme Custom CSS / Elementor Site Settings) */
+html, body { max-width: 100%; overflow-x: clip; }
+/* Scoped wrapper safety */
+.msv, .msv-nav, .msv-topbar, .msv-footer, .msv-footer-cta,
+.pls-header, .pls-body, .pls-nlv, .pls-dnv, .pls-student {
+  max-width: 100%;
+  overflow-x: clip;
+  position: relative;
+}
+/* Cap all media inside the wrapper */
+.msv img, .msv video, .msv iframe,
+.msv-footer img, .msv-footer video, .msv-footer iframe {
+  max-width: 100%;
+  height: auto;
+}
+/* Never use 100vw — use 100% instead (dev reminder) */
+
+
+.msv *, .msv *::before, .msv *::after { box-sizing: border-box; margin: 0; padding: 0; }
+.msv {
+  --navy: #0c1930; --navy-mid: #1a3a5c; --red: #be0011; --red-deep: #8c000d;
+  --yellow: #facf39; --cream: #f8f7f4; --white: #ffffff; --black: #1a1a1a;
+  --muted: #5a6478; --border: #dce3ed;
+  --shadow-sm: 0 2px 8px rgba(12,25,48,0.08); --shadow-md: 0 6px 24px rgba(12,25,48,0.13);
+  font-family: 'Inter', 'Segoe UI', system-ui, Arial, sans-serif;
+  font-size: 16px; line-height: 1.75; color: var(--black); width: 100%;
+}
+.msv__container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+.msv__container--narrow { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+@media (max-width: 640px) { .msv__container, .msv__container--narrow { padding: 0 1.2rem; } }
+.msv h1 { font-size: clamp(2rem, 4.5vw, 3rem); font-weight: 800; line-height: 1.12; color: var(--white); letter-spacing: -0.025em; margin-bottom: 1.2rem; }
+.msv h2 { font-size: clamp(1.3rem, 2.5vw, 1.75rem); font-weight: 700; color: var(--navy); letter-spacing: -0.01em; margin-bottom: 0.5rem; position: relative; display: inline-block; padding-bottom: 0.5rem; }
+.msv h2::after { content: ''; position: absolute; bottom: 0; left: 0; width: 44px; height: 3px; background: linear-gradient(90deg, var(--red), var(--red-deep)); border-radius: 2px; }
+.msv h3 { font-size: 1.05rem; font-weight: 700; color: var(--navy); margin-bottom: 0.4rem; }
+.msv p { color: var(--black); margin-bottom: 1rem; font-size: 0.97rem; }
+.msv a { color: var(--red); text-decoration: none; }
+.msv a:hover { text-decoration: underline; }
+.msv ul { list-style: none; padding: 0; margin: 0 0 1rem; }
+.msv ul li { padding: 0.35rem 0 0.35rem 1.4rem; position: relative; font-size: 0.95rem; color: var(--black); }
+.msv ul li::before { content: ''; position: absolute; left: 0; top: 0.75rem; width: 7px; height: 7px; background: linear-gradient(135deg, var(--red), var(--red-deep)); border-radius: 50%; }
+.msv__section { padding: 5rem 0; background: var(--white); }
+.msv__section--cream { padding: 5rem 0; background: linear-gradient(180deg, #f8f7f4 0%, #f2f4f8 100%); }
+.msv__section--dark { padding: 5rem 0; background: linear-gradient(135deg, var(--navy) 0%, #0d2240 55%, #0a1d38 100%); }
+.msv__section--dark h2 { color: var(--white) !important; }
+.msv__section--dark h2::after { background: linear-gradient(90deg, var(--yellow), #e8b820); }
+.msv__section--dark h3 { color: rgba(255,255,255,0.9) !important; }
+.msv .msv__section--dark p, .msv .msv__section--dark li { color: rgba(255,255,255,0.82); }
+.msv__section--dark ul li::before { background: linear-gradient(135deg, var(--yellow), #e8b820); }
+@media (max-width: 640px) { .msv__section, .msv__section--cream, .msv__section--dark { padding: 3.5rem 0; } }
+.msv__section-hd { margin-bottom: 3rem; }
+.msv__section-hd p { color: var(--muted); font-size: 1rem; margin-top: 0.75rem; line-height: 1.7; max-width: 600px; }
+@keyframes msv-fade-up { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes msv-shimmer { 0% { background-position: -400px 0; } 100% { background-position: 400px 0; } }
+.msv__shimmer { background: linear-gradient(90deg, var(--yellow) 0%, #e8b820 25%, var(--red) 50%, #e8b820 75%, var(--yellow) 100%); background-size: 400px 100%; -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; animation: msv-shimmer 3.5s linear infinite; display: inline; }
+.msv__hero { background: linear-gradient(135deg, #0c1930 0%, #0f2540 40%, #162d50 70%, #1a3560 100%); padding: 5.5rem 0 5rem; position: relative; overflow: hidden; }
+.msv__hero::before { content: ''; position: absolute; top: -30%; right: -5%; width: 700px; height: 700px; background: radial-gradient(circle, rgba(190,0,17,0.1) 0%, transparent 65%); pointer-events: none; }
+.msv__hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, rgba(250,207,57,0.4), transparent); }
+.msv__hero-inner { max-width: 780px; animation: msv-fade-up 0.7s ease-out both; }
+.msv__eyebrow { display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(190,0,17,0.15); border: 1px solid rgba(190,0,17,0.4); color: #ff6b7a; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.35rem 0.9rem; border-radius: 100px; margin-bottom: 1.5rem; }
+.msv__eyebrow::before { content: ''; width: 6px; height: 6px; background: var(--red); border-radius: 50%; box-shadow: 0 0 6px var(--red); }
+.msv__hero p { color: rgba(255,255,255,0.78) !important; font-size: clamp(1rem, 2.2vw, 1.15rem); max-width: 640px; margin-bottom: 2.2rem; line-height: 1.75; }
+.msv__trust-bar { background: var(--white); border-bottom: 1px solid var(--border); padding: 1rem 0; box-shadow: var(--shadow-sm); }
+.msv__trust-bar-inner { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.75rem; }
+.msv__trust-item { display: flex; align-items: center; gap: 0.5rem; font-size: 0.82rem; font-weight: 600; color: var(--navy); white-space: nowrap; }
+.msv__trust-item::before { content: ''; width: 7px; height: 7px; background: linear-gradient(135deg, var(--red), var(--red-deep)); border-radius: 50%; flex-shrink: 0; }
+.msv__facts { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; margin-bottom: 3rem; }
+@media (max-width: 760px) { .msv__facts { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 420px) { .msv__facts { grid-template-columns: 1fr; } }
+.msv__fact { background: var(--white); padding: 1.5rem 1.3rem; text-align: center; }
+.msv__fact-icon { font-size: 1.5rem; display: block; margin-bottom: 0.5rem; }
+.msv__fact-label { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); display: block; margin-bottom: 0.25rem; }
+.msv__fact-value { font-size: 0.97rem; font-weight: 700; color: var(--navy); line-height: 1.35; display: block; }
+.msv__alert { border-radius: 10px; padding: 1.3rem 1.5rem; display: flex; gap: 1rem; align-items: flex-start; margin-bottom: 2rem; }
+.msv__alert--warn { background: #fffbea; border: 1px solid #f0d060; }
+.msv__alert--info { background: #eef4ff; border: 1px solid #a0bfff; }
+.msv__alert--red { background: #fef2f2; border: 1px solid #fca5a5; }
+.msv__alert--green { background: #f0fdf4; border: 1px solid #86efac; }
+.msv__alert-icon { font-size: 1.4rem; flex-shrink: 0; margin-top: 0.1rem; }
+.msv__alert p { font-size: 0.9rem; color: var(--black); margin: 0; line-height: 1.65; }
+.msv__alert strong { color: var(--navy); }
+.msv__persona-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-bottom: 3rem; }
+@media (max-width: 860px) { .msv__persona-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 420px) { .msv__persona-grid { grid-template-columns: 1fr; } }
+.msv__persona-card { background: var(--white); border: 1px solid var(--border); border-radius: 12px; padding: 2rem 1.5rem; text-align: center; transition: box-shadow 0.2s, transform 0.2s; }
+.msv__persona-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+.msv__persona-icon { font-size: 2.5rem; margin-bottom: 0.8rem; }
+.msv__persona-title { font-size: 1.1rem; font-weight: 700; color: var(--navy); margin-bottom: 0.5rem; }
+.msv__persona-desc { font-size: 0.9rem; color: var(--muted); line-height: 1.65; margin-bottom: 1.2rem; }
+.msv__persona-cta { display: inline-block; color: var(--red); font-size: 0.88rem; font-weight: 700; }
+.msv__guide-index { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; margin-bottom: 3rem; }
+@media (max-width: 860px) { .msv__guide-index { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 420px) { .msv__guide-index { grid-template-columns: 1fr; } }
+.msv__guide-card { background: var(--white); border: 1.5px solid var(--border); border-radius: 10px; padding: 1.5rem 1.3rem; text-decoration: none !important; transition: all 0.25s ease; display: flex; flex-direction: column; }
+.msv__guide-card:hover { box-shadow: var(--shadow-md); transform: translateY(-3px); border-color: var(--red); }
+.msv__guide-card-icon { font-size: 2rem; margin-bottom: 0.8rem; display: block; }
+.msv__guide-card-title { font-size: 0.95rem; font-weight: 700; color: var(--navy); margin-bottom: 0.5rem; }
+.msv__guide-card-desc { font-size: 0.82rem; color: var(--muted); line-height: 1.5; margin-bottom: 1rem; flex-grow: 1; }
+.msv__guide-card-link { color: var(--red); font-size: 0.85rem; font-weight: 700; }
+.msv__comparison-table { width: 100%; border-collapse: collapse; font-size: 0.88rem; margin: 2rem 0; }
+.msv__comparison-table thead tr { background: var(--navy); }
+.msv__comparison-table th { padding: 1rem 1.25rem; text-align: left; color: var(--white); font-weight: 700; }
+.msv__comparison-table td { padding: 0.85rem 1.25rem; border-bottom: 1px solid var(--border); color: var(--black); }
+.msv__comparison-table tbody tr { background: #fff; }
+.msv__comparison-table tbody tr:nth-child(even) { background: #f9fafb; }
+.msv__comparison-table .table-feature { font-weight: 600; color: var(--navy); }
+.msv__income-boxes { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; margin-bottom: 2rem; }
+@media (max-width: 860px) { .msv__income-boxes { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 420px) { .msv__income-boxes { grid-template-columns: 1fr; } }
+.msv__income-box { background: #f9fafb; border: 1px solid var(--border); border-radius: 10px; padding: 1.3rem; text-align: center; }
+.msv__income-box-label { font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); margin-bottom: 0.5rem; }
+.msv__income-box-value { font-size: 1.5rem; font-weight: 800; color: var(--red); }
+.msv__income-box-detail { font-size: 0.75rem; color: var(--muted); margin-top: 0.4rem; font-weight: 500; }
+.msv__process-steps { display: grid; grid-template-columns: repeat(6, 1fr); gap: 0.8rem; margin-bottom: 2rem; }
+@media (max-width: 760px) { .msv__process-steps { grid-template-columns: repeat(3, 1fr); gap: 1rem; } }
+@media (max-width: 420px) { .msv__process-steps { grid-template-columns: 1fr 1fr; } }
+.msv__process-step { background: var(--white); border: 1.5px solid var(--border); border-radius: 10px; padding: 1.3rem 1rem; text-align: center; }
+.msv__process-step-num { font-size: 1.3rem; font-weight: 800; color: var(--red); margin-bottom: 0.4rem; }
+.msv__process-step-title { font-size: 0.85rem; font-weight: 700; color: var(--navy); line-height: 1.4; }
+.msv__two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: center; }
+@media (max-width: 860px) { .msv__two-col { grid-template-columns: 1fr; } }
+.msv__two-col-card { background: var(--white); border: 1px solid var(--border); border-radius: 12px; padding: 2rem; }
+.msv__two-col-icon { font-size: 2.5rem; margin-bottom: 1rem; }
+.msv__related { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; }
+@media (max-width: 860px) { .msv__related { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 420px) { .msv__related { grid-template-columns: 1fr; } }
+.msv__related-card { background: var(--white); border: 1px solid var(--border); border-radius: 10px; padding: 1.3rem 1.25rem; text-decoration: none !important; transition: box-shadow 0.2s, transform 0.2s; display: block; }
+.msv__related-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); text-decoration: none !important; }
+.msv__related-icon { font-size: 1.5rem; display: block; margin-bottom: 0.6rem; }
+.msv__related-title { font-size: 0.88rem; font-weight: 700; color: var(--navy); display: block; margin-bottom: 0.3rem; }
+.msv__related-desc { font-size: 0.8rem; color: var(--muted); line-height: 1.55; }
+.msv__faq-list { display: flex; flex-direction: column; gap: 0; border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+.msv__faq-list details { border-bottom: 1px solid var(--border); background: var(--white); }
+.msv__faq-list details:last-child { border-bottom: none; }
+.msv__faq-list summary { padding: 1.2rem 1.5rem; font-size: 0.97rem; font-weight: 700; color: var(--navy); cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+.msv__faq-list summary::-webkit-details-marker { display: none; }
+.msv__faq-list summary::after { content: '+'; font-size: 1.3rem; font-weight: 400; color: var(--red); flex-shrink: 0; transition: transform 0.2s; }
+.msv__faq-list details[open] summary::after { transform: rotate(45deg); }
+.msv__faq-list details[open] summary { color: var(--red); }
+.msv__faq-answer { padding: 0 1.5rem 1.3rem; font-size: 0.92rem; color: var(--muted); line-height: 1.75; }
+.msv__faq-answer p { color: var(--muted); font-size: 0.92rem; margin-bottom: 0.75rem; }
+.msv__faq-answer p:last-child { margin-bottom: 0; }
+.msv__cta-band { background: linear-gradient(135deg, var(--navy) 0%, #0d2240 60%, #0a1d38 100%); padding: 5rem 0; text-align: center; }
+.msv__cta-band h2 { color: var(--white) !important; display: block; }
+.msv__cta-band h2::after { left: 50%; transform: translateX(-50%); background: linear-gradient(90deg, var(--yellow), #e8b820); }
+.msv__cta-band p { color: rgba(255,255,255,0.75) !important; max-width: 560px; margin: 1rem auto 2.2rem; font-size: 1rem; }
+.msv__cta-band .msv__btn-group { justify-content: center; }
+.msv__btn-group { display: flex; flex-wrap: wrap; gap: 0.85rem; }
+.msv__btn { display: inline-block; padding: 0.85rem 2rem; font-size: 0.92rem; font-weight: 700; border-radius: 6px; text-decoration: none !important; transition: transform 0.15s, box-shadow 0.15s; }
+.msv__btn:hover { transform: translateY(-1px); text-decoration: none !important; }
+.msv .msv__btn--primary { background: linear-gradient(135deg, var(--red) 0%, var(--red-deep) 100%); color: #ffffff !important; box-shadow: 0 4px 16px rgba(190,0,17,0.38); }
+.msv .msv__btn--primary:hover { box-shadow: 0 6px 22px rgba(190,0,17,0.48); color: #ffffff !important; }
+.msv .msv__btn--outline-white { background: transparent; color: #ffffff !important; border: 1.5px solid rgba(255,255,255,0.5); }
+.msv .msv__btn--outline-white:hover { background: rgba(255,255,255,0.1); color: #ffffff !important; }
+.msv__disclaimer { background: var(--cream); border-top: 1px solid var(--border); padding: 2rem 0; }
+.msv__disclaimer p { font-size: 0.78rem; color: var(--muted); margin: 0; line-height: 1.65; }
+</style>
+
+<div class="msv">
+
+<!-- HERO SECTION -->
+<section class="msv__hero">
+  <div class="msv__container">
+    <div class="msv__hero-inner">
+      <div class="msv__eyebrow">
+        Australian Retirees
+      </div>
+      <h1>Retire to Spain <span class="msv__shimmer">from Australia</span></h1>
+      <p>Your complete guide to moving to Spain as an Australian retiree. Discover visa options, financial requirements, healthcare, taxation, cost of living, and the best places to retire in Spain with peace of mind.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="msv__trust-bar">
+  <div class="msv__trust-bar-inner">
+    <div class="msv__trust-item">Trusted by 5000+ Australians</div>
+    <div class="msv__trust-item">Free Initial Consultation</div>
+    <div class="msv__trust-item">Non-Lucrative Visa Specialists</div>
+    <div class="msv__trust-item">DFAT-Verified Guidance</div>
+  </div>
+</div>
+
+<!-- QUICK FACTS -->
+<section class="msv__section">
+  <div class="msv__container">
+    <div class="msv__facts">
+      <div class="msv__fact">
+        <span class="msv__fact-icon">📋</span>
+        <span class="msv__fact-label">Primary Visa</span>
+        <span class="msv__fact-value">Non-Lucrative Visa</span>
+      </div>
+      <div class="msv__fact">
+        <span class="msv__fact-icon">💷</span>
+        <span class="msv__fact-label">Monthly Income Required</span>
+        <span class="msv__fact-value">~AUD 4,000–5,000</span>
+      </div>
+      <div class="msv__fact">
+        <span class="msv__fact-icon">⏱</span>
+        <span class="msv__fact-label">Processing Time</span>
+        <span class="msv__fact-value">4–8 Weeks</span>
+      </div>
+      <div class="msv__fact">
+        <span class="msv__fact-icon">🏥</span>
+        <span class="msv__fact-label">Healthcare</span>
+        <span class="msv__fact-value">Private Insurance Then Public</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY AUSTRALIANS RETIRE TO SPAIN -->
+<section class="msv__section--cream">
+  <div class="msv__container">
+    <div class="msv__section-hd">
+      <h2>Why Australians Retire to Spain</h2>
+      <p>Spain offers Australian retirees a compelling combination of lifestyle, climate, affordability, and connectivity. Here's what makes Spain an attractive retirement destination for Australians.</p>
+    </div>
+
+    <div class="msv__persona-grid">
+      <div class="msv__persona-card">
+        <div class="msv__persona-icon">☀️</div>
+        <h3 class="msv__persona-title">Mediterranean Lifestyle</h3>
+        <p class="msv__persona-desc">Spain offers a slower pace of life, vibrant culture, excellent wine and cuisine, and centuries of history. Australians escape the isolation of the continent and gain access to a wealthy cultural hub.</p>
+      </div>
+
+      <div class="msv__persona-card">
+        <div class="msv__persona-icon">🌡️</div>
+        <h3 class="msv__persona-title">Perfect Climate</h3>
+        <p class="msv__persona-desc">Enjoy 300+ days of sunshine annually on the Costa del Sol, or milder summers in Valencia and Barcelona. Spain's climate beats Australian heat while avoiding UK-style winters in most regions.</p>
+      </div>
+
+      <div class="msv__persona-card">
+        <div class="msv__persona-icon">💰</div>
+        <h3 class="msv__persona-title">60% Lower Costs</h3>
+        <p class="msv__persona-desc">Retire in Spain for 40–50% less than Sydney or Melbourne. Rent, food, healthcare, and dining are significantly cheaper. Your retirement income stretches further here.</p>
+      </div>
+
+      <div class="msv__persona-card">
+        <div class="msv__persona-icon">🌍</div>
+        <h3 class="msv__persona-title">Closer to Family</h3>
+        <p class="msv__persona-desc">Europe's time zone (UTC+1/+2) is only 6–8 hours ahead of Australia. Family video calls are at reasonable times. Direct flights via Dubai, Doha, or Singapore make visits home practical.</p>
+      </div>
+
+      <div class="msv__persona-card">
+        <div class="msv__persona-icon">✈️</div>
+        <h3 class="msv__persona-title">Hub for Europe</h3>
+        <p class="msv__persona-desc">From Spain, explore Europe easily. Cheap flights to France, Italy, Portugal, and beyond. Your retirement home becomes a gateway to the continent.</p>
+      </div>
+
+      <div class="msv__persona-card">
+        <div class="msv__persona-icon">👥</div>
+        <h3 class="msv__persona-title">Expat Communities</h3>
+        <p class="msv__persona-desc">Join thousands of English-speaking retirees on the Costa del Sol, in Barcelona, and Valencia. Strong expat networks mean easy integration and peer support.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BEST VISA FOR RETIREES -->
+<section class="msv__section">
+  <div class="msv__container">
+    <div class="msv__section-hd">
+      <h2>Best Visa for Australian Retirees</h2>
+      <p>The <a href="/non-lucrative-visa-spain.html">Non-Lucrative Visa</a> is the gold standard for retirees moving to Spain from Australia.</p>
+    </div>
+
+    <div class="msv__two-col">
+      <div>
+        <h3>Why the Non-Lucrative Visa?</h3>
+        <ul>
+          <li>Designed specifically for people with sufficient income or savings who don't work</li>
+          <li>No employment required or allowed</li>
+          <li>Initially granted for 1 year; renewable annually or convertible to 3-year residence permits</li>
+          <li>Path to permanent residency after 5 years</li>
+          <li>Simpler requirements than work-based visas</li>
+          <li>No job offer or Spanish employer sponsorship needed</li>
+        </ul>
+        <p style="margin-top: 1.5rem;"><strong>Alternatives for specific situations:</strong> If you have a part-time Spanish income, the <a href="/digital-nomad-visa-spain.html">Digital Nomad Visa</a> might apply (though primarily for remote workers). However, the Non-Lucrative remains the first choice for most retirees.</p>
+      </div>
+
+      <div class="msv__two-col-card">
+        <div class="msv__two-col-icon">📊</div>
+        <h3>Non-Lucrative Visa at a Glance</h3>
+        <ul>
+          <li><strong>Duration:</strong> 1 year (renewable), then 3-year residence permit</li>
+          <li><strong>Income Required:</strong> Approximately EUR 2,300–2,400/month (~AUD 4,000–5,000)</li>
+          <li><strong>Savings Alternative:</strong> AUD 56,000+ lump sum (approximately EUR 36,000+)</li>
+          <li><strong>Work Permitted:</strong> No (part-time work invalidates visa)</li>
+          <li><strong>Family Dependents:</strong> Spouse and children can be included</li>
+          <li><strong>Processing Time:</strong> 4–8 weeks</li>
+          <li><strong>Processing Location:</strong> Spanish consulate in Sydney, Melbourne, or Brisbane</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINANCIAL REQUIREMENTS -->
+<section class="msv__section--cream">
+  <div class="msv__container">
+    <div class="msv__section-hd">
+      <h2>Financial Requirements in AUD</h2>
+      <p>Spain bases financial requirements on a figure called IPREM (Indicador Público de Renta de Efectos Múltiples), which increases annually. For 2026, the Non-Lucrative Visa requires approximately 2.5–3x IPREM depending on dependents.</p>
+    </div>
+
+    <div class="msv__income-boxes">
+      <div class="msv__income-box">
+        <span class="msv__income-box-label">Single Applicant</span>
+        <span class="msv__income-box-value">~AUD 4,000–4,200</span>
+        <span class="msv__income-box-detail">Monthly income OR ~AUD 56,000 lump sum</span>
+      </div>
+      <div class="msv__income-box">
+        <span class="msv__income-box-label">Couple</span>
+        <span class="msv__income-box-value">~AUD 6,500–6,800</span>
+        <span class="msv__income-box-detail">Combined monthly income</span>
+      </div>
+      <div class="msv__income-box">
+        <span class="msv__income-box-label">With 1 Dependent</span>
+        <span class="msv__income-box-value">~AUD 5,600–5,900</span>
+        <span class="msv__income-box-detail">Additional ~AUD 1,400–1,700 per dependent</span>
+      </div>
+      <div class="msv__income-box">
+        <span class="msv__income-box-label">Lump Sum Alternative</span>
+        <span class="msv__income-box-value">~AUD 75,000+</span>
+        <span class="msv__income-box-detail">For 3-year residence permit</a>
+      </div>
+    </div>
+
+    <div class="msv__alert msv__alert--info">
+      <span class="msv__alert-icon">💡</span>
+      <p><strong>Important:</strong> Amounts are estimates (EUR 2,400–2,500 monthly, converted at current rates). Consulates require official documentation of income from Australian sources: superannuation statements, Age Pension letters, rental income documentation, or bank statements showing passive income. Spanish property rental income, shares, and investments count toward requirements.</p>
+    </div>
+  </div>
+</section>
+
+<!-- APPLICATION PROCESS -->
+<section class="msv__section">
+  <div class="msv__container">
+    <div class="msv__section-hd">
+      <h2>Step-by-Step Application Process</h2>
+      <p>The Non-Lucrative Visa application involves six main steps. Here's the typical timeline and what to expect at each stage.</p>
+    </div>
+
+    <div class="msv__process-steps">
+      <div class="msv__process-step">
+        <div class="msv__process-step-num">1</div>
+        <div class="msv__process-step-title">Gather Documents</div>
+      </div>
+      <div class="msv__process-step">
+        <div class="msv__process-step-num">2</div>
+        <div class="msv__process-step-title">Apostille & Verification</div>
+      </div>
+      <div class="msv__process-step">
+        <div class="msv__process-step-num">3</div>
+        <div class="msv__process-step-title">Schedule Consulate Appointment</div>
+      </div>
+      <div class="msv__process-step">
+        <div class="msv__process-step-num">4</div>
+        <div class="msv__process-step-title">Submit Application</div>
+      </div>
+      <div class="msv__process-step">
+        <div class="msv__process-step-num">5</div>
+        <div class="msv__process-step-title">Wait & Respond to Requests</div>
+      </div>
+      <div class="msv__process-step">
+        <div class="msv__process-step-num">6</div>
+        <div class="msv__process-step-title">Collect Visa & Move</div>
+      </div>
+    </div>
+
+    <h3 style="margin-top: 2.5rem; margin-bottom: 1rem;">Detailed Breakdown</h3>
+
+    <h4 style="font-size: 0.95rem; color: var(--navy); margin-top: 1.5rem; margin-bottom: 0.5rem;"><strong>Step 1: Gather Documents</strong></h4>
+    <p>Start 2–3 months before your target departure date. Collect all financial documents (superannuation statements, Age Pension letters, bank statements), identity documents, and medical certificates from Australia. Ensure Australian documents are recent (typically within 3–6 months of submission).</p>
+
+    <h4 style="font-size: 0.95rem; color: var(--navy); margin-top: 1.5rem; margin-bottom: 0.5rem;"><strong>Step 2: Apostille & Translation</strong></h4>
+    <p>Have relevant Australian documents apostilled by the Australian Department of Foreign Affairs and Trade (DFAT). Translated into Spanish by an official translator. This step typically takes 2–4 weeks and is essential—Spanish authorities won't accept unpostilled Australian documents.</p>
+
+    <h4 style="font-size: 0.95rem; color: var(--navy); margin-top: 1.5rem; margin-bottom: 0.5rem;"><strong>Step 3: Schedule Consulate Appointment</strong></h4>
+    <p>Contact the Spanish consulate in Sydney, Melbourne, or Brisbane to book a visa appointment. Wait times vary (2–8 weeks). Many consulates now offer online scheduling. Confirm all requirements before your appointment slot.</p>
+
+    <h4 style="font-size: 0.95rem; color: var(--navy); margin-top: 1.5rem; margin-bottom: 0.5rem;"><strong>Step 4: Submit Application</strong></h4>
+    <p>Attend your consulate appointment with all documents, complete the application form, pay the visa fee (approximately EUR 90–100), and provide biometric data (fingerprints, photograph). Consulates typically issue a receipt with a case reference number.</p>
+
+    <h4 style="font-size: 0.95rem; color: var(--navy); margin-top: 1.5rem; margin-bottom: 0.5rem;"><strong>Step 5: Wait & Respond to Requests</strong></h4>
+    <p>Processing takes 4–8 weeks on average. Consulates may request additional documents via email. Respond promptly to avoid delays. Some applications require secondary checks, extending the timeline.</p>
+
+    <h4 style="font-size: 0.95rem; color: var(--navy); margin-top: 1.5rem; margin-bottom: 0.5rem;"><strong>Step 6: Collect Visa & Move</strong></h4>
+    <p>Collect your passport with the visa from the consulate. Book your flight to Spain. Upon arrival, register with Spanish authorities, obtain your <a href="/nie-number-spain.html">NIE number</a>, and begin <a href="/living-in-spain-as-a-foreigner.html">living as a Spanish resident</a>.</p>
+  </div>
+</section>
+
+<!-- REQUIRED DOCUMENTS FOR AUSTRALIANS -->
+<section class="msv__section--cream">
+  <div class="msv__container">
+    <div class="msv__section-hd">
+      <h2>Required Documents for Australians</h2>
+      <p>Spain has specific document requirements. For Australian applicants, ensure documents are apostilled and translated into Spanish.</p>
+    </div>
+
+    <div class="msv__two-col">
+      <div>
+        <h3>Core Identity & Police Documents</h3>
+        <ul>
+          <li><strong>Passport:</strong> Original, valid for at least 12 months</li>
+          <li><strong>AFP National Background Check:</strong> Australian Federal Police national background check, apostilled by DFAT (valid for 12 months)</li>
+          <li><strong>Medical Certificate:</strong> Health declaration signed by an Australian doctor, confirming you're free from diseases of public health concern</li>
+          <li><strong>Birth Certificate (if married):</strong> Original or certified copy, apostilled</li>
+          <li><strong>Marriage Certificate (if applicable):</strong> Original or certified copy, apostilled</li>
+        </ul>
+
+        <h3 style="margin-top: 2rem;">Proof of Financial Means</h3>
+        <ul>
+          <li><strong>Bank Statements:</strong> 3–6 months of statements from Australian banks, showing available funds and regular income</li>
+          <li><strong>Superannuation Statement:</strong> Latest statement confirming balance and current pension/income arrangements</li>
+          <li><strong>Age Pension Letter:</strong> Centrelink letter confirming pension amount and payment details</li>
+          <li><strong>Rental Income Documentation:</strong> If applicable, lease agreements, property statements, or tax returns showing rental income</li>
+          <li><strong>Investment Statements:</strong> Dividend statements, managed fund reports, or share registry documents</li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Translation & Authentication</h3>
+        <ul>
+          <li><strong>Hague Apostille:</strong> All documents requiring official certification must be apostilled via the Australian Department of Foreign Affairs and Trade (DFAT). This replaces traditional consular certification and is recognized internationally.</li>
+          <li><strong>Spanish Translation:</strong> All English documents must be translated into Spanish by a certified translator. The Spanish consulate will provide a list of approved translators.</li>
+          <li><strong>Certified Copies:</strong> Some documents require certified copies from the issuing Australian authority.</li>
+        </ul>
+
+        <h3 style="margin-top: 2rem;">Where to Get Apostilles</h3>
+        <p>Contact the Australian Department of Foreign Affairs and Trade (DFAT) at <strong>www.dfat.gov.au</strong> or visit your state's Attorney-General's office for certified copy apostille services.</p>
+
+        <div class="msv__alert msv__alert--warn" style="margin-top: 1.5rem;">
+          <span class="msv__alert-icon">⚠️</span>
+          <p><strong>Critical:</strong> Do not have documents apostilled until you're ready to submit your application. Apostilles are valid for 12 months. Plan the timing carefully to avoid re-apostille costs.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HEALTHCARE IN SPAIN -->
+<section class="msv__section">
+  <div class="msv__container">
+    <div class="msv__section-hd">
+      <h2>Healthcare in Spain for Australian Retirees</h2>
+      <p>Spain's healthcare system is excellent, but Australian retirees face a transition period. Here's what you need to know about private insurance, public healthcare access, and how it compares to Medicare Australia.</p>
+    </div>
+
+    <div class="msv__two-col">
+      <div class="msv__two-col-card">
+        <div class="msv__two-col-icon">🏥</div>
+        <h3>Initial Period: Private Insurance</h3>
+        <p><strong>When you arrive:</strong> You're not immediately eligible for Spain's public healthcare. You'll need private health insurance until you register as an official resident (empadronamiento) and obtain a <a href="/nie-number-spain.html">NIE number</a>.</p>
+        <p><strong>Cost:</strong> Private insurance for retirees costs AUD 100–300+ monthly, depending on age, coverage, and provider. Popular insurers include established private health insurers in Spain leading private insurer.</p>
+        <p><strong>Coverage:</strong> Typically includes doctor visits, specialists, hospital stays, and prescriptions. Dental and vision are often separate or excluded.</p>
+      </div>
+
+      <div class="msv__two-col-card">
+        <div class="msv__two-col-icon">🇦🇺</div>
+        <h3>Medicare Australia Doesn't Work Overseas</h3>
+        <p><strong>Key fact:</strong> Medicare Australia provides no coverage outside Australia. Your Age Pension continues, but healthcare costs in Spain are your responsibility.</p>
+        <p><strong>What this means:</strong> If you're still receiving Age Pension, you can't rely on Medicare for Spanish medical care. Private insurance bridges the gap initially.</p>
+        <p><strong>Reciprocal healthcare:</strong> Australia has reciprocal healthcare agreements with some countries, but <strong>not Spain</strong>. You won't automatically get public care.</p>
+      </div>
+    </div>
+
+    <h3 style="margin-top: 3rem;">After Registration: Public Healthcare Access</h3>
+    <p>Once you complete empadronamiento (registration as a resident) and obtain your NIE, you become eligible to access Spain's public healthcare system (Sistema Nacional de Salud). This is where the real value emerges.</p>
+
+    <div class="msv__alert msv__alert--green" style="margin-top: 1.5rem;">
+      <span class="msv__alert-icon">✓</span>
+      <p><strong>Spain's Public Healthcare:</strong> Spain ranks in the top 5 globally for healthcare quality. Care is excellent, modern, and essentially free once you're registered. Costs are minimal compared to private insurance.</p>
+    </div>
+
+    <h3 style="margin-top: 2rem;">Timeline & Transition Strategy</h3>
+    <ul>
+      <li><strong>Month 1–2:</strong> Maintain private insurance while registering as a resident and arranging your NIE</li>
+      <li><strong>Month 2–3:</strong> Begin public healthcare registration process; switch to public system</li>
+      <li><strong>Ongoing:</strong> Option to keep private insurance for faster specialist access or supplementary coverage</li>
+    </ul>
+
+    <p style="margin-top: 2rem;"><strong>Prescription Costs:</strong> In Spain, prescription medications cost significantly less than Australia. A typical GP visit is EUR 0–15 (AUD 0–25) if private; free if public.</p>
+  </div>
+</section>
+
+<!-- AUSTRALIAN PENSION & SUPERANNUATION -->
+<section class="msv__section--cream">
+  <div class="msv__container">
+    <div class="msv__section-hd">
+      <h2>Australian Pension & Superannuation in Spain</h2>
+      <p>Understanding how your Age Pension and superannuation work while living in Spain is critical. The absence of an Australia-Spain tax treaty creates complexities you must address before moving.</p>
+    </div>
+
+    <h3>Age Pension Portability</h3>
+    <p>Australia's Age Pension is portable, meaning you can continue receiving it while living in Spain. However, there are important conditions:</p>
+    <ul>
+      <li><strong>Portability:</strong> Your pension can be paid to a Spanish bank account by direct transfer</li>
+      <li><strong>Means Testing:</strong> Centrelink applies different means testing rules to overseas residents. Income and assets may be assessed differently</li>
+      <li><strong>Spanish Income Complication:</strong> Income earned or derived from Spain (rental income, local employment, Spanish investments) may be counted more heavily against your means test</li>
+      <li><strong>Notification:</strong> You must inform Centrelink of your move and provide a Spanish address</li>
+      <li><strong>Periodic Reporting:</strong> Centrelink may request regular updates on your income and residence status</li>
+    </ul>
+
+    <div class="msv__alert msv__alert--warn">
+      <span class="msv__alert-icon">⚠️</span>
+      <p><strong>Action Required:</strong> Contact Centrelink before departing Australia. Confirm your pension will continue and understand how Spanish income affects your assessment. This conversation could significantly impact your retirement budget.</p>
+    </div>
+
+    <h3 style="margin-top: 2rem;">Superannuation Access & Withdrawals</h3>
+    <p>Your superannuation eligibility depends on your preservation age, not your location. However, being overseas affects taxation:</p>
+    <ul>
+      <li><strong>Before Preservation Age:</strong> You cannot access superannuation (with limited exceptions). Your location doesn't change this rule</li>
+      <li><strong>At or After Preservation Age:</strong> You can withdraw lump sums or establish income streams. However, <strong>you become a non-resident for tax purposes</strong></li>
+      <li><strong>Lump Sum Withdrawal Taxation:</strong> Non-residents pay Foreign Resident Withholding Tax (FRWT) at 21.45% on superannuation lump sum withdrawals. This is higher than resident tax rates</li>
+      <li><strong>Income Stream (Pension) Taxation:</strong> If you establish a superannuation income stream while overseas, different tax rules apply. Seek specific advice from your super fund and a tax advisor</li>
+    </ul>
+
+    <h3 style="margin-top: 2rem;">The Australia-Spain Tax Treaty Problem</h3>
+    <p><strong>Critical:</strong> Australia does NOT have a tax treaty with Spain. This absence creates significant risks:</p>
+    <ul>
+      <li><strong>Double Taxation Risk:</strong> Income could theoretically be taxable in both Australia and Spain</li>
+      <li><strong>Pension Income:</strong> Your Age Pension may be subject to Spanish taxation (as Spanish-source or deemed Spanish income by some interpretations)</li>
+      <li><strong>Superannuation Withdrawal Taxation:</strong> Lump sum withdrawals are taxed in Australia at FRWT (21.45%); Spain may claim taxation rights as well</li>
+      <li><strong>Spanish Property Rental Income:</strong> If you own Spanish property, rental income will be taxed in Spain and may also be assessable in Australia</li>
+      <li><strong>Capital Gains on Property:</strong> Sale of a Spanish property triggers Spanish capital gains tax (at progressive rates). Australian CGT may also apply if you're considered a resident</li>
+    </ul>
+
+    <div class="msv__alert msv__alert--red">
+      <span class="msv__alert-icon">🚨</span>
+      <p><strong>Mandatory Professional Advice:</strong> Before retiring to Spain, consult a tax advisor experienced in Australia-Spain taxation. This is not optional. The absence of a tax treaty means you must understand your obligations in both countries. Many retirees underestimate this complexity and face unexpected tax bills.</p>
+    </div>
+
+    <h3 style="margin-top: 2rem;">ATO Obligations</h3>
+    <p>Even while living in Spain, you remain subject to Australian tax if you're an Australian resident for tax purposes. The ATO assesses residency based on several factors (not just physical location). Key points:</p>
+    <ul>
+      <li><strong>Tax Residency Status:</strong> Confirm your tax residency status with the ATO before moving. You may be treated as an Australian resident for tax purposes even while living overseas long-term</li>
+      <li><strong>Foreign Income Reporting:</strong> If you're an Australian tax resident, you must report worldwide income to the ATO, including Spanish income</li>
+      <li><strong>Foreign Investment Fund Rules:</strong> If you have Spanish investments or property, special rules may apply (FIF rules, CGT rules)</li>
+      <li><strong>TPDI & Foreign Resident Capital Gains Tax:</strong> Different CGT rules apply to non-residents; this could impact Spanish property sales</li>
+    </ul>
+
+    <h3 style="margin-top: 2rem;">Recommended Action Plan</h3>
+    <ol style="padding-left: 2rem;">
+      <li><strong>Consult a Tax Professional:</strong> Engage a tax advisor in Australia who specializes in Australia-Spain taxation or expat taxation at least 3 months before your move</li>
+      <li><strong>Document Your Income:</strong> Gather superannuation statements, Age Pension letters, rental income documentation, and investment statements</li>
+      <li><strong>Model Tax Scenarios:</strong> Ask your advisor to model your tax liability in Australia and Spain under different scenarios (e.g., lump sum super withdrawal, Spanish rental income, property sale)</li>
+      <li><strong>Engage a Spanish Accountant:</strong> Once in Spain, hire a Spanish accountant (gestoría) to manage Spanish tax obligations and coordinate with your Australian advisor</li>
+      <li><strong>Plan Withdrawals Strategically:</strong> Time superannuation withdrawals and property sales to minimize tax in both countries</li>
+    </ol>
+  </div>
+</section>
+
+<!-- COST OF LIVING COMPARISON -->
+<section class="msv__section">
+  <div class="msv__container">
+    <div class="msv__section-hd">
+      <h2>Cost of Living Comparison: Australia vs. Spain</h2>
+      <p>One of Spain's biggest advantages for retirees is affordability. Here's how major Australian and Spanish cities compare across essential retirement expenses.</p>
+    </div>
+
+    <table class="msv__comparison-table">
+      <thead>
+        <tr>
+          <th>Expense Category</th>
+          <th>Sydney, AUS</th>
+          <th>Melbourne, AUS</th>
+          <th>Madrid, ES</th>
+          <th>Barcelona, ES</th>
+          <th>Valencia, ES</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="table-feature">Apartment Rent (1BR, City Center)</td>
+          <td>AUD 2,200–2,800</td>
+          <td>AUD 1,800–2,400</td>
+          <td>AUD 900–1,200</td>
+          <td>AUD 1,100–1,500</td>
+          <td>AUD 650–900</td>
+        </tr>
+        <tr>
+          <td class="table-feature">Groceries (Monthly)</td>
+          <td>AUD 400–550</td>
+          <td>AUD 380–500</td>
+          <td>AUD 280–380</td>
+          <td>AUD 300–400</td>
+          <td>AUD 250–350</td>
+        </tr>
+        <tr>
+          <td class="table-feature">Restaurant Meal (Casual)</td>
+          <td>AUD 20–30</td>
+          <td>AUD 18–28</td>
+          <td>AUD 10–15</td>
+          <td>AUD 12–18</td>
+          <td>AUD 9–13</td>
+        </tr>
+        <tr>
+          <td class="table-feature">Healthcare (Private Insurance)</td>
+          <td>AUD 350–700</td>
+          <td>AUD 350–700</td>
+          <td>AUD 100–250</td>
+          <td>AUD 120–280</td>
+          <td>AUD 80–200</td>
+        </tr>
+        <tr>
+          <td class="table-feature">Utilities (Monthly)</td>
+          <td>AUD 150–250</td>
+          <td>AUD 140–220</td>
+          <td>AUD 60–120</td>
+          <td>AUD 70–140</td>
+          <td>AUD 50–100</td>
+        </tr>
+        <tr>
+          <td class="table-feature">Public Transport Pass (Monthly)</td>
+          <td>AUD 200–250</td>
+          <td>AUD 180–220</td>
+          <td>AUD 50–70</td>
+          <td>AUD 55–75</td>
+          <td>AUD 40–60</td>
+        </tr>
+        <tr>
+          <td class="table-feature">Estimated Monthly Budget (Comfortable)</td>
+          <td><strong>AUD 4,500–6,500</strong></td>
+          <td><strong>AUD 3,800–5,500</strong></td>
+          <td><strong>AUD 2,200–3,500</strong></td>
+          <td><strong>AUD 2,400–3,700</strong></td>
+          <td><strong>AUD 1,900–3,000</strong></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3 style="margin-top: 2.5rem;">Key Takeaways</h3>
+    <ul>
+      <li><strong>Rent Advantage:</strong> Spanish cities cost 40–70% less than Sydney for apartment rentals. Even Barcelona is cheaper than Melbourne.</li>
+      <li><strong>Daily Expenses:</strong> Groceries, dining, and utilities are 30–50% cheaper in Spain. Your retirement budget stretches significantly further.</li>
+      <li><strong>Healthcare Costs:</strong> Private insurance in Spain is a fraction of Australian premiums, and public healthcare is free once registered.</li>
+      <li><strong>Quality of Life:</strong> Spain offers better value without sacrificing quality. You get a higher standard of living for your retirement income.</li>
+      <li><strong>Regional Variation:</strong> Smaller Spanish cities (Valencia, Alicante, Málaga) are cheaper than Madrid and Barcelona. Retirees often enjoy even greater savings here.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- BEST PLACES TO RETIRE -->
+<section class="msv__section--cream">
+  <div class="msv__container">
+    <div class="msv__section-hd">
+      <h2>Best Places in Spain for Australian Retirees</h2>
+      <p>Spain's regional diversity means different retirement destinations suit different preferences. Here are six popular cities that appeal specifically to Australian retirees.</p>
+    </div>
+
+    <div class="msv__persona-grid">
+      <div class="msv__persona-card">
+        <div class="msv__persona-icon">☀️</div>
+        <h3 class="msv__persona-title">Costa del Sol, Málaga</h3>
+        <p class="msv__persona-desc">The classic "sun and sea" destination. Year-round warm weather (300+ sunny days), beaches, golf, and vibrant expat communities. Perfect for Australians craving Mediterranean warmth. English widely spoken. Drawback: Higher cost than inland cities.</p>
+        <div class="msv__persona-cta">Ideal for beach-lovers →</div>
+      </div>
+
+      <div class="msv__persona-card">
+        <div class="msv__persona-icon">🌊</div>
+        <h3 class="msv__persona-title">Valencia Region</h3>
+        <p class="msv__persona-desc">Modern city with paella culture, Las Fallas festival, and beaches. Lower cost than Barcelona or Madrid. Growing expat community. Great mix of culture, nature, and affordability. Excellent public transportation and healthcare.</p>
+        <div class="msv__persona-cta">Best value & culture →</div>
+      </div>
+
+      <div class="msv__persona-card">
+        <div class="msv__persona-icon">🏛️</div>
+        <h3 class="msv__persona-title">Barcelona, Catalonia</h3>
+        <p class="msv__persona-desc">Spain's cultural and cosmopolitan hub. World-class museums, restaurants, architecture (Gaudí), and beaches. More expensive than other regions but still cheaper than Sydney. International expat community. Catalan culture adds richness. Good healthcare and services.</p>
+        <div class="msv__persona-cta">For culture & activity →</div>
+      </div>
+
+      <div class="msv__persona-card">
+        <div class="msv__persona-icon">🏖️</div>
+        <h3 class="msv__persona-title">Alicante Province</h3>
+        <p class="msv__persona-desc">Costa Blanca charm with excellent weather, beaches, and affordability. Strong English-speaking expat community. Quieter than Málaga but with ample amenities. Great hiking, coastal villages, and local markets. Close to Valencia.</p>
+        <div class="msv__persona-cta">Quiet beachside living →</div>
+      </div>
+
+      <div class="msv__persona-card">
+        <div class="msv__persona-icon">🏔️</div>
+        <h3 class="msv__persona-title">Mallorca, Balearic Islands</h3>
+        <p class="msv__persona-desc">Mediterranean island with stunning coastlines, mountains, and villages. Cosmopolitan yet peaceful. Higher cost but beautiful. Excellent healthcare, English prevalent. Perfect for those seeking island life with European sophistication.</p>
+        <div class="msv__persona-cta">For island living →</div>
+      </div>
+
+      <div class="msv__persona-card">
+        <div class="msv__persona-icon">🌅</div>
+        <h3 class="msv__persona-title">Canary Islands</h3>
+        <p class="msv__persona-desc">Spain's subtropical islands off the African coast. Year-round spring-like weather, lower taxation zones (some benefits), and a mix of relaxation and adventure. Good expat communities. Fewer Europeans than mainland, more unique lifestyle.</p>
+        <div class="msv__persona-cta">For eternal spring →</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AFTER YOU ARRIVE -->
+<section class="msv__section">
+  <div class="msv__container">
+    <div class="msv__section-hd">
+      <h2>After You Arrive: Your First Steps in Spain</h2>
+      <p>Your visa is just the beginning. Here's what you need to do in your first weeks and months to settle in Spain properly.</p>
+    </div>
+
+    <div class="msv__two-col">
+      <div>
+        <h3>Immediate Actions (First Week)</h3>
+        <ul>
+          <li><strong>Find Accommodation:</strong> Secure temporary housing (Airbnb, rental) while you search for permanent lodging. Spanish rentals often require local references.</li>
+          <li><strong>Open a Bank Account:</strong> Visit a Spanish bank (Banco Santander, BBVA, La Caixa) with your passport and visa. Arrange transfer of funds from Australia. Spanish accounts require residency registration (empadronamiento).</li>
+          <li><strong>Get a Mobile Number:</strong> Purchase a Spanish SIM card (Movistar, Vodafone, Orange) for local phone service. Essential for communication and registrations.</li>
+          <li><strong>Arrange Health Insurance:</strong> Activate private health insurance if not already done. Keep receipts for registration purposes.</li>
+        </ul>
+
+        <h3 style="margin-top: 2rem;">First Month Actions</h3>
+        <ul>
+          <li><strong>Register at Empadronamiento:</strong> Visit your local town hall (ayuntamiento) and register as a resident. You'll need: passport, visa, proof of address (rental contract), health insurance documentation. This is foundational—many other services require it.</li>
+          <li><strong>Apply for a <a href="/nie-number-spain.html">NIE Number</a>:</strong> The National Identification Number (Número de Identidad de Extranjero) is required for tax, banking, and residency purposes. Applied for at the National Police (Policía Nacional) office. Bring: passport, visa, application form, proof of address.</li>
+          <li><strong>Register for Spanish Healthcare:</strong> Once you have empadronamiento and NIE, register with your local health center (centro de salud) to access public healthcare. Request a health card (tarjeta sanitaria).</li>
+          <li><strong>Notify Centrelink:</strong> Provide your Spanish address to Centrelink so your Age Pension payments continue uninterrupted.</li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>First 2–3 Months Actions</h3>
+        <ul>
+          <li><strong>Get a Spanish Driving License:</strong> If you have an Australian license, exchange it for a Spanish one. Bring: passport, NIE, proof of address, medical certificate, Australian driving record from NSW/Victoria/etc. You may need to take a test. Alternatively, get an International Driving Permit from Australia (recognized for up to 12 months) before departing.</li>
+          <li><strong>Hire a Gestoría (Tax Advisor):</strong> Engage a Spanish tax advisor specializing in expat taxation. They'll help with tax registration, Non-Lucrative Visa renewal documentation, and compliance with Spanish tax obligations.</li>
+          <li><strong>Register with the ATO:</strong> Confirm your tax residency status with the ATO. You may need to file Australian tax returns if you're still an Australian tax resident. Provide your Spanish address and tax file number to DFAT.</li>
+          <li><strong>Set Up Automatic Bill Payments:</strong> Arrange Spanish utilities (electricity, water, gas, internet) and set up direct debit payments from your Spanish bank account.</li>
+          <li><strong>Explore Your Community:</strong> Join expat groups, take Spanish lessons, and familiarize yourself with local services. Integration happens faster when you're connected.</li>
+        </ul>
+
+        <div class="msv__alert msv__alert--info" style="margin-top: 2rem;">
+          <span class="msv__alert-icon">💡</span>
+          <p><strong>Pro Tip:</strong> Hire a gestoría or immigration consultant for your first months. They'll navigate the bureaucratic complexity faster than you could alone. The cost (typically EUR 200–500 for initial setup) is worth the time saved and mistakes avoided.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMMON MISTAKES -->
+<section class="msv__section--cream">
+  <div class="msv__container">
+    <div class="msv__section-hd">
+      <h2>Common Mistakes Australian Retirees Make</h2>
+      <p>Learning from others' experiences can save you thousands of dollars and significant stress. Here are the most common pitfalls.</p>
+    </div>
+
+    <div class="msv__alert msv__alert--red" style="margin-bottom: 1.5rem;">
+      <span class="msv__alert-icon">🚨</span>
+      <p><strong>Underestimating Tax Complexity:</strong> Australian retirees often assume their Australian tax obligations end when they move. This is false. Without an Australia-Spain tax treaty, you could be liable for taxes in both countries. Many retirees face unexpected bills after their first year. Consult a tax professional before moving—not after.</p>
+    </div>
+
+    <div class="msv__alert msv__alert--warn">
+      <span class="msv__alert-icon">⚠️</span>
+      <p><strong>Not Informing Centrelink:</strong> Failing to notify Centrelink of your move can result in overpayments, debt, and even criminal charges (in extreme cases). Your Age Pension is portable, but Centrelink must know where you are. Inform them before departing Australia.</p>
+    </div>
+
+    <div class="msv__alert msv__alert--warn">
+      <span class="msv__alert-icon">⚠️</span>
+      <p><strong>Withdrawing Superannuation Hastily:</strong> The tax consequences of superannuation withdrawals for non-residents are severe (21.45% withholding). Plan withdrawals strategically. Some retirees withdraw lump sums immediately upon arrival and regret the tax hit. Consider income streams instead for ongoing income.</p>
+    </div>
+
+    <div class="msv__alert msv__alert--warn">
+      <span class="msv__alert-icon">⚠️</span>
+      <p><strong>Ignoring Spanish Tax Obligations:</strong> Once you're a Spanish resident, you have Spanish tax obligations. Rental income from Spanish properties, local employment, and even some types of pension income may be taxable in Spain. Don't assume Australian-sourced income is tax-free in Spain.</p>
+    </div>
+
+    <div class="msv__alert msv__alert--warn">
+      <span class="msv__alert-icon">⚠️</span>
+      <p><strong>Purchasing Property Without Legal Advice:</strong> Australian retirees sometimes rush to buy Spanish property without understanding Spanish property laws, tax implications, or community fees (if in an apartment building). Always hire a Spanish lawyer (abogado) specializing in property. International property tax consequences require professional guidance.</p>
+    </div>
+
+    <div class="msv__alert msv__alert--warn">
+      <span class="msv__alert-icon">⚠️</span>
+      <p><strong>Not Arranging Health Insurance Early:</strong> Arriving in Spain without health insurance and assuming you'll sort it out later is risky. Medical emergencies are expensive. Secure private insurance before departure. Once registered as a resident, you can transition to public healthcare, but the initial gap is critical.</p>
+    </div>
+
+    <div class="msv__alert msv__alert--warn">
+      <span class="msv__alert-icon">⚠️</span>
+      <p><strong>Relying on Incomplete Visa Information:</strong> Non-Lucrative Visa requirements change occasionally, and consulate staff can give conflicting advice. Verify all requirements directly with your Spanish consulate and consider hiring an immigration specialist. A EUR 500 consultation could save you from an application rejection and reapplication costs.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ SECTION -->
+<section class="msv__section">
+  <div class="msv__container">
+    <div class="msv__section-hd">
+      <h2>Frequently Asked Questions</h2>
+      <p>Answers to the questions Australian retirees ask most often about retiring to Spain.</p>
+    </div>
+
+    <div class="msv__faq-list">
+      <details>
+        <summary>Can Australian retirees retire to Spain permanently?</summary>
+        <div class="msv__faq-answer">
+          <p>Yes, Australian retirees can retire to Spain permanently using the Non-Lucrative Visa. This visa is specifically designed for people with sufficient income or savings who don't need to work in Spain. You'll need to prove a minimum monthly income (approximately AUD 4,000–5,000) or lump sum savings (around AUD 56,000+) to qualify. After 5 years, you can apply for permanent residency.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>What's the best visa for Australian retirees?</summary>
+        <div class="msv__faq-answer">
+          <p>The <a href="/non-lucrative-visa-spain.html">Non-Lucrative Visa</a> is the best option for Australian retirees. It allows you to live in Spain without working, requires no job offers, and is relatively straightforward to obtain if you meet the financial requirements. The visa is typically granted for 1 year initially and can be renewed annually or converted to a 3-year residence permit.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>How much does it cost to retire in Spain from Australia?</summary>
+        <div class="msv__faq-answer">
+          <p>Monthly living costs in Spain range from AUD 2,500–4,500 depending on location and lifestyle, significantly lower than Australian cities. A comfortable retirement in popular areas like Valencia or the Costa del Sol costs 40–50% less than Sydney or Melbourne. You'll also need approximately AUD 56,000–75,000 in savings to qualify for the Non-Lucrative Visa.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Does Australia have a tax treaty with Spain?</summary>
+        <div class="msv__faq-answer">
+          <p><strong>No, Australia does not have a tax treaty with Spain.</strong> This is critical for retirees. You may be liable for taxes in both countries on certain income types. Spanish property rental income, local employment, and pension income could trigger tax obligations in Spain. Consult a tax advisor experienced in Australia-Spain taxation before retiring. This is not optional—the tax implications are too significant to ignore.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Can I access my Australian superannuation while living in Spain?</summary>
+        <div class="msv__faq-answer">
+          <p>Generally, you cannot access your superannuation before preservation age while living overseas. However, if you've reached preservation age (typically 60–67 depending on birth year), you can withdraw funds as a lump sum or income stream, even while living in Spain. Foreign Resident Withholding Tax (21.45%) applies to lump sum withdrawals. Seek advice from a registered tax agent before planning withdrawals.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Will my Age Pension continue if I retire to Spain?</summary>
+        <div class="msv__faq-answer">
+          <p>Australia's Age Pension is portable, meaning you can receive it while living in Spain. However, it's means-tested and assessed differently for overseas residents. Your payment may be reduced or suspended if you have substantial Spanish income or assets. Notify Centrelink of your move and confirm ongoing eligibility before departing Australia.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>What healthcare will I have in Spain?</summary>
+        <div class="msv__faq-answer">
+          <p>You'll need private health insurance in Spain initially, as Medicare Australia doesn't cover overseas treatment. After registering as a resident (empadronamiento) and obtaining a <a href="/nie-number-spain.html">NIE</a>, you can access Spain's public healthcare system, though you may choose private insurance for faster access to specialists. Private insurance costs AUD 100–300+ monthly depending on age and coverage.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>What documents do I need from Australia for a Spanish visa?</summary>
+        <div class="msv__faq-answer">
+          <p>Key Australian documents required include: Australian Federal Police (AFP) national background check, original passport, proof of funds from Australian banks (bank statements), medical certificate from an Australian doctor, and any documents requiring Hague Apostille certification via DFAT. The AFP check and other documents must be apostilled by the Australian Department of Foreign Affairs and Trade.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>How long does the Non-Lucrative Visa application take?</summary>
+        <div class="msv__faq-answer">
+          <p>The Non-Lucrative Visa typically takes 4–8 weeks to process through the Spanish consulate, though processing times vary. You'll need an appointment at the relevant consulate (Sydney, Melbourne, or Brisbane typically handle Australian applications). It's wise to start the application 3–4 months before your planned move to allow for document gathering and any unexpected delays.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Can I move to Spain if I have rental income from Australia?</summary>
+        <div class="msv__faq-answer">
+          <p>Yes, you can have rental income from Australian properties while on a Non-Lucrative Visa. However, this income counts toward Spanish tax obligations and may affect your Age Pension means test. Spanish tax rules are complex—rental income earned by Spanish residents may trigger Spanish tax liability. Professional tax advice is essential to understand your obligations in both countries.</p>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+
+  <!-- ── Insurance Partners ──────────────────────────── -->
+  <section class="msv__section--cream" style="padding: 2.5rem 0;">
+    <div class="msv__container--narrow">
+      <div style="background:#fff;border:2px solid var(--border);border-radius:12px;padding:1.75rem 2rem;">
+        <p style="font-weight:700;color:var(--navy);margin:0 0 0.5rem;font-size:0.95rem;">Recommended insurance specialists</p>
+        <p style="color:var(--muted);font-size:0.9rem;margin:0;line-height:1.75;">
+          <a href="https://www.spanish-healthinsurance.com/myspanishvisa" target="_blank" rel="noopener" style="color:var(--red);font-weight:700;">Spanish Health Insurance</a> — visa-compliant private health insurance for English-speaking foreigners in Spain.<br>
+          <a href="https://www.247expatinsurance.com/myspanishvisa" target="_blank" rel="noopener" style="color:var(--red);font-weight:700;">247 Expat Insurance</a> — health and all types of expat insurance in Spain, tailored for international residents.
+        </p>
+      </div>
+    </div>
+  </section>
+  <section class="msv__cta-band">
+  <div class="msv__container">
+    <h2>Ready to Retire to Spain?</h2>
+    <p>Get expert guidance tailored to Australian retirees. Our specialists understand visa requirements, tax implications, healthcare transitions, and the financial planning unique to Australian-Spanish retirement. Start your journey with a free eligibility assessment or book a consultation to discuss your situation.</p>
+    <div class="msv__btn-group">
+      <a href="https://dashboard.platinumlegalspain.com/nlv" class="msv__btn msv__btn--primary">Start Eligibility Check →</a>
+      <a href="https://dashboard.platinumlegalspain.com/nlv" class="msv__btn msv__btn--outline-white">Book Consultation</a>
+    </div>
+  </div>
+</section>
+
+<!-- RELATED GUIDES -->
+<section class="msv__section--cream">
+  <div class="msv__container">
+    <div class="msv__section-hd">
+      <h2>Related Guides for Australian Retirees</h2>
+      <p>Continue your research with these in-depth guides tailored to your retirement journey.</p>
+    </div>
+
+    <div class="msv__related">
+      <a href="/non-lucrative-visa-spain.html" class="msv__related-card">
+        <span class="msv__related-icon">📋</span>
+        <span class="msv__related-title">Non-Lucrative Visa Guide</span>
+        <span class="msv__related-desc">Complete requirements, financial thresholds, and step-by-step application process for the retirement visa.</span>
+      </a>
+      <a href="/nie-number-spain.html" class="msv__related-card">
+        <span class="msv__related-icon">🆔</span>
+        <span class="msv__related-title">NIE Number in Spain</span>
+        <span class="msv__related-desc">How to obtain your Spanish National Identification Number and why it's essential for residency.</span>
+      </a>
+      <a href="/living-in-spain-as-a-foreigner.html" class="msv__related-card">
+        <span class="msv__related-icon">🏠</span>
+        <span class="msv__related-title">Living in Spain as a Foreigner</span>
+        <span class="msv__related-desc">Practical guide to registering, banking, housing, and settling into Spanish life as an expat.</span>
+      </a>
+      <a href="/compare-spain-visas.html" class="msv__related-card">
+        <span class="msv__related-icon">🔄</span>
+        <span class="msv__related-title">Compare Spain Visas</span>
+        <span class="msv__related-desc">Side-by-side comparison of all Spanish visa types to find the best fit for your situation.</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- DISCLAIMER -->
+</section>
+
+</div>
+
+<!-- FRAGMENT_END -->
+</main>
+
+
+<!-- ═══════════════════════════════════════════════════
+     SITE FOOTER
+     ═══════════════════════════════════════════════════ -->
+<footer class="msv-footer" role="contentinfo">
+  <div class="msv-footer__top">
+    <div class="msv-footer__brand">
+      <a href="/" class="msv-footer__logo" aria-label="My Spanish Visa"><img src="/assets/images/msv-logo-white.png" alt="My Spanish Visa" height="72" style="display:block;"></a>
+      <p class="msv-footer__tagline">Specialist Spain visa &amp; residency guidance for English-speaking foreigners. A service of Platinum Legal Spain.</p>
+      <div class="msv-footer__trust">
+        <span class="msv-footer__trust-item">All English. No barriers.</span>
+        <span class="msv-footer__trust-item">Solicitors &amp; immigration specialists</span>
+        <span class="msv-footer__trust-item">100% online process</a>
+      </div>
+    </div>
+    <div>
+      <div class="msv-footer__col-title">Visas</div>
+      <ul class="msv-footer__links">
+        <li><a href="/non-lucrative-visa-spain.html">Non-Lucrative Visa</a></li>
+        <li><a href="/digital-nomad-visa-spain.html">Digital Nomad Visa</a></li>
+        <li><a href="/student-visa-spain.html">Student Visa</a></li>
+        <li><a href="/spain-visa-renewal.html">Visa Renewals</a></li>
+        <li><a href="/best-visa-move-to-spain.html">Compare All Visas</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/nlv">Apply: NLV</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/dnv">Apply: DNV</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/student-visa">Apply: Student Visa</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="msv-footer__col-title">Resources</div>
+      <ul class="msv-footer__links">
+        <li><a href="/blog-index.html">Blog &amp; Guides</a></li>
+        <li><a href="/move-to-spain.html">Move to Spain Guide</a></li>
+        <li><a href="/book-consultation.html">Which Visa Is Right for Me?</a></li>
+        <li><a href="/blog-spain-visa-document-checklist-2026.html">Document Checklists</a></li>
+        <li><a href="/spain-visa-options.html">Visa Requirements</a></li>
+        <li><a href="/nie-number-spain.html">NIE Number Guide</a></li>
+        <li><a href="/tie-card-spain.html">TIE Card Guide</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="msv-footer__col-title">Company</div>
+      <ul class="msv-footer__links">
+        <li><a href="/about-us.html">About Us</a></li>
+        <li><a href="/contact-us.html">Contact</a></li>
+        <li><a href="https://www.platinumlegalspain.com" rel="noopener">Platinum Legal Spain</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/nlv">Client Portal</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="msv-footer__bottom">
+    <div class="msv-footer__bottom-inner">
+      <p class="msv-footer__disclaimer"><strong style="color:rgba(255,255,255,0.5);">Disclaimer:</strong> My Spanish Visa provides visa processing support and is not a law firm. Content on this site is for informational purposes only and does not constitute legal advice. Immigration rules change frequently — always verify requirements with official sources or a qualified specialist. My Spanish Visa is a trading name of Platinum Legal Spain.</p>
+      <span class="msv-footer__copyright">© 2026 My Spanish Visa. All rights reserved.</a>
+    </div>
+  </div>
+</footer>
+
+
+</body>
+</html>

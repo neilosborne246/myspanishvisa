@@ -1,0 +1,1670 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- ═══════════════════════════════════════════════════════════════════
+       PAGE-SPECIFIC HEAD — replace block below per page:
+       <title>Travel Insurance Nlv Spain | My Spanish Visa</title>
+       <meta name="description" content="…">
+       <meta property="og:title" content="…">
+       <meta property="og:description" content="…">
+       <meta property="og:url" content="https://www.myspanishvisa.com/…">
+       <meta property="og:image" content="…">
+       <link rel="canonical" href="https://www.myspanishvisa.com/…">
+       <script type="application/ld+json">…</script>
+       ═══════════════════════════════════════════════════════════════════ -->
+  <title>My Spanish Visa — Spain Visa &amp; Residency Specialists</title>
+  <meta name="description" content="My Spanish Visa helps English-speaking foreigners move to Spain. Expert guidance on Non-Lucrative Visa, Digital Nomad Visa, Student Visa, renewals and more.">
+
+  <!-- Shared Open Graph defaults -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="My Spanish Visa">
+  <meta property="og:image" content="https://www.myspanishvisa.com/assets/images/og/og-myspanishvisa-default.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@myspanishvisa">
+
+  <style>
+/* ═══════════════════════════════════════════════════════════════
+   GLOBAL SHELL — nav + footer only.
+   Page-specific CSS lives inside each fragment's own <style> block.
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── iOS overflow safety ── */
+html, body { max-width: 100%; overflow-x: clip; margin: 0; padding: 0; }
+*, *::before, *::after { box-sizing: border-box; }
+
+/* ── Brand tokens (root-level so all fragments inherit) ── */
+:root {
+  --navy:      #0c1930;
+  --navy-mid:  #1a3a5c;
+  --red:       #be0011;
+  --red-deep:  #8c000d;
+  --yellow:    #facf39;
+  --cream:     #f8f7f4;
+  --white:     #ffffff;
+  --black:     #1a1a1a;
+  --muted:     #5a6478;
+  --border:    #dce3ed;
+  --shadow-sm: 0 2px 8px rgba(12,25,48,0.08);
+  --shadow-md: 0 6px 24px rgba(12,25,48,0.13);
+}
+
+body {
+  font-family: 'Inter', 'Segoe UI', system-ui, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.75;
+  color: var(--black);
+  background: #fff;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   SITE NAV
+   ───────────────────────────────────────────────────────────── */
+.msv-nav {
+  position: sticky;
+  top: 0;
+  z-index: 9000;
+  background: var(--navy);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 2px 12px rgba(12,25,48,0.22);
+}
+.msv-nav__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+  gap: 1.5rem;
+}
+
+/* Logo */
+.msv-nav__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+.msv-nav__logo-flag {
+  font-size: 1.3rem;
+  line-height: 1;
+}
+.msv-nav__logo-text {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+.msv-nav__logo-text span {
+  color: var(--yellow);
+}
+
+/* Links */
+.msv-nav__links {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.msv-nav__links > li {
+  position: relative;
+}
+.msv-nav__links > li > a,
+.msv-nav__links > li > button {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.5rem 0.9rem;
+  font-size: 0.87rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.85);
+  text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: color 0.15s, background 0.15s;
+  white-space: nowrap;
+  height: 64px;
+}
+.msv-nav__links > li > a:hover,
+.msv-nav__links > li > button:hover,
+.msv-nav__links > li:focus-within > a,
+.msv-nav__links > li:focus-within > button {
+  color: #fff;
+  background: rgba(255,255,255,0.08);
+}
+.msv-nav__chevron {
+  font-size: 0.65rem;
+  opacity: 0.7;
+  transition: transform 0.2s;
+}
+.msv-nav__links > li:focus-within .msv-nav__chevron,
+.msv-nav__links > li:hover .msv-nav__chevron {
+  transform: rotate(180deg);
+}
+
+/* Dropdown */
+.msv-nav__dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 230px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  box-shadow: var(--shadow-md);
+  padding: 0.5rem 0;
+  z-index: 200;
+}
+.msv-nav__links > li:hover .msv-nav__dropdown,
+.msv-nav__links > li:focus-within .msv-nav__dropdown {
+  display: block;
+}
+.msv-nav__dropdown a {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.6rem 1.1rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--navy);
+  text-decoration: none;
+  transition: background 0.12s;
+}
+.msv-nav__dropdown a:hover {
+  background: var(--cream);
+  color: var(--red);
+}
+.msv-nav__dropdown-icon {
+  width: 24px;
+  height: 24px;
+  background: var(--cream);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+.msv-nav__dropdown-divider {
+  height: 1px;
+  background: var(--border);
+  margin: 0.4rem 0;
+}
+
+/* CTA button */
+.msv-nav__cta {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.55rem 1.2rem;
+  background: var(--red);
+  color: #fff !important;
+  font-size: 0.85rem;
+  font-weight: 700;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.15s, box-shadow 0.15s;
+  white-space: nowrap;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(190,0,17,0.3);
+}
+.msv-nav__cta:hover {
+  background: var(--red-deep);
+  box-shadow: 0 4px 14px rgba(190,0,17,0.4);
+  text-decoration: none;
+}
+
+/* Hamburger */
+.msv-nav__burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.4rem;
+  border-radius: 5px;
+}
+.msv-nav__burger span {
+  width: 22px;
+  height: 2px;
+  background: #fff;
+  border-radius: 2px;
+  transition: transform 0.2s, opacity 0.2s;
+  display: block;
+}
+
+/* Mobile nav */
+.msv-nav__mobile {
+  display: none;
+  flex-direction: column;
+  background: var(--navy-mid);
+  padding: 1rem 1.5rem 1.5rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+.msv-nav__mobile.open { display: flex; }
+.msv-nav__mobile a {
+  padding: 0.65rem 0;
+  color: rgba(255,255,255,0.9);
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+.msv-nav__mobile a:hover { color: var(--yellow); }
+.msv-nav__mobile .msv-nav__mobile-sub {
+  padding-left: 1rem;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: rgba(255,255,255,0.7);
+}
+.msv-nav__mobile-cta {
+  margin-top: 1rem;
+  background: var(--red);
+  color: #fff !important;
+  border-radius: 6px;
+  text-align: center;
+  padding: 0.75rem 1rem !important;
+  border-bottom: none !important;
+}
+
+@media (max-width: 900px) {
+  .msv-nav__links { display: none; }
+  .msv-nav__cta { display: none; }
+  .msv-nav__burger { display: flex; }
+}
+@media (max-width: 480px) {
+  .msv-nav__inner { padding: 0 1rem; }
+}
+
+/* ─────────────────────────────────────────────────────────────
+   SITE FOOTER
+   ───────────────────────────────────────────────────────────── */
+.msv-footer {
+  background: var(--navy);
+  color: rgba(255,255,255,0.75);
+  overflow-x: clip;
+}
+.msv-footer__top {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem 3rem;
+  display: grid;
+  grid-template-columns: 280px 1fr 1fr 1fr;
+  gap: 3rem;
+}
+@media (max-width: 900px) {
+  .msv-footer__top { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
+}
+@media (max-width: 560px) {
+  .msv-footer__top { grid-template-columns: 1fr; gap: 2rem; padding: 3rem 1.2rem 2rem; }
+}
+
+.msv-footer__brand {}
+.msv-footer__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  margin-bottom: 1rem;
+}
+.msv-footer__logo-flag { font-size: 1.3rem; }
+.msv-footer__logo-text {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -0.01em;
+}
+.msv-footer__logo-text span { color: var(--yellow); }
+.msv-footer__tagline {
+  font-size: 0.83rem;
+  color: rgba(255,255,255,0.55);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+.msv-footer__trust {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+.msv-footer__trust-item {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.65);
+}
+.msv-footer__trust-item::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  background: var(--yellow);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.msv-footer__col-title {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.4);
+  margin-bottom: 1rem;
+}
+.msv-footer__links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.msv-footer__links a {
+  font-size: 0.87rem;
+  color: rgba(255,255,255,0.68);
+  text-decoration: none;
+  transition: color 0.15s;
+  display: inline-block;
+}
+.msv-footer__links a:hover {
+  color: var(--yellow);
+  text-decoration: none;
+}
+
+.msv-footer__bottom {
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+.msv-footer__bottom-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 1rem;
+  justify-content: space-between;
+}
+.msv-footer__disclaimer {
+  font-size: 0.73rem;
+  color: rgba(255,255,255,0.35);
+  line-height: 1.65;
+  max-width: 720px;
+}
+.msv-footer__copyright {
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.35);
+  white-space: nowrap;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   MAIN CONTENT AREA
+   ───────────────────────────────────────────────────────────── */
+main {
+  /* Fragments are self-contained; this wrapper just provides flow context */
+  position: relative;
+}
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════
+     SITE NAVIGATION
+     ═══════════════════════════════════════════════════ -->
+<header class="msv-nav" role="banner">
+  <div class="msv-nav__inner">
+
+    <!-- Logo -->
+    <a href="/" class="msv-nav__logo" aria-label="My Spanish Visa — Home"><img src="/assets/images/msv-logo-white.png" alt="My Spanish Visa" height="80" style="display:block;"></a>
+
+    <!-- Desktop links -->
+    <nav aria-label="Main navigation">
+      <ul class="msv-nav__links">
+
+        <li>
+          <button class="msv-nav__dropdown-trigger" aria-haspopup="true" aria-expanded="false">
+            Visas <span class="msv-nav__chevron">▾</span>
+          </button>
+          <div class="msv-nav__dropdown" role="menu">
+            <a href="/non-lucrative-visa-spain/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🏖️</span>Non-Lucrative Visa
+            </a>
+            <a href="/digital-nomad-visa-spain/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">💻</span>Digital Nomad Visa
+            </a>
+            <a href="/student-visa-spain/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🎓</span>Student Visa
+            </a>
+            <div class="msv-nav__dropdown-divider"></div>
+            <a href="/spain-visa-renewal/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🔄</span>Visa Renewals
+            </a>
+            <a href="/best-visa-move-to-spain/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">⚖️</span>Compare All Visas
+            </a>
+          </div>
+        </li>
+
+        <li>
+          <button aria-haspopup="true" aria-expanded="false">
+            Resources <span class="msv-nav__chevron">▾</span>
+          </button>
+          <div class="msv-nav__dropdown" role="menu">
+            <a href="/blog/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">📝</span>Blog &amp; Guides
+            </a>
+            <a href="/spain-visa-checklist/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">✅</span>Document Checklists
+            </a>
+            <a href="/move-to-spain/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🏠</span>Move to Spain Guide
+            </a>
+            <a href="/visa-eligibility-quiz/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🧭</span>Eligibility Quiz
+            </a>
+          </div>
+        </li>
+
+        <li><a href="/about-us/">About Us</a></li>
+        <li><a href="/testimonials/">Reviews</a></li>
+        <li><a href="/contact-us.html">Contact</a></li>
+
+      </ul>
+    </nav>
+
+    <!-- Desktop CTA -->
+    <a href="https://dashboard.platinumlegalspain.com/nlv" class="msv-nav__cta">
+      Start My Application →
+    </a>
+
+    <!-- Hamburger (mobile) -->
+    <button class="msv-nav__burger" aria-label="Open menu" aria-expanded="false" onclick="
+      var m=document.querySelector('.msv-nav__mobile');
+      var open=m.classList.toggle('open');
+      this.setAttribute('aria-expanded', open);
+    ">
+      <span></span><span></span><span></span>
+    </button>
+
+  </div><!-- /.msv-nav__inner -->
+
+  <!-- Mobile menu -->
+  <nav class="msv-nav__mobile" aria-label="Mobile navigation">
+    <a href="/non-lucrative-visa-spain/" class="msv-nav__mobile-sub">Non-Lucrative Visa</a>
+    <a href="/digital-nomad-visa-spain/" class="msv-nav__mobile-sub">Digital Nomad Visa</a>
+    <a href="/student-visa-spain/" class="msv-nav__mobile-sub">Student Visa</a>
+    <a href="/spain-visa-renewal/">Visa Renewals</a>
+    <a href="/best-visa-move-to-spain/">Compare All Visas</a>
+    <a href="/blog/">Blog &amp; Guides</a>
+    <a href="/about-us/">About Us</a>
+    <a href="/testimonials/">Reviews</a>
+    <a href="/contact-us.html">Contact</a>
+    <a href="https://dashboard.platinumlegalspain.com/nlv" class="msv-nav__mobile-cta">Start My Application →</a>
+  </nav>
+
+</header>
+
+
+<!-- ═══════════════════════════════════════════════════
+     PAGE CONTENT (fragment injected here)
+     ═══════════════════════════════════════════════════ -->
+<main>
+<!-- FRAGMENT_START -->
+<!-- ============================================================
+     MY SPANISH VISA — Travel Insurance for NLV Spain
+     Elementor Full-Width HTML Widget · April 2026
+     Slug: /travel-insurance-nlv-spain/
+     Parent: /non-lucrative-visa-spain/
+     ============================================================ -->
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.myspanishvisa.com/travel-insurance-nlv-spain/#webpage",
+      "url": "https://www.myspanishvisa.com/travel-insurance-nlv-spain/",
+      "name": "Travel Insurance for Non-Lucrative Visa Spain Holders | Schengen Coverage | My Spanish Visa",
+      "description": "Complete guide to travel insurance for NLV Spain visa holders — when you need it, how it differs from health insurance, Schengen requirements, repatriation coverage, and best travel insurance providers for NLV holders.",
+      "inLanguage": "en",
+      "isPartOf": { "@id": "https://www.myspanishvisa.com/#website" },
+      "breadcrumb": { "@id": "https://www.myspanishvisa.com/travel-insurance-nlv-spain/#breadcrumb" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.myspanishvisa.com/travel-insurance-nlv-spain/#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.myspanishvisa.com" },
+        { "@type": "ListItem", "position": 2, "name": "Non-Lucrative Visa", "item": "https://www.myspanishvisa.com/non-lucrative-visa-spain/" },
+        { "@type": "ListItem", "position": 3, "name": "Travel Insurance for NLV", "item": "https://www.myspanishvisa.com/travel-insurance-nlv-spain/" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is travel insurance required for the Non-Lucrative Visa?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No — travel insurance is not a visa requirement. However, it is highly recommended as a supplementary policy, especially for the initial entry to Spain, traveling during your visa period, and Schengen border travel. Travel insurance covers medical emergencies, trip cancellations, baggage loss, and repatriation — things that your residential health insurance may not cover while traveling." }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between travel insurance and health insurance?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Health insurance (required for NLV) covers routine and emergency medical care in Spain. Travel insurance is supplementary — it covers medical emergencies abroad, trip cancellation, baggage loss, evacuation, and repatriation to your home country. Travel insurance is temporary and usually covers trips up to 365 days, while residential health insurance is ongoing coverage for permanent residents." }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need travel insurance for my initial arrival in Spain?",
+          "acceptedAnswer": { "@type": "Answer", "text": "You should have travel insurance for your initial entry and the first 30–90 days, as your residential health insurance policy may not be active during this period. Many NLV applicants hold health insurance from their home country that covers travel. Once your residential Spanish health insurance is active, travel insurance becomes supplementary for trips outside Spain." }
+        },
+        {
+          "@type": "Question",
+          "name": "What does repatriation coverage mean?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Repatriation coverage is insurance that pays for you to be transported back to your home country (or nearest appropriate medical facility) if you suffer a serious medical emergency that requires treatment not available in Spain. This includes emergency air transport, medical escorts, and associated costs. This is important for NLV holders, especially during the first year of residence." }
+        },
+        {
+          "@type": "Question",
+          "name": "Is travel insurance enough to replace health insurance for the NLV?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No — travel insurance cannot replace residential health insurance for the NLV. The visa requires comprehensive health insurance that covers routine and emergency care in Spain with no co-payment and no exclusions. Travel insurance is temporary and does not provide the continuous, residential coverage required by the visa. However, travel insurance is a useful supplement." }
+        },
+        {
+          "@type": "Question",
+          "name": "What should I look for in travel insurance as an NLV holder?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Look for: (1) Medical emergency cover of at least €250,000–€500,000, (2) Repatriation coverage for serious illness or injury, (3) Evacuation and emergency transport, (4) Coverage for pre-existing conditions (if applicable), (5) Schengen travel cover (if you travel to other EU countries), (6) Trip cancellation and baggage cover, (7) 24/7 emergency assistance in English." }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need travel insurance for Schengen travel from Spain?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Some Schengen countries and travel situations require travel insurance with medical cover of at least €30,000–€100,000. It's essential for any Schengen travel — not only for visa requirements but for your own protection. A multi-trip travel insurance policy covering the entire Schengen area is usually the most cost-effective option for frequent travelers." }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I use my home country health insurance while traveling in Spain and Europe?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Coverage depends on your policy and home country. UK GHIC and EU EHIC cards are designed for temporary travel, not permanent residence. Once you become a resident in Spain, these cards are no longer valid. You must hold Spanish residential health insurance plus travel insurance for trips outside Spain. Always check your policy terms before traveling." }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<!-- Open Graph / Social -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.myspanishvisa.com/travel-insurance-nlv-spain/">
+<meta property="og:title" content="My Spanish Visa">
+<meta property="og:description" content="Expert Spain visa guidance for English-speaking expats.">
+<meta property="og:image" content="https://www.myspanishvisa.com/assets/images/og/og-nlv-spain.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="My Spanish Visa">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@myspanishvisa">
+<meta name="twitter:title" content="My Spanish Visa">
+<meta name="twitter:description" content="Expert Spain visa guidance for English-speaking expats.">
+<meta name="twitter:image" content="https://www.myspanishvisa.com/assets/images/og/og-nlv-spain.jpg">
+
+<style>
+/* ── iOS Safari pinch-zoom overflow safety ─────────────────────────── */
+/* Prevents horizontal overflow when users pinch-zoom on iPhone/iPad.   */
+/* Top-level (also paste into theme Custom CSS / Elementor Site Settings) */
+html, body { max-width: 100%; overflow-x: clip; }
+/* Scoped wrapper safety */
+.msv, .msv-nav, .msv-topbar, .msv-footer, .msv-footer-cta,
+.pls-header, .pls-body, .pls-nlv, .pls-dnv, .pls-student {
+  max-width: 100%;
+  overflow-x: clip;
+  position: relative;
+}
+/* Cap all media inside the wrapper */
+.msv img, .msv video, .msv iframe,
+.msv-footer img, .msv-footer video, .msv-footer iframe {
+  max-width: 100%;
+  height: auto;
+}
+/* Never use 100vw — use 100% instead (dev reminder) */
+
+
+/* ── Reset & scope ─────────────────────────────────────────────────── */
+.msv *, .msv *::before, .msv *::after { box-sizing: border-box; margin: 0; padding: 0; }
+/* ── Tokens ──────────────────────────────────────────────────────── */
+.msv {
+  --navy: #0c1930; --navy-mid: #1a3a5c; --red: #be0011; --red-deep: #8c000d;
+  --yellow: #facf39; --cream: #f8f7f4; --white: #ffffff; --black: #1a1a1a;
+  --muted: #5a6478; --border: #dce3ed;
+  --shadow-sm: 0 2px 8px rgba(12,25,48,0.08); --shadow-md: 0 6px 24px rgba(12,25,48,0.13);
+  font-family: 'Inter', 'Segoe UI', system-ui, Arial, sans-serif;
+  font-size: 16px; line-height: 1.75; color: var(--black); width: 100%;
+}
+.msv__container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+.msv__container--narrow { max-width: 780px; margin: 0 auto; padding: 0 2rem; }
+@media (max-width: 640px) { .msv__container, .msv__container--narrow { padding: 0 1.2rem; } }
+/* ── Typography ──────────────────────────────────────────────────── */
+.msv h1 { font-size: clamp(2rem, 4.5vw, 3rem); font-weight: 800; line-height: 1.12; color: var(--white); letter-spacing: -0.025em; margin-bottom: 1.2rem; }
+.msv h2 { font-size: clamp(1.3rem, 2.5vw, 1.75rem); font-weight: 700; color: var(--navy); letter-spacing: -0.01em; margin-bottom: 0.5rem; position: relative; display: inline-block; padding-bottom: 0.5rem; }
+.msv h2::after { content: ''; position: absolute; bottom: 0; left: 0; width: 44px; height: 3px; background: linear-gradient(90deg, var(--red), var(--red-deep)); border-radius: 2px; }
+.msv h3 { font-size: 1.05rem; font-weight: 700; color: var(--navy); margin-bottom: 0.4rem; }
+.msv p { color: var(--black); margin-bottom: 1rem; font-size: 0.97rem; }
+.msv a { color: var(--red); text-decoration: none; }
+.msv a:hover { text-decoration: underline; }
+.msv ul { list-style: none; padding: 0; margin: 0 0 1rem; }
+.msv ul li { padding: 0.35rem 0 0.35rem 1.4rem; position: relative; font-size: 0.95rem; color: var(--black); }
+.msv ul li::before { content: ''; position: absolute; left: 0; top: 0.75rem; width: 7px; height: 7px; background: linear-gradient(135deg, var(--red), var(--red-deep)); border-radius: 50%; }
+/* ── Sections ─────────────────────────────────────────────────── */
+.msv__section { padding: 5rem 0; background: var(--white); }
+.msv__section--cream { padding: 5rem 0; background: linear-gradient(180deg, #f8f7f4 0%, #f2f4f8 100%); }
+.msv__section--dark { padding: 5rem 0; background: linear-gradient(135deg, var(--navy) 0%, #0d2240 55%, #0a1d38 100%); }
+.msv__section--dark h2 { color: var(--white) !important; }
+.msv__section--dark h2::after { background: linear-gradient(90deg, var(--yellow), #e8b820); }
+.msv__section--dark h3 { color: rgba(255,255,255,0.9) !important; }
+.msv .msv__section--dark p, .msv .msv__section--dark li { color: rgba(255,255,255,0.82); }
+.msv__section--dark ul li::before { background: linear-gradient(135deg, var(--yellow), #e8b820); }
+@media (max-width: 640px) { .msv__section, .msv__section--cream, .msv__section--dark { padding: 3.5rem 0; } }
+.msv__section-hd { margin-bottom: 3rem; }
+.msv__section-hd p { color: var(--muted); font-size: 1rem; margin-top: 0.75rem; line-height: 1.7; max-width: 600px; }
+/* ── Animations ──────────────────────────────────────────────────── */
+@keyframes msv-fade-up { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes msv-shimmer {
+  0%   { background-position: -400px 0; }
+  100% { background-position: 400px 0; }
+}
+.msv__shimmer {
+  background: linear-gradient(90deg, var(--yellow) 0%, #e8b820 25%, var(--red) 50%, #e8b820 75%, var(--yellow) 100%);
+  background-size: 400px 100%;
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: msv-shimmer 3.5s linear infinite;
+  display: inline;
+}
+/* ── Hero ─────────────────────────────────────────────────── */
+.msv__hero { background: linear-gradient(135deg, #0c1930 0%, #0f2540 40%, #162d50 70%, #1a3560 100%); padding: 5.5rem 0 5rem; position: relative; overflow: hidden; }
+.msv__hero::before { content: ''; position: absolute; top: -30%; right: -5%; width: 700px; height: 700px; background: radial-gradient(circle, rgba(190,0,17,0.1) 0%, transparent 65%); pointer-events: none; }
+.msv__hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, rgba(250,207,57,0.4), transparent); }
+.msv__hero-inner { max-width: 780px; animation: msv-fade-up 0.7s ease-out both; }
+.msv__eyebrow { display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(190,0,17,0.15); border: 1px solid rgba(190,0,17,0.4); color: #ff6b7a; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.35rem 0.9rem; border-radius: 100px; margin-bottom: 1.5rem; }
+.msv__eyebrow::before { content: ''; width: 6px; height: 6px; background: var(--red); border-radius: 50%; box-shadow: 0 0 6px var(--red); }
+.msv__hero p { color: rgba(255,255,255,0.78) !important; font-size: clamp(1rem, 2.2vw, 1.15rem); max-width: 640px; margin-bottom: 2.2rem; line-height: 1.75; }
+/* ── Breadcrumb ───────────────────────────────────────────── */
+.msv__breadcrumb { padding: 0.85rem 0; border-bottom: 1px solid var(--border); background: var(--white); }
+.msv__breadcrumb-inner { display: flex; align-items: center; gap: 0.5rem; font-size: 0.8rem; color: var(--muted); flex-wrap: wrap; }
+.msv__breadcrumb-inner a { color: var(--red); text-decoration: none; }
+.msv__breadcrumb-inner a:hover { text-decoration: underline; }
+.msv__breadcrumb-inner span { color: var(--muted); }
+/* ── Buttons ─────────────────────────────────────────────────── */
+.msv__btn-group { display: flex; flex-wrap: wrap; gap: 0.85rem; }
+.msv__btn { display: inline-block; padding: 0.85rem 2rem; font-size: 0.92rem; font-weight: 700; border-radius: 6px; text-decoration: none !important; transition: transform 0.15s, box-shadow 0.15s; }
+.msv__btn:hover { transform: translateY(-1px); text-decoration: none !important; }
+.msv .msv__btn--primary { background: linear-gradient(135deg, var(--red) 0%, var(--red-deep) 100%); color: #ffffff !important; box-shadow: 0 4px 16px rgba(190,0,17,0.38); }
+.msv .msv__btn--primary:hover { box-shadow: 0 6px 22px rgba(190,0,17,0.48); color: #ffffff !important; }
+.msv .msv__btn--outline-white { background: transparent; color: #ffffff !important; border: 1.5px solid rgba(255,255,255,0.5); }
+.msv .msv__btn--outline-white:hover { background: rgba(255,255,255,0.1); color: #ffffff !important; }
+/* ── Trust bar ──────────────────────────────────────────────── */
+.msv__trust-bar { background: var(--white); border-bottom: 1px solid var(--border); padding: 1rem 0; box-shadow: var(--shadow-sm); }
+.msv__trust-bar-inner { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.75rem; }
+.msv__trust-item { display: flex; align-items: center; gap: 0.5rem; font-size: 0.82rem; font-weight: 600; color: var(--navy); white-space: nowrap; }
+.msv__trust-item::before { content: ''; width: 7px; height: 7px; background: linear-gradient(135deg, var(--red), var(--red-deep)); border-radius: 50%; flex-shrink: 0; }
+/* ── Key facts strip ─────────────────────────────────────────── */
+.msv__facts { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; margin-bottom: 3rem; }
+@media (max-width: 760px) { .msv__facts { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 420px) { .msv__facts { grid-template-columns: 1fr; } }
+.msv__fact { background: var(--white); padding: 1.5rem 1.3rem; text-align: center; }
+.msv__fact-icon { font-size: 1.5rem; display: block; margin-bottom: 0.5rem; }
+.msv__fact-label { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); display: block; margin-bottom: 0.25rem; }
+.msv__fact-value { font-size: 0.97rem; font-weight: 700; color: var(--navy); line-height: 1.35; display: block; }
+/* ── Alert box ───────────────────────────────────────────────── */
+.msv__alert { border-radius: 10px; padding: 1.3rem 1.5rem; display: flex; gap: 1rem; align-items: flex-start; margin-bottom: 2rem; }
+.msv__alert--warn { background: #fffbea; border: 1px solid #f0d060; }
+.msv__alert--info { background: #eef4ff; border: 1px solid #a0bfff; }
+.msv__alert--red { background: #fef2f2; border: 1px solid #fca5a5; }
+.msv__alert--green { background: #f0fdf4; border: 1px solid #86efac; }
+.msv__alert-icon { font-size: 1.4rem; flex-shrink: 0; margin-top: 0.1rem; }
+.msv__alert p { font-size: 0.9rem; color: var(--black); margin: 0; line-height: 1.65; }
+.msv__alert strong { color: var(--navy); }
+/* ── Comparison table ─────────────────────────────────────────── */
+.msv__compare-table { width: 100%; border-collapse: collapse; font-size: 0.88rem; margin: 2rem 0; }
+.msv__compare-table thead tr { background: var(--navy); }
+.msv__compare-table th { padding: 1rem 1.25rem; text-align: left; color: var(--white); font-weight: 700; border-bottom: 2px solid var(--yellow); white-space: nowrap; }
+.msv__compare-table td { padding: 0.85rem 1.25rem; border-bottom: 1px solid var(--border); color: var(--black); }
+.msv__compare-table tbody tr:nth-child(even) { background: #f9fafb; }
+.msv__compare-table .compare-feature { font-weight: 600; color: var(--navy); }
+.msv__compare-table .compare-yes { color: #22c55e; font-weight: 700; }
+.msv__compare-table .compare-no { color: var(--muted); }
+/* ── Feature checklist ───────────────────────────────────────────── */
+.msv__feature-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin: 2rem 0; }
+@media (max-width: 640px) { .msv__feature-grid { grid-template-columns: 1fr; } }
+.msv__feature-item { display: flex; gap: 1rem; align-items: flex-start; background: var(--white); border: 1px solid var(--border); padding: 1.5rem; border-radius: 10px; }
+.msv__feature-icon { font-size: 1.3rem; flex-shrink: 0; margin-top: 0.2rem; }
+.msv__feature-item h4 { font-size: 0.95rem; font-weight: 700; color: var(--navy); margin-bottom: 0.3rem; }
+.msv__feature-item p { font-size: 0.88rem; color: var(--muted); margin: 0; line-height: 1.6; }
+/* ── FAQs ────────────────────────────────────────────────– */
+.msv__faq-list { display: flex; flex-direction: column; gap: 0; border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+.msv__faq-list details { border-bottom: 1px solid var(--border); background: var(--white); }
+.msv__faq-list details:last-child { border-bottom: none; }
+.msv__faq-list summary { padding: 1.2rem 1.5rem; font-size: 0.97rem; font-weight: 700; color: var(--navy); cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+.msv__faq-list summary::-webkit-details-marker { display: none; }
+.msv__faq-list summary::after { content: '+'; font-size: 1.3rem; font-weight: 400; color: var(--red); flex-shrink: 0; transition: transform 0.2s; }
+.msv__faq-list details[open] summary::after { transform: rotate(45deg); }
+.msv__faq-list details[open] summary { color: var(--red); }
+.msv__faq-answer { padding: 0 1.5rem 1.3rem; font-size: 0.92rem; color: var(--muted); line-height: 1.75; }
+.msv__faq-answer p { color: var(--muted); font-size: 0.92rem; margin-bottom: 0.75rem; }
+.msv__faq-answer p:last-child { margin-bottom: 0; }
+/* ── Broker band ─────────────────────────────────────────────── */
+.msv__broker-band { background: linear-gradient(135deg, #0c1930 0%, #0f2540 60%, #162d50 100%); padding: 3rem 0; border-bottom: 3px solid var(--yellow); }
+.msv__broker-band-hd { text-align: center; margin-bottom: 2rem; }
+.msv__broker-band-hd h2 { color: var(--white) !important; font-size: clamp(1.2rem, 2.5vw, 1.6rem); font-weight: 800; margin-bottom: 0.5rem; display: block; }
+.msv__broker-band-hd h2::after { display: none; }
+.msv__broker-band-hd p { color: rgba(255,255,255,0.72); font-size: 0.97rem; margin: 0; }
+.msv__broker-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+@media (max-width: 640px) { .msv__broker-cards { grid-template-columns: 1fr; } }
+.msv__broker-card { background: rgba(255,255,255,0.07); border: 1.5px solid rgba(255,255,255,0.15); border-radius: 14px; padding: 2rem 2rem 1.75rem; display: flex; flex-direction: column; gap: 0.75rem; transition: background 0.2s, border-color 0.2s; }
+.msv__broker-card:hover { background: rgba(255,255,255,0.12); border-color: rgba(250,207,57,0.5); }
+.msv__broker-card-tag { display: inline-block; background: var(--yellow); color: var(--navy); font-size: 0.68rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; padding: 0.2rem 0.7rem; border-radius: 100px; width: fit-content; }
+.msv__broker-card h3 { font-size: 1.2rem; font-weight: 800; color: var(--white); margin: 0; }
+.msv__broker-card p { font-size: 0.88rem; color: rgba(255,255,255,0.75); margin: 0; line-height: 1.7; flex-grow: 1; }
+.msv__broker-card-btn { display: inline-flex; align-items: center; gap: 0.5rem; background: linear-gradient(135deg, var(--red) 0%, var(--red-deep) 100%); color: #ffffff !important; font-size: 0.88rem; font-weight: 800; padding: 0.75rem 1.5rem; border-radius: 6px; text-decoration: none !important; width: fit-content; margin-top: 0.5rem; }
+.msv__broker-card-btn:hover { background: linear-gradient(135deg, var(--red-deep) 0%, var(--red) 100%); text-decoration: none !important; }
+/* ── CTA band ────────────────────────────────────────────────── */
+.msv__cta-band { background: linear-gradient(135deg, var(--navy) 0%, #0d2240 60%, #0a1d38 100%); padding: 5rem 0; text-align: center; }
+.msv__cta-band h2 { color: var(--white) !important; display: block; }
+.msv__cta-band h2::after { left: 50%; transform: translateX(-50%); background: linear-gradient(90deg, var(--yellow), #e8b820); }
+.msv__cta-band p { color: rgba(255,255,255,0.75) !important; max-width: 560px; margin: 1rem auto 2.2rem; font-size: 1rem; }
+.msv__cta-band .msv__btn-group { justify-content: center; }
+/* ── Related guides ──────────────────────────────────────────── */
+.msv__related { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; }
+@media (max-width: 860px) { .msv__related { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 420px) { .msv__related { grid-template-columns: 1fr; } }
+.msv__related-card { background: var(--white); border: 1px solid var(--border); border-radius: 10px; padding: 1.3rem 1.25rem; text-decoration: none !important; transition: box-shadow 0.2s, transform 0.2s; display: block; }
+.msv__related-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); text-decoration: none !important; }
+.msv__related-icon { font-size: 1.5rem; display: block; margin-bottom: 0.6rem; }
+.msv__related-title { font-size: 0.88rem; font-weight: 700; color: var(--navy); display: block; margin-bottom: 0.3rem; }
+.msv__related-desc { font-size: 0.8rem; color: var(--muted); line-height: 1.55; }
+/* ── Disclaimer ──────────────────────────────────────────────── */
+.msv__disclaimer { background: var(--cream); border-top: 1px solid var(--border); padding: 2rem 0; }
+.msv__disclaimer p { font-size: 0.78rem; color: var(--muted); margin: 0; line-height: 1.65; }
+</style>
+
+<div class="msv">
+  <!-- ── Hero ─────────────────────────────────────────────────── -->
+  <section class="msv__hero">
+    <div class="msv__container">
+      <div class="msv__hero-inner">
+        <span class="msv__eyebrow">Travel Insurance Guide</span>
+        <h1>Travel Insurance for NLV Spain Holders</h1>
+        <p>Supplementary coverage for initial entry, Schengen travel, and emergencies abroad. Understand the difference between travel insurance and health insurance, what it covers, and why it matters for your Non-Lucrative Visa journey.</p>
+        <div class="msv__btn-group">
+          <a href="#faq" class="msv__btn msv__btn--primary">Read FAQs</a>
+          <a href="#brokers" class="msv__btn msv__btn--outline-white">Find Travel Insurance</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Trust bar ─────────────────────────────────────────────── -->
+  <div class="msv__trust-bar">
+    <div class="msv__container">
+      <div class="msv__trust-bar-inner">
+        <span class="msv__trust-item">Essential for your initial arrival in Spain</span>
+        <span class="msv__trust-item">Covers Schengen travel & medical emergencies</span>
+        <span class="msv__trust-item">Repatriation coverage included in most policies</span>
+        <span class="msv__trust-item">From €30–80 per month for annual cover</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Key facts ─────────────────────────────────────────────── -->
+  <section class="msv__section">
+    <div class="msv__container">
+      <div class="msv__facts">
+        <div class="msv__fact">
+          <span class="msv__fact-icon">📋</span>
+          <span class="msv__fact-label">Visa Requirement</span>
+          <span class="msv__fact-value">Recommended, not required</span>
+        </div>
+        <div class="msv__fact">
+          <span class="msv__fact-icon">🌍</span>
+          <span class="msv__fact-label">Coverage Scope</span>
+          <span class="msv__fact-value">Spain + Schengen travel</span>
+        </div>
+        <div class="msv__fact">
+          <span class="msv__fact-icon">💰</span>
+          <span class="msv__fact-label">Average Cost</span>
+          <span class="msv__fact-value">€30–80/month annually</span>
+        </div>
+        <div class="msv__fact">
+          <span class="msv__fact-icon">⏱</span>
+          <span class="msv__fact-label">Duration</span>
+          <span class="msv__fact-value">1–365 days per policy</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Travel vs Health Insurance ─────────────────────────── -->
+  <section class="msv__section">
+    <div class="msv__container">
+      <div class="msv__section-hd">
+        <h2>Travel Insurance vs Health Insurance: What's the Difference?</h2>
+        <p>As an NLV holder, you'll need both — but they serve different purposes.</p>
+      </div>
+
+      <table class="msv__compare-table">
+        <thead>
+          <tr>
+            <th>Feature</th>
+            <th>Health Insurance (Required for NLV)</th>
+            <th>Travel Insurance (Supplementary)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="compare-feature">Duration</td>
+            <td>Continuous, ongoing coverage</td>
+            <td>Temporary, 1–365 days per policy</td>
+          </tr>
+          <tr>
+            <td class="compare-feature">Geographic scope</td>
+            <td>Spain (and often Europe)</td>
+            <td>Worldwide, especially Schengen</td>
+          </tr>
+          <tr>
+            <td class="compare-feature">Medical emergencies</td>
+            <td class="compare-yes">Yes — primary coverage</td>
+            <td class="compare-yes">Yes — supplementary</td>
+          </tr>
+          <tr>
+            <td class="compare-feature">Routine healthcare</td>
+            <td class="compare-yes">Yes — GP visits, prescriptions</td>
+            <td class="compare-no">Limited or excluded</td>
+          </tr>
+          <tr>
+            <td class="compare-feature">Repatriation coverage</td>
+            <td class="compare-no">Rarely included</td>
+            <td class="compare-yes">Often included</td>
+          </tr>
+          <tr>
+            <td class="compare-feature">Trip cancellation</td>
+            <td class="compare-no">Not covered</td>
+            <td class="compare-yes">Yes</td>
+          </tr>
+          <tr>
+            <td class="compare-feature">Baggage & personal items</td>
+            <td class="compare-no">Not covered</td>
+            <td class="compare-yes">Yes</td>
+          </tr>
+          <tr>
+            <td class="compare-feature">Evacuation & transport</td>
+            <td class="compare-no">Limited</td>
+            <td class="compare-yes">Yes — emergency air transport</td>
+          </tr>
+          <tr>
+            <td class="compare-feature">Pre-existing conditions</td>
+            <td class="compare-yes">Must cover (visa requirement)</td>
+            <td class="compare-no">Often excluded or limited</td>
+          </tr>
+          <tr>
+            <td class="compare-feature">Cost per month</td>
+            <td>€50–150 depending on age & coverage</td>
+            <td>€30–80 for annual multi-trip</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="msv__alert msv__alert--info">
+        <span class="msv__alert-icon">ℹ️</span>
+        <p><strong>Key takeaway:</strong> Health insurance is your foundation for living in Spain. Travel insurance is supplementary protection when you leave Spain or during the transition period before your health insurance is active.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── When Do You Need Travel Insurance? ─────────────────── -->
+  <section class="msv__section--cream">
+    <div class="msv__container">
+      <div class="msv__section-hd">
+        <h2>When Do You Need Travel Insurance?</h2>
+        <p>There are several critical periods where travel insurance is essential as an NLV holder.</p>
+      </div>
+
+      <div class="msv__feature-grid">
+        <div class="msv__feature-item">
+          <span class="msv__feature-icon">✈️</span>
+          <div>
+            <h4>Initial Arrival & First 90 Days</h4>
+            <p>You should have travel insurance from the moment you book your flight to Spain. Your residential health insurance may not be active until after registration and NIE processing. Travel insurance bridges this gap.</p>
+          </div>
+        </div>
+
+        <div class="msv__feature-item">
+          <span class="msv__feature-icon">🛂</span>
+          <div>
+            <h4>Schengen & European Travel</h4>
+            <p>If you travel to other Schengen countries (France, Italy, Germany, etc.), travel insurance is essential. Some Schengen countries require proof of medical cover of at least €30,000–€100,000 for visa-free entry.</p>
+          </div>
+        </div>
+
+        <div class="msv__feature-item">
+          <span class="msv__feature-icon">🏥</span>
+          <div>
+            <h4>Medical Emergency Outside Spain</h4>
+            <p>If you suffer a serious medical emergency outside Spain, travel insurance covers emergency treatment, evacuation, and repatriation — things your Spanish residential insurance may not cover abroad.</p>
+          </div>
+        </div>
+
+        <div class="msv__feature-item">
+          <span class="msv__feature-icon">🧳</span>
+          <div>
+            <h4>Trip Cancellation & Baggage</h4>
+            <p>Travel insurance protects you if you need to cancel a trip (medical, family emergency), lose baggage, or face travel delays — none of which are covered by health insurance.</p>
+          </div>
+        </div>
+
+        <div class="msv__feature-item">
+          <span class="msv__feature-icon">🔄</span>
+          <div>
+            <h4>During Visa Renewal Periods</h4>
+            <p>If you travel while your visa renewal is being processed (even though you shouldn't), travel insurance ensures you have medical coverage if something goes wrong abroad.</p>
+          </div>
+        </div>
+
+        <div class="msv__feature-item">
+          <span class="msv__feature-icon">🆙</span>
+          <div>
+            <h4>Gap Coverage Between Policies</h4>
+            <p>If there's a gap between your old residential insurance expiring and a new policy starting, travel insurance fills the void.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Is Travel Insurance Enough? ─────────────────────────── -->
+  <section class="msv__section">
+    <div class="msv__container">
+      <div class="msv__section-hd">
+        <h2>Is Travel Insurance Enough to Replace Health Insurance for the NLV?</h2>
+        <p>Short answer: No. Here's why.</p>
+      </div>
+
+      <div class="msv__alert msv__alert--red">
+        <span class="msv__alert-icon">⛔</span>
+        <p><strong>Critical requirement:</strong> The Spanish Non-Lucrative Visa requires mandatory health insurance that is <strong>continuous, ongoing, and residential</strong> — covering routine and emergency care with no co-payment and no exclusions for pre-existing conditions. Travel insurance cannot meet this requirement.</p>
+      </div>
+
+      <div class="msv__feature-grid">
+        <div class="msv__feature-item">
+          <span class="msv__feature-icon">❌</span>
+          <div>
+            <h4>Travel Insurance is Temporary</h4>
+            <p>Travel insurance typically covers a specific trip (1–30 days) or annual travel (multiple trips up to 365 days total). It's not continuous residential coverage required by the NLV.</p>
+          </div>
+        </div>
+
+        <div class="msv__feature-item">
+          <span class="msv__feature-icon">❌</span>
+          <div>
+            <h4>Limited Scope for Routine Care</h4>
+            <p>Travel insurance covers emergencies abroad, not routine doctor visits, prescriptions, or planned treatments — all essential needs as a Spanish resident that your health insurance must cover.</p>
+          </div>
+        </div>
+
+        <div class="msv__feature-item">
+          <span class="msv__feature-icon">❌</span>
+          <div>
+            <h4>Pre-existing Conditions Often Excluded</h4>
+            <p>Travel insurance frequently excludes or limits coverage for pre-existing conditions. The NLV requires health insurance with full coverage and no such exclusions.</p>
+          </div>
+        </div>
+
+        <div class="msv__feature-item">
+          <span class="msv__feature-icon">❌</span>
+          <div>
+            <h4>Visa Applications Won't Accept It</h4>
+            <p>The Spanish immigration authority requires a formal health insurance policy as proof. Travel insurance is not recognized as meeting this requirement — your application will be rejected.</p>
+          </div>
+        </div>
+      </div>
+
+      <h3 style="margin-top: 2rem; margin-bottom: 1rem;">The Right Approach:</h3>
+      <ul style="margin-bottom: 2rem;">
+        <li><strong>For your NLV:</strong> Get a proper residential health insurance policy (€50–150/month) that meets visa requirements — no co-payment, comprehensive coverage.</li>
+        <li><strong>As a supplement:</strong> Add travel insurance (€30–80/month for annual multi-trip) for extra protection during travel and emergencies abroad.</li>
+        <li><strong>For the transition:</strong> Use travel insurance to cover the gap between arrival and when your residential insurance activates.</li>
+      </ul>
+
+      <p style="color: var(--muted); font-style: italic;">You need both types of insurance working together — not one replacing the other.</p>
+    </div>
+  </section>
+
+  <!-- ── Coverage During Visa Processing ─────────────────────── -->
+  <section class="msv__section--cream">
+    <div class="msv__container">
+      <div class="msv__section-hd">
+        <h2>Travel Insurance Coverage During the Visa Processing Period</h2>
+        <p>Understanding your coverage before you arrive and while your visa is being processed.</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+        <div style="background: var(--white); padding: 2rem; border-radius: 12px; border: 1px solid var(--border);">
+          <h3 style="color: var(--red); margin-bottom: 1rem;">Before Application (Pre-Visa)</h3>
+          <p><strong>Your situation:</strong> You're still in your home country preparing the visa application.</p>
+          <ul>
+            <li>Your home country health insurance is active (EHIC, GHIC, or national insurance)</li>
+            <li>No Spanish health insurance is required yet</li>
+            <li>Travel insurance is optional but helpful for trips to Spain during visa preparation</li>
+          </ul>
+          <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--muted);"><strong>Action:</strong> Not urgent, but consider adding travel insurance if you're making trips to Spain to view properties or meet with immigration advisers.</p>
+        </div>
+
+        <div style="background: var(--white); padding: 2rem; border-radius: 12px; border: 1px solid var(--border);">
+          <h3 style="color: var(--red); margin-bottom: 1rem;">During Processing (Visa Pending)</h3>
+          <p><strong>Your situation:</strong> You've submitted your NLV application; it's being reviewed by immigration.</p>
+          <ul>
+            <li>Your health insurance requirement is already submitted with the application</li>
+            <li>Travel to Spain during processing is possible (you're not yet a resident)</li>
+            <li>You should maintain travel insurance for any trips back to Spain</li>
+          </ul>
+          <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--muted);"><strong>Action:</strong> Maintain your health insurance policy throughout processing and get travel insurance for trips to Spain.</p>
+        </div>
+      </div>
+
+      <div style="margin-top: 2rem; background: var(--white); padding: 2rem; border-radius: 12px; border-left: 4px solid var(--red);">
+        <h3 style="margin-bottom: 0.5rem;">After Approval (Visa Granted)</h3>
+        <p style="margin-bottom: 1rem;">You've received your NLV approval and are ready to move. This is when your residential health insurance becomes active, and travel insurance becomes supplementary.</p>
+        <ul>
+          <li>Your residential health insurance policy starts from your registration date</li>
+          <li>Travel insurance covers gaps before registration and trips outside Spain</li>
+          <li>Ensure there's no gap between arrival and when your health insurance activates</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Repatriation & Emergency Coverage ──────────────────── -->
+  <section class="msv__section">
+    <div class="msv__container">
+      <div class="msv__section-hd">
+        <h2>Repatriation & Emergency Medical Evacuation</h2>
+        <p>One of the most valuable aspects of travel insurance is repatriation coverage — here's what it means and why it matters.</p>
+      </div>
+
+      <h3 style="margin-bottom: 1rem;">What is Repatriation Coverage?</h3>
+      <p style="margin-bottom: 1.5rem;">Repatriation coverage pays for you to be medically transported back to your home country or to the nearest appropriate medical facility if you suffer a serious medical emergency while traveling that cannot be treated in Spain or the destination country. This includes:</p>
+
+      <ul style="margin-bottom: 2rem;">
+        <li><strong>Emergency air transport:</strong> If you need a medical airplane, helicopter, or other emergency transport home</li>
+        <li><strong>Medical escort:</strong> A doctor or nurse travels with you if needed</li>
+        <li><strong>Hospital-to-hospital transfer:</strong> Moving you from a rural or under-equipped hospital to a major medical center</li>
+        <li><strong>Medication & supplies:</strong> Emergency medicines and medical equipment for transport</li>
+        <li><strong>Family accompaniment:</strong> Sometimes covers a family member traveling with you</li>
+        <li><strong>Post-repatriation care:</strong> Some policies continue covering treatment after you arrive home</li>
+      </ul>
+
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin: 2rem 0;">
+        <div style="background: #f0fdf4; border-left: 4px solid #22c55e; padding: 1.5rem; border-radius: 8px;">
+          <h4 style="color: var(--navy); margin-bottom: 0.5rem;">When Repatriation is Covered</h4>
+          <ul style="margin: 0;">
+            <li>Serious injury or illness requiring advanced treatment unavailable locally</li>
+            <li>Life-threatening medical conditions needing specialist care</li>
+            <li>Complications from surgery or emergency treatment</li>
+            <li>Psychological breakdown or serious mental health crisis</li>
+          </ul>
+        </div>
+
+        <div style="background: #fef2f2; border-left: 4px solid var(--red); padding: 1.5rem; border-radius: 8px;">
+          <h4 style="color: var(--navy); margin-bottom: 0.5rem;">Common Exclusions</h4>
+          <ul style="margin: 0;">
+            <li>Repatriation for non-medical reasons (homesickness, relationship issues)</li>
+            <li>Pre-existing conditions (often excluded; check policy)</li>
+            <li>Travel against medical advice</li>
+            <li>High-risk activities not declared to insurer</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="msv__alert msv__alert--warn">
+        <span class="msv__alert-icon">⚠️</span>
+        <p><strong>Cost note:</strong> Emergency medical evacuation can cost €100,000+ if not insured. A recent case of a tourist needing helicopter rescue in the Alps cost €200,000. Travel insurance repatriation coverage is one of the best investments an expat can make.</p>
+      </div>
+
+      <h3 style="margin-top: 2rem; margin-bottom: 1rem;">Typical Repatriation Coverage Limits</h3>
+      <ul>
+        <li><strong>Budget policies (€20–30/month):</strong> €500,000–€1,000,000 repatriation limit</li>
+        <li><strong>Standard policies (€40–60/month):</strong> €1,000,000–€3,000,000 repatriation limit</li>
+        <li><strong>Premium policies (€70–100+/month):</strong> €5,000,000+ repatriation limit, higher emergency medical cover</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ── Travel Insurance Types ──────────────────────────────── -->
+  <section class="msv__section--cream">
+    <div class="msv__container">
+      <div class="msv__section-hd">
+        <h2>Types of Travel Insurance for NLV Holders</h2>
+        <p>Understand the different policy structures and find what suits your travel style.</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+        <div style="background: var(--white); padding: 2rem; border-radius: 12px; border: 1px solid var(--border);">
+          <h3 style="color: var(--navy); margin-bottom: 1rem;">Single-Trip Insurance</h3>
+          <p style="margin-bottom: 1rem;"><strong>Best for:</strong> Occasional travelers or one specific trip.</p>
+          <p><strong>Coverage:</strong> One trip lasting up to 31–90 days (depending on policy).</p>
+          <p style="margin-top: 1rem; font-weight: 700; color: var(--red);">€15–40 per trip</p>
+          <ul style="margin-top: 1rem;">
+            <li>Flexible — buy only when you travel</li>
+            <li>Can be expensive for frequent travelers</li>
+            <li>Good for your initial arrival + trips home</li>
+          </ul>
+        </div>
+
+        <div style="background: var(--white); padding: 2rem; border-radius: 12px; border: 1px solid var(--border);">
+          <h3 style="color: var(--navy); margin-bottom: 1rem;">Multi-Trip Annual Insurance</h3>
+          <p style="margin-bottom: 1rem;"><strong>Best for:</strong> Regular travelers who take multiple trips per year.</p>
+          <p><strong>Coverage:</strong> Unlimited trips in 12 months, each trip up to 31–90 days.</p>
+          <p style="margin-top: 1rem; font-weight: 700; color: var(--red);">€30–80 per year</p>
+          <ul style="margin-top: 1rem;">
+            <li>Much cheaper per trip (€3–7 per trip if traveling 10 times/year)</li>
+            <li>Covers all your Schengen travel needs</li>
+            <li>Most cost-effective for NLV holders</li>
+          </ul>
+        </div>
+
+        <div style="background: var(--white); padding: 2rem; border-radius: 12px; border: 1px solid var(--border);">
+          <h3 style="color: var(--navy); margin-bottom: 1rem;">Annual Resident Travel Insurance</h3>
+          <p style="margin-bottom: 1rem;"><strong>Best for:</strong> Spain residents traveling throughout Europe.</p>
+          <p><strong>Coverage:</strong> 12 months of travel protection; each trip up to 90 days or unlimited days.</p>
+          <p style="margin-top: 1rem; font-weight: 700; color: var(--red);">€50–120 per year</p>
+          <ul style="margin-top: 1rem;">
+            <li>Designed for people living abroad</li>
+            <li>Higher repatriation & evacuation limits</li>
+            <li>Includes trip extension & emergency assistance</li>
+          </ul>
+        </div>
+
+        <div style="background: var(--white); padding: 2rem; border-radius: 12px; border: 1px solid var(--border);">
+          <h3 style="color: var(--navy); margin-bottom: 1rem;">Schengen-Specific Travel Insurance</h3>
+          <p style="margin-bottom: 1rem;"><strong>Best for:</strong> Visa-free travelers or non-EU nationals needing Schengen proof.</p>
+          <p><strong>Coverage:</strong> Medical emergency cover (€30,000–€100,000+) for Schengen entry.</p>
+          <p style="margin-top: 1rem; font-weight: 700; color: var(--red);">€20–50 per trip</p>
+          <ul style="margin-top: 1rem;">
+            <li>Meets Schengen visa requirements</li>
+            <li>Not essential for EU/EEA nationals like NLV holders</li>
+            <li>Good backup for extra coverage</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="msv__alert msv__alert--info" style="margin-top: 2rem;">
+        <span class="msv__alert-icon">💡</span>
+        <p><strong>Recommendation for NLV holders:</strong> Start with a multi-trip annual policy (€30–80/year) and upgrade to resident travel insurance (€50–120/year) if you travel frequently or need higher repatriation limits.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Best Travel Insurance for NLV Holders ──────────────── -->
+  <section class="msv__section">
+    <div class="msv__container">
+      <div class="msv__section-hd">
+        <h2>Best Travel Insurance Providers for NLV Spain Holders</h2>
+        <p>Top-rated travel insurance companies offering excellent Schengen and expat coverage.</p>
+      </div>
+
+      <p style="margin-bottom: 2rem; color: var(--muted);">These providers offer English-speaking customer support, NLV-friendly policies, and competitive rates for Spain residents.</p>
+
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+        <div style="background: var(--white); border: 1px solid var(--border); padding: 1.8rem; border-radius: 12px;">
+          <h3 style="color: var(--navy); margin-bottom: 0.5rem;">a leading private insurer Global</h3>
+          <p style="font-size: 0.9rem; color: var(--muted); margin-bottom: 1rem;"><strong>Best for:</strong> Comprehensive coverage, high limits, and expat experience.</p>
+          <ul style="font-size: 0.9rem; margin-bottom: 1rem;">
+            <li>Medical emergency: €250,000–€5,000,000</li>
+            <li>Repatriation: €1,000,000+</li>
+            <li>Multi-trip annual: €60–100</li>
+            <li>24/7 multilingual support</li>
+          </ul>
+          <a href="https://www.allianzglobal.com" target="_blank" rel="noopener" style="display: inline-block; padding: 0.7rem 1.5rem; background: var(--red); color: white; text-decoration: none; border-radius: 6px; font-weight: 700; font-size: 0.9rem;">Get Quote →</a>
+        </div>
+
+        <div style="background: var(--white); border: 1px solid var(--border); padding: 1.8rem; border-radius: 12px;">
+          <h3 style="color: var(--navy); margin-bottom: 0.5rem;">Europ Assistance</h3>
+          <p style="font-size: 0.9rem; color: var(--muted); margin-bottom: 1rem;"><strong>Best for:</strong> Expat-focused, travel extensions, and assistance services.</p>
+          <ul style="font-size: 0.9rem; margin-bottom: 1rem;">
+            <li>Medical emergency: €300,000+</li>
+            <li>Repatriation included</li>
+            <li>Multi-trip annual: €45–75</li>
+            <li>Trip extension up to 60 days</li>
+          </ul>
+          <a href="https://www.europ-assistance.co.uk" target="_blank" rel="noopener" style="display: inline-block; padding: 0.7rem 1.5rem; background: var(--red); color: white; text-decoration: none; border-radius: 6px; font-weight: 700; font-size: 0.9rem;">Get Quote →</a>
+        </div>
+
+        <div style="background: var(--white); border: 1px solid var(--border); padding: 1.8rem; border-radius: 12px;">
+          <h3 style="color: var(--navy); margin-bottom: 0.5rem;">Seguros a leading private insurer</h3>
+          <p style="font-size: 0.9rem; color: var(--muted); margin-bottom: 1rem;"><strong>Best for:</strong> Spain-specific coverage, local provider, bundling with health insurance.</p>
+          <ul style="font-size: 0.9rem; margin-bottom: 1rem;">
+            <li>Integrated with Spanish health insurance</li>
+            <li>Medical emergency: €250,000–€1,000,000</li>
+            <li>Multi-trip annual: €35–60</li>
+            <li>Spanish customer service</li>
+          </ul>
+          <a href="https://www.a leading private insurer.es" target="_blank" rel="noopener" style="display: inline-block; padding: 0.7rem 1.5rem; background: var(--red); color: white; text-decoration: none; border-radius: 6px; font-weight: 700; font-size: 0.9rem;">Get Quote →</a>
+        </div>
+
+        <div style="background: var(--white); border: 1px solid var(--border); padding: 1.8rem; border-radius: 12px;">
+          <h3 style="color: var(--navy); margin-bottom: 0.5rem;">a leading private insurer Assistance</h3>
+          <p style="font-size: 0.9rem; color: var(--muted); margin-bottom: 1rem;"><strong>Best for:</strong> Budget-conscious travelers with solid coverage.</p>
+          <ul style="font-size: 0.9rem; margin-bottom: 1rem;">
+            <li>Medical emergency: €250,000+</li>
+            <li>Repatriation available</li>
+            <li>Multi-trip annual: €30–50</li>
+            <li>Baggage & personal cover included</li>
+          </ul>
+          <a href="https://www.a leading private insurer.com/en/travel-insurance" target="_blank" rel="noopener" style="display: inline-block; padding: 0.7rem 1.5rem; background: var(--red); color: white; text-decoration: none; border-radius: 6px; font-weight: 700; font-size: 0.9rem;">Get Quote →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Broker Partner Band ─────────────────────────────────── -->
+  <section class="msv__broker-band" id="brokers">
+    <div class="msv__container">
+      <div class="msv__broker-band-hd">
+        <h2>Specialist Brokers for NLV Travel Insurance</h2>
+        <p>Our partner brokers help English-speaking expats find the right travel insurance for their needs — including NLV-compliant coverage and Schengen travel protection.</p>
+      </div>
+      <div class="msv__broker-cards">
+        <div class="msv__broker-card">
+          <span class="msv__broker-card-tag">Expat Travel Specialists</span>
+          <h3>247 Expat Insurance</h3>
+          <p>Specialist insurance broker for expats traveling through Spain and Europe. Access travel insurance plans from all major providers, with English-speaking advisers who understand NLV requirements and can recommend the right coverage for your situation.</p>
+          <a href="https://www.247expatinsurance.com/myspanishvisa" target="_blank" rel="noopener" class="msv__broker-card-btn">Get a Quote →</a>
+        </div>
+
+        <div class="msv__broker-card">
+          <span class="msv__broker-card-tag">Spanish Insurance Partners</span>
+          <h3>Spanish Health Insurance</h3>
+          <p>Exclusive travel insurance and health coverage combinations for NLV holders and expats. Bundles travel insurance with your residential health insurance for seamless coverage before, during, and after your Spanish visa journey.</p>
+          <a href="https://www.spanish-healthinsurance.com/myspanishvisa" target="_blank" rel="noopener" class="msv__broker-card-btn">Get a Quote →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Schengen Travel Insurance ─────────────────────────── -->
+  <section class="msv__section">
+    <div class="msv__container">
+      <div class="msv__section-hd">
+        <h2>Travel Insurance for Schengen Travel</h2>
+        <p>If you're planning to travel to other Schengen countries from Spain, here's what you need to know.</p>
+      </div>
+
+      <div class="msv__alert msv__alert--info">
+        <span class="msv__alert-icon">ℹ️</span>
+        <p><strong>Who needs it:</strong> While EU/EEA citizens (including NLV holders) don't need travel insurance for visa-free Schengen travel, travel insurance is highly recommended for medical protection and trip coverage. Some Schengen countries encourage (but don't require) proof of €30,000–€100,000 medical cover.</p>
+      </div>
+
+      <h3 style="margin-top: 2rem; margin-bottom: 1rem;">Schengen Countries You Can Visit from Spain:</h3>
+      <p style="margin-bottom: 1.5rem;">As an NLV holder, you can travel visa-free to any Schengen country for up to 90 days in any 180-day period. These include:</p>
+
+      <ul style="columns: 2; gap: 2rem; margin-bottom: 2rem;">
+        <li>Austria, Belgium, Czech Republic, Denmark, Estonia, Finland</li>
+        <li>France, Germany, Greece, Hungary, Iceland, Italy</li>
+        <li>Latvia, Liechtenstein, Lithuania, Luxembourg, Malta, Netherlands</li>
+        <li>Norway, Poland, Portugal, Slovakia, Slovenia, Sweden, Switzerland</li>
+      </ul>
+
+      <div style="background: var(--cream); padding: 2rem; border-radius: 12px; border-left: 4px solid var(--red); margin-bottom: 2rem;">
+        <h3 style="color: var(--navy); margin-bottom: 0.5rem;">Travel Insurance Checklist for Schengen Trips:</h3>
+        <ul style="margin: 0;">
+          <li>Medical emergency cover of at least €250,000 (€30,000 minimum for visa requirements)</li>
+          <li>Repatriation coverage to Spain or home country</li>
+          <li>Trip cancellation & baggage protection</li>
+          <li>Valid for all Schengen countries you plan to visit</li>
+          <li>Duration covering your entire trip length</li>
+          <li>24/7 emergency assistance with English support</li>
+        </ul>
+      </div>
+
+      <p style="color: var(--muted); font-size: 0.95rem;"><strong>Important:</strong> Your travel insurance must cover the entire duration of your Schengen trip. If you're traveling for 45 days, your policy must be valid for at least 45 days. Single-trip policies usually have a maximum of 31–90 days, while annual multi-trip policies cover multiple shorter trips.</p>
+    </div>
+  </section>
+
+  <!-- ── Multi-Trip & Annual Policies ──────────────────────── -->
+  <section class="msv__section--cream">
+    <div class="msv__container">
+      <div class="msv__section-hd">
+        <h2>Multi-Trip vs Single-Trip: Making the Right Choice</h2>
+        <p>Calculate what makes sense for your travel style.</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 2rem;">
+        <div style="background: var(--white); padding: 1.8rem; border-radius: 12px; border: 1px solid var(--border);">
+          <h3 style="color: var(--navy); margin-bottom: 1rem;">Single-Trip Insurance</h3>
+          <p style="font-size: 0.9rem; margin-bottom: 0.5rem;"><strong>Cost per trip:</strong> €20–40</p>
+          <p style="font-size: 0.9rem; margin-bottom: 1rem;"><strong>Your annual spend on 3 trips:</strong> €60–120</p>
+          <div style="background: var(--cream); padding: 1rem; border-radius: 8px; font-size: 0.88rem;">
+            <p><strong>When to use:</strong></p>
+            <ul style="margin: 0; font-size: 0.88rem;">
+              <li>Occasional traveler (1–2 trips/year)</li>
+              <li>Different trip lengths</li>
+              <li>Spontaneous travel planning</li>
+            </ul>
+          </div>
+        </div>
+
+        <div style="background: var(--white); padding: 1.8rem; border-radius: 12px; border: 1px solid var(--border);">
+          <h3 style="color: var(--navy); margin-bottom: 1rem;">Multi-Trip Annual</h3>
+          <p style="font-size: 0.9rem; margin-bottom: 0.5rem;"><strong>Cost per year:</strong> €50–90</p>
+          <p style="font-size: 0.9rem; margin-bottom: 1rem;"><strong>Your annual spend on 3+ trips:</strong> €50–90</p>
+          <div style="background: var(--cream); padding: 1rem; border-radius: 8px; font-size: 0.88rem;">
+            <p><strong>When to use:</strong></p>
+            <ul style="margin: 0; font-size: 0.88rem;">
+              <li>Regular traveler (3+ trips/year)</li>
+              <li>Similar trip lengths (up to 31–90 days)</li>
+              <li>Planning ahead for the year</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div style="background: #f0fdf4; border-left: 4px solid #22c55e; padding: 1.5rem; border-radius: 8px; margin-bottom: 2rem;">
+        <p style="margin: 0;"><strong style="color: var(--navy);">Recommendation for NLV Holders:</strong> Get a multi-trip annual policy right when you arrive in Spain. Cover your initial arrival transition period, all your Schengen travels, and trips back to your home country — all for €50–90/year. This is the most cost-effective option.</p>
+      </div>
+
+      <h3 style="margin-bottom: 1rem;">Sample Calculation:</h3>
+      <table class="msv__compare-table">
+        <thead>
+          <tr>
+            <th>Scenario</th>
+            <th>Single-Trip Cost</th>
+            <th>Annual Multi-Trip Cost</th>
+            <th>Savings</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="compare-feature">3 trips per year (25 days each)</td>
+            <td>€75 (€25 × 3)</td>
+            <td>€60</td>
+            <td style="color: #22c55e; font-weight: 700;">Save €15</td>
+          </tr>
+          <tr>
+            <td class="compare-feature">6 trips per year (15 days each)</td>
+            <td>€120 (€20 × 6)</td>
+            <td>€70</td>
+            <td style="color: #22c55e; font-weight: 700;">Save €50</td>
+          </tr>
+          <tr>
+            <td class="compare-feature">10 trips per year (10 days each)</td>
+            <td>€200 (€20 × 10)</td>
+            <td>€80</td>
+            <td style="color: #22c55e; font-weight: 700;">Save €120</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ── FAQs ──────────────────────────────────────────────── -->
+  <section class="msv__section" id="faq">
+    <div class="msv__container">
+      <div class="msv__section-hd">
+        <h2>Frequently Asked Questions</h2>
+        <p>Get answers to the most common questions about travel insurance for NLV holders.</p>
+      </div>
+
+      <div class="msv__faq-list">
+        <details>
+          <summary>Is travel insurance required for the Non-Lucrative Visa?</summary>
+          <div class="msv__faq-answer">
+            <p>No — travel insurance is not a visa requirement. However, <strong>health insurance is mandatory</strong> for the NLV (€50–150/month). Travel insurance is recommended as a supplementary policy, especially for your initial arrival, Schengen travel, and emergency medical evacuation. Think of it as an add-on layer of protection, not a visa requirement.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>What's the difference between travel insurance and health insurance?</summary>
+          <div class="msv__faq-answer">
+            <p><strong>Health insurance</strong> covers routine and emergency medical care in Spain — doctor visits, prescriptions, hospital stays. It's required for the NLV and is ongoing, continuous coverage.</p>
+            <p><strong>Travel insurance</strong> is temporary coverage (1–365 days) that covers emergencies while traveling, trip cancellation, baggage loss, and repatriation. It does <em>not</em> cover routine healthcare and cannot replace health insurance for visa purposes.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Can I use my UK EHIC or GHIC card as travel insurance?</summary>
+          <div class="msv__faq-answer">
+            <p>No. The EHIC (European Health Insurance Card) and UK GHIC are designed for temporary travelers visiting other countries, not permanent residents. Once you become a legal resident in Spain, these cards are no longer valid. You must hold Spanish residential health insurance plus travel insurance for trips outside Spain. Check your card's terms — it typically says "not valid for persons taking up residence."</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Do I need travel insurance for my initial arrival in Spain?</summary>
+          <div class="msv__faq-answer">
+            <p>Yes, you should have travel insurance from the moment you book your flight. Your residential health insurance may not be active until after you've registered with Spanish authorities and received your NIE. Travel insurance bridges the gap between arrival and when your health insurance activates — typically the first 30–90 days. After that, it becomes supplementary for trips outside Spain.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>What does repatriation coverage mean and why is it important?</summary>
+          <div class="msv__faq-answer">
+            <p>Repatriation coverage pays for you to be medically transported back to your home country or nearest appropriate facility if you suffer a serious medical emergency abroad that can't be treated locally. This includes emergency air transport, medical escorts, and related costs. For NLV holders, this is crucial because emergency evacuation can cost €100,000+. It's one of the most valuable parts of travel insurance.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>How much does travel insurance cost for NLV holders?</summary>
+          <div class="msv__faq-answer">
+            <p><strong>Single-trip policies:</strong> €15–40 per trip (1–31 days)</p>
+            <p><strong>Multi-trip annual policies:</strong> €30–80 per year (unlimited trips up to 365 days)</p>
+            <p><strong>Resident travel insurance:</strong> €50–120 per year (higher limits, better expat coverage)</p>
+            <p>For most NLV holders, a multi-trip annual policy (€50–70/year) is the most cost-effective option, especially if you travel more than 2–3 times per year.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Will travel insurance cover me during my NLV visa renewal?</summary>
+          <div class="msv__faq-answer">
+            <p>You <em>should not</em> travel during visa renewal processing. However, if you do travel while your renewal is pending, travel insurance will cover you. Keep your travel insurance continuous while your renewal application is being reviewed, just as a safety precaution.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>What medical cover limit do I need for Schengen travel?</summary>
+          <div class="msv__faq-answer">
+            <p>While not strictly required for EU/EEA citizens like NLV holders, Schengen countries typically encourage (and some technically require) proof of medical cover of at least €30,000–€100,000. Most travel insurance policies offer €250,000+ medical emergency cover, which far exceeds these minimums. Always aim for at least €250,000 in medical cover for peace of mind.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CTA Band ───────────────────────────────────────────── -->
+  <section class="msv__cta-band">
+    <div class="msv__container">
+      <h2>Get Your Travel Insurance Today</h2>
+      <p>Don't leave your Schengen travels unprotected. Find the right policy for your NLV needs — recommended coverage starts at €50–70 per year for multi-trip policies.</p>
+      <div class="msv__btn-group">
+        <a href="#brokers" class="msv__btn msv__btn--primary">Find a Broker</a>
+        <a href="/non-lucrative-visa-health-insurance/" class="msv__btn msv__btn--outline-white">Compare Health Insurance</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Related Guides ─────────────────────────────────────── -->
+  <section class="msv__section--cream">
+    <div class="msv__container">
+      <div class="msv__section-hd">
+        <h2>Related Guides & Resources</h2>
+        <p>Explore more information about healthcare, visa requirements, and living in Spain as an NLV holder.</p>
+      </div>
+
+      <div class="msv__related">
+        <a href="/non-lucrative-visa-spain/" class="msv__related-card">
+          <span class="msv__related-icon">🎯</span>
+          <span class="msv__related-title">Non-Lucrative Visa Spain</span>
+          <span class="msv__related-desc">Complete guide to visa requirements, timeline, costs, and benefits.</span>
+        </a>
+
+        <a href="/non-lucrative-visa-health-insurance/" class="msv__related-card">
+          <span class="msv__related-icon">🏥</span>
+          <span class="msv__related-title">Health Insurance for NLV</span>
+          <span class="msv__related-desc">Mandatory health insurance requirements and the best providers for NLV holders.</span>
+        </a>
+
+        <a href="/best-health-insurance-nlv-spain/" class="msv__related-card">
+          <span class="msv__related-icon">✅</span>
+          <span class="msv__related-title">Best Health Insurance Policies</span>
+          <span class="msv__related-desc">Compare the top-rated providers with no co-payment and visa-approved coverage.</span>
+        </a>
+
+        <a href="/guide/healthcare-spain/" class="msv__related-card">
+          <span class="msv__related-icon">📖</span>
+          <span class="msv__related-title">Healthcare in Spain Guide</span>
+          <span class="msv__related-desc">How to access public and private healthcare as a foreign resident.</span>
+        </a>
+
+        <a href="/non-lucrative-visa-requirements/" class="msv__related-card">
+          <span class="msv__related-icon">📋</span>
+          <span class="msv__related-title">NLV Requirements</span>
+          <span class="msv__related-desc">Income requirements, documentation, and visa application process.</span>
+        </a>
+
+        <a href="/no-copay-health-insurance-nlv/" class="msv__related-card">
+          <span class="msv__related-icon">💎</span>
+          <span class="msv__related-title">No Co-pay Health Insurance</span>
+          <span class="msv__related-desc">Find policies with zero co-payment that meet NLV visa requirements.</span>
+        </a>
+
+        <a href="/travel-during-nlv-renewal/" class="msv__related-card">
+          <span class="msv__related-icon">✈️</span>
+          <span class="msv__related-title">Travel During Renewal</span>
+          <span class="msv__related-desc">Can you leave Spain while your NLV is being renewed?</span>
+        </a>
+
+        <a href="/non-lucrative-visa-renewal/" class="msv__related-card">
+          <span class="msv__related-icon">🔄</span>
+          <span class="msv__related-title">NLV Renewal Guide</span>
+          <span class="msv__related-desc">How to renew your Non-Lucrative Visa every 2–5 years.</span>
+        </a>
+        <a href="/nlv-health-insurance-mistakes/" class="msv__related-card">
+          <span class="msv__related-icon">⚠️</span>
+          <span class="msv__related-title">Insurance Mistakes to Avoid</span>
+          <span class="msv__related-desc">Common health insurance errors that cause NLV visa rejections.</span>
+        </a>
+        <a href="/non-lucrative-visa-cost/" class="msv__related-card">
+          <span class="msv__related-icon">💵</span>
+          <span class="msv__related-title">NLV Cost Breakdown</span>
+          <span class="msv__related-desc">Full costs including insurance, fees, and living expenses in Spain.</span>
+        </a>
+        <a href="/non-lucrative-visa-documents/" class="msv__related-card">
+          <span class="msv__related-icon">📄</span>
+          <span class="msv__related-title">Required Documents</span>
+          <span class="msv__related-desc">Complete document checklist for your NLV application.</span>
+        </a>
+        <a href="/non-lucrative-visa-renewal-health-insurance/" class="msv__related-card">
+          <span class="msv__related-icon">🏥</span>
+          <span class="msv__related-title">Renewal Insurance</span>
+          <span class="msv__related-desc">Insurance requirements when renewing your NLV in Spain.</span>
+        </a>
+        <a href="/non-lucrative-visa-income-requirements/" class="msv__related-card">
+          <span class="msv__related-icon">💰</span>
+          <span class="msv__related-title">Income Requirements</span>
+          <span class="msv__related-desc">IPREM thresholds and financial proof needed for your visa.</span>
+        </a>
+        <a href="/non-lucrative-visa-faq/" class="msv__related-card">
+          <span class="msv__related-icon">❓</span>
+          <span class="msv__related-title">NLV FAQ</span>
+          <span class="msv__related-desc">Answers to the most common NLV questions.</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+<!-- FRAGMENT_END -->
+</main>
+
+
+<!-- ═══════════════════════════════════════════════════
+     SITE FOOTER
+     ═══════════════════════════════════════════════════ -->
+<footer class="msv-footer" role="contentinfo">
+
+  <div class="msv-footer__top">
+
+    <!-- Brand column -->
+    <div class="msv-footer__brand">
+      <a href="/" class="msv-footer__logo" aria-label="My Spanish Visa"><img src="/assets/images/msv-logo-white.png" alt="My Spanish Visa" height="40" style="display:block;"></a>
+      <p class="msv-footer__tagline">
+        Specialist Spain visa &amp; residency guidance for English-speaking foreigners.
+        A service of Platinum Legal Spain.
+      </p>
+      <div class="msv-footer__trust">
+        <span class="msv-footer__trust-item">All English. No barriers.</span>
+        <span class="msv-footer__trust-item">Solicitors &amp; immigration specialists</span>
+        <span class="msv-footer__trust-item">100% online process</span>
+      </div>
+    </div>
+
+    <!-- Visas column -->
+    <div>
+      <div class="msv-footer__col-title">Visas</div>
+      <ul class="msv-footer__links">
+        <li><a href="/non-lucrative-visa-spain/">Non-Lucrative Visa</a></li>
+        <li><a href="/digital-nomad-visa-spain/">Digital Nomad Visa</a></li>
+        <li><a href="/student-visa-spain/">Student Visa</a></li>
+        <li><a href="/spain-visa-renewal/">Visa Renewals</a></li>
+        <li><a href="/best-visa-move-to-spain/">Compare All Visas</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/nlv">Apply: NLV</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/dnv">Apply: DNV</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/student-visa">Apply: Student Visa</a></li>
+      </ul>
+    </div>
+
+    <!-- Resources column -->
+    <div>
+      <div class="msv-footer__col-title">Resources</div>
+      <ul class="msv-footer__links">
+        <li><a href="/blog/">Blog &amp; Guides</a></li>
+        <li><a href="/move-to-spain/">Move to Spain Guide</a></li>
+        <li><a href="/visa-eligibility-quiz/">Eligibility Quiz</a></li>
+        <li><a href="/spain-visa-checklist/">Document Checklists</a></li>
+        <li><a href="/spain-visa-requirements/">Visa Requirements</a></li>
+        <li><a href="/spain-nie-number/">NIE Number Guide</a></li>
+        <li><a href="/spain-tie-card/">TIE Card Guide</a></li>
+      </ul>
+    </div>
+
+    <!-- Company column -->
+    <div>
+      <div class="msv-footer__col-title">Company</div>
+      <ul class="msv-footer__links">
+        <li><a href="/about-us/">About Us</a></li>
+        <li><a href="/testimonials/">Client Reviews</a></li>
+        <li><a href="/why-choose-us/">Why Choose Us</a></li>
+        <li><a href="/contact-us.html">Contact</a></li>
+        <li><a href="https://www.platinumlegalspain.com" rel="noopener">Platinum Legal Spain</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/nlv">Client Portal</a></li>
+      </ul>
+    </div>
+
+  </div><!-- /.msv-footer__top -->
+
+  <div class="msv-footer__bottom">
+    <div class="msv-footer__bottom-inner">
+      <p class="msv-footer__disclaimer">
+        <strong style="color:rgba(255,255,255,0.5);">Disclaimer:</strong>
+        My Spanish Visa provides visa processing support and is not a law firm. Content on this site is for informational purposes only and does not constitute legal advice. Immigration rules change frequently — always verify requirements with official sources or a qualified specialist. My Spanish Visa is a trading name of Platinum Legal Spain.
+      </p>
+      <span class="msv-footer__copyright">© 2026 My Spanish Visa. All rights reserved.</span>
+    </div>
+  </div>
+
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,1192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- ═══════════════════════════════════════════════════════════════════
+       PAGE-SPECIFIC HEAD — replace block below per page:
+       <title>Guide Healthcare Spain | My Spanish Visa</title>
+       <meta name="description" content="…">
+       <meta property="og:title" content="…">
+       <meta property="og:description" content="…">
+       <meta property="og:url" content="https://www.myspanishvisa.com/…">
+       <meta property="og:image" content="…">
+       <link rel="canonical" href="https://www.myspanishvisa.com/…">
+       <script type="application/ld+json">…</script>
+       ═══════════════════════════════════════════════════════════════════ -->
+  <title>My Spanish Visa — Spain Visa &amp; Residency Specialists</title>
+  <meta name="description" content="My Spanish Visa helps English-speaking foreigners move to Spain. Expert guidance on Non-Lucrative Visa, Digital Nomad Visa, Student Visa, renewals and more.">
+
+  <!-- Shared Open Graph defaults -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="My Spanish Visa">
+  <meta property="og:image" content="https://www.myspanishvisa.com/assets/images/og/og-myspanishvisa-default.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@myspanishvisa">
+
+  <style>
+/* ═══════════════════════════════════════════════════════════════
+   GLOBAL SHELL — nav + footer only.
+   Page-specific CSS lives inside each fragment's own <style> block.
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── iOS overflow safety ── */
+html, body { max-width: 100%; overflow-x: clip; margin: 0; padding: 0; }
+*, *::before, *::after { box-sizing: border-box; }
+
+/* ── Brand tokens (root-level so all fragments inherit) ── */
+:root {
+  --navy:      #0c1930;
+  --navy-mid:  #1a3a5c;
+  --red:       #be0011;
+  --red-deep:  #8c000d;
+  --yellow:    #facf39;
+  --cream:     #f8f7f4;
+  --white:     #ffffff;
+  --black:     #1a1a1a;
+  --muted:     #5a6478;
+  --border:    #dce3ed;
+  --shadow-sm: 0 2px 8px rgba(12,25,48,0.08);
+  --shadow-md: 0 6px 24px rgba(12,25,48,0.13);
+}
+
+body {
+  font-family: 'Inter', 'Segoe UI', system-ui, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.75;
+  color: var(--black);
+  background: #fff;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   SITE NAV
+   ───────────────────────────────────────────────────────────── */
+.msv-nav {
+  position: sticky;
+  top: 0;
+  z-index: 9000;
+  background: var(--navy);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 2px 12px rgba(12,25,48,0.22);
+}
+.msv-nav__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+  gap: 1.5rem;
+}
+
+/* Logo */
+.msv-nav__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+.msv-nav__logo-flag {
+  font-size: 1.3rem;
+  line-height: 1;
+}
+.msv-nav__logo-text {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+.msv-nav__logo-text span {
+  color: var(--yellow);
+}
+
+/* Links */
+.msv-nav__links {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.msv-nav__links > li {
+  position: relative;
+}
+.msv-nav__links > li > a,
+.msv-nav__links > li > button {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.5rem 0.9rem;
+  font-size: 0.87rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.85);
+  text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: color 0.15s, background 0.15s;
+  white-space: nowrap;
+  height: 64px;
+}
+.msv-nav__links > li > a:hover,
+.msv-nav__links > li > button:hover,
+.msv-nav__links > li:focus-within > a,
+.msv-nav__links > li:focus-within > button {
+  color: #fff;
+  background: rgba(255,255,255,0.08);
+}
+.msv-nav__chevron {
+  font-size: 0.65rem;
+  opacity: 0.7;
+  transition: transform 0.2s;
+}
+.msv-nav__links > li:focus-within .msv-nav__chevron,
+.msv-nav__links > li:hover .msv-nav__chevron {
+  transform: rotate(180deg);
+}
+
+/* Dropdown */
+.msv-nav__dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 230px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  box-shadow: var(--shadow-md);
+  padding: 0.5rem 0;
+  z-index: 200;
+}
+.msv-nav__links > li:hover .msv-nav__dropdown,
+.msv-nav__links > li:focus-within .msv-nav__dropdown {
+  display: block;
+}
+.msv-nav__dropdown a {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.6rem 1.1rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--navy);
+  text-decoration: none;
+  transition: background 0.12s;
+}
+.msv-nav__dropdown a:hover {
+  background: var(--cream);
+  color: var(--red);
+}
+.msv-nav__dropdown-icon {
+  width: 24px;
+  height: 24px;
+  background: var(--cream);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+.msv-nav__dropdown-divider {
+  height: 1px;
+  background: var(--border);
+  margin: 0.4rem 0;
+}
+
+/* CTA button */
+.msv-nav__cta {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.55rem 1.2rem;
+  background: var(--red);
+  color: #fff !important;
+  font-size: 0.85rem;
+  font-weight: 700;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.15s, box-shadow 0.15s;
+  white-space: nowrap;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(190,0,17,0.3);
+}
+.msv-nav__cta:hover {
+  background: var(--red-deep);
+  box-shadow: 0 4px 14px rgba(190,0,17,0.4);
+  text-decoration: none;
+}
+
+/* Hamburger */
+.msv-nav__burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.4rem;
+  border-radius: 5px;
+}
+.msv-nav__burger span {
+  width: 22px;
+  height: 2px;
+  background: #fff;
+  border-radius: 2px;
+  transition: transform 0.2s, opacity 0.2s;
+  display: block;
+}
+
+/* Mobile nav */
+.msv-nav__mobile {
+  display: none;
+  flex-direction: column;
+  background: var(--navy-mid);
+  padding: 1rem 1.5rem 1.5rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+.msv-nav__mobile.open { display: flex; }
+.msv-nav__mobile a {
+  padding: 0.65rem 0;
+  color: rgba(255,255,255,0.9);
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+.msv-nav__mobile a:hover { color: var(--yellow); }
+.msv-nav__mobile .msv-nav__mobile-sub {
+  padding-left: 1rem;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: rgba(255,255,255,0.7);
+}
+.msv-nav__mobile-cta {
+  margin-top: 1rem;
+  background: var(--red);
+  color: #fff !important;
+  border-radius: 6px;
+  text-align: center;
+  padding: 0.75rem 1rem !important;
+  border-bottom: none !important;
+}
+
+@media (max-width: 900px) {
+  .msv-nav__links { display: none; }
+  .msv-nav__cta { display: none; }
+  .msv-nav__burger { display: flex; }
+}
+@media (max-width: 480px) {
+  .msv-nav__inner { padding: 0 1rem; }
+}
+
+/* ─────────────────────────────────────────────────────────────
+   SITE FOOTER
+   ───────────────────────────────────────────────────────────── */
+.msv-footer {
+  background: var(--navy);
+  color: rgba(255,255,255,0.75);
+  overflow-x: clip;
+}
+.msv-footer__top {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem 3rem;
+  display: grid;
+  grid-template-columns: 280px 1fr 1fr 1fr;
+  gap: 3rem;
+}
+@media (max-width: 900px) {
+  .msv-footer__top { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
+}
+@media (max-width: 560px) {
+  .msv-footer__top { grid-template-columns: 1fr; gap: 2rem; padding: 3rem 1.2rem 2rem; }
+}
+
+.msv-footer__brand {}
+.msv-footer__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  margin-bottom: 1rem;
+}
+.msv-footer__logo-flag { font-size: 1.3rem; }
+.msv-footer__logo-text {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -0.01em;
+}
+.msv-footer__logo-text span { color: var(--yellow); }
+.msv-footer__tagline {
+  font-size: 0.83rem;
+  color: rgba(255,255,255,0.55);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+.msv-footer__trust {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+.msv-footer__trust-item {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.65);
+}
+.msv-footer__trust-item::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  background: var(--yellow);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.msv-footer__col-title {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.4);
+  margin-bottom: 1rem;
+}
+.msv-footer__links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.msv-footer__links a {
+  font-size: 0.87rem;
+  color: rgba(255,255,255,0.68);
+  text-decoration: none;
+  transition: color 0.15s;
+  display: inline-block;
+}
+.msv-footer__links a:hover {
+  color: var(--yellow);
+  text-decoration: none;
+}
+
+.msv-footer__bottom {
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+.msv-footer__bottom-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 1rem;
+  justify-content: space-between;
+}
+.msv-footer__disclaimer {
+  font-size: 0.73rem;
+  color: rgba(255,255,255,0.35);
+  line-height: 1.65;
+  max-width: 720px;
+}
+.msv-footer__copyright {
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.35);
+  white-space: nowrap;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   MAIN CONTENT AREA
+   ───────────────────────────────────────────────────────────── */
+main {
+  /* Fragments are self-contained; this wrapper just provides flow context */
+  position: relative;
+}
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════
+     SITE NAVIGATION
+     ═══════════════════════════════════════════════════ -->
+<header class="msv-nav" role="banner">
+  <div class="msv-nav__inner">
+
+    <!-- Logo -->
+    <a href="/" class="msv-nav__logo" aria-label="My Spanish Visa — Home"><img src="/assets/images/msv-logo-white.png" alt="My Spanish Visa" height="80" style="display:block;"></a>
+
+    <!-- Desktop links -->
+    <nav aria-label="Main navigation">
+      <ul class="msv-nav__links">
+
+        <li>
+          <button class="msv-nav__dropdown-trigger" aria-haspopup="true" aria-expanded="false">
+            Visas <span class="msv-nav__chevron">▾</span>
+          </button>
+          <div class="msv-nav__dropdown" role="menu">
+            <a href="/non-lucrative-visa-spain/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🏖️</span>Non-Lucrative Visa
+            </a>
+            <a href="/digital-nomad-visa-spain/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">💻</span>Digital Nomad Visa
+            </a>
+            <a href="/student-visa-spain/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🎓</span>Student Visa
+            </a>
+            <div class="msv-nav__dropdown-divider"></div>
+            <a href="/spain-visa-renewal/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🔄</span>Visa Renewals
+            </a>
+            <a href="/best-visa-move-to-spain/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">⚖️</span>Compare All Visas
+            </a>
+          </div>
+        </li>
+
+        <li>
+          <button aria-haspopup="true" aria-expanded="false">
+            Resources <span class="msv-nav__chevron">▾</span>
+          </button>
+          <div class="msv-nav__dropdown" role="menu">
+            <a href="/blog/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">📝</span>Blog &amp; Guides
+            </a>
+            <a href="/spain-visa-checklist/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">✅</span>Document Checklists
+            </a>
+            <a href="/move-to-spain/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🏠</span>Move to Spain Guide
+            </a>
+            <a href="/visa-eligibility-quiz/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🧭</span>Eligibility Quiz
+            </a>
+          </div>
+        </li>
+
+        <li><a href="/about-us/">About Us</a></li>
+        <li><a href="/testimonials/">Reviews</a></li>
+        <li><a href="/contact-us.html">Contact</a></li>
+
+      </ul>
+    </nav>
+
+    <!-- Desktop CTA -->
+    <a href="https://dashboard.platinumlegalspain.com/nlv" class="msv-nav__cta">
+      Start My Application →
+    </a>
+
+    <!-- Hamburger (mobile) -->
+    <button class="msv-nav__burger" aria-label="Open menu" aria-expanded="false" onclick="
+      var m=document.querySelector('.msv-nav__mobile');
+      var open=m.classList.toggle('open');
+      this.setAttribute('aria-expanded', open);
+    ">
+      <span></span><span></span><span></span>
+    </button>
+
+  </div><!-- /.msv-nav__inner -->
+
+  <!-- Mobile menu -->
+  <nav class="msv-nav__mobile" aria-label="Mobile navigation">
+    <a href="/non-lucrative-visa-spain/" class="msv-nav__mobile-sub">Non-Lucrative Visa</a>
+    <a href="/digital-nomad-visa-spain/" class="msv-nav__mobile-sub">Digital Nomad Visa</a>
+    <a href="/student-visa-spain/" class="msv-nav__mobile-sub">Student Visa</a>
+    <a href="/spain-visa-renewal/">Visa Renewals</a>
+    <a href="/best-visa-move-to-spain/">Compare All Visas</a>
+    <a href="/blog/">Blog &amp; Guides</a>
+    <a href="/about-us/">About Us</a>
+    <a href="/testimonials/">Reviews</a>
+    <a href="/contact-us.html">Contact</a>
+    <a href="https://dashboard.platinumlegalspain.com/nlv" class="msv-nav__mobile-cta">Start My Application →</a>
+  </nav>
+
+</header>
+
+
+<!-- ═══════════════════════════════════════════════════
+     PAGE CONTENT (fragment injected here)
+     ═══════════════════════════════════════════════════ -->
+<main>
+<!-- FRAGMENT_START -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.myspanishvisa.com/guide/healthcare-spain/",
+      "url": "https://www.myspanishvisa.com/guide/healthcare-spain/",
+      "name": "Healthcare in Spain for Expats 2026: Public, Private & How to Access It | My Spanish Visa",
+      "description": "How Spain's healthcare system works for expats — who can access public healthcare, S1 form for UK pensioners, private health insurance requirements, and registering with a GP.",
+      "inLanguage": "en-GB",
+      "datePublished": "2024-01-01",
+      "dateModified": "2026-04-23",
+      "breadcrumb": { "@id": "https://www.myspanishvisa.com/guide/healthcare-spain/#breadcrumb" },
+      "isPartOf": { "@id": "https://www.myspanishvisa.com/#website" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.myspanishvisa.com/guide/healthcare-spain/#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.myspanishvisa.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Guides", "item": "https://www.myspanishvisa.com/guide/" },
+        { "@type": "ListItem", "position": 3, "name": "Healthcare Spain Expats", "item": "https://www.myspanishvisa.com/guide/healthcare-spain/" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Can Non-Lucrative Visa holders use public healthcare in Spain?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Not automatically. NLV holders must have private health insurance as a condition of their visa — this insurance is the primary healthcare coverage for NLV holders in Spain. After 5 years of continuous residence, NLV holders may become eligible for public healthcare through long-term residence status. Some regions (autonomous communities) have more accessible public healthcare registration routes for legal residents. Until eligible for public health, maintain comprehensive private insurance that complies with NLV requirements." }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the S1 form and who can use it?",
+          "acceptedAnswer": { "@type": "Answer", "text": "The S1 form (formerly E121) is used by UK state pensioners and some pre-retirement UK nationals receiving UK benefits who move to an EU/EEA country. It allows the holder to register for healthcare in Spain, with the costs covered by the UK government rather than by Spain. UK pensioners moving to Spain should apply for the S1 through the UK's Overseas Healthcare Team before leaving the UK. The S1 effectively acts as an alternative to private health insurance for those who qualify." }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I get a SIP card in Spain?",
+          "acceptedAnswer": { "@type": "Answer", "text": "The SIP card (Sistema de Informacion Poblacional) is the health card used in the Valencia region. In other regions it may be called a tarjeta sanitaria or TSI (Tarjeta Sanitaria Individual). To get one, register with your local health centre (centro de salud). Bring your TIE card, padron certificate, and proof of entitlement to public healthcare (employment, S1 form, or regional registration). The card is usually issued on the same day or posted within a few days." }
+        },
+        {
+          "@type": "Question",
+          "name": "What are the best private health insurers in Spain for expats?",
+          "acceptedAnswer": { "@type": "Answer", "text": "The most widely used private health insurers for expats in Spain include established private health insurers in Spain. For NLV visa compliance, ensure your policy has no copayments, no exclusions for pre-existing conditions, and covers at least 30,000 euros. established private health insurers in Spain Global are the most commonly accepted by immigration authorities." }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Spanish healthcare good quality?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Spain consistently ranks among the top 10 healthcare systems in the world. According to the WHO and various international indices, Spain's public healthcare system offers excellent standard of care, highly trained doctors, modern facilities in major cities, and good access to specialist services. Private healthcare in Spain is also of high quality and typically more affordable than equivalent private care in the UK or USA. The main limitation of public healthcare for expats is access (not all legal residents are automatically entitled) and wait times for non-urgent specialist appointments." }
+        },
+        {
+          "@type": "Question",
+          "name": "Are foreigners entitled to emergency treatment in Spain?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes — all people in Spain, regardless of immigration status, are entitled to emergency medical treatment at Spanish public hospitals. Emergency treatment is never refused based on insurance status or residency. For EU nationals, a European Health Insurance Card (EHIC or GHIC for UK nationals) covers emergency treatment. For serious medical emergencies, go to the nearest hospital Urgencias (A&E) department without hesitation." }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I register with a GP in Spain?",
+          "acceptedAnswer": { "@type": "Answer", "text": "To register with a GP (medico de cabecera) in the public system: take your TIE card, padron certificate, and proof of entitlement to public healthcare to your local health centre (centro de salud). You will be assigned a GP based on your registered address. In the private system, simply select your health insurer's app or website, find a GP in your area within the network, and book an appointment — no formal registration process is needed." }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Spanish healthcare cover dental treatment?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Basic dental care (extractions and urgent treatment) is covered by the Spanish public health system. However, routine dental care, fillings, crowns, and orthodontics are generally not covered by public healthcare and must be paid for privately or through a dental insurance add-on. Private dental care in Spain is considerably more affordable than in the UK or USA — a basic filling typically costs 40–80 euros. Many private health insurance policies in Spain include a dental module for an additional premium." }
+        },
+        {
+          "@type": "Question",
+          "name": "What about mental health services in Spain?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Mental health services in Spain's public system are available but can have long waiting times for non-urgent appointments. Public mental health centres (unidades de salud mental) are accessible via referral from your GP. Private mental health care is widely available in major cities, with many English-speaking therapists, psychologists, and psychiatrists. Private health insurance policies often include mental health coverage, though sessions may be limited (typically 20–30 sessions per year)." }
+        },
+        {
+          "@type": "Question",
+          "name": "What are typical healthcare costs in Spain for expats?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Private health insurance for an expat in Spain typically costs 50–150 euros per month depending on age and coverage level. A GP consultation with a private insurer is usually free within the policy; a specialist consultation may have a copayment of 0–20 euros. Prescription medications have a co-payment system in the public sector (typically 10–60% of cost depending on income). Without insurance, private GP consultations cost 50–80 euros; specialist visits 80–200 euros. Hospital stays without insurance can run to thousands of euros per day — comprehensive insurance is essential." }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<!-- Open Graph / Social -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.myspanishvisa.com/guide-healthcare-spain/">
+<meta property="og:title" content="My Spanish Visa">
+<meta property="og:description" content="Expert Spain visa guidance for English-speaking expats.">
+<meta property="og:image" content="https://www.myspanishvisa.com/assets/images/og/og-myspanishvisa-default.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="My Spanish Visa">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@myspanishvisa">
+<meta name="twitter:title" content="My Spanish Visa">
+<meta name="twitter:description" content="Expert Spain visa guidance for English-speaking expats.">
+<meta name="twitter:image" content="https://www.myspanishvisa.com/assets/images/og/og-myspanishvisa-default.jpg">
+
+<style>
+html, body { max-width: 100%; overflow-x: clip; }
+.msv, .msv-nav, .msv-topbar, .msv-footer { max-width: 100%; overflow-x: clip; position: relative; }
+.msv img, .msv video, .msv iframe { max-width: 100%; height: auto; }
+.msv *, .msv *::before, .msv *::after { box-sizing: border-box; margin: 0; padding: 0; }
+.msv {
+  --navy: #0c1930; --navy-mid: #1a3a5c; --red: #be0011; --red-deep: #8c000d;
+  --yellow: #facf39; --cream: #f8f7f4; --white: #ffffff; --muted: #5a6478; --border: #dce3ed;
+  font-family: 'Inter', 'Segoe UI', system-ui, Arial, sans-serif;
+  font-size: 16px; line-height: 1.75; color: #1a1a1a; width: 100%;
+}
+.msv-hero { background: var(--navy); color: var(--white); padding: 72px 24px 64px; text-align: center; }
+.msv-hero-badge { display: inline-block; background: var(--yellow); color: var(--navy); font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; padding: 4px 14px; border-radius: 20px; margin-bottom: 20px; }
+.msv-hero h1 { font-size: clamp(26px, 4.5vw, 44px); font-weight: 800; line-height: 1.2; max-width: 860px; margin: 0 auto 20px; color: var(--white); }
+.msv-hero-sub { font-size: 18px; color: #b8c4d8; max-width: 660px; margin: 0 auto 32px; }
+.msv-hero-meta { display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; font-size: 13px; color: #8fa3be; }
+.msv-breadcrumb { background: var(--cream); padding: 12px 24px; font-size: 13px; color: var(--muted); }
+.msv-breadcrumb a { color: var(--navy); text-decoration: none; }
+.msv-breadcrumb span { margin: 0 6px; }
+.msv-container { max-width: 860px; margin: 0 auto; padding: 0 24px; }
+.msv-section { padding: 56px 24px; }
+.msv-section-alt { background: var(--cream); }
+.msv h2 { font-size: clamp(22px, 3.5vw, 32px); font-weight: 700; color: var(--navy); margin-bottom: 20px; line-height: 1.3; }
+.msv h3 { font-size: 20px; font-weight: 700; color: var(--navy); margin-bottom: 14px; margin-top: 32px; line-height: 1.35; }
+.msv p { margin-bottom: 18px; color: #2a2a2a; }
+.msv p:last-child { margin-bottom: 0; }
+.msv a { color: var(--red); text-decoration: none; }
+.msv a:hover { text-decoration: underline; }
+.msv-steps { display: flex; flex-direction: column; gap: 24px; }
+.msv-step { display: flex; gap: 20px; background: var(--white); border: 1px solid var(--border); border-radius: 12px; padding: 24px; }
+.msv-step-num { min-width: 44px; height: 44px; background: var(--navy); color: var(--yellow); font-size: 18px; font-weight: 800; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.msv-step-body h3 { margin-top: 0; font-size: 18px; }
+.msv-step-body p { font-size: 15px; }
+.msv-checklist { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+.msv-checklist li { display: flex; align-items: flex-start; gap: 12px; background: var(--white); border: 1px solid var(--border); border-radius: 8px; padding: 14px 16px; font-size: 15px; }
+.msv-checklist li::before { content: "✓"; min-width: 22px; height: 22px; background: var(--navy); color: var(--yellow); font-size: 13px; font-weight: 700; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.msv-box { border-radius: 10px; padding: 20px 24px; margin: 24px 0; font-size: 15px; }
+.msv-box-warn { background: #fff3cd; border-left: 4px solid #f5a623; color: #6b4c00; }
+.msv-box-info { background: #e8f0fe; border-left: 4px solid var(--navy); color: var(--navy); }
+.msv-box-green { background: #e8f5e9; border-left: 4px solid #2e7d32; color: #1a4d1e; }
+.msv-box strong { font-weight: 700; }
+.msv-insurers-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 16px; margin: 24px 0; }
+.msv-insurer-card { background: var(--white); border: 1px solid var(--border); border-radius: 10px; padding: 20px; }
+.msv-insurer-card h4 { font-size: 16px; font-weight: 700; color: var(--navy); margin-bottom: 8px; }
+.msv-insurer-card ul { list-style: none; display: flex; flex-direction: column; gap: 5px; }
+.msv-insurer-card li { font-size: 13px; color: #2a2a2a; padding-left: 14px; position: relative; }
+.msv-insurer-card li::before { content: "•"; color: var(--red); position: absolute; left: 0; }
+.msv-cta-band { background: var(--navy); color: var(--white); padding: 56px 24px; text-align: center; }
+.msv-cta-band h2 { color: var(--white); margin-bottom: 12px; }
+.msv-cta-band p { color: #b8c4d8; margin-bottom: 28px; }
+.msv-cta-buttons { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
+.msv-btn { display: inline-block; padding: 14px 28px; border-radius: 6px; font-size: 15px; font-weight: 700; text-decoration: none; transition: opacity .2s, transform .15s; cursor: pointer; }
+.msv-btn:hover { opacity: .88; transform: translateY(-1px); text-decoration: none; }
+.msv-btn-yellow { background: var(--yellow); color: var(--navy); }
+.msv-btn-outline { background: transparent; border: 2px solid var(--yellow); color: var(--yellow); }
+.msv-btn-white { background: var(--white); color: var(--red); }
+.msv-faq { display: flex; flex-direction: column; gap: 12px; }
+.msv-faq-item { border: 1px solid var(--border); border-radius: 10px; overflow: hidden; background: var(--white); }
+.msv-faq-q { width: 100%; background: none; border: none; text-align: left; padding: 18px 20px; font-size: 16px; font-weight: 600; color: var(--navy); cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 12px; line-height: 1.4; font-family: inherit; }
+.msv-faq-q:hover { background: var(--cream); }
+.msv-faq-icon { min-width: 24px; height: 24px; background: var(--navy); color: var(--white); border-radius: 50%; font-size: 16px; font-weight: 700; display: flex; align-items: center; justify-content: center; transition: transform .25s; flex-shrink: 0; }
+.msv-faq-item.open .msv-faq-icon { transform: rotate(45deg); background: var(--red); }
+.msv-faq-a { display: none; padding: 0 20px 20px; font-size: 15px; color: #2a2a2a; line-height: 1.75; border-top: 1px solid var(--border); }
+.msv-faq-item.open .msv-faq-a { display: block; padding-top: 16px; }
+.msv-guides-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 20px; }
+.msv-guide-card { background: var(--white); border: 1px solid var(--border); border-radius: 10px; padding: 20px; text-decoration: none; color: inherit; transition: box-shadow .2s, transform .15s; display: block; }
+.msv-guide-card:hover { box-shadow: 0 4px 20px rgba(12,25,48,.1); transform: translateY(-2px); text-decoration: none; }
+.msv-guide-tag { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .07em; color: var(--red); margin-bottom: 8px; }
+.msv-guide-card h3 { font-size: 16px; color: var(--navy); margin: 0 0 8px; }
+.msv-guide-card p { font-size: 14px; color: var(--muted); margin: 0; }
+.msv-footer-cta { background: var(--red); color: var(--white); padding: 56px 24px; text-align: center; }
+.msv-footer-cta h2 { color: var(--white); font-size: 28px; margin-bottom: 12px; }
+.msv-footer-cta p { color: rgba(255,255,255,.88); margin-bottom: 28px; font-size: 17px; }
+.msv-table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 14px; }
+.msv-table th { background: var(--navy); color: var(--white); padding: 12px 14px; text-align: left; font-weight: 600; }
+.msv-table td { padding: 12px 14px; border-bottom: 1px solid var(--border); vertical-align: top; }
+.msv-table tr:last-child td { border-bottom: none; }
+.msv-table tr:nth-child(even) td { background: var(--cream); }
+@media (max-width: 600px) {
+  .msv-step { flex-direction: column; }
+  .msv-guides-grid, .msv-insurers-grid { grid-template-columns: 1fr; }
+}
+</style>
+
+<div class="msv">
+
+  <section class="msv-hero">
+    <div class="msv-hero-badge">Complete 2026 Guide</div>
+    <h1>Healthcare in Spain for Expats: Public System, Private Insurance, and How to Get Registered</h1>
+    <p class="msv-hero-sub">Who can access Spanish public healthcare, how the S1 form works for UK nationals, the best private insurers, and how to register with a GP.</p>
+    <div class="msv-hero-meta">
+      <span>&#128197; Updated April 2026</span>
+      <span>&#9203; 11 min read</span>
+      <span>&#128101; All expats in Spain</span>
+    </div>
+  </section>
+
+  <nav class="msv-breadcrumb" aria-label="Breadcrumb">
+    <div class="msv-container">
+      <a href="/">Home</a><span>&#8250;</span>
+      <a href="/guide/">Guides</a><span>&#8250;</span>
+      Healthcare Spain Expats
+    </div>
+  </nav>
+
+  <section class="msv-section">
+    <div class="msv-container">
+      <h2>Spain's Healthcare System: An Overview</h2>
+      <p>Spain operates a universal public healthcare system (Sistema Nacional de Salud, or SNS) that is widely regarded as one of the best in the world. The system is funded through general taxation and managed by the 17 autonomous communities (regions), each of which runs its own regional health service. This means there can be notable differences in services, waiting times, and access depending on where in Spain you live.</p>
+      <p>For expats, the key question is not whether Spain's healthcare is good — it undeniably is — but rather <em>how</em> you access it and what your entitlements are depending on your visa status, nationality, and employment situation.</p>
+      <p>The three main routes to healthcare coverage in Spain for expats are: through the public system (for employed workers, those with S1 forms, and certain registered residents), through mandatory private health insurance (required for NLV and DNV holders), and through a combination of both as your status evolves over time.</p>
+
+      <div class="msv-box msv-box-info">
+        <strong>Emergency treatment is universal:</strong> Regardless of your insurance status, visa type, or immigration status, you are always entitled to emergency medical treatment at Spanish public hospitals. Never delay seeking emergency care due to concerns about insurance or residency status.
+      </div>
+
+      <h2>Who Can Access Public Healthcare in Spain?</h2>
+      <p>Entitlement to Spain's public healthcare system depends on your situation. The main groups who can access public healthcare are:</p>
+      <ul class="msv-checklist">
+        <li><strong>Employed workers in Spain</strong> — those paying Spanish social security contributions (autonomos and employees) are automatically entitled to public healthcare</li>
+        <li><strong>Spanish state pensioners and some benefit recipients</strong></li>
+        <li><strong>UK nationals with S1 forms</strong> — UK state pensioners and certain pre-retirement benefit holders can use the S1 to register for Spanish public healthcare with costs covered by the UK</li>
+        <li><strong>EU/EEA nationals using EHIC</strong> — for temporary stays; EHIC covers treatment of emergencies and pre-existing conditions but is not a substitute for residency-based coverage</li>
+        <li><strong>Long-term residents after 5 years</strong> — those who have held legal residency for 5+ years and obtained long-term residence status may become eligible for public healthcare in some regions</li>
+        <li><strong>Children of any registered resident</strong> — children under 18 are universally entitled to public healthcare in Spain regardless of their parents' status</li>
+        <li><strong>Pregnant women</strong> — pregnancy care and childbirth are covered for all women on Spanish territory</li>
+      </ul>
+
+      <div class="msv-box msv-box-warn">
+        <strong>NLV holders:</strong> Non-Lucrative Visa holders are specifically excluded from public healthcare until they qualify for long-term residence. You must maintain comprehensive private health insurance — this is both a visa condition and your primary healthcare coverage.
+      </div>
+    </div>
+  </section>
+
+  <section class="msv-section msv-section-alt">
+    <div class="msv-container">
+      <h2>Private Health Insurance in Spain: What You Need</h2>
+      <p>For Non-Lucrative Visa holders, private health insurance is not optional — it is a legal requirement for obtaining and maintaining the visa. The insurance must meet specific criteria set by Spanish immigration authorities.</p>
+
+      <h3>NLV Health Insurance Requirements</h3>
+      <ul class="msv-checklist">
+        <li><strong>Valid throughout Spain</strong> — must cover the whole of Spain, not just one region</li>
+        <li><strong>No copayments (copagos)</strong> — some policies charge per consultation; immigration officers may reject policies with copayments above a minimal amount</li>
+        <li><strong>No exclusions for pre-existing conditions</strong> — the policy must provide comprehensive coverage including treatment for pre-existing health conditions</li>
+        <li><strong>Minimum coverage of 30,000 euros</strong> — this is the official minimum for Schengen visa requirements and is typically referenced in NLV assessments</li>
+        <li><strong>Issued by an insurer authorised to operate in Spain</strong> — policies from non-Spanish insurers without Spanish regulatory approval may not be accepted</li>
+        <li><strong>Valid for the full duration of the visa</strong> — must cover the entire visa period without gaps</li>
+      </ul>
+
+      <h3>Best Private Health Insurers in Spain for Expats</h3>
+      <div class="msv-insurers-grid">
+        <div class="msv-insurer-card">
+          <h4>a leading private insurer (a leading private insurer)</h4>
+          <ul>
+            <li>Most widely used for NLV applications</li>
+            <li>English-language customer service</li>
+            <li>Large hospital and GP network</li>
+            <li>NLV-compliant policies clearly listed</li>
+            <li>Approximately 80–150 euros/month</li>
+          </ul>
+        </div>
+        <div class="msv-insurer-card">
+          <h4>a leading private insurer</h4>
+          <ul>
+            <li>Market leader by network size</li>
+            <li>Competitive pricing</li>
+            <li>Good specialist access</li>
+            <li>English support available in major cities</li>
+            <li>Approximately 60–130 euros/month</li>
+          </ul>
+        </div>
+        <div class="msv-insurer-card">
+          <h4>a leading private insurer</h4>
+          <ul>
+            <li>Strong coverage in smaller cities and towns</li>
+            <li>Owned by Spanish medical professionals</li>
+            <li>Good value for comprehensive coverage</li>
+            <li>Approximately 55–120 euros/month</li>
+          </ul>
+        </div>
+        <div class="msv-insurer-card">
+          <h4>a leading private insurer Spain</h4>
+          <ul>
+            <li>International insurer with Spanish operations</li>
+            <li>Comprehensive international coverage</li>
+            <li>Good for those with frequent international travel</li>
+            <li>Approximately 80–160 euros/month</li>
+          </ul>
+        </div>
+        <div class="msv-insurer-card">
+          <h4>a leading private insurer</h4>
+          <ul>
+            <li>International expat health insurance</li>
+            <li>Covers Spain and worldwide</li>
+            <li>English-language service throughout</li>
+            <li>NLV-compliant plans available</li>
+            <li>Approximately 100–200 euros/month</li>
+          </ul>
+        </div>
+        <div class="msv-insurer-card">
+          <h4>a leading private insurer</h4>
+          <ul>
+            <li>Major Spanish insurer</li>
+            <li>Extensive regional coverage</li>
+            <li>Good for rural or smaller city residents</li>
+            <li>Competitive pricing for families</li>
+            <li>Approximately 55–120 euros/month</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="msv-box msv-box-green">
+        <strong>Best for NLV applications:</strong> a leading private insurer is the most commonly accepted insurer in NLV applications and renewals across different provinces. When in doubt, a leading private insurer's "Sin Copagos" (no copayment) NLV-specific plan is the safest choice. Always get a certificate of coverage in Spanish stating the policy complies with Spanish immigration requirements.
+      </div>
+    </div>
+  </section>
+
+  <section class="msv-section">
+    <div class="msv-container">
+      <h2>The S1 Form: Healthcare for UK Nationals in Spain</h2>
+      <p>The <strong>S1 form</strong> (formerly called the E121) is a crucial document for certain UK nationals moving to Spain. It allows eligible UK nationals to register for Spanish public healthcare, with costs reimbursed to Spain by the UK government.</p>
+
+      <h3>Who Is Eligible for the S1 Form?</h3>
+      <p>The S1 is available to:</p>
+      <ul style="margin: 10px 0 16px 20px; line-height: 2;">
+        <li>UK state pensioners (those receiving the UK State Pension) who are moving to Spain</li>
+        <li>UK nationals receiving certain UK exportable benefits (such as incapacity benefit) and moving abroad</li>
+        <li>Dependent family members of S1 holders in some circumstances</li>
+      </ul>
+      <p>If you are of working age and moving to Spain to retire on private income (i.e., you are an NLV holder without a UK state pension), you are not eligible for an S1 — you must have private health insurance.</p>
+
+      <h3>How to Apply for the S1 Form</h3>
+      <p>Apply through the UK's Overseas Healthcare Services (OHS) team before you leave the UK. Contact the NHS Business Services Authority or apply online through NHSBSA's overseas healthcare portal. You should receive your S1 certificate within a few weeks. Take the S1 form to your local Spanish social security office (INSS — Instituto Nacional de la Seguridad Social) after arriving in Spain to register your entitlement and obtain your Spanish health card.</p>
+
+      <div class="msv-box msv-box-info">
+        <strong>S1 and the Withdrawal Agreement:</strong> UK nationals who were resident in Spain before 31 December 2020 and are covered by the Withdrawal Agreement may have different healthcare entitlement arrangements than those who moved after that date. If you moved pre-Brexit, verify your specific entitlements with the UK government's overseas healthcare guidance.
+      </div>
+    </div>
+  </section>
+
+  <section class="msv-section msv-section-alt">
+    <div class="msv-container">
+      <h2>How to Register with a GP in Spain</h2>
+      <p>Whether you are accessing public or private healthcare, knowing how to register with a GP is essential for your day-to-day health needs in Spain.</p>
+
+      <h3>Public Healthcare GP Registration</h3>
+      <div class="msv-steps">
+        <div class="msv-step">
+          <div class="msv-step-num">1</div>
+          <div class="msv-step-body">
+            <h3>Confirm Your Eligibility</h3>
+            <p>First confirm that you are entitled to public healthcare (employed worker, S1 holder, long-term resident, child, or pregnant). If you are an NLV holder without employment, you are not entitled to public healthcare until you qualify for long-term residence after 5 years.</p>
+          </div>
+        </div>
+        <div class="msv-step">
+          <div class="msv-step-num">2</div>
+          <div class="msv-step-body">
+            <h3>Find Your Local Health Centre</h3>
+            <p>Your GP (medico de cabecera) will be at the health centre (centro de salud) assigned to your registered address. In Spain, public healthcare is zone-based — you cannot choose your health centre freely; you must use the one that covers your padron address. Look up your assigned health centre through your regional health authority's website.</p>
+          </div>
+        </div>
+        <div class="msv-step">
+          <div class="msv-step-num">3</div>
+          <div class="msv-step-body">
+            <h3>Visit the Health Centre with Your Documents</h3>
+            <p>Go to the health centre's administrative desk (not the clinical consultation area) and ask to register. Bring: TIE card, padron certificate, passport, and your proof of entitlement (employment contract, S1 form, or social security registration confirmation). The registration process usually takes 15–30 minutes.</p>
+          </div>
+        </div>
+        <div class="msv-step">
+          <div class="msv-step-num">4</div>
+          <div class="msv-step-body">
+            <h3>Receive Your Health Card (Tarjeta Sanitaria)</h3>
+            <p>Once registered, you will receive a health card (tarjeta sanitaria individual or TSI) — called a SIP card in the Valencia region. This card shows your assigned GP and health centre and is needed for all appointments, prescriptions, and treatments within the public system. The card is usually issued the same day or posted within a week.</p>
+          </div>
+        </div>
+      </div>
+
+      <h3>Private Healthcare GP Registration</h3>
+      <p>With a private insurer, registering with a GP is simpler. Log into your insurer's app or portal (all major Spanish insurers have English-language apps), search for GPs near your address within their network, choose a GP, and book an appointment directly. No formal registration paperwork is needed — your insurance card number and appointment booking are sufficient.</p>
+    </div>
+  </section>
+
+  <section class="msv-section">
+    <div class="msv-container">
+      <h2>Understanding Spain's Regional Health Systems</h2>
+      <p>Spain's healthcare is managed by 17 autonomous communities. The quality and access can vary between regions, and some services — particularly specialist waiting times — differ significantly.</p>
+
+      <table class="msv-table">
+        <thead>
+          <tr>
+            <th>Region</th>
+            <th>Health Authority</th>
+            <th>Health Card Name</th>
+            <th>Notable Feature</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Andalucia</td><td>SAS</td><td>Tarjeta SAS</td><td>Large region; varies by province</td></tr>
+          <tr><td>Catalonia</td><td>CatSalut</td><td>Tarjeta CatSalut</td><td>Strong public hospital network</td></tr>
+          <tr><td>Madrid</td><td>SERMAS</td><td>Tarjeta Sanitaria Madrid</td><td>Excellent specialist hospitals</td></tr>
+          <tr><td>Valencia</td><td>Conselleria de Sanitat</td><td>Tarjeta SIP</td><td>SIP card system</td></tr>
+          <tr><td>Basque Country</td><td>Osakidetza</td><td>Tarjeta Osakidetza</td><td>Among best-funded in Spain</td></tr>
+          <tr><td>Canary Islands</td><td>SCS</td><td>Tarjeta SCS</td><td>Serves large expat population</td></tr>
+          <tr><td>Balearic Islands</td><td>IB-Salut</td><td>Tarjeta IB-Salut</td><td>English-language services in tourism areas</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="msv-section msv-section-alt">
+    <div class="msv-container">
+      <h2>Specialist Services, Mental Health, and Dental Care</h2>
+
+      <h3>Specialist Appointments in the Public System</h3>
+      <p>To see a specialist in the public system, you typically need a referral from your GP. Waiting times for non-urgent specialist appointments can be considerable in some regions — 2–6 months for some specialties in busy areas. For urgent or potentially serious conditions, the wait is much shorter. Private healthcare provides direct access to specialists without referral and usually with much shorter waiting times (days rather than months).</p>
+
+      <h3>Mental Health Services</h3>
+      <p>Mental health services are available in Spain's public system via referral from your GP to a unidad de salud mental (mental health unit). Wait times for non-urgent cases can be long. Private mental health care is widely available in major cities, with many English-speaking therapists and psychologists. Private health insurance policies typically cover 20–30 therapy sessions per year. Online therapy (via platforms like Talkspace or Spanish equivalents) has also grown significantly and is widely used by expats.</p>
+
+      <h3>Dental Coverage in Spain</h3>
+      <p>The Spanish public health system covers only urgent dental treatment — extractions of teeth causing acute pain and infection treatment. Routine dentistry, fillings, root canals, crowns, and orthodontics are private in Spain. However, private dental care is very affordable compared to the UK or USA — a basic filling costs approximately 40–80 euros, and a dental check-up with cleaning runs 50–80 euros at most private clinics. Adding a dental module to your private health insurance is typically 15–25 euros per month extra and can significantly reduce out-of-pocket dental costs.</p>
+
+      <h3>Prescription Medications</h3>
+      <p>In the public system, prescription medications are available at a co-payment based on your income (typically 10%, 40%, or 60% of the cost, with a maximum cap per month). Pensioners pay reduced rates. In the private system, prescriptions are at full cost unless your insurer covers them. Many common medications are significantly cheaper in Spain than in the UK or USA even at full private price.</p>
+    </div>
+  </section>
+
+  <section class="msv-cta-band">
+    <div class="msv-container">
+      <h2>Need Help Choosing the Right Health Insurance for Your Visa?</h2>
+      <p>Our team helps NLV and DNV applicants find the right health insurance policy for their visa requirements — compliant, comprehensive, and cost-effective.</p>
+      <div class="msv-cta-buttons">
+        <a href="https://dashboard.platinumlegalspain.com/nlv" class="msv-btn msv-btn-yellow">Check My Eligibility</a>
+        <a href="https://dashboard.platinumlegalspain.com/nlv" class="msv-btn msv-btn-outline">Book a Consultation</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="msv-section">
+    <div class="msv-container">
+      <h2>Healthcare in Spain for Expats: Frequently Asked Questions</h2>
+      <div class="msv-faq">
+
+        <div class="msv-faq-item">
+          <button class="msv-faq-q" aria-expanded="false">Can Non-Lucrative Visa holders use public healthcare in Spain?<span class="msv-faq-icon">+</span></button>
+          <div class="msv-faq-a">
+            <p>Not automatically. NLV holders must have private health insurance as a condition of their visa — this insurance is the primary healthcare coverage for NLV holders in Spain. After 5 years of continuous legal residence, NLV holders may become eligible for public healthcare through long-term residence status. Some regions have more accessible public healthcare registration routes for long-term legal residents. Until eligible for public health, maintain comprehensive private insurance that fully complies with NLV requirements.</p>
+          </div>
+        </div>
+
+        <div class="msv-faq-item">
+          <button class="msv-faq-q" aria-expanded="false">What is the S1 form and who can use it?<span class="msv-faq-icon">+</span></button>
+          <div class="msv-faq-a">
+            <p>The S1 form (formerly E121) allows UK state pensioners and some pre-retirement UK nationals receiving UK benefits to register for healthcare in Spain, with costs covered by the UK government. UK pensioners moving to Spain should apply for the S1 through the UK's Overseas Healthcare Team (NHS Business Services Authority) before leaving the UK. The S1 effectively acts as an alternative to private health insurance for those who qualify. If you are of working age moving to Spain on an NLV without a UK state pension, you are not eligible for the S1 and must have private insurance.</p>
+          </div>
+        </div>
+
+        <div class="msv-faq-item">
+          <button class="msv-faq-q" aria-expanded="false">How do I get a SIP card in Spain?<span class="msv-faq-icon">+</span></button>
+          <div class="msv-faq-a">
+            <p>The SIP card is used in the Valencia region. In other regions it may be called a tarjeta sanitaria or TSI. To get one, visit your local health centre (centro de salud) with your TIE card, padron certificate, and proof of entitlement to public healthcare (employment confirmation, S1 form, or social security registration). The card is usually issued on the same day or posted to your registered address within a few days. Children of any registered resident can obtain their health card regardless of the parents' visa status.</p>
+          </div>
+        </div>
+
+        <div class="msv-faq-item">
+          <button class="msv-faq-q" aria-expanded="false">What are the best private health insurers in Spain for expats?<span class="msv-faq-icon">+</span></button>
+          <div class="msv-faq-a">
+            <p>The most widely used private health insurers for expats in Spain are established private health insurers in Spain Global (ideal for internationally mobile expats), and a leading private insurer (strong regional coverage). For NLV visa compliance, choose a policy with no copayments, no exclusions for pre-existing conditions, and at least 30,000 euros coverage. a leading private insurer is the safest choice for NLV applications.</p>
+          </div>
+        </div>
+
+        <div class="msv-faq-item">
+          <button class="msv-faq-q" aria-expanded="false">Is Spanish healthcare good quality?<span class="msv-faq-icon">+</span></button>
+          <div class="msv-faq-a">
+            <p>Spain consistently ranks among the top 10 healthcare systems globally. The public system offers excellent standard of care with highly trained doctors, modern hospital facilities, and good specialist services. Private healthcare in Spain is also of high quality and significantly more affordable than equivalent care in the UK or USA. The main challenges for expats are access entitlements (not all residents qualify for public healthcare immediately) and wait times for non-urgent specialist appointments in the public system. Private insurance largely eliminates the waiting time issue.</p>
+          </div>
+        </div>
+
+        <div class="msv-faq-item">
+          <button class="msv-faq-q" aria-expanded="false">Are foreigners entitled to emergency treatment in Spain?<span class="msv-faq-icon">+</span></button>
+          <div class="msv-faq-a">
+            <p>Yes — all people in Spain, regardless of immigration status, nationality, or insurance coverage, are entitled to emergency medical treatment at Spanish public hospitals. Emergency treatment (urgencias) is never refused based on insurance status or residency documents. For EU nationals, the EHIC or GHIC card covers emergency treatment. For serious medical emergencies, go directly to the nearest hospital urgencias department without any hesitation about your insurance or residency status.</p>
+          </div>
+        </div>
+
+        <div class="msv-faq-item">
+          <button class="msv-faq-q" aria-expanded="false">How do I register with a GP in Spain?<span class="msv-faq-icon">+</span></button>
+          <div class="msv-faq-a">
+            <p>For the public system: take your TIE card, padron certificate, and proof of entitlement to public healthcare to your local health centre (centro de salud). You will be assigned a GP based on your registered address and receive a health card. For private healthcare: log into your insurer's app, search for GPs near your address within their network, choose a GP you prefer, and book directly — no formal registration paperwork is needed. With private insurance, you can book specialist appointments directly without a GP referral.</p>
+          </div>
+        </div>
+
+        <div class="msv-faq-item">
+          <button class="msv-faq-q" aria-expanded="false">Does Spanish healthcare cover dental treatment?<span class="msv-faq-icon">+</span></button>
+          <div class="msv-faq-a">
+            <p>Basic dental care (emergency extractions and infection treatment) is covered by the Spanish public health system. Routine dentistry — fillings, root canals, crowns, and orthodontics — is not covered publicly and must be paid for privately. However, private dental care in Spain is very affordable: a basic filling costs approximately 40–80 euros, and a dental check-up with cleaning runs 50–80 euros. Adding a dental module to your private health insurance typically costs 15–25 euros per month extra and can significantly reduce out-of-pocket dental costs.</p>
+          </div>
+        </div>
+
+        <div class="msv-faq-item">
+          <button class="msv-faq-q" aria-expanded="false">What about mental health services in Spain?<span class="msv-faq-icon">+</span></button>
+          <div class="msv-faq-a">
+            <p>Mental health services in Spain's public system are available but can have long waiting times for non-urgent appointments. Public mental health centres are accessible via GP referral. Private mental health care is widely available in major cities, with many English-speaking therapists, psychologists, and psychiatrists. Private health insurance policies typically cover 20–30 therapy sessions per year. Online therapy platforms have grown significantly and are widely used by expats in Spain for English-language mental health support.</p>
+          </div>
+        </div>
+
+        <div class="msv-faq-item">
+          <button class="msv-faq-q" aria-expanded="false">What are typical healthcare costs in Spain for expats?<span class="msv-faq-icon">+</span></button>
+          <div class="msv-faq-a">
+            <p>Private health insurance for an expat in Spain typically costs 50–150 euros per month depending on age and coverage level. GP consultations within a policy are usually free or very low cost. Without insurance, private GP consultations cost 50–80 euros; specialist visits 80–200 euros. Hospital stays without insurance can cost thousands of euros per day — comprehensive insurance is essential. Prescription medications are generally cheaper in Spain than in the UK or USA even at full private cost. Dental care is very affordable at private clinics. Overall, healthcare costs for insured expats in Spain are significantly lower than in equivalent English-speaking countries.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="msv-section msv-section-alt">
+    <div class="msv-container">
+      <h2>Related Guides</h2>
+      <div class="msv-guides-grid">
+        <a href="/guide/tie-card-spain/" class="msv-guide-card">
+          <div class="msv-guide-tag">Guide</div>
+          <h3>TIE Card Spain</h3>
+          <p>Your TIE card is needed to register with the public health system in Spain.</p>
+        </a>
+        <a href="/guide/empadronamiento-spain/" class="msv-guide-card">
+          <div class="msv-guide-tag">Guide</div>
+          <h3>Empadronamiento Spain</h3>
+          <p>Your padron certificate is required to register with your local health centre.</p>
+        </a>
+        <a href="/guide/bank-account-spain/" class="msv-guide-card">
+          <div class="msv-guide-tag">Guide</div>
+          <h3>Bank Account Spain Foreigner</h3>
+          <p>Set up your Spanish bank account — needed for insurance direct debits.</p>
+        </a>
+        <a href="/non-lucrative-visa-spain/" class="msv-guide-card">
+          <div class="msv-guide-tag">Visa</div>
+          <h3>Non-Lucrative Visa Spain</h3>
+          <p>Health insurance requirements and conditions for the NLV in Spain.</p>
+        </a>
+        <a href="/digital-nomad-visa-spain/" class="msv-guide-card">
+          <div class="msv-guide-tag">Visa</div>
+          <h3>Digital Nomad Visa Spain</h3>
+          <p>Healthcare and insurance requirements for DNV holders in Spain.</p>
+        </a>
+        <a href="/move-to-spain/" class="msv-guide-card">
+          <div class="msv-guide-tag">Service</div>
+          <h3>Move to Spain Service</h3>
+          <p>Full relocation support including insurance recommendations and setup.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  
+<div class="msv-callout" style="margin-top:32px;">
+  <p><strong>Recommended insurance specialists:</strong><br>
+  <a href="https://www.spanish-healthinsurance.com/myspanishvisa" target="_blank" rel="noopener"><strong>Spanish Health Insurance</strong></a> — visa-compliant health insurance for English-speaking foreigners in Spain.<br>
+  <a href="https://www.247expatinsurance.com/myspanishvisa" target="_blank" rel="noopener"><strong>247 Expat Insurance</strong></a> — health and all types of insurance in Spain, tailored for expats.</p>
+</div>
+<section class="msv-footer-cta">
+    <div class="msv-container">
+      <h2>Moving to Spain? We Help With Healthcare and Visas.</h2>
+      <p>Our team guides you through health insurance selection, TIE card applications, and every step of your transition to life in Spain.</p>
+      <div class="msv-cta-buttons">
+        <a href="https://dashboard.platinumlegalspain.com/nlv" class="msv-btn msv-btn-white">Book a Free Consultation</a>
+        <a href="https://dashboard.platinumlegalspain.com/nlv" class="msv-btn msv-btn-outline">Check My Eligibility</a>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<script>
+(function(){
+  var items = document.querySelectorAll('.msv-faq-item');
+  items.forEach(function(item){
+    var btn = item.querySelector('.msv-faq-q');
+    btn.addEventListener('click', function(){
+      var isOpen = item.classList.contains('open');
+      items.forEach(function(i){ i.classList.remove('open'); i.querySelector('.msv-faq-q').setAttribute('aria-expanded','false'); });
+      if(!isOpen){ item.classList.add('open'); btn.setAttribute('aria-expanded','true'); }
+    });
+  });
+})();
+</script>
+
+<!-- FRAGMENT_END -->
+</main>
+
+
+<!-- ═══════════════════════════════════════════════════
+     SITE FOOTER
+     ═══════════════════════════════════════════════════ -->
+<footer class="msv-footer" role="contentinfo">
+
+  <div class="msv-footer__top">
+
+    <!-- Brand column -->
+    <div class="msv-footer__brand">
+      <a href="/" class="msv-footer__logo" aria-label="My Spanish Visa"><img src="/assets/images/msv-logo-white.png" alt="My Spanish Visa" height="40" style="display:block;"></a>
+      <p class="msv-footer__tagline">
+        Specialist Spain visa &amp; residency guidance for English-speaking foreigners.
+        A service of Platinum Legal Spain.
+      </p>
+      <div class="msv-footer__trust">
+        <span class="msv-footer__trust-item">All English. No barriers.</span>
+        <span class="msv-footer__trust-item">Solicitors &amp; immigration specialists</span>
+        <span class="msv-footer__trust-item">100% online process</span>
+      </div>
+    </div>
+
+    <!-- Visas column -->
+    <div>
+      <div class="msv-footer__col-title">Visas</div>
+      <ul class="msv-footer__links">
+        <li><a href="/non-lucrative-visa-spain/">Non-Lucrative Visa</a></li>
+        <li><a href="/digital-nomad-visa-spain/">Digital Nomad Visa</a></li>
+        <li><a href="/student-visa-spain/">Student Visa</a></li>
+        <li><a href="/spain-visa-renewal/">Visa Renewals</a></li>
+        <li><a href="/best-visa-move-to-spain/">Compare All Visas</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/nlv">Apply: NLV</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/dnv">Apply: DNV</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/student-visa">Apply: Student Visa</a></li>
+      </ul>
+    </div>
+
+    <!-- Resources column -->
+    <div>
+      <div class="msv-footer__col-title">Resources</div>
+      <ul class="msv-footer__links">
+        <li><a href="/blog/">Blog &amp; Guides</a></li>
+        <li><a href="/move-to-spain/">Move to Spain Guide</a></li>
+        <li><a href="/visa-eligibility-quiz/">Eligibility Quiz</a></li>
+        <li><a href="/spain-visa-checklist/">Document Checklists</a></li>
+        <li><a href="/spain-visa-requirements/">Visa Requirements</a></li>
+        <li><a href="/spain-nie-number/">NIE Number Guide</a></li>
+        <li><a href="/spain-tie-card/">TIE Card Guide</a></li>
+      </ul>
+    </div>
+
+    <!-- Company column -->
+    <div>
+      <div class="msv-footer__col-title">Company</div>
+      <ul class="msv-footer__links">
+        <li><a href="/about-us/">About Us</a></li>
+        <li><a href="/testimonials/">Client Reviews</a></li>
+        <li><a href="/why-choose-us/">Why Choose Us</a></li>
+        <li><a href="/contact-us.html">Contact</a></li>
+        <li><a href="https://www.platinumlegalspain.com" rel="noopener">Platinum Legal Spain</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/nlv">Client Portal</a></li>
+      </ul>
+    </div>
+
+  </div><!-- /.msv-footer__top -->
+
+  <div class="msv-footer__bottom">
+    <div class="msv-footer__bottom-inner">
+      <p class="msv-footer__disclaimer">
+        <strong style="color:rgba(255,255,255,0.5);">Disclaimer:</strong>
+        My Spanish Visa provides visa processing support and is not a law firm. Content on this site is for informational purposes only and does not constitute legal advice. Immigration rules change frequently — always verify requirements with official sources or a qualified specialist. My Spanish Visa is a trading name of Platinum Legal Spain.
+      </p>
+      <span class="msv-footer__copyright">© 2026 My Spanish Visa. All rights reserved.</span>
+    </div>
+  </div>
+
+</footer>
+
+</body>
+</html>

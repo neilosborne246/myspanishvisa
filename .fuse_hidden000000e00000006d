@@ -1,0 +1,1364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- ═══════════════════════════════════════════════════════════════════
+       PAGE-SPECIFIC HEAD — replace block below per page:
+       <title>Nie Number Spain | My Spanish Visa</title>
+       <meta name="description" content="…">
+       <meta property="og:title" content="…">
+       <meta property="og:description" content="…">
+       <meta property="og:url" content="https://www.myspanishvisa.com/…">
+       <meta property="og:image" content="…">
+       <link rel="canonical" href="https://www.myspanishvisa.com/…">
+       <script type="application/ld+json">…</script>
+       ═══════════════════════════════════════════════════════════════════ -->
+  <title>My Spanish Visa — Spain Visa &amp; Residency Specialists</title>
+  <meta name="description" content="My Spanish Visa helps English-speaking foreigners move to Spain. Expert guidance on Non-Lucrative Visa, Digital Nomad Visa, Student Visa, renewals and more.">
+
+  <!-- Shared Open Graph defaults -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="My Spanish Visa">
+  <meta property="og:image" content="https://www.myspanishvisa.com/assets/images/og/og-myspanishvisa-default.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@myspanishvisa">
+
+  <style>
+/* ═══════════════════════════════════════════════════════════════
+   GLOBAL SHELL — nav + footer only.
+   Page-specific CSS lives inside each fragment's own <style> block.
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── iOS overflow safety ── */
+html, body { max-width: 100%; overflow-x: clip; margin: 0; padding: 0; }
+*, *::before, *::after { box-sizing: border-box; }
+
+/* ── Brand tokens (root-level so all fragments inherit) ── */
+:root {
+  --navy:      #0c1930;
+  --navy-mid:  #1a3a5c;
+  --red:       #be0011;
+  --red-deep:  #8c000d;
+  --yellow:    #facf39;
+  --cream:     #f8f7f4;
+  --white:     #ffffff;
+  --black:     #1a1a1a;
+  --muted:     #5a6478;
+  --border:    #dce3ed;
+  --shadow-sm: 0 2px 8px rgba(12,25,48,0.08);
+  --shadow-md: 0 6px 24px rgba(12,25,48,0.13);
+}
+
+body {
+  font-family: 'Inter', 'Segoe UI', system-ui, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.75;
+  color: var(--black);
+  background: #fff;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   SITE NAV
+   ───────────────────────────────────────────────────────────── */
+.msv-nav {
+  position: sticky;
+  top: 0;
+  z-index: 9000;
+  background: var(--navy);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 2px 12px rgba(12,25,48,0.22);
+}
+.msv-nav__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+  gap: 1.5rem;
+}
+
+/* Logo */
+.msv-nav__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+.msv-nav__logo-flag {
+  font-size: 1.3rem;
+  line-height: 1;
+}
+.msv-nav__logo-text {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+.msv-nav__logo-text span {
+  color: var(--yellow);
+}
+
+/* Links */
+.msv-nav__links {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.msv-nav__links > li {
+  position: relative;
+}
+.msv-nav__links > li > a,
+.msv-nav__links > li > button {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.5rem 0.9rem;
+  font-size: 0.87rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.85);
+  text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: color 0.15s, background 0.15s;
+  white-space: nowrap;
+  height: 64px;
+}
+.msv-nav__links > li > a:hover,
+.msv-nav__links > li > button:hover,
+.msv-nav__links > li:focus-within > a,
+.msv-nav__links > li:focus-within > button {
+  color: #fff;
+  background: rgba(255,255,255,0.08);
+}
+.msv-nav__chevron {
+  font-size: 0.65rem;
+  opacity: 0.7;
+  transition: transform 0.2s;
+}
+.msv-nav__links > li:focus-within .msv-nav__chevron,
+.msv-nav__links > li:hover .msv-nav__chevron {
+  transform: rotate(180deg);
+}
+
+/* Dropdown */
+.msv-nav__dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 230px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  box-shadow: var(--shadow-md);
+  padding: 0.5rem 0;
+  z-index: 200;
+}
+.msv-nav__links > li:hover .msv-nav__dropdown,
+.msv-nav__links > li:focus-within .msv-nav__dropdown {
+  display: block;
+}
+.msv-nav__dropdown a {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.6rem 1.1rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--navy);
+  text-decoration: none;
+  transition: background 0.12s;
+}
+.msv-nav__dropdown a:hover {
+  background: var(--cream);
+  color: var(--red);
+}
+.msv-nav__dropdown-icon {
+  width: 24px;
+  height: 24px;
+  background: var(--cream);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+.msv-nav__dropdown-divider {
+  height: 1px;
+  background: var(--border);
+  margin: 0.4rem 0;
+}
+
+/* CTA button */
+.msv-nav__cta {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.55rem 1.2rem;
+  background: var(--red);
+  color: #fff !important;
+  font-size: 0.85rem;
+  font-weight: 700;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.15s, box-shadow 0.15s;
+  white-space: nowrap;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(190,0,17,0.3);
+}
+.msv-nav__cta:hover {
+  background: var(--red-deep);
+  box-shadow: 0 4px 14px rgba(190,0,17,0.4);
+  text-decoration: none;
+}
+
+/* Hamburger */
+.msv-nav__burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.4rem;
+  border-radius: 5px;
+}
+.msv-nav__burger span {
+  width: 22px;
+  height: 2px;
+  background: #fff;
+  border-radius: 2px;
+  transition: transform 0.2s, opacity 0.2s;
+  display: block;
+}
+
+/* Mobile nav */
+.msv-nav__mobile {
+  display: none;
+  flex-direction: column;
+  background: var(--navy-mid);
+  padding: 1rem 1.5rem 1.5rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+.msv-nav__mobile.open { display: flex; }
+.msv-nav__mobile a {
+  padding: 0.65rem 0;
+  color: rgba(255,255,255,0.9);
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+.msv-nav__mobile a:hover { color: var(--yellow); }
+.msv-nav__mobile .msv-nav__mobile-sub {
+  padding-left: 1rem;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: rgba(255,255,255,0.7);
+}
+.msv-nav__mobile-cta {
+  margin-top: 1rem;
+  background: var(--red);
+  color: #fff !important;
+  border-radius: 6px;
+  text-align: center;
+  padding: 0.75rem 1rem !important;
+  border-bottom: none !important;
+}
+
+@media (max-width: 900px) {
+  .msv-nav__links { display: none; }
+  .msv-nav__cta { display: none; }
+  .msv-nav__burger { display: flex; }
+}
+@media (max-width: 480px) {
+  .msv-nav__inner { padding: 0 1rem; }
+}
+
+/* ─────────────────────────────────────────────────────────────
+   SITE FOOTER
+   ───────────────────────────────────────────────────────────── */
+.msv-footer {
+  background: var(--navy);
+  color: rgba(255,255,255,0.75);
+  overflow-x: clip;
+}
+.msv-footer__top {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem 3rem;
+  display: grid;
+  grid-template-columns: 280px 1fr 1fr 1fr;
+  gap: 3rem;
+}
+@media (max-width: 900px) {
+  .msv-footer__top { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
+}
+@media (max-width: 560px) {
+  .msv-footer__top { grid-template-columns: 1fr; gap: 2rem; padding: 3rem 1.2rem 2rem; }
+}
+
+.msv-footer__brand {}
+.msv-footer__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  margin-bottom: 1rem;
+}
+.msv-footer__logo-flag { font-size: 1.3rem; }
+.msv-footer__logo-text {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -0.01em;
+}
+.msv-footer__logo-text span { color: var(--yellow); }
+.msv-footer__tagline {
+  font-size: 0.83rem;
+  color: rgba(255,255,255,0.55);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+.msv-footer__trust {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+.msv-footer__trust-item {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.65);
+}
+.msv-footer__trust-item::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  background: var(--yellow);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.msv-footer__col-title {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.4);
+  margin-bottom: 1rem;
+}
+.msv-footer__links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.msv-footer__links a {
+  font-size: 0.87rem;
+  color: rgba(255,255,255,0.68);
+  text-decoration: none;
+  transition: color 0.15s;
+  display: inline-block;
+}
+.msv-footer__links a:hover {
+  color: var(--yellow);
+  text-decoration: none;
+}
+
+.msv-footer__bottom {
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+.msv-footer__bottom-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 1rem;
+  justify-content: space-between;
+}
+.msv-footer__disclaimer {
+  font-size: 0.73rem;
+  color: rgba(255,255,255,0.35);
+  line-height: 1.65;
+  max-width: 720px;
+}
+.msv-footer__copyright {
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.35);
+  white-space: nowrap;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   MAIN CONTENT AREA
+   ───────────────────────────────────────────────────────────── */
+main {
+  /* Fragments are self-contained; this wrapper just provides flow context */
+  position: relative;
+}
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════
+     SITE NAVIGATION
+     ═══════════════════════════════════════════════════ -->
+<header class="msv-nav" role="banner">
+  <div class="msv-nav__inner">
+
+    <!-- Logo -->
+    <a href="/" class="msv-nav__logo" aria-label="My Spanish Visa — Home"><img src="/assets/images/msv-logo-white.png" alt="My Spanish Visa" height="40" style="display:block;"></a>
+
+    <!-- Desktop links -->
+    <nav aria-label="Main navigation">
+      <ul class="msv-nav__links">
+
+        <li>
+          <button class="msv-nav__dropdown-trigger" aria-haspopup="true" aria-expanded="false">
+            Visas <span class="msv-nav__chevron">▾</span>
+          </button>
+          <div class="msv-nav__dropdown" role="menu">
+            <a href="/non-lucrative-visa-spain/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🏖️</span>Non-Lucrative Visa
+            </a>
+            <a href="/digital-nomad-visa-spain/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">💻</span>Digital Nomad Visa
+            </a>
+            <a href="/student-visa-spain/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🎓</span>Student Visa
+            </a>
+            <div class="msv-nav__dropdown-divider"></div>
+            <a href="/spain-visa-renewal/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🔄</span>Visa Renewals
+            </a>
+            <a href="/best-visa-move-to-spain/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">⚖️</span>Compare All Visas
+            </a>
+          </div>
+        </li>
+
+        <li>
+          <button aria-haspopup="true" aria-expanded="false">
+            Resources <span class="msv-nav__chevron">▾</span>
+          </button>
+          <div class="msv-nav__dropdown" role="menu">
+            <a href="/blog/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">📝</span>Blog &amp; Guides
+            </a>
+            <a href="/spain-visa-checklist/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">✅</span>Document Checklists
+            </a>
+            <a href="/move-to-spain/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🏠</span>Move to Spain Guide
+            </a>
+            <a href="/visa-eligibility-quiz/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🧭</span>Eligibility Quiz
+            </a>
+          </div>
+        </li>
+
+        <li><a href="/about-us/">About Us</a></li>
+        <li><a href="/testimonials/">Reviews</a></li>
+        <li><a href="/contact-us.html">Contact</a></li>
+
+      </ul>
+    </nav>
+
+    <!-- Desktop CTA -->
+    <a href="https://dashboard.platinumlegalspain.com/nlv" class="msv-nav__cta">
+      Start My Application →
+    </a>
+
+    <!-- Hamburger (mobile) -->
+    <button class="msv-nav__burger" aria-label="Open menu" aria-expanded="false" onclick="
+      var m=document.querySelector('.msv-nav__mobile');
+      var open=m.classList.toggle('open');
+      this.setAttribute('aria-expanded', open);
+    ">
+      <span></span><span></span><span></span>
+    </button>
+
+  </div><!-- /.msv-nav__inner -->
+
+  <!-- Mobile menu -->
+  <nav class="msv-nav__mobile" aria-label="Mobile navigation">
+    <a href="/non-lucrative-visa-spain/" class="msv-nav__mobile-sub">Non-Lucrative Visa</a>
+    <a href="/digital-nomad-visa-spain/" class="msv-nav__mobile-sub">Digital Nomad Visa</a>
+    <a href="/student-visa-spain/" class="msv-nav__mobile-sub">Student Visa</a>
+    <a href="/spain-visa-renewal/">Visa Renewals</a>
+    <a href="/best-visa-move-to-spain/">Compare All Visas</a>
+    <a href="/blog/">Blog &amp; Guides</a>
+    <a href="/about-us/">About Us</a>
+    <a href="/testimonials/">Reviews</a>
+    <a href="/contact-us.html">Contact</a>
+    <a href="https://dashboard.platinumlegalspain.com/nlv" class="msv-nav__mobile-cta">Start My Application →</a>
+  </nav>
+
+</header>
+
+
+<!-- ═══════════════════════════════════════════════════
+     PAGE CONTENT (fragment injected here)
+     ═══════════════════════════════════════════════════ -->
+<main>
+<!-- FRAGMENT_START -->
+<!-- ============================================================
+     MY SPANISH VISA — NIE Number Spain: Complete Guide
+     Elementor Full-Width HTML Widget · April 2026
+     Slug: /nie-number-spain/
+     ============================================================ -->
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://myspanishvisa.com/nie-number-spain/",
+      "url": "https://myspanishvisa.com/nie-number-spain/",
+      "name": "NIE Number Spain 2026 | What It Is & How to Get One | My Spanish Visa",
+      "description": "Complete guide to Spain's NIE number (Número de Identidad de Extranjero). What it is, who needs one, how to apply, required documents, costs, processing times, and the difference between NIE and TIE.",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://myspanishvisa.com/#website"
+      },
+      "breadcrumb": {
+        "@id": "https://myspanishvisa.com/nie-number-spain/#breadcrumb"
+      },
+      "mainEntity": {
+        "@id": "https://myspanishvisa.com/nie-number-spain/#faqpage"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://myspanishvisa.com/nie-number-spain/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://myspanishvisa.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "NIE Number Spain",
+          "item": "https://myspanishvisa.com/nie-number-spain/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://myspanishvisa.com/nie-number-spain/#faqpage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is an NIE number in Spain?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "An NIE (Número de Identidad de Extranjero) is a unique identification number issued by Spain's tax authorities to foreign nationals. It serves as your tax identification number and is required for most activities in Spain, including opening bank accounts, buying property, and working. The number follows the format X-1234567-A, where X/Y/Z is a letter, followed by 7 digits and a final letter."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I get an NIE number in Spain?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "To get an NIE number, you must: 1) Complete form EX-15 or fill out the online form, 2) Book a cita previa (appointment) at your local police station or National Police headquarters, 3) Gather required documents (passport, proof of address, completed forms), 4) Attend your appointment with originals and copies, 5) Pay the fee (currently around €9.60), 6) Receive your NIE number and certificate."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does an NIE number cost?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "An NIE number is free to obtain from the Spanish tax authorities. However, there is a small fee of approximately €9.60 for the police administrative procedure. Form copies and notarization may incur additional costs if required. Overall, obtaining an NIE is one of the cheapest official procedures in Spain."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does it take to get an NIE number?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Once you attend your appointment, you typically receive your NIE number immediately on the same day. However, the challenge is booking the appointment itself—waiting times for a cita previa can range from 2 weeks to 3+ months depending on your location and demand. We recommend booking your appointment as early as possible."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need an NIE number to buy property in Spain?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, an NIE number is absolutely required to purchase property in Spain as a foreign national. You cannot complete the purchase process without one. It's recommended to obtain your NIE before beginning serious property negotiations. Some notaries can help with the process, but you must obtain the number from the police authorities."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between NIE and TIE?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The NIE is a tax identification number (just a number, like 12345678-Z), while the TIE is a physical identity card. You receive your NIE upon request from the police. If you're granted residency in Spain, you'll also receive a TIE card, which is a physical document that serves as proof of your legal residence. Both use the same identification number, but the NIE is the number and the TIE is the card."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I get an NIE number online?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You cannot apply entirely online, but you can begin the process online. You can fill out form EX-15 electronically and submit it, then book your appointment online through the National Police website (cita previa system). However, you must attend an in-person appointment to complete the process and receive your NIE certificate."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens if I lose my NIE number or certificate?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Your NIE number is permanent and stays the same throughout your life in Spain—it never changes. If you lose your NIE certificate, you can request a replacement from the National Police headquarters or your local police office. You don't need a new number; you just get a duplicate certificate of your existing NIE. The process is straightforward and typically completed quickly."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<!-- Open Graph / Social -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.myspanishvisa.com/nie-number-spain/">
+<meta property="og:title" content="My Spanish Visa">
+<meta property="og:description" content="Expert Spain visa guidance for English-speaking expats.">
+<meta property="og:image" content="https://www.myspanishvisa.com/assets/images/og/og-myspanishvisa-default.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="My Spanish Visa">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@myspanishvisa">
+<meta name="twitter:title" content="My Spanish Visa">
+<meta name="twitter:description" content="Expert Spain visa guidance for English-speaking expats.">
+<meta name="twitter:image" content="https://www.myspanishvisa.com/assets/images/og/og-myspanishvisa-default.jpg">
+
+<style>
+/* ── iOS Safari pinch-zoom overflow safety ─────────────────────────── */
+/* Prevents horizontal overflow when users pinch-zoom on iPhone/iPad.   */
+/* Top-level (also paste into theme Custom CSS / Elementor Site Settings) */
+html, body { max-width: 100%; overflow-x: clip; }
+/* Scoped wrapper safety */
+.msv, .msv-nav, .msv-topbar, .msv-footer, .msv-footer-cta,
+.pls-header, .pls-body, .pls-nlv, .pls-dnv, .pls-student {
+  max-width: 100%;
+  overflow-x: clip;
+  position: relative;
+}
+/* Cap all media inside the wrapper */
+.msv img, .msv video, .msv iframe,
+.msv-footer img, .msv-footer video, .msv-footer iframe {
+  max-width: 100%;
+  height: auto;
+}
+/* Never use 100vw — use 100% instead (dev reminder) */
+
+
+.msv *, .msv *::before, .msv *::after { box-sizing: border-box; margin: 0; padding: 0; }
+.msv {
+  --navy: #0c1930; --navy-mid: #1a3a5c; --red: #be0011; --red-deep: #8c000d;
+  --yellow: #facf39; --cream: #f8f7f4; --white: #ffffff; --black: #1a1a1a;
+  --muted: #5a6478; --border: #dce3ed;
+  --shadow-sm: 0 2px 8px rgba(12,25,48,0.08); --shadow-md: 0 6px 24px rgba(12,25,48,0.13);
+  font-family: 'Inter', 'Segoe UI', system-ui, Arial, sans-serif;
+  font-size: 16px; line-height: 1.75; color: var(--black); width: 100%;
+}
+.msv__container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+.msv__container--narrow { max-width: 780px; margin: 0 auto; padding: 0 2rem; }
+@media (max-width: 640px) { .msv__container, .msv__container--narrow { padding: 0 1.2rem; } }
+.msv h1 { font-size: clamp(2rem, 4.5vw, 3rem); font-weight: 800; line-height: 1.12; color: var(--white); letter-spacing: -0.025em; margin-bottom: 1.2rem; }
+.msv h2 { font-size: clamp(1.3rem, 2.5vw, 1.75rem); font-weight: 700; color: var(--navy); letter-spacing: -0.01em; margin-bottom: 0.5rem; position: relative; display: inline-block; padding-bottom: 0.5rem; }
+.msv h2::after { content: ''; position: absolute; bottom: 0; left: 0; width: 44px; height: 3px; background: linear-gradient(90deg, var(--red), var(--red-deep)); border-radius: 2px; }
+.msv h3 { font-size: 1.05rem; font-weight: 700; color: var(--navy); margin-bottom: 0.4rem; }
+.msv p { color: var(--black); margin-bottom: 1rem; font-size: 0.97rem; }
+.msv a { color: var(--red); text-decoration: none; }
+.msv a:hover { text-decoration: underline; }
+.msv ul { list-style: none; padding: 0; margin: 0 0 1rem; }
+.msv ul li { padding: 0.35rem 0 0.35rem 1.4rem; position: relative; font-size: 0.95rem; color: var(--black); }
+.msv ul li::before { content: ''; position: absolute; left: 0; top: 0.75rem; width: 7px; height: 7px; background: linear-gradient(135deg, var(--red), var(--red-deep)); border-radius: 50%; }
+.msv__section { padding: 5rem 0; background: var(--white); }
+.msv__section--cream { padding: 5rem 0; background: linear-gradient(180deg, #f8f7f4 0%, #f2f4f8 100%); }
+.msv__section--dark { padding: 5rem 0; background: linear-gradient(135deg, var(--navy) 0%, #0d2240 55%, #0a1d38 100%); }
+.msv__section--dark h2 { color: var(--white) !important; }
+.msv__section--dark h2::after { background: linear-gradient(90deg, var(--yellow), #e8b820); }
+.msv__section--dark h3 { color: rgba(255,255,255,0.9) !important; }
+.msv .msv__section--dark p, .msv .msv__section--dark li { color: rgba(255,255,255,0.82); }
+.msv__section--dark ul li::before { background: linear-gradient(135deg, var(--yellow), #e8b820); }
+@media (max-width: 640px) { .msv__section, .msv__section--cream, .msv__section--dark { padding: 3.5rem 0; } }
+.msv__section-hd { margin-bottom: 3rem; }
+.msv__section-hd p { color: var(--muted); font-size: 1rem; margin-top: 0.75rem; line-height: 1.7; max-width: 600px; }
+@keyframes msv-fade-up { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes msv-shimmer { 0% { background-position: -400px 0; } 100% { background-position: 400px 0; } }
+.msv__shimmer { background: linear-gradient(90deg, var(--yellow) 0%, #e8b820 25%, var(--red) 50%, #e8b820 75%, var(--yellow) 100%); background-size: 400px 100%; -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; animation: msv-shimmer 3.5s linear infinite; display: inline; }
+.msv__hero { background: linear-gradient(135deg, #0c1930 0%, #0f2540 40%, #162d50 70%, #1a3560 100%); padding: 5.5rem 0 5rem; position: relative; overflow: hidden; }
+.msv__hero::before { content: ''; position: absolute; top: -30%; right: -5%; width: 700px; height: 700px; background: radial-gradient(circle, rgba(190,0,17,0.1) 0%, transparent 65%); pointer-events: none; }
+.msv__hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, rgba(250,207,57,0.4), transparent); }
+.msv__hero-inner { max-width: 780px; animation: msv-fade-up 0.7s ease-out both; }
+.msv__eyebrow { display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(190,0,17,0.15); border: 1px solid rgba(190,0,17,0.4); color: #ff6b7a; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.35rem 0.9rem; border-radius: 100px; margin-bottom: 1.5rem; }
+.msv__eyebrow::before { content: ''; width: 6px; height: 6px; background: var(--red); border-radius: 50%; box-shadow: 0 0 6px var(--red); }
+.msv__hero p { color: rgba(255,255,255,0.78) !important; font-size: clamp(1rem, 2.2vw, 1.15rem); max-width: 640px; margin-bottom: 2.2rem; line-height: 1.75; }
+.msv__trust-bar { background: var(--white); border-bottom: 1px solid var(--border); padding: 1rem 0; box-shadow: var(--shadow-sm); }
+.msv__trust-bar-inner { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.75rem; }
+.msv__trust-item { display: flex; align-items: center; gap: 0.5rem; font-size: 0.82rem; font-weight: 600; color: var(--navy); white-space: nowrap; }
+.msv__trust-item::before { content: ''; width: 7px; height: 7px; background: linear-gradient(135deg, var(--red), var(--red-deep)); border-radius: 50%; flex-shrink: 0; }
+.msv__facts { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; margin-bottom: 3rem; }
+@media (max-width: 760px) { .msv__facts { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 420px) { .msv__facts { grid-template-columns: 1fr; } }
+.msv__fact { background: var(--white); padding: 1.5rem 1.3rem; text-align: center; }
+.msv__fact-icon { font-size: 1.5rem; display: block; margin-bottom: 0.5rem; }
+.msv__fact-label { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); display: block; margin-bottom: 0.25rem; }
+.msv__fact-value { font-size: 0.97rem; font-weight: 700; color: var(--navy); line-height: 1.35; display: block; }
+.msv__alert { border-radius: 10px; padding: 1.3rem 1.5rem; display: flex; gap: 1rem; align-items: flex-start; margin-bottom: 2rem; }
+.msv__alert--warn { background: #fffbea; border: 1px solid #f0d060; }
+.msv__alert--info { background: #eef4ff; border: 1px solid #a0bfff; }
+.msv__alert--red { background: #fef2f2; border: 1px solid #fca5a5; }
+.msv__alert--green { background: #f0fdf4; border: 1px solid #86efac; }
+.msv__alert-icon { font-size: 1.4rem; flex-shrink: 0; margin-top: 0.1rem; }
+.msv__alert p { font-size: 0.9rem; color: var(--black); margin: 0; line-height: 1.65; }
+.msv__alert strong { color: var(--navy); }
+.msv__persona-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-bottom: 3rem; }
+@media (max-width: 860px) { .msv__persona-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 420px) { .msv__persona-grid { grid-template-columns: 1fr; } }
+.msv__persona-card { background: var(--white); border: 1px solid var(--border); border-radius: 12px; padding: 2rem 1.5rem; text-align: center; transition: box-shadow 0.2s, transform 0.2s; }
+.msv__persona-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+.msv__persona-icon { font-size: 2.5rem; margin-bottom: 0.8rem; }
+.msv__persona-title { font-size: 1.1rem; font-weight: 700; color: var(--navy); margin-bottom: 0.5rem; }
+.msv__persona-desc { font-size: 0.9rem; color: var(--muted); line-height: 1.65; margin-bottom: 1.2rem; }
+.msv__persona-cta { display: inline-block; color: var(--red); font-size: 0.88rem; font-weight: 700; }
+.msv__guide-index { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; margin-bottom: 3rem; }
+@media (max-width: 860px) { .msv__guide-index { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 420px) { .msv__guide-index { grid-template-columns: 1fr; } }
+.msv__guide-card { background: var(--white); border: 1.5px solid var(--border); border-radius: 10px; padding: 1.5rem 1.3rem; text-decoration: none !important; transition: all 0.25s ease; display: flex; flex-direction: column; }
+.msv__guide-card:hover { box-shadow: var(--shadow-md); transform: translateY(-3px); border-color: var(--red); }
+.msv__guide-card-icon { font-size: 2rem; margin-bottom: 0.8rem; display: block; }
+.msv__guide-card-title { font-size: 0.95rem; font-weight: 700; color: var(--navy); margin-bottom: 0.5rem; }
+.msv__guide-card-desc { font-size: 0.82rem; color: var(--muted); line-height: 1.5; margin-bottom: 1rem; flex-grow: 1; }
+.msv__guide-card-link { color: var(--red); font-size: 0.85rem; font-weight: 700; }
+.msv__comparison-table { width: 100%; border-collapse: collapse; font-size: 0.88rem; margin: 2rem 0; }
+.msv__comparison-table thead tr { background: var(--navy); }
+.msv__comparison-table th { padding: 1rem 1.25rem; text-align: left; color: var(--white); font-weight: 700; }
+.msv__comparison-table td { padding: 0.85rem 1.25rem; border-bottom: 1px solid var(--border); color: var(--black); }
+.msv__comparison-table tbody tr:nth-child(even) { background: #f9fafb; }
+.msv__comparison-table .table-feature { font-weight: 600; color: var(--navy); }
+.msv__income-boxes { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; margin-bottom: 2rem; }
+@media (max-width: 860px) { .msv__income-boxes { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 420px) { .msv__income-boxes { grid-template-columns: 1fr; } }
+.msv__income-box { background: #f9fafb; border: 1px solid var(--border); border-radius: 10px; padding: 1.3rem; text-align: center; }
+.msv__income-box-label { font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); margin-bottom: 0.5rem; }
+.msv__income-box-value { font-size: 1.5rem; font-weight: 800; color: var(--red); }
+.msv__income-box-detail { font-size: 0.75rem; color: var(--muted); margin-top: 0.4rem; font-weight: 500; }
+.msv__process-steps { display: grid; grid-template-columns: repeat(6, 1fr); gap: 0.8rem; margin-bottom: 2rem; }
+@media (max-width: 760px) { .msv__process-steps { grid-template-columns: repeat(3, 1fr); gap: 1rem; } }
+@media (max-width: 420px) { .msv__process-steps { grid-template-columns: 1fr 1fr; } }
+.msv__process-step { background: var(--white); border: 1.5px solid var(--border); border-radius: 10px; padding: 1.3rem 1rem; text-align: center; }
+.msv__process-step-num { font-size: 1.3rem; font-weight: 800; color: var(--red); margin-bottom: 0.4rem; }
+.msv__process-step-title { font-size: 0.85rem; font-weight: 700; color: var(--navy); line-height: 1.4; }
+.msv__two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: center; }
+@media (max-width: 860px) { .msv__two-col { grid-template-columns: 1fr; } }
+.msv__two-col-card { background: var(--white); border: 1px solid var(--border); border-radius: 12px; padding: 2rem; }
+.msv__two-col-icon { font-size: 2.5rem; margin-bottom: 1rem; }
+.msv__related { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; }
+@media (max-width: 860px) { .msv__related { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 420px) { .msv__related { grid-template-columns: 1fr; } }
+.msv__related-card { background: var(--white); border: 1px solid var(--border); border-radius: 10px; padding: 1.3rem 1.25rem; text-decoration: none !important; transition: box-shadow 0.2s, transform 0.2s; display: block; }
+.msv__related-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); text-decoration: none !important; }
+.msv__related-icon { font-size: 1.5rem; display: block; margin-bottom: 0.6rem; }
+.msv__related-title { font-size: 0.88rem; font-weight: 700; color: var(--navy); display: block; margin-bottom: 0.3rem; }
+.msv__related-desc { font-size: 0.8rem; color: var(--muted); line-height: 1.55; }
+.msv__faq-list { display: flex; flex-direction: column; gap: 0; border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+.msv__faq-list details { border-bottom: 1px solid var(--border); background: var(--white); }
+.msv__faq-list details:last-child { border-bottom: none; }
+.msv__faq-list summary { padding: 1.2rem 1.5rem; font-size: 0.97rem; font-weight: 700; color: var(--navy); cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+.msv__faq-list summary::-webkit-details-marker { display: none; }
+.msv__faq-list summary::after { content: '+'; font-size: 1.3rem; font-weight: 400; color: var(--red); flex-shrink: 0; transition: transform 0.2s; }
+.msv__faq-list details[open] summary::after { transform: rotate(45deg); }
+.msv__faq-list details[open] summary { color: var(--red); }
+.msv__faq-answer { padding: 0 1.5rem 1.3rem; font-size: 0.92rem; color: var(--muted); line-height: 1.75; }
+.msv__faq-answer p { color: var(--muted); font-size: 0.92rem; margin-bottom: 0.75rem; }
+.msv__faq-answer p:last-child { margin-bottom: 0; }
+.msv__cta-band { background: linear-gradient(135deg, var(--navy) 0%, #0d2240 60%, #0a1d38 100%); padding: 5rem 0; text-align: center; }
+.msv__cta-band h2 { color: var(--white) !important; display: block; }
+.msv__cta-band h2::after { left: 50%; transform: translateX(-50%); background: linear-gradient(90deg, var(--yellow), #e8b820); }
+.msv__cta-band p { color: rgba(255,255,255,0.75) !important; max-width: 560px; margin: 1rem auto 2.2rem; font-size: 1rem; }
+.msv__cta-band .msv__btn-group { justify-content: center; }
+.msv__btn-group { display: flex; flex-wrap: wrap; gap: 0.85rem; }
+.msv__btn { display: inline-block; padding: 0.85rem 2rem; font-size: 0.92rem; font-weight: 700; border-radius: 6px; text-decoration: none !important; transition: transform 0.15s, box-shadow 0.15s; }
+.msv__btn:hover { transform: translateY(-1px); text-decoration: none !important; }
+.msv .msv__btn--primary { background: linear-gradient(135deg, var(--red) 0%, var(--red-deep) 100%); color: #ffffff !important; box-shadow: 0 4px 16px rgba(190,0,17,0.38); }
+.msv .msv__btn--primary:hover { box-shadow: 0 6px 22px rgba(190,0,17,0.48); color: #ffffff !important; }
+.msv .msv__btn--outline-white { background: transparent; color: #ffffff !important; border: 1.5px solid rgba(255,255,255,0.5); }
+.msv .msv__btn--outline-white:hover { background: rgba(255,255,255,0.1); color: #ffffff !important; }
+.msv__disclaimer { background: var(--cream); border-top: 1px solid var(--border); padding: 2rem 0; }
+.msv__disclaimer p { font-size: 0.78rem; color: var(--muted); margin: 0; line-height: 1.65; }
+</style>
+
+<div class="msv">
+  <!-- HERO SECTION -->
+  <section class="msv__hero">
+    <div class="msv__container--narrow msv__hero-inner">
+      <span class="msv__eyebrow">Spain Residency Guide</span>
+      <h1>NIE Number Spain: <span class="msv__shimmer">What It Is and How to Get One</span></h1>
+      <p>Your complete guide to Spain's NIE number (Número de Identidad de Extranjero). Learn what it is, who needs one, how to apply, costs, processing times, and how it differs from the TIE card.</p>
+      <div class="msv__btn-group">
+        <a href="https://dashboard.platinumlegalspain.com/nlv" class="msv__btn msv__btn--primary">Check Your Eligibility</a>
+        <a href="https://dashboard.platinumlegalspain.com/nlv" class="msv__btn msv__btn--outline-white">Book a Consultation</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST BAR -->
+  <div class="msv__trust-bar">
+    <div class="msv__container">
+      <div class="msv__trust-bar-inner">
+        <div class="msv__trust-item">Required for all foreigners</div>
+        <div class="msv__trust-item">Tax identification number</div>
+        <div class="msv__trust-item">Format: X-1234567-A</div>
+        <div class="msv__trust-item">Free to obtain</div>
+        <div class="msv__trust-item">Permanent — never expires</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- KEY FACTS GRID -->
+  <section class="msv__section">
+    <div class="msv__container">
+      <div class="msv__facts">
+        <div class="msv__fact">
+          <span class="msv__fact-icon">🆔</span>
+          <span class="msv__fact-label">What It Is</span>
+          <span class="msv__fact-value">Tax Identification Number</span>
+        </div>
+        <div class="msv__fact">
+          <span class="msv__fact-icon">📋</span>
+          <span class="msv__fact-label">Format</span>
+          <span class="msv__fact-value">X-1234567-A</span>
+        </div>
+        <div class="msv__fact">
+          <span class="msv__fact-icon">💰</span>
+          <span class="msv__fact-label">Cost</span>
+          <span class="msv__fact-value">~€9.60</span>
+        </div>
+        <div class="msv__fact">
+          <span class="msv__fact-icon">⏱️</span>
+          <span class="msv__fact-label">Processing</span>
+          <span class="msv__fact-value">Immediate (1 day)</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT IS THE NIE NUMBER -->
+  <section class="msv__section">
+    <div class="msv__container--narrow">
+      <div class="msv__section-hd">
+        <h2>What is the NIE Number?</h2>
+        <p>Understanding Spain's foreigner identification system</p>
+      </div>
+      <p>The <strong>NIE (Número de Identidad de Extranjero)</strong> is a unique identification number issued by Spain's tax authorities (Agencia Tributaria) to all foreign nationals. It serves as your tax identification number and is one of the most important documents you'll need when living, working, or conducting business in Spain.</p>
+      <p>Your NIE is not just a number—it's your official identity within Spain's administrative system. It identifies you for tax purposes, bank accounts, property ownership, employment, business registration, and virtually every significant transaction you undertake.</p>
+
+      <h3>How the NIE Format Works</h3>
+      <p>Every NIE follows a specific format:</p>
+      <ul>
+        <li><strong>First character:</strong> A letter (X, Y, or Z, depending on your passport/document type)</li>
+        <li><strong>Seven digits:</strong> A sequential number assigned to you</li>
+        <li><strong>Final letter:</strong> A letter calculated from the number (similar to a check digit)</li>
+      </ul>
+      <p><strong>Example:</strong> X-1234567-Z. The first letter and final letter are always uppercase.</p>
+
+      <h3>Key Facts About Your NIE</h3>
+      <ul>
+        <li>Your NIE is assigned when you first request it and <strong>never changes</strong> throughout your entire time in Spain</li>
+        <li>It is permanent—once issued, your number remains yours indefinitely</li>
+        <li>You cannot "lose" your NIE; if you misplace the certificate, you can request a duplicate</li>
+        <li>The NIE is required before you can open a bank account, buy property, or work legally in Spain</li>
+        <li>It costs approximately €9.60 and is obtained from the National Police (Policía Nacional)</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ALERT: NIE vs TIE -->
+  <section class="msv__section msv__section--cream">
+    <div class="msv__container--narrow">
+      <div class="msv__alert msv__alert--info">
+        <span class="msv__alert-icon">ℹ️</span>
+        <p><strong>Important distinction:</strong> Your NIE is NOT the same as your TIE card. The NIE is a tax identification number (just a number: 12345678-Z). The TIE is a physical identity card issued when you're granted residency in Spain. They use the same identification number, but the NIE is the number itself, and the TIE is the card.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHO NEEDS AN NIE -->
+  <section class="msv__section">
+    <div class="msv__container">
+      <div class="msv__section-hd">
+        <h2>Who Needs an NIE?</h2>
+        <p>Different profiles of people requiring NIE numbers in Spain</p>
+      </div>
+      <div class="msv__persona-grid">
+        <div class="msv__persona-card">
+          <span class="msv__persona-icon">🏠</span>
+          <h3 class="msv__persona-title">Property Buyers</h3>
+          <p class="msv__persona-desc">Foreign nationals purchasing real estate in Spain need an NIE to register the property and for tax purposes.</p>
+          <a href="/padron-registration-spain/" class="msv__persona-cta">Learn More →</a>
+        </div>
+        <div class="msv__persona-card">
+          <span class="msv__persona-icon">📝</span>
+          <h3 class="msv__persona-title">Visa Holders</h3>
+          <p class="msv__persona-desc">Anyone with any type of Spanish visa (non-lucrative, digital nomad, student, etc.) needs an NIE.</p>
+          <a href="/how-to-get-residency-in-spain/" class="msv__persona-cta">Learn More →</a>
+        </div>
+        <div class="msv__persona-card">
+          <span class="msv__persona-icon">💼</span>
+          <h3 class="msv__persona-title">Workers & Self-Employed</h3>
+          <p class="msv__persona-desc">Anyone working in Spain or running a business needs an NIE for employment contracts and tax registration.</p>
+          <a href="/digital-nomad-visa-spain/" class="msv__persona-cta">Learn More →</a>
+        </div>
+        <div class="msv__persona-card">
+          <span class="msv__persona-icon">🏢</span>
+          <h3 class="msv__persona-title">Business Owners</h3>
+          <p class="msv__persona-desc">Registering a company or sole proprietorship in Spain requires an NIE as part of the business formation process.</p>
+          <a href="https://dashboard.platinumlegalspain.com/nlv" class="msv__persona-cta">Learn More →</a>
+        </div>
+        <div class="msv__persona-card">
+          <span class="msv__persona-icon">🎓</span>
+          <h3 class="msv__persona-title">Students</h3>
+          <p class="msv__persona-desc">International students studying in Spain need an NIE to enroll in universities and for banking purposes.</p>
+          <a href="/student-visa-spain/" class="msv__persona-cta">Learn More →</a>
+        </div>
+        <div class="msv__persona-card">
+          <span class="msv__persona-icon">📜</span>
+          <h3 class="msv__persona-title">Inheritors & Tax Matters</h3>
+          <p class="msv__persona-desc">Inheriting property or assets in Spain requires an NIE to handle inheritance taxes and legal processes.</p>
+          <a href="/how-to-get-residency-in-spain/" class="msv__persona-cta">Learn More →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NIE vs TIE COMPARISON -->
+  <section class="msv__section--dark">
+    <div class="msv__container">
+      <div class="msv__section-hd">
+        <h2>NIE vs TIE — What's the Difference?</h2>
+        <p>Understanding two critical but different documents</p>
+      </div>
+      <table class="msv__comparison-table">
+        <thead>
+          <tr>
+            <th>Aspect</th>
+            <th>NIE</th>
+            <th>TIE</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="table-feature">What It Is</td>
+            <td>Tax identification number</td>
+            <td>Physical identity card</td>
+          </tr>
+          <tr>
+            <td class="table-feature">Format</td>
+            <td>Number only: X-1234567-A</td>
+            <td>Plastic card with photo</td>
+          </tr>
+          <tr>
+            <td class="table-feature">Issued By</td>
+            <td>National Police (Policía Nacional)</td>
+            <td>National Police after residency approval</td>
+          </tr>
+          <tr>
+            <td class="table-feature">When You Get It</td>
+            <td>On appointment day (immediate)</td>
+            <td>After visa approval & residency granted</td>
+          </tr>
+          <tr>
+            <td class="table-feature">Purpose</td>
+            <td>Tax & identification purposes</td>
+            <td>Legal proof of residence in Spain</td>
+          </tr>
+          <tr>
+            <td class="table-feature">Required For</td>
+            <td>Bank accounts, property, work, business</td>
+            <td>Proving residency status</td>
+          </tr>
+          <tr>
+            <td class="table-feature">Cost</td>
+            <td>~€9.60</td>
+            <td>Free (after residency visa)</td>
+          </tr>
+          <tr>
+            <td class="table-feature">Validity</td>
+            <td>Permanent, never expires</td>
+            <td>Usually 5-10 years, must be renewed</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- HOW TO GET YOUR NIE -->
+  <section class="msv__section">
+    <div class="msv__container">
+      <div class="msv__section-hd">
+        <h2>How to Get Your NIE</h2>
+        <p>Step-by-step process to obtain your NIE number</p>
+      </div>
+      <div class="msv__process-steps">
+        <div class="msv__process-step">
+          <div class="msv__process-step-num">1</div>
+          <div class="msv__process-step-title">Prepare Documents</div>
+        </div>
+        <div class="msv__process-step">
+          <div class="msv__process-step-num">2</div>
+          <div class="msv__process-step-title">Complete EX-15 Form</div>
+        </div>
+        <div class="msv__process-step">
+          <div class="msv__process-step-num">3</div>
+          <div class="msv__process-step-title">Book Cita Previa</div>
+        </div>
+        <div class="msv__process-step">
+          <div class="msv__process-step-num">4</div>
+          <div class="msv__process-step-title">Attend Appointment</div>
+        </div>
+        <div class="msv__process-step">
+          <div class="msv__process-step-num">5</div>
+          <div class="msv__process-step-title">Pay Fee</div>
+        </div>
+        <div class="msv__process-step">
+          <div class="msv__process-step-num">6</div>
+          <div class="msv__process-step-title">Receive NIE</div>
+        </div>
+      </div>
+
+      <h3>Detailed Steps</h3>
+      <p><strong>Step 1: Gather Required Documents</strong></p>
+      <p>Before you begin, ensure you have all necessary documents (see section below for full list).</p>
+
+      <p><strong>Step 2: Complete the EX-15 Form</strong></p>
+      <p>Fill out the official form EX-15 (available online on the National Police website or in person at the police station). You can complete it electronically or by hand. This form requests basic personal information, the reason for requesting the NIE, and your Spanish address (or address where you'll be contacted).</p>
+
+      <p><strong>Step 3: Book Your Cita Previa (Appointment)</strong></p>
+      <p>The most time-consuming step. Visit <a href="https://www.citapreviapolicia.es" target="_blank">cita previa policia.es</a> to book an appointment at your nearest National Police headquarters (Oficina de Policía Nacional). Waiting times vary significantly by location (2 weeks to 3+ months). Book as soon as possible.</p>
+
+      <p><strong>Step 4: Attend Your Appointment</strong></p>
+      <p>Arrive on time with all original documents and copies. The process typically takes 10-20 minutes. Have your passport ready, as the officer will verify your identity and ask why you need the NIE.</p>
+
+      <p><strong>Step 5: Pay the Fee</strong></p>
+      <p>The administrative fee is approximately €9.60 (can be paid in cash or card). This is the only cost associated with obtaining an NIE.</p>
+
+      <p><strong>Step 6: Receive Your NIE Certificate</strong></p>
+      <p>Upon completion, you'll receive an NIE certificate (Certificado de Asignación del NIE) with your assigned number. This certificate serves as official proof of your NIE and is required for opening bank accounts, buying property, and other administrative processes.</p>
+    </div>
+  </section>
+
+  <!-- DOCUMENTS REQUIRED -->
+  <section class="msv__section msv__section--cream">
+    <div class="msv__container--narrow">
+      <div class="msv__section-hd">
+        <h2>Documents Required</h2>
+        <p>Everything you need to bring to your appointment</p>
+      </div>
+      <p><strong>Original Documents (must bring):</strong></p>
+      <ul>
+        <li>Valid passport (EU citizens can use national ID cards)</li>
+        <li>Completed form EX-15 (if not submitted online)</li>
+        <li>Proof of address in Spain (rental contract, utilities bill, padron registration, or property deed)</li>
+        <li>If representing someone else: power of attorney</li>
+      </ul>
+      <p><strong>Copies to Bring:</strong></p>
+      <ul>
+        <li>Passport: 2 photocopies (front and back)</li>
+        <li>Proof of address: 1 photocopy</li>
+        <li>All pages of form EX-15: 1 photocopy</li>
+      </ul>
+      <p><strong>Optional but Helpful:</strong></p>
+      <ul>
+        <li>Bank account information (if available)</li>
+        <li>Copy of any Spanish visa or residence permit</li>
+        <li>Print-out of your appointment confirmation (cita previa)</li>
+      </ul>
+      <div class="msv__alert msv__alert--warn">
+        <span class="msv__alert-icon">⚠️</span>
+        <p><strong>Proof of address requirements:</strong> You must have a Spanish address to obtain an NIE. If you haven't found accommodation yet, you can use a temporary address (hotel, Airbnb, friend's address). Some people successfully use a friend's address with written consent, though this varies by location.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- COSTS SECTION -->
+  <section class="msv__section">
+    <div class="msv__container--narrow">
+      <div class="msv__section-hd">
+        <h2>How Much Does an NIE Cost?</h2>
+        <p>Complete breakdown of all expenses</p>
+      </div>
+      <div class="msv__income-boxes">
+        <div class="msv__income-box">
+          <span class="msv__income-box-label">NIE Fee</span>
+          <span class="msv__income-box-value">€0</span>
+          <span class="msv__income-box-detail">Free from tax authorities</span>
+        </div>
+        <div class="msv__income-box">
+          <span class="msv__income-box-label">Admin Fee</span>
+          <span class="msv__income-box-value">€9.60</span>
+          <span class="msv__income-box-detail">Police procedure only</span>
+        </div>
+        <div class="msv__income-box">
+          <span class="msv__income-box-label">Form Copies</span>
+          <span class="msv__income-box-value">€1-3</span>
+          <span class="msv__income-box-detail">If printed at copy shop</span>
+        </div>
+        <div class="msv__income-box">
+          <span class="msv__income-box-label">Total Cost</span>
+          <span class="msv__income-box-value">~€11</span>
+          <span class="msv__income-box-detail">All inclusive</span>
+        </div>
+      </div>
+      <p>The NIE is one of the cheapest official procedures in Spain. The Spanish tax authorities do not charge for assigning the NIE itself—you only pay for the police's administrative processing. If you need notarized copies or use a gestoría (tax advisor) to help with the process, costs would be higher, but this is optional.</p>
+    </div>
+  </section>
+
+  <!-- PROCESSING TIMES -->
+  <section class="msv__section msv__section--cream">
+    <div class="msv__container--narrow">
+      <div class="msv__section-hd">
+        <h2>Processing Times</h2>
+        <p>Timeline expectations from application to NIE receipt</p>
+      </div>
+      <h3>Appointment Waiting Time</h3>
+      <p>This is typically the longest part of the process. After booking your cita previa online, you may need to wait:</p>
+      <ul>
+        <li><strong>Major cities (Madrid, Barcelona, Valencia):</strong> 4-12 weeks</li>
+        <li><strong>Mid-size cities:</strong> 2-6 weeks</li>
+        <li><strong>Smaller towns:</strong> 1-3 weeks</li>
+      </ul>
+      <p>Waiting times are beyond your control and vary based on police department workload. Booking as early as possible is crucial.</p>
+
+      <h3>Appointment Duration</h3>
+      <ul>
+        <li><strong>Your appointment:</strong> 10-20 minutes</li>
+        <li><strong>NIE receipt:</strong> Immediate (same day)</li>
+      </ul>
+
+      <h3>Total Timeline</h3>
+      <p><strong>Best case:</strong> 2-3 weeks (with immediate appointment availability)</p>
+      <p><strong>Average case:</strong> 4-8 weeks (typical waiting time)</p>
+      <p><strong>Worst case:</strong> 3+ months (major cities during peak periods)</p>
+
+      <div class="msv__alert msv__alert--warn">
+        <span class="msv__alert-icon">⚠️</span>
+        <p><strong>Book your cita previa immediately:</strong> Don't wait to arrive in Spain to book your appointment. You can book online from anywhere in the world before you arrive. This gives you the best chance of getting an appointment close to your arrival date.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BAND -->
+  <section class="msv__cta-band">
+    <div class="msv__container">
+      <h2>Ready to Get Your NIE?</h2>
+      <p>Let our experts guide you through the entire process. We handle the details so you don't have to worry about complex Spanish bureaucracy.</p>
+      <div class="msv__btn-group">
+        <a href="https://dashboard.platinumlegalspain.com/nlv" class="msv__btn msv__btn--primary">Book a Consultation</a>
+        <a href="https://dashboard.platinumlegalspain.com/nlv" class="msv__btn msv__btn--outline-white">Check Eligibility</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ SECTION -->
+  <section class="msv__section">
+    <div class="msv__container--narrow">
+      <div class="msv__section-hd">
+        <h2>Frequently Asked Questions</h2>
+        <p>Answers to common questions about NIE numbers</p>
+      </div>
+      <div class="msv__faq-list">
+        <details>
+          <summary>What is an NIE number in Spain?</summary>
+          <div class="msv__faq-answer">
+            <p>An NIE (Número de Identidad de Extranjero) is a unique identification number issued by Spain's tax authorities to foreign nationals. It serves as your tax identification number and is required for most activities in Spain, including opening bank accounts, buying property, and working. The number follows the format X-1234567-A, where X/Y/Z is a letter, followed by 7 digits and a final letter.</p>
+          </div>
+        </details>
+        <details>
+          <summary>How do I get an NIE number in Spain?</summary>
+          <div class="msv__faq-answer">
+            <p>To get an NIE number, you must: (1) Complete form EX-15 or fill out the online form, (2) Book a cita previa (appointment) at your local police station or National Police headquarters, (3) Gather required documents (passport, proof of address, completed forms), (4) Attend your appointment with originals and copies, (5) Pay the fee (currently around €9.60), (6) Receive your NIE number and certificate.</p>
+          </div>
+        </details>
+        <details>
+          <summary>How much does an NIE number cost?</summary>
+          <div class="msv__faq-answer">
+            <p>An NIE number is free to obtain from the Spanish tax authorities. However, there is a small fee of approximately €9.60 for the police administrative procedure. Form copies and notarization may incur additional costs if required. Overall, obtaining an NIE is one of the cheapest official procedures in Spain.</p>
+          </div>
+        </details>
+        <details>
+          <summary>How long does it take to get an NIE number?</summary>
+          <div class="msv__faq-answer">
+            <p>Once you attend your appointment, you typically receive your NIE number immediately on the same day. However, the challenge is booking the appointment itself—waiting times for a cita previa can range from 2 weeks to 3+ months depending on your location and demand. We recommend booking your appointment as early as possible, even before arriving in Spain.</p>
+          </div>
+        </details>
+        <details>
+          <summary>Do I need an NIE number to buy property in Spain?</summary>
+          <div class="msv__faq-answer">
+            <p>Yes, an NIE number is absolutely required to purchase property in Spain as a foreign national. You cannot complete the purchase process without one. It's recommended to obtain your NIE before beginning serious property negotiations. Some notaries can help with the process, but you must obtain the number from the police authorities.</p>
+          </div>
+        </details>
+        <details>
+          <summary>What is the difference between NIE and TIE?</summary>
+          <div class="msv__faq-answer">
+            <p>The NIE is a tax identification number (just a number, like 12345678-Z), while the TIE is a physical identity card. You receive your NIE upon request from the police. If you're granted residency in Spain, you'll also receive a TIE card, which is a physical document that serves as proof of your legal residence. Both use the same identification number, but the NIE is the number and the TIE is the card.</p>
+          </div>
+        </details>
+        <details>
+          <summary>Can I get an NIE number online?</summary>
+          <div class="msv__faq-answer">
+            <p>You cannot apply entirely online, but you can begin the process online. You can fill out form EX-15 electronically and submit it, then book your appointment online through the National Police website (cita previa system). However, you must attend an in-person appointment to complete the process and receive your NIE certificate.</p>
+          </div>
+        </details>
+        <details>
+          <summary>What happens if I lose my NIE number or certificate?</summary>
+          <div class="msv__faq-answer">
+            <p>Your NIE number is permanent and stays the same throughout your life in Spain—it never changes. If you lose your NIE certificate, you can request a replacement from the National Police headquarters or your local police office. You don't need a new number; you just get a duplicate certificate of your existing NIE. The process is straightforward and typically completed quickly.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- RELATED GUIDES -->
+  <section class="msv__section msv__section--cream">
+    <div class="msv__container">
+      <div class="msv__section-hd">
+        <h2>Related Guides</h2>
+        <p>Explore other essential topics for your Spanish journey</p>
+      </div>
+      <div class="msv__related">
+        <a href="/tie-card-spain/" class="msv__related-card">
+          <span class="msv__related-icon">🆔</span>
+          <span class="msv__related-title">TIE Card Spain</span>
+          <span class="msv__related-desc">Everything about Spain's physical identity card for residents</span>
+        </a>
+        <a href="/padron-registration-spain/" class="msv__related-card">
+          <span class="msv__related-icon">📍</span>
+          <span class="msv__related-title">Padrón Registration</span>
+          <span class="msv__related-desc">How to register at your local municipality</span>
+        </a>
+        <a href="/how-to-get-residency-in-spain/" class="msv__related-card">
+          <span class="msv__related-icon">🏠</span>
+          <span class="msv__related-title">Residency Guide</span>
+          <span class="msv__related-desc">Complete overview of Spanish residency options</span>
+        </a>
+        <a href="/spain-residence-permit/" class="msv__related-card">
+          <span class="msv__related-icon">📄</span>
+          <span class="msv__related-title">Residence Permit</span>
+          <span class="msv__related-desc">Obtaining your official Spanish residence permit</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- DISCLAIMER -->
+  </section>
+</div>
+<!-- FRAGMENT_END -->
+</main>
+
+
+<!-- ═══════════════════════════════════════════════════
+     SITE FOOTER
+     ═══════════════════════════════════════════════════ -->
+<footer class="msv-footer" role="contentinfo">
+
+  <div class="msv-footer__top">
+
+    <!-- Brand column -->
+    <div class="msv-footer__brand">
+      <a href="/" class="msv-footer__logo" aria-label="My Spanish Visa"><img src="/assets/images/msv-logo-white.png" alt="My Spanish Visa" height="40" style="display:block;"></a>
+      <p class="msv-footer__tagline">
+        Specialist Spain visa &amp; residency guidance for English-speaking foreigners.
+        A service of Platinum Legal Spain.
+      </p>
+      <div class="msv-footer__trust">
+        <span class="msv-footer__trust-item">All English. No barriers.</span>
+        <span class="msv-footer__trust-item">Solicitors &amp; immigration specialists</span>
+        <span class="msv-footer__trust-item">100% online process</span>
+      </div>
+    </div>
+
+    <!-- Visas column -->
+    <div>
+      <div class="msv-footer__col-title">Visas</div>
+      <ul class="msv-footer__links">
+        <li><a href="/non-lucrative-visa-spain/">Non-Lucrative Visa</a></li>
+        <li><a href="/digital-nomad-visa-spain/">Digital Nomad Visa</a></li>
+        <li><a href="/student-visa-spain/">Student Visa</a></li>
+        <li><a href="/spain-visa-renewal/">Visa Renewals</a></li>
+        <li><a href="/best-visa-move-to-spain/">Compare All Visas</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/nlv">Apply: NLV</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/dnv">Apply: DNV</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/student-visa">Apply: Student Visa</a></li>
+      </ul>
+    </div>
+
+    <!-- Resources column -->
+    <div>
+      <div class="msv-footer__col-title">Resources</div>
+      <ul class="msv-footer__links">
+        <li><a href="/blog/">Blog &amp; Guides</a></li>
+        <li><a href="/move-to-spain/">Move to Spain Guide</a></li>
+        <li><a href="/visa-eligibility-quiz/">Eligibility Quiz</a></li>
+        <li><a href="/spain-visa-checklist/">Document Checklists</a></li>
+        <li><a href="/spain-visa-requirements/">Visa Requirements</a></li>
+        <li><a href="/spain-nie-number/">NIE Number Guide</a></li>
+        <li><a href="/spain-tie-card/">TIE Card Guide</a></li>
+      </ul>
+    </div>
+
+    <!-- Company column -->
+    <div>
+      <div class="msv-footer__col-title">Company</div>
+      <ul class="msv-footer__links">
+        <li><a href="/about-us/">About Us</a></li>
+        <li><a href="/testimonials/">Client Reviews</a></li>
+        <li><a href="/why-choose-us/">Why Choose Us</a></li>
+        <li><a href="/contact-us.html">Contact</a></li>
+        <li><a href="https://www.platinumlegalspain.com" rel="noopener">Platinum Legal Spain</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/nlv">Client Portal</a></li>
+      </ul>
+    </div>
+
+  </div><!-- /.msv-footer__top -->
+
+  <div class="msv-footer__bottom">
+    <div class="msv-footer__bottom-inner">
+      <p class="msv-footer__disclaimer">
+        <strong style="color:rgba(255,255,255,0.5);">Disclaimer:</strong>
+        My Spanish Visa provides visa processing support and is not a law firm. Content on this site is for informational purposes only and does not constitute legal advice. Immigration rules change frequently — always verify requirements with official sources or a qualified specialist. My Spanish Visa is a trading name of Platinum Legal Spain.
+      </p>
+      <span class="msv-footer__copyright">© 2026 My Spanish Visa. All rights reserved.</span>
+    </div>
+  </div>
+
+</footer>
+
+</body>
+</html>

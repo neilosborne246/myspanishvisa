@@ -1,0 +1,1783 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- ═══════════════════════════════════════════════════════════════════
+       PAGE-SPECIFIC HEAD — replace block below per page:
+       <title>Nlv Passive Income | My Spanish Visa</title>
+       <meta name="description" content="…">
+       <meta property="og:title" content="…">
+       <meta property="og:description" content="…">
+       <meta property="og:url" content="https://www.myspanishvisa.com/…">
+       <meta property="og:image" content="…">
+       <link rel="canonical" href="https://www.myspanishvisa.com/…">
+       <script type="application/ld+json">…</script>
+       ═══════════════════════════════════════════════════════════════════ -->
+  <title>My Spanish Visa — Spain Visa &amp; Residency Specialists</title>
+  <meta name="description" content="My Spanish Visa helps English-speaking foreigners move to Spain. Expert guidance on Non-Lucrative Visa, Digital Nomad Visa, Student Visa, renewals and more.">
+
+  <!-- Shared Open Graph defaults -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="My Spanish Visa">
+  <meta property="og:image" content="https://www.myspanishvisa.com/assets/images/og/og-myspanishvisa-default.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@myspanishvisa">
+
+  <style>
+/* ═══════════════════════════════════════════════════════════════
+   GLOBAL SHELL — nav + footer only.
+   Page-specific CSS lives inside each fragment's own <style> block.
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── iOS overflow safety ── */
+html, body { max-width: 100%; overflow-x: clip; margin: 0; padding: 0; }
+*, *::before, *::after { box-sizing: border-box; }
+
+/* ── Brand tokens (root-level so all fragments inherit) ── */
+:root {
+  --navy:      #0c1930;
+  --navy-mid:  #1a3a5c;
+  --red:       #be0011;
+  --red-deep:  #8c000d;
+  --yellow:    #facf39;
+  --cream:     #f8f7f4;
+  --white:     #ffffff;
+  --black:     #1a1a1a;
+  --muted:     #5a6478;
+  --border:    #dce3ed;
+  --shadow-sm: 0 2px 8px rgba(12,25,48,0.08);
+  --shadow-md: 0 6px 24px rgba(12,25,48,0.13);
+}
+
+body {
+  font-family: 'Inter', 'Segoe UI', system-ui, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.75;
+  color: var(--black);
+  background: #fff;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   SITE NAV
+   ───────────────────────────────────────────────────────────── */
+.msv-nav {
+  position: sticky;
+  top: 0;
+  z-index: 9000;
+  background: var(--navy);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 2px 12px rgba(12,25,48,0.22);
+}
+.msv-nav__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+  gap: 1.5rem;
+}
+
+/* Logo */
+.msv-nav__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+.msv-nav__logo-flag {
+  font-size: 1.3rem;
+  line-height: 1;
+}
+.msv-nav__logo-text {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+.msv-nav__logo-text span {
+  color: var(--yellow);
+}
+
+/* Links */
+.msv-nav__links {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.msv-nav__links > li {
+  position: relative;
+}
+.msv-nav__links > li > a,
+.msv-nav__links > li > button {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.5rem 0.9rem;
+  font-size: 0.87rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.85);
+  text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: color 0.15s, background 0.15s;
+  white-space: nowrap;
+  height: 64px;
+}
+.msv-nav__links > li > a:hover,
+.msv-nav__links > li > button:hover,
+.msv-nav__links > li:focus-within > a,
+.msv-nav__links > li:focus-within > button {
+  color: #fff;
+  background: rgba(255,255,255,0.08);
+}
+.msv-nav__chevron {
+  font-size: 0.65rem;
+  opacity: 0.7;
+  transition: transform 0.2s;
+}
+.msv-nav__links > li:focus-within .msv-nav__chevron,
+.msv-nav__links > li:hover .msv-nav__chevron {
+  transform: rotate(180deg);
+}
+
+/* Dropdown */
+.msv-nav__dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 230px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  box-shadow: var(--shadow-md);
+  padding: 0.5rem 0;
+  z-index: 200;
+}
+.msv-nav__links > li:hover .msv-nav__dropdown,
+.msv-nav__links > li:focus-within .msv-nav__dropdown {
+  display: block;
+}
+.msv-nav__dropdown a {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.6rem 1.1rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--navy);
+  text-decoration: none;
+  transition: background 0.12s;
+}
+.msv-nav__dropdown a:hover {
+  background: var(--cream);
+  color: var(--red);
+}
+.msv-nav__dropdown-icon {
+  width: 24px;
+  height: 24px;
+  background: var(--cream);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+.msv-nav__dropdown-divider {
+  height: 1px;
+  background: var(--border);
+  margin: 0.4rem 0;
+}
+
+/* CTA button */
+.msv-nav__cta {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.55rem 1.2rem;
+  background: var(--red);
+  color: #fff !important;
+  font-size: 0.85rem;
+  font-weight: 700;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.15s, box-shadow 0.15s;
+  white-space: nowrap;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(190,0,17,0.3);
+}
+.msv-nav__cta:hover {
+  background: var(--red-deep);
+  box-shadow: 0 4px 14px rgba(190,0,17,0.4);
+  text-decoration: none;
+}
+
+/* Hamburger */
+.msv-nav__burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.4rem;
+  border-radius: 5px;
+}
+.msv-nav__burger span {
+  width: 22px;
+  height: 2px;
+  background: #fff;
+  border-radius: 2px;
+  transition: transform 0.2s, opacity 0.2s;
+  display: block;
+}
+
+/* Mobile nav */
+.msv-nav__mobile {
+  display: none;
+  flex-direction: column;
+  background: var(--navy-mid);
+  padding: 1rem 1.5rem 1.5rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+.msv-nav__mobile.open { display: flex; }
+.msv-nav__mobile a {
+  padding: 0.65rem 0;
+  color: rgba(255,255,255,0.9);
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+.msv-nav__mobile a:hover { color: var(--yellow); }
+.msv-nav__mobile .msv-nav__mobile-sub {
+  padding-left: 1rem;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: rgba(255,255,255,0.7);
+}
+.msv-nav__mobile-cta {
+  margin-top: 1rem;
+  background: var(--red);
+  color: #fff !important;
+  border-radius: 6px;
+  text-align: center;
+  padding: 0.75rem 1rem !important;
+  border-bottom: none !important;
+}
+
+@media (max-width: 900px) {
+  .msv-nav__links { display: none; }
+  .msv-nav__cta { display: none; }
+  .msv-nav__burger { display: flex; }
+}
+@media (max-width: 480px) {
+  .msv-nav__inner { padding: 0 1rem; }
+}
+
+/* ─────────────────────────────────────────────────────────────
+   SITE FOOTER
+   ───────────────────────────────────────────────────────────── */
+.msv-footer {
+  background: var(--navy);
+  color: rgba(255,255,255,0.75);
+  overflow-x: clip;
+}
+.msv-footer__top {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem 3rem;
+  display: grid;
+  grid-template-columns: 280px 1fr 1fr 1fr;
+  gap: 3rem;
+}
+@media (max-width: 900px) {
+  .msv-footer__top { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
+}
+@media (max-width: 560px) {
+  .msv-footer__top { grid-template-columns: 1fr; gap: 2rem; padding: 3rem 1.2rem 2rem; }
+}
+
+.msv-footer__brand {}
+.msv-footer__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  margin-bottom: 1rem;
+}
+.msv-footer__logo-flag { font-size: 1.3rem; }
+.msv-footer__logo-text {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -0.01em;
+}
+.msv-footer__logo-text span { color: var(--yellow); }
+.msv-footer__tagline {
+  font-size: 0.83rem;
+  color: rgba(255,255,255,0.55);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+.msv-footer__trust {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+.msv-footer__trust-item {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.65);
+}
+.msv-footer__trust-item::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  background: var(--yellow);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.msv-footer__col-title {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.4);
+  margin-bottom: 1rem;
+}
+.msv-footer__links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.msv-footer__links a {
+  font-size: 0.87rem;
+  color: rgba(255,255,255,0.68);
+  text-decoration: none;
+  transition: color 0.15s;
+  display: inline-block;
+}
+.msv-footer__links a:hover {
+  color: var(--yellow);
+  text-decoration: none;
+}
+
+.msv-footer__bottom {
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+.msv-footer__bottom-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 1rem;
+  justify-content: space-between;
+}
+.msv-footer__disclaimer {
+  font-size: 0.73rem;
+  color: rgba(255,255,255,0.35);
+  line-height: 1.65;
+  max-width: 720px;
+}
+.msv-footer__copyright {
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.35);
+  white-space: nowrap;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   MAIN CONTENT AREA
+   ───────────────────────────────────────────────────────────── */
+main {
+  /* Fragments are self-contained; this wrapper just provides flow context */
+  position: relative;
+}
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════
+     SITE NAVIGATION
+     ═══════════════════════════════════════════════════ -->
+<header class="msv-nav" role="banner">
+  <div class="msv-nav__inner">
+
+    <!-- Logo -->
+    <a href="/" class="msv-nav__logo" aria-label="My Spanish Visa — Home"><img src="/assets/images/msv-logo-white.png" alt="My Spanish Visa" height="40" style="display:block;"></a>
+
+    <!-- Desktop links -->
+    <nav aria-label="Main navigation">
+      <ul class="msv-nav__links">
+
+        <li>
+          <button class="msv-nav__dropdown-trigger" aria-haspopup="true" aria-expanded="false">
+            Visas <span class="msv-nav__chevron">▾</span>
+          </button>
+          <div class="msv-nav__dropdown" role="menu">
+            <a href="/non-lucrative-visa-spain/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🏖️</span>Non-Lucrative Visa
+            </a>
+            <a href="/digital-nomad-visa-spain/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">💻</span>Digital Nomad Visa
+            </a>
+            <a href="/student-visa-spain/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🎓</span>Student Visa
+            </a>
+            <div class="msv-nav__dropdown-divider"></div>
+            <a href="/spain-visa-renewal/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🔄</span>Visa Renewals
+            </a>
+            <a href="/best-visa-move-to-spain/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">⚖️</span>Compare All Visas
+            </a>
+          </div>
+        </li>
+
+        <li>
+          <button aria-haspopup="true" aria-expanded="false">
+            Resources <span class="msv-nav__chevron">▾</span>
+          </button>
+          <div class="msv-nav__dropdown" role="menu">
+            <a href="/blog/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">📝</span>Blog &amp; Guides
+            </a>
+            <a href="/spain-visa-checklist/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">✅</span>Document Checklists
+            </a>
+            <a href="/move-to-spain/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🏠</span>Move to Spain Guide
+            </a>
+            <a href="/visa-eligibility-quiz/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🧭</span>Eligibility Quiz
+            </a>
+          </div>
+        </li>
+
+        <li><a href="/about-us/">About Us</a></li>
+        <li><a href="/testimonials/">Reviews</a></li>
+        <li><a href="/contact-us.html">Contact</a></li>
+
+      </ul>
+    </nav>
+
+    <!-- Desktop CTA -->
+    <a href="https://dashboard.platinumlegalspain.com/nlv" class="msv-nav__cta">
+      Start My Application →
+    </a>
+
+    <!-- Hamburger (mobile) -->
+    <button class="msv-nav__burger" aria-label="Open menu" aria-expanded="false" onclick="
+      var m=document.querySelector('.msv-nav__mobile');
+      var open=m.classList.toggle('open');
+      this.setAttribute('aria-expanded', open);
+    ">
+      <span></span><span></span><span></span>
+    </button>
+
+  </div><!-- /.msv-nav__inner -->
+
+  <!-- Mobile menu -->
+  <nav class="msv-nav__mobile" aria-label="Mobile navigation">
+    <a href="/non-lucrative-visa-spain/" class="msv-nav__mobile-sub">Non-Lucrative Visa</a>
+    <a href="/digital-nomad-visa-spain/" class="msv-nav__mobile-sub">Digital Nomad Visa</a>
+    <a href="/student-visa-spain/" class="msv-nav__mobile-sub">Student Visa</a>
+    <a href="/spain-visa-renewal/">Visa Renewals</a>
+    <a href="/best-visa-move-to-spain/">Compare All Visas</a>
+    <a href="/blog/">Blog &amp; Guides</a>
+    <a href="/about-us/">About Us</a>
+    <a href="/testimonials/">Reviews</a>
+    <a href="/contact-us.html">Contact</a>
+    <a href="https://dashboard.platinumlegalspain.com/nlv" class="msv-nav__mobile-cta">Start My Application →</a>
+  </nav>
+
+</header>
+
+
+<!-- ═══════════════════════════════════════════════════
+     PAGE CONTENT (fragment injected here)
+     ═══════════════════════════════════════════════════ -->
+<main>
+<!-- FRAGMENT_START -->
+<!-- ============================================================
+     MY SPANISH VISA — Non-Lucrative Visa Passive Income
+     Elementor Full-Width HTML Widget · April 2026
+     Parent page: /non-lucrative-visa-spain/ · Slug: /non-lucrative-visa-passive-income/
+     ============================================================ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.myspanishvisa.com/non-lucrative-visa-passive-income/#webpage",
+      "url": "https://www.myspanishvisa.com/non-lucrative-visa-passive-income/",
+      "name": "Passive Income & Non-Lucrative Visa Spain 2026 | Complete Guide | My Spanish Visa",
+      "description": "Comprehensive guide to passive income for Spain's Non-Lucrative Visa. Includes rental income, dividends, pensions, interest, royalties, and how to document each income type for visa approval.",
+      "inLanguage": "en",
+      "isPartOf": { "@id": "https://www.myspanishvisa.com/#website" },
+      "breadcrumb": { "@id": "https://www.myspanishvisa.com/non-lucrative-visa-passive-income/#breadcrumb" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.myspanishvisa.com/non-lucrative-visa-passive-income/#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.myspanishvisa.com" },
+        { "@type": "ListItem", "position": 2, "name": "Non-Lucrative Visa Spain", "item": "https://www.myspanishvisa.com/non-lucrative-visa-spain/" },
+        { "@type": "ListItem", "position": 3, "name": "Passive Income Guide", "item": "https://www.myspanishvisa.com/non-lucrative-visa-passive-income/" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What counts as passive income for the Non-Lucrative Visa Spain?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Passive income for the NLV includes rental income from property (domestic or international), dividend income from stocks and funds, interest from savings accounts and bonds, government and private pension income, royalties and licensing fees from intellectual property, annuities and insurance payouts, and distributions from trusts. The key requirement is that the income is generated without you performing active work or services. Active income such as employment, freelancing, consulting, or self-employment is prohibited under the NLV."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much passive income do I need to qualify for the Non-Lucrative Visa?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For 2026, the main applicant must demonstrate monthly passive income equal to 400% of the IPREM (Indicador Público de Renta de Efectos Múltiples). As of April 2026, the IPREM is approximately 1,260 EUR, making the requirement around 5,040 EUR monthly or 60,480 EUR annually. Dependants (spouse, children) add 100% of the IPREM per person (1,260 EUR). This income must be continuous, regular, and independent of your personal effort."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I combine different types of passive income for the NLV?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, absolutely. You can combine rental income, dividends, pension income, interest, and royalties to meet the threshold. For example, you might receive a state pension of 2,500 EUR monthly, rental income of 1,800 EUR monthly, and dividend income of 1,200 EUR monthly to reach the 5,040 EUR minimum. Each income source must be documented separately with proof of regularity and continuity."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I document rental income for the NLV application?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Rental income must be documented with: a rental contract or lease agreement showing monthly rent amount and duration, bank statements showing regular monthly deposits from the tenant or property management company, tax returns or rental income declarations from your country of residence, a property appraisal or recent valuation, and proof of property ownership (deed or title). If renting through an agency or management company, include their official statements confirming the rental payments. For Spanish-owned rental property, provide the rental income declaration and bank evidence."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What's required to prove dividend and investment income for the NLV?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "To document dividend income, provide: account statements from your brokerage or investment platform showing regular dividend deposits, a dividend history report or statement from your investment provider, proof of asset ownership (share certificates or account holdings screenshots), and tax documentation showing dividend income (tax return or dividend statement from your country of residence). The statements must cover at least 6–12 months and show the income is regular and expected to continue. If held through an investment fund, include the fund's prospectus and your account statements."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I use my state pension as passive income for the Non-Lucrative Visa?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, state pensions from your country of origin (Social Security, public pensions, government retirement benefits) absolutely count as passive income for the NLV. This includes UK State Pension, US Social Security, German public pensions, or equivalent government retirement schemes. To document it, provide: a pension certificate from the issuing authority confirming the monthly amount, recent pension payment statements or bank deposit evidence, and a letter confirming the pension is lifelong or long-term. Private occupational pensions and annuities also count and require similar documentation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What documents do I need for non-EUR passive income (foreign currency)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "If your passive income is in a foreign currency (USD, GBP, etc.), you must document the official currency conversion rate at the time of application to show it meets the EUR threshold in EUR terms. Provide: bank statements showing the income deposits in foreign currency, an official exchange rate screenshot or certificate from the date of application, and a calculation showing the EUR equivalent meets the requirement. Some consulates require income to be in EUR or actively transferred to EUR accounts. Check with your specific consulate, as conversion policies vary. Ongoing currency conversion may also have tax implications as a Spanish resident."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What passive income sources are NOT accepted for the Non-Lucrative Visa?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The NLV explicitly does NOT accept active income sources: employment income (salary, wages), self-employment or freelance income, business profits or active trading, consulting or professional services, rental income if you manage the property yourself (it must be passive), rental furnished tourism properties (unless fully managed by a third party), day trading or frequent stock trading (must be passive investment income), and any income from work-like activities. If your income requires your active participation, it does not qualify. The NLV is strictly for passive, non-work income."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<!-- Open Graph / Social -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.myspanishvisa.com/nlv-passive-income/">
+<meta property="og:title" content="My Spanish Visa">
+<meta property="og:description" content="Expert Spain visa guidance for English-speaking expats.">
+<meta property="og:image" content="https://www.myspanishvisa.com/assets/images/og/og-nlv-spain.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="My Spanish Visa">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@myspanishvisa">
+<meta name="twitter:title" content="My Spanish Visa">
+<meta name="twitter:description" content="Expert Spain visa guidance for English-speaking expats.">
+<meta name="twitter:image" content="https://www.myspanishvisa.com/assets/images/og/og-nlv-spain.jpg">
+
+<style>
+/* ── iOS Safari pinch-zoom overflow safety ─────────────────────────── */
+/* Prevents horizontal overflow when users pinch-zoom on iPhone/iPad.   */
+/* Top-level (also paste into theme Custom CSS / Elementor Site Settings) */
+html, body { max-width: 100%; overflow-x: clip; }
+/* Scoped wrapper safety */
+.msv, .msv-nav, .msv-topbar, .msv-footer, .msv-footer-cta,
+.pls-header, .pls-body, .pls-nlv, .pls-dnv, .pls-student {
+  max-width: 100%;
+  overflow-x: clip;
+  position: relative;
+}
+/* Cap all media inside the wrapper */
+.msv img, .msv video, .msv iframe,
+.msv-footer img, .msv-footer video, .msv-footer iframe {
+  max-width: 100%;
+  height: auto;
+}
+/* Never use 100vw — use 100% instead (dev reminder) */
+
+
+/* ── Reset & scope ─────────────────────────────────────────────────── */
+.msv *, .msv *::before, .msv *::after { box-sizing: border-box; margin: 0; padding: 0; }
+/* ── Tokens ──────────────────────────────────────────────────────── */
+.msv {
+  --navy: #0c1930; --navy-mid: #1a3a5c; --red: #be0011; --red-deep: #8c000d;
+  --yellow: #facf39; --cream: #f8f7f4; --white: #ffffff; --black: #1a1a1a;
+  --muted: #5a6478; --border: #dce3ed;
+  --shadow-sm: 0 2px 8px rgba(12,25,48,0.08); --shadow-md: 0 6px 24px rgba(12,25,48,0.13);
+  font-family: 'Inter', 'Segoe UI', system-ui, Arial, sans-serif;
+  font-size: 16px; line-height: 1.75; color: var(--black); width: 100%;
+}
+.msv__container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+.msv__container--narrow { max-width: 780px; margin: 0 auto; padding: 0 2rem; }
+@media (max-width: 640px) { .msv__container, .msv__container--narrow { padding: 0 1.2rem; } }
+/* ── Typography ──────────────────────────────────────────────────── */
+.msv h1 { font-size: clamp(2rem, 4.5vw, 3rem); font-weight: 800; line-height: 1.12; color: var(--white); letter-spacing: -0.025em; margin-bottom: 1.2rem; }
+.msv h2 { font-size: clamp(1.3rem, 2.5vw, 1.75rem); font-weight: 700; color: var(--navy); letter-spacing: -0.01em; margin-bottom: 0.5rem; position: relative; display: inline-block; padding-bottom: 0.5rem; }
+.msv h2::after { content: ''; position: absolute; bottom: 0; left: 0; width: 44px; height: 3px; background: linear-gradient(90deg, var(--red), var(--red-deep)); border-radius: 2px; }
+.msv h3 { font-size: 1.05rem; font-weight: 700; color: var(--navy); margin-bottom: 0.4rem; }
+.msv p { color: var(--black); margin-bottom: 1rem; font-size: 0.97rem; }
+.msv a { color: var(--red); text-decoration: none; }
+.msv a:hover { text-decoration: underline; }
+.msv ul { list-style: none; padding: 0; margin: 0 0 1rem; }
+.msv ul li { padding: 0.35rem 0 0.35rem 1.4rem; position: relative; font-size: 0.95rem; color: var(--black); }
+.msv ul li::before { content: ''; position: absolute; left: 0; top: 0.75rem; width: 7px; height: 7px; background: linear-gradient(135deg, var(--red), var(--red-deep)); border-radius: 50%; }
+/* ── Sections ─────────────────────────────────────────────────── */
+.msv__section { padding: 5rem 0; background: var(--white); }
+.msv__section--cream { padding: 5rem 0; background: linear-gradient(180deg, #f8f7f4 0%, #f2f4f8 100%); }
+.msv__section--dark { padding: 5rem 0; background: linear-gradient(135deg, var(--navy) 0%, #0d2240 55%, #0a1d38 100%); }
+.msv__section--dark h2 { color: var(--white) !important; }
+.msv__section--dark h2::after { background: linear-gradient(90deg, var(--yellow), #e8b820); }
+.msv__section--dark h3 { color: rgba(255,255,255,0.9) !important; }
+.msv .msv__section--dark p, .msv .msv__section--dark li { color: rgba(255,255,255,0.82); }
+.msv__section--dark ul li::before { background: linear-gradient(135deg, var(--yellow), #e8b820); }
+@media (max-width: 640px) { .msv__section, .msv__section--cream, .msv__section--dark { padding: 3.5rem 0; } }
+.msv__section-hd { margin-bottom: 3rem; }
+.msv__section-hd p { color: var(--muted); font-size: 1rem; margin-top: 0.75rem; line-height: 1.7; max-width: 600px; }
+/* ── Animations ──────────────────────────────────────────────────── */
+@keyframes msv-fade-up { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes msv-shimmer {
+  0%   { background-position: -400px 0; }
+  100% { background-position: 400px 0; }
+}
+.msv__shimmer {
+  background: linear-gradient(90deg, var(--yellow) 0%, #e8b820 25%, var(--red) 50%, #e8b820 75%, var(--yellow) 100%);
+  background-size: 400px 100%;
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: msv-shimmer 3.5s linear infinite;
+  display: inline;
+}
+/* ── Hero ─────────────────────────────────────────────────────── */
+.msv__hero { background: linear-gradient(135deg, #0c1930 0%, #0f2540 40%, #162d50 70%, #1a3560 100%); padding: 5.5rem 0 5rem; position: relative; overflow: hidden; }
+.msv__hero::before { content: ''; position: absolute; top: -30%; right: -5%; width: 700px; height: 700px; background: radial-gradient(circle, rgba(190,0,17,0.1) 0%, transparent 65%); pointer-events: none; }
+.msv__hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, rgba(250,207,57,0.4), transparent); }
+.msv__hero-inner { max-width: 780px; animation: msv-fade-up 0.7s ease-out both; }
+.msv__eyebrow { display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(190,0,17,0.15); border: 1px solid rgba(190,0,17,0.4); color: #ff6b7a; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.35rem 0.9rem; border-radius: 100px; margin-bottom: 1.5rem; }
+.msv__eyebrow::before { content: ''; width: 6px; height: 6px; background: var(--red); border-radius: 50%; box-shadow: 0 0 6px var(--red); }
+.msv__hero p { color: rgba(255,255,255,0.78) !important; font-size: clamp(1rem, 2.2vw, 1.15rem); max-width: 640px; margin-bottom: 2.2rem; line-height: 1.75; }
+/* ── Breadcrumb ───────────────────────────────────────────── */
+.msv__breadcrumb { padding: 0.85rem 0; border-bottom: 1px solid var(--border); background: var(--white); }
+.msv__breadcrumb-inner { display: flex; align-items: center; gap: 0.5rem; font-size: 0.8rem; color: var(--muted); flex-wrap: wrap; }
+.msv__breadcrumb-inner a { color: var(--red); text-decoration: none; }
+.msv__breadcrumb-inner a:hover { text-decoration: underline; }
+.msv__breadcrumb-inner span { color: var(--muted); }
+/* ── Buttons ─────────────────────────────────────────────────── */
+.msv__btn-group { display: flex; flex-wrap: wrap; gap: 0.85rem; }
+.msv__btn { display: inline-block; padding: 0.85rem 2rem; font-size: 0.92rem; font-weight: 700; border-radius: 6px; text-decoration: none !important; transition: transform 0.15s, box-shadow 0.15s; }
+.msv__btn:hover { transform: translateY(-1px); text-decoration: none !important; }
+.msv .msv__btn--primary { background: linear-gradient(135deg, var(--red) 0%, var(--red-deep) 100%); color: #ffffff !important; box-shadow: 0 4px 16px rgba(190,0,17,0.38); }
+.msv .msv__btn--primary:hover { box-shadow: 0 6px 22px rgba(190,0,17,0.48); color: #ffffff !important; }
+.msv .msv__btn--outline-white { background: transparent; color: #ffffff !important; border: 1.5px solid rgba(255,255,255,0.5); }
+.msv .msv__btn--outline-white:hover { background: rgba(255,255,255,0.1); color: #ffffff !important; }
+/* ── Trust bar ──────────────────────────────────────────────── */
+.msv__trust-bar { background: var(--white); border-bottom: 1px solid var(--border); padding: 1rem 0; box-shadow: var(--shadow-sm); }
+.msv__trust-bar-inner { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.75rem; }
+.msv__trust-item { display: flex; align-items: center; gap: 0.5rem; font-size: 0.82rem; font-weight: 600; color: var(--navy); white-space: nowrap; }
+.msv__trust-item::before { content: ''; width: 7px; height: 7px; background: linear-gradient(135deg, var(--red), var(--red-deep)); border-radius: 50%; flex-shrink: 0; }
+/* ── Key facts strip ─────────────────────────────────────────── */
+.msv__facts { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; margin-bottom: 3rem; }
+@media (max-width: 760px) { .msv__facts { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 420px) { .msv__facts { grid-template-columns: 1fr; } }
+.msv__fact { background: var(--white); padding: 1.5rem 1.3rem; text-align: center; }
+.msv__fact-icon { font-size: 1.5rem; display: block; margin-bottom: 0.5rem; }
+.msv__fact-label { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); display: block; margin-bottom: 0.25rem; }
+.msv__fact-value { font-size: 0.97rem; font-weight: 700; color: var(--navy); line-height: 1.35; display: block; }
+/* ── Alert box ───────────────────────────────────────────────── */
+.msv__alert { border-radius: 10px; padding: 1.3rem 1.5rem; display: flex; gap: 1rem; align-items: flex-start; margin-bottom: 2rem; }
+.msv__alert--warn { background: #fffbea; border: 1px solid #f0d060; }
+.msv__alert--info { background: #eef4ff; border: 1px solid #a0bfff; }
+.msv__alert--red { background: #fef2f2; border: 1px solid #fca5a5; }
+.msv__alert--green { background: #f0fdf4; border: 1px solid #86efac; }
+.msv__alert-icon { font-size: 1.4rem; flex-shrink: 0; margin-top: 0.1rem; }
+.msv__alert p { font-size: 0.9rem; color: var(--black); margin: 0; line-height: 1.65; }
+.msv__alert strong { color: var(--navy); }
+/* ── Content boxes ───────────────────────────────────────────── */
+.msv__box { background: var(--white); border: 1.5px solid var(--border); border-radius: 12px; padding: 2rem; margin-bottom: 2rem; }
+.msv__box h3 { margin-top: 0; }
+.msv__boxes { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin-bottom: 3rem; }
+@media (max-width: 760px) { .msv__boxes { grid-template-columns: 1fr; } }
+/* ── FAQs ────────────────────────────────────────────────– */
+.msv__faq-list { display: flex; flex-direction: column; gap: 0; border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+.msv__faq-list details { border-bottom: 1px solid var(--border); background: var(--white); }
+.msv__faq-list details:last-child { border-bottom: none; }
+.msv__faq-list summary { padding: 1.2rem 1.5rem; font-size: 0.97rem; font-weight: 700; color: var(--navy); cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+.msv__faq-list summary::-webkit-details-marker { display: none; }
+.msv__faq-list summary::after { content: '+'; font-size: 1.3rem; font-weight: 400; color: var(--red); flex-shrink: 0; transition: transform 0.2s; }
+.msv__faq-list details[open] summary::after { transform: rotate(45deg); }
+.msv__faq-list details[open] summary { color: var(--red); }
+.msv__faq-answer { padding: 0 1.5rem 1.3rem; font-size: 0.92rem; color: var(--muted); line-height: 1.75; }
+.msv__faq-answer p { color: var(--muted); font-size: 0.92rem; margin-bottom: 0.75rem; }
+.msv__faq-answer p:last-child { margin-bottom: 0; }
+/* ── CTA band ────────────────────────────────────────────────── */
+.msv__cta-band { background: linear-gradient(135deg, var(--navy) 0%, #0d2240 60%, #0a1d38 100%); padding: 5rem 0; text-align: center; }
+.msv__cta-band h2 { color: var(--white) !important; display: block; }
+.msv__cta-band h2::after { left: 50%; transform: translateX(-50%); background: linear-gradient(90deg, var(--yellow), #e8b820); }
+.msv__cta-band p { color: rgba(255,255,255,0.75) !important; max-width: 560px; margin: 1rem auto 2.2rem; font-size: 1rem; }
+.msv__cta-band .msv__btn-group { justify-content: center; }
+/* ── Related guides ──────────────────────────────────────────── */
+.msv__related { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; }
+@media (max-width: 860px) { .msv__related { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 420px) { .msv__related { grid-template-columns: 1fr; } }
+.msv__related-card { background: var(--white); border: 1px solid var(--border); border-radius: 10px; padding: 1.3rem 1.25rem; text-decoration: none !important; transition: box-shadow 0.2s, transform 0.2s; display: block; }
+.msv__related-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); text-decoration: none !important; }
+.msv__related-icon { font-size: 1.5rem; display: block; margin-bottom: 0.6rem; }
+.msv__related-title { font-size: 0.88rem; font-weight: 700; color: var(--navy); display: block; margin-bottom: 0.3rem; }
+.msv__related-desc { font-size: 0.8rem; color: var(--muted); line-height: 1.55; }
+/* ── Disclaimer ──────────────────────────────────────────────── */
+.msv__disclaimer { background: var(--cream); border-top: 1px solid var(--border); padding: 2rem 0; }
+.msv__disclaimer p { font-size: 0.78rem; color: var(--muted); margin: 0; line-height: 1.65; }
+</style>
+
+<div class="msv">
+  <!-- ── Hero ─────────────────────────────────────────────────── -->
+  <section class="msv__hero">
+    <div class="msv__container">
+      <div class="msv__hero-inner">
+        <span class="msv__eyebrow">Non-Lucrative Visa</span>
+        <h1>Passive Income & the Non-Lucrative Visa Spain: <span class="msv__shimmer">Complete 2026 Guide</span></h1>
+        <p>Master passive income sources for Spain's Non-Lucrative Visa. Learn what qualifies, how to document rental income, dividends, pensions, and other income types that meet IPREM thresholds, plus how to avoid common approval mistakes.</p>
+        <div class="msv__btn-group">
+          <a href="/non-lucrative-visa-spain/" class="msv__btn msv__btn--outline-white">← Back to NLV guide</a>
+          <a href="/non-lucrative-visa-income-requirements/" class="msv__btn msv__btn--primary">Income requirements →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Trust bar ─────────────────────────────────────────── -->
+  <div class="msv__trust-bar">
+    <div class="msv__container">
+      <div class="msv__trust-bar-inner">
+        <div class="msv__trust-item">6+ passive income sources covered</div>
+        <div class="msv__trust-item">IPREM threshold explained</div>
+        <div class="msv__trust-item">Real documentation examples</div>
+        <div class="msv__trust-item">Tax implications detailed</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Key facts ────────────────────────────────────────── -->
+  <section class="msv__section">
+    <div class="msv__container">
+      <div class="msv__facts">
+        <div class="msv__fact">
+          <span class="msv__fact-icon">💷</span>
+          <span class="msv__fact-label">Minimum Monthly Income</span>
+          <span class="msv__fact-value">5,040 EUR (400% IPREM)</span>
+        </div>
+        <div class="msv__fact">
+          <span class="msv__fact-icon">✓</span>
+          <span class="msv__fact-label">Combination Allowed</span>
+          <span class="msv__fact-value">Multiple income sources</span>
+        </div>
+        <div class="msv__fact">
+          <span class="msv__fact-icon">📋</span>
+          <span class="msv__fact-label">Documentation</span>
+          <span class="msv__fact-value">6-12 months proof</span>
+        </div>
+        <div class="msv__fact">
+          <span class="msv__fact-icon">⚠️</span>
+          <span class="msv__fact-label">No Active Work</span>
+          <span class="msv__fact-value">Employment prohibited</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── What Qualifies ─────────────────────────────────────────── -->
+  <section class="msv__section">
+    <div class="msv__container--narrow">
+      <div class="msv__section-hd">
+        <h2>What Qualifies as Passive Income for the Non-Lucrative Visa</h2>
+        <p>Spain's Non-Lucrative Visa is designed for individuals with independent financial resources. The key requirement is that your income must be "passive" — generated without your active participation or work. Understanding what qualifies is essential to building a strong application.</p>
+      </div>
+
+      <div class="msv__alert msv__alert--info">
+        <span class="msv__alert-icon">ℹ️</span>
+        <p><strong>Core principle:</strong> If the income requires you to perform work, provide services, or actively manage assets, it does not qualify as passive income under the NLV. The visa exists for those who can live independently without working in Spain.</p>
+      </div>
+
+      <p>The Spanish immigration authority accepts the following as passive income sources:</p>
+
+      <ul>
+        <li><strong>Rental income</strong> from residential or commercial property (domestic or international)</li>
+        <li><strong>Dividend income</strong> from publicly traded stocks, investment funds, or ETFs</li>
+        <li><strong>Interest income</strong> from savings accounts, bonds, and fixed-rate investments</li>
+        <li><strong>Government pensions</strong> (Social Security, state retirement, public service pensions)</li>
+        <li><strong>Private pensions</strong> and occupational retirement schemes</li>
+        <li><strong>Royalties</strong> from intellectual property, books, music, or patents</li>
+        <li><strong>Annuities and insurance payouts</strong> from structured settlements</li>
+        <li><strong>Trust distributions</strong> from established family trusts or testamentary trusts</li>
+      </ul>
+
+      <p>Each source must meet two critical criteria:</p>
+      <ul>
+        <li><strong>Regularity:</strong> The income must be continuous and recurring (typically monthly or quarterly), not sporadic or one-time payments.</li>
+        <li><strong>Predictability:</strong> You must be able to demonstrate that the income is expected to continue throughout your stay in Spain (minimum 2-5 years for the initial visa).</li>
+      </ul>
+
+      <h3 style="margin-top: 2rem;">How Much Passive Income Do You Need?</h3>
+      <p>For 2026, the <strong>IPREM (Indicador Público de Renta de Efectos Múltiples)</strong> is approximately <strong>1,260 EUR per month</strong>. The Non-Lucrative Visa requires:</p>
+      <ul>
+        <li><strong>Main applicant:</strong> 400% of IPREM = 5,040 EUR per month (60,480 EUR annually)</li>
+        <li><strong>First dependent:</strong> +100% of IPREM = +1,260 EUR per month</li>
+        <li><strong>Each additional dependent:</strong> +100% of IPREM = +1,260 EUR per month</li>
+      </ul>
+      <p>A family of four (two adults + two children) would need approximately 9,060 EUR monthly (5,040 + 1,260 + 1,260 + 1,260).</p>
+    </div>
+  </section>
+
+  <!-- ── Rental Income ────────────────────────────────────────– -->
+  <section class="msv__section--cream">
+    <div class="msv__container--narrow">
+      <div class="msv__section-hd">
+        <h2>Rental Income: Residential or Commercial Property</h2>
+        <p>Rental income is one of the most common and reliable passive income sources for NLV applicants. Whether you own property in your home country or abroad, rental payments count toward your income threshold — as long as they're passive.</p>
+      </div>
+
+      <div class="msv__alert msv__alert--warn">
+        <span class="msv__alert-icon">⚠️</span>
+        <p><strong>Passive rental = hands-off:</strong> If you manage the property yourself (repairs, tenant communications, cleaning), the income may be considered semi-active. Use a property manager or let an agency handle all property management to ensure the income qualifies as passive.</p>
+      </div>
+
+      <h3>What Counts as Passive Rental Income</h3>
+      <ul>
+        <li>Long-term residential rental agreements (12-month leases or longer)</li>
+        <li>Commercial property rentals (office, retail, warehouse spaces)</li>
+        <li>Multi-unit rentals (apartment buildings, duplexes) via property management company</li>
+        <li>Furnished rentals through professional property management (fully handled by third party)</li>
+      </ul>
+
+      <h3>What Does NOT Count</h3>
+      <ul>
+        <li>Short-term holiday rentals or Airbnb-style tourism lettings (unless fully managed by an agency)</li>
+        <li>Properties you manage yourself (repairs, tenant selection, maintenance)</li>
+        <li>Properties in poor condition requiring your active refurbishment</li>
+      </ul>
+
+      <h3>How to Document Rental Income</h3>
+      <p><strong>Essential documents for your application:</strong></p>
+      <ul>
+        <li><strong>Signed lease/rental contract</strong> showing monthly rent amount, tenant name, lease duration, and property address</li>
+        <li><strong>Bank statements</strong> (6-12 months) showing regular monthly deposits from rent</li>
+        <li><strong>Property deed or title</strong> proving you own the property</li>
+        <li><strong>Property valuation</strong> (recent appraisal or estate agent valuation)</li>
+        <li><strong>Tax declaration of rental income</strong> from your country of residence (tax return showing declared rental income)</li>
+        <li><strong>Proof of property management</strong> (if using an agency, letter confirming they manage the property and handle all communications)</li>
+      </ul>
+
+      <p>If renting through a property management agency, provide:</p>
+      <ul>
+        <li>Official statement from the agency confirming the rental property and monthly rent amount</li>
+        <li>Management agreement showing the agency's responsibilities</li>
+        <li>Agency confirmation that rent is paid directly to you (bank transfer records)</li>
+      </ul>
+
+      <p><strong>Common red flags:</strong> Consulates may reject rental income if there's no professional property manager, if rent payments are irregular, if there's no lease agreement, or if the property appears to be actively managed by you rather than a third party.</p>
+    </div>
+  </section>
+
+  <!-- ── Dividend Income ────────────────────────────────────────– -->
+  <section class="msv__section">
+    <div class="msv__container--narrow">
+      <div class="msv__section-hd">
+        <h2>Dividend Income: Stocks, Funds & Investments</h2>
+        <p>Dividend income from publicly traded stocks, investment funds, ETFs, and bonds is universally recognized as passive income. This is ideal for investors who have built portfolios in their home country.</p>
+      </div>
+
+      <h3>What Qualifies as Dividend Income</h3>
+      <ul>
+        <li>Dividends from publicly traded stocks (US, UK, EU, or other major exchanges)</li>
+        <li>Income distributions from mutual funds, index funds, and ETFs</li>
+        <li>Interest and distributions from bond funds</li>
+        <li>Dividends from investment accounts and brokerage platforms</li>
+        <li>Reinvested dividends (if account statements show the reinvestment)</li>
+      </ul>
+
+      <h3>What Does NOT Qualify</h3>
+      <ul>
+        <li>Day trading or frequent stock trading (active income)</li>
+        <li>Capital gains from buying and selling stocks (investment activity, not passive income)</li>
+        <li>Cryptocurrency trading or speculation</li>
+        <li>Stock options or complex derivatives trading</li>
+      </ul>
+
+      <div class="msv__alert msv__alert--info">
+        <span class="msv__alert-icon">ℹ️</span>
+        <p><strong>Steady dividends only:</strong> Consulates look for consistent, predictable dividend payments. If your dividend income fluctuates wildly year to year, document the average or expected dividend rate based on your holdings.</p>
+      </div>
+
+      <h3>How to Document Dividend Income</h3>
+      <ul>
+        <li><strong>Brokerage account statements</strong> (6-12 months showing regular dividend deposits)</li>
+        <li><strong>Dividend history report</strong> from your broker or investment platform</li>
+        <li><strong>Share certificates or account holdings screenshot</strong> showing what securities you own</li>
+        <li><strong>Dividend declaration letter</strong> from the investment company (optional but helpful)</li>
+        <li><strong>Tax documentation</strong> from your home country showing dividend income (1099, dividend statement, tax return summary)</li>
+        <li><strong>Average annual dividend calculation</strong> if dividends vary (12-month average shown in writing)</li>
+      </ul>
+
+      <p><strong>What consulates want to see:</strong> Regular, predictable monthly or quarterly deposits into your bank account labeled as dividends. If dividends are paid annually, provide evidence of at least 3 years of consistent payments. For funds held in multiple accounts, consolidate the statements or provide a summary showing total dividend income.</p>
+
+      <h3>Key Documentation Tips</h3>
+      <ul>
+        <li>Use accounts from reputable brokers (Vanguard, Fidelity, Interactive Brokers, etc.) — offshore or dubious platforms may raise questions</li>
+        <li>Ensure dividend statements are in English or Spanish; provide certified translations if necessary</li>
+        <li>If dividends are paid in foreign currency, show the EUR conversion rate and equivalent EUR amount</li>
+        <li>Link dividend income to your overall portfolio value (total assets supporting the dividend rate)</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ── Interest Income ────────────────────────────────────────– -->
+  <section class="msv__section--cream">
+    <div class="msv__container--narrow">
+      <div class="msv__section-hd">
+        <h2>Interest Income: Savings, Bonds & Fixed Deposits</h2>
+        <p>Interest income from savings accounts, bonds, and fixed-rate deposits is straightforward passive income. This is particularly useful for applicants who have accumulated savings or who prefer lower-risk investments.</p>
+      </div>
+
+      <h3>What Qualifies</h3>
+      <ul>
+        <li>Interest from regular savings or money market accounts</li>
+        <li>Interest from certificates of deposit (CDs) or fixed-term deposits</li>
+        <li>Government bonds and treasury bill interest</li>
+        <li>Corporate bonds and bond fund distributions</li>
+        <li>High-yield savings accounts and promotional interest rates</li>
+        <li>Interest from structured deposits with banks</li>
+      </ul>
+
+      <p><strong>Important note:</strong> In the current low-interest environment (2024-2026), traditional savings accounts may generate minimal monthly interest. For example, a 100,000 EUR deposit earning 0.5% annual interest yields only 500 EUR annually or about 42 EUR monthly — far below the NLV threshold. You'll likely need to combine interest income with other passive sources or maintain a much larger principal.</p>
+
+      <h3>How to Document Interest Income</h3>
+      <ul>
+        <li><strong>Bank account statements</strong> (12 months minimum) showing monthly interest deposits or accruals</li>
+        <li><strong>Interest rate certificate</strong> from your bank confirming the annual interest rate</li>
+        <li><strong>Proof of principal amount</strong> (account opening balance or current balance confirmation)</li>
+        <li><strong>Tax documentation</strong> showing interest income earned during the past year</li>
+        <li><strong>Bond certificates or purchase confirmations</strong> (for bonds or CDs)</li>
+      </ul>
+
+      <p><strong>Strategy tip:</strong> If combining small interest income (savings + bonds) with other sources, clearly label each income stream in your application and demonstrate how they collectively meet the IPREM threshold. A mix of 2,000 EUR pension + 1,500 EUR rental + 1,000 EUR dividends + 800 EUR interest = 5,300 EUR monthly (exceeds the 5,040 EUR requirement).</p>
+    </div>
+  </section>
+
+  <!-- ── Pension Income ────────────────────────────────────────– -->
+  <section class="msv__section">
+    <div class="msv__container--narrow">
+      <div class="msv__section-hd">
+        <h2>Pension Income: Government & Private Retirement Benefits</h2>
+        <p>Pension income is one of the most reliable passive income sources for the Non-Lucrative Visa. Whether you're receiving a government state pension or a private occupational pension, this income strongly supports your application.</p>
+      </div>
+
+      <h3>Government/State Pensions (Excellent for NLV)</h3>
+      <ul>
+        <li>UK State Pension</li>
+        <li>US Social Security (Old Age, Survivor, or Disability Benefits)</li>
+        <li>German public pensions (Rentenversicherung)</li>
+        <li>French public pensions (CNAV, CNAVPL)</li>
+        <li>Dutch AOW (state pension for residents)</li>
+        <li>Italian INPS public pensions</li>
+        <li>Canadian CPP (Canada Pension Plan) and OAS (Old Age Security)</li>
+        <li>Australian Age Pension</li>
+        <li>Public service or military pensions</li>
+      </ul>
+
+      <h3>Private Pension & Annuity Income</h3>
+      <ul>
+        <li>Occupational pensions (employer-provided retirement plans)</li>
+        <li>Personal pension plans and individual retirement annuities</li>
+        <li>Deferred annuities (lump-sum converted to monthly income)</li>
+        <li>Structured settlements paying monthly income</li>
+      </ul>
+
+      <div class="msv__alert msv__alert--green">
+        <span class="msv__alert-icon">✓</span>
+        <p><strong>Strongest income proof:</strong> Government pensions are among the most reliable income sources for NLV applications because they're government-backed and expected to continue indefinitely.</p>
+      </div>
+
+      <h3>How to Document Pension Income</h3>
+      <p><strong>For government/state pensions:</strong></p>
+      <ul>
+        <li><strong>Pension award letter or certificate</strong> from the government agency confirming monthly pension amount</li>
+        <li><strong>Recent pension statements</strong> (6-12 months of bank deposits showing regular pension payments)</li>
+        <li><strong>Official confirmation letter</strong> from the pension provider stating the pension is lifelong or long-term (at least 5 years)</li>
+        <li><strong>Bank statements</strong> showing consistent monthly deposits from the pension provider</li>
+        <li><strong>COLA adjustment letter</strong> (if applicable) showing cost-of-living increases</li>
+      </ul>
+
+      <p><strong>For private pensions/annuities:</strong></p>
+      <ul>
+        <li><strong>Pension plan statement or annuity contract</strong> showing the monthly payout amount</li>
+        <li><strong>Proof of current payouts</strong> (6-12 months of bank statements)</li>
+        <li><strong>Remaining term confirmation</strong> (letter stating the pension will pay out for a specified number of years)</li>
+        <li><strong>Beneficiary designation and contract terms</strong> (showing the pension is active and in force)</li>
+        <li><strong>Employer pension plan summary</strong> (if from an occupational scheme)</li>
+      </ul>
+
+      <h3>Pension Income + Other Sources</h3>
+      <p>Many NLV applicants combine a modest pension with other income sources:</p>
+      <ul>
+        <li>Example: 2,800 EUR state pension + 2,500 EUR rental income = 5,300 EUR (exceeds requirement)</li>
+        <li>Example: 1,500 EUR private pension + 2,000 EUR dividends + 1,800 EUR rental = 5,300 EUR</li>
+      </ul>
+
+      <p>If you have multiple pensions (e.g., from different jobs or countries), document each separately and sum the total.</p>
+    </div>
+  </section>
+
+  <!-- ── Royalties & IP Income ────────────────────────────────────────– -->
+  <section class="msv__section--cream">
+    <div class="msv__container--narrow">
+      <div class="msv__section-hd">
+        <h2>Royalties, Licensing & Intellectual Property Income</h2>
+        <p>If you've created intellectual property (books, music, patents, licenses, software), royalties and licensing fees can count as passive income — provided you're not actively creating new work or actively managing the asset.</p>
+      </div>
+
+      <h3>What Qualifies</h3>
+      <ul>
+        <li><strong>Book royalties:</strong> Income from published books (traditional publishing or self-publishing platforms)</li>
+        <li><strong>Music royalties:</strong> Mechanical royalties, performance royalties, synchronization fees from streaming or licensing</li>
+        <li><strong>Patent licensing:</strong> Income from licensing patents or proprietary technology to companies</li>
+        <li><strong>Software or app licensing:</strong> Recurring revenue from software licenses or app subscriptions</li>
+        <li><strong>Photography or art licensing:</strong> Stock photography sales, image licensing, art reproduction rights</li>
+        <li><strong>Trademark or brand licensing:</strong> Income from licensing your brand or trademark to third parties</li>
+      </ul>
+
+      <h3>What Does NOT Qualify</h3>
+      <ul>
+        <li>Writing new books or creating new music (active work)</li>
+        <li>Actively managing or promoting your IP to generate sales</li>
+        <li>Royalties from work you're continuing to produce or update</li>
+        <li>Consulting or advisory fees disguised as royalties</li>
+      </ul>
+
+      <div class="msv__alert msv__alert--warn">
+        <span class="msv__alert-icon">⚠️</span>
+        <p><strong>Passive IP = published assets only:</strong> You must be able to show that the IP is already published/created and that you're not actively producing new content or actively managing marketing. Consulates are skeptical of IP income unless it's clearly from established, published work with an independent distribution network.</p>
+      </div>
+
+      <h3>How to Document Royalty Income</h3>
+      <ul>
+        <li><strong>Publisher or royalty agent statements</strong> (6-12 months showing regular payments)</li>
+        <li><strong>Royalty payment contract</strong> from the publisher or licensing company showing payment terms</li>
+        <li><strong>Bank statements</strong> showing deposits from the publisher/licensor</li>
+        <li><strong>Copyright or patent registration</strong> proving you own the IP</li>
+        <li><strong>Published work proof</strong> (book cover, copyright page, ISBN, etc.)</li>
+        <li><strong>Licensing agreement</strong> (showing the third party's right to use your IP)</li>
+        <li><strong>Tax documentation</strong> from your home country reporting royalty income</li>
+      </ul>
+
+      <p><strong>Tips for approval:</strong> Clearly separate royalty income from any active income. If you're also writing or creating new work, royalty income may be questioned. Be explicit that the published work is complete and you're receiving passive royalty distributions only.</p>
+    </div>
+  </section>
+
+  <!-- ── Annuities & Insurance ────────────────────────────────────────– -->
+  <section class="msv__section">
+    <div class="msv__container--narrow">
+      <div class="msv__section-hd">
+        <h2>Annuities & Insurance Payouts</h2>
+        <p>Structured annuities and insurance settlement payments provide predictable monthly income and count as passive sources for the NLV.</p>
+      </div>
+
+      <h3>What Qualifies</h3>
+      <ul>
+        <li><strong>Deferred annuities:</strong> Lump-sum invested as an annuity, now paying monthly income</li>
+        <li><strong>Structured settlements:</strong> Monthly payments from personal injury or legal settlements</li>
+        <li><strong>Life insurance payouts:</strong> Monthly distributions from life insurance or endowment policies</li>
+        <li><strong>Purchased annuities:</strong> Annuities bought with personal savings or inheritance</li>
+        <li><strong>Disability insurance benefits:</strong> Regular long-term disability payments</li>
+      </ul>
+
+      <h3>How to Document Annuity/Insurance Income</h3>
+      <ul>
+        <li><strong>Annuity contract</strong> showing the monthly payment amount and payout term</li>
+        <li><strong>Monthly payment statements</strong> from the insurance company or annuity provider</li>
+        <li><strong>Bank statements</strong> (12 months) showing regular deposits</li>
+        <li><strong>Verification letter</strong> from the provider confirming the payout will continue for at least 5 years</li>
+        <li><strong>Proof of principal</strong> (how the annuity was funded, if relevant)</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ── Trust Distributions ────────────────────────────────────────– -->
+  <section class="msv__section--cream">
+    <div class="msv__container--narrow">
+      <div class="msv__section-hd">
+        <h2>Trust Distributions & Inheritance Income</h2>
+        <p>If you're a beneficiary receiving regular distributions from a trust (family trust, testamentary trust, charitable remainder trust), this counts as passive income.</p>
+      </div>
+
+      <h3>What Qualifies</h3>
+      <ul>
+        <li>Regular distributions from an active family trust</li>
+        <li>Beneficiary payments from a testamentary trust (created via a will)</li>
+        <li>Charitable remainder trust distributions (CRT)</li>
+        <li>Life estate income from trusts</li>
+      </ul>
+
+      <h3>What Does NOT Qualify</h3>
+      <ul>
+        <li>One-time inheritance payments (not recurring)</li>
+        <li>Lump-sum distributions from a trust settlement</li>
+        <li>Distributions from trusts you actively manage</li>
+      </ul>
+
+      <h3>How to Document Trust Income</h3>
+      <ul>
+        <li><strong>Trust instrument (deed or will)</strong> showing you as a beneficiary</li>
+        <li><strong>Trustee's statement or letter</strong> confirming your annual/monthly distribution amount</li>
+        <li><strong>Bank statements</strong> (12 months) showing regular distributions</li>
+        <li><strong>Tax forms K-1 or equivalent</strong> reporting your share of trust income</li>
+        <li><strong>Trust account statements</strong> from the trustee or trust administrator</li>
+      </ul>
+
+      <p><strong>Documentation tip:</strong> Consulates may want to see the actual trust deed to verify that distributions are mandatory (not discretionary) and that they'll continue for the duration of your NLV. A trustee's confirmation letter is essential.</p>
+    </div>
+  </section>
+
+  <!-- ── What Does NOT Count ────────────────────────────────────────– -->
+  <section class="msv__section">
+    <div class="msv__container--narrow">
+      <div class="msv__section-hd">
+        <h2>What Does NOT Count as Passive Income for the NLV</h2>
+        <p>The Non-Lucrative Visa explicitly prohibits work-related income. Be aware of common income sources that do NOT qualify, to avoid rejection.</p>
+      </div>
+
+      <div class="msv__alert msv__alert--red">
+        <span class="msv__alert-icon">❌</span>
+        <p><strong>Absolutely prohibited:</strong> Any active work, employment, or income-generating activity is forbidden under the NLV. If your primary income comes from these sources, you are ineligible for the visa.</p>
+      </div>
+
+      <h3>Active Income Sources (NOT Allowed)</h3>
+      <ul>
+        <li><strong>Employment income:</strong> Salary, wages, hourly pay, or bonuses from any job</li>
+        <li><strong>Self-employment income:</strong> Income from a business, trade, or professional practice</li>
+        <li><strong>Freelance or consulting income:</strong> Money earned for services, projects, or hourly work</li>
+        <li><strong>Contract work:</strong> Payments for specific projects or temporary work</li>
+        <li><strong>Gig economy income:</strong> Earnings from Uber, TaskRabbit, or similar platforms</li>
+        <li><strong>Professional services:</strong> Income from coaching, consulting, tutoring, or similar services</li>
+        <li><strong>Commission-based income:</strong> Sales commissions or referral fees</li>
+      </ul>
+
+      <h3>Semi-Active Income (Likely NOT Allowed)</h3>
+      <ul>
+        <li><strong>Day trading or active trading:</strong> Frequent buying and selling of stocks (capital gains, not passive dividends)</li>
+        <li><strong>Day trading cryptocurrency:</strong> Active buying and selling of digital assets</li>
+        <li><strong>Self-managed rental properties:</strong> If you're actively involved in repairs, tenant selection, or maintenance</li>
+        <li><strong>Holiday rental active management:</strong> Airbnb or short-term rentals you actively manage (high-touch tourism lettings)</li>
+        <li><strong>Active forex trading or options trading:</strong> Speculative financial activities</li>
+        <li><strong>New artistic/creative work:</strong> If you're actively writing, composing, or creating new content while on the visa</li>
+      </ul>
+
+      <p><strong>Example of rejection scenarios:</strong></p>
+      <ul>
+        <li>Applicant claims 5,000 EUR monthly passive income but bank statements show payments labeled "freelance," "consultant," or "contract work"</li>
+        <li>Applicant claims rental income but property manager confirms the applicant is actively involved in tenant communications and repairs</li>
+        <li>Applicant claims investment income but bank statements show frequent trades (indicating active trading, not passive investment)</li>
+        <li>Applicant claims dividend income but also has ongoing employment in Spain (dual income from work is prohibited)</li>
+      </ul>
+
+      <p><strong>The NLV requires genuine non-work status:</strong> The visa is for people who have financial independence and do not need to work. If you're tempted to hide work income or obscure active income as passive, understand that consulates conduct thorough bank statement reviews and may reject applications if documentation is inconsistent.</p>
+    </div>
+  </section>
+
+  <!-- ── Documentation Checklist ────────────────────────────────────────– -->
+  <section class="msv__section--cream">
+    <div class="msv__container--narrow">
+      <div class="msv__section-hd">
+        <h2>Complete Documentation Checklist for Passive Income</h2>
+        <p>Use this checklist to organize your passive income documentation. Different consulates may have varying requirements, so contact your specific consulate before submitting to confirm their requirements.</p>
+      </div>
+
+      <h3>Universal Documents (for all passive income types)</h3>
+      <ul>
+        <li>Bank statements covering 6-12 months showing regular income deposits</li>
+        <li>Tax documentation from your home country showing declared passive income (most recent tax return)</li>
+        <li>Currency conversion documentation (if income is not in EUR)</li>
+        <li>English or Spanish translations of all foreign-language documents (certified)</li>
+      </ul>
+
+      <h3>Rental Income Documents</h3>
+      <ul>
+        <li>Signed rental contract or lease agreement</li>
+        <li>Property deed or title</li>
+        <li>Property valuation or appraisal</li>
+        <li>Property manager's letter (if applicable)</li>
+        <li>Bank statements showing regular monthly deposits</li>
+      </ul>
+
+      <h3>Dividend/Investment Income Documents</h3>
+      <ul>
+        <li>Brokerage account statements (6-12 months)</li>
+        <li>Dividend history report or statement from broker</li>
+        <li>Share certificates or holdings screenshot</li>
+        <li>Tax forms showing investment income (1099, dividend statements)</li>
+      </ul>
+
+      <h3>Pension Income Documents</h3>
+      <ul>
+        <li>Pension award letter or certificate from government/agency</li>
+        <li>Bank statements showing regular pension deposits</li>
+        <li>Confirmation letter that pension is lifelong or long-term (5+ years)</li>
+        <li>Recent pension statement</li>
+      </ul>
+
+      <h3>Royalty/IP Income Documents</h3>
+      <ul>
+        <li>Royalty contract or publishing agreement</li>
+        <li>Royalty statements from publisher (6-12 months)</li>
+        <li>Bank statements showing deposits</li>
+        <li>Copyright or patent registration proving ownership</li>
+        <li>Published work proof</li>
+      </ul>
+
+      <h3>Annuity/Trust Documents</h3>
+      <ul>
+        <li>Annuity contract or trust deed</li>
+        <li>Payment statements (6-12 months)</li>
+        <li>Bank statements showing deposits</li>
+        <li>Letter from provider confirming payment duration (5+ years)</li>
+      </ul>
+
+      <p><strong>Pro tip:</strong> Create a master spreadsheet listing each income source, monthly amount (converted to EUR), and which documents prove it. This makes it easy to show the consulate exactly how you reach the IPREM threshold and where to find supporting evidence in your application.</p>
+    </div>
+  </section>
+
+  <!-- ── Currency Conversion ────────────────────────────────────────– -->
+  <section class="msv__section">
+    <div class="msv__container--narrow">
+      <div class="msv__section-hd">
+        <h2>Currency Conversion for Non-EUR Income</h2>
+        <p>If your passive income is in a foreign currency (USD, GBP, JPY, etc.), you must convert it to EUR at the time of application to prove you meet the IPREM threshold.</p>
+      </div>
+
+      <h3>Conversion Rules</h3>
+      <ul>
+        <li><strong>Use the official exchange rate</strong> on the date of your application (not historical or averaged rates)</li>
+        <li><strong>Document the conversion rate</strong> with a screenshot or certificate from XE.com, OANDA, or your bank</li>
+        <li><strong>Provide a written calculation</strong> showing foreign currency amount × exchange rate = EUR equivalent</li>
+        <li><strong>Provide proof of currency transfers</strong> (if you're regularly converting income to EUR)</li>
+      </ul>
+
+      <h3>Example Conversion</h3>
+      <ul>
+        <li>Monthly income: $5,500 USD (dividend income)</li>
+        <li>Exchange rate on application date: 1 USD = 0.92 EUR</li>
+        <li>EUR equivalent: $5,500 × 0.92 = 5,060 EUR (meets 5,040 EUR requirement)</li>
+      </ul>
+
+      <div class="msv__alert msv__alert--warn">
+        <span class="msv__alert-icon">⚠️</span>
+        <p><strong>Exchange rate volatility:</strong> If your income in foreign currency is close to the threshold, currency fluctuations could push you below the requirement. Plan conservatively and consider keeping a currency cushion (e.g., if you need 5,040 EUR and earn $5,500 USD, aim for $6,000+ to account for exchange rate changes).</p>
+      </div>
+
+      <h3>Practical Steps</h3>
+      <ul>
+        <li>1. Calculate your monthly passive income in its original currency</li>
+        <li>2. Take a screenshot of the exchange rate (XE.com, OANDA, your bank website) on the date you're submitting your application</li>
+        <li>3. Create a table showing: Income (USD/GBP/etc.) × Exchange Rate = EUR Equivalent</li>
+        <li>4. Show which consulate date applies (some use application date, some use visa interview date)</li>
+        <li>5. Include bank statements showing you receive income in foreign currency and any subsequent EUR transfers</li>
+      </ul>
+
+      <p><strong>Consulate tip:</strong> Contact your specific consulate before applying to confirm whether they accept foreign currency income and which exchange rate they recognize (application date, interview date, or average rate). Some consulates require income to be actively transferred to EUR accounts.</p>
+    </div>
+  </section>
+
+  <!-- ── IPREM Thresholds ────────────────────────────────────────– -->
+  <section class="msv__section--cream">
+    <div class="msv__container--narrow">
+      <div class="msv__section-hd">
+        <h2>IPREM Thresholds & Dependent Calculations</h2>
+        <p>The IPREM (Indicador Público de Renta de Efectos Múltiples) is an annual Spanish poverty benchmark. It's updated each year in January and determines the income requirement for the Non-Lucrative Visa.</p>
+      </div>
+
+      <h3>2026 IPREM Figures (Approximate)</h3>
+      <ul>
+        <li><strong>Monthly IPREM:</strong> 1,260 EUR</li>
+        <li><strong>Annual IPREM:</strong> 15,120 EUR</li>
+        <li><strong>Main applicant requirement (400% IPREM):</strong> 5,040 EUR/month or 60,480 EUR/year</li>
+      </ul>
+
+      <h3>Dependant Requirements</h3>
+      <ul>
+        <li><strong>Spouse/partner:</strong> +100% IPREM = +1,260 EUR/month</li>
+        <li><strong>First child:</strong> +100% IPREM = +1,260 EUR/month</li>
+        <li><strong>Second child:</strong> +100% IPREM = +1,260 EUR/month</li>
+        <li><strong>Each additional dependant:</strong> +100% IPREM = +1,260 EUR/month</li>
+      </ul>
+
+      <h3>Family Examples</h3>
+      <ul>
+        <li><strong>Single applicant:</strong> 5,040 EUR/month</li>
+        <li><strong>Couple (2 applicants):</strong> 6,300 EUR/month</li>
+        <li><strong>Family of 3 (1 adult + 1 dependant):</strong> 6,300 EUR/month</li>
+        <li><strong>Family of 4 (2 adults + 2 children):</strong> 9,060 EUR/month</li>
+        <li><strong>Single with 3 children:</strong> 9,060 EUR/month</li>
+      </ul>
+
+      <p><strong>Important:</strong> All dependants must be listed on your visa application. Each adds 100% of the IPREM to your requirement. Children studying abroad or working in other countries may still count as dependants depending on consulate rules.</p>
+
+      <div class="msv__alert msv__alert--info">
+        <span class="msv__alert-icon">ℹ️</span>
+        <p><strong>IPREM updates:</strong> The IPREM is updated each January. Check the official Spanish government website (boe.es) for the current year's IPREM before submitting your application. Using an outdated IPREM figure could result in rejection if you no longer meet the threshold.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Tax Implications ────────────────────────────────────────– -->
+  <section class="msv__section">
+    <div class="msv__container--narrow">
+      <div class="msv__section-hd">
+        <h2>Tax Implications of Passive Income as a Spanish Resident</h2>
+        <p>Once you receive your Non-Lucrative Visa and become a Spanish tax resident, you'll have new tax obligations on your worldwide passive income. Understanding these implications is critical for compliance.</p>
+      </div>
+
+      <h3>Spanish Tax Residency Rules</h3>
+      <p>You become a Spanish tax resident if you:</p>
+      <ul>
+        <li>Stay in Spain for more than 183 days in a calendar year, OR</li>
+        <li>Have your primary home (economic interest) in Spain, OR</li>
+        <li>Have your center of professional activity in Spain</li>
+      </ul>
+
+      <p>Once you're a Spanish tax resident, you must declare your worldwide income to Spanish tax authorities (Agencia Tributaria), including all passive income from abroad.</p>
+
+      <h3>Rental Income Taxation</h3>
+      <ul>
+        <li>Spanish rental income is taxed in Spain (even if the property is abroad)</li>
+        <li>Allowable deductions: property management fees, maintenance, repairs, insurance, mortgage interest (if applicable)</li>
+        <li>Spanish tax rate: Progressive scale (19% to 45% depending on total income)</li>
+        <li>Non-resident property owners pay a flat 24% rate on Spanish rental income</li>
+      </ul>
+
+      <h3>Dividend & Investment Income Taxation</h3>
+      <ul>
+        <li>Spanish residents are taxed on worldwide dividend income</li>
+        <li>Tax rate: 19% to 45% (progressive, based on total income)</li>
+        <li>Foreign dividend taxes may be credited against Spanish tax (tax treaty dependent)</li>
+        <li>Capital gains (from selling stocks) are also taxable and may be treated separately from passive dividends</li>
+      </ul>
+
+      <h3>Interest Income Taxation</h3>
+      <ul>
+        <li>Interest is taxed as regular income (19% to 45% progressive rate)</li>
+        <li>Interest from foreign bank accounts must be declared to Spanish authorities</li>
+        <li>Withholding taxes from foreign banks may be credited against Spanish tax liability</li>
+      </ul>
+
+      <h3>Pension Income Taxation</h3>
+      <ul>
+        <li>Government pensions are typically taxed at the same rates as other income</li>
+        <li>Foreign pensions may have reduced tax rates under EU directives or bilateral tax treaties</li>
+        <li>Some countries (UK, US) have tax treaties with Spain that may reduce or eliminate double taxation</li>
+      </ul>
+
+      <h3>Tax Treaties & Double Taxation Prevention</h3>
+      <p>Spain has tax treaties with most countries. These treaties typically allow you to:</p>
+      <ul>
+        <li>Claim a foreign tax credit (reducing Spanish tax by foreign taxes already paid)</li>
+        <li>Avoid paying tax twice on the same income</li>
+        <li>In some cases, enjoy preferential tax rates on certain income types</li>
+      </ul>
+
+      <p><strong>Example:</strong> If you have a UK rental property and pay UK tax on the rental income, you can typically credit that UK tax against your Spanish tax liability for the same rental income, avoiding double taxation.</p>
+
+      <div class="msv__alert msv__alert--warn">
+        <span class="msv__alert-icon">⚠️</span>
+        <p><strong>FATCA & CRS reporting:</strong> As a Spanish resident, you'll have ongoing reporting obligations for foreign bank accounts and financial assets. Foreign financial institutions report to Spanish authorities under the Common Reporting Standard (CRS). Failure to declare foreign assets can result in penalties.</p>
+      </div>
+
+      <h3>Practical Tax Planning Tips</h3>
+      <ul>
+        <li>Engage a Spanish tax advisor (gestor fiscal) to file your annual income tax return (Declaración de la Renta)</li>
+        <li>Keep detailed records of all passive income and related expenses (property management fees, investment fees, etc.)</li>
+        <li>Report foreign bank accounts and assets on the IA form (required for Spanish residents with foreign accounts)</li>
+        <li>Plan income distribution if possible (some passive income sources are more tax-efficient than others)</li>
+        <li>Review your country-of-origin tax residency status; you may still have filing obligations there even while living in Spain</li>
+      </ul>
+
+      <p><strong>Long-term consideration:</strong> Passive income tax in Spain is progressive and can be significant (19%-45% depending on your total income). Factor these taxes into your financial planning, especially if you're planning to live in Spain long-term. Some applicants find that after-tax passive income is lower than expected.</p>
+    </div>
+  </section>
+
+  <!-- ── Common Mistakes ────────────────────────────────────────– -->
+  <section class="msv__section--cream">
+    <div class="msv__container--narrow">
+      <div class="msv__section-hd">
+        <h2>Common Mistakes When Proving Passive Income</h2>
+        <p>Learning from others' experiences can help you avoid rejection. Here are the most common mistakes applicants make when documenting passive income for the NLV.</p>
+      </div>
+
+      <h3>1. Inconsistent Income Documentation</h3>
+      <p><strong>Mistake:</strong> Bank statements show irregular income deposits, but applicant claims the income is regular and predictable.</p>
+      <p><strong>Why it fails:</strong> Consulates look for consistent monthly or quarterly deposits. If income is sporadic, it may be classified as non-passive or temporary.</p>
+      <p><strong>Solution:</strong> Provide 12 months of bank statements showing regular deposits. If income is quarterly or semi-annual, explain why in a cover letter and provide 24 months of history showing the pattern is regular.</p>
+
+      <h3>2. Missing Supporting Documentation</h3>
+      <p><strong>Mistake:</strong> Applicant provides bank statements showing income but no proof of where the income comes from (no rental contract, no dividend statement, no pension letter).</p>
+      <p><strong>Why it fails:</strong> Consulates must verify that income is passive and legitimate. Bank statements alone don't prove the income source.</p>
+      <p><strong>Solution:</strong> For every income source, provide both the bank statement AND the underlying proof (rental contract, dividend statement, pension letter, etc.).</p>
+
+      <h3>3. Blended or Unclear Income</h3>
+      <p><strong>Mistake:</strong> Multiple income sources deposited into the same bank account, making it impossible to distinguish which deposits are passive income and which are active income.</p>
+      <p><strong>Why it fails:</strong> Consulates may reject the entire income claim if they can't clearly identify passive income sources.</p>
+      <p><strong>Solution:</strong> Create a detailed spreadsheet listing each income source, monthly amount, proof document, and which bank deposits correspond to each source. Use colored highlighting or annotations to make it clear.</p>
+
+      <h3>4. Foreign-Language Documents Without Translation</h3>
+      <p><strong>Mistake:</strong> Applicant submits tax returns, pension letters, and investment statements in their home country's language without Spanish or English translations.</p>
+      <p><strong>Why it fails:</strong> Spanish consulates may not accept documents they cannot verify because they can't read them.</p>
+      <p><strong>Solution:</strong> Provide certified or official translations of all foreign-language documents. Use a professional translator recognized by the consulate (some consulates accept certified translations, others require official translations by a sworn translator).</p>
+
+      <h3>5. Insufficient Time Period of Documentation</h3>
+      <p><strong>Mistake:</strong> Applicant provides only 3 months of bank statements and claims that's enough to show regular income.</p>
+      <p><strong>Why it fails:</strong> Consulates want to see a pattern of income stability, typically 6-12 months of history. Three months isn't enough to establish predictability.</p>
+      <p><strong>Solution:</strong> Gather 12 months of bank statements for each income source. If you have a new income source (e.g., recently started rental income), provide as much history as possible plus a supporting letter explaining why the documentation period is shorter.</p>
+
+      <h3>6. Currency Conversion Issues</h3>
+      <p><strong>Mistake:</strong> Applicant converts foreign currency income to EUR using an outdated or incorrect exchange rate, or provides no exchange rate documentation.</p>
+      <p><strong>Why it fails:</strong> Consulates may not accept the conversion without proper documentation of the exchange rate used.</p>
+      <p><strong>Solution:</strong> Document the exact exchange rate used (screenshot from XE.com, OANDA, or your bank with date/time). Use the official rate on your application date. If exchange rates fluctuate, maintain a small cushion above the threshold.</p>
+
+      <h3>7. Passive Income That's Actually Active</h3>
+      <p><strong>Mistake:</strong> Applicant claims "rental income" but property manager's letter reveals the applicant is actively involved in repairs, tenant selection, and management.</p>
+      <p><strong>Why it fails:</strong> If you're actively managing the property, it's semi-active income, not passive. Same issue applies to Airbnb rentals, holiday lettings, or any property requiring hands-on involvement.</p>
+      <p><strong>Solution:</strong> Ensure a professional property manager handles all aspects of the rental. Request a letter from the manager confirming the property is fully managed by them and you have no involvement. For holiday rentals, use a full-service property management company that handles all guest communications, cleaning, and maintenance.</p>
+
+      <h3>8. Hidden Active Income</h3>
+      <p><strong>Mistake:</strong> Applicant claims passive income but bank statements also show deposits labeled "consulting," "freelance," "contract work," or similar active income.</p>
+      <p><strong>Why it fails:</strong> Consulates review all bank activity. If active income is visible, the application is immediately suspect or rejected.</p>
+      <p><strong>Solution:</strong> If you have any active income in your home country, separate it completely. Do not use the same bank account for both active and passive income. Consider opening a dedicated account for passive income only.</p>
+
+      <h3>9. Insufficient Documentation of Combined Income</h3>
+      <p><strong>Mistake:</strong> Applicant combines multiple income sources (rental + dividends + pension) but doesn't clearly document how each contributes to reaching the IPREM threshold.</p>
+      <p><strong>Why it fails:</strong> Consulates may question whether the combined total actually meets the requirement if documentation is disorganized.</p>
+      <p><strong>Solution:</strong> Create a one-page summary table showing:
+      <ul style="margin-top: 0.5rem;">
+        <li>Income source | Monthly amount (EUR) | Supporting document | Page/reference</li>
+        <li>Rental income: 2,000 EUR | Property contract + bank statements | Pages 5-8</li>
+        <li>Dividend income: 1,500 EUR | Broker statement + tax form | Pages 9-12</li>
+        <li>State pension: 1,800 EUR | Pension letter + bank statements | Pages 13-15</li>
+        <li>TOTAL: 5,300 EUR | (Exceeds 5,040 EUR requirement)</li>
+      </ul>
+      </p>
+
+      <h3>10. Outdated or Expired Documentation</h3>
+      <p><strong>Mistake:</strong> Applicant submits bank statements from 18 months ago or tax returns from 3 years prior.</p>
+      <p><strong>Why it fails:</strong> Consulates want recent documentation to verify current income, not historical income from years past.</p>
+      <p><strong>Solution:</strong> Use the most recent documentation available. Aim for bank statements no older than 3 months at the time of submission. Tax returns should be from the most recent fiscal year available.</p>
+
+      <p><strong>General rule:</strong> When in doubt, over-document. Consulates are more likely to accept an application with excess documentation than one with missing pieces. Be organized, clear, and transparent about your income sources.</p>
+    </div>
+  </section>
+
+  <!-- ── CTA Band ────────────────────────────────────────────── -->
+  <section class="msv__cta-band">
+    <div class="msv__container--narrow">
+      <h2>Ready to Apply for the Non-Lucrative Visa?</h2>
+      <p>Passive income documentation is complex, but understanding what qualifies and how to document it properly is your first step to approval. Our experts can help you gather, organize, and submit the right documents to your consulate.</p>
+      <div class="msv__btn-group">
+        <a href="https://dashboard.platinumlegalspain.com/nlv" class="msv__btn msv__btn--primary">Check Your Eligibility →</a>
+        <a href="/non-lucrative-visa-documents/" class="msv__btn msv__btn--outline-white">View Document Checklist</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FAQ Accordion ────────────────────────────────────────────── -->
+  <section class="msv__section">
+    <div class="msv__container--narrow">
+      <div class="msv__section-hd">
+        <h2>Frequently Asked Questions</h2>
+        <p>Get answers to the most common questions about passive income and the Non-Lucrative Visa.</p>
+      </div>
+
+      <div class="msv__faq-list">
+        <details>
+          <summary>What counts as passive income for the Non-Lucrative Visa Spain?</summary>
+          <div class="msv__faq-answer">
+            <p>Passive income includes rental income from property, dividend income from stocks and funds, interest from savings accounts and bonds, government and private pensions, royalties from intellectual property, annuities and insurance payouts, and distributions from trusts. The key requirement is that the income is generated without you performing active work or services. Employment, freelancing, consulting, or self-employment income is strictly prohibited under the NLV.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>How much passive income do I need to qualify for the Non-Lucrative Visa?</summary>
+          <div class="msv__faq-answer">
+            <p>For 2026, the main applicant must demonstrate monthly passive income equal to 400% of the IPREM. The IPREM is approximately 1,260 EUR, making the requirement around 5,040 EUR monthly (60,480 EUR annually). Each dependant adds 100% of the IPREM (1,260 EUR per month). This income must be continuous, regular, and independent of your personal effort.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Can I combine different types of passive income for the NLV?</summary>
+          <div class="msv__faq-answer">
+            <p>Yes, absolutely. You can combine rental income, dividends, pensions, interest, and royalties to meet the threshold. For example, a state pension of 2,500 EUR monthly plus rental income of 1,800 EUR monthly plus dividend income of 1,200 EUR monthly totals 5,500 EUR monthly, which exceeds the 5,040 EUR requirement. Each income source must be documented separately with proof of regularity.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>How do I document rental income for the NLV application?</summary>
+          <div class="msv__faq-answer">
+            <p>Provide a signed rental contract showing monthly rent amount, lease duration, and property address; bank statements (6-12 months) showing regular monthly deposits; property deed or title; property valuation or appraisal; tax returns showing declared rental income; and proof of professional property management (if applicable). The property can be domestic or international, but rental management must be passive (handled by a property manager, not by you).</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>What's required to prove dividend and investment income for the NLV?</summary>
+          <div class="msv__faq-answer">
+            <p>Provide brokerage or investment account statements (6-12 months) showing regular dividend deposits; a dividend history report or statement from your investment provider; proof of asset ownership (share certificates or account screenshots); tax documentation from your home country (tax return or dividend statement); and an average dividend calculation if dividends fluctuate. The statements must show consistent, predictable income from publicly traded investments.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Can I use my state pension as passive income for the Non-Lucrative Visa?</summary>
+          <div class="msv__faq-answer">
+            <p>Yes, state pensions from your country of origin (UK State Pension, US Social Security, German public pensions, etc.) absolutely count as passive income for the NLV. Provide a pension certificate from the issuing authority confirming the monthly amount; recent pension payment statements or bank deposit evidence; and a letter confirming the pension is lifelong or long-term. Government pensions are among the strongest income sources for NLV approval because they're government-backed and expected to continue indefinitely.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>What documents do I need for non-EUR passive income (foreign currency)?</summary>
+          <div class="msv__faq-answer">
+            <p>If your passive income is in a foreign currency (USD, GBP, etc.), document the official exchange rate at the time of application to show it meets the EUR threshold. Provide bank statements showing deposits in foreign currency, an official exchange rate screenshot from XE.com or your bank dated on your application date, and a calculation showing the EUR equivalent meets the requirement. Some consulates require income to be actively transferred to EUR accounts; check with your specific consulate for their currency conversion rules.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>What passive income sources are NOT accepted for the Non-Lucrative Visa?</summary>
+          <div class="msv__faq-answer">
+            <p>The NLV explicitly does NOT accept active income: employment salary, self-employment income, freelance or consulting work, business profits, day trading or active stock trading, actively managed rental properties, holiday rentals without professional management, commission-based income, or any work-like activities. The visa is strictly for passive, non-work income. If your primary income comes from work, you are ineligible for the NLV.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Related Guides ────────────────────────────────────────────── -->
+  <section class="msv__section--cream">
+    <div class="msv__container">
+      <div class="msv__section-hd">
+        <h2>Related Guides & Resources</h2>
+        <p>Explore related topics to build your complete Non-Lucrative Visa knowledge.</p>
+      </div>
+
+      <div class="msv__related">
+        <a href="/non-lucrative-visa-spain/" class="msv__related-card">
+          <span class="msv__related-icon">📋</span>
+          <span class="msv__related-title">NLV Complete Guide</span>
+          <span class="msv__related-desc">Full overview of the Non-Lucrative Visa requirements, timeline, and process</span>
+        </a>
+
+        <a href="/non-lucrative-visa-income-requirements/" class="msv__related-card">
+          <span class="msv__related-icon">💵</span>
+          <span class="msv__related-title">Income Requirements</span>
+          <span class="msv__related-desc">IPREM thresholds, minimum income, and how much you need to qualify</span>
+        </a>
+
+        <a href="/non-lucrative-visa-savings-requirements/" class="msv__related-card">
+          <span class="msv__related-icon">🏦</span>
+          <span class="msv__related-title">Savings Requirements</span>
+          <span class="msv__related-desc">Liquid assets, savings accounts, and financial reserves for the NLV</span>
+        </a>
+
+        <a href="/non-lucrative-visa-documents/" class="msv__related-card">
+          <span class="msv__related-icon">📄</span>
+          <span class="msv__related-title">Document Checklist</span>
+          <span class="msv__related-desc">Complete list of documents required for your NLV application</span>
+        </a>
+
+        <a href="/non-lucrative-visa-requirements/" class="msv__related-card">
+          <span class="msv__related-icon">✓</span>
+          <span class="msv__related-title">All Requirements</span>
+          <span class="msv__related-desc">Age, health insurance, criminal record, and all other eligibility criteria</span>
+        </a>
+
+        <a href="/non-lucrative-visa-tax-spain/" class="msv__related-card">
+          <span class="msv__related-icon">📊</span>
+          <span class="msv__related-title">Tax Implications</span>
+          <span class="msv__related-desc">Spanish taxes on passive income and tax residency rules</span>
+        </a>
+
+        <a href="/non-lucrative-visa-application-process/" class="msv__related-card">
+          <span class="msv__related-icon">🔄</span>
+          <span class="msv__related-title">Application Process</span>
+          <span class="msv__related-desc">Step-by-step application timeline and submission procedures</span>
+        </a>
+        <a href="/non-lucrative-visa-health-insurance/" class="msv__related-card">
+          <span class="msv__related-icon">🏥</span>
+          <span class="msv__related-title">Health Insurance</span>
+          <span class="msv__related-desc">Approved providers, no-copay rules, and costs by age group</span>
+        </a>
+        <a href="/non-lucrative-visa-cost/" class="msv__related-card">
+          <span class="msv__related-icon">💷</span>
+          <span class="msv__related-title">NLV Costs & Fees</span>
+          <span class="msv__related-desc">Full cost breakdown for your NLV application</span>
+        </a>
+        <a href="/non-lucrative-visa-timeline/" class="msv__related-card">
+          <span class="msv__related-icon">⏱️</span>
+          <span class="msv__related-title">NLV Timeline</span>
+          <span class="msv__related-desc">Processing times and month-by-month planning calendar</span>
+        </a>
+        <a href="/non-lucrative-visa-faq/" class="msv__related-card">
+          <span class="msv__related-icon">❓</span>
+          <span class="msv__related-title">NLV FAQ</span>
+          <span class="msv__related-desc">56 commonly asked questions about the Non-Lucrative Visa</span>
+        </a>
+        <a href="/digital-nomad-visa-spain/" class="msv__related-card">
+          <span class="msv__related-icon">💻</span>
+          <span class="msv__related-title">Digital Nomad Visa</span>
+          <span class="msv__related-desc">Alternative visa if you earn active income remotely</span>
+        </a>
+
+        <a href="/non-lucrative-visa-renewal/" class="msv__related-card">
+          <span class="msv__related-icon">🔁</span>
+          <span class="msv__related-title">Renewal Guide</span>
+          <span class="msv__related-desc">How to renew your Non-Lucrative Visa after 2 years</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+<!-- FRAGMENT_END -->
+</main>
+
+
+<!-- ═══════════════════════════════════════════════════
+     SITE FOOTER
+     ═══════════════════════════════════════════════════ -->
+<footer class="msv-footer" role="contentinfo">
+
+  <div class="msv-footer__top">
+
+    <!-- Brand column -->
+    <div class="msv-footer__brand">
+      <a href="/" class="msv-footer__logo" aria-label="My Spanish Visa"><img src="/assets/images/msv-logo-white.png" alt="My Spanish Visa" height="40" style="display:block;"></a>
+      <p class="msv-footer__tagline">
+        Specialist Spain visa &amp; residency guidance for English-speaking foreigners.
+        A service of Platinum Legal Spain.
+      </p>
+      <div class="msv-footer__trust">
+        <span class="msv-footer__trust-item">All English. No barriers.</span>
+        <span class="msv-footer__trust-item">Solicitors &amp; immigration specialists</span>
+        <span class="msv-footer__trust-item">100% online process</span>
+      </div>
+    </div>
+
+    <!-- Visas column -->
+    <div>
+      <div class="msv-footer__col-title">Visas</div>
+      <ul class="msv-footer__links">
+        <li><a href="/non-lucrative-visa-spain/">Non-Lucrative Visa</a></li>
+        <li><a href="/digital-nomad-visa-spain/">Digital Nomad Visa</a></li>
+        <li><a href="/student-visa-spain/">Student Visa</a></li>
+        <li><a href="/spain-visa-renewal/">Visa Renewals</a></li>
+        <li><a href="/best-visa-move-to-spain/">Compare All Visas</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/nlv">Apply: NLV</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/dnv">Apply: DNV</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/student-visa">Apply: Student Visa</a></li>
+      </ul>
+    </div>
+
+    <!-- Resources column -->
+    <div>
+      <div class="msv-footer__col-title">Resources</div>
+      <ul class="msv-footer__links">
+        <li><a href="/blog/">Blog &amp; Guides</a></li>
+        <li><a href="/move-to-spain/">Move to Spain Guide</a></li>
+        <li><a href="/visa-eligibility-quiz/">Eligibility Quiz</a></li>
+        <li><a href="/spain-visa-checklist/">Document Checklists</a></li>
+        <li><a href="/spain-visa-requirements/">Visa Requirements</a></li>
+        <li><a href="/spain-nie-number/">NIE Number Guide</a></li>
+        <li><a href="/spain-tie-card/">TIE Card Guide</a></li>
+      </ul>
+    </div>
+
+    <!-- Company column -->
+    <div>
+      <div class="msv-footer__col-title">Company</div>
+      <ul class="msv-footer__links">
+        <li><a href="/about-us/">About Us</a></li>
+        <li><a href="/testimonials/">Client Reviews</a></li>
+        <li><a href="/why-choose-us/">Why Choose Us</a></li>
+        <li><a href="/contact-us.html">Contact</a></li>
+        <li><a href="https://www.platinumlegalspain.com" rel="noopener">Platinum Legal Spain</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/nlv">Client Portal</a></li>
+      </ul>
+    </div>
+
+  </div><!-- /.msv-footer__top -->
+
+  <div class="msv-footer__bottom">
+    <div class="msv-footer__bottom-inner">
+      <p class="msv-footer__disclaimer">
+        <strong style="color:rgba(255,255,255,0.5);">Disclaimer:</strong>
+        My Spanish Visa provides visa processing support and is not a law firm. Content on this site is for informational purposes only and does not constitute legal advice. Immigration rules change frequently — always verify requirements with official sources or a qualified specialist. My Spanish Visa is a trading name of Platinum Legal Spain.
+      </p>
+      <span class="msv-footer__copyright">© 2026 My Spanish Visa. All rights reserved.</span>
+    </div>
+  </div>
+
+</footer>
+
+</body>
+</html>

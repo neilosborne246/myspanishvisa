@@ -1,0 +1,1180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- ═══════════════════════════════════════════════════════════════════
+       PAGE-SPECIFIC HEAD — replace block below per page:
+       <title>Guide Tax Residency Spain | My Spanish Visa</title>
+       <meta name="description" content="…">
+       <meta property="og:title" content="…">
+       <meta property="og:description" content="…">
+       <meta property="og:url" content="https://www.myspanishvisa.com/…">
+       <meta property="og:image" content="…">
+       <link rel="canonical" href="https://www.myspanishvisa.com/…">
+       <script type="application/ld+json">…</script>
+       ═══════════════════════════════════════════════════════════════════ -->
+  <title>My Spanish Visa — Spain Visa &amp; Residency Specialists</title>
+  <meta name="description" content="My Spanish Visa helps English-speaking foreigners move to Spain. Expert guidance on Non-Lucrative Visa, Digital Nomad Visa, Student Visa, renewals and more.">
+
+  <!-- Shared Open Graph defaults -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="My Spanish Visa">
+  <meta property="og:image" content="https://www.myspanishvisa.com/assets/images/og/og-myspanishvisa-default.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@myspanishvisa">
+
+  <style>
+/* ═══════════════════════════════════════════════════════════════
+   GLOBAL SHELL — nav + footer only.
+   Page-specific CSS lives inside each fragment's own <style> block.
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── iOS overflow safety ── */
+html, body { max-width: 100%; overflow-x: clip; margin: 0; padding: 0; }
+*, *::before, *::after { box-sizing: border-box; }
+
+/* ── Brand tokens (root-level so all fragments inherit) ── */
+:root {
+  --navy:      #0c1930;
+  --navy-mid:  #1a3a5c;
+  --red:       #be0011;
+  --red-deep:  #8c000d;
+  --yellow:    #facf39;
+  --cream:     #f8f7f4;
+  --white:     #ffffff;
+  --black:     #1a1a1a;
+  --muted:     #5a6478;
+  --border:    #dce3ed;
+  --shadow-sm: 0 2px 8px rgba(12,25,48,0.08);
+  --shadow-md: 0 6px 24px rgba(12,25,48,0.13);
+}
+
+body {
+  font-family: 'Inter', 'Segoe UI', system-ui, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.75;
+  color: var(--black);
+  background: #fff;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   SITE NAV
+   ───────────────────────────────────────────────────────────── */
+.msv-nav {
+  position: sticky;
+  top: 0;
+  z-index: 9000;
+  background: var(--navy);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 2px 12px rgba(12,25,48,0.22);
+}
+.msv-nav__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+  gap: 1.5rem;
+}
+
+/* Logo */
+.msv-nav__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+.msv-nav__logo-flag {
+  font-size: 1.3rem;
+  line-height: 1;
+}
+.msv-nav__logo-text {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+.msv-nav__logo-text span {
+  color: var(--yellow);
+}
+
+/* Links */
+.msv-nav__links {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.msv-nav__links > li {
+  position: relative;
+}
+.msv-nav__links > li > a,
+.msv-nav__links > li > button {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.5rem 0.9rem;
+  font-size: 0.87rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.85);
+  text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: color 0.15s, background 0.15s;
+  white-space: nowrap;
+  height: 64px;
+}
+.msv-nav__links > li > a:hover,
+.msv-nav__links > li > button:hover,
+.msv-nav__links > li:focus-within > a,
+.msv-nav__links > li:focus-within > button {
+  color: #fff;
+  background: rgba(255,255,255,0.08);
+}
+.msv-nav__chevron {
+  font-size: 0.65rem;
+  opacity: 0.7;
+  transition: transform 0.2s;
+}
+.msv-nav__links > li:focus-within .msv-nav__chevron,
+.msv-nav__links > li:hover .msv-nav__chevron {
+  transform: rotate(180deg);
+}
+
+/* Dropdown */
+.msv-nav__dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 230px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  box-shadow: var(--shadow-md);
+  padding: 0.5rem 0;
+  z-index: 200;
+}
+.msv-nav__links > li:hover .msv-nav__dropdown,
+.msv-nav__links > li:focus-within .msv-nav__dropdown {
+  display: block;
+}
+.msv-nav__dropdown a {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.6rem 1.1rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--navy);
+  text-decoration: none;
+  transition: background 0.12s;
+}
+.msv-nav__dropdown a:hover {
+  background: var(--cream);
+  color: var(--red);
+}
+.msv-nav__dropdown-icon {
+  width: 24px;
+  height: 24px;
+  background: var(--cream);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+.msv-nav__dropdown-divider {
+  height: 1px;
+  background: var(--border);
+  margin: 0.4rem 0;
+}
+
+/* CTA button */
+.msv-nav__cta {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.55rem 1.2rem;
+  background: var(--red);
+  color: #fff !important;
+  font-size: 0.85rem;
+  font-weight: 700;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.15s, box-shadow 0.15s;
+  white-space: nowrap;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(190,0,17,0.3);
+}
+.msv-nav__cta:hover {
+  background: var(--red-deep);
+  box-shadow: 0 4px 14px rgba(190,0,17,0.4);
+  text-decoration: none;
+}
+
+/* Hamburger */
+.msv-nav__burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.4rem;
+  border-radius: 5px;
+}
+.msv-nav__burger span {
+  width: 22px;
+  height: 2px;
+  background: #fff;
+  border-radius: 2px;
+  transition: transform 0.2s, opacity 0.2s;
+  display: block;
+}
+
+/* Mobile nav */
+.msv-nav__mobile {
+  display: none;
+  flex-direction: column;
+  background: var(--navy-mid);
+  padding: 1rem 1.5rem 1.5rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+.msv-nav__mobile.open { display: flex; }
+.msv-nav__mobile a {
+  padding: 0.65rem 0;
+  color: rgba(255,255,255,0.9);
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+.msv-nav__mobile a:hover { color: var(--yellow); }
+.msv-nav__mobile .msv-nav__mobile-sub {
+  padding-left: 1rem;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: rgba(255,255,255,0.7);
+}
+.msv-nav__mobile-cta {
+  margin-top: 1rem;
+  background: var(--red);
+  color: #fff !important;
+  border-radius: 6px;
+  text-align: center;
+  padding: 0.75rem 1rem !important;
+  border-bottom: none !important;
+}
+
+@media (max-width: 900px) {
+  .msv-nav__links { display: none; }
+  .msv-nav__cta { display: none; }
+  .msv-nav__burger { display: flex; }
+}
+@media (max-width: 480px) {
+  .msv-nav__inner { padding: 0 1rem; }
+}
+
+/* ─────────────────────────────────────────────────────────────
+   SITE FOOTER
+   ───────────────────────────────────────────────────────────── */
+.msv-footer {
+  background: var(--navy);
+  color: rgba(255,255,255,0.75);
+  overflow-x: clip;
+}
+.msv-footer__top {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem 3rem;
+  display: grid;
+  grid-template-columns: 280px 1fr 1fr 1fr;
+  gap: 3rem;
+}
+@media (max-width: 900px) {
+  .msv-footer__top { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
+}
+@media (max-width: 560px) {
+  .msv-footer__top { grid-template-columns: 1fr; gap: 2rem; padding: 3rem 1.2rem 2rem; }
+}
+
+.msv-footer__brand {}
+.msv-footer__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  margin-bottom: 1rem;
+}
+.msv-footer__logo-flag { font-size: 1.3rem; }
+.msv-footer__logo-text {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -0.01em;
+}
+.msv-footer__logo-text span { color: var(--yellow); }
+.msv-footer__tagline {
+  font-size: 0.83rem;
+  color: rgba(255,255,255,0.55);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+.msv-footer__trust {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+.msv-footer__trust-item {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.65);
+}
+.msv-footer__trust-item::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  background: var(--yellow);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.msv-footer__col-title {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.4);
+  margin-bottom: 1rem;
+}
+.msv-footer__links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.msv-footer__links a {
+  font-size: 0.87rem;
+  color: rgba(255,255,255,0.68);
+  text-decoration: none;
+  transition: color 0.15s;
+  display: inline-block;
+}
+.msv-footer__links a:hover {
+  color: var(--yellow);
+  text-decoration: none;
+}
+
+.msv-footer__bottom {
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+.msv-footer__bottom-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 1rem;
+  justify-content: space-between;
+}
+.msv-footer__disclaimer {
+  font-size: 0.73rem;
+  color: rgba(255,255,255,0.35);
+  line-height: 1.65;
+  max-width: 720px;
+}
+.msv-footer__copyright {
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.35);
+  white-space: nowrap;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   MAIN CONTENT AREA
+   ───────────────────────────────────────────────────────────── */
+main {
+  /* Fragments are self-contained; this wrapper just provides flow context */
+  position: relative;
+}
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════
+     SITE NAVIGATION
+     ═══════════════════════════════════════════════════ -->
+<header class="msv-nav" role="banner">
+  <div class="msv-nav__inner">
+
+    <!-- Logo -->
+    <a href="/" class="msv-nav__logo" aria-label="My Spanish Visa — Home"><img src="/assets/images/msv-logo-white.png" alt="My Spanish Visa" height="80" style="display:block;"></a>
+
+    <!-- Desktop links -->
+    <nav aria-label="Main navigation">
+      <ul class="msv-nav__links">
+
+        <li>
+          <button class="msv-nav__dropdown-trigger" aria-haspopup="true" aria-expanded="false">
+            Visas <span class="msv-nav__chevron">▾</span>
+          </button>
+          <div class="msv-nav__dropdown" role="menu">
+            <a href="/non-lucrative-visa-spain/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🏖️</span>Non-Lucrative Visa
+            </a>
+            <a href="/digital-nomad-visa-spain/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">💻</span>Digital Nomad Visa
+            </a>
+            <a href="/student-visa-spain/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🎓</span>Student Visa
+            </a>
+            <div class="msv-nav__dropdown-divider"></div>
+            <a href="/spain-visa-renewal/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🔄</span>Visa Renewals
+            </a>
+            <a href="/best-visa-move-to-spain/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">⚖️</span>Compare All Visas
+            </a>
+          </div>
+        </li>
+
+        <li>
+          <button aria-haspopup="true" aria-expanded="false">
+            Resources <span class="msv-nav__chevron">▾</span>
+          </button>
+          <div class="msv-nav__dropdown" role="menu">
+            <a href="/blog/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">📝</span>Blog &amp; Guides
+            </a>
+            <a href="/spain-visa-checklist/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">✅</span>Document Checklists
+            </a>
+            <a href="/move-to-spain/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🏠</span>Move to Spain Guide
+            </a>
+            <a href="/visa-eligibility-quiz/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🧭</span>Eligibility Quiz
+            </a>
+          </div>
+        </li>
+
+        <li><a href="/about-us/">About Us</a></li>
+        <li><a href="/testimonials/">Reviews</a></li>
+        <li><a href="/contact-us.html">Contact</a></li>
+
+      </ul>
+    </nav>
+
+    <!-- Desktop CTA -->
+    <a href="https://dashboard.platinumlegalspain.com/dnv" class="msv-nav__cta">
+      Start My Application →
+    </a>
+
+    <!-- Hamburger (mobile) -->
+    <button class="msv-nav__burger" aria-label="Open menu" aria-expanded="false" onclick="
+      var m=document.querySelector('.msv-nav__mobile');
+      var open=m.classList.toggle('open');
+      this.setAttribute('aria-expanded', open);
+    ">
+      <span></span><span></span><span></span>
+    </button>
+
+  </div><!-- /.msv-nav__inner -->
+
+  <!-- Mobile menu -->
+  <nav class="msv-nav__mobile" aria-label="Mobile navigation">
+    <a href="/non-lucrative-visa-spain/" class="msv-nav__mobile-sub">Non-Lucrative Visa</a>
+    <a href="/digital-nomad-visa-spain/" class="msv-nav__mobile-sub">Digital Nomad Visa</a>
+    <a href="/student-visa-spain/" class="msv-nav__mobile-sub">Student Visa</a>
+    <a href="/spain-visa-renewal/">Visa Renewals</a>
+    <a href="/best-visa-move-to-spain/">Compare All Visas</a>
+    <a href="/blog/">Blog &amp; Guides</a>
+    <a href="/about-us/">About Us</a>
+    <a href="/testimonials/">Reviews</a>
+    <a href="/contact-us.html">Contact</a>
+    <a href="https://dashboard.platinumlegalspain.com/dnv" class="msv-nav__mobile-cta">Start My Application →</a>
+  </nav>
+
+</header>
+
+
+<!-- ═══════════════════════════════════════════════════
+     PAGE CONTENT (fragment injected here)
+     ═══════════════════════════════════════════════════ -->
+<main>
+<!-- FRAGMENT_START -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.myspanishvisa.com/guide/tax-residency-spain/",
+      "url": "https://www.myspanishvisa.com/guide/tax-residency-spain/",
+      "name": "Spanish Tax Residency 2026: Rules, Tests, and What It Means for Expats | My Spanish Visa",
+      "description": "When you become a Spanish tax resident, what it means for your worldwide income, how the 183-day rule works, and what expats need to do when they move.",
+      "inLanguage": "en-GB",
+      "dateModified": "2026-04-23",
+      "breadcrumb": { "@id": "https://www.myspanishvisa.com/guide/tax-residency-spain/#breadcrumb" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.myspanishvisa.com/guide/tax-residency-spain/#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.myspanishvisa.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Guides", "item": "https://www.myspanishvisa.com/guide/" },
+        { "@type": "ListItem", "position": 3, "name": "Tax Residency Spain", "item": "https://www.myspanishvisa.com/guide/tax-residency-spain/" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.myspanishvisa.com/guide/tax-residency-spain/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "When do I become a Spanish tax resident?",
+          "acceptedAnswer": { "@type": "Answer", "text": "You become a Spanish tax resident if you spend more than 183 days in Spain in a calendar year, or if Spain is the centre of your economic or vital interests (main home, business, or family). Tax residency is determined per calendar year (January to December). The 183-day clock resets each year." }
+        },
+        {
+          "@type": "Question",
+          "name": "Does the 183-day rule mean consecutive days in Spain?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. The 183 days do not need to be consecutive. They are counted across the entire calendar year, from 1 January to 31 December. Brief absences from Spain do not reset the count — days spent outside Spain during temporary trips are generally not deducted unless you can prove tax residence elsewhere." }
+        },
+        {
+          "@type": "Question",
+          "name": "What income must I declare as a Spanish tax resident?",
+          "acceptedAnswer": { "@type": "Answer", "text": "As a Spanish tax resident you are required to declare your worldwide income to the Spanish tax authority (AEAT). This includes employment income, self-employment income, rental income from properties in any country, investment income (dividends, interest, capital gains), pension income, and any other worldwide income. Spain taxes residents on their global income, not just income earned in Spain." }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I pay tax in both Spain and my home country?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Spain has double taxation treaties (CDI — Convenio para Evitar la Doble Imposicion) with over 90 countries including the UK, Ireland, USA, and most EU states. These treaties determine which country has the right to tax each type of income, and provide mechanisms to avoid paying full tax twice. In practice you will usually pay tax primarily in Spain on your worldwide income, with credits or exemptions for tax already paid elsewhere." }
+        },
+        {
+          "@type": "Question",
+          "name": "What is Modelo 720 and do I need to file it?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Modelo 720 is Spain's foreign asset declaration form. Spanish tax residents who hold assets (bank accounts, securities, real estate, insurance) outside Spain with a combined value exceeding 50,000 euros in any category must file Modelo 720 by 31 March of the following year. This is a disclosure obligation, not a tax — but failure to file or errors can result in significant penalties, though EU court rulings have reduced the severity of these." }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the Beckham Law and who qualifies?",
+          "acceptedAnswer": { "@type": "Answer", "text": "The Beckham Law (Regimen Especial de Trabajadores Desplazados, or RETD) is a special tax regime for certain expats moving to Spain for work. It allows qualifying individuals to pay a flat 24% rate on Spanish-source income up to 600,000 euros per year (rather than the progressive scale up to 47%), and to be taxed only on Spanish-source income rather than worldwide income, for up to 6 years. To qualify you must not have been a Spanish tax resident in the previous 5 years and must move for an employment contract or specific business activities including Digital Nomad Visa holders." }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need a Spanish tax adviser (gestor or asesor fiscal)?",
+          "acceptedAnswer": { "@type": "Answer", "text": "For simple tax situations — a salary, a state pension, and a Spanish bank account — you may be able to file your declaracion de la renta yourself using the AEAT's Renta Web tool. However, for most expats with foreign pensions, overseas properties, UK rental income, investment portfolios, or Modelo 720 obligations, professional advice from a gestor or asesor fiscal who knows both Spanish and your home country's tax system is strongly recommended. Mistakes in Spanish tax filings can be costly to correct." }
+        },
+        {
+          "@type": "Question",
+          "name": "What if I am only in Spain for winter (a 'swallow')?",
+          "acceptedAnswer": { "@type": "Answer", "text": "If you spend fewer than 183 days in Spain in a calendar year and your primary economic interests remain in your home country, you are not a Spanish tax resident. However, you may still have Spanish tax obligations on income generated in Spain (e.g., rental income from a Spanish property), which you would declare via Modelo 210 as a non-resident. Keep clear records of your travel dates — if challenged by the Spanish tax authority, the burden of proof is on you to demonstrate non-residency." }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I delay becoming a Spanish tax resident?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Tax residency is determined by the facts, not by choice. You cannot simply opt out if you are spending more than 183 days in Spain or if your main life is there. However, you can plan your move to ensure you do not trigger residency in the first partial year — for example, arriving in Spain in the autumn means you may not reach 183 days in the first calendar year, giving you time to plan your tax affairs properly before becoming fully resident the following year." }
+        },
+        {
+          "@type": "Question",
+          "name": "What are the penalties for not filing a Spanish tax return?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Penalties for failing to file a Spanish tax return (declaracion de la renta) when you are required to do so are significant. Late filing after AEAT has issued a notification carries surcharges of 5% to 20% of the tax owed plus interest. Failing to file Modelo 720 (foreign assets) has historically carried severe penalties, though EU court rulings have moderated these. For Modelo 100 (the main return), if you file late voluntarily before receiving an AEAT reminder, the surcharge is lower. Professional advice is strongly recommended to ensure compliance." }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<!-- Open Graph / Social -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.myspanishvisa.com/guide-tax-residency-spain/">
+<meta property="og:title" content="My Spanish Visa">
+<meta property="og:description" content="Expert Spain visa guidance for English-speaking expats.">
+<meta property="og:image" content="https://www.myspanishvisa.com/assets/images/og/og-myspanishvisa-default.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="My Spanish Visa">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@myspanishvisa">
+<meta name="twitter:title" content="My Spanish Visa">
+<meta name="twitter:description" content="Expert Spain visa guidance for English-speaking expats.">
+<meta name="twitter:image" content="https://www.myspanishvisa.com/assets/images/og/og-myspanishvisa-default.jpg">
+<style>
+html, body { max-width: 100%; overflow-x: clip; }
+.msv, .msv-nav, .msv-topbar, .msv-footer { max-width: 100%; overflow-x: clip; position: relative; }
+.msv img, .msv video, .msv iframe { max-width: 100%; height: auto; }
+.msv *, .msv *::before, .msv *::after { box-sizing: border-box; margin: 0; padding: 0; }
+.msv {
+  --navy: #0c1930;
+  --navy-mid: #1a3a5c;
+  --red: #be0011;
+  --red-deep: #8c000d;
+  --yellow: #facf39;
+  --cream: #f8f7f4;
+  --white: #ffffff;
+  --muted: #5a6478;
+  --border: #dce3ed;
+  font-family: 'Inter', 'Segoe UI', system-ui, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.75;
+  color: #1a1a1a;
+  width: 100%;
+}
+.msv-breadcrumb { background: var(--cream); padding: 12px 0; border-bottom: 1px solid var(--border); }
+.msv-breadcrumb-inner { max-width: 860px; margin: 0 auto; padding: 0 24px; font-size: 13px; color: var(--muted); }
+.msv-breadcrumb-inner a { color: var(--navy-mid); text-decoration: none; }
+.msv-breadcrumb-inner a:hover { color: var(--red); text-decoration: underline; }
+.msv-breadcrumb-inner span { margin: 0 6px; }
+.msv-hero { background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%); color: var(--white); padding: 64px 24px 56px; position: relative; overflow: hidden; }
+.msv-hero::before { content: ''; position: absolute; top: -60px; right: -60px; width: 320px; height: 320px; background: var(--yellow); opacity: 0.06; border-radius: 50%; }
+.msv-hero-inner { max-width: 860px; margin: 0 auto; position: relative; }
+.msv-hero-badge { display: inline-block; background: var(--yellow); color: var(--navy); font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 20px; }
+.msv-hero h1 { font-size: clamp(26px, 4vw, 40px); font-weight: 800; line-height: 1.2; margin-bottom: 20px; color: var(--white); }
+.msv-hero-intro { font-size: 17px; line-height: 1.7; color: rgba(255,255,255,0.85); max-width: 680px; margin-bottom: 32px; }
+.msv-hero-meta { display: flex; gap: 24px; flex-wrap: wrap; }
+.msv-hero-meta-item { font-size: 13px; color: rgba(255,255,255,0.65); }
+.msv-cta-bar { background: var(--yellow); padding: 20px 24px; border-bottom: 3px solid var(--navy); }
+.msv-cta-bar-inner { max-width: 860px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+.msv-cta-bar-text { font-weight: 600; color: var(--navy); font-size: 15px; }
+.msv-cta-bar-text span { font-weight: 400; color: var(--navy-mid); font-size: 14px; display: block; }
+.msv-btn { display: inline-block; padding: 12px 24px; border-radius: 6px; font-size: 14px; font-weight: 700; text-decoration: none; cursor: pointer; transition: all 0.2s; white-space: nowrap; }
+.msv-btn-primary { background: var(--navy); color: var(--white); }
+.msv-btn-primary:hover { background: var(--navy-mid); color: var(--white); }
+.msv-btn-secondary { background: var(--white); color: var(--navy); border: 2px solid var(--navy); }
+.msv-btn-secondary:hover { background: var(--cream); }
+.msv-btn-red { background: var(--red); color: var(--white); }
+.msv-btn-red:hover { background: var(--red-deep); color: var(--white); }
+.msv-content { max-width: 860px; margin: 0 auto; padding: 48px 24px; }
+.msv-section { margin-bottom: 56px; }
+.msv-section-label { display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--red); margin-bottom: 8px; }
+.msv-section h2 { font-size: clamp(20px, 3vw, 28px); font-weight: 800; color: var(--navy); line-height: 1.25; margin-bottom: 16px; }
+.msv-section h3 { font-size: 18px; font-weight: 700; color: var(--navy); margin: 28px 0 10px; }
+.msv-section p { margin-bottom: 16px; color: #2a2a2a; }
+.msv-section ul, .msv-section ol { margin: 0 0 16px 20px; }
+.msv-section li { margin-bottom: 8px; color: #2a2a2a; }
+.msv-info-box { background: var(--cream); border-left: 4px solid var(--navy); border-radius: 0 8px 8px 0; padding: 20px 24px; margin: 24px 0; }
+.msv-info-box.tip { border-left-color: var(--yellow); background: #fffdf0; }
+.msv-info-box.warning { border-left-color: var(--red); background: #fff5f5; }
+.msv-info-box p { margin: 0; font-size: 14px; }
+.msv-info-box strong { color: var(--navy); }
+.msv-test-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 24px 0; }
+.msv-test-card { border-radius: 10px; padding: 24px; border: 2px solid var(--border); }
+.msv-test-card.primary { border-color: var(--navy); background: #f0f4fa; }
+.msv-test-card.secondary { border-color: var(--border); background: var(--cream); }
+.msv-test-card h3 { font-size: 16px; color: var(--navy); margin: 0 0 8px; }
+.msv-test-card p { font-size: 13px; color: var(--muted); margin: 0; }
+.msv-tax-rates { margin: 24px 0; }
+.msv-rate-row { display: flex; align-items: center; gap: 16px; padding: 12px 0; border-bottom: 1px solid var(--border); }
+.msv-rate-row:last-child { border-bottom: none; }
+.msv-rate-band { min-width: 180px; font-size: 14px; color: var(--muted); }
+.msv-rate-bar-wrap { flex: 1; height: 8px; background: var(--border); border-radius: 4px; overflow: hidden; }
+.msv-rate-bar { height: 100%; background: var(--navy); border-radius: 4px; }
+.msv-rate-pct { min-width: 40px; text-align: right; font-weight: 700; font-size: 15px; color: var(--navy); }
+.msv-checklist { list-style: none; margin: 0 0 16px 0; }
+.msv-checklist li { display: flex; align-items: flex-start; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--border); font-size: 15px; }
+.msv-checklist li:last-child { border-bottom: none; }
+.msv-checklist li::before { content: '\2713'; display: flex; align-items: center; justify-content: center; min-width: 22px; height: 22px; background: var(--navy); color: var(--yellow); font-size: 12px; font-weight: 800; border-radius: 50%; flex-shrink: 0; margin-top: 2px; }
+.msv-table-wrap { overflow-x: auto; margin: 24px 0; border-radius: 8px; border: 1px solid var(--border); }
+.msv-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.msv-table th { background: var(--navy); color: var(--white); padding: 12px 16px; text-align: left; font-weight: 600; font-size: 13px; }
+.msv-table td { padding: 11px 16px; border-bottom: 1px solid var(--border); }
+.msv-table tr:last-child td { border-bottom: none; }
+.msv-table tr:nth-child(even) td { background: var(--cream); }
+.msv-mistake-list { list-style: none; margin: 0; }
+.msv-mistake-list li { display: flex; gap: 16px; padding: 16px 0; border-bottom: 1px solid var(--border); }
+.msv-mistake-list li:last-child { border-bottom: none; }
+.msv-mistake-icon { display: flex; align-items: center; justify-content: center; min-width: 32px; height: 32px; background: #fff0f0; border-radius: 50%; font-size: 14px; flex-shrink: 0; margin-top: 2px; }
+.msv-mistake-text strong { display: block; font-size: 15px; font-weight: 700; color: var(--navy); margin-bottom: 4px; }
+.msv-mistake-text p { font-size: 14px; color: var(--muted); margin: 0; }
+.msv-faq-item { border-bottom: 1px solid var(--border); }
+.msv-faq-item:first-child { border-top: 1px solid var(--border); }
+.msv-faq-question { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 20px 0; cursor: pointer; font-size: 16px; font-weight: 600; color: var(--navy); user-select: none; list-style: none; }
+.msv-faq-question::-webkit-details-marker { display: none; }
+.msv-faq-question::after { content: '+'; display: flex; align-items: center; justify-content: center; min-width: 28px; height: 28px; background: var(--cream); border-radius: 50%; font-size: 18px; font-weight: 400; color: var(--navy); flex-shrink: 0; }
+details[open] .msv-faq-question::after { content: '\2212'; }
+.msv-faq-answer { padding: 0 0 20px 0; font-size: 15px; color: #2a2a2a; line-height: 1.7; }
+.msv-related-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin: 24px 0; }
+.msv-related-card { border: 1px solid var(--border); border-radius: 8px; padding: 20px; text-decoration: none; background: var(--white); transition: all 0.2s; display: block; }
+.msv-related-card:hover { border-color: var(--navy-mid); box-shadow: 0 4px 12px rgba(12,25,48,0.08); transform: translateY(-2px); }
+.msv-related-card-tag { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--red); margin-bottom: 8px; }
+.msv-related-card h4 { font-size: 15px; font-weight: 700; color: var(--navy); line-height: 1.35; margin-bottom: 6px; }
+.msv-related-card p { font-size: 13px; color: var(--muted); margin: 0; }
+.msv-footer-cta { background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%); border-radius: 12px; padding: 48px 40px; text-align: center; margin: 40px 0 0; }
+.msv-footer-cta h2 { font-size: 26px; font-weight: 800; color: var(--white); margin-bottom: 12px; }
+.msv-footer-cta p { font-size: 16px; color: rgba(255,255,255,0.8); margin-bottom: 28px; max-width: 520px; margin-left: auto; margin-right: auto; }
+.msv-footer-cta-buttons { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+.msv-disclaimer { background: #f5f5f5; border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; margin: 32px 0 0; font-size: 13px; color: var(--muted); }
+@media (max-width: 600px) {
+  .msv-hero { padding: 40px 20px 36px; }
+  .msv-content { padding: 32px 20px; }
+  .msv-footer-cta { padding: 32px 24px; }
+  .msv-cta-bar-inner { flex-direction: column; align-items: flex-start; }
+  .msv-test-grid { grid-template-columns: 1fr; }
+}
+</style>
+
+<div class="msv">
+
+  <nav class="msv-breadcrumb" aria-label="Breadcrumb">
+    <div class="msv-breadcrumb-inner">
+      <a href="/">Home</a><span>&#8250;</span>
+      <a href="/guide/">Guides</a><span>&#8250;</span>
+      Tax Residency Spain
+    </div>
+  </nav>
+
+  <header class="msv-hero">
+    <div class="msv-hero-inner">
+      <div class="msv-hero-badge">Tax Guide for Expats</div>
+      <h1>Spanish Tax Residency: The Complete Expat Guide to the 183-Day Rule and What Happens Next</h1>
+      <p class="msv-hero-intro">Becoming a Spanish tax resident is a significant financial event. It means declaring your worldwide income to Spain, potentially restructuring your financial affairs, and navigating the intersection of Spanish and your home country's tax systems. Here is what you need to know before you move.</p>
+      <div class="msv-hero-meta">
+        <div class="msv-hero-meta-item">Updated April 2026</div>
+        <div class="msv-hero-meta-item">&#8226; 16 min read</div>
+        <div class="msv-hero-meta-item">&#8226; 10 FAQs covered</div>
+      </div>
+    </div>
+  </header>
+
+  <div class="msv-cta-bar">
+    <div class="msv-cta-bar-inner">
+      <div class="msv-cta-bar-text">
+        Planning your move to Spain?
+        <span>Get the right visa and tax strategy sorted from the start — speak to our team.</span>
+      </div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;">
+        <a href="https://dashboard.platinumlegalspain.com/dnv" class="msv-btn msv-btn-primary">Check Eligibility</a>
+        <a href="https://dashboard.platinumlegalspain.com/dnv" class="msv-btn msv-btn-secondary">Book a Consultation</a>
+      </div>
+    </div>
+  </div>
+
+  <main class="msv-content">
+
+    <div class="msv-disclaimer">
+      <strong>Important notice:</strong> This guide is for general information only and does not constitute tax advice. Spanish tax law is complex and your individual situation will determine your obligations. Always consult a qualified asesor fiscal (tax adviser) who understands both Spanish tax law and the tax laws of your home country before making decisions.
+    </div>
+
+    <section class="msv-section" style="margin-top:40px;">
+      <div class="msv-section-label">The Core Rule</div>
+      <h2>What Is the 183-Day Rule?</h2>
+      <p>The <strong>183-day rule</strong> is Spain's primary test for tax residency. Under Article 9 of Spain's Personal Income Tax Law (IRPF — Impuesto sobre la Renta de las Personas Fisicas), you become a Spanish tax resident if you spend more than 183 days in Spanish territory during a calendar year (1 January to 31 December).</p>
+      <p>Critically, these 183 days do not need to be consecutive. Spain counts the total number of days you are present in Spain across the whole year. Days spent on <strong>temporary absences</strong> outside Spain are generally counted as Spanish days unless you can prove you are tax resident in another country.</p>
+
+      <div class="msv-info-box warning">
+        <p><strong>The temporary absence rule:</strong> If you leave Spain for short periods and return, those days abroad may still count as Spanish days for the 183-day test, unless you can demonstrate you were resident elsewhere. Spain takes a comprehensive view of presence — the burden of proof of non-residency is on you.</p>
+      </div>
+
+      <h3>The 183-Day Calendar</h3>
+      <p>Spain uses the <strong>calendar year</strong> as its tax year — 1 January to 31 December. This differs from the UK's 6 April to 5 April tax year. If you move to Spain during the year, you may be a Spanish tax resident for that calendar year (if you exceed 183 days) or only from the following calendar year.</p>
+      <p>Example: If you move to Spain on 1 August 2026, you spend 153 days in Spain in 2026. You are NOT a Spanish tax resident for 2026 (under the 183-day test). From 2027, if you remain in Spain, you will be a Spanish tax resident for the full year.</p>
+    </section>
+
+    <section class="msv-section">
+      <div class="msv-section-label">The Two Tests</div>
+      <h2>How Spain Determines Tax Residency: Both Tests</h2>
+      <p>The 183-day rule is not the only way to become a Spanish tax resident. Spain applies two alternative tests, and meeting either one makes you a resident for tax purposes:</p>
+
+      <div class="msv-test-grid">
+        <div class="msv-test-card primary">
+          <h3>Test 1: The 183-Day Physical Presence Test</h3>
+          <p>You spend more than 183 days in Spain in a calendar year (including temporary absences unless you can prove tax residency elsewhere). This is the most commonly triggered test for expats.</p>
+        </div>
+        <div class="msv-test-card secondary">
+          <h3>Test 2: Centre of Economic Interests</h3>
+          <p>Spain is the base of your economic or vital interests — your main employment, business, or primary economic activities are in Spain. This test can apply even if you spend fewer than 183 days physically present.</p>
+        </div>
+      </div>
+
+      <p>Additionally, Spain applies a <strong>family unit presumption</strong>: if your spouse (who is not legally separated) or dependent minor children habitually reside in Spain, Spain presumes you are also a Spanish tax resident — unless you can demonstrate your own tax residency elsewhere. This catches many people who attempt to maintain a split life between Spain and another country.</p>
+
+      <div class="msv-info-box">
+        <p><strong>Key principle:</strong> You can only be tax resident in one country for any given tax year under most double taxation treaties. If you are a Spanish tax resident, you should take steps to establish non-residency in your home country (e.g., HMRC P85 form for UK leavers).</p>
+      </div>
+    </section>
+
+    <section class="msv-section">
+      <div class="msv-section-label">What It Means Financially</div>
+      <h2>Worldwide Income Declaration: What You Must Report</h2>
+      <p>Once you are a Spanish tax resident, Spain's AEAT (Agencia Estatal de Administracion Tributaria) taxes you on your <strong>worldwide income</strong> — not just income earned in Spain. This is the same principle applied by most developed countries (including the UK and USA).</p>
+
+      <p>As a Spanish tax resident you must declare:</p>
+      <ul>
+        <li>Employment income from any employer, in any country</li>
+        <li>Self-employment and freelance income, from any source globally</li>
+        <li>Rental income from properties in Spain or any other country</li>
+        <li>Dividends, interest, and other investment income from any account globally</li>
+        <li>Capital gains from the sale of shares, property, or other assets globally</li>
+        <li>Pension income — both state pensions and private pensions from any country</li>
+        <li>Income from trusts, partnerships, or other structures outside Spain</li>
+      </ul>
+
+      <h3>The Spanish Tax Year and Filing Deadlines</h3>
+      <p>Spain's tax year is the calendar year (1 January to 31 December). The annual income tax return (<strong>Modelo 100</strong> — declaracion de la renta) is filed between April and June of the following year. For example, your 2026 tax return is filed between 2 April and 30 June 2027.</p>
+      <p>Filing can be done online via the AEAT's <strong>Renta Web</strong> tool (which requires your digital certificate or Cl@ve), by telephone appointment with AEAT, or through an asesor fiscal.</p>
+    </section>
+
+    <section class="msv-section">
+      <div class="msv-section-label">Tax Rates</div>
+      <h2>Spanish Income Tax Rates 2026</h2>
+      <p>Spain uses a <strong>progressive tax rate system</strong>. General income (employment, self-employment, pension) is taxed on the following combined state + regional scale (note: regional rates vary slightly, and some autonomous communities have their own scale):</p>
+
+      <div class="msv-tax-rates">
+        <div class="msv-rate-row">
+          <div class="msv-rate-band">Up to €12,450</div>
+          <div class="msv-rate-bar-wrap"><div class="msv-rate-bar" style="width:40%"></div></div>
+          <div class="msv-rate-pct">19%</div>
+        </div>
+        <div class="msv-rate-row">
+          <div class="msv-rate-band">€12,451 – €20,200</div>
+          <div class="msv-rate-bar-wrap"><div class="msv-rate-bar" style="width:48%"></div></div>
+          <div class="msv-rate-pct">24%</div>
+        </div>
+        <div class="msv-rate-row">
+          <div class="msv-rate-band">€20,201 – €35,200</div>
+          <div class="msv-rate-bar-wrap"><div class="msv-rate-bar" style="width:59%"></div></div>
+          <div class="msv-rate-pct">30%</div>
+        </div>
+        <div class="msv-rate-row">
+          <div class="msv-rate-band">€35,201 – €60,000</div>
+          <div class="msv-rate-bar-wrap"><div class="msv-rate-bar" style="width:74%"></div></div>
+          <div class="msv-rate-pct">37%</div>
+        </div>
+        <div class="msv-rate-row">
+          <div class="msv-rate-band">€60,001 – €300,000</div>
+          <div class="msv-rate-bar-wrap"><div class="msv-rate-bar" style="width:88%"></div></div>
+          <div class="msv-rate-pct">45%</div>
+        </div>
+        <div class="msv-rate-row">
+          <div class="msv-rate-band">Over €300,000</div>
+          <div class="msv-rate-bar-wrap"><div class="msv-rate-bar" style="width:100%"></div></div>
+          <div class="msv-rate-pct">47%</div>
+        </div>
+      </div>
+
+      <div class="msv-info-box">
+        <p><strong>Savings income</strong> (dividends, interest, capital gains) is taxed separately on a savings base scale: 19% up to €6,000; 21% from €6,001 to €50,000; 23% from €50,001 to €200,000; 27% from €200,001 to €300,000; and 30% above €300,000.</p>
+      </div>
+
+      <div class="msv-info-box tip">
+        <p><strong>Personal allowances:</strong> Spain provides a personal allowance (minimo personal) of €5,550 per taxpayer, plus additional allowances for age (over 65: extra €1,150; over 75: extra €1,400) and disability. This reduces the taxable base, meaning low-income taxpayers may owe little or nothing.</p>
+      </div>
+    </section>
+
+    <section class="msv-section">
+      <div class="msv-section-label">Key Obligations</div>
+      <h2>Key Tax Forms and Obligations for Expats</h2>
+
+      <div class="msv-table-wrap">
+        <table class="msv-table">
+          <thead>
+            <tr>
+              <th>Form</th>
+              <th>Purpose</th>
+              <th>Deadline</th>
+              <th>Who Must File</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Modelo 100</strong></td><td>Annual income tax return (declaracion de la renta / IRPF)</td><td>April–June of the following year</td><td>Most tax residents (income thresholds apply)</td></tr>
+            <tr><td><strong>Modelo 720</strong></td><td>Foreign asset disclosure</td><td>31 March of following year</td><td>Residents with foreign assets over €50,000 per category</td></tr>
+            <tr><td><strong>Modelo 714</strong></td><td>Wealth tax (impuesto sobre el patrimonio)</td><td>April–June with Modelo 100</td><td>Residents with net assets over €700,000 (or €500,000 in some regions)</td></tr>
+            <tr><td><strong>Modelo 030</strong></td><td>Census registration with AEAT</td><td>Within 1 month of becoming resident</td><td>All new tax residents</td></tr>
+            <tr><td><strong>Modelo 210</strong></td><td>Non-resident income tax (IRNR)</td><td>Quarterly or annually depending on income type</td><td>Non-residents with Spanish-source income</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Modelo 720: Foreign Asset Declaration</h3>
+      <p>Modelo 720 is a disclosure form — not a tax — but it has important implications. Spanish tax residents who hold assets outside Spain (bank accounts, stocks, investment funds, real estate, life insurance) with a combined value exceeding €50,000 in any of three categories must file this form.</p>
+      <p>The three categories are: (1) accounts at foreign financial institutions; (2) securities, shares, and investment funds held abroad; (3) real estate and economic rights over real estate outside Spain. If the total value in any single category exceeds €50,000 on 31 December, the form must be filed by 31 March of the following year.</p>
+      <p>Following an EU Court of Justice ruling (Case C-788/19), Spain's severe automatic penalties for late or incorrect Modelo 720 filings were struck down as disproportionate. The penalties were reformed in 2022 and now align with general tax infringement rules, though the obligation to file remains. Professional advice is strongly recommended for anyone with significant foreign assets.</p>
+
+      <h3>Double Taxation Treaties (CDI)</h3>
+      <p>Spain has signed double taxation agreements (Convenios para Evitar la Doble Imposicion — CDI) with over 90 countries, including the United Kingdom, Ireland, the United States, Germany, France, and most EU member states. These agreements prevent the same income from being taxed in full by both countries.</p>
+      <p>The key principles: (1) most employment income is taxed only in the country of residence (Spain); (2) UK state pension income, under the UK-Spain treaty, is taxed only in the UK; (3) private pensions and annuities are generally taxed in Spain once you are resident; (4) rental income from property is taxed in the country where the property is located; (5) dividends and interest may be taxed in both countries but with caps and relief mechanisms.</p>
+      <p>UK leavers should file <strong>HMRC form P85</strong> to notify HMRC that they are leaving the UK. This triggers a review of your UK tax residency status and may result in a tax refund for the year of departure. Do not assume HMRC will automatically register you as non-resident.</p>
+    </section>
+
+    <section class="msv-section">
+      <div class="msv-section-label">Special Regime</div>
+      <h2>The Beckham Law: Spain's Special Tax Regime for Expats</h2>
+      <p>The <strong>Beckham Law</strong> (officially the Regimen Especial de Trabajadores Desplazados, or RETD — Regime for Displaced Workers) is a special tax regime introduced in 2004 after footballer David Beckham's move to Real Madrid. It allows qualifying individuals to be taxed at a flat rate of <strong>24% on Spanish-source income up to €600,000</strong> (above which 47% applies), rather than the standard progressive rates, and to be taxed <strong>only on Spanish-source income</strong> rather than worldwide income, for up to six years.</p>
+
+      <h3>Who Qualifies</h3>
+      <ul>
+        <li>You must not have been a Spanish tax resident in the five calendar years immediately preceding the year of arrival</li>
+        <li>You must be moving to Spain as a result of: (a) an employment contract with a Spanish employer or a foreign employer seconding you to Spain; (b) acquiring a managerial role in an entity; (c) activities as a digital nomad under the Digital Nomad Visa law; or (d) economic activities classified as highly qualified professionals or entrepreneurs</li>
+        <li>Family members (spouse, children under 25) who move to Spain with the qualifying person can also apply under amended 2023 rules</li>
+      </ul>
+
+      <h3>The Application Process</h3>
+      <p>You must apply for the Beckham Law regime within six months of the date recorded in your Social Security registration or, if not applicable, within six months of arrival. The application is made via <strong>Modelo 149</strong> submitted to the AEAT. If approved, you file a simplified income tax return using <strong>Modelo 151</strong> instead of Modelo 100. Missing the six-month deadline means you cannot access the regime for that tax year.</p>
+
+      <div class="msv-info-box tip">
+        <p><strong>DNV holders:</strong> The 2023 expansion of the Beckham Law specifically includes Digital Nomad Visa holders. If you have moved to Spain on a DNV and meet the other conditions (no Spanish residency in last 5 years), you should urgently consider whether to apply.</p>
+      </div>
+    </section>
+
+    <section class="msv-section">
+      <div class="msv-section-label">Common Mistakes</div>
+      <h2>Tax Mistakes Expats Make in Spain</h2>
+
+      <ul class="msv-mistake-list">
+        <li>
+          <div class="msv-mistake-icon">!</div>
+          <div class="msv-mistake-text">
+            <strong>Assuming tax residency starts on the date you arrive</strong>
+            <p>Tax residency in Spain is determined by whether you exceed 183 days in the calendar year — not by when you arrive. Timing your move thoughtfully can mean you are not a Spanish tax resident in your first partial year in Spain.</p>
+          </div>
+        </li>
+        <li>
+          <div class="msv-mistake-icon">!</div>
+          <div class="msv-mistake-text">
+            <strong>Failing to notify HMRC when leaving the UK</strong>
+            <p>Many British expats continue paying UK tax through inertia. Filing HMRC P85 when you leave, combined with professional advice on the split year treatment rules, can prevent double taxation and secure refunds of overpaid UK tax.</p>
+          </div>
+        </li>
+        <li>
+          <div class="msv-mistake-icon">!</div>
+          <div class="msv-mistake-text">
+            <strong>Missing the Modelo 720 deadline</strong>
+            <p>First-time Modelo 720 filers often discover the obligation late. The form must be filed by 31 March for assets held on 31 December of the previous year. There is no extension and no reminder from AEAT.</p>
+          </div>
+        </li>
+        <li>
+          <div class="msv-mistake-icon">!</div>
+          <div class="msv-mistake-text">
+            <strong>Not applying for the Beckham Law in time</strong>
+            <p>Eligible expats have only six months from arrival (or Social Security registration) to apply. Missing this window forfeits the benefit for that year entirely. It cannot be applied retrospectively.</p>
+          </div>
+        </li>
+        <li>
+          <div class="msv-mistake-icon">!</div>
+          <div class="msv-mistake-text">
+            <strong>Assuming Spanish tax obligations end when you leave Spain</strong>
+            <p>If you leave Spain mid-year and spend fewer than 183 days in Spain for that calendar year, you may still have obligations for income earned while resident. Get advice on your exit-year obligations before departing.</p>
+          </div>
+        </li>
+        <li>
+          <div class="msv-mistake-icon">!</div>
+          <div class="msv-mistake-text">
+            <strong>Using a Spanish gestor who doesn't understand your home country's tax system</strong>
+            <p>A gestor who is expert in Spanish tax but unfamiliar with UK, Irish, or US tax treaties may give you incomplete advice. For expats with foreign income, use a cross-border tax specialist.</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section class="msv-section">
+      <div class="msv-section-label">What to Do When You Arrive</div>
+      <h2>First-Year Tax Checklist for New Spanish Residents</h2>
+
+      <ul class="msv-checklist">
+        <li>Get your NIE and register with AEAT (Modelo 030 census registration)</li>
+        <li>Notify your home country tax authority of your departure — HMRC P85 for UK leavers</li>
+        <li>Within 6 months if eligible: apply for the Beckham Law regime via Modelo 149</li>
+        <li>Open a Spanish bank account and begin keeping financial records in euros</li>
+        <li>List all foreign assets and assess whether Modelo 720 will be required (threshold €50,000 per category)</li>
+        <li>Get advice from a cross-border tax specialist before your first Spanish tax return is due</li>
+        <li>Understand the split-year treatment rules in your home country (UK: see HMRC's Statutory Residence Test)</li>
+        <li>Review your investment portfolio — some foreign investment vehicles are treated punitively under Spanish tax law</li>
+        <li>Get a digital certificate — you will need it to file your tax return and communicate with AEAT</li>
+      </ul>
+    </section>
+
+    <section class="msv-section">
+      <div class="msv-section-label">Keep Reading</div>
+      <h2>Related Guides</h2>
+      <div class="msv-related-grid">
+        <a href="/guide/digital-certificate-spain/" class="msv-related-card">
+          <div class="msv-related-card-tag">Admin</div>
+          <h4>Getting Your Spanish Digital Certificate</h4>
+          <p>You will need this to file your Spanish tax return online via AEAT's Renta Web.</p>
+        </a>
+        <a href="/guide/non-lucrative-visa-spain/" class="msv-related-card">
+          <div class="msv-related-card-tag">Visa</div>
+          <h4>Non-Lucrative Visa Spain</h4>
+          <p>The most common route for retirees and early retirees — with direct tax residency implications.</p>
+        </a>
+        <a href="/guide/digital-nomad-visa-spain/" class="msv-related-card">
+          <div class="msv-related-card-tag">Visa</div>
+          <h4>Digital Nomad Visa Spain</h4>
+          <p>DNV holders may qualify for the Beckham Law flat-rate tax regime.</p>
+        </a>
+        <a href="/guide/nie-spain/" class="msv-related-card">
+          <div class="msv-related-card-tag">Essential Document</div>
+          <h4>Getting Your NIE</h4>
+          <p>Your NIE is your tax identifier in Spain — you need it before registering with AEAT.</p>
+        </a>
+      </div>
+    </section>
+
+    <section class="msv-section">
+      <div class="msv-section-label">FAQs</div>
+      <h2>Frequently Asked Questions About Spanish Tax Residency</h2>
+
+      <details class="msv-faq-item">
+        <summary class="msv-faq-question">When do I become a Spanish tax resident?</summary>
+        <div class="msv-faq-answer">You become a Spanish tax resident if you spend more than 183 days in Spain in a calendar year (1 January to 31 December), or if Spain is the centre of your economic or vital interests — meaning your main employment, business, or financial life is based there, even if you spend fewer than 183 days physically present. The family unit presumption can also trigger residency if your spouse and children habitually live in Spain. Tax residency is assessed on a calendar-year basis.</div>
+      </details>
+
+      <details class="msv-faq-item">
+        <summary class="msv-faq-question">Does the 183-day rule mean consecutive days in Spain?</summary>
+        <div class="msv-faq-answer">No. The 183 days do not need to be consecutive — they are the total number of days you are present in Spain during the calendar year from 1 January to 31 December. Importantly, Spain's law states that temporary absences from Spain are counted as days in Spain unless you can prove that you were tax resident in another country during those absences. This means that brief holiday trips abroad do not typically reduce your Spanish day count. The burden of proving non-residency rests on you.</div>
+      </details>
+
+      <details class="msv-faq-item">
+        <summary class="msv-faq-question">What income must I declare as a Spanish tax resident?</summary>
+        <div class="msv-faq-answer">As a Spanish tax resident you must declare your worldwide income to the AEAT. This includes: employment income from any employer anywhere in the world; self-employment and freelance income; rental income from properties in Spain or any other country; investment income including dividends, interest, and capital gains from any accounts globally; pension income including UK state pension and private pensions; and income from trusts or other structures outside Spain. Spain taxes residents on their global income, not just Spanish-source income — unless you are under the Beckham Law special regime.</div>
+      </details>
+
+      <details class="msv-faq-item">
+        <summary class="msv-faq-question">Do I pay tax in both Spain and my home country?</summary>
+        <div class="msv-faq-answer">Spain has double taxation treaties (CDI) with over 90 countries including the UK, Ireland, USA, and most EU member states. These treaties allocate taxing rights between countries and prevent you from paying full tax twice on the same income. In practice, once you are a Spanish tax resident, Spain generally has primary taxing rights on most income, with relief (credits or exemptions) for tax paid elsewhere. Some income types — like UK state pension — under the UK-Spain treaty remain taxable only in the UK. Professional advice is essential to navigate this correctly.</div>
+      </details>
+
+      <details class="msv-faq-item">
+        <summary class="msv-faq-question">What is Modelo 720 and do I need to file it?</summary>
+        <div class="msv-faq-answer">Modelo 720 is Spain's foreign asset disclosure form. Spanish tax residents who hold assets outside Spain — bank accounts, securities, real estate, or insurance products — with a combined value exceeding €50,000 in any of three separate categories must file this form by 31 March of the following year. It is a reporting obligation, not an additional tax. The consequences of non-disclosure or late filing can be significant, though penalties were moderated following a 2022 EU court ruling. Anyone with substantial foreign assets should get professional advice on this obligation as soon as they become Spanish tax resident.</div>
+      </details>
+
+      <details class="msv-faq-item">
+        <summary class="msv-faq-question">What is the Beckham Law and who qualifies?</summary>
+        <div class="msv-faq-answer">The Beckham Law (RETD) allows qualifying expats to pay a flat 24% rate on Spanish-source income up to €600,000 per year (rather than the progressive scale reaching 47%), and to be taxed only on Spanish income rather than worldwide income, for up to six years. To qualify: you must not have been a Spanish tax resident in the five preceding calendar years; you must be moving to Spain for an employment contract, as a company director, as a digital nomad (DNV holder), or as a qualified professional or entrepreneur. You must apply via Modelo 149 within six months of arriving. Missing this deadline forfeits the regime for that year.</div>
+      </details>
+
+      <details class="msv-faq-item">
+        <summary class="msv-faq-question">Do I need a Spanish tax adviser (gestor or asesor fiscal)?</summary>
+        <div class="msv-faq-answer">For very simple situations — a Spanish salary only, no foreign assets, no overseas income — you may be able to file Modelo 100 yourself using AEAT's Renta Web tool, which pre-fills much of the information. However, for the vast majority of expats who have foreign pensions, rental properties abroad, UK investment accounts, overseas savings, or Modelo 720 obligations, professional advice from a qualified asesor fiscal who understands both Spanish and your home country's tax system is strongly recommended. Mistakes in Spanish tax filings can be expensive to correct and may attract penalties.</div>
+      </details>
+
+      <details class="msv-faq-item">
+        <summary class="msv-faq-question">What if I am only in Spain for winter?</summary>
+        <div class="msv-faq-answer">If you spend fewer than 183 days in Spain in a calendar year and your primary economic interests remain in your home country, you are not a Spanish tax resident for that year. However, you may still have Spanish tax obligations on income generated in Spain — for example, rental income from a Spanish property — which you would declare as a non-resident via Modelo 210 (IRNR). Keep meticulous records of your travel in and out of Spain. If challenged by the AEAT, you will need to demonstrate non-residency with evidence such as travel receipts, bank statements showing activity abroad, utility bills from your home country, and a tax residency certificate from your home tax authority.</div>
+      </details>
+
+      <details class="msv-faq-item">
+        <summary class="msv-faq-question">Can I delay becoming a Spanish tax resident?</summary>
+        <div class="msv-faq-answer">Tax residency is determined by the facts of where you live and how long you are present, not by choice or intention. You cannot simply opt out of Spanish tax residency if you are spending more than 183 days there or if Spain is the centre of your economic life. However, you can plan the timing of your move intelligently. Arriving in Spain in autumn (say, September or October) means you may not reach 183 days in your first partial calendar year, giving you more time to arrange your tax affairs before becoming fully resident in the following year. This is a legitimate strategy, not avoidance.</div>
+      </details>
+
+      <details class="msv-faq-item">
+        <summary class="msv-faq-question">What are the penalties for not filing a Spanish tax return?</summary>
+        <div class="msv-faq-answer">Penalties for failing to file Modelo 100 when required are significant. If you file late after AEAT has issued a formal notification to do so, surcharges of 5% to 20% of the tax owed plus interest can apply, depending on the delay. If you file late voluntarily (before receiving an AEAT notification), reduced surcharges of 1% to 15% may apply. For Modelo 720 (foreign assets), penalties were reformed in 2022 following an EU court ruling and now align with standard tax infringement rules. The most important thing is to file on time — if you realise you are late, file voluntarily as soon as possible rather than waiting to be caught.</div>
+      </details>
+    </section>
+
+    <div class="msv-footer-cta">
+      <h2>Get Your Spanish Move Right from Day One</h2>
+      <p>From visa applications to understanding your tax obligations, our team guides expats through every step of relocating to Spain.</p>
+      <div class="msv-footer-cta-buttons">
+        <a href="https://dashboard.platinumlegalspain.com/dnv" class="msv-btn msv-btn-red">Check Your Visa Eligibility</a>
+        <a href="https://dashboard.platinumlegalspain.com/dnv" class="msv-btn" style="background:rgba(255,255,255,0.15);color:#fff;border:2px solid rgba(255,255,255,0.4);">Book a Free Consultation</a>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<!-- FRAGMENT_END -->
+</main>
+
+
+<!-- ═══════════════════════════════════════════════════
+     SITE FOOTER
+     ═══════════════════════════════════════════════════ -->
+<footer class="msv-footer" role="contentinfo">
+
+  <div class="msv-footer__top">
+
+    <!-- Brand column -->
+    <div class="msv-footer__brand">
+      <a href="/" class="msv-footer__logo" aria-label="My Spanish Visa"><img src="/assets/images/msv-logo-white.png" alt="My Spanish Visa" height="40" style="display:block;"></a>
+      <p class="msv-footer__tagline">
+        Specialist Spain visa &amp; residency guidance for English-speaking foreigners.
+        A service of Platinum Legal Spain.
+      </p>
+      <div class="msv-footer__trust">
+        <span class="msv-footer__trust-item">All English. No barriers.</span>
+        <span class="msv-footer__trust-item">Solicitors &amp; immigration specialists</span>
+        <span class="msv-footer__trust-item">100% online process</span>
+      </div>
+    </div>
+
+    <!-- Visas column -->
+    <div>
+      <div class="msv-footer__col-title">Visas</div>
+      <ul class="msv-footer__links">
+        <li><a href="/non-lucrative-visa-spain/">Non-Lucrative Visa</a></li>
+        <li><a href="/digital-nomad-visa-spain/">Digital Nomad Visa</a></li>
+        <li><a href="/student-visa-spain/">Student Visa</a></li>
+        <li><a href="/spain-visa-renewal/">Visa Renewals</a></li>
+        <li><a href="/best-visa-move-to-spain/">Compare All Visas</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/nlv">Apply: NLV</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/dnv">Apply: DNV</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/student-visa">Apply: Student Visa</a></li>
+      </ul>
+    </div>
+
+    <!-- Resources column -->
+    <div>
+      <div class="msv-footer__col-title">Resources</div>
+      <ul class="msv-footer__links">
+        <li><a href="/blog/">Blog &amp; Guides</a></li>
+        <li><a href="/move-to-spain/">Move to Spain Guide</a></li>
+        <li><a href="/visa-eligibility-quiz/">Eligibility Quiz</a></li>
+        <li><a href="/spain-visa-checklist/">Document Checklists</a></li>
+        <li><a href="/spain-visa-requirements/">Visa Requirements</a></li>
+        <li><a href="/spain-nie-number/">NIE Number Guide</a></li>
+        <li><a href="/spain-tie-card/">TIE Card Guide</a></li>
+      </ul>
+    </div>
+
+    <!-- Company column -->
+    <div>
+      <div class="msv-footer__col-title">Company</div>
+      <ul class="msv-footer__links">
+        <li><a href="/about-us/">About Us</a></li>
+        <li><a href="/testimonials/">Client Reviews</a></li>
+        <li><a href="/why-choose-us/">Why Choose Us</a></li>
+        <li><a href="/contact-us.html">Contact</a></li>
+        <li><a href="https://www.platinumlegalspain.com" rel="noopener">Platinum Legal Spain</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/dnv">Client Portal</a></li>
+      </ul>
+    </div>
+
+  </div><!-- /.msv-footer__top -->
+
+  <div class="msv-footer__bottom">
+    <div class="msv-footer__bottom-inner">
+      <p class="msv-footer__disclaimer">
+        <strong style="color:rgba(255,255,255,0.5);">Disclaimer:</strong>
+        My Spanish Visa provides visa processing support and is not a law firm. Content on this site is for informational purposes only and does not constitute legal advice. Immigration rules change frequently — always verify requirements with official sources or a qualified specialist. My Spanish Visa is a trading name of Platinum Legal Spain.
+      </p>
+      <span class="msv-footer__copyright">© 2026 My Spanish Visa. All rights reserved.</span>
+    </div>
+  </div>
+
+</footer>
+
+</body>
+</html>

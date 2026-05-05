@@ -1,0 +1,34 @@
+User-agent: *
+Allow: /
+
+# Internal working files — not for indexing
+Disallow: /MSV_AboutUs_SEO_Schema.html
+Disallow: /MSV_ContactUs_SEO_Schema.html
+Disallow: /MSV_MoveToSpain_SEO_Schema.html
+Disallow: /MSV_SpainVisaOptions_SEO_Schema.html
+Disallow: /MSV_TIE_Guides_SEO.html
+Disallow: /MSV_JSON_LD_Schema_All_Pages.html
+Disallow: /_template.html
+
+# Thank-you / confirmation pages
+Disallow: /thank-you-consultation.html
+Disallow: /thank-you-download.html
+Disallow: /thank-you-eligibility-check.html
+
+# Printable versions (duplicate content)
+Disallow: /dnv-checklist-printable.html
+Disallow: /nlv-checklist-printable.html
+Disallow: /post-arrival-checklist-printable.html
+Disallow: /spain-visa-decision-guide-printable.html
+
+# Download landing pages
+Disallow: /dnv-checklist-download.html
+Disallow: /nlv-checklist-download.html
+Disallow: /post-arrival-checklist-download.html
+Disallow: /spain-visa-guide-download.html
+
+# Block scripts and audit files
+Disallow: /*.py$
+Disallow: /*.md$
+
+Sitemap: https://www.myspanishvisa.com/sitemap.xml

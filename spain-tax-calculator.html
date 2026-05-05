@@ -1,0 +1,1499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="dns-prefetch" href="https://js-eu1.hsforms.net">
+  <link rel="dns-prefetch" href="https://dashboard.platinumlegalspain.com">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- ═══════════════════════════════════════════════════════════════════
+       PAGE-SPECIFIC HEAD — replace block below per page:
+       <title>Spain Tax Calculator | My Spanish Visa</title>
+       <meta name="description" content="…">
+       <meta property="og:title" content="…">
+       <meta property="og:description" content="…">
+       <meta property="og:url" content="https://www.myspanishvisa.com/…">
+       <meta property="og:image" content="…">
+       <link rel="canonical" href="https://www.myspanishvisa.com/spain-tax-calculator/">>
+       <script type="application/ld+json">…</script>
+       ═══════════════════════════════════════════════════════════════════ -->
+  <title>Spain Tax Calculator for Expats | My Spanish Visa</title>
+  <meta name="description" content="Spain Tax Calculator for Expats. Expert guidance for English-speaking foreigners on Spain visas and residency.">
+  <link rel="canonical" href="https://www.myspanishvisa.com/spain-tax-calculator/">
+
+  <!-- Shared Open Graph defaults -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="My Spanish Visa">
+  <meta property="og:image" content="https://www.myspanishvisa.com/assets/images/og/og-myspanishvisa-default.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@myspanishvisa">
+
+  <style>
+/* ═══════════════════════════════════════════════════════════════
+   GLOBAL SHELL — nav + footer only.
+   Page-specific CSS lives inside each fragment's own <style> block.
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── iOS overflow safety ── */
+html, body { max-width: 100%; overflow-x: clip; margin: 0; padding: 0; }
+*, *::before, *::after { box-sizing: border-box; }
+
+/* ── Brand tokens (root-level so all fragments inherit) ── */
+:root {
+  --navy:      #0c1930;
+  --navy-mid:  #1a3a5c;
+  --red:       #be0011;
+  --red-deep:  #8c000d;
+  --yellow:    #facf39;
+  --cream:     #f8f7f4;
+  --white:     #ffffff;
+  --black:     #1a1a1a;
+  --muted:     #5a6478;
+  --border:    #dce3ed;
+  --shadow-sm: 0 2px 8px rgba(12,25,48,0.08);
+  --shadow-md: 0 6px 24px rgba(12,25,48,0.13);
+}
+
+body {
+  font-family: 'Inter', 'Segoe UI', system-ui, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.75;
+  color: var(--black);
+  background: #fff;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   SITE NAV
+   ───────────────────────────────────────────────────────────── */
+.msv-nav {
+  position: sticky;
+  top: 0;
+  z-index: 9000;
+  background: var(--navy);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 2px 12px rgba(12,25,48,0.22);
+}
+.msv-nav__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 90px;
+  gap: 1.5rem;
+}
+
+/* Logo */
+.msv-nav__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+.msv-nav__logo-flag {
+  font-size: 1.3rem;
+  line-height: 1;
+}
+.msv-nav__logo-text {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+.msv-nav__logo-text span {
+  color: var(--yellow);
+}
+
+/* Links */
+.msv-nav__links {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.msv-nav__links > li {
+  position: relative;
+}
+.msv-nav__links > li > a,
+.msv-nav__links > li > button {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.5rem 0.9rem;
+  font-size: 0.87rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.85);
+  text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: color 0.15s, background 0.15s;
+  white-space: nowrap;
+  height: 90px;
+}
+.msv-nav__links > li > a:hover,
+.msv-nav__links > li > button:hover,
+.msv-nav__links > li:focus-within > a,
+.msv-nav__links > li:focus-within > button {
+  color: #fff;
+  background: rgba(255,255,255,0.08);
+}
+.msv-nav__chevron {
+  font-size: 0.65rem;
+  opacity: 0.7;
+  transition: transform 0.2s;
+}
+.msv-nav__links > li:focus-within .msv-nav__chevron,
+.msv-nav__links > li:hover .msv-nav__chevron {
+  transform: rotate(180deg);
+}
+
+/* Dropdown */
+.msv-nav__dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 230px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  box-shadow: var(--shadow-md);
+  padding: 0.5rem 0;
+  z-index: 200;
+}
+.msv-nav__links > li:hover .msv-nav__dropdown,
+.msv-nav__links > li:focus-within .msv-nav__dropdown {
+  display: block;
+}
+.msv-nav__dropdown a {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.6rem 1.1rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--navy);
+  text-decoration: none;
+  transition: background 0.12s;
+}
+.msv-nav__dropdown a:hover {
+  background: var(--cream);
+  color: var(--red);
+}
+.msv-nav__dropdown-icon {
+  width: 24px;
+  height: 24px;
+  background: var(--cream);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+.msv-nav__dropdown-divider {
+  height: 1px;
+  background: var(--border);
+  margin: 0.4rem 0;
+}
+
+/* CTA button */
+.msv-nav__cta {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.55rem 1.2rem;
+  background: var(--red);
+  color: #fff !important;
+  font-size: 0.85rem;
+  font-weight: 700;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.15s, box-shadow 0.15s;
+  white-space: nowrap;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(190,0,17,0.3);
+}
+.msv-nav__cta:hover {
+  background: var(--red-deep);
+  box-shadow: 0 4px 14px rgba(190,0,17,0.4);
+  text-decoration: none;
+}
+
+/* Hamburger */
+.msv-nav__burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.4rem;
+  border-radius: 5px;
+}
+.msv-nav__burger span {
+  width: 22px;
+  height: 2px;
+  background: #fff;
+  border-radius: 2px;
+  transition: transform 0.2s, opacity 0.2s;
+  display: block;
+}
+
+/* Mobile nav */
+.msv-nav__mobile {
+  display: none;
+  flex-direction: column;
+  background: var(--navy-mid);
+  padding: 1rem 1.5rem 1.5rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+.msv-nav__mobile.open { display: flex; }
+.msv-nav__mobile a {
+  padding: 0.65rem 0;
+  color: rgba(255,255,255,0.9);
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+.msv-nav__mobile a:hover { color: var(--yellow); }
+.msv-nav__mobile .msv-nav__mobile-sub {
+  padding-left: 1rem;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: rgba(255,255,255,0.7);
+}
+.msv-nav__mobile-cta {
+  margin-top: 1rem;
+  background: var(--red);
+  color: #fff !important;
+  border-radius: 6px;
+  text-align: center;
+  padding: 0.75rem 1rem !important;
+  border-bottom: none !important;
+}
+
+@media (max-width: 900px) {
+  .msv-nav__links { display: none; }
+  .msv-nav__cta { display: none; }
+  .msv-nav__burger { display: flex; }
+}
+@media (max-width: 480px) {
+  .msv-nav__inner { padding: 0 1rem; }
+}
+
+/* ─────────────────────────────────────────────────────────────
+   SITE FOOTER
+   ───────────────────────────────────────────────────────────── */
+.msv-footer {
+  background: var(--navy);
+  color: rgba(255,255,255,0.75);
+  overflow-x: clip;
+}
+.msv-footer__top {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem 3rem;
+  display: grid;
+  grid-template-columns: 280px 1fr 1fr 1fr;
+  gap: 3rem;
+}
+@media (max-width: 900px) {
+  .msv-footer__top { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
+}
+@media (max-width: 560px) {
+  .msv-footer__top { grid-template-columns: 1fr; gap: 2rem; padding: 3rem 1.2rem 2rem; }
+}
+
+.msv-footer__brand {}
+.msv-footer__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  margin-bottom: 1rem;
+}
+.msv-footer__logo-flag { font-size: 1.3rem; }
+.msv-footer__logo-text {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -0.01em;
+}
+.msv-footer__logo-text span { color: var(--yellow); }
+.msv-footer__tagline {
+  font-size: 0.83rem;
+  color: rgba(255,255,255,0.55);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+.msv-footer__trust {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+.msv-footer__trust-item {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.65);
+}
+.msv-footer__trust-item::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  background: var(--yellow);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.msv-footer__col-title {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.4);
+  margin-bottom: 1rem;
+}
+.msv-footer__links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.msv-footer__links a {
+  font-size: 0.87rem;
+  color: rgba(255,255,255,0.68);
+  text-decoration: none;
+  transition: color 0.15s;
+  display: inline-block;
+}
+.msv-footer__links a:hover {
+  color: var(--yellow);
+  text-decoration: none;
+}
+
+.msv-footer__bottom {
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+.msv-footer__bottom-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 1rem;
+  justify-content: space-between;
+}
+.msv-footer__disclaimer {
+  font-size: 0.73rem;
+  color: rgba(255,255,255,0.35);
+  line-height: 1.65;
+  max-width: 720px;
+}
+.msv-footer__copyright {
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.35);
+  white-space: nowrap;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   MAIN CONTENT AREA
+   ───────────────────────────────────────────────────────────── */
+main {
+  /* Fragments are self-contained; this wrapper just provides flow context */
+  position: relative;
+}
+  </style>
+  <link rel="icon" type="image/png" href="/assets/images/msv-favicon.png">
+  <link rel="apple-touch-icon" href="/assets/images/msv-favicon.png">
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════
+     SITE NAVIGATION
+     ═══════════════════════════════════════════════════ -->
+<header class="msv-nav" role="banner">
+  <div class="msv-nav__inner">
+    <a href="/" class="msv-nav__logo" aria-label="My Spanish Visa — Home"><img src="/assets/images/msv-logo-white.png" alt="My Spanish Visa" height="72" style="display:block;"></a>
+    <nav aria-label="Main navigation">
+      <ul class="msv-nav__links">
+        <li>
+          <button class="msv-nav__dropdown-trigger" aria-haspopup="true" aria-expanded="false">Visas <span class="msv-nav__chevron">▾</span></button>
+          <div class="msv-nav__dropdown" role="menu">
+            <a href="/non-lucrative-visa-spain.html" role="menuitem"><span class="msv-nav__dropdown-icon">🏖️</span>Non-Lucrative Visa</a>
+            <a href="/digital-nomad-visa-spain.html" role="menuitem"><span class="msv-nav__dropdown-icon">💻</span>Digital Nomad Visa</a>
+            <a href="/student-visa-spain.html" role="menuitem"><span class="msv-nav__dropdown-icon">🎓</span>Student Visa</a>
+            <div class="msv-nav__dropdown-divider"></div>
+            <a href="/spain-visa-renewal.html" role="menuitem"><span class="msv-nav__dropdown-icon">🔄</span>Visa Renewals</a>
+            <a href="/best-visa-move-to-spain.html" role="menuitem"><span class="msv-nav__dropdown-icon">⚖️</span>Compare All Visas</a>
+          </div>
+        </li>
+        <li>
+          <button aria-haspopup="true" aria-expanded="false">Resources <span class="msv-nav__chevron">▾</span></button>
+          <div class="msv-nav__dropdown" role="menu">
+            <a href="/blog-index.html" role="menuitem"><span class="msv-nav__dropdown-icon">📝</span>Blog &amp; Guides</a>
+            <a href="/blog-spain-visa-document-checklist-2026.html" role="menuitem"><span class="msv-nav__dropdown-icon">✅</span>Document Checklists</a>
+            <a href="/move-to-spain.html" role="menuitem"><span class="msv-nav__dropdown-icon">🏠</span>Move to Spain Guide</a>
+            <a href="/book-consultation.html" role="menuitem"><span class="msv-nav__dropdown-icon">🧭</span>Eligibility Quiz</a>
+          </div>
+        </li>
+        <li><a href="/about-us.html">About Us</a></li>
+        <li><a href="/contact-us.html">Contact</a></li>
+      </ul>
+    </nav>
+    <a href="/book-consultation.html" class="msv-nav__cta">Start My Application →</a>
+    <button class="msv-nav__burger" aria-label="Open menu" aria-expanded="false" onclick="var m=document.querySelector('.msv-nav__mobile');var open=m.classList.toggle('open');this.setAttribute('aria-expanded',open);">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <nav class="msv-nav__mobile" aria-label="Mobile navigation">
+    <a href="/non-lucrative-visa-spain.html" class="msv-nav__mobile-sub">Non-Lucrative Visa</a>
+    <a href="/digital-nomad-visa-spain.html" class="msv-nav__mobile-sub">Digital Nomad Visa</a>
+    <a href="/student-visa-spain.html" class="msv-nav__mobile-sub">Student Visa</a>
+    <a href="/spain-visa-renewal.html">Visa Renewals</a>
+    <a href="/best-visa-move-to-spain.html">Compare All Visas</a>
+    <a href="/blog-index.html">Blog &amp; Guides</a>
+    <a href="/about-us.html">About Us</a>    <a href="/contact-us.html">Contact</a>
+    <a href="/book-consultation.html" class="msv-nav__mobile-cta">Start My Application →</a>
+  </nav>
+</header>
+
+<!-- ═══════════════════════════════════════════════════
+     PAGE CONTENT (fragment injected here)
+     ═══════════════════════════════════════════════════ -->
+<main>
+<!-- FRAGMENT_START -->
+<!-- MSV Spain Tax Calculator for Expats Widget -->
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.myspanishvisa.com/spain-tax-calculator/#webpage",
+      "url": "https://www.myspanishvisa.com/spain-tax-calculator/",
+      "name": "Spain Tax Calculator for Expats 2026 | Estimate Your Spanish Taxes | My Spanish Visa",
+      "description": "Free tax calculator for expats in Spain. Estimate income tax, compare Beckham Law vs. regular taxation, calculate social security, and plan your net income.",
+      "isPartOf": { "@id": "https://www.myspanishvisa.com/#website" },
+      "breadcrumb": { "@id": "https://www.myspanishvisa.com/spain-tax-calculator/#breadcrumb" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.myspanishvisa.com/spain-tax-calculator/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.myspanishvisa.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Resources",
+          "item": "https://www.myspanishvisa.com/resources/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Tax Calculator",
+          "item": "https://www.myspanishvisa.com/spain-tax-calculator/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is Spain's income tax system for expats?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Spain uses a progressive tax system with brackets ranging from 19% to 47% depending on income level. Expats are taxed the same as Spanish citizens on their worldwide income once they become Spanish tax residents (living in Spain more than 183 days per year)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the Beckham Law and who is eligible?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The Beckham Law (Régimen de Impatriados) allows newly arrived expats to pay 24% flat tax on Spanish-source income (up to €600,000/year) for 4 consecutive years. You must not have been a Spanish tax resident in the previous 10 years and must apply within 3 months of becoming a resident."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do self-employed people pay different taxes?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Self-employed individuals (autónomos) pay the same income tax brackets as employees, but also pay mandatory social security contributions (approximately 17-18% of net income). Business expenses are deductible before income tax calculation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are social security contributions in Spain?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Employees contribute approximately 6.35% to social security. Self-employed individuals pay a higher rate (17-18%) based on their declared income base. These contributions are deductible from taxable income for employees but handled differently for self-employed."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I claim deductions for business expenses?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Self-employed individuals can deduct legitimate business expenses (supplies, office rent, professional services, software, etc.) from gross income. Employees may claim limited deductions. All deductions must be documented and supported by invoices."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do dependants affect my tax liability?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Spain offers tax deductions and benefits for dependants including children and non-working spouses. The amount varies based on the number of dependants and your income level. Our calculator estimates these benefits."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are Double Taxation Agreements?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Spain has DTAs with 100+ countries to prevent double taxation. If you have income from abroad, DTAs allow you to claim foreign tax credits or exemptions. These depend on your country of origin and type of income."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is this calculator accurate for tax planning?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "This calculator provides estimates for educational purposes only. Tax liability depends on many factors including deductions, credits, and individual circumstances. Consult a Spanish tax advisor (asesor fiscal) for accurate personal tax planning."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "When are Spanish income taxes due?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The tax return (Declaración de la Renta) is filed with the Tax Agency (Agencia Tributaria) annually, typically April-June. Quarterly VAT payments (IVA) are required for businesses. Most employees have taxes withheld monthly through payroll."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I reduce my tax burden through tax planning?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Legal strategies include claiming all available deductions, optimizing business structure, timing income/expenses, utilizing Beckham Law, contributing to pension plans, and leveraging dependent deductions. Professional tax advice is essential for effective planning."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<!-- Open Graph / Social -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.myspanishvisa.com/spain-tax-calculator/">
+<meta property="og:title" content="My Spanish Visa">
+<meta property="og:description" content="Expert Spain visa guidance for English-speaking expats.">
+<meta property="og:image" content="https://www.myspanishvisa.com/assets/images/og/og-myspanishvisa-default.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="My Spanish Visa">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@myspanishvisa">
+<meta name="twitter:title" content="My Spanish Visa">
+<meta name="twitter:description" content="Expert Spain visa guidance for English-speaking expats.">
+<meta name="twitter:image" content="https://www.myspanishvisa.com/assets/images/og/og-myspanishvisa-default.jpg">
+
+<style>
+/* ── iOS Safari pinch-zoom overflow safety ─────────────────────────── */
+/* Prevents horizontal overflow when users pinch-zoom on iPhone/iPad.   */
+/* Top-level (also paste into theme Custom CSS / Elementor Site Settings) */
+html, body { max-width: 100%; overflow-x: clip; }
+/* Scoped wrapper safety */
+.msv, .msv-nav, .msv-topbar, .msv-footer, .msv-footer-cta,
+.pls-header, .pls-body, .pls-nlv, .pls-dnv, .pls-student {
+  max-width: 100%;
+  overflow-x: clip;
+  position: relative;
+}
+/* Cap all media inside the wrapper */
+.msv img, .msv video, .msv iframe,
+.msv-footer img, .msv-footer video, .msv-footer iframe {
+  max-width: 100%;
+  height: auto;
+}
+/* Never use 100vw — use 100% instead (dev reminder) */
+
+
+.msv *, .msv *::before, .msv *::after { box-sizing: border-box; margin: 0; padding: 0; }
+.msv {
+  --navy: #0c1930; --navy-mid: #1a3a5c; --red: #be0011; --red-deep: #8c000d;
+  --yellow: #facf39; --cream: #f8f7f4; --white: #ffffff; --black: #1a1a1a;
+  --muted: #5a6478; --border: #dce3ed;
+  --shadow-sm: 0 2px 8px rgba(12,25,48,0.08); --shadow-md: 0 6px 24px rgba(12,25,48,0.13);
+  font-family: 'Inter', 'Segoe UI', system-ui, Arial, sans-serif;
+  font-size: 16px; line-height: 1.75; color: var(--black); width: 100%;
+}
+.msv__container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+.msv__container--narrow { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+@media (max-width: 640px) { .msv__container, .msv__container--narrow { padding: 0 1.2rem; } }
+.msv h1 { font-size: clamp(2rem, 4.5vw, 3rem); font-weight: 800; line-height: 1.12; color: var(--white); letter-spacing: -0.025em; margin-bottom: 1.2rem; }
+.msv h2 { font-size: clamp(1.3rem, 2.5vw, 1.75rem); font-weight: 700; color: var(--navy); letter-spacing: -0.01em; margin-bottom: 0.5rem; position: relative; display: inline-block; padding-bottom: 0.5rem; }
+.msv h2::after { content: ''; position: absolute; bottom: 0; left: 0; width: 44px; height: 3px; background: linear-gradient(90deg, var(--red), var(--red-deep)); border-radius: 2px; }
+.msv h3 { font-size: 1.05rem; font-weight: 700; color: var(--navy); margin-bottom: 0.4rem; }
+.msv p { color: var(--black); margin-bottom: 1rem; font-size: 0.97rem; }
+.msv a { color: var(--red); text-decoration: none; }
+.msv a:hover { text-decoration: underline; }
+.msv ul { list-style: none; padding: 0; margin: 0 0 1rem; }
+.msv ul li { padding: 0.35rem 0 0.35rem 1.4rem; position: relative; font-size: 0.95rem; color: var(--black); }
+.msv ul li::before { content: ''; position: absolute; left: 0; top: 0.75rem; width: 7px; height: 7px; background: linear-gradient(135deg, var(--red), var(--red-deep)); border-radius: 50%; }
+.msv__section { padding: 5rem 0; background: var(--white); }
+.msv__section--cream { padding: 5rem 0; background: linear-gradient(180deg, #f8f7f4 0%, #f2f4f8 100%); }
+.msv__section--dark { padding: 5rem 0; background: linear-gradient(135deg, var(--navy) 0%, #0d2240 55%, #0a1d38 100%); }
+.msv__section--dark h2 { color: var(--white) !important; }
+.msv__section--dark h2::after { background: linear-gradient(90deg, var(--yellow), #e8b820); }
+.msv__section--dark h3 { color: rgba(255,255,255,0.9) !important; }
+.msv .msv__section--dark p, .msv .msv__section--dark li { color: rgba(255,255,255,0.82); }
+.msv__section--dark ul li::before { background: linear-gradient(135deg, var(--yellow), #e8b820); }
+@media (max-width: 640px) { .msv__section, .msv__section--cream, .msv__section--dark { padding: 3.5rem 0; } }
+.msv__section-hd { margin-bottom: 3rem; }
+.msv__section-hd p { color: var(--muted); font-size: 1rem; margin-top: 0.75rem; line-height: 1.7; max-width: 600px; }
+@keyframes msv-fade-up { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes msv-shimmer { 0% { background-position: -400px 0; } 100% { background-position: 400px 0; } }
+.msv__shimmer { background: linear-gradient(90deg, var(--yellow) 0%, #e8b820 25%, var(--red) 50%, #e8b820 75%, var(--yellow) 100%); background-size: 400px 100%; -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; animation: msv-shimmer 3.5s linear infinite; display: inline; }
+.msv__hero { background: linear-gradient(135deg, #0c1930 0%, #0f2540 40%, #162d50 70%, #1a3560 100%); padding: 5.5rem 0 5rem; position: relative; overflow: hidden; }
+.msv__hero::before { content: ''; position: absolute; top: -30%; right: -5%; width: 700px; height: 700px; background: radial-gradient(circle, rgba(190,0,17,0.1) 0%, transparent 65%); pointer-events: none; }
+.msv__hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, rgba(250,207,57,0.4), transparent); }
+.msv__hero-inner { max-width: 780px; animation: msv-fade-up 0.7s ease-out both; }
+.msv__eyebrow { display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(190,0,17,0.15); border: 1px solid rgba(190,0,17,0.4); color: #ff6b7a; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.35rem 0.9rem; border-radius: 100px; margin-bottom: 1.5rem; }
+.msv__eyebrow::before { content: ''; width: 6px; height: 6px; background: var(--red); border-radius: 50%; box-shadow: 0 0 6px var(--red); }
+.msv__hero p { color: rgba(255,255,255,0.78) !important; font-size: clamp(1rem, 2.2vw, 1.15rem); max-width: 640px; margin-bottom: 2.2rem; line-height: 1.75; }
+.msv__trust-bar { background: var(--white); border-bottom: 1px solid var(--border); padding: 1rem 0; box-shadow: var(--shadow-sm); }
+.msv__trust-bar-inner { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.75rem; }
+.msv__trust-item { display: flex; align-items: center; gap: 0.5rem; font-size: 0.82rem; font-weight: 600; color: var(--navy); white-space: nowrap; }
+.msv__trust-item::before { content: ''; width: 7px; height: 7px; background: linear-gradient(135deg, var(--red), var(--red-deep)); border-radius: 50%; flex-shrink: 0; }
+.msv__faq-list { display: flex; flex-direction: column; gap: 0; border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+.msv__faq-list details { border-bottom: 1px solid var(--border); background: var(--white); }
+.msv__faq-list details:last-child { border-bottom: none; }
+.msv__faq-list summary { padding: 1.2rem 1.5rem; font-size: 0.97rem; font-weight: 700; color: var(--navy); cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+.msv__faq-list summary::-webkit-details-marker { display: none; }
+.msv__faq-list summary::after { content: '+'; font-size: 1.3rem; font-weight: 400; color: var(--red); flex-shrink: 0; transition: transform 0.2s; }
+.msv__faq-list details[open] summary::after { transform: rotate(45deg); }
+.msv__faq-list details[open] summary { color: var(--red); }
+.msv__faq-answer { padding: 0 1.5rem 1.3rem; font-size: 0.92rem; color: var(--muted); line-height: 1.75; }
+.msv__faq-answer p { color: var(--muted); font-size: 0.92rem; margin-bottom: 0.75rem; }
+.msv__faq-answer p:last-child { margin-bottom: 0; }
+.msv__cta-band { background: linear-gradient(135deg, var(--navy) 0%, #0d2240 60%, #0a1d38 100%); padding: 5rem 0; text-align: center; }
+.msv__cta-band h2 { color: var(--white) !important; display: block; }
+.msv__cta-band h2::after { left: 50%; transform: translateX(-50%); background: linear-gradient(90deg, var(--yellow), #e8b820); }
+.msv__cta-band p { color: rgba(255,255,255,0.75) !important; max-width: 560px; margin: 1rem auto 2.2rem; font-size: 1rem; }
+.msv__cta-band .msv__btn-group { justify-content: center; }
+.msv__btn-group { display: flex; flex-wrap: wrap; gap: 0.85rem; }
+.msv__btn { display: inline-block; padding: 0.85rem 2rem; font-size: 0.92rem; font-weight: 700; border-radius: 6px; text-decoration: none !important; transition: transform 0.15s, box-shadow 0.15s; }
+.msv__btn:hover { transform: translateY(-1px); text-decoration: none !important; }
+.msv .msv__btn--primary { background: linear-gradient(135deg, var(--red) 0%, var(--red-deep) 100%); color: #ffffff !important; box-shadow: 0 4px 16px rgba(190,0,17,0.38); }
+.msv .msv__btn--primary:hover { box-shadow: 0 6px 22px rgba(190,0,17,0.48); color: #ffffff !important; }
+.msv .msv__btn--outline-white { background: transparent; color: #ffffff !important; border: 1.5px solid rgba(255,255,255,0.5); }
+.msv .msv__btn--outline-white:hover { background: rgba(255,255,255,0.1); color: #ffffff !important; }
+.msv__disclaimer { background: var(--cream); border-top: 1px solid var(--border); padding: 2rem 0; }
+.msv__disclaimer p { font-size: 0.78rem; color: var(--muted); margin: 0; line-height: 1.65; }
+.msv__related { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; }
+@media (max-width: 860px) { .msv__related { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 420px) { .msv__related { grid-template-columns: 1fr; } }
+.msv__related-card { background: var(--white); border: 1px solid var(--border); border-radius: 10px; padding: 1.3rem 1.25rem; text-decoration: none !important; transition: box-shadow 0.2s, transform 0.2s; display: block; }
+.msv__related-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); text-decoration: none !important; }
+.msv__related-icon { font-size: 1.5rem; display: block; margin-bottom: 0.6rem; }
+.msv__related-title { font-size: 0.88rem; font-weight: 700; color: var(--navy); display: block; margin-bottom: 0.3rem; }
+.msv__related-desc { font-size: 0.8rem; color: var(--muted); line-height: 1.55; }
+.msv__comparison-table { width: 100%; border-collapse: collapse; font-size: 0.88rem; margin: 2rem 0; }
+.msv__comparison-table thead tr { background: var(--navy); }
+.msv__comparison-table th { padding: 1rem 1.25rem; text-align: left; color: var(--white); font-weight: 700; }
+.msv__comparison-table td { padding: 0.85rem 1.25rem; border-bottom: 1px solid var(--border); color: var(--black); }
+.msv__comparison-table tbody tr { background: #fff; }
+.msv__comparison-table tbody tr:nth-child(even) { background: #f9fafb; }
+.msv__comparison-table .table-feature { font-weight: 600; color: var(--navy); }
+
+/* Tax Calculator Specific Styles */
+.tax-calculator { background: var(--white); border: 1px solid var(--border); border-radius: 12px; padding: 2.5rem; box-shadow: var(--shadow-md); }
+@media (max-width: 640px) { .tax-calculator { padding: 1.8rem; } }
+.tax-calc-header { margin-bottom: 2.5rem; text-align: center; }
+.tax-calc-header h3 { color: var(--navy); font-size: 1.25rem; margin-bottom: 0.5rem; }
+.tax-calc-header p { color: var(--muted); font-size: 0.92rem; }
+.tax-calc-row { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.8rem; margin-bottom: 1.8rem; }
+@media (max-width: 640px) { .tax-calc-row { grid-template-columns: 1fr; gap: 1.2rem; } }
+.tax-calc-field { display: flex; flex-direction: column; }
+.tax-calc-field label { font-size: 0.85rem; font-weight: 700; color: var(--navy); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.6rem; }
+.tax-calc-field select, .tax-calc-field input { padding: 0.9rem 1rem; border: 1.5px solid var(--border); border-radius: 6px; font-size: 0.92rem; font-family: inherit; color: var(--black); background: var(--white); transition: border-color 0.2s; }
+.tax-calc-field select:focus, .tax-calc-field input:focus { outline: none; border-color: var(--red); }
+.tax-calc-field input[type="number"] { font-weight: 600; }
+.tax-toggle-wrapper { display: flex; align-items: center; gap: 1rem; margin: 1.8rem 0; padding: 1.2rem; background: #f9fafb; border-radius: 8px; border-left: 3px solid var(--red); }
+.tax-toggle-label { font-size: 0.92rem; font-weight: 600; color: var(--navy); flex: 1; }
+.tax-toggle { position: relative; width: 50px; height: 28px; background: #ddd; border-radius: 14px; cursor: pointer; transition: background 0.3s; }
+.tax-toggle.active { background: var(--red); }
+.tax-toggle-thumb { position: absolute; top: 2px; left: 2px; width: 24px; height: 24px; background: white; border-radius: 50%; transition: left 0.3s; }
+.tax-toggle.active .tax-toggle-thumb { left: 24px; }
+.tax-calc-btn { grid-column: 1 / -1; padding: 1.1rem 2rem; background: linear-gradient(135deg, var(--red) 0%, var(--red-deep) 100%); color: white; border: none; border-radius: 6px; font-size: 0.95rem; font-weight: 700; cursor: pointer; transition: box-shadow 0.2s; box-shadow: 0 4px 16px rgba(190,0,17,0.3); }
+.tax-calc-btn:hover { box-shadow: 0 6px 22px rgba(190,0,17,0.45); }
+.tax-calc-btn:active { transform: translateY(1px); }
+.tax-results { margin-top: 2.5rem; padding: 2rem; background: linear-gradient(135deg, #f9fafb 0%, #f2f4f8 100%); border-radius: 10px; border-left: 4px solid var(--red); display: none; }
+.tax-results.show { display: block; animation: msv-fade-up 0.4s ease-out; }
+.tax-result-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin-bottom: 2rem; }
+@media (max-width: 640px) { .tax-result-grid { grid-template-columns: 1fr; } }
+.tax-result-item { background: white; padding: 1.2rem; border-radius: 8px; }
+.tax-result-label { font-size: 0.82rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; font-weight: 600; margin-bottom: 0.4rem; }
+.tax-result-value { font-size: 1.4rem; font-weight: 800; color: var(--navy); }
+.tax-result-currency { font-size: 0.85rem; color: var(--muted); }
+.tax-bracket-visual { background: white; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0; }
+.tax-bracket-visual h4 { font-size: 0.92rem; font-weight: 700; color: var(--navy); margin-bottom: 1rem; }
+.tax-bracket-bar { display: flex; height: 40px; border-radius: 6px; overflow: hidden; margin-bottom: 0.8rem; box-shadow: 0 2px 4px rgba(12,25,48,0.1); }
+.tax-bracket-segment { display: flex; align-items: center; justify-content: center; font-size: 0.7rem; font-weight: 700; color: white; flex: 1; }
+.tax-bracket-info { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; font-size: 0.82rem; }
+.tax-bracket-info-item { display: flex; justify-content: space-between; padding: 0.5rem 0; border-bottom: 1px solid rgba(12,25,48,0.1); }
+.tax-bracket-info-item:last-child { border-bottom: none; }
+.tax-bracket-label { font-weight: 600; color: var(--navy); }
+.tax-bracket-amount { font-weight: 700; color: var(--red); }
+.comparison-tabs { display: flex; gap: 0.5rem; margin-bottom: 1.5rem; border-bottom: 2px solid var(--border); }
+.comparison-tab { padding: 0.85rem 1.2rem; background: transparent; border: none; cursor: pointer; font-weight: 600; font-size: 0.92rem; color: var(--muted); border-bottom: 3px solid transparent; margin-bottom: -2px; transition: all 0.2s; }
+.comparison-tab.active { color: var(--red); border-bottom-color: var(--red); }
+.comparison-content { display: none; }
+.comparison-content.show { display: block; }
+.tax-comparison-item { display: flex; justify-content: space-between; padding: 0.75rem 0; font-size: 0.88rem; border-bottom: 1px solid rgba(12,25,48,0.1); }
+.tax-comparison-item:last-child { border-bottom: none; }
+.tax-comparison-label { font-weight: 600; color: var(--navy); }
+.tax-comparison-value { font-weight: 700; color: var(--red); }
+.tax-summary-box { background: white; padding: 1.2rem; border-radius: 8px; margin-top: 1rem; border-left: 3px solid var(--red); }
+.tax-summary-box p { font-size: 0.88rem; margin-bottom: 0.5rem; }
+.tax-summary-box p strong { color: var(--navy); }
+.effective-rate { font-size: 1.2rem; font-weight: 800; color: var(--red); margin-top: 0.8rem; }
+</style>
+
+<div class="msv">
+  <!-- Hero Section -->
+  <section class="msv__hero">
+    <div class="msv__container">
+      <div class="msv__hero-inner">
+        <div class="msv__eyebrow">Tax Estimation Tool</div>
+        <h1>Spain Tax Calculator <span class="msv__shimmer">for Expats</span></h1>
+        <p>Estimate your Spanish income tax liability, compare regular vs. Beckham Law taxation, and plan your net income. Fast, accurate, and free for 2026.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Bar -->
+  <div class="msv__trust-bar">
+    <div class="msv__container">
+      <div class="msv__trust-bar-inner">
+        <div class="msv__trust-item">Trusted by 15,000+ Expats</div>
+        <div class="msv__trust-item">2026 Tax Rates Included</div>
+        <div class="msv__trust-item">100% Confidential</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Calculator Section -->
+  <section class="msv__section">
+    <div class="msv__container--narrow">
+      <div class="tax-calculator">
+        <div class="tax-calc-header">
+          <h3>Calculate Your Spanish Tax Liability</h3>
+          <p>Enter your income and personal details to estimate your annual tax burden</p>
+        </div>
+
+        <div class="tax-calc-row">
+          <div class="tax-calc-field">
+            <label for="tax-income-type">Income Type</label>
+            <select id="tax-income-type">
+              <option value="employment">Employment</option>
+              <option value="self-employed">Self-Employed</option>
+              <option value="mixed">Mixed (Employment + Self-Employed)</option>
+            </select>
+          </div>
+          <div class="tax-calc-field">
+            <label for="tax-currency">Currency</label>
+            <select id="tax-currency">
+              <option value="EUR">EUR (€)</option>
+              <option value="GBP">GBP (£)</option>
+              <option value="USD">USD ($)</option>
+              <option value="CAD">CAD ($)</option>
+              <option value="AUD">AUD ($)</option>
+              <option value="ZAR">ZAR (R)</option>
+              <option value="CHF">CHF (Fr)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="tax-calc-row">
+          <div class="tax-calc-field">
+            <label for="tax-gross-income">Annual Gross Income</label>
+            <input type="number" id="tax-gross-income" placeholder="0.00" step="1000" min="0">
+          </div>
+          <div class="tax-calc-field">
+            <label for="tax-deductions">Business Expenses / Deductions (Self-Employed)</label>
+            <input type="number" id="tax-deductions" placeholder="0.00" step="500" min="0">
+          </div>
+        </div>
+
+        <div class="tax-calc-row">
+          <div class="tax-calc-field">
+            <label for="tax-social-security">Estimated Social Security Contributions</label>
+            <input type="number" id="tax-social-security" placeholder="Auto-calculated" step="100" min="0">
+          </div>
+          <div class="tax-calc-field">
+            <label for="tax-personal-situation">Personal Situation</label>
+            <select id="tax-personal-situation">
+              <option value="single">Single</option>
+              <option value="married">Married Filing Jointly</option>
+              <option value="dependants">With Dependants</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="tax-calc-row">
+          <div class="tax-calc-field">
+            <label for="tax-dependants">Number of Dependants (if applicable)</label>
+            <select id="tax-dependants">
+              <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="tax-toggle-wrapper">
+          <label class="tax-toggle-label" for="tax-beckham">Use Beckham Law (Special Tax Regime)?</label>
+          <div class="tax-toggle" id="tax-beckham" data-active="false">
+            <div class="tax-toggle-thumb"></div>
+          </div>
+        </div>
+
+        <button class="tax-calc-btn" onclick="calculateTax()">Calculate My Spanish Taxes</button>
+
+        <!-- Results Section -->
+        <div class="tax-results" id="tax-results">
+          <div class="tax-result-grid">
+            <div class="tax-result-item">
+              <div class="tax-result-label">Taxable Income</div>
+              <div class="tax-result-value"><span id="tax-taxable"></span></div>
+              <div class="tax-result-currency">EUR</div>
+            </div>
+            <div class="tax-result-item">
+              <div class="tax-result-label">Total Income Tax</div>
+              <div class="tax-result-value"><span id="tax-total-tax"></span></div>
+              <div class="tax-result-currency">EUR</div>
+            </div>
+            <div class="tax-result-item">
+              <div class="tax-result-label">Social Security</div>
+              <div class="tax-result-value"><span id="tax-ss-amount"></span></div>
+              <div class="tax-result-currency">EUR</div>
+            </div>
+            <div class="tax-result-item">
+              <div class="tax-result-label">Effective Tax Rate</div>
+              <div class="tax-result-value"><span id="tax-effective-rate"></span></div>
+              <div class="tax-result-currency">%</div>
+            </div>
+          </div>
+
+          <div class="tax-bracket-visual" id="tax-bracket-section"></div>
+
+          <div class="tax-summary-box">
+            <p><strong>Annual Net Income:</strong> <span id="tax-net-annual"></span> EUR</p>
+            <p><strong>Monthly Net Income:</strong> <span id="tax-net-monthly"></span> EUR</p>
+            <div class="effective-rate" id="tax-rate-display"></div>
+          </div>
+
+          <div id="tax-comparison-section"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Understanding Spain's Tax System -->
+  <section class="msv__section--cream">
+    <div class="msv__container">
+      <div class="msv__section-hd">
+        <h2>Understanding Spain's Tax System for Expats</h2>
+        <p>Spain uses a progressive income tax system with unique benefits and special regimes for newly arrived expat residents.</p>
+      </div>
+
+      <div style="max-width: 750px;">
+        <h3>Tax Brackets for 2026</h3>
+        <p>Spain's income tax uses progressive brackets. As your income increases, each additional euro is taxed at a higher rate. Understanding these brackets helps you plan your tax strategy.</p>
+
+        <table class="msv__comparison-table" style="margin-top: 1.5rem;">
+          <thead>
+            <tr>
+              <th>Annual Income Range</th>
+              <th>Tax Rate</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>€0 – €12,450</td>
+              <td><strong>19%</strong></td>
+            </tr>
+            <tr>
+              <td>€12,451 – €20,200</td>
+              <td><strong>24%</strong></td>
+            </tr>
+            <tr>
+              <td>€20,201 – €35,200</td>
+              <td><strong>30%</strong></td>
+            </tr>
+            <tr>
+              <td>€35,201 – €60,000</td>
+              <td><strong>37%</strong></td>
+            </tr>
+            <tr>
+              <td>€60,001 – €300,000</td>
+              <td><strong>45%</strong></td>
+            </tr>
+            <tr>
+              <td>Over €300,000</td>
+              <td><strong>47%</strong></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3 style="margin-top: 2.5rem;">Tax Residency Rules</h3>
+        <p>You become a Spanish tax resident if you spend more than 183 days in Spain during a calendar year, or if your main business or economic interest is located in Spain. As a resident, you're taxed on worldwide income.</p>
+
+        <h3 style="margin-top: 2rem;">Deductions & Credits</h3>
+        <p>You can deduct business expenses, professional fees, pension contributions, and certain personal expenses. Self-employed individuals benefit from larger deduction allowances than employees. Dependants and family status also affect your final tax liability.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tax Brackets Explained -->
+  <section class="msv__section">
+    <div class="msv__container">
+      <div class="msv__section-hd">
+        <h2>Tax Brackets Explained</h2>
+        <p>How Spain's progressive tax system works for your income.</p>
+      </div>
+
+      <div style="max-width: 900px;">
+        <h3>How Progressive Taxation Works</h3>
+        <p>Spain doesn't tax your entire income at one rate. Instead, different portions of your income are taxed at different rates. Each bracket only applies to the portion of income that falls within it.</p>
+
+        <div style="margin-top: 1.5rem; padding: 1.5rem; background: #f0f7ff; border-left: 3px solid var(--red); border-radius: 6px;">
+          <h3 style="font-size: 1rem; margin-top: 0;">Example: €50,000 Annual Income</h3>
+          <ul>
+            <li>€0 – €12,450 @ 19% = €2,365.50</li>
+            <li>€12,451 – €20,200 @ 24% = €1,860</li>
+            <li>€20,201 – €35,200 @ 30% = €4,500</li>
+            <li>€35,201 – €50,000 @ 37% = €5,553</li>
+            <li><strong>Total Tax: €14,278.50</strong></li>
+            <li><strong>Effective Rate: 28.6%</strong> (not the top bracket of 37%)</li>
+          </ul>
+        </div>
+
+        <h3 style="margin-top: 2.5rem;">Why Understanding Brackets Matters</h3>
+        <ul>
+          <li><strong>Tax Planning:</strong> Knowing which bracket you'll fall into helps with income planning and timing</li>
+          <li><strong>Deduction Benefits:</strong> Higher earners benefit more from deductions since they apply to higher-bracket income</li>
+          <li><strong>Self-Employment:</strong> Deductible business expenses can push you into lower brackets, reducing overall tax</li>
+          <li><strong>Beckham Law:</strong> The 24% flat rate may not be beneficial for lower earners (they already pay less)</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Beckham Law Special Tax Regime -->
+  <section class="msv__section--dark">
+    <div class="msv__container">
+      <div class="msv__section-hd">
+        <h2>Beckham Law: Special Tax Regime for Newly Arrived Expats</h2>
+        <p>Spain offers a unique tax advantage for expats who relocate from abroad.</p>
+      </div>
+
+      <div style="max-width: 850px;">
+        <h3 style="color: var(--white); margin-bottom: 1rem;">How the Beckham Law Works</h3>
+        <p style="color: rgba(255,255,255,0.82);">Instead of paying Spain's progressive tax rates (up to 47%), eligible expats can pay a flat 24% tax on Spanish-source income up to €600,000 per year. This applies to salary, self-employment income, and business profits earned in Spain.</p>
+
+        <h3 style="color: var(--white); margin-top: 2rem; margin-bottom: 1rem;">Who Qualifies?</h3>
+        <ul style="color: rgba(255,255,255,0.82);">
+          <li>You must not have been a Spanish tax resident in the previous 10 years</li>
+          <li>You must relocate to Spain and become a tax resident</li>
+          <li>You must apply within 3 months of becoming a resident</li>
+          <li>The regime applies for 4 consecutive tax years</li>
+          <li>Only Spanish-source income qualifies (foreign-source income is taxed normally)</li>
+        </ul>
+
+        <h3 style="color: var(--white); margin-top: 2rem; margin-bottom: 1rem;">When Beckham Law Saves You Money</h3>
+        <p style="color: rgba(255,255,255,0.82); margin-bottom: 1rem;"><strong>Beckham Law saves money if:</strong> Your income exceeds the threshold where the progressive rate exceeds 24%. For example, once you reach €30,000+ annual income, the progressive rate climbs above 24%, making Beckham Law beneficial.</p>
+        <p style="color: rgba(255,255,255,0.82);"><strong>Beckham Law doesn't save money if:</strong> Your income is low enough that the progressive rate stays below 24% (roughly under €20,000).</p>
+
+        <div style="background: rgba(255,255,255,0.08); padding: 1.5rem; border-radius: 8px; border-left: 3px solid var(--yellow); margin-top: 1.5rem;">
+          <p style="color: var(--yellow); margin: 0;"><strong>Annual Income: €60,000</strong></p>
+          <p style="color: rgba(255,255,255,0.82); margin: 0.8rem 0;">Regular tax: ~€18,000 (30% average)</p>
+          <p style="color: var(--yellow); margin: 0;"><strong>Beckham Law: €14,400 (24% flat)</strong></p>
+          <p style="color: var(--yellow); margin: 0.5rem 0 0;"><strong>Annual Savings: €3,600</strong></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Social Security & Contributions -->
+  <section class="msv__section">
+    <div class="msv__container">
+      <div class="msv__section-hd">
+        <h2>Social Security Contributions in Spain</h2>
+        <p>In addition to income tax, social security contributions are mandatory for all workers.</p>
+      </div>
+
+      <div style="max-width: 900px;">
+        <h3>Employee Contributions</h3>
+        <p>Employees (including those on Digital Nomad Visas with Spanish employment) pay approximately <strong>6.35%</strong> of gross salary to social security. This covers healthcare, unemployment, and pension benefits.</p>
+
+        <h3 style="margin-top: 2rem;">Self-Employed Contributions (Autónomos)</h3>
+        <p>Self-employed individuals pay higher contributions—typically <strong>17-18%</strong> of declared income (with a minimum monthly payment regardless of actual earnings). This covers the same benefits as employees.</p>
+
+        <div style="background: #f0f7ff; padding: 1.5rem; border-left: 3px solid var(--red); border-radius: 6px; margin-top: 1.5rem;">
+          <h3 style="margin-top: 0;">Income Tax vs. Social Security</h3>
+          <p>These are separate from income tax. You pay both. For example:</p>
+          <ul>
+            <li>€50,000 annual salary</li>
+            <li>Social Security (6.35%): €3,175</li>
+            <li>Income Tax (~30%): ~€15,000</li>
+            <li>Total deductions: ~€18,175 (36.35%)</li>
+            <li>Net take-home: ~€31,825</li>
+          </ul>
+        </div>
+
+        <h3 style="margin-top: 2.5rem;">Benefits Covered</h3>
+        <ul>
+          <li><strong>Healthcare:</strong> Public healthcare access in Spain</li>
+          <li><strong>Unemployment:</strong> Insurance benefits if you lose employment</li>
+          <li><strong>Pension:</strong> Retirement savings and benefits</li>
+          <li><strong>Maternity/Paternity:</strong> Leave benefits for new parents</li>
+          <li><strong>Disability:</strong> Coverage if unable to work</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Double Taxation Agreements -->
+  <section class="msv__section--cream">
+    <div class="msv__container">
+      <div class="msv__section-hd">
+        <h2>Double Taxation Agreements (DTAs)</h2>
+        <p>Spain has treaties with 100+ countries to prevent double taxation on international income.</p>
+      </div>
+
+      <div style="max-width: 900px;">
+        <h3>What is a Double Taxation Agreement?</h3>
+        <p>A DTA is a bilateral treaty between Spain and another country that determines how income is taxed when a person has ties to both countries. These agreements prevent you from paying tax on the same income to both governments.</p>
+
+        <h3 style="margin-top: 2rem;">Key DTAs for Common Expat Origins</h3>
+        <table class="msv__comparison-table" style="margin-top: 1.5rem;">
+          <thead>
+            <tr>
+              <th>Country</th>
+              <th>DTA Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>United Kingdom</td>
+              <td>Yes (active since 1975)</td>
+            </tr>
+            <tr>
+              <td>United States</td>
+              <td>Yes (active)</td>
+            </tr>
+            <tr>
+              <td>Canada</td>
+              <td>Yes (active)</td>
+            </tr>
+            <tr>
+              <td>Australia</td>
+              <td>Yes (active)</td>
+            </tr>
+            <tr>
+              <td>France</td>
+              <td>Yes (active)</td>
+            </tr>
+            <tr>
+              <td>Germany</td>
+              <td>Yes (active)</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3 style="margin-top: 2rem;">How DTAs Help You</h3>
+        <ul>
+          <li><strong>Foreign Tax Credits:</strong> Tax paid to your home country can reduce your Spanish tax liability</li>
+          <li><strong>Income Exemptions:</strong> Certain income types may be taxed only in your home country, not Spain</li>
+          <li><strong>Pension Income:</strong> Often taxed only in your country of origin</li>
+          <li><strong>Social Security:</strong> You may only contribute to one country's system</li>
+        </ul>
+
+        <p style="margin-top: 2rem; padding: 1rem; background: #fff8e1; border-left: 3px solid var(--yellow); border-radius: 6px;">
+          <strong>Important:</strong> DTA benefits vary by income type and your specific circumstances. Consult a tax professional to understand how your country's DTA with Spain applies to your situation.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="msv__section">
+    <div class="msv__container">
+      <div class="msv__section-hd">
+        <h2>Frequently Asked Questions</h2>
+        <p>Common questions about Spanish taxes for expats.</p>
+      </div>
+
+      <div class="msv__faq-list">
+        <details>
+          <summary>What is Spain's income tax system for expats?</summary>
+          <div class="msv__faq-answer">
+            <p>Spain uses a progressive tax system with brackets ranging from 19% to 47%. Expats are taxed the same as Spanish citizens on their worldwide income once they become Spanish tax residents (living in Spain 183+ days per year).</p>
+          </div>
+        </details>
+        <details>
+          <summary>What is the Beckham Law and who is eligible?</summary>
+          <div class="msv__faq-answer">
+            <p>The Beckham Law (Régimen de Impatriados) allows newly arrived expats to pay 24% flat tax on Spanish-source income (up to €600,000/year) for 4 consecutive years. You must not have been a Spanish tax resident in the previous 10 years and must apply within 3 months of becoming a resident.</p>
+          </div>
+        </details>
+        <details>
+          <summary>Do self-employed people pay different taxes?</summary>
+          <div class="msv__faq-answer">
+            <p>Self-employed individuals pay the same income tax brackets as employees, but also pay mandatory social security contributions (approximately 17-18% of net income). Business expenses are deductible before income tax calculation.</p>
+          </div>
+        </details>
+        <details>
+          <summary>What are social security contributions in Spain?</summary>
+          <div class="msv__faq-answer">
+            <p>Employees contribute approximately 6.35% to social security. Self-employed individuals pay a higher rate (17-18%) based on their declared income base. These contributions are deductible from taxable income for employees but handled differently for self-employed.</p>
+          </div>
+        </details>
+        <details>
+          <summary>Can I claim deductions for business expenses?</summary>
+          <div class="msv__faq-answer">
+            <p>Yes. Self-employed individuals can deduct legitimate business expenses (supplies, office rent, professional services, software, etc.) from gross income. Employees may claim limited deductions. All deductions must be documented and supported by invoices.</p>
+          </div>
+        </details>
+        <details>
+          <summary>How do dependants affect my tax liability?</summary>
+          <div class="msv__faq-answer">
+            <p>Spain offers tax deductions and benefits for dependants including children and non-working spouses. The amount varies based on the number of dependants and your income level. Our calculator estimates these benefits.</p>
+          </div>
+        </details>
+        <details>
+          <summary>What are Double Taxation Agreements?</summary>
+          <div class="msv__faq-answer">
+            <p>DTAs are treaties between Spain and other countries to prevent double taxation. If you have income from abroad, DTAs allow you to claim foreign tax credits or exemptions. These depend on your country of origin and type of income.</p>
+          </div>
+        </details>
+        <details>
+          <summary>Is this calculator accurate for tax planning?</summary>
+          <div class="msv__faq-answer">
+            <p>This calculator provides estimates for educational purposes only. Tax liability depends on many factors including deductions, credits, and individual circumstances. Consult a Spanish tax advisor (asesor fiscal) for accurate personal tax planning.</p>
+          </div>
+        </details>
+        <details>
+          <summary>When are Spanish income taxes due?</summary>
+          <div class="msv__faq-answer">
+            <p>The tax return (Declaración de la Renta) is filed with the Tax Agency (Agencia Tributaria) annually, typically April-June. Quarterly VAT payments (IVA) are required for businesses. Most employees have taxes withheld monthly through payroll.</p>
+          </div>
+        </details>
+        <details>
+          <summary>Can I reduce my tax burden through tax planning?</summary>
+          <div class="msv__faq-answer">
+            <p>Yes. Legal strategies include claiming all available deductions, optimizing business structure, timing income/expenses, utilizing Beckham Law, contributing to pension plans, and leveraging dependent deductions. Professional tax advice is essential for effective planning.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Band -->
+  <section class="msv__cta-band">
+    <div class="msv__container--narrow">
+      <h2>Need Professional Tax Advice?</h2>
+      <p>Our immigration and tax specialists can help you understand your exact tax obligations and optimize your tax strategy in Spain.</p>
+    </div>
+  </section>
+
+  <!-- Related Guides -->
+  <section class="msv__section--cream">
+    <div class="msv__container">
+      <div class="msv__section-hd">
+        <h2>Related Calculators & Guides</h2>
+        <p>Explore our other tools and resources for planning your move to Spain.</p>
+      </div>
+
+      <div class="msv__related">
+        <a href="/spain-digital-nomad-visa-income-calculator.html" class="msv__related-card">
+          <div class="msv__related-icon">🧮</div>
+          <span class="msv__related-title">DNV Calculator</span>
+          <span class="msv__related-desc">Check Digital Nomad Visa income requirements</span>
+        </a>
+        <a href="/spain-non-lucrative-visa-income-calculator.html" class="msv__related-card">
+          <div class="msv__related-icon">📊</div>
+          <span class="msv__related-title">NLV Calculator</span>
+          <span class="msv__related-desc">Check Non-Lucrative Visa requirements</span>
+        </a>
+        <a href="/compare-spain-visas.html" class="msv__related-card">
+          <div class="msv__related-icon">⚖️</div>
+          <span class="msv__related-title">Compare Visas</span>
+          <span class="msv__related-desc">Side-by-side comparison of all Spanish visas</span>
+        </a>
+        <a href="/how-to-get-residency-in-spain.html" class="msv__related-card">
+          <div class="msv__related-icon">🏠</div>
+          <span class="msv__related-title">Residency Guide</span>
+          <span class="msv__related-desc">Complete guide to Spanish residency pathways</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Disclaimer -->
+  </section>
+</div>
+
+<script>
+const exchangeRates = {
+  'EUR': 1.00,
+  'GBP': 0.86,
+  'USD': 1.08,
+  'CAD': 1.48,
+  'AUD': 1.65,
+  'ZAR': 20.00,
+  'CHF': 0.94
+};
+
+const taxBrackets = [
+  { min: 0, max: 12450, rate: 0.19 },
+  { min: 12450, max: 20200, rate: 0.24 },
+  { min: 20200, max: 35200, rate: 0.30 },
+  { min: 35200, max: 60000, rate: 0.37 },
+  { min: 60000, max: 300000, rate: 0.45 },
+  { min: 300000, max: Infinity, rate: 0.47 }
+];
+
+const taxToggle = document.getElementById('tax-beckham');
+taxToggle.addEventListener('click', function() {
+  const isActive = this.getAttribute('data-active') === 'true';
+  this.setAttribute('data-active', !isActive);
+  this.classList.toggle('active');
+});
+
+function formatCurrency(value, currency = 'EUR') {
+  const symbols = { 'EUR': '€', 'GBP': '£', 'USD': '$', 'CAD': '$', 'AUD': '$', 'ZAR': 'R', 'CHF': 'Fr' };
+  const symbol = symbols[currency] || currency;
+  return symbol + ' ' + value.toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 0 });
+}
+
+function calculateProgressiveTax(income) {
+  let tax = 0;
+  let taxBreakdown = [];
+  for (let bracket of taxBrackets) {
+    if (income <= bracket.min) break;
+    const taxableInThisBracket = Math.min(income, bracket.max) - bracket.min;
+    const taxInThisBracket = taxableInThisBracket * bracket.rate;
+    tax += taxInThisBracket;
+    taxBreakdown.push({
+      min: bracket.min,
+      max: bracket.max,
+      rate: bracket.rate,
+      taxable: taxableInThisBracket,
+      tax: taxInThisBracket
+    });
+  }
+  return { totalTax: tax, breakdown: taxBreakdown };
+}
+
+function calculateTax() {
+  const incomeType = document.getElementById('tax-income-type').value;
+  const currency = document.getElementById('tax-currency').value;
+  const grossIncome = parseFloat(document.getElementById('tax-gross-income').value) || 0;
+  const deductions = parseFloat(document.getElementById('tax-deductions').value) || 0;
+  const personalSit = document.getElementById('tax-personal-situation').value;
+  const dependants = parseInt(document.getElementById('tax-dependants').value) || 0;
+  const useBeckham = taxToggle.getAttribute('data-active') === 'true';
+
+  const exchangeRate = exchangeRates[currency];
+  const grossIncomeEUR = grossIncome / exchangeRate;
+
+  // Auto-calculate social security
+  let ssContribution = 0;
+  if (incomeType === 'self-employed' || incomeType === 'mixed') {
+    ssContribution = grossIncomeEUR * 0.18;
+  } else {
+    ssContribution = grossIncomeEUR * 0.0635;
+  }
+
+  const taxableIncome = Math.max(0, grossIncomeEUR - deductions - ssContribution);
+
+  // Apply Beckham Law if selected
+  let totalTax = 0;
+  let taxBreakdown = [];
+  if (useBeckham) {
+    totalTax = Math.min(taxableIncome, 600000) * 0.24;
+  } else {
+    const result = calculateProgressiveTax(taxableIncome);
+    totalTax = result.totalTax;
+    taxBreakdown = result.breakdown;
+  }
+
+  // Apply dependant deductions
+  let dependantDeduction = dependants * 1500;
+  totalTax = Math.max(0, totalTax - dependantDeduction);
+
+  const totalDeductions = ssContribution + totalTax;
+  const netIncome = grossIncomeEUR - totalDeductions;
+  const effectiveRate = grossIncomeEUR > 0 ? (totalDeductions / grossIncomeEUR) * 100 : 0;
+
+  const resultsDiv = document.getElementById('tax-results');
+  resultsDiv.classList.add('show');
+
+  document.getElementById('tax-taxable').textContent = formatCurrency(taxableIncome, 'EUR').replace(/€\s?/, '');
+  document.getElementById('tax-total-tax').textContent = formatCurrency(totalTax, 'EUR').replace(/€\s?/, '');
+  document.getElementById('tax-ss-amount').textContent = formatCurrency(ssContribution, 'EUR').replace(/€\s?/, '');
+  document.getElementById('tax-effective-rate').textContent = effectiveRate.toFixed(1);
+  document.getElementById('tax-net-annual').textContent = formatCurrency(netIncome, 'EUR').replace(/€\s?/, '');
+  document.getElementById('tax-net-monthly').textContent = formatCurrency(netIncome / 12, 'EUR').replace(/€\s?/, '');
+  document.getElementById('tax-rate-display').textContent = 'Effective Tax Rate: ' + effectiveRate.toFixed(1) + '%';
+
+  // Tax bracket visualization
+  if (!useBeckham && taxBreakdown.length > 0) {
+    let bracketHTML = '<h4>Tax Breakdown by Bracket</h4>';
+    bracketHTML += '<div class="tax-bracket-bar">';
+    const colors = ['#ff4444', '#ff6b6b', '#ff8888', '#ffaa88', '#ffcc88', '#ffdd99'];
+    taxBreakdown.forEach((bracket, idx) => {
+      const percent = (bracket.tax / totalTax) * 100;
+      bracketHTML += `<div class="tax-bracket-segment" style="flex: ${percent || 0.1}; background: ${colors[idx] || '#ff9999'};"></div>`;
+    });
+    bracketHTML += '</div><div class="tax-bracket-info">';
+    taxBreakdown.forEach((bracket, idx) => {
+      bracketHTML += `<div class="tax-bracket-info-item"><span class="tax-bracket-label">${bracket.rate * 100}% bracket:</span><span class="tax-bracket-amount">${formatCurrency(bracket.tax, 'EUR').replace(/€\s?/, '')}</span></div>`;
+    });
+    bracketHTML += '</div>';
+    document.getElementById('tax-bracket-section').innerHTML = bracketHTML;
+  } else if (useBeckham) {
+    document.getElementById('tax-bracket-section').innerHTML = '<h4>Beckham Law (Flat 24% Rate)</h4><p style="font-size: 0.88rem; color: var(--muted);">Under the Beckham Law special tax regime, you pay a flat 24% rate on Spanish-source income instead of progressive brackets.</p>';
+  }
+
+  // Comparison section
+  if (useBeckham && grossIncomeEUR > 20000) {
+    const regularTaxResult = calculateProgressiveTax(taxableIncome);
+    const regularTax = regularTaxResult.totalTax - dependantDeduction;
+    const beckhamTax = totalTax;
+    const savings = Math.max(0, regularTax - beckhamTax);
+
+    let compHTML = '<div style="background: white; padding: 1.5rem; border-radius: 8px; margin-top: 1.5rem;">';
+    compHTML += '<div class="comparison-tabs"><button class="comparison-tab active" onclick="switchTab(event, \'regular\')">Regular Taxation</button><button class="comparison-tab" onclick="switchTab(event, \'beckham\')">Beckham Law</button></div>';
+    compHTML += '<div class="comparison-content show" id="tab-regular"><div class="tax-comparison-item"><span class="tax-comparison-label">Tax Liability:</span><span class="tax-comparison-value">' + formatCurrency(regularTax, 'EUR').replace(/€\s?/, '') + '</span></div></div>';
+    compHTML += '<div class="comparison-content" id="tab-beckham"><div class="tax-comparison-item"><span class="tax-comparison-label">Tax Liability (24% flat):</span><span class="tax-comparison-value">' + formatCurrency(beckhamTax, 'EUR').replace(/€\s?/, '') + '</span></div></div>';
+    compHTML += '<div style="margin-top: 1rem; padding: 1rem; background: #f0f7ff; border-left: 3px solid var(--red); border-radius: 6px;"><p style="font-size: 0.88rem; color: var(--navy); margin: 0;"><strong>Beckham Law Savings:</strong> ' + formatCurrency(savings, 'EUR').replace(/€\s?/, '') + ' per year</p></div>';
+    compHTML += '</div>';
+    document.getElementById('tax-comparison-section').innerHTML = compHTML;
+  } else {
+    document.getElementById('tax-comparison-section').innerHTML = '';
+  }
+
+  window.scrollTo({ top: resultsDiv.offsetTop - 100, behavior: 'smooth' });
+}
+
+function switchTab(e, tabName) {
+  e.preventDefault();
+  document.querySelectorAll('.comparison-tab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.comparison-content').forEach(c => c.classList.remove('show'));
+  e.target.classList.add('active');
+  document.getElementById('tab-' + tabName).classList.add('show');
+}
+
+document.addEventListener('keypress', function(e) {
+  if (e.key === 'Enter' && document.activeElement.id === 'tax-gross-income') {
+    calculateTax();
+  }
+});
+</script>
+
+<!-- FRAGMENT_END -->
+</main>
+
+
+<!-- ═══════════════════════════════════════════════════
+     SITE FOOTER
+     ═══════════════════════════════════════════════════ -->
+<footer class="msv-footer" role="contentinfo">
+  <div class="msv-footer__top">
+    <div class="msv-footer__brand">
+      <a href="/" class="msv-footer__logo" aria-label="My Spanish Visa"><img src="/assets/images/msv-logo-white.png" alt="My Spanish Visa" height="72" style="display:block;"></a>
+      <p class="msv-footer__tagline">Specialist Spain visa &amp; residency guidance for English-speaking foreigners. A service of Platinum Legal Spain.</p>
+      <div class="msv-footer__trust">
+        <span class="msv-footer__trust-item">All English. No barriers.</span>
+        <span class="msv-footer__trust-item">Solicitors &amp; immigration specialists</span>
+        <span class="msv-footer__trust-item">100% online process</span>
+      </div>
+    </div>
+    <div>
+      <div class="msv-footer__col-title">Visas</div>
+      <ul class="msv-footer__links">
+        <li><a href="/non-lucrative-visa-spain.html">Non-Lucrative Visa</a></li>
+        <li><a href="/digital-nomad-visa-spain.html">Digital Nomad Visa</a></li>
+        <li><a href="/student-visa-spain.html">Student Visa</a></li>
+        <li><a href="/spain-visa-renewal.html">Visa Renewals</a></li>
+        <li><a href="/best-visa-move-to-spain.html">Compare All Visas</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/nlv">Apply: NLV</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/dnv">Apply: DNV</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/student-visa">Apply: Student Visa</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="msv-footer__col-title">Resources</div>
+      <ul class="msv-footer__links">
+        <li><a href="/blog-index.html">Blog &amp; Guides</a></li>
+        <li><a href="/move-to-spain.html">Move to Spain Guide</a></li>
+        <li><a href="/book-consultation.html">Which Visa Is Right for Me?</a></li>
+        <li><a href="/blog-spain-visa-document-checklist-2026.html">Document Checklists</a></li>
+        <li><a href="/spain-visa-options.html">Visa Requirements</a></li>
+        <li><a href="/nie-number-spain.html">NIE Number Guide</a></li>
+        <li><a href="/tie-card-spain.html">TIE Card Guide</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="msv-footer__col-title">Company</div>
+      <ul class="msv-footer__links">
+        <li><a href="/about-us.html">About Us</a></li>
+        <li><a href="/contact-us.html">Contact</a></li>
+        <li><a href="https://www.platinumlegalspain.com" rel="noopener">Platinum Legal Spain</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/nlv">Client Portal</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="msv-footer__bottom">
+    <div class="msv-footer__bottom-inner">
+      <p class="msv-footer__disclaimer"><strong style="color:rgba(255,255,255,0.5);">Disclaimer:</strong> My Spanish Visa provides visa processing support and is not a law firm. Content on this site is for informational purposes only and does not constitute legal advice. Immigration rules change frequently — always verify requirements with official sources or a qualified specialist. My Spanish Visa is a trading name of Platinum Legal Spain.</p>
+      <span class="msv-footer__copyright">© 2026 My Spanish Visa. All rights reserved.</span>
+    </div>
+  </div>
+</footer>
+
+
+</body>
+</html>

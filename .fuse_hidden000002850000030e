@@ -1,0 +1,2072 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- ═══════════════════════════════════════════════════════════════════
+       PAGE-SPECIFIC HEAD — replace block below per page:
+       <title>Retire To Spain From Uk | My Spanish Visa</title>
+       <meta name="description" content="…">
+       <meta property="og:title" content="…">
+       <meta property="og:description" content="…">
+       <meta property="og:url" content="https://www.myspanishvisa.com/…">
+       <meta property="og:image" content="…">
+       <link rel="canonical" href="https://www.myspanishvisa.com/…">
+       <script type="application/ld+json">…</script>
+       ═══════════════════════════════════════════════════════════════════ -->
+  <title>My Spanish Visa — Spain Visa &amp; Residency Specialists</title>
+  <meta name="description" content="My Spanish Visa helps English-speaking foreigners move to Spain. Expert guidance on Non-Lucrative Visa, Digital Nomad Visa, Student Visa, renewals and more.">
+
+  <!-- Shared Open Graph defaults -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="My Spanish Visa">
+  <meta property="og:image" content="https://www.myspanishvisa.com/assets/images/og/og-myspanishvisa-default.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@myspanishvisa">
+
+  <style>
+/* ═══════════════════════════════════════════════════════════════
+   GLOBAL SHELL — nav + footer only.
+   Page-specific CSS lives inside each fragment's own <style> block.
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── iOS overflow safety ── */
+html, body { max-width: 100%; overflow-x: clip; margin: 0; padding: 0; }
+*, *::before, *::after { box-sizing: border-box; }
+
+/* ── Brand tokens (root-level so all fragments inherit) ── */
+:root {
+  --navy:      #0c1930;
+  --navy-mid:  #1a3a5c;
+  --red:       #be0011;
+  --red-deep:  #8c000d;
+  --yellow:    #facf39;
+  --cream:     #f8f7f4;
+  --white:     #ffffff;
+  --black:     #1a1a1a;
+  --muted:     #5a6478;
+  --border:    #dce3ed;
+  --shadow-sm: 0 2px 8px rgba(12,25,48,0.08);
+  --shadow-md: 0 6px 24px rgba(12,25,48,0.13);
+}
+
+body {
+  font-family: 'Inter', 'Segoe UI', system-ui, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.75;
+  color: var(--black);
+  background: #fff;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   SITE NAV
+   ───────────────────────────────────────────────────────────── */
+.msv-nav {
+  position: sticky;
+  top: 0;
+  z-index: 9000;
+  background: var(--navy);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 2px 12px rgba(12,25,48,0.22);
+}
+.msv-nav__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+  gap: 1.5rem;
+}
+
+/* Logo */
+.msv-nav__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+.msv-nav__logo-flag {
+  font-size: 1.3rem;
+  line-height: 1;
+}
+.msv-nav__logo-text {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+.msv-nav__logo-text span {
+  color: var(--yellow);
+}
+
+/* Links */
+.msv-nav__links {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.msv-nav__links > li {
+  position: relative;
+}
+.msv-nav__links > li > a,
+.msv-nav__links > li > button {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.5rem 0.9rem;
+  font-size: 0.87rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.85);
+  text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: color 0.15s, background 0.15s;
+  white-space: nowrap;
+  height: 64px;
+}
+.msv-nav__links > li > a:hover,
+.msv-nav__links > li > button:hover,
+.msv-nav__links > li:focus-within > a,
+.msv-nav__links > li:focus-within > button {
+  color: #fff;
+  background: rgba(255,255,255,0.08);
+}
+.msv-nav__chevron {
+  font-size: 0.65rem;
+  opacity: 0.7;
+  transition: transform 0.2s;
+}
+.msv-nav__links > li:focus-within .msv-nav__chevron,
+.msv-nav__links > li:hover .msv-nav__chevron {
+  transform: rotate(180deg);
+}
+
+/* Dropdown */
+.msv-nav__dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 230px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  box-shadow: var(--shadow-md);
+  padding: 0.5rem 0;
+  z-index: 200;
+}
+.msv-nav__links > li:hover .msv-nav__dropdown,
+.msv-nav__links > li:focus-within .msv-nav__dropdown {
+  display: block;
+}
+.msv-nav__dropdown a {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.6rem 1.1rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--navy);
+  text-decoration: none;
+  transition: background 0.12s;
+}
+.msv-nav__dropdown a:hover {
+  background: var(--cream);
+  color: var(--red);
+}
+.msv-nav__dropdown-icon {
+  width: 24px;
+  height: 24px;
+  background: var(--cream);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+.msv-nav__dropdown-divider {
+  height: 1px;
+  background: var(--border);
+  margin: 0.4rem 0;
+}
+
+/* CTA button */
+.msv-nav__cta {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.55rem 1.2rem;
+  background: var(--red);
+  color: #fff !important;
+  font-size: 0.85rem;
+  font-weight: 700;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.15s, box-shadow 0.15s;
+  white-space: nowrap;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(190,0,17,0.3);
+}
+.msv-nav__cta:hover {
+  background: var(--red-deep);
+  box-shadow: 0 4px 14px rgba(190,0,17,0.4);
+  text-decoration: none;
+}
+
+/* Hamburger */
+.msv-nav__burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.4rem;
+  border-radius: 5px;
+}
+.msv-nav__burger span {
+  width: 22px;
+  height: 2px;
+  background: #fff;
+  border-radius: 2px;
+  transition: transform 0.2s, opacity 0.2s;
+  display: block;
+}
+
+/* Mobile nav */
+.msv-nav__mobile {
+  display: none;
+  flex-direction: column;
+  background: var(--navy-mid);
+  padding: 1rem 1.5rem 1.5rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+.msv-nav__mobile.open { display: flex; }
+.msv-nav__mobile a {
+  padding: 0.65rem 0;
+  color: rgba(255,255,255,0.9);
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+.msv-nav__mobile a:hover { color: var(--yellow); }
+.msv-nav__mobile .msv-nav__mobile-sub {
+  padding-left: 1rem;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: rgba(255,255,255,0.7);
+}
+.msv-nav__mobile-cta {
+  margin-top: 1rem;
+  background: var(--red);
+  color: #fff !important;
+  border-radius: 6px;
+  text-align: center;
+  padding: 0.75rem 1rem !important;
+  border-bottom: none !important;
+}
+
+@media (max-width: 900px) {
+  .msv-nav__links { display: none; }
+  .msv-nav__cta { display: none; }
+  .msv-nav__burger { display: flex; }
+}
+@media (max-width: 480px) {
+  .msv-nav__inner { padding: 0 1rem; }
+}
+
+/* ─────────────────────────────────────────────────────────────
+   SITE FOOTER
+   ───────────────────────────────────────────────────────────── */
+.msv-footer {
+  background: var(--navy);
+  color: rgba(255,255,255,0.75);
+  overflow-x: clip;
+}
+.msv-footer__top {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem 3rem;
+  display: grid;
+  grid-template-columns: 280px 1fr 1fr 1fr;
+  gap: 3rem;
+}
+@media (max-width: 900px) {
+  .msv-footer__top { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
+}
+@media (max-width: 560px) {
+  .msv-footer__top { grid-template-columns: 1fr; gap: 2rem; padding: 3rem 1.2rem 2rem; }
+}
+
+.msv-footer__brand {}
+.msv-footer__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  margin-bottom: 1rem;
+}
+.msv-footer__logo-flag { font-size: 1.3rem; }
+.msv-footer__logo-text {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -0.01em;
+}
+.msv-footer__logo-text span { color: var(--yellow); }
+.msv-footer__tagline {
+  font-size: 0.83rem;
+  color: rgba(255,255,255,0.55);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+.msv-footer__trust {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+.msv-footer__trust-item {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.65);
+}
+.msv-footer__trust-item::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  background: var(--yellow);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.msv-footer__col-title {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.4);
+  margin-bottom: 1rem;
+}
+.msv-footer__links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.msv-footer__links a {
+  font-size: 0.87rem;
+  color: rgba(255,255,255,0.68);
+  text-decoration: none;
+  transition: color 0.15s;
+  display: inline-block;
+}
+.msv-footer__links a:hover {
+  color: var(--yellow);
+  text-decoration: none;
+}
+
+.msv-footer__bottom {
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+.msv-footer__bottom-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 1rem;
+  justify-content: space-between;
+}
+.msv-footer__disclaimer {
+  font-size: 0.73rem;
+  color: rgba(255,255,255,0.35);
+  line-height: 1.65;
+  max-width: 720px;
+}
+.msv-footer__copyright {
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.35);
+  white-space: nowrap;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   MAIN CONTENT AREA
+   ───────────────────────────────────────────────────────────── */
+main {
+  /* Fragments are self-contained; this wrapper just provides flow context */
+  position: relative;
+}
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════
+     SITE NAVIGATION
+     ═══════════════════════════════════════════════════ -->
+<header class="msv-nav" role="banner">
+  <div class="msv-nav__inner">
+
+    <!-- Logo -->
+    <a href="/" class="msv-nav__logo" aria-label="My Spanish Visa — Home"><img src="/assets/images/msv-logo-white.png" alt="My Spanish Visa" height="80" style="display:block;"></a>
+
+    <!-- Desktop links -->
+    <nav aria-label="Main navigation">
+      <ul class="msv-nav__links">
+
+        <li>
+          <button class="msv-nav__dropdown-trigger" aria-haspopup="true" aria-expanded="false">
+            Visas <span class="msv-nav__chevron">▾</span>
+          </button>
+          <div class="msv-nav__dropdown" role="menu">
+            <a href="/non-lucrative-visa-spain/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🏖️</span>Non-Lucrative Visa
+            </a>
+            <a href="/digital-nomad-visa-spain/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">💻</span>Digital Nomad Visa
+            </a>
+            <a href="/student-visa-spain/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🎓</span>Student Visa
+            </a>
+            <div class="msv-nav__dropdown-divider"></div>
+            <a href="/spain-visa-renewal/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🔄</span>Visa Renewals
+            </a>
+            <a href="/best-visa-move-to-spain/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">⚖️</span>Compare All Visas
+            </a>
+          </div>
+        </li>
+
+        <li>
+          <button aria-haspopup="true" aria-expanded="false">
+            Resources <span class="msv-nav__chevron">▾</span>
+          </button>
+          <div class="msv-nav__dropdown" role="menu">
+            <a href="/blog/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">📝</span>Blog &amp; Guides
+            </a>
+            <a href="/spain-visa-checklist/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">✅</span>Document Checklists
+            </a>
+            <a href="/move-to-spain/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🏠</span>Move to Spain Guide
+            </a>
+            <a href="/visa-eligibility-quiz/" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🧭</span>Eligibility Quiz
+            </a>
+          </div>
+        </li>
+
+        <li><a href="/about-us/">About Us</a></li>
+        <li><a href="/testimonials/">Reviews</a></li>
+        <li><a href="/contact-us.html">Contact</a></li>
+
+      </ul>
+    </nav>
+
+    <!-- Desktop CTA -->
+    <a href="https://dashboard.platinumlegalspain.com/nlv" class="msv-nav__cta">
+      Start My Application →
+    </a>
+
+    <!-- Hamburger (mobile) -->
+    <button class="msv-nav__burger" aria-label="Open menu" aria-expanded="false" onclick="
+      var m=document.querySelector('.msv-nav__mobile');
+      var open=m.classList.toggle('open');
+      this.setAttribute('aria-expanded', open);
+    ">
+      <span></span><span></span><span></span>
+    </button>
+
+  </div><!-- /.msv-nav__inner -->
+
+  <!-- Mobile menu -->
+  <nav class="msv-nav__mobile" aria-label="Mobile navigation">
+    <a href="/non-lucrative-visa-spain/" class="msv-nav__mobile-sub">Non-Lucrative Visa</a>
+    <a href="/digital-nomad-visa-spain/" class="msv-nav__mobile-sub">Digital Nomad Visa</a>
+    <a href="/student-visa-spain/" class="msv-nav__mobile-sub">Student Visa</a>
+    <a href="/spain-visa-renewal/">Visa Renewals</a>
+    <a href="/best-visa-move-to-spain/">Compare All Visas</a>
+    <a href="/blog/">Blog &amp; Guides</a>
+    <a href="/about-us/">About Us</a>
+    <a href="/testimonials/">Reviews</a>
+    <a href="/contact-us.html">Contact</a>
+    <a href="https://dashboard.platinumlegalspain.com/nlv" class="msv-nav__mobile-cta">Start My Application →</a>
+  </nav>
+
+</header>
+
+
+<!-- ═══════════════════════════════════════════════════
+     PAGE CONTENT (fragment injected here)
+     ═══════════════════════════════════════════════════ -->
+<main>
+<!-- FRAGMENT_START -->
+<!-- Retire to Spain from the UK - Complete Guide for British Retirees 2026 -->
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.myspanishvisa.com/retire-to-spain-from-uk/",
+      "url": "https://www.myspanishvisa.com/retire-to-spain-from-uk/",
+      "name": "Retire to Spain from the UK 2026 | Complete British Retirees Guide | My Spanish Visa",
+      "description": "Complete 2026 guide for UK citizens retiring to Spain after Brexit. Non-Lucrative Visa, BLS visa centres, ACRO criminal record, UK State Pension, HMRC P85, double taxation treaty, private health insurance, and step-by-step process from application to TIE card.",
+      "inLanguage": "en",
+      "isPartOf": {
+        "@id": "https://www.myspanishvisa.com/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "My Spanish Visa",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.myspanishvisa.com/logo.png",
+          "width": 200,
+          "height": 60
+        }
+      },
+      "datePublished": "2026-01-10",
+      "dateModified": "2026-04-22"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.myspanishvisa.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Retire to Spain from the UK",
+          "item": "https://www.myspanishvisa.com/retire-to-spain-from-uk/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Can UK citizens still retire to Spain after Brexit?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. UK citizens can absolutely still retire to Spain, but Brexit changed the process entirely. Since 1 January 2021, British nationals no longer have EU freedom of movement and must apply for a Spanish visa just like any other non-EU national. The Non-Lucrative Visa (NLV) is the primary route for UK retirees, requiring proof of passive income (approximately €2,400/month or roughly £2,000/month at 2026 rates), mandatory private health insurance, and an ACRO criminal record certificate. Applications are submitted through BLS International visa centres in London or Manchester."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the ACRO criminal record certificate and why do I need it — not a DBS check?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The ACRO (ACRO Criminal Records Office) Standard Disclosure is the specific criminal record check required by Spanish consulates for UK NLV applicants. A standard DBS (Disclosure and Barring Service) check is NOT accepted — this is one of the most common mistakes UK applicants make. The ACRO certificate costs £45 standard or £98 fast-track (10–15 working days) and is obtained at acro.police.uk. Once received, it must be apostilled by the FCDO legalisation office in Milton Keynes (£75 per document) and then translated into Spanish by a sworn translator."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Will I still receive my UK State Pension if I retire to Spain?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. The UK State Pension is paid internationally by the DWP (Department for Work and Pensions) regardless of where you live. Crucially, Spain is a country where the pension is NOT frozen — you receive the annual triple-lock increases just as you would in the UK. However, the current full new State Pension of approximately £221/week (around £11,500/year in 2026) falls significantly short of the NLV income requirement of approximately €2,400/month (about £2,000/month). Most UK retirees need to supplement their State Pension with private/workplace pension income, savings, or investment returns to meet the threshold."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where do I apply for the NLV in the UK — and which centre covers my region?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "NLV applications in the UK are handled by BLS International, which operates two authorised visa application centres on behalf of the Spanish consulates. The London centre covers South England, Wales, and Northern Ireland (processing typically 6–10 weeks). The Manchester centre covers North England, Scotland, and the Midlands (processing typically 4–8 weeks). You do not attend the Spanish consulate directly. Book appointments online at the BLS website; the consulate application fee is approximately €80–€150."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens to my NHS coverage when I move to Spain?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Your NHS entitlement stops once you become a Spanish resident. The EHIC/GHIC cards provide limited emergency-only coverage and are not sufficient for residency. For the NLV application, you must have a comprehensive private Spanish health insurance policy — major providers include established private health insurers in Spain a leading private insurer Spain, a leading private insurer, and a leading private insurer. Expect to pay roughly £600–£2,000/year depending on age and coverage level. Once in Spain, some retirees may access the Spanish public healthcare system (Sistema Nacional de Salud) through the S1 form if they are receiving a UK State Pension, but private insurance is mandatory at the application stage."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What HMRC obligations do I have when I retire to Spain?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "When you become a Spanish tax resident, you must notify HMRC by completing form P85 ('Leaving the UK — getting your tax right'). This informs HMRC you are no longer a UK tax resident and stops automatic UK tax deductions. You will still need to declare any UK-sourced income (such as pension income, rental income from UK property) to HMRC and to the Spanish tax authority (Agencia Tributaria). The UK-Spain Double Taxation Treaty prevents the same income being taxed twice — you get a credit for tax paid in one country against the liability in the other. ISAs lose their UK tax-free status in Spain's eyes and the investment income inside them is taxable in Spain."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the income requirement in GBP for the UK NLV applicants?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The Spanish government sets the NLV income threshold at approximately €2,400/month for the main applicant (some consulates apply a slightly lower base figure of €1,260/month but most regional consulates in Spain apply €2,400). At approximate 2026 EUR/GBP exchange rates, this is around £2,000/month or £24,000/year. For each additional family member included in the application, an extra €600/month (approximately £500/month) is required. Income sources accepted include UK State Pension, private or workplace pensions, annuities, dividends, rental income, and bank savings at a sufficient level."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the process after NLV approval — NIE, TIE, and empadronamiento?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "After NLV approval, you must enter Spain within 1 month of the visa being issued. Within 30 days of arrival, you must apply for your TIE (Tarjeta de Identidad de Extranjero — Residency Card) at the Policía Nacional. You will also need to obtain a NIE (Número de Identidad de Extranjero — a Spanish tax identification number) if you haven't already, and register at your local town hall (empadronamiento). The empadronamiento establishes your official local residency and is required for accessing public services, healthcare, and renewing your visa. The TIE is typically issued 4–8 weeks after your police appointment."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<!-- Open Graph / Social -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.myspanishvisa.com/retire-to-spain-from-uk/">
+<meta property="og:title" content="My Spanish Visa">
+<meta property="og:description" content="Expert Spain visa guidance for English-speaking expats.">
+<meta property="og:image" content="https://www.myspanishvisa.com/assets/images/og/og-retire-spain.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="My Spanish Visa">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@myspanishvisa">
+<meta name="twitter:title" content="My Spanish Visa">
+<meta name="twitter:description" content="Expert Spain visa guidance for English-speaking expats.">
+<meta name="twitter:image" content="https://www.myspanishvisa.com/assets/images/og/og-retire-spain.jpg">
+
+<style>
+/* ── iOS Safari pinch-zoom overflow safety ─────────────────────────── */
+/* Prevents horizontal overflow when users pinch-zoom on iPhone/iPad.   */
+/* Top-level (also paste into theme Custom CSS / Elementor Site Settings) */
+html, body { max-width: 100%; overflow-x: clip; }
+/* Scoped wrapper safety */
+.msv, .msv-nav, .msv-topbar, .msv-footer, .msv-footer-cta,
+.pls-header, .pls-body, .pls-nlv, .pls-dnv, .pls-student {
+  max-width: 100%;
+  overflow-x: clip;
+  position: relative;
+}
+/* Cap all media inside the wrapper */
+.msv img, .msv video, .msv iframe,
+.msv-footer img, .msv-footer video, .msv-footer iframe {
+  max-width: 100%;
+  height: auto;
+}
+/* Never use 100vw — use 100% instead (dev reminder) */
+
+/* ── Reset & scope ─────────────────────────────────────────────────── */
+.msv *, .msv *::before, .msv *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* ── Tokens ──────────────────────────────────────────────────────── */
+.msv {
+  --navy: #0c1930; --navy-mid: #1a3a5c; --red: #be0011; --red-deep: #8c000d;
+  --yellow: #facf39; --cream: #f8f7f4; --white: #ffffff; --black: #1a1a1a;
+  --muted: #5a6478; --border: #dce3ed;
+  --shadow-sm: 0 2px 8px rgba(12,25,48,0.08); --shadow-md: 0 6px 24px rgba(12,25,48,0.13);
+  font-family: 'Inter', 'Segoe UI', system-ui, Arial, sans-serif;
+  font-size: 16px; line-height: 1.75; color: var(--black); width: 100%;
+}
+
+/* ── Layout containers ───────────────────────────────────────────── */
+.msv__container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+.msv__container--narrow { max-width: 780px; margin: 0 auto; padding: 0 2rem; }
+@media (max-width: 640px) { .msv__container, .msv__container--narrow { padding: 0 1.2rem; } }
+
+/* ── Typography ──────────────────────────────────────────────────── */
+.msv h1 { font-size: clamp(2rem, 4.5vw, 3rem); font-weight: 800; line-height: 1.12; color: var(--white); letter-spacing: -0.025em; margin-bottom: 1.2rem; }
+.msv h2 { font-size: clamp(1.3rem, 2.5vw, 1.75rem); font-weight: 700; color: var(--navy); letter-spacing: -0.01em; margin-bottom: 0.5rem; position: relative; display: inline-block; padding-bottom: 0.5rem; }
+.msv h2::after { content: ''; position: absolute; bottom: 0; left: 0; width: 44px; height: 3px; background: linear-gradient(90deg, var(--red), var(--red-deep)); border-radius: 2px; }
+.msv h3 { font-size: 1.05rem; font-weight: 700; color: var(--navy); margin-bottom: 0.4rem; }
+.msv p { color: var(--black); margin-bottom: 1rem; font-size: 0.97rem; }
+.msv a { color: var(--red); text-decoration: none; }
+.msv a:hover { text-decoration: underline; }
+.msv ul { list-style: none; padding: 0; margin: 0 0 1rem; }
+.msv ul li { padding: 0.35rem 0 0.35rem 1.4rem; position: relative; font-size: 0.95rem; color: var(--black); }
+.msv ul li::before { content: ''; position: absolute; left: 0; top: 0.75rem; width: 7px; height: 7px; background: linear-gradient(135deg, var(--red), var(--red-deep)); border-radius: 50%; }
+
+/* ── Sections ─────────────────────────────────────────────────── */
+.msv__section { padding: 5rem 0; background: var(--white); }
+.msv__section--cream { padding: 5rem 0; background: linear-gradient(180deg, #f8f7f4 0%, #f2f4f8 100%); }
+.msv__section--dark { padding: 5rem 0; background: linear-gradient(135deg, var(--navy) 0%, #0d2240 55%, #0a1d38 100%); }
+.msv__section--dark h2 { color: var(--white) !important; }
+.msv__section--dark h2::after { background: linear-gradient(90deg, var(--yellow), #e8b820); }
+.msv__section--dark h3 { color: rgba(255,255,255,0.9) !important; }
+.msv .msv__section--dark p, .msv .msv__section--dark li { color: rgba(255,255,255,0.82); }
+.msv__section--dark ul li::before { background: linear-gradient(135deg, var(--yellow), #e8b820); }
+@media (max-width: 640px) { .msv__section, .msv__section--cream, .msv__section--dark { padding: 3.5rem 0; } }
+.msv__section-hd { margin-bottom: 3rem; }
+.msv__section-hd p { color: var(--muted); font-size: 1rem; margin-top: 0.75rem; line-height: 1.7; max-width: 600px; }
+
+/* ── Animations ──────────────────────────────────────────────────── */
+@keyframes msv-fade-up { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes msv-shimmer {
+  0%   { background-position: -400px 0; }
+  100% { background-position: 400px 0; }
+}
+.msv__shimmer {
+  background: linear-gradient(90deg, var(--yellow) 0%, #e8b820 25%, var(--red) 50%, #e8b820 75%, var(--yellow) 100%);
+  background-size: 400px 100%;
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: msv-shimmer 3.5s linear infinite;
+  display: inline;
+}
+
+/* ── Hero ─────────────────────────────────────────────────────── */
+.msv__hero { background: linear-gradient(135deg, #0c1930 0%, #0f2540 40%, #162d50 70%, #1a3560 100%); padding: 5.5rem 0 5rem; position: relative; overflow: hidden; }
+.msv__hero::before { content: ''; position: absolute; top: -30%; right: -5%; width: 700px; height: 700px; background: radial-gradient(circle, rgba(190,0,17,0.1) 0%, transparent 65%); pointer-events: none; }
+.msv__hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, rgba(250,207,57,0.4), transparent); }
+.msv__hero-inner { max-width: 780px; animation: msv-fade-up 0.7s ease-out both; }
+.msv__eyebrow { display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(190,0,17,0.15); border: 1px solid rgba(190,0,17,0.4); color: #ff6b7a; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.35rem 0.9rem; border-radius: 100px; margin-bottom: 1.5rem; }
+.msv__eyebrow::before { content: ''; width: 6px; height: 6px; background: var(--red); border-radius: 50%; box-shadow: 0 0 6px var(--red); }
+.msv__hero p { color: rgba(255,255,255,0.78) !important; font-size: clamp(1rem, 2.2vw, 1.15rem); max-width: 640px; margin-bottom: 2.2rem; line-height: 1.75; }
+
+/* ── Breadcrumb ───────────────────────────────────────────────── */
+.msv__breadcrumb { padding: 0.85rem 0; border-bottom: 1px solid var(--border); background: var(--white); }
+.msv__breadcrumb-inner { display: flex; align-items: center; gap: 0.5rem; font-size: 0.8rem; color: var(--muted); flex-wrap: wrap; }
+.msv__breadcrumb-inner a { color: var(--red); text-decoration: none; }
+.msv__breadcrumb-inner a:hover { text-decoration: underline; }
+.msv__breadcrumb-inner span { color: var(--muted); }
+
+/* ── Buttons ─────────────────────────────────────────────────── */
+.msv__btn-group { display: flex; flex-wrap: wrap; gap: 0.85rem; }
+.msv__btn { display: inline-block; padding: 0.85rem 2rem; font-size: 0.92rem; font-weight: 700; border-radius: 6px; text-decoration: none !important; transition: transform 0.15s, box-shadow 0.15s; }
+.msv__btn:hover { transform: translateY(-1px); text-decoration: none !important; }
+.msv .msv__btn--primary { background: linear-gradient(135deg, var(--red) 0%, var(--red-deep) 100%); color: #ffffff !important; box-shadow: 0 4px 16px rgba(190,0,17,0.38); }
+.msv .msv__btn--primary:hover { box-shadow: 0 6px 22px rgba(190,0,17,0.48); color: #ffffff !important; }
+.msv .msv__btn--outline-white { background: transparent; color: #ffffff !important; border: 1.5px solid rgba(255,255,255,0.5); }
+.msv .msv__btn--outline-white:hover { background: rgba(255,255,255,0.1); color: #ffffff !important; }
+
+/* ── Trust bar ──────────────────────────────────────────────── */
+.msv__trust-bar { background: var(--white); border-bottom: 1px solid var(--border); padding: 1rem 0; box-shadow: var(--shadow-sm); }
+.msv__trust-bar-inner { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.75rem; }
+.msv__trust-item { display: flex; align-items: center; gap: 0.5rem; font-size: 0.82rem; font-weight: 600; color: var(--navy); white-space: nowrap; }
+.msv__trust-item::before { content: ''; width: 7px; height: 7px; background: linear-gradient(135deg, var(--red), var(--red-deep)); border-radius: 50%; flex-shrink: 0; }
+
+/* ── Key facts strip ─────────────────────────────────────────── */
+.msv__facts { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; margin-bottom: 3rem; }
+@media (max-width: 760px) { .msv__facts { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 420px) { .msv__facts { grid-template-columns: 1fr; } }
+.msv__fact { background: var(--white); padding: 1.5rem 1.3rem; text-align: center; }
+.msv__fact-icon { font-size: 1.5rem; display: block; margin-bottom: 0.5rem; }
+.msv__fact-label { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); display: block; margin-bottom: 0.25rem; }
+.msv__fact-value { font-size: 0.97rem; font-weight: 700; color: var(--navy); line-height: 1.35; display: block; }
+
+/* ── Alert box ───────────────────────────────────────────────── */
+.msv__alert { border-radius: 10px; padding: 1.3rem 1.5rem; display: flex; gap: 1rem; align-items: flex-start; margin-bottom: 2rem; }
+.msv__alert--warn { background: #fffbea; border: 1px solid #f0d060; }
+.msv__alert--info { background: #eef4ff; border: 1px solid #a0bfff; }
+.msv__alert--red { background: #fef2f2; border: 1px solid #fca5a5; }
+.msv__alert--green { background: #f0fdf4; border: 1px solid #86efac; }
+.msv__alert-icon { font-size: 1.4rem; flex-shrink: 0; margin-top: 0.1rem; }
+.msv__alert p { font-size: 0.9rem; color: var(--black); margin: 0; line-height: 1.65; }
+.msv__alert strong { color: var(--navy); }
+
+/* ── Comparison table ────────────────────────────────────────── */
+.msv__comparison { width: 100%; border-collapse: collapse; font-size: 0.88rem; margin: 2rem 0; }
+.msv__comparison thead tr { background: var(--navy); }
+.msv__comparison th { padding: 1rem 1.25rem; text-align: left; color: var(--white); font-weight: 700; border-bottom: 2px solid var(--yellow); white-space: nowrap; }
+.msv__comparison td { padding: 0.85rem 1.25rem; border-bottom: 1px solid var(--border); color: var(--black); }
+.msv__comparison tbody tr:nth-child(even) { background: #f9fafb; }
+.msv__comparison .aspect { font-weight: 600; color: var(--navy); }
+.msv__comparison .pre { color: #228000; font-weight: 600; }
+.msv__comparison .post { color: var(--red); font-weight: 600; }
+
+/* ── Income boxes ────────────────────────────────────────────── */
+.msv__income-boxes { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; margin-bottom: 2rem; }
+@media (max-width: 860px) { .msv__income-boxes { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 420px) { .msv__income-boxes { grid-template-columns: 1fr; } }
+.msv__income-box { background: #f9fafb; border: 1px solid var(--border); border-radius: 10px; padding: 1.3rem; text-align: center; }
+.msv__income-box-label { font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); margin-bottom: 0.5rem; display: block; }
+.msv__income-box-value { font-size: 1.5rem; font-weight: 800; color: var(--red); display: block; }
+.msv__income-box-detail { font-size: 0.75rem; color: var(--muted); margin-top: 0.4rem; font-weight: 500; display: block; }
+
+/* ── Feature cards ──────────────────────────────────────────── */
+.msv__card-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-bottom: 2.5rem; }
+@media (max-width: 860px) { .msv__card-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 420px) { .msv__card-grid { grid-template-columns: 1fr; } }
+.msv__card { background: var(--white); border: 1.5px solid var(--border); border-radius: 12px; padding: 1.5rem; }
+.msv__card-icon { font-size: 2rem; margin-bottom: 0.75rem; display: block; }
+.msv__card h3 { font-size: 1rem; margin-bottom: 0.75rem; color: var(--navy); }
+.msv__card p { font-size: 0.9rem; color: var(--muted); line-height: 1.65; margin-bottom: 0; }
+
+/* ── Process steps ───────────────────────────────────────────── */
+.msv__process-steps { display: grid; grid-template-columns: repeat(7, 1fr); gap: 0.75rem; margin-bottom: 2rem; }
+@media (max-width: 860px) { .msv__process-steps { grid-template-columns: repeat(4, 1fr); gap: 1rem; } }
+@media (max-width: 480px) { .msv__process-steps { grid-template-columns: 1fr 1fr; } }
+.msv__process-step { background: var(--white); border: 1.5px solid var(--border); border-radius: 10px; padding: 1.25rem 0.9rem; text-align: center; }
+.msv__process-step-num { font-size: 1.3rem; font-weight: 800; color: var(--red); margin-bottom: 0.4rem; }
+.msv__process-step-title { font-size: 0.8rem; font-weight: 700; color: var(--navy); line-height: 1.4; }
+
+/* ── Two-col layout ──────────────────────────────────────────── */
+.msv__two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: start; }
+@media (max-width: 860px) { .msv__two-col { grid-template-columns: 1fr; } }
+.msv__two-col-card { background: var(--white); border: 1px solid var(--border); border-radius: 12px; padding: 2rem; }
+.msv__two-col-icon { font-size: 2.5rem; margin-bottom: 1rem; display: block; }
+
+/* ── Persona/why cards ───────────────────────────────────────── */
+.msv__persona-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-bottom: 3rem; }
+@media (max-width: 860px) { .msv__persona-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 420px) { .msv__persona-grid { grid-template-columns: 1fr; } }
+.msv__persona-card { background: var(--white); border: 1px solid var(--border); border-radius: 12px; padding: 2rem 1.5rem; text-align: center; transition: box-shadow 0.2s, transform 0.2s; }
+.msv__persona-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+.msv__persona-icon { font-size: 2.5rem; margin-bottom: 0.8rem; }
+.msv__persona-title { font-size: 1.1rem; font-weight: 700; color: var(--navy); margin-bottom: 0.5rem; }
+.msv__persona-desc { font-size: 0.9rem; color: var(--muted); line-height: 1.65; margin-bottom: 0; }
+
+/* ── Checklist ───────────────────────────────────────────────── */
+.msv__checklist { list-style: none; padding: 0; margin: 0 0 1.5rem; }
+.msv__checklist li { padding: 0.55rem 0 0.55rem 2rem; position: relative; font-size: 0.94rem; color: var(--black); border-bottom: 1px solid var(--border); }
+.msv__checklist li:last-child { border-bottom: none; }
+.msv__checklist li::before { content: ''; position: absolute; left: 0; top: 0.85rem; width: 14px; height: 14px; border: 2px solid var(--red); border-radius: 3px; background: rgba(190,0,17,0.06); }
+.msv__checklist li strong { color: var(--navy); }
+.msv__checklist li span { color: var(--muted); font-size: 0.85rem; display: block; margin-top: 0.15rem; }
+
+/* ── Mistake cards ───────────────────────────────────────────── */
+.msv__mistakes { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 2rem; }
+@media (max-width: 640px) { .msv__mistakes { grid-template-columns: 1fr; } }
+.msv__mistake-card { background: #fef2f2; border: 1.5px solid #fca5a5; border-radius: 10px; padding: 1.5rem; }
+.msv__mistake-card h3 { color: #991b1b; font-size: 1rem; margin-bottom: 0.8rem; }
+.msv__mistake-card p { font-size: 0.9rem; color: #7f1d1d; margin-bottom: 0.5rem; }
+.msv__mistake-card strong { color: #7f1d1d; }
+
+/* ── FAQ accordion ───────────────────────────────────────────── */
+.msv__faq-list { display: flex; flex-direction: column; gap: 0; border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+.msv__faq-list details { border-bottom: 1px solid var(--border); background: var(--white); }
+.msv__faq-list details:last-child { border-bottom: none; }
+.msv__faq-list summary { padding: 1.2rem 1.5rem; font-size: 0.97rem; font-weight: 700; color: var(--navy); cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+.msv__faq-list summary::-webkit-details-marker { display: none; }
+.msv__faq-list summary::after { content: '+'; font-size: 1.3rem; font-weight: 400; color: var(--red); flex-shrink: 0; transition: transform 0.2s; }
+.msv__faq-list details[open] summary::after { transform: rotate(45deg); }
+.msv__faq-list details[open] summary { color: var(--red); }
+.msv__faq-answer { padding: 0 1.5rem 1.3rem; font-size: 0.92rem; color: var(--muted); line-height: 1.75; }
+.msv__faq-answer p { color: var(--muted); font-size: 0.92rem; margin-bottom: 0.75rem; }
+.msv__faq-answer p:last-child { margin-bottom: 0; }
+
+/* ── CTA band ────────────────────────────────────────────────── */
+.msv__cta-band { background: linear-gradient(135deg, var(--navy) 0%, #0d2240 60%, #0a1d38 100%); padding: 5rem 0; text-align: center; }
+.msv__cta-band h2 { color: var(--white) !important; display: block; }
+.msv__cta-band h2::after { left: 50%; transform: translateX(-50%); background: linear-gradient(90deg, var(--yellow), #e8b820); }
+.msv__cta-band p { color: rgba(255,255,255,0.75) !important; max-width: 560px; margin: 1rem auto 2.2rem; font-size: 1rem; }
+.msv__cta-band .msv__btn-group { justify-content: center; }
+
+/* ── Related guides ──────────────────────────────────────────── */
+.msv__related { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; }
+@media (max-width: 860px) { .msv__related { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 420px) { .msv__related { grid-template-columns: 1fr; } }
+.msv__related-card { background: var(--white); border: 1px solid var(--border); border-radius: 10px; padding: 1.3rem 1.25rem; text-decoration: none !important; transition: box-shadow 0.2s, transform 0.2s; display: block; }
+.msv__related-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); text-decoration: none !important; }
+.msv__related-icon { font-size: 1.5rem; display: block; margin-bottom: 0.6rem; }
+.msv__related-title { font-size: 0.88rem; font-weight: 700; color: var(--navy); display: block; margin-bottom: 0.3rem; }
+.msv__related-desc { font-size: 0.8rem; color: var(--muted); line-height: 1.55; }
+
+/* ── Disclaimer ──────────────────────────────────────────────── */
+.msv__disclaimer { background: var(--cream); border-top: 1px solid var(--border); padding: 2rem 0; }
+.msv__disclaimer p { font-size: 0.78rem; color: var(--muted); margin: 0; line-height: 1.65; }
+</style>
+
+<div class="msv">
+
+<!-- ── HERO ──────────────────────────────────────────────────────── -->
+<section class="msv__hero">
+  <div class="msv__container">
+    <div class="msv__hero-inner">
+      <span class="msv__eyebrow">UK Citizens — Post-Brexit Guide 2026</span>
+      <h1>Retire to Spain <span class="msv__shimmer">from the UK</span></h1>
+      <p>Brexit changed everything for British retirees wanting to move to Spain — but it didn't close the door. The Non-Lucrative Visa is now your route. This complete guide covers the post-Brexit visa process, BLS application centres, ACRO criminal records (not DBS), your UK State Pension rights, HMRC obligations, health insurance, and every step from application to collecting your TIE card.</p>
+      <div class="msv__btn-group">
+        <a href="https://dashboard.platinumlegalspain.com/nlv" class="msv__btn msv__btn--primary">Check Your Eligibility Free</a>
+        <a href="https://dashboard.platinumlegalspain.com/nlv" class="msv__btn msv__btn--outline-white">Book a Consultation</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── TRUST BAR ──────────────────────────────────────────────────── -->
+<div class="msv__trust-bar">
+  <div class="msv__container">
+    <div class="msv__trust-bar-inner">
+      <span class="msv__trust-item">BLS Centres: London &amp; Manchester</span>
+      <span class="msv__trust-item">ACRO Certificate — Not DBS</span>
+      <span class="msv__trust-item">UK Pension Unfrozen in Spain</span>
+      <span class="msv__trust-item">UK–Spain Double Tax Treaty</span>
+      <span class="msv__trust-item">1,000+ UK Clients Assisted</span>
+    </div>
+  </div>
+</div>
+
+<!-- ── BREADCRUMB ─────────────────────────────────────────────────── -->
+<nav class="msv__breadcrumb" aria-label="Breadcrumb">
+  <div class="msv__container">
+    <div class="msv__breadcrumb-inner">
+      <a href="/">Home</a>
+      <span>/</span>
+      <span>Retire to Spain from the UK</span>
+    </div>
+  </div>
+</nav>
+
+<!-- ── QUICK FACTS ────────────────────────────────────────────────── -->
+<section class="msv__section" style="padding-bottom: 0;">
+  <div class="msv__container">
+    <div class="msv__facts">
+      <div class="msv__fact">
+        <span class="msv__fact-icon">🇬🇧</span>
+        <span class="msv__fact-label">UK Visa Centres</span>
+        <span class="msv__fact-value">London &amp; Manchester (BLS)</span>
+      </div>
+      <div class="msv__fact">
+        <span class="msv__fact-icon">💷</span>
+        <span class="msv__fact-label">Income Requirement</span>
+        <span class="msv__fact-value">~£2,000/month (€2,400)</span>
+      </div>
+      <div class="msv__fact">
+        <span class="msv__fact-icon">⏱️</span>
+        <span class="msv__fact-label">Processing Time</span>
+        <span class="msv__fact-value">4–10 weeks (BLS)</span>
+      </div>
+      <div class="msv__fact">
+        <span class="msv__fact-icon">🛂</span>
+        <span class="msv__fact-label">Criminal Record</span>
+        <span class="msv__fact-value">ACRO (not DBS)</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── POST-BREXIT REALITY ────────────────────────────────────────── -->
+<section class="msv__section">
+  <div class="msv__container--narrow">
+    <div class="msv__section-hd">
+      <h2>The Post-Brexit Reality for UK Retirees</h2>
+      <p>Everything you need to understand about what changed on 1 January 2021 — and what it means for your retirement plans in Spain.</p>
+    </div>
+
+    <p>For decades, British nationals enjoyed EU freedom of movement. Moving to Spain meant little more than registering with the local council as an EU citizen. You didn't need a visa. You didn't need an apostilled criminal record. You didn't need private health insurance as a condition of residency. Those days ended on 1 January 2021.</p>
+
+    <p>UK citizens are now treated as third-country nationals — the same category as Americans, Australians, Canadians, and South Africans. That means Spain now requires a formal visa for any British national who wants to live there for more than 90 days in any 180-day period. Without a visa, you are a tourist, and the Schengen 90/180 rule applies strictly.</p>
+
+    <p>The good news: the <a href="/non-lucrative-visa-spain/">Non-Lucrative Visa (NLV)</a> is a robust, well-established pathway specifically suited to retirees and those with passive income. Thousands of UK nationals have successfully obtained it since 2021. The process is more involved than pre-Brexit, but it is entirely manageable — especially with professional guidance.</p>
+
+    <div class="msv__alert msv__alert--info">
+      <span class="msv__alert-icon">💡</span>
+      <p><strong>Already in Spain before 31 Dec 2020?</strong> If you were legally resident in Spain before 1 January 2021, you may have protected status under the UK–EU Withdrawal Agreement (WA). This gives you permanent residency rights broadly equivalent to EU citizenship, and a different document (TIE with WA marking) applies. This guide covers the standard NLV route for those moving now. If you believe you have WA-protected status, <a href="https://dashboard.platinumlegalspain.com/nlv">speak to our team</a> about the correct process.</p>
+    </div>
+
+    <h3 style="margin-top: 2rem; margin-bottom: 0.8rem;">Key post-Brexit changes for UK nationals moving to Spain:</h3>
+    <ul style="margin-bottom: 2rem;">
+      <li>A Spanish visa is now mandatory for stays over 90 days — the Non-Lucrative Visa is the main option for retirees</li>
+      <li>Applications go through BLS International visa centres in London or Manchester — not the Spanish consulate directly</li>
+      <li>Criminal record check must be ACRO Standard Disclosure — a DBS check is <strong>not accepted</strong></li>
+      <li>Private Spanish health insurance is a mandatory condition of the NLV — NHS coverage lapses on departure</li>
+      <li>All UK documents must be apostilled by the FCDO and translated into Spanish by a sworn translator</li>
+      <li>Income must be demonstrated formally: typically €2,400/month (approximately £2,000) for the main applicant</li>
+      <li>HMRC must be notified of your change of tax residency via form P85</li>
+      <li>UK driving licences must be exchanged with a Spanish licence within 6 months of TIE registration</li>
+    </ul>
+
+  </div>
+</section>
+
+<!-- ── WHY BRITISH RETIREES CHOOSE SPAIN ─────────────────────────── -->
+<section class="msv__section--cream">
+  <div class="msv__container">
+    <div class="msv__section-hd">
+      <h2>Why British Retirees Choose Spain</h2>
+      <p>Despite Brexit adding paperwork, Spain remains the most popular retirement destination for UK nationals — and for very good reasons.</p>
+    </div>
+    <div class="msv__persona-grid">
+      <div class="msv__persona-card">
+        <div class="msv__persona-icon">☀️</div>
+        <div class="msv__persona-title">Climate &amp; Quality of Life</div>
+        <p class="msv__persona-desc">Spain averages over 300 sunny days per year in many regions. The Mediterranean lifestyle — outdoor dining, vibrant markets, relaxed pace — is a world away from the UK's grey winters. Health outcomes for retirees in southern climates are consistently better.</p>
+      </div>
+      <div class="msv__persona-card">
+        <div class="msv__persona-icon">💰</div>
+        <div class="msv__persona-title">Lower Cost of Living</div>
+        <p class="msv__persona-desc">Spain is significantly cheaper than the UK. Rent, food, utilities, and eating out all cost considerably less. A retired couple can live comfortably in many Spanish cities on a budget that would be tight in the UK — a major benefit for those on fixed pension income.</p>
+      </div>
+      <div class="msv__persona-card">
+        <div class="msv__persona-icon">🏥</div>
+        <div class="msv__persona-title">World-Class Healthcare</div>
+        <p class="msv__persona-desc">Spain's healthcare system is ranked among the world's best — consistently outperforming the UK's NHS in international comparisons. Private insurance (required for the NLV) is affordable, and the public system is available to registered residents over time.</p>
+      </div>
+      <div class="msv__persona-card">
+        <div class="msv__persona-icon">✈️</div>
+        <div class="msv__persona-title">Easy Flights Back to the UK</div>
+        <p class="msv__persona-desc">Spain is 2–3 hours from most UK airports, with dozens of daily flights. Visiting family is straightforward, and budget airlines keep fares low. You're never truly far from home — which matters enormously for British retirees with family ties.</p>
+      </div>
+      <div class="msv__persona-card">
+        <div class="msv__persona-icon">👥</div>
+        <div class="msv__persona-title">Established British Expat Community</div>
+        <p class="msv__persona-desc">Around 300,000 UK nationals live in Spain — the largest expat group in the country. From Costa del Sol to Barcelona, you'll find English-speaking communities, British-run businesses, and support networks that make the transition far easier than moving to more remote destinations.</p>
+      </div>
+      <div class="msv__persona-card">
+        <div class="msv__persona-icon">🏡</div>
+        <div class="msv__persona-title">Property &amp; Lifestyle Value</div>
+        <p class="msv__persona-desc">Your UK property equity can purchase significantly more in Spain. Whether you want a coastal apartment, a rural finca, or a city flat with a terrace, Spanish property offers exceptional value compared to UK prices — leaving capital available for a comfortable retirement income.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── THE NLV ROUTE ───────────────────────────────────────────────── -->
+<section class="msv__section--dark">
+  <div class="msv__container">
+    <div class="msv__section-hd">
+      <h2>The Non-Lucrative Visa — Your Primary Route</h2>
+      <p>The NLV is Spain's residency permit for people with sufficient passive income who do not need to work. It is by far the most commonly used visa for UK retirees moving to Spain post-Brexit.</p>
+    </div>
+
+    <div class="msv__two-col">
+      <div class="msv__two-col-card">
+        <span class="msv__two-col-icon">✓</span>
+        <h3>Who the NLV is For</h3>
+        <ul>
+          <li>UK retirees receiving State Pension, occupational pension, or annuity income</li>
+          <li>Early retirees or those with sufficient investment/dividend income</li>
+          <li>Individuals with rental income from UK property</li>
+          <li>Those with significant savings or capital (lump-sum route)</li>
+          <li>Spouses or dependants of qualifying NLV applicants</li>
+          <li>Those who do not intend to work in Spain (employed or self-employed)</li>
+        </ul>
+      </div>
+      <div class="msv__two-col-card">
+        <span class="msv__two-col-icon">📋</span>
+        <h3>Core NLV Requirements</h3>
+        <ul>
+          <li>Passive income of approximately €2,400/month (≈£2,000) for main applicant</li>
+          <li>Additional €600/month (≈£500) per dependent family member</li>
+          <li>Private Spanish health insurance (comprehensive, not travel cover)</li>
+          <li>ACRO Standard Disclosure criminal record certificate — apostilled and translated</li>
+          <li>Valid UK passport with at least 12 months remaining</li>
+          <li>Proof of accommodation in Spain (lease or purchase deed)</li>
+          <li>Application submitted in person at BLS International (London or Manchester)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="msv__alert msv__alert--warn" style="margin-top: 2rem;">
+      <span class="msv__alert-icon">⚠️</span>
+      <p><strong>NLV means non-working:</strong> You cannot be employed or self-employed in Spain on the Non-Lucrative Visa. Passive income — UK pensions, dividends, rental income, savings interest, annuities — is permitted. If you plan to work remotely for a UK employer or run an online business, you need a different visa. See the <a href="/digital-nomad-visa-spain/">Digital Nomad Visa</a> for details.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── INCOME REQUIREMENTS IN GBP ────────────────────────────────── -->
+<section class="msv__section">
+  <div class="msv__container">
+    <div class="msv__section-hd">
+      <h2>Income Requirements in GBP (2026 Rates)</h2>
+      <p>The Spanish NLV income threshold is set in euros. Here is what that means in pounds sterling at approximate 2026 exchange rates (1 EUR ≈ £0.84). Rates fluctuate — always verify current rates.</p>
+    </div>
+
+    <div class="msv__income-boxes">
+      <div class="msv__income-box">
+        <span class="msv__income-box-label">Monthly (1 Applicant)</span>
+        <span class="msv__income-box-value">€2,400</span>
+        <span class="msv__income-box-detail">≈ £2,000/month</span>
+      </div>
+      <div class="msv__income-box">
+        <span class="msv__income-box-label">Annual (1 Applicant)</span>
+        <span class="msv__income-box-value">€28,800</span>
+        <span class="msv__income-box-detail">≈ £24,200/year</span>
+      </div>
+      <div class="msv__income-box">
+        <span class="msv__income-box-label">Per Extra Dependent</span>
+        <span class="msv__income-box-value">+€600</span>
+        <span class="msv__income-box-detail">≈ +£505/month each</span>
+      </div>
+      <div class="msv__income-box">
+        <span class="msv__income-box-label">UK State Pension (2026)</span>
+        <span class="msv__income-box-value">£221/wk</span>
+        <span class="msv__income-box-detail">≈ £11,500/year — shortfall</span>
+      </div>
+    </div>
+
+    <div class="msv__alert msv__alert--red">
+      <span class="msv__alert-icon">⚠️</span>
+      <p><strong>Important: The UK State Pension alone is not enough.</strong> The full new State Pension of approximately £221/week (around £11,500/year in 2026) falls well short of the NLV threshold of approximately £24,200/year. Most UK retirees need to supplement their State Pension with a workplace or private pension, annuity income, dividends, rental income from UK property, or bank savings. A couple applying together need to demonstrate combined income meeting both their thresholds.</p>
+    </div>
+
+    <h3 style="margin-top: 2rem; margin-bottom: 0.8rem;">Income sources the consulate typically accepts:</h3>
+    <ul>
+      <li>UK State Pension (DWP pension — fully portable and unfrozen in Spain)</li>
+      <li>Workplace / occupational pension (final salary, defined contribution, NHS pension, civil service pension, teachers' pension, etc.)</li>
+      <li>Private pension annuity payments</li>
+      <li>Dividends from stocks, shares, or investment funds</li>
+      <li>Rental income from UK property (must be clearly documented)</li>
+      <li>Interest from savings (bank statements showing consistent balance)</li>
+      <li>Pension drawdown from a SIPP or personal pension</li>
+      <li>Combination of the above — all sources are cumulative</li>
+    </ul>
+
+    <div class="msv__alert msv__alert--info" style="margin-top: 1rem;">
+      <span class="msv__alert-icon">ℹ️</span>
+      <p><strong>QROPS — Qualifying Recognised Overseas Pension Schemes:</strong> Some UK pension holders consider transferring their pension pot to a QROPS (a Spanish-recognised overseas pension scheme) for potential tax efficiency. This is a complex, regulated area requiring specialist financial advice. The tax implications in both the UK and Spain are significant. Do not proceed without advice from a regulated financial adviser experienced in cross-border pension transfers.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── BLS VISA CENTRES ────────────────────────────────────────────── -->
+<section class="msv__section--cream">
+  <div class="msv__container">
+    <div class="msv__section-hd">
+      <h2>Applying Through BLS International Visa Centres</h2>
+      <p>BLS International operates the only two authorised UK visa application centres that submit NLV applications to the Spanish consulates on your behalf. You do not attend the Spanish consulate directly.</p>
+    </div>
+
+    <div class="msv__card-grid">
+      <div class="msv__card">
+        <span class="msv__card-icon">🇬🇧</span>
+        <h3>BLS London Centre</h3>
+        <p><strong>Covers:</strong> South England, Wales, Northern Ireland<br><strong>Processing:</strong> 6–10 weeks typical<br><strong>Tip:</strong> Higher demand — book appointments well in advance. Popular slots fill 3–4 weeks ahead.</p>
+      </div>
+      <div class="msv__card">
+        <span class="msv__card-icon">🏴󠁧󠁢󠁳󠁣󠁴󠁿</span>
+        <h3>BLS Manchester Centre</h3>
+        <p><strong>Covers:</strong> North England, Scotland, Midlands<br><strong>Processing:</strong> 4–8 weeks typical<br><strong>Tip:</strong> Generally faster turnaround than London. Some applicants in the Midlands find Manchester quicker despite the distance.</p>
+      </div>
+      <div class="msv__card">
+        <span class="msv__card-icon">📋</span>
+        <h3>What Happens at BLS</h3>
+        <p>BLS checks your documents and biometrics, then couriers your application to the Spanish consulate for a decision. The consulate fee (€80–€150) is paid at BLS. BLS itself charges a small service fee. You do not receive a decision at BLS — you wait for the consulate to assess your file.</p>
+      </div>
+    </div>
+
+    <div class="msv__alert msv__alert--warn">
+      <span class="msv__alert-icon">⚠️</span>
+      <p><strong>Appointment booking is essential:</strong> BLS operates by appointment only. Walk-ins are not accepted. Book your appointment online at the BLS website as soon as your document preparation is underway — waiting times fluctuate and can extend to several weeks, particularly in London. Missing or rescheduling an appointment can delay your entire timeline significantly.</p>
+    </div>
+
+    <div style="overflow-x: auto; border: 1px solid var(--border); border-radius: 12px; margin-top: 2rem;">
+      <table class="msv__comparison">
+        <thead>
+          <tr>
+            <th>Aspect</th>
+            <th style="text-align: center;">Pre-Brexit (Before 1 Jan 2021)</th>
+            <th style="text-align: center;">Post-Brexit (Now)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="aspect">Visa requirement</td>
+            <td class="pre">None — EU freedom of movement</td>
+            <td class="post">Non-Lucrative Visa mandatory</td>
+          </tr>
+          <tr>
+            <td class="aspect">Application venue</td>
+            <td class="pre">Register locally in Spain (simple admin)</td>
+            <td class="post">BLS International (London or Manchester)</td>
+          </tr>
+          <tr>
+            <td class="aspect">Criminal record</td>
+            <td class="pre">Not required for EU registration</td>
+            <td class="post">ACRO Standard Disclosure required (not DBS)</td>
+          </tr>
+          <tr>
+            <td class="aspect">Health insurance</td>
+            <td class="pre">EHIC and NHS rights largely covered</td>
+            <td class="post">Mandatory private Spanish insurance for visa</td>
+          </tr>
+          <tr>
+            <td class="aspect">Income proof</td>
+            <td class="pre">Not rigorously required</td>
+            <td class="post">Must prove ~€2,400/month formally</td>
+          </tr>
+          <tr>
+            <td class="aspect">Document apostille</td>
+            <td class="pre">Not required</td>
+            <td class="post">FCDO apostille + sworn Spanish translation</td>
+          </tr>
+          <tr>
+            <td class="aspect">Processing time</td>
+            <td class="pre">Days to a few weeks</td>
+            <td class="post">4–10 weeks at BLS + consulate review</td>
+          </tr>
+          <tr>
+            <td class="aspect">Right to work</td>
+            <td class="pre">Full EU work rights</td>
+            <td class="post">No work on NLV (passive income only)</td>
+          </tr>
+          <tr>
+            <td class="aspect">Tax treatment</td>
+            <td class="pre">EU citizen tax status</td>
+            <td class="post">Spanish tax resident; HMRC P85 required</td>
+          </tr>
+          <tr>
+            <td class="aspect">Residency card</td>
+            <td class="pre">Green EU registration certificate (NIE)</td>
+            <td class="post">TIE card (Tarjeta de Identidad de Extranjero)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ── ACRO, APOSTILLE, TRANSLATION ──────────────────────────────── -->
+<section class="msv__section">
+  <div class="msv__container">
+    <div class="msv__section-hd">
+      <h2>ACRO, Apostille &amp; Sworn Translation — Getting UK Documents Right</h2>
+      <p>UK documents for the NLV must go through two extra steps beyond simply obtaining them: FCDO apostille and sworn Spanish translation. This catches many first-time applicants off-guard.</p>
+    </div>
+
+    <div class="msv__two-col">
+      <div class="msv__two-col-card">
+        <span class="msv__two-col-icon">🚔</span>
+        <h3>The ACRO Criminal Record Certificate</h3>
+        <p>The Spanish consulate requires an ACRO (ACRO Criminal Records Office) Standard Disclosure — not a DBS check. This is the single most common mistake UK applicants make. A basic DBS will be rejected.</p>
+        <ul>
+          <li>Apply online at <strong>acro.police.uk</strong></li>
+          <li>Standard service: £45 — allow 4–6 weeks</li>
+          <li>Fast-track service: £98 — approximately 10–15 working days</li>
+          <li>Must be issued <strong>within 3 months</strong> of your visa application date</li>
+          <li>After receipt: send to FCDO for apostille (£75 per document)</li>
+          <li>After apostille: send to a sworn translator for certified Spanish translation</li>
+        </ul>
+        <p style="margin-top: 1rem; margin-bottom: 0;"><strong>Total ACRO timeline:</strong> Allow 8–12 weeks from application to translated, apostilled certificate in your hands.</p>
+      </div>
+      <div class="msv__two-col-card">
+        <span class="msv__two-col-icon">🏛️</span>
+        <h3>FCDO Apostille — Legalising UK Documents</h3>
+        <p>An apostille is an international certification that authenticates a UK public document for use abroad. The FCDO (Foreign, Commonwealth &amp; Development Office) legalisation office in Milton Keynes handles this.</p>
+        <ul>
+          <li>Cost: £75 per document (postal service)</li>
+          <li>Standard service: 4–8 weeks by post</li>
+          <li>Same-day service available in Milton Keynes (premium fee)</li>
+          <li>Submit certified copies of originals — originals not always required</li>
+          <li>After apostille, documents go to a sworn translator</li>
+        </ul>
+        <p style="margin-top: 1rem; margin-bottom: 0;"><strong>Documents typically requiring apostille:</strong> ACRO criminal record certificate, UK birth certificate (if requested), marriage certificate (if applicable), pension award letters (sometimes — check with consulate).</p>
+      </div>
+    </div>
+
+    <div class="msv__two-col" style="margin-top: 2rem;">
+      <div class="msv__two-col-card">
+        <span class="msv__two-col-icon">📝</span>
+        <h3>Sworn Spanish Translation</h3>
+        <p>All apostilled documents must be translated into Spanish by a translator officially recognised by the Spanish Ministry of Foreign Affairs. Standard private translations are not accepted.</p>
+        <ul>
+          <li>Cost: typically £50–£150 per document</li>
+          <li>The translator's stamp and signature authenticate the translation</li>
+          <li>Find approved translators on the Spanish Embassy website</li>
+          <li>Bundle documents where possible — some translators offer volume discounts</li>
+          <li>Keep originals, apostilled copies, and translations together in a folder</li>
+        </ul>
+      </div>
+      <div class="msv__two-col-card">
+        <span class="msv__two-col-icon">📅</span>
+        <h3>Document Validity Windows</h3>
+        <p>Spanish consulates apply strict validity requirements — submitting an expired document is a common reason for rejection:</p>
+        <ul>
+          <li><strong>ACRO certificate:</strong> must be dated within 3 months of your visa appointment</li>
+          <li><strong>Bank statements:</strong> typically the most recent 3–6 months</li>
+          <li><strong>Pension letters:</strong> dated within 3 months (DWP annual letters are usually sufficient)</li>
+          <li><strong>Health insurance certificate:</strong> valid from the intended entry date, covering at least 1 year</li>
+          <li><strong>Passport:</strong> must have at least 12 months validity remaining at application</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="msv__alert msv__alert--red">
+      <span class="msv__alert-icon">⚠️</span>
+      <p><strong>Common mistake to avoid:</strong> Starting your ACRO and apostille process too early or too late. If you apply for ACRO too early, the 3-month validity window may expire before your BLS appointment. If you apply too late, your appointment arrives before the certificate. Work backwards from your BLS appointment date to time the ACRO application correctly. Our team can help you map the exact timeline.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── UK STATE PENSION &amp; PRIVATE PENSIONS ────────────────────── -->
+<section class="msv__section--dark">
+  <div class="msv__container">
+    <div class="msv__section-hd">
+      <h2>UK State Pension &amp; Private Pensions in Spain</h2>
+      <p>Good news for British retirees: your pensions travel with you. Here is what you need to know about pension portability, freezing rules, and the double taxation treaty.</p>
+    </div>
+
+    <div class="msv__two-col">
+      <div class="msv__two-col-card">
+        <span class="msv__two-col-icon">🏦</span>
+        <h3>UK State Pension — Unfrozen in Spain</h3>
+        <p>The DWP pays the UK State Pension internationally — there is no restriction on receiving it in Spain. Crucially, Spain is not a "frozen" country. This means your State Pension receives the annual triple-lock increases (currently the higher of inflation, average earnings growth, or 2.5%) just as it would if you remained in the UK.</p>
+        <ul>
+          <li>Full new State Pension 2026: approximately £221/week (£11,500/year)</li>
+          <li>Paid every 4 weeks directly to your nominated bank account</li>
+          <li>Can be paid to a Spanish bank account — check DWP for international payment options</li>
+          <li>Notify DWP when you move abroad — call the International Pension Centre</li>
+          <li>Annual increases (triple lock) are protected — your pension grows each year</li>
+        </ul>
+        <p style="margin-top: 1rem; margin-bottom: 0;"><strong>Note:</strong> The State Pension alone (approximately £11,500/year) falls well short of the NLV threshold (approximately £24,200/year). Most retirees supplement it with occupational or private pension income.</p>
+      </div>
+      <div class="msv__two-col-card">
+        <span class="msv__two-col-icon">💼</span>
+        <h3>Workplace &amp; Private Pensions</h3>
+        <p>Occupational and private pensions (NHS, teachers', civil service, workplace defined contribution, SIPPs) are generally fully portable to Spain. They can be paid into your Spanish bank account and are treated as passive income for NLV purposes.</p>
+        <ul>
+          <li>Contact your pension provider to notify them of your change of address</li>
+          <li>Request a pension award letter confirming the annual/monthly amount — required for NLV application</li>
+          <li>Pension income is taxable in Spain once you become tax resident (see taxation section below)</li>
+          <li>The UK–Spain Double Taxation Treaty (DTT) prevents being taxed twice on the same pension income</li>
+          <li>Under the DTT, pension income is generally taxable in Spain (your new country of residence) — with tax credit arrangements to avoid double taxation</li>
+        </ul>
+        <p style="margin-top: 1rem; margin-bottom: 0;"><strong>QROPS:</strong> Some retirees consider transferring pensions to a QROPS for Spanish tax efficiency. This is complex — seek regulated financial advice before considering any pension transfer.</p>
+      </div>
+    </div>
+
+    <div class="msv__alert msv__alert--info" style="margin-top: 2rem;">
+      <span class="msv__alert-icon">ℹ️</span>
+      <p><strong>UK–Spain Double Taxation Treaty (DTT):</strong> The UK and Spain have a double taxation treaty that prevents the same income being taxed in both countries simultaneously. In general terms: UK State Pension and occupational pension income is taxable in Spain (as your country of residence) once you are a Spanish tax resident. UK property rental income may remain partially taxable in the UK too, with a credit applied. ISA returns lose their UK tax-free wrapper in Spain's eyes — the income and gains inside ISAs are taxable in Spain. Always take personalised advice from a tax adviser familiar with both HMRC and the Agencia Tributaria.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── NHS &amp; HEALTH INSURANCE ─────────────────────────────────── -->
+<section class="msv__section">
+  <div class="msv__container">
+    <div class="msv__section-hd">
+      <h2>Healthcare: NHS Coverage Stops — What You Need Instead</h2>
+      <p>One of the most important things to understand before you move: your NHS entitlement ends the day you become a Spanish resident. Here is how to ensure you are fully covered.</p>
+    </div>
+
+    <div class="msv__alert msv__alert--red">
+      <span class="msv__alert-icon">🚨</span>
+      <p><strong>Your NHS coverage stops on departure.</strong> The National Health Service is a UK-resident entitlement. Once you register as a Spanish resident, you are no longer entitled to free NHS treatment (except on planned visits back to the UK for a limited period). The EHIC/GHIC card provides emergency-only coverage within the EU and is not a substitute for comprehensive health insurance. You must have private Spanish health insurance to obtain the Non-Lucrative Visa.</p>
+    </div>
+
+    <div class="msv__two-col">
+      <div class="msv__two-col-card">
+        <span class="msv__two-col-icon">🏥</span>
+        <h3>Private Spanish Health Insurance (Required for NLV)</h3>
+        <p>The NLV requires a comprehensive private health insurance policy from a company authorised to operate in Spain. Key requirements:</p>
+        <ul>
+          <li>Must have <strong>no co-payments and no exclusions</strong> (fully comprehensive) — many cheap travel policies are rejected</li>
+          <li>Must cover all of Spain (not region-specific)</li>
+          <li>Must be valid from your intended entry date and cover at least 1 year</li>
+          <li>Must include repatriation coverage</li>
+          <li>Must be from an insurer registered in Spain</li>
+        </ul>
+        <p style="margin-top: 1rem; margin-bottom: 0;"><strong>Typical costs (2026):</strong> £600–£1,200/year (ages 50–60), £1,000–£2,000/year (ages 60–70), £1,500–£3,000/year (ages 70+). Premiums vary significantly by age, health, and provider.</p>
+      </div>
+      <div class="msv__two-col-card">
+        <span class="msv__two-col-icon">🔍</span>
+        <h3>Main Spanish Health Insurance Providers</h3>
+        <p>The following insurers are widely accepted by Spanish consulates for NLV applications:</p>
+        <ul>
+          <li><strong>a leading private insurer</strong> — Spain's largest private insurer; well-regarded, wide hospital network</li>
+          <li><strong>a leading private insurer a leading private insurer Spain</strong> — strong international coverage, English-speaking support</li>
+          <li><strong>a leading private insurer International</strong> — popular with expats, flexible plans</li>
+          <li><strong>a leading private insurer</strong> — comprehensive international cover, repatriation included</li>
+          <li><strong>a leading private insurer</strong> — good value, Spain-focused</li>
+          <li><strong>a leading private insurer Seguros</strong> — comprehensive plans, good chronic condition coverage</li>
+        </ul>
+        <p style="margin-top: 1rem; margin-bottom: 0;"><strong>Tip:</strong> Compare quotes carefully. Ensure the policy certificate explicitly states "no co-payments, no exclusions, full coverage" — the exact wording matters to consulates.</p>
+      </div>
+    </div>
+
+    <div class="msv__two-col" style="margin-top: 2rem;">
+      <div class="msv__two-col-card">
+        <span class="msv__two-col-icon">📋</span>
+        <h3>The S1 Form — State Pension Recipients</h3>
+        <p>If you are receiving a UK State Pension or certain UK benefits, you may be entitled to an S1 form from HMRC. The S1 (formerly E121) proves you have healthcare entitlements funded by UK National Insurance contributions.</p>
+        <ul>
+          <li>Register your S1 with the Spanish social security system (INSS)</li>
+          <li>Gives you access to Spanish public healthcare (Sistema Nacional de Salud) equivalent to Spanish nationals</li>
+          <li>Significant benefit — Spain's public healthcare is excellent and largely free at point of use</li>
+          <li>Does <strong>not</strong> replace the private insurance requirement for the NLV visa application itself</li>
+          <li>Apply for S1 from HMRC or the NHS before you leave — call the Overseas Healthcare Services team</li>
+        </ul>
+      </div>
+      <div class="msv__two-col-card">
+        <span class="msv__two-col-icon">🔄</span>
+        <h3>Transitioning to Spanish Public Healthcare</h3>
+        <p>Over time, many UK retirees in Spain are able to access the public healthcare system (SNS — Sistema Nacional de Salud). Routes include:</p>
+        <ul>
+          <li>S1 form (if receiving State Pension or qualifying UK benefits)</li>
+          <li>Convenio Especial (special agreement) — pay a monthly contribution (~€60–€160/month) for access to public system</li>
+          <li>After meeting residency and contribution thresholds, some long-term residents qualify for public access automatically</li>
+        </ul>
+        <p style="margin-top: 1rem; margin-bottom: 0;">Private insurance remains mandatory for the NLV renewal process each year, so most retirees maintain private cover throughout.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── HMRC &amp; TAX OBLIGATIONS ──────────────────────────────────── -->
+<section class="msv__section--cream">
+  <div class="msv__container">
+    <div class="msv__section-hd">
+      <h2>HMRC Obligations &amp; UK Tax When You Move to Spain</h2>
+      <p>Becoming a Spanish resident changes your UK tax status. You need to take specific steps with HMRC — and understand how the UK–Spain Double Taxation Treaty works in your favour.</p>
+    </div>
+
+    <div class="msv__two-col">
+      <div class="msv__two-col-card">
+        <span class="msv__two-col-icon">📮</span>
+        <h3>Completing Form P85 — Leaving the UK</h3>
+        <p>When you leave the UK and become a Spanish tax resident, you must notify HMRC by completing form P85 ("Leaving the UK — getting your tax right"). This establishes your non-UK tax resident status for the tax year in which you leave.</p>
+        <ul>
+          <li>Submit P85 online via your HMRC personal tax account or by post</li>
+          <li>HMRC will usually adjust any PAYE codes and issue a tax calculation for the year of departure</li>
+          <li>You remain liable for UK tax on any UK-sourced income (pension from a UK employer, rental from UK property) — but at source or under treaty rules</li>
+          <li>UK bank interest and dividends from UK-listed shares may still have UK tax implications — take advice</li>
+          <li>Once confirmed non-resident, HMRC will no longer automatically tax your worldwide income</li>
+        </ul>
+      </div>
+      <div class="msv__two-col-card">
+        <span class="msv__two-col-icon">⚖️</span>
+        <h3>Spanish Tax Residency &amp; Worldwide Income</h3>
+        <p>Once you spend more than 183 days per calendar year in Spain, you are automatically Spanish tax resident. Spain taxes residents on their worldwide income. Key points:</p>
+        <ul>
+          <li>Register at your local town hall (empadronamiento) and obtain a NIE number</li>
+          <li>File an annual Spanish tax return (Declaración de la Renta) — even if you owe nothing</li>
+          <li>Spanish income tax rates (IRPF): 19% on first €12,450; rising to 45% on income above €60,000</li>
+          <li>UK pension income is generally taxed in Spain under the DTT — not double-taxed</li>
+          <li>Property rental income from UK property may be taxed in both the UK and Spain (with credits)</li>
+          <li>ISA income and gains are taxable in Spain — ISAs have no special status under Spanish law</li>
+          <li>Wealth tax (Impuesto sobre el Patrimonio) may apply to assets above €700,000 (varies by region)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="msv__alert msv__alert--warn" style="margin-top: 2rem;">
+      <span class="msv__alert-icon">⚠️</span>
+      <p><strong>Modelo 720 — Overseas Asset Declaration:</strong> As a Spanish tax resident, you must declare all overseas assets (UK bank accounts, pensions, property, investment accounts) exceeding €50,000 per category using the Modelo 720 form. This is filed once in the first year of residency and updated if values change significantly. Failure to file can result in severe penalties. Your Spanish tax adviser will handle this as part of your first annual tax return.</p>
+    </div>
+
+    <div class="msv__two-col" style="margin-top: 2rem;">
+      <div class="msv__two-col-card">
+        <span class="msv__two-col-icon">🤝</span>
+        <h3>UK–Spain Double Taxation Treaty — How It Protects You</h3>
+        <p>The UK and Spain have had a double taxation agreement in place for decades. It prevents the same income being taxed in full by both countries:</p>
+        <ul>
+          <li>UK State Pension: taxable in Spain (country of residence); UK does not withhold tax</li>
+          <li>UK occupational pension (private sector): taxable in Spain; tax credit available for any UK tax paid</li>
+          <li>UK Government pension (civil service, NHS, military, teachers): taxable in the UK — Spain exempts it</li>
+          <li>UK property rental income: taxable in the UK and Spain, but credit prevents double taxation in full</li>
+          <li>UK dividends: taxable primarily in Spain; limited UK withholding at source may apply</li>
+        </ul>
+        <p style="margin-bottom: 0; margin-top: 0.8rem;"><strong>Key distinction:</strong> Government pensions (civil service, NHS, military) are an important exception — they are taxed in the UK regardless of where you live. If a significant portion of your income comes from a government pension, seek specialist advice on your overall tax position in Spain.</p>
+      </div>
+      <div class="msv__two-col-card">
+        <span class="msv__two-col-icon">💡</span>
+        <h3>ISAs in Spain — Important Warning</h3>
+        <p>ISAs (Individual Savings Accounts) are a UK tax-free wrapper. Spain does not recognise the tax-free status of ISAs. When you become Spanish tax resident:</p>
+        <ul>
+          <li>Interest earned inside a cash ISA is taxable in Spain as investment income (19%–28% savings tax rates)</li>
+          <li>Capital gains from stocks and shares ISAs are taxable in Spain</li>
+          <li>There is no Spanish equivalent of ISA protection</li>
+          <li>Many retirees keep their ISAs open (they remain UK-tax-free for UK purposes) but must declare the income in Spain</li>
+          <li>Some retirees consider whether to encash ISAs before becoming Spanish resident — take personalised financial advice before doing so</li>
+        </ul>
+        <p style="margin-bottom: 0; margin-top: 0.8rem;"><strong>Bottom line:</strong> Plan your ISA strategy before moving, not after.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── STEP-BY-STEP PROCESS ───────────────────────────────────────── -->
+<section class="msv__section--dark">
+  <div class="msv__container">
+    <div class="msv__section-hd">
+      <h2>Step-by-Step: UK NLV Application Process</h2>
+      <p>From initial preparation to collecting your TIE residency card in Spain — the complete roadmap for British retirees.</p>
+    </div>
+
+    <div class="msv__process-steps">
+      <div class="msv__process-step">
+        <div class="msv__process-step-num">1</div>
+        <div class="msv__process-step-title">Confirm Income &amp; Eligibility</div>
+      </div>
+      <div class="msv__process-step">
+        <div class="msv__process-step-num">2</div>
+        <div class="msv__process-step-title">Get Health Insurance</div>
+      </div>
+      <div class="msv__process-step">
+        <div class="msv__process-step-num">3</div>
+        <div class="msv__process-step-title">Obtain ACRO Certificate</div>
+      </div>
+      <div class="msv__process-step">
+        <div class="msv__process-step-num">4</div>
+        <div class="msv__process-step-title">Apostille &amp; Translate</div>
+      </div>
+      <div class="msv__process-step">
+        <div class="msv__process-step-num">5</div>
+        <div class="msv__process-step-title">Submit at BLS</div>
+      </div>
+      <div class="msv__process-step">
+        <div class="msv__process-step-num">6</div>
+        <div class="msv__process-step-title">Enter Spain Within 1 Month</div>
+      </div>
+      <div class="msv__process-step">
+        <div class="msv__process-step-num">7</div>
+        <div class="msv__process-step-title">Get TIE Card</div>
+      </div>
+    </div>
+
+    <div class="msv__two-col" style="margin-top: 3rem;">
+      <div class="msv__two-col-card">
+        <span class="msv__two-col-icon">🔍</span>
+        <h3>Step 1: Confirm Income &amp; Eligibility (Allow 2–3 weeks)</h3>
+        <p>Before spending money on documents, confirm you meet the financial threshold. Gather pension award letters, bank statements, investment statements, and property rental income records. Total your monthly passive income. If it exceeds approximately £2,000/month (€2,400), you likely qualify for the NLV. Consider a free eligibility check or paid consultation to confirm your specific situation.</p>
+      </div>
+      <div class="msv__two-col-card">
+        <span class="msv__two-col-icon">🏥</span>
+        <h3>Step 2: Purchase Spanish Health Insurance (Allow 1–2 weeks)</h3>
+        <p>Shop for and purchase a qualifying comprehensive private health insurance policy from a Spanish-registered insurer (established private health insurers in Spain a leading private insurer Spain, established private health insurers in Spain Care, etc.). Ensure the certificate explicitly states no co-payments, no exclusions, and covers all of Spain. Request a policy certificate — this is submitted with your BLS application. Keep your policy active throughout.</p>
+      </div>
+    </div>
+
+    <div class="msv__two-col" style="margin-top: 2rem;">
+      <div class="msv__two-col-card">
+        <span class="msv__two-col-icon">🚔</span>
+        <h3>Step 3: Apply for ACRO Certificate (Allow 4–12 weeks)</h3>
+        <p>Apply for your ACRO Standard Disclosure at acro.police.uk (standard £45 or fast-track £98). Time your application carefully — the certificate must be dated within 3 months of your BLS appointment. Once received, send to the FCDO legalisation office in Milton Keynes for apostille (£75 — allow 4–6 weeks). Once apostilled, send to a sworn Spanish translator (allow 1–2 weeks).</p>
+      </div>
+      <div class="msv__two-col-card">
+        <span class="msv__two-col-icon">🏛️</span>
+        <h3>Step 4: Apostille &amp; Translate All Documents (Allow 6–10 weeks)</h3>
+        <p>While waiting for ACRO, apostille any other required documents (birth certificate if requested, marriage certificate if applicable). Compile all supporting financial documents. Bank statements should cover the last 3–6 months and clearly show your income. Pension letters should confirm the ongoing monthly or annual payment amount. All apostilled documents get sworn Spanish translations.</p>
+      </div>
+    </div>
+
+    <div class="msv__two-col" style="margin-top: 2rem;">
+      <div class="msv__two-col-card">
+        <span class="msv__two-col-icon">✍️</span>
+        <h3>Step 5: Submit at BLS International (1 day appointment)</h3>
+        <p>Attend your BLS appointment (London or Manchester) with the complete document package. BLS checks your documents, takes biometrics (fingerprints and photo), collects the consulate fee (€80–€150), and couriers your file to the Spanish consulate. You do not attend the consulate directly. After submission, the consulate reviews your application — typically 4–10 weeks. You will be notified when a decision is ready.</p>
+      </div>
+      <div class="msv__two-col-card">
+        <span class="msv__two-col-icon">✅</span>
+        <h3>Step 6: Approval &amp; Enter Spain Within 1 Month</h3>
+        <p>Once approved, your NLV visa sticker is placed in your passport. You must enter Spain within 1 month (30 days) of the visa issue date — not the approval notification date. Plan your travel carefully. After entering Spain, you have 30 days to register with the Policía Nacional to apply for your TIE residency card. Also register at your local town hall (empadronamiento) within your first few weeks.</p>
+      </div>
+    </div>
+
+    <div class="msv__two-col" style="margin-top: 2rem;">
+      <div class="msv__two-col-card">
+        <span class="msv__two-col-icon">💳</span>
+        <h3>Step 7: Empadronamiento, NIE &amp; TIE Card (Allow 4–8 weeks)</h3>
+        <p>After arrival:</p>
+        <ul>
+          <li><strong>Empadronamiento:</strong> Register at your local ayuntamiento (town hall) — establishes residency and is required for public services, renewing your visa, and healthcare access</li>
+          <li><strong>NIE:</strong> Your Número de Identidad de Extranjero (Spanish tax number) — needed for banking, property, and tax purposes. May already be on your visa or obtained at the police station</li>
+          <li><strong>TIE card:</strong> Apply at Policía Nacional within 30 days of arrival. Bring your passport, visa, photos, completed EX-23 form, and fee. Your TIE card (Spain's residency card) typically arrives 4–8 weeks after your appointment</li>
+        </ul>
+      </div>
+      <div class="msv__two-col-card">
+        <span class="msv__two-col-icon">🔄</span>
+        <h3>Renewing Your NLV</h3>
+        <p>The initial NLV is granted for 1 year. It is renewed for 2 years at a time (then 2 more years, then 5-year long-term residency). Renewal requirements:</p>
+        <ul>
+          <li>Apply for renewal at least 60 days before expiry</li>
+          <li>Renew in Spain at the relevant immigration office (not BLS)</li>
+          <li>Show continued income, health insurance, and proof of continued residence</li>
+          <li>You must have spent more than 183 days/year in Spain to qualify for renewal</li>
+          <li>After 5 continuous years, you may apply for long-term EU residency (residencia de larga duración)</li>
+          <li>After 10 continuous years, you may apply for Spanish citizenship</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── DOCUMENT CHECKLIST ─────────────────────────────────────────── -->
+<section class="msv__section">
+  <div class="msv__container">
+    <div class="msv__section-hd">
+      <h2>Complete Document Checklist for UK NLV Applicants</h2>
+      <p>Every document you will need to submit at BLS International, along with preparation notes. Tick each off before booking your appointment.</p>
+    </div>
+
+    <div class="msv__two-col">
+      <div class="msv__two-col-card">
+        <span class="msv__two-col-icon">📄</span>
+        <h3>Identity &amp; Status Documents</h3>
+        <ul class="msv__checklist">
+          <li>
+            <strong>UK Passport (original)</strong>
+            <span>Valid for at least 12 months from application date. Must have blank pages for visa sticker.</span>
+          </li>
+          <li>
+            <strong>Passport photocopies</strong>
+            <span>Colour copies of photo page and all stamped pages.</span>
+          </li>
+          <li>
+            <strong>ACRO Standard Disclosure (apostilled + translated)</strong>
+            <span>Not DBS. Issued within 3 months of BLS appointment. Apostilled by FCDO. Sworn Spanish translation required.</span>
+          </li>
+          <li>
+            <strong>UK Birth Certificate (if requested)</strong>
+            <span>Some consulates request this — check with your consulate. Apostille + sworn translation if required.</span>
+          </li>
+          <li>
+            <strong>Marriage/Civil Partnership Certificate (if applicable)</strong>
+            <span>Required if bringing a spouse. Apostilled + sworn Spanish translation.</span>
+          </li>
+          <li>
+            <strong>Completed NLV application form (EX-01)</strong>
+            <span>Spanish national visa application form — available from BLS or Spanish Embassy website.</span>
+          </li>
+          <li>
+            <strong>Passport-sized photos (x2)</strong>
+            <span>White background, recent, identical to passport photo standard.</span>
+          </li>
+        </ul>
+      </div>
+      <div class="msv__two-col-card">
+        <span class="msv__two-col-icon">💰</span>
+        <h3>Financial Documents</h3>
+        <ul class="msv__checklist">
+          <li>
+            <strong>UK State Pension award letter</strong>
+            <span>Issued by DWP confirming weekly/monthly amount. Must be dated within 3 months. Request from the International Pension Centre.</span>
+          </li>
+          <li>
+            <strong>Occupational/private pension letters</strong>
+            <span>From each pension provider, confirming monthly income. Official headed letter, dated within 3 months.</span>
+          </li>
+          <li>
+            <strong>Bank statements (3–6 months)</strong>
+            <span>Showing regular pension credits and current balance. Official bank-stamped or certified copies.</span>
+          </li>
+          <li>
+            <strong>Investment or dividend statements</strong>
+            <span>If claiming investment income — most recent statement plus annualised income confirmation.</span>
+          </li>
+          <li>
+            <strong>UK property rental income evidence</strong>
+            <span>Tenancy agreement plus bank statements showing rental credits, if using rental income to meet threshold.</span>
+          </li>
+          <li>
+            <strong>QROPS / pension transfer evidence</strong>
+            <span>If pension has been transferred to a qualifying overseas scheme — provide transfer documentation.</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="msv__two-col" style="margin-top: 2rem;">
+      <div class="msv__two-col-card">
+        <span class="msv__two-col-icon">🏥</span>
+        <h3>Health Insurance Documents</h3>
+        <ul class="msv__checklist">
+          <li>
+            <strong>Spanish private health insurance certificate</strong>
+            <span>From a Spanish-registered insurer (established private health insurers in Spain a leading private insurer Spain, established private health insurers in Spain, etc.). Must state no co-payments, no exclusions, full Spain coverage. Valid from intended entry date for at least 1 year.</span>
+          </li>
+          <li>
+            <strong>Proof of premium payment</strong>
+            <span>Bank statement or receipt showing policy has been paid for the full coverage period.</span>
+          </li>
+          <li>
+            <strong>Policy schedule / summary document</strong>
+            <span>Detailing coverage, repatriation clause, and territorial scope.</span>
+          </li>
+        </ul>
+      </div>
+      <div class="msv__two-col-card">
+        <span class="msv__two-col-icon">🏠</span>
+        <h3>Accommodation &amp; Supporting Documents</h3>
+        <ul class="msv__checklist">
+          <li>
+            <strong>Proof of accommodation in Spain</strong>
+            <span>Signed tenancy agreement for at least 1 year, or property purchase deed (escritura). Hotel reservations are generally not accepted for NLV.</span>
+          </li>
+          <li>
+            <strong>Consulate application fee payment</strong>
+            <span>€80–€150 payable at BLS. Check the current fee before your appointment.</span>
+          </li>
+          <li>
+            <strong>Sworn Spanish translations of all apostilled documents</strong>
+            <span>By a translator officially recognised by the Spanish Ministry of Foreign Affairs. Keep originals and translations together.</span>
+          </li>
+          <li>
+            <strong>Cover letter (optional but recommended)</strong>
+            <span>A clear letter summarising your application, income sources, and intentions in Spain. Helps the consulate officer review your file efficiently.</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="msv__alert msv__alert--green" style="margin-top: 1rem;">
+      <span class="msv__alert-icon">✓</span>
+      <p><strong>Pro tip:</strong> Organise your documents in a clearly labelled folder with a cover sheet listing each item. Provide originals, copies, apostilles, and translations in clear plastic sleeves. BLS officers handle high volumes and a well-organised application makes a positive impression. Always keep certified copies of everything for your own records.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── COMMON MISTAKES ─────────────────────────────────────────────── -->
+<section class="msv__section--cream">
+  <div class="msv__container">
+    <div class="msv__section-hd">
+      <h2>Common Mistakes UK Applicants Make</h2>
+      <p>Avoid these errors that cause delays, rejections, and unnecessary cost for British NLV applicants every year.</p>
+    </div>
+
+    <div class="msv__mistakes">
+      <div class="msv__mistake-card">
+        <h3>Submitting a DBS Check Instead of ACRO</h3>
+        <p>This is the most common UK-specific mistake. The Spanish consulate requires an <strong>ACRO Standard Disclosure</strong>, not a DBS check. DBS is for UK employment screening. ACRO is the UK's criminal record check recognised internationally. Apply at acro.police.uk. A DBS will be rejected outright, costing you weeks of delay.</p>
+      </div>
+      <div class="msv__mistake-card">
+        <h3>Using Travel Insurance Instead of Spanish Health Insurance</h3>
+        <p>Travel insurance policies (even annual multi-trip ones) are not accepted for the NLV. You need a comprehensive private health insurance policy from a <strong>Spanish-registered insurer</strong> with no co-payments and no exclusions. Read the policy certificate carefully — it must meet the consulate's specific requirements.</p>
+      </div>
+      <div class="msv__mistake-card">
+        <h3>Timing the ACRO Certificate Wrong</h3>
+        <p>The ACRO certificate must be dated within <strong>3 months of your BLS appointment</strong>. If you apply for it too early and it expires before your appointment, you'll need a fresh one. If you apply too late, it won't be ready in time. Map the exact timeline backwards from your planned BLS appointment before applying.</p>
+      </div>
+      <div class="msv__mistake-card">
+        <h3>Assuming the UK State Pension Alone Meets the Threshold</h3>
+        <p>The full new State Pension (approximately £11,500/year in 2026) meets less than half the NLV income requirement (approximately £24,200/year). Many applicants wrongly assume their State Pension suffices. You will need to demonstrate additional income — from an occupational pension, private pension, rental income, savings, or investments.</p>
+      </div>
+      <div class="msv__mistake-card">
+        <h3>Skipping the FCDO Apostille on Documents</h3>
+        <p>A UK document without an apostille is not legalised for use in Spain. The consulate will reject unapostilled documents. Even documents you consider routine (birth certificate, criminal record certificate) must go through the FCDO legalisation office and then be sworn-translated. Plan 6–10 weeks for the full apostille and translation cycle.</p>
+      </div>
+      <div class="msv__mistake-card">
+        <h3>Not Notifying HMRC — Ignoring the P85</h3>
+        <p>Many retirees move to Spain without completing form P85 with HMRC. This means HMRC continues to treat you as UK-resident and may over-withhold tax from pension income. Completing P85 formally establishes your non-UK tax residency, ensures correct withholding, and protects you from later disputes. File it before or as soon as you depart.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── COST OF LIVING COMPARISON ─────────────────────────────────── -->
+<section class="msv__section">
+  <div class="msv__container">
+    <div class="msv__section-hd">
+      <h2>Cost of Living: UK vs. Spain</h2>
+      <p>Spain is significantly cheaper than the UK for most everyday expenses — a strong argument for retirees on fixed pension income. Figures are approximate monthly costs in GBP (April 2026).</p>
+    </div>
+
+    <div style="overflow-x: auto; border: 1px solid var(--border); border-radius: 12px;">
+      <table class="msv__comparison">
+        <thead>
+          <tr>
+            <th>Monthly Expense</th>
+            <th>UK (London / South England)</th>
+            <th>Spain (Costa del Sol / Valencia)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="aspect">1-Bed Apartment (City Centre)</td>
+            <td>£1,600 – £2,500</td>
+            <td>£600 – £1,100</td>
+          </tr>
+          <tr>
+            <td class="aspect">1-Bed Apartment (Suburbs)</td>
+            <td>£1,100 – £1,700</td>
+            <td>£400 – £750</td>
+          </tr>
+          <tr>
+            <td class="aspect">Utilities (Electricity, Water, Gas)</td>
+            <td>£180 – £280</td>
+            <td>£80 – £150</td>
+          </tr>
+          <tr>
+            <td class="aspect">Groceries (1 person)</td>
+            <td>£280 – £400</td>
+            <td>£180 – £260</td>
+          </tr>
+          <tr>
+            <td class="aspect">Restaurant meal (mid-range, 2 persons)</td>
+            <td>£55 – £90</td>
+            <td>£25 – £50</td>
+          </tr>
+          <tr>
+            <td class="aspect">Private Health Insurance (60–70 yrs)</td>
+            <td>£150 – £400/month (UK PMI)</td>
+            <td>£85 – £175/month (Spanish policy)</td>
+          </tr>
+          <tr>
+            <td class="aspect">Public Transport (monthly pass)</td>
+            <td>£80 – £200</td>
+            <td>£20 – £55</td>
+          </tr>
+          <tr>
+            <td class="aspect">Gym Membership</td>
+            <td>£30 – £70</td>
+            <td>£20 – £45</td>
+          </tr>
+          <tr>
+            <td class="aspect">GP / Doctor Consultation</td>
+            <td>Free (NHS) or £70–£200 private</td>
+            <td>Free (public SNS with S1/residency) or £35–£80 private</td>
+          </tr>
+          <tr>
+            <td class="aspect">Estimated Total (1 person, comfortable)</td>
+            <td>£2,500 – £3,800/month</td>
+            <td>£1,200 – £2,000/month</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="msv__alert msv__alert--green" style="margin-top: 2rem;">
+      <span class="msv__alert-icon">✓</span>
+      <p><strong>The value comparison:</strong> A UK retiree receiving £2,000/month (State Pension plus private pension) would have a comfortable but modest life in the UK. In coastal Spain, that same income can provide a genuinely comfortable retirement — a car, regular dining out, travel within Europe, and money left to save. The NLV income threshold is achievable for many UK retirees, and once in Spain the cost of living rewards that income generously.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── FAQ ────────────────────────────────────────────────────────── -->
+<section class="msv__section--cream">
+  <div class="msv__container--narrow">
+    <div class="msv__section-hd">
+      <h2>Frequently Asked Questions</h2>
+      <p>The most common questions from UK nationals planning to retire to Spain — answered directly.</p>
+    </div>
+
+    <div class="msv__faq-list">
+      <details>
+        <summary>Can UK citizens still retire to Spain after Brexit?</summary>
+        <div class="msv__faq-answer">
+          <p>Yes. UK citizens can absolutely retire to Spain — Brexit changed the process but did not close the door. Since 1 January 2021, British nationals must apply for the Non-Lucrative Visa through BLS International visa centres in London or Manchester. The main requirements are demonstrating approximately €2,400/month (around £2,000) in passive income, having private Spanish health insurance, and obtaining an ACRO criminal record certificate (not a DBS). Processing typically takes 4–10 weeks at BLS, then 1–4 months for the consulate to make a decision.</p>
+        </div>
+      </details>
+      <details>
+        <summary>Why ACRO and not DBS — what is the difference?</summary>
+        <div class="msv__faq-answer">
+          <p>A DBS (Disclosure and Barring Service) check is a UK employment vetting tool used by employers to check applicants' criminal history for roles working with vulnerable groups. It is not an international criminal record certificate.</p>
+          <p>ACRO (ACRO Criminal Records Office) Standard Disclosure is the UK's criminal record certificate issued in a format internationally recognised for visa purposes. It follows the international standard required by Spanish consulates. The two documents look different, are issued by different bodies, and serve entirely different purposes. Submitting a DBS at BLS International will result in your application being rejected. Always order ACRO at acro.police.uk.</p>
+        </div>
+      </details>
+      <details>
+        <summary>Will I still receive my UK State Pension in Spain and does it get frozen?</summary>
+        <div class="msv__faq-answer">
+          <p>Yes, your UK State Pension is paid internationally — the DWP pays it to wherever you live in the world. Spain is not a "frozen" country, which means your pension receives the full annual triple-lock increase (the higher of inflation, average earnings, or 2.5%) every year, just as it would if you remained in the UK.</p>
+          <p>However, the current full new State Pension of approximately £221/week (around £11,500/year in 2026) falls well short of the NLV income threshold of approximately £24,200/year. Most UK retirees need to supplement it with an occupational pension, private pension, rental income, or investment returns. Contact the DWP International Pension Centre before you move to arrange continued payment and discuss your options.</p>
+        </div>
+      </details>
+      <details>
+        <summary>What happens to my NHS coverage when I move to Spain?</summary>
+        <div class="msv__faq-answer">
+          <p>Your NHS entitlement stops when you become a Spanish resident — NHS treatment is a UK-residency entitlement. The EHIC/GHIC cards provide emergency-only coverage and are not sufficient for residency. You must purchase private Spanish health insurance as a condition of the NLV application.</p>
+          <p>If you are receiving a UK State Pension or certain DWP benefits, you may be entitled to an S1 form from HMRC, which — once registered in Spain — gives you access to the Spanish public health system (SNS) free at point of use. The S1 is a significant benefit for pension-age retirees. However, it does not replace the private insurance requirement for the NLV visa itself. You must hold private insurance for the visa application and renewal stages.</p>
+        </div>
+      </details>
+      <details>
+        <summary>What are my HMRC obligations when I move to Spain?</summary>
+        <div class="msv__faq-answer">
+          <p>When you become a Spanish resident, you must notify HMRC by completing form P85 ("Leaving the UK — getting your tax right"). This is submitted to HMRC when you leave and establishes your non-UK tax resident status. HMRC will update your PAYE codes and issue a final calculation for the tax year you depart.</p>
+          <p>As a Spanish tax resident, you must file an annual Spanish tax return (Declaración de la Renta) declaring your worldwide income, including UK pensions and any UK property rental income. The UK–Spain Double Taxation Treaty prevents the same income being taxed in full by both countries. UK Government pensions (civil service, NHS, military, teachers) are a notable exception — they remain taxable in the UK under the treaty regardless of where you live.</p>
+        </div>
+      </details>
+      <details>
+        <summary>Does the UK–Spain Double Taxation Treaty protect my pension from being taxed twice?</summary>
+        <div class="msv__faq-answer">
+          <p>Yes — the UK–Spain Double Taxation Treaty provides protection against double taxation on the same income. In general terms: your UK State Pension and private sector occupational pension become taxable in Spain (as your country of residence) once you are a Spanish tax resident. The UK should no longer withhold income tax from these amounts once you have confirmed non-UK residency with HMRC.</p>
+          <p>The important exception is UK Government pensions (civil service, NHS, military, teachers' pension) — these are taxed in the UK under the treaty regardless of where you live. Spain will exempt them from Spanish tax, but you will continue to pay UK income tax on them. If a significant portion of your income is a government pension, take specialist cross-border tax advice to understand your full position.</p>
+        </div>
+      </details>
+      <details>
+        <summary>After NLV approval, what are the first steps in Spain — NIE, TIE, empadronamiento?</summary>
+        <div class="msv__faq-answer">
+          <p>After entering Spain on your NLV visa, there are three key administrative steps to complete within your first 30 days:</p>
+          <p><strong>Empadronamiento:</strong> Register at your local ayuntamiento (town hall) with your passport and proof of address (tenancy agreement). This registers you as a local resident and is required for accessing public services, healthcare, and renewing your visa.</p>
+          <p><strong>NIE:</strong> Your Número de Identidad de Extranjero is your Spanish tax/identity number. This is typically included on your NLV visa sticker or can be obtained at the Policía Nacional. You will need it for banking, buying or renting property, and filing Spanish tax returns.</p>
+          <p><strong>TIE card:</strong> Apply for your Tarjeta de Identidad de Extranjero (residency card) at the Policía Nacional within 30 days of arrival. Bring your passport, NLV visa, two passport photos, completed EX-23 form, and the application fee (approximately €15–€20). Your TIE card is typically ready to collect 4–8 weeks after your police appointment. This card is your physical proof of legal residency in Spain.</p>
+        </div>
+      </details>
+      <details>
+        <summary>How long does the full process take from deciding to move to having the TIE card?</summary>
+        <div class="msv__faq-answer">
+          <p>The realistic full timeline from starting your application to holding your TIE card in Spain is approximately 4–8 months:</p>
+          <p><strong>Document preparation:</strong> 6–12 weeks (ACRO application, FCDO apostille, sworn translations, health insurance purchase, financial documents)</p>
+          <p><strong>BLS appointment and consulate review:</strong> 4–10 weeks (BLS processing time) + 1–4 months (consulate decision)</p>
+          <p><strong>Travel to Spain and TIE card:</strong> After entering Spain, allow 4–8 weeks for the TIE card to be issued after your police appointment</p>
+          <p>Some applicants complete the process in 4–5 months with fast-track ACRO, good document preparation, and a shorter consulate queue. Others take longer if documents need to be resubmitted. Starting early and being organised is the most effective way to reduce your timeline.</p>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA BAND ────────────────────────────────────────────────────── -->
+
+  <!-- ── Insurance Partners ──────────────────────────── -->
+  <section class="msv__section--cream" style="padding: 2.5rem 0;">
+    <div class="msv__container--narrow">
+      <div style="background:#fff;border:2px solid var(--border);border-radius:12px;padding:1.75rem 2rem;">
+        <p style="font-weight:700;color:var(--navy);margin:0 0 0.5rem;font-size:0.95rem;">Recommended insurance specialists</p>
+        <p style="color:var(--muted);font-size:0.9rem;margin:0;line-height:1.75;">
+          <a href="https://www.spanish-healthinsurance.com/myspanishvisa" target="_blank" rel="noopener" style="color:var(--red);font-weight:700;">Spanish Health Insurance</a> — visa-compliant private health insurance for English-speaking foreigners in Spain.<br>
+          <a href="https://www.247expatinsurance.com/myspanishvisa" target="_blank" rel="noopener" style="color:var(--red);font-weight:700;">247 Expat Insurance</a> — health and all types of expat insurance in Spain, tailored for international residents.
+        </p>
+      </div>
+    </div>
+  </section>
+  <section class="msv__cta-band">
+  <div class="msv__container">
+    <h2>Ready to Start Your Spanish Retirement?</h2>
+    <p>Over 1,000 UK nationals have used My Spanish Visa to navigate the post-Brexit NLV process. Our team handles the paperwork, guides you through every step, and ensures nothing is missed — so you can focus on planning your new life in Spain.</p>
+    <div class="msv__btn-group">
+      <a href="https://dashboard.platinumlegalspain.com/nlv" class="msv__btn msv__btn--primary">Check My Eligibility Free</a>
+      <a href="https://dashboard.platinumlegalspain.com/nlv" class="msv__btn msv__btn--outline-white">Book a Consultation</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── RELATED PAGES ───────────────────────────────────────────────── -->
+<section class="msv__section">
+  <div class="msv__container">
+    <div class="msv__section-hd">
+      <h2>Related Guides &amp; Resources</h2>
+      <p>Everything else you need to know about moving to and living in Spain.</p>
+    </div>
+    <div class="msv__related">
+      <a href="/non-lucrative-visa-spain/" class="msv__related-card">
+        <span class="msv__related-icon">📋</span>
+        <span class="msv__related-title">Non-Lucrative Visa Spain</span>
+        <span class="msv__related-desc">The complete NLV guide — requirements, documents, process, and costs for all nationalities.</span>
+      </a>
+      <a href="/non-lucrative-visa-uk/" class="msv__related-card">
+        <span class="msv__related-icon">🇬🇧</span>
+        <span class="msv__related-title">NLV for UK Citizens</span>
+        <span class="msv__related-desc">Detailed UK-specific NLV guide covering BLS centres, ACRO, apostille, and Brexit changes.</span>
+      </a>
+      <a href="/tie-card-spain/" class="msv__related-card">
+        <span class="msv__related-icon">💳</span>
+        <span class="msv__related-title">TIE Card Spain</span>
+        <span class="msv__related-desc">How to apply for your TIE (Tarjeta de Identidad de Extranjero) residency card after arrival.</span>
+      </a>
+      <a href="/digital-nomad-visa-spain/" class="msv__related-card">
+        <span class="msv__related-icon">💻</span>
+        <span class="msv__related-title">Digital Nomad Visa</span>
+        <span class="msv__related-desc">If you plan to work remotely for a UK employer while living in Spain, the DNV may be your route.</span>
+      </a>
+      <a href="/spain-healthcare-guide/" class="msv__related-card">
+        <span class="msv__related-icon">🏥</span>
+        <span class="msv__related-title">Healthcare in Spain</span>
+        <span class="msv__related-desc">Full guide to accessing public and private healthcare in Spain as a British expat resident.</span>
+      </a>
+      <a href="/retire-to-spain-from-usa/" class="msv__related-card">
+        <span class="msv__related-icon">🇺🇸</span>
+        <span class="msv__related-title">Retire to Spain from the USA</span>
+        <span class="msv__related-desc">The American retiree's guide to the NLV — Social Security portability, IRS obligations, and more.</span>
+      </a>
+      <a href="/retire-to-spain-from-south-africa/" class="msv__related-card">
+        <span class="msv__related-icon">🇿🇦</span>
+        <span class="msv__related-title">Retire from South Africa</span>
+        <span class="msv__related-desc">NLV guide for South African retirees — SARS tax emigration, SARB exchange controls, ZAR conversions.</span>
+      </a>
+      <a href="https://dashboard.platinumlegalspain.com/nlv" class="msv__related-card">
+        <span class="msv__related-icon">✓</span>
+        <span class="msv__related-title">Free Eligibility Check</span>
+        <span class="msv__related-desc">Take our quick eligibility assessment to find out if you qualify for the NLV before spending on documents.</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ── DISCLAIMER ─────────────────────────────────────────────────── -->
+</div>
+
+</div><!-- end .msv -->
+
+<!-- FRAGMENT_END -->
+</main>
+
+
+<!-- ═══════════════════════════════════════════════════
+     SITE FOOTER
+     ═══════════════════════════════════════════════════ -->
+<footer class="msv-footer" role="contentinfo">
+
+  <div class="msv-footer__top">
+
+    <!-- Brand column -->
+    <div class="msv-footer__brand">
+      <a href="/" class="msv-footer__logo" aria-label="My Spanish Visa"><img src="/assets/images/msv-logo-white.png" alt="My Spanish Visa" height="40" style="display:block;"></a>
+      <p class="msv-footer__tagline">
+        Specialist Spain visa &amp; residency guidance for English-speaking foreigners.
+        A service of Platinum Legal Spain.
+      </p>
+      <div class="msv-footer__trust">
+        <span class="msv-footer__trust-item">All English. No barriers.</span>
+        <span class="msv-footer__trust-item">Solicitors &amp; immigration specialists</span>
+        <span class="msv-footer__trust-item">100% online process</span>
+      </div>
+    </div>
+
+    <!-- Visas column -->
+    <div>
+      <div class="msv-footer__col-title">Visas</div>
+      <ul class="msv-footer__links">
+        <li><a href="/non-lucrative-visa-spain/">Non-Lucrative Visa</a></li>
+        <li><a href="/digital-nomad-visa-spain/">Digital Nomad Visa</a></li>
+        <li><a href="/student-visa-spain/">Student Visa</a></li>
+        <li><a href="/spain-visa-renewal/">Visa Renewals</a></li>
+        <li><a href="/best-visa-move-to-spain/">Compare All Visas</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/nlv">Apply: NLV</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/dnv">Apply: DNV</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/student-visa">Apply: Student Visa</a></li>
+      </ul>
+    </div>
+
+    <!-- Resources column -->
+    <div>
+      <div class="msv-footer__col-title">Resources</div>
+      <ul class="msv-footer__links">
+        <li><a href="/blog/">Blog &amp; Guides</a></li>
+        <li><a href="/move-to-spain/">Move to Spain Guide</a></li>
+        <li><a href="/visa-eligibility-quiz/">Eligibility Quiz</a></li>
+        <li><a href="/spain-visa-checklist/">Document Checklists</a></li>
+        <li><a href="/spain-visa-requirements/">Visa Requirements</a></li>
+        <li><a href="/spain-nie-number/">NIE Number Guide</a></li>
+        <li><a href="/spain-tie-card/">TIE Card Guide</a></li>
+      </ul>
+    </div>
+
+    <!-- Company column -->
+    <div>
+      <div class="msv-footer__col-title">Company</div>
+      <ul class="msv-footer__links">
+        <li><a href="/about-us/">About Us</a></li>
+        <li><a href="/testimonials/">Client Reviews</a></li>
+        <li><a href="/why-choose-us/">Why Choose Us</a></li>
+        <li><a href="/contact-us.html">Contact</a></li>
+        <li><a href="https://www.platinumlegalspain.com" rel="noopener">Platinum Legal Spain</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/nlv">Client Portal</a></li>
+      </ul>
+    </div>
+
+  </div><!-- /.msv-footer__top -->
+
+  <div class="msv-footer__bottom">
+    <div class="msv-footer__bottom-inner">
+      <p class="msv-footer__disclaimer">
+        <strong style="color:rgba(255,255,255,0.5);">Disclaimer:</strong>
+        My Spanish Visa provides visa processing support and is not a law firm. Content on this site is for informational purposes only and does not constitute legal advice. Immigration rules change frequently — always verify requirements with official sources or a qualified specialist. My Spanish Visa is a trading name of Platinum Legal Spain.
+      </p>
+      <span class="msv-footer__copyright">© 2026 My Spanish Visa. All rights reserved.</span>
+    </div>
+  </div>
+
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,1047 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- ═══════════════════════════════════════════════════════════════════
+       PAGE-SPECIFIC HEAD — replace block below per page:
+       <title>Blog Spain Visa Rejected What Next | My Spanish Visa</title>
+       <meta name="description" content="…">
+       <meta property="og:title" content="…">
+       <meta property="og:description" content="…">
+       <meta property="og:url" content="https://www.myspanishvisa.com/…">
+       <meta property="og:image" content="…">
+       <link rel="canonical" href="https://www.myspanishvisa.com/…">
+       <script type="application/ld+json">…</script>
+       ═══════════════════════════════════════════════════════════════════ -->
+  <title>My Spanish Visa — Spain Visa &amp; Residency Specialists</title>
+  <meta name="description" content="My Spanish Visa helps English-speaking foreigners move to Spain. Expert guidance on Non-Lucrative Visa, Digital Nomad Visa, Student Visa, renewals and more.">
+
+  <!-- Shared Open Graph defaults -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="My Spanish Visa">
+  <meta property="og:image" content="https://www.myspanishvisa.com/assets/images/og/og-myspanishvisa-default.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@myspanishvisa">
+
+  <style>
+/* ═══════════════════════════════════════════════════════════════
+   GLOBAL SHELL — nav + footer only.
+   Page-specific CSS lives inside each fragment's own <style> block.
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── iOS overflow safety ── */
+html, body { max-width: 100%; overflow-x: clip; margin: 0; padding: 0; }
+*, *::before, *::after { box-sizing: border-box; }
+
+/* ── Brand tokens (root-level so all fragments inherit) ── */
+:root {
+  --navy:      #0c1930;
+  --navy-mid:  #1a3a5c;
+  --red:       #be0011;
+  --red-deep:  #8c000d;
+  --yellow:    #facf39;
+  --cream:     #f8f7f4;
+  --white:     #ffffff;
+  --black:     #1a1a1a;
+  --muted:     #5a6478;
+  --border:    #dce3ed;
+  --shadow-sm: 0 2px 8px rgba(12,25,48,0.08);
+  --shadow-md: 0 6px 24px rgba(12,25,48,0.13);
+}
+
+body {
+  font-family: 'Inter', 'Segoe UI', system-ui, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.75;
+  color: var(--black);
+  background: #fff;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   SITE NAV
+   ───────────────────────────────────────────────────────────── */
+.msv-nav {
+  position: sticky;
+  top: 0;
+  z-index: 9000;
+  background: var(--navy);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 2px 12px rgba(12,25,48,0.22);
+}
+.msv-nav__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  gap: 1.5rem;
+}
+
+/* Logo */
+.msv-nav__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+.msv-nav__logo-flag {
+  font-size: 1.3rem;
+  line-height: 1;
+}
+.msv-nav__logo-text {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+.msv-nav__logo-text span {
+  color: var(--yellow);
+}
+
+/* Links */
+.msv-nav__links {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.msv-nav__links > li {
+  position: relative;
+}
+.msv-nav__links > li > a,
+.msv-nav__links > li > button {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.5rem 0.9rem;
+  font-size: 0.87rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.85);
+  text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: color 0.15s, background 0.15s;
+  white-space: nowrap;
+  height: 80px;
+}
+.msv-nav__links > li > a:hover,
+.msv-nav__links > li > button:hover,
+.msv-nav__links > li:focus-within > a,
+.msv-nav__links > li:focus-within > button {
+  color: #fff;
+  background: rgba(255,255,255,0.08);
+}
+.msv-nav__chevron {
+  font-size: 0.65rem;
+  opacity: 0.7;
+  transition: transform 0.2s;
+}
+.msv-nav__links > li:focus-within .msv-nav__chevron,
+.msv-nav__links > li:hover .msv-nav__chevron {
+  transform: rotate(180deg);
+}
+
+/* Dropdown */
+.msv-nav__dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 230px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  box-shadow: var(--shadow-md);
+  padding: 0.5rem 0;
+  z-index: 200;
+}
+.msv-nav__links > li:hover .msv-nav__dropdown,
+.msv-nav__links > li:focus-within .msv-nav__dropdown {
+  display: block;
+}
+.msv-nav__dropdown a {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.6rem 1.1rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--navy);
+  text-decoration: none;
+  transition: background 0.12s;
+}
+.msv-nav__dropdown a:hover {
+  background: var(--cream);
+  color: var(--red);
+}
+.msv-nav__dropdown-icon {
+  width: 24px;
+  height: 24px;
+  background: var(--cream);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+.msv-nav__dropdown-divider {
+  height: 1px;
+  background: var(--border);
+  margin: 0.4rem 0;
+}
+
+/* CTA button */
+.msv-nav__cta {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.55rem 1.2rem;
+  background: var(--red);
+  color: #fff !important;
+  font-size: 0.85rem;
+  font-weight: 700;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.15s, box-shadow 0.15s;
+  white-space: nowrap;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(190,0,17,0.3);
+}
+.msv-nav__cta:hover {
+  background: var(--red-deep);
+  box-shadow: 0 4px 14px rgba(190,0,17,0.4);
+  text-decoration: none;
+}
+
+/* Hamburger */
+.msv-nav__burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.4rem;
+  border-radius: 5px;
+}
+.msv-nav__burger span {
+  width: 22px;
+  height: 2px;
+  background: #fff;
+  border-radius: 2px;
+  transition: transform 0.2s, opacity 0.2s;
+  display: block;
+}
+
+/* Mobile nav */
+.msv-nav__mobile {
+  display: none;
+  flex-direction: column;
+  background: var(--navy-mid);
+  padding: 1rem 1.5rem 1.5rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+.msv-nav__mobile.open { display: flex; }
+.msv-nav__mobile a {
+  padding: 0.65rem 0;
+  color: rgba(255,255,255,0.9);
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+.msv-nav__mobile a:hover { color: var(--yellow); }
+.msv-nav__mobile .msv-nav__mobile-sub {
+  padding-left: 1rem;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: rgba(255,255,255,0.7);
+}
+.msv-nav__mobile-cta {
+  margin-top: 1rem;
+  background: var(--red);
+  color: #fff !important;
+  border-radius: 6px;
+  text-align: center;
+  padding: 0.75rem 1rem !important;
+  border-bottom: none !important;
+}
+
+@media (max-width: 900px) {
+  .msv-nav__links { display: none; }
+  .msv-nav__cta { display: none; }
+  .msv-nav__burger { display: flex; }
+}
+@media (max-width: 480px) {
+  .msv-nav__inner { padding: 0 1rem; }
+}
+
+/* ─────────────────────────────────────────────────────────────
+   SITE FOOTER
+   ───────────────────────────────────────────────────────────── */
+.msv-footer {
+  background: var(--navy);
+  color: rgba(255,255,255,0.75);
+  overflow-x: clip;
+}
+.msv-footer__top {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem 3rem;
+  display: grid;
+  grid-template-columns: 280px 1fr 1fr 1fr;
+  gap: 3rem;
+}
+@media (max-width: 900px) {
+  .msv-footer__top { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
+}
+@media (max-width: 560px) {
+  .msv-footer__top { grid-template-columns: 1fr; gap: 2rem; padding: 3rem 1.2rem 2rem; }
+}
+
+.msv-footer__brand {}
+.msv-footer__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  margin-bottom: 1rem;
+}
+.msv-footer__logo-flag { font-size: 1.3rem; }
+.msv-footer__logo-text {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -0.01em;
+}
+.msv-footer__logo-text span { color: var(--yellow); }
+.msv-footer__tagline {
+  font-size: 0.83rem;
+  color: rgba(255,255,255,0.55);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+.msv-footer__trust {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+.msv-footer__trust-item {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.65);
+}
+.msv-footer__trust-item::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  background: var(--yellow);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.msv-footer__col-title {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.4);
+  margin-bottom: 1rem;
+}
+.msv-footer__links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.msv-footer__links a {
+  font-size: 0.87rem;
+  color: rgba(255,255,255,0.68);
+  text-decoration: none;
+  transition: color 0.15s;
+  display: inline-block;
+}
+.msv-footer__links a:hover {
+  color: var(--yellow);
+  text-decoration: none;
+}
+
+.msv-footer__bottom {
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+.msv-footer__bottom-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 1rem;
+  justify-content: space-between;
+}
+.msv-footer__disclaimer {
+  font-size: 0.73rem;
+  color: rgba(255,255,255,0.35);
+  line-height: 1.65;
+  max-width: 720px;
+}
+.msv-footer__copyright {
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.35);
+  white-space: nowrap;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   MAIN CONTENT AREA
+   ───────────────────────────────────────────────────────────── */
+main {
+  /* Fragments are self-contained; this wrapper just provides flow context */
+  position: relative;
+}
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════
+     SITE NAVIGATION
+     ═══════════════════════════════════════════════════ -->
+<header class="msv-nav" role="banner">
+  <div class="msv-nav__inner">
+
+    <!-- Logo -->
+    <a href="/" class="msv-nav__logo" aria-label="My Spanish Visa — Home"><img src="/assets/images/msv-logo-white.png" alt="My Spanish Visa" height="64" style="display:block;"></a>
+
+    <!-- Desktop links -->
+    <nav aria-label="Main navigation">
+      <ul class="msv-nav__links">
+
+        <li>
+          <button class="msv-nav__dropdown-trigger" aria-haspopup="true" aria-expanded="false">
+            Visas <span class="msv-nav__chevron">▾</span>
+          </button>
+          <div class="msv-nav__dropdown" role="menu">
+            <a href="/nlv-pillar-page.html" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🏖️</span>Non-Lucrative Visa
+            </a>
+            <a href="/dnv-pillar-page.html" role="menuitem">
+              <span class="msv-nav__dropdown-icon">💻</span>Digital Nomad Visa
+            </a>
+            <a href="/student-visa-pillar-page.html" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🎓</span>Student Visa
+            </a>
+            <div class="msv-nav__dropdown-divider"></div>
+            <a href="/spanish-residency-renewal.html" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🔄</span>Visa Renewals
+            </a>
+            <a href="/best-visa-move-to-spain.html" role="menuitem">
+              <span class="msv-nav__dropdown-icon">⚖️</span>Compare All Visas
+            </a>
+          </div>
+        </li>
+
+        <li>
+          <button aria-haspopup="true" aria-expanded="false">
+            Resources <span class="msv-nav__chevron">▾</span>
+          </button>
+          <div class="msv-nav__dropdown" role="menu">
+            <a href="/blog-index.html" role="menuitem">
+              <span class="msv-nav__dropdown-icon">📝</span>Blog &amp; Guides
+            </a>
+            <a href="/spain-visa-options.html" role="menuitem">
+              <span class="msv-nav__dropdown-icon">✅</span>Document Checklists
+            </a>
+            <a href="/move-to-spain.html" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🏠</span>Move to Spain Guide
+            </a>
+            <a href="/visa-eligibility-quiz.html" role="menuitem">
+              <span class="msv-nav__dropdown-icon">🧭</span>Eligibility Quiz
+            </a>
+          </div>
+        </li>
+
+        <li><a href="/about-us.html">About Us</a></li>
+        <li><a href="/testimonials.html">Reviews</a></li>
+        <li><a href="/contact-us.html">Contact</a></li>
+
+      </ul>
+    </nav>
+
+    <!-- Desktop CTA -->
+    <a href="https://dashboard.platinumlegalspain.com/nlv" class="msv-nav__cta">
+      Start My Application →
+    </a>
+
+    <!-- Hamburger (mobile) -->
+    <button class="msv-nav__burger" aria-label="Open menu" aria-expanded="false" onclick="
+      var m=document.querySelector('.msv-nav__mobile');
+      var open=m.classList.toggle('open');
+      this.setAttribute('aria-expanded', open);
+    ">
+      <span></span><span></span><span></span>
+    </button>
+
+  </div><!-- /.msv-nav__inner -->
+
+  <!-- Mobile menu -->
+  <nav class="msv-nav__mobile" aria-label="Mobile navigation">
+    <a href="/nlv-pillar-page.html" class="msv-nav__mobile-sub">Non-Lucrative Visa</a>
+    <a href="/dnv-pillar-page.html" class="msv-nav__mobile-sub">Digital Nomad Visa</a>
+    <a href="/student-visa-pillar-page.html" class="msv-nav__mobile-sub">Student Visa</a>
+    <a href="/spanish-residency-renewal.html">Visa Renewals</a>
+    <a href="/best-visa-move-to-spain.html">Compare All Visas</a>
+    <a href="/blog-index.html">Blog &amp; Guides</a>
+    <a href="/about-us.html">About Us</a>
+    <a href="/testimonials.html">Reviews</a>
+    <a href="/contact-us.html">Contact</a>
+    <a href="https://dashboard.platinumlegalspain.com/nlv" class="msv-nav__mobile-cta">Start My Application →</a>
+  </nav>
+
+</header>
+
+
+<!-- ═══════════════════════════════════════════════════
+     PAGE CONTENT (fragment injected here)
+     ═══════════════════════════════════════════════════ -->
+<main>
+<!-- FRAGMENT_START -->
+<!-- Blog Post: Spain Visa Rejected - What Next -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.myspanishvisa.com/blog/spain-visa-rejected-what-next/",
+      "url": "https://www.myspanishvisa.com/blog/spain-visa-rejected-what-next/",
+      "name": "Spain Visa Rejected? Here's What to Do Next | Appeal Guide 2026",
+      "description": "Comprehensive guide after visa rejection. Learn common reasons, appeal process (recurso de reposición), timelines, reapplication vs appeal strategy, strengthening reapplications.",
+      "inLanguage": "en-US",
+      "isPartOf": { "@id": "https://www.myspanishvisa.com/" },
+      "breadcrumb": { "@id": "https://www.myspanishvisa.com/blog/spain-visa-rejected-what-next/#breadcrumb" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.myspanishvisa.com/blog/spain-visa-rejected-what-next/#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.myspanishvisa.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.myspanishvisa.com/blog/" },
+        { "@type": "ListItem", "position": 3, "name": "Spain Visa Rejected" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What are the most common reasons for Spain visa rejections?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Top rejection reasons: (1) Insufficient income documentation or unclear income source, (2) Poor quality or missing documents, (3) Income below minimum threshold, (4) Background check issues (criminal records, overstay history), (5) Insurance not recognized or missing copay clause, (6) Insufficient ties to home country (relocation risk), (7) Incomplete applications, (8) Health issues that make you ineligible, (9) Immigration fraud suspicions, (10) Timing (application during government office closures)." }
+        },
+        {
+          "@type": "Question",
+          "name": "Should you appeal a visa rejection or reapply?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Appeal if: (1) You believe the decision is procedurally wrong, (2) New evidence has emerged, (3) The rejection appears arbitrary. Reapply if: (1) You've addressed the core deficiency, (2) You have stronger documentation, (3) The rejection is based on income or document quality (fixable issues). Appeal timelines are 30 days; reapplication can be submitted anytime. Consult an immigration lawyer to determine your best path." }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the appeal process (recurso de reposición)?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Recurso de reposición is a formal administrative appeal: (1) Submit appeal within 30 days of rejection, (2) Include grounds for appeal (procedural error, new evidence, legal misapplication), (3) File with the consulate that issued the rejection, (4) Include original rejection letter and detailed explanation, (5) Decision typically comes within 2–3 months, (6) If denied, you can appeal further (recurso de alzada) or reapply. Appeals rarely overturn rejections unless there's clear procedural error." }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does it take to get an appeal decision?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Appeal (recurso de reposición) decisions typically take 6–12 weeks from submission. Administrative appeals move slowly. If you want faster resolution, reapplication often gets a decision faster (4–8 weeks) than appealing. However, appeals are free; reapplication costs money and time preparing documents again. Many people pursue both simultaneously (appeal while preparing reapplication)." }
+        },
+        {
+          "@type": "Question",
+          "name": "What should you do while waiting for an appeal decision?",
+          "acceptedAnswer": { "@type": "Answer", "text": "While appealing: (1) Strengthen your documentation for a potential reapplication, (2) Address the core issue identified in your rejection, (3) Gather additional supporting documents, (4) Consider consulting an immigration lawyer about your specific case, (5) Don't travel to Spain while your visa is rejected, (6) Maintain your income/financial position, (7) Continue building your file in case you need to reapply, (8) Monitor email for consulate requests for additional information." }
+        },
+        {
+          "@type": "Question",
+          "name": "How do you strengthen a reapplication after rejection?",
+          "acceptedAnswer": { "@type": "Answer", "text": "To strengthen reapplication: (1) Address the stated rejection reason directly with new documentation, (2) If income was questioned, provide 24 months of bank statements instead of 12, (3) If documents were poor quality, resubmit with high-quality scans, (4) Include a cover letter explaining changes or clarifications, (5) Get professional help from an immigration specialist, (6) If background was issue, obtain updated clearance, (7) Include employer/client letters confirming income, (8) Get bank letters verifying consistency of income deposits, (9) Provide detailed explanation of income sources, (10) Wait 30–60 days before reapplying to show consideration of feedback." }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<!-- Open Graph / Social -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.myspanishvisa.com/blog/spain-visa-rejected-what-next/">
+<meta property="og:title" content="My Spanish Visa">
+<meta property="og:description" content="Expert Spain visa guidance for English-speaking expats.">
+<meta property="og:image" content="https://www.myspanishvisa.com/assets/images/og/og-blog-myspanishvisa.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="My Spanish Visa">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@myspanishvisa">
+<meta name="twitter:title" content="My Spanish Visa">
+<meta name="twitter:description" content="Expert Spain visa guidance for English-speaking expats.">
+<meta name="twitter:image" content="https://www.myspanishvisa.com/assets/images/og/og-blog-myspanishvisa.jpg">
+
+<style>
+/* ── iOS Safari pinch-zoom overflow safety ─────────────────────────── */
+/* Prevents horizontal overflow when users pinch-zoom on iPhone/iPad.   */
+/* Top-level (also paste into theme Custom CSS / Elementor Site Settings) */
+html, body { max-width: 100%; overflow-x: clip; }
+/* Scoped wrapper safety */
+.msv, .msv-nav, .msv-topbar, .msv-footer, .msv-footer-cta,
+.pls-header, .pls-body, .pls-nlv, .pls-dnv, .pls-student {
+  max-width: 100%;
+  overflow-x: clip;
+  position: relative;
+}
+/* Cap all media inside the wrapper */
+.msv img, .msv video, .msv iframe,
+.msv-footer img, .msv-footer video, .msv-footer iframe {
+  max-width: 100%;
+  height: auto;
+}
+/* Never use 100vw — use 100% instead (dev reminder) */
+
+
+.msv *, .msv *::before, .msv *::after { box-sizing: border-box; margin: 0; padding: 0; }
+.msv {
+  --navy: #0c1930; --navy-mid: #1a3a5c; --red: #be0011; --red-deep: #8c000d;
+  --yellow: #facf39; --cream: #f8f7f4; --white: #ffffff; --black: #1a1a1a;
+  --muted: #5a6478; --border: #dce3ed;
+  --shadow-sm: 0 2px 8px rgba(12,25,48,0.08); --shadow-md: 0 6px 24px rgba(12,25,48,0.13);
+  font-family: 'Inter', 'Segoe UI', system-ui, Arial, sans-serif;
+  font-size: 16px; line-height: 1.75; color: var(--black); width: 100%;
+}
+.msv__container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+.msv__container--narrow { max-width: 780px; margin: 0 auto; padding: 0 2rem; }
+@media (max-width: 640px) { .msv__container, .msv__container--narrow { padding: 0 1.2rem; } }
+.msv h1 { font-size: clamp(2rem, 4.5vw, 3rem); font-weight: 800; line-height: 1.12; color: var(--white); letter-spacing: -0.025em; margin-bottom: 1.2rem; }
+.msv h2 { font-size: clamp(1.3rem, 2.5vw, 1.75rem); font-weight: 700; color: var(--navy); letter-spacing: -0.01em; margin-bottom: 0.5rem; position: relative; display: inline-block; padding-bottom: 0.5rem; }
+.msv h2::after { content: ''; position: absolute; bottom: 0; left: 0; width: 44px; height: 3px; background: linear-gradient(90deg, var(--red), var(--red-deep)); border-radius: 2px; }
+.msv h3 { font-size: 1.05rem; font-weight: 700; color: var(--navy); margin-bottom: 0.4rem; }
+.msv p { color: var(--black); margin-bottom: 1rem; font-size: 0.97rem; }
+.msv a { color: var(--red); text-decoration: none; }
+.msv a:hover { text-decoration: underline; }
+.msv ul { list-style: none; padding: 0; margin: 0 0 1rem; }
+.msv ul li { padding: 0.35rem 0 0.35rem 1.4rem; position: relative; font-size: 0.95rem; color: var(--black); }
+.msv ul li::before { content: ''; position: absolute; left: 0; top: 0.75rem; width: 7px; height: 7px; background: linear-gradient(135deg, var(--red), var(--red-deep)); border-radius: 50%; }
+.msv__section { padding: 5rem 0; background: var(--white); }
+.msv__section--cream { padding: 5rem 0; background: linear-gradient(180deg, #f8f7f4 0%, #f2f4f8 100%); }
+.msv__section--dark { padding: 5rem 0; background: linear-gradient(135deg, var(--navy) 0%, #0d2240 55%, #0a1d38 100%); }
+.msv__section--dark h2 { color: var(--white) !important; }
+.msv__section--dark h2::after { background: linear-gradient(90deg, var(--yellow), #e8b820); }
+.msv__section--dark h3 { color: rgba(255,255,255,0.9) !important; }
+.msv .msv__section--dark p, .msv .msv__section--dark li { color: rgba(255,255,255,0.82); }
+.msv__section--dark ul li::before { background: linear-gradient(135deg, var(--yellow), #e8b820); }
+@media (max-width: 640px) { .msv__section, .msv__section--cream, .msv__section--dark { padding: 3.5rem 0; } }
+.msv__section-hd { margin-bottom: 3rem; }
+.msv__section-hd p { color: var(--muted); font-size: 1rem; margin-top: 0.75rem; line-height: 1.7; max-width: 600px; }
+@keyframes msv-fade-up { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes msv-shimmer { 0% { background-position: -400px 0; } 100% { background-position: 400px 0; } }
+.msv__shimmer { background: linear-gradient(90deg, var(--yellow) 0%, #e8b820 25%, var(--red) 50%, #e8b820 75%, var(--yellow) 100%); background-size: 400px 100%; -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; animation: msv-shimmer 3.5s linear infinite; display: inline; }
+.msv__hero { background: linear-gradient(135deg, #0c1930 0%, #0f2540 40%, #162d50 70%, #1a3560 100%); padding: 5.5rem 0 5rem; position: relative; overflow: hidden; }
+.msv__hero::before { content: ''; position: absolute; top: -30%; right: -5%; width: 700px; height: 700px; background: radial-gradient(circle, rgba(190,0,17,0.1) 0%, transparent 65%); pointer-events: none; }
+.msv__hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, rgba(250,207,57,0.4), transparent); }
+.msv__hero-inner { max-width: 780px; animation: msv-fade-up 0.7s ease-out both; }
+.msv__eyebrow { display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(190,0,17,0.15); border: 1px solid rgba(190,0,17,0.4); color: #ff6b7a; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.35rem 0.9rem; border-radius: 100px; margin-bottom: 1.5rem; }
+.msv__eyebrow::before { content: ''; width: 6px; height: 6px; background: var(--red); border-radius: 50%; box-shadow: 0 0 6px var(--red); }
+.msv__hero p { color: rgba(255,255,255,0.78) !important; font-size: clamp(1rem, 2.2vw, 1.15rem); max-width: 640px; margin-bottom: 2.2rem; line-height: 1.75; }
+.msv__trust-bar { background: var(--white); border-bottom: 1px solid var(--border); padding: 1rem 0; box-shadow: var(--shadow-sm); }
+.msv__trust-bar-inner { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.75rem; }
+.msv__trust-item { display: flex; align-items: center; gap: 0.5rem; font-size: 0.82rem; font-weight: 600; color: var(--navy); white-space: nowrap; }
+.msv__trust-item::before { content: ''; width: 7px; height: 7px; background: linear-gradient(135deg, var(--red), var(--red-deep)); border-radius: 50%; flex-shrink: 0; }
+.msv__alert { border-radius: 10px; padding: 1.3rem 1.5rem; display: flex; gap: 1rem; align-items: flex-start; margin-bottom: 2rem; }
+.msv__alert--warn { background: #fffbea; border: 1px solid #f0d060; }
+.msv__alert--info { background: #eef4ff; border: 1px solid #a0bfff; }
+.msv__alert--red { background: #fef2f2; border: 1px solid #fca5a5; }
+.msv__alert--green { background: #f0fdf4; border: 1px solid #86efac; }
+.msv__alert-icon { font-size: 1.4rem; flex-shrink: 0; margin-top: 0.1rem; }
+.msv__alert p { font-size: 0.9rem; color: var(--black); margin: 0; line-height: 1.65; }
+.msv__alert strong { color: var(--navy); }
+.msv__comparison-table { width: 100%; border-collapse: collapse; font-size: 0.88rem; margin: 2rem 0; }
+.msv__comparison-table thead tr { background: var(--navy); }
+.msv__comparison-table th { padding: 1rem 1.25rem; text-align: left; color: var(--white); font-weight: 700; }
+.msv__comparison-table td { padding: 0.85rem 1.25rem; border-bottom: 1px solid var(--border); color: var(--black); }
+.msv__comparison-table tbody tr:nth-child(even) { background: #f9fafb; }
+.msv__comparison-table .table-feature { font-weight: 600; color: var(--navy); }
+.msv__faq-list { display: flex; flex-direction: column; gap: 0; border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+.msv__faq-list details { border-bottom: 1px solid var(--border); background: var(--white); }
+.msv__faq-list details:last-child { border-bottom: none; }
+.msv__faq-list summary { padding: 1.2rem 1.5rem; font-size: 0.97rem; font-weight: 700; color: var(--navy); cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+.msv__faq-list summary::-webkit-details-marker { display: none; }
+.msv__faq-list summary::after { content: '+'; font-size: 1.3rem; font-weight: 400; color: var(--red); flex-shrink: 0; transition: transform 0.2s; }
+.msv__faq-list details[open] summary::after { transform: rotate(45deg); }
+.msv__faq-list details[open] summary { color: var(--red); }
+.msv__faq-answer { padding: 0 1.5rem 1.3rem; font-size: 0.92rem; color: var(--muted); line-height: 1.75; }
+.msv__faq-answer p { color: var(--muted); font-size: 0.92rem; margin-bottom: 0.75rem; }
+.msv__faq-answer p:last-child { margin-bottom: 0; }
+.msv__cta-band { background: linear-gradient(135deg, var(--navy) 0%, #0d2240 60%, #0a1d38 100%); padding: 5rem 0; text-align: center; }
+.msv__cta-band h2 { color: var(--white) !important; display: block; }
+.msv__cta-band h2::after { left: 50%; transform: translateX(-50%); background: linear-gradient(90deg, var(--yellow), #e8b820); }
+.msv__cta-band p { color: rgba(255,255,255,0.75) !important; max-width: 560px; margin: 1rem auto 2.2rem; font-size: 1rem; }
+.msv__cta-band .msv__btn-group { justify-content: center; }
+.msv__btn-group { display: flex; flex-wrap: wrap; gap: 0.85rem; }
+.msv__btn { display: inline-block; padding: 0.85rem 2rem; font-size: 0.92rem; font-weight: 700; border-radius: 6px; text-decoration: none !important; transition: transform 0.15s, box-shadow 0.15s; }
+.msv__btn:hover { transform: translateY(-1px); text-decoration: none !important; }
+.msv .msv__btn--primary { background: linear-gradient(135deg, var(--red) 0%, var(--red-deep) 100%); color: #ffffff !important; box-shadow: 0 4px 16px rgba(190,0,17,0.38); }
+.msv .msv__btn--primary:hover { box-shadow: 0 6px 22px rgba(190,0,17,0.48); color: #ffffff !important; }
+.msv .msv__btn--outline-white { background: transparent; color: #ffffff !important; border: 1.5px solid rgba(255,255,255,0.5); }
+.msv .msv__btn--outline-white:hover { background: rgba(255,255,255,0.1); color: #ffffff !important; }
+.msv__disclaimer { background: var(--cream); border-top: 1px solid var(--border); padding: 2rem 0; }
+.msv__disclaimer p { font-size: 0.78rem; color: var(--muted); margin: 0; line-height: 1.65; }
+.msv__related { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; }
+@media (max-width: 860px) { .msv__related { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 420px) { .msv__related { grid-template-columns: 1fr; } }
+.msv__related-card { background: var(--white); border: 1px solid var(--border); border-radius: 10px; padding: 1.3rem 1.25rem; text-decoration: none !important; transition: box-shadow 0.2s, transform 0.2s; display: block; }
+.msv__related-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); text-decoration: none !important; }
+.msv__related-icon { font-size: 1.5rem; display: block; margin-bottom: 0.6rem; }
+.msv__related-title { font-size: 0.88rem; font-weight: 700; color: var(--navy); display: block; margin-bottom: 0.3rem; }
+.msv__related-desc { font-size: 0.8rem; color: var(--muted); line-height: 1.55; }
+</style>
+
+<div class="msv">
+  <section class="msv__hero">
+    <div class="msv__container--narrow">
+      <div class="msv__hero-inner">
+        <span class="msv__eyebrow">BLOG</span>
+        <h1>Spain Visa <span class="msv__shimmer">Rejected?</span> Here's What to Do</h1>
+        <p>Your visa was denied. Now what? This guide covers common rejection reasons, your appeal options, timelines for recurso de reposición, and how to strengthen a reapplication for next time.</p>
+        <p style="font-size: 0.85rem; color: rgba(255,255,255,0.65); margin-bottom: 0;">Est. read time: 8 min</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="msv__trust-bar">
+    <div class="msv__trust-bar-inner">
+      <div class="msv__trust-item">Immigration lawyer reviewed</div>
+      <div class="msv__trust-item">Updated April 2026</div>
+      <div class="msv__trust-item">500+ rejections analyzed</div>
+    </div>
+  </div>
+
+  <section class="msv__section">
+    <div class="msv__container--narrow">
+      <div class="msv__section-hd">
+        <h2>Understanding the Rejection</h2>
+        <p>A visa rejection is painful, but it's not the end. Many rejected applicants successfully reapply or appeal. The first step is understanding why your application was denied. Your rejection letter should state the reason—carefully review it, as it determines your next move.</p>
+      </div>
+
+      <p>Common rejection reasons fall into categories: (1) Document issues, (2) Income problems, (3) Background concerns, (4) Procedural errors, (5) Fraud suspicions, (6) Health/security issues. Understanding which category your rejection falls into helps you decide whether to appeal or reapply.</p>
+
+      <h2 style="margin-top: 3rem;">Top 10 Rejection Reasons (and What to Do About Each)</h2>
+
+      <h3>1. Insufficient Income Documentation</h3>
+      <p><strong>Why it happens:</strong> Your bank statements don't clearly show the required monthly income, deposits are inconsistent, or the income source is unclear.</p>
+      <p><strong>Fix:</strong> Gather 24 months of statements instead of 12. Include letters from your bank confirming your average monthly deposits. Get employer/client letters confirming they pay you. Provide detailed explanation of income source. <strong>Reapply or appeal?</strong> Reapply—this is a document quality issue fixable with better documentation.</p>
+
+      <h3>2. Income Below Minimum Threshold</h3>
+      <p><strong>Why it happens:</strong> Your documented income is genuinely below the required amount (€2,316/month for NLV, €2,160 for DNV).</p>
+      <p><strong>Fix:</strong> If you genuinely don't have enough income, you're not currently eligible. Wait until your income increases, or consider a different visa category. If you actually have enough income but it wasn't documented, reapply with better documentation. <strong>Reapply or appeal?</strong> If income is truly insufficient, don't reapply yet. If it's a documentation issue, reapply with clearer proof.</p>
+
+      <h3>3. Poor Document Quality or Incomplete Application</h3>
+      <p><strong>Why it happens:</strong> Documents are illegible, scans are pixelated, pages are missing, or your application was missing entire sections.</p>
+      <p><strong>Fix:</strong> This is easily fixable. Scan documents at 300 DPI minimum. Ensure all documents are in order, numbered, and organized. Include a checklist showing every required item. Have someone else review your application for completeness. <strong>Reapply or appeal?</strong> Reapply—appeals won't help with document quality issues.</p>
+
+      <h3>4. Health Insurance Not Recognized (DNV)</h3>
+      <p><strong>Why it happens:</strong> Your insurance plan wasn't on the consulate's approved list, or it has copayments when the visa requires "sin copago."</p>
+      <p><strong>Fix:</strong> Contact the consulate and ask which insurers they accept. Get a new policy from an approved provider with explicit "no copay" clause. <strong>Reapply or appeal?</strong> Reapply with correct insurance. No point appealing this—the fix is straightforward.</p>
+
+      <h3>5. Background Check Issues</h3>
+      <p><strong>Why it happens:</strong> You have criminal history, outstanding warrants, immigration violations (past overstay), or fraud concerns.</p>
+      <p><strong>Fix:</strong> Get updated police clearance from your country. If you have a criminal record, consider consulting an immigration lawyer before reapplying—some issues make you ineligible. If it's a past overstay, show evidence it's been resolved. <strong>Reapply or appeal?</strong> Consult a lawyer. Some background issues are appealing; others require a lawyer for reapplication strategy.</p>
+
+      <h3>6. Unclear Ties to Home Country</h3>
+      <p><strong>Why it happens:</strong> The consulate suspects you're trying to immigrate (relocation) rather than obtain residency. You provided no evidence you'd return to your home country.</p>
+      <p><strong>Fix:</strong> Include evidence of home country ties: property ownership, family in your home country, ongoing business/employment, professional licenses/certifications still valid, rental property. Show you have reasons to return home periodically. <strong>Reapply or appeal?</strong> Reapply with strong ties documentation.</p>
+
+      <h3>7. Inconsistent Income Sources</h3>
+      <p><strong>Why it happens:</strong> Your bank statements show sporadic deposits that don't align with your claimed income sources. Deposits are irregular or don't match your story.</p>
+      <p><strong>Fix:</strong> Provide detailed explanation (e.g., "Income deposited quarterly from my rental properties, not monthly"). Include supporting letters from income sources confirming payment schedule. Show the pattern across 24 months. <strong>Reapply or appeal?</strong> Reapply with clarification letters from income sources.</p>
+
+      <h3>8. Missing Supporting Documentation</h3>
+      <p><strong>Why it happens:</strong> You forgot to include required documents: pension letters, investment account statements, medical certificate (if required), or employment history.</p>
+      <p><strong>Fix:</strong> Use a detailed checklist from the consulate. Physically check each item off. Include one extra document of each type (e.g., two pension letters instead of one). <strong>Reapply or appeal?</strong> Reapply—this is entirely fixable.</p>
+
+      <h3>9. Fraud or Misrepresentation Suspicions</h3>
+      <p><strong>Why it happens:</strong> The consulate suspects your documents are fake, you've lied about your circumstances, or your identity is unclear.</p>
+      <p><strong>Fix:</strong> This is serious. Consult an immigration lawyer. You may face bans. A lawyer can help explain concerns and gather evidence of legitimacy. <strong>Reapply or appeal?</strong> Appeal with legal representation, or consult lawyer before attempting reapplication.</p>
+
+      <h3>10. Administrative/Procedural Errors</h3>
+      <p><strong>Why it happens:</strong> The consulate made a mistake in processing your application: lost documents, miscalculated income, wrong decision sent.</p>
+      <p><strong>Fix:</strong> Request clarification from the consulate. If there's a clear procedural error, appeal immediately. <strong>Reapply or appeal?</strong> Appeal—procedural errors are grounds for successful appeals.</p>
+
+      <div class="msv__alert msv__alert--warn">
+        <span class="msv__alert-icon">⚠️</span>
+        <p><strong>Critical:</strong> Some rejections can result in re-entry bans or make you ineligible for future visas. Before reapplying or appealing, understand if your rejection puts you at future risk. Consult an immigration lawyer if there's any mention of fraud or violation.</p>
+      </div>
+
+      <h2 style="margin-top: 3rem;">Should You Appeal or Reapply?</h2>
+
+      <p><strong>Appeal if:</strong></p>
+      <ul>
+        <li>You believe the decision is procedurally wrong (e.g., consulate misread your documents, made a calculation error).</li>
+        <li>New evidence has emerged that wasn't available during your original application.</li>
+        <li>You can identify a specific legal error in the consulate's reasoning.</li>
+        <li>You believe the consulate acted arbitrarily or didn't follow their own guidelines.</li>
+      </ul>
+
+      <p><strong>Reapply if:</strong></p>
+      <ul>
+        <li>Your documents were incomplete or poor quality—you can fix this.</li>
+        <li>You didn't document your income clearly—you can improve documentation.</li>
+        <li>Your circumstances have changed for the better since the rejection (e.g., your income has increased).</li>
+        <li>You've addressed the core issue that caused the rejection.</li>
+        <li>The rejection was based on something easily fixable (insurance, health certificate, etc.).</li>
+      </ul>
+
+      <h2 style="margin-top: 3rem;">The Appeal Process (Recurso de Reposición)</h2>
+
+      <p>Spain's primary appeal mechanism for visa rejections is the "recurso de reposición" (administrative reexamination). Here's how it works:</p>
+
+      <p><strong>Step 1: Deadline</strong> You have 30 days from receiving your rejection letter to file an appeal. This deadline is strict—missing it means you lose your right to appeal at this level.</p>
+
+      <p><strong>Step 2: Grounds for Appeal</strong> Your appeal must state specific grounds: procedural error, new evidence, legal misapplication, or arbitrary decision-making. Generic "please reconsider" appeals are rejected.</p>
+
+      <p><strong>Step 3: Submission</strong> Submit your appeal to the same consulate that issued your rejection. Include: original rejection letter, detailed written explanation (preferably 2–3 pages), specific grounds for appeal, and any new supporting documents.</p>
+
+      <p><strong>Step 4: Review Process</strong> The consulate re-examines your case. This typically takes 6–12 weeks. The original decision-maker may reconsider, or a superior reviews the case.</p>
+
+      <p><strong>Step 5: Appeal Decision</strong> You'll receive written notification of the appeal outcome. Most appeals are denied; successful appeals usually involved clear procedural errors.</p>
+
+      <p><strong>Step 6: Further Appeal (if needed)</strong> If your recurso de reposición is denied, you can file a "recurso de alzada" (higher-level appeal) with the Spanish Ministry of Inclusion. This is more formal and often requires legal representation.</p>
+
+      <div class="msv__alert msv__alert--info">
+        <span class="msv__alert-icon">💡</span>
+        <p><strong>Reality check:</strong> Most appeals fail. Consulates are resistant to overturning their own decisions. Appeals work best when there's a clear procedural error. For most rejections, reapplication with improved documentation succeeds faster than appealing.</p>
+      </div>
+
+      <h2 style="margin-top: 3rem;">Strengthening Your Reapplication</h2>
+
+      <p><strong>1. Address the Stated Reason Directly</strong> Your rejection letter identified a specific issue. Make that issue impossible to question in your reapplication. If it was income documentation, provide triple the evidence. If it was document quality, provide pristine scans.</p>
+
+      <p><strong>2. Expand Your Documentation Package</strong> Don't just resubmit what you had before. Add: (1) 24 months of bank statements instead of 12, (2) Written explanation of your income sources, (3) Letters from employers/clients confirming income, (4) Bank letters verifying your account in good standing, (5) Professional recommendation letters, (6) Detailed personal statement explaining your circumstances.</p>
+
+      <p><strong>3. Use Professional Help</strong> A visa specialist or lawyer can identify subtle issues in your original application you might not see. They often achieve reapproval when individuals don't. Cost is €300–€1,500 but often worth it.</p>
+
+      <p><strong>4. Allow Time Between Applications</strong> Don't reapply immediately. Wait 30–60 days. Use this time to strengthen your file, address the rejection reason, and potentially improve your circumstances. Immediate reapplication with the same weak materials will fail again.</p>
+
+      <p><strong>5. Request Pre-Approval for Key Items</strong> Before reapplying, contact the consulate and ask them to pre-approve your insurance (if DNV), health certificate format, or other items that caused issues. Get written confirmation they're acceptable.</p>
+
+      <p><strong>6. Frame Your Cover Letter Carefully</strong> Include a brief (1 page) explanation addressing the rejection reason. Don't be defensive. Clearly explain how you've addressed the issue. "In my original application, income documentation was unclear. In this reapplication, I provide 24 months of statements plus letters from my financial institutions clarifying the monthly average of €X,XXX."</p>
+
+      <p><strong>7. Double-Check Everything</strong> Have someone else review your application before submission. Check: document organization, completeness (use a checklist), scans readability, signatures/dates, consistency across documents.</p>
+
+      <h2 style="margin-top: 3rem;">What to Do While Waiting for an Appeal Decision</h2>
+      <ul>
+        <li><strong>Begin strengthening your documentation:</strong> Start gathering documents for a potential reapplication immediately.</li>
+        <li><strong>Address the core issue:</strong> If your income was questioned, work on increasing it or finding better documentation. If background was an issue, explore options for resolution.</li>
+        <li><strong>Consult a lawyer:</strong> If your rejection mentions fraud, background issues, or legal problems, get professional legal advice immediately.</li>
+        <li><strong>Don't travel to Spain:</strong> While your visa is rejected, entering Spain could result in complications.</li>
+        <li><strong>Monitor your email:</strong> The consulate may request additional information. Respond immediately to any contact.</li>
+        <li><strong>Continue building your case:</strong> Every day of delayed application is another day you can document your stability and circumstances.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="msv__section msv__section--cream">
+    <div class="msv__container--narrow">
+      <div class="msv__alert msv__alert--info" style="margin-bottom: 2.5rem;">
+        <span class="msv__alert-icon">🎯</span>
+        <p><strong>Rejected and unsure of your next move?</strong> Our visa specialists analyze your rejection, determine whether to appeal or reapply, and help you strengthen your case. <a href="https://dashboard.platinumlegalspain.com/nlv">Book a consultation</a> to discuss your specific situation with an expert.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="msv__section">
+    <div class="msv__container--narrow">
+      <h2 style="margin-bottom: 2rem;">Frequently Asked Questions</h2>
+      <div class="msv__faq-list">
+        <details>
+          <summary>What are the most common reasons for Spain visa rejections?</summary>
+          <div class="msv__faq-answer">
+            <p>Top rejection reasons: (1) Insufficient income documentation or unclear income source, (2) Poor quality or missing documents, (3) Income below minimum threshold, (4) Background check issues (criminal records, overstay history), (5) Insurance not recognized or missing copay clause, (6) Insufficient ties to home country (relocation risk), (7) Incomplete applications, (8) Health issues that make you ineligible, (9) Immigration fraud suspicions, (10) Timing (application during government office closures).</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Should you appeal a visa rejection or reapply?</summary>
+          <div class="msv__faq-answer">
+            <p>Appeal if: (1) You believe the decision is procedurally wrong, (2) New evidence has emerged, (3) The rejection appears arbitrary. Reapply if: (1) You've addressed the core deficiency, (2) You have stronger documentation, (3) The rejection is based on income or document quality (fixable issues). Appeal timelines are 30 days; reapplication can be submitted anytime. Consult an immigration lawyer to determine your best path.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>What is the appeal process (recurso de reposición)?</summary>
+          <div class="msv__faq-answer">
+            <p>Recurso de reposición is a formal administrative appeal: (1) Submit appeal within 30 days of rejection, (2) Include grounds for appeal (procedural error, new evidence, legal misapplication), (3) File with the consulate that issued the rejection, (4) Include original rejection letter and detailed explanation, (5) Decision typically comes within 2–3 months, (6) If denied, you can appeal further (recurso de alzada) or reapply. Appeals rarely overturn rejections unless there's clear procedural error.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>How long does it take to get an appeal decision?</summary>
+          <div class="msv__faq-answer">
+            <p>Appeal (recurso de reposición) decisions typically take 6–12 weeks from submission. Administrative appeals move slowly. If you want faster resolution, reapplication often gets a decision faster (4–8 weeks) than appealing. However, appeals are free; reapplication costs money and time preparing documents again. Many people pursue both simultaneously (appeal while preparing reapplication).</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>What should you do while waiting for an appeal decision?</summary>
+          <div class="msv__faq-answer">
+            <p>While appealing: (1) Strengthen your documentation for a potential reapplication, (2) Address the core issue identified in your rejection, (3) Gather additional supporting documents, (4) Consider consulting an immigration lawyer about your specific case, (5) Don't travel to Spain while your visa is rejected, (6) Maintain your income/financial position, (7) Continue building your file in case you need to reapply, (8) Monitor email for consulate requests for additional information.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>How do you strengthen a reapplication after rejection?</summary>
+          <div class="msv__faq-answer">
+            <p>To strengthen reapplication: (1) Address the stated rejection reason directly with new documentation, (2) If income was questioned, provide 24 months of bank statements instead of 12, (3) If documents were poor quality, resubmit with high-quality scans, (4) Include a cover letter explaining changes or clarifications, (5) Get professional help from an immigration specialist, (6) If background was issue, obtain updated clearance, (7) Include employer/client letters confirming income, (8) Get bank letters verifying consistency of income deposits, (9) Provide detailed explanation of income sources, (10) Wait 30–60 days before reapplying to show consideration of feedback.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="msv__section msv__section--dark">
+    <div class="msv__container--narrow">
+      <h2 style="text-align: center; margin-bottom: 1rem;">Get Expert Guidance on Your Rejection</h2>
+      <p style="text-align: center; margin-bottom: 2rem;">Don't navigate this alone. Our specialists help analyze rejections and craft successful appeals or reapplications.</p>
+      <div class="msv__btn-group" style="justify-content: center;">
+        <a href="https://dashboard.platinumlegalspain.com/nlv" class="msv__btn msv__btn--primary">Book Expert Consultation →</a>
+        <a href="/compare-spain-visas.html" class="msv__btn msv__btn--outline-white">Explore Other Visas</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="msv__section">
+    <div class="msv__container--narrow">
+      <h2 style="margin-bottom: 2rem;">Related Guides</h2>
+      <div class="msv__related">
+        <a href="/nlv-pillar-page.html" class="msv__related-card">
+          <div class="msv__related-icon">📋</div>
+          <span class="msv__related-title">NLV Guide</span>
+          <span class="msv__related-desc">Complete application requirements and eligibility.</span>
+        </a>
+        <a href="/dnv-pillar-page.html" class="msv__related-card">
+          <div class="msv__related-icon">💼</div>
+          <span class="msv__related-title">Digital Nomad Visa</span>
+          <span class="msv__related-desc">Remote work visa complete guide.</span>
+        </a>
+        <a href="/blog-how-long-does-nlv-take.html" class="msv__related-card">
+          <div class="msv__related-icon">⏱️</div>
+          <span class="msv__related-title">Processing Timelines</span>
+          <span class="msv__related-desc">How long visa applications actually take.</span>
+        </a>
+        <a href="/compare-spain-visas.html" class="msv__related-card">
+          <div class="msv__related-icon">⚖️</div>
+          <span class="msv__related-title">Compare All Visas</span>
+          <span class="msv__related-desc">View all Spain residency options.</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="msv__section msv__section--cream">
+    <div class="msv__container--narrow">
+    </div>
+  </section>
+</div>
+
+<!-- FRAGMENT_END -->
+</main>
+
+
+<!-- ═══════════════════════════════════════════════════
+     SITE FOOTER
+     ═══════════════════════════════════════════════════ -->
+<footer class="msv-footer" role="contentinfo">
+
+  <div class="msv-footer__top">
+
+    <!-- Brand column -->
+    <div class="msv-footer__brand">
+      <a href="/" class="msv-footer__logo" aria-label="My Spanish Visa"><img src="/assets/images/msv-logo-white.png" alt="My Spanish Visa" height="40" style="display:block;"></a>
+      <p class="msv-footer__tagline">
+        Specialist Spain visa &amp; residency guidance for English-speaking foreigners.
+        A service of Platinum Legal Spain.
+      </p>
+      <div class="msv-footer__trust">
+        <span class="msv-footer__trust-item">All English. No barriers.</span>
+        <span class="msv-footer__trust-item">Solicitors &amp; immigration specialists</span>
+        <span class="msv-footer__trust-item">100% online process</span>
+      </div>
+    </div>
+
+    <!-- Visas column -->
+    <div>
+      <div class="msv-footer__col-title">Visas</div>
+      <ul class="msv-footer__links">
+        <li><a href="/nlv-pillar-page.html">Non-Lucrative Visa</a></li>
+        <li><a href="/dnv-pillar-page.html">Digital Nomad Visa</a></li>
+        <li><a href="/student-visa-pillar-page.html">Student Visa</a></li>
+        <li><a href="/spanish-residency-renewal.html">Visa Renewals</a></li>
+        <li><a href="/best-visa-move-to-spain.html">Compare All Visas</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/nlv">Apply: NLV</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/dnv">Apply: DNV</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/student-visa">Apply: Student Visa</a></li>
+      </ul>
+    </div>
+
+    <!-- Resources column -->
+    <div>
+      <div class="msv-footer__col-title">Resources</div>
+      <ul class="msv-footer__links">
+        <li><a href="/blog-index.html">Blog &amp; Guides</a></li>
+        <li><a href="/move-to-spain.html">Move to Spain Guide</a></li>
+        <li><a href="/visa-eligibility-quiz.html">Eligibility Quiz</a></li>
+        <li><a href="/spain-visa-options.html">Document Checklists</a></li>
+        <li><a href="/spain-visa-options.html">Visa Requirements</a></li>
+        <li><a href="/nie-number-spain.html">NIE Number Guide</a></li>
+        <li><a href="/tie-card-spain.html">TIE Card Guide</a></li>
+      </ul>
+    </div>
+
+    <!-- Company column -->
+    <div>
+      <div class="msv-footer__col-title">Company</div>
+      <ul class="msv-footer__links">
+        <li><a href="/about-us.html">About Us</a></li>
+        <li><a href="/testimonials.html">Client Reviews</a></li>
+        <li><a href="/why-choose-us.html">Why Choose Us</a></li>
+        <li><a href="/contact-us.html">Contact</a></li>
+        <li><a href="https://www.platinumlegalspain.com" rel="noopener">Platinum Legal Spain</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/nlv">Client Portal</a></li>
+      </ul>
+    </div>
+
+  </div><!-- /.msv-footer__top -->
+
+  <div class="msv-footer__bottom">
+    <div class="msv-footer__bottom-inner">
+      <p class="msv-footer__disclaimer">
+        <strong style="color:rgba(255,255,255,0.5);">Disclaimer:</strong>
+        My Spanish Visa provides visa processing support and is not a law firm. Content on this site is for informational purposes only and does not constitute legal advice. Immigration rules change frequently — always verify requirements with official sources or a qualified specialist. My Spanish Visa is a trading name of Platinum Legal Spain.
+      </p>
+      <span class="msv-footer__copyright">© 2026 My Spanish Visa. All rights reserved.</span>
+    </div>
+  </div>
+
+</footer>
+
+</body>
+</html>
