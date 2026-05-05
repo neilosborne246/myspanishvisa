@@ -1,58 +1,7 @@
-# ============================================================
-# My Spanish Visa — .gitignore
-# ============================================================
-
-# ── macOS system files ──────────────────────────────────────
+.fuse_hidden*
 .DS_Store
-.AppleDouble
-.LSOverride
-._*
-
-# ── Python scripts (dev/audit tools — not website files) ────
-*.py
-__pycache__/
-*.pyc
-*.pyo
-
-# ── Markdown files (planning docs) ──────────────────────────
-# Keep README.md if you add one later
-*.md
-!README.md
-
-# ── Environment & secrets ───────────────────────────────────
-.env
-.env.*
-.env.local
-.env.development
-.env.staging
-.env.production
-
-# ── Node.js (if ever used) ──────────────────────────────────
-node_modules/
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-package-lock.json
-
-# ── Planning & reference documents (not website files) ──────
-*.docx
-*.xlsx
-Blog Posts/
-PDF_GENERATION_SUMMARY.txt
-
-# ── Development reference images (not used on site) ─────────
-# Numbered screenshots/reference images
-1.png
-2.png
-3.png
-4.png
-
-# ── Editor & IDE files ──────────────────────────────────────
-.vscode/
-.idea/
+.Spotlight-V100
+.Trashes
+*.tmp
 *.swp
-*.swo
-*~
-
-# ── Git internals (just in case) ────────────────────────────
-*.orig
+Thumbs.db

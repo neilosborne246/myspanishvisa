@@ -1,0 +1,93 @@
+================================================================================
+MY SPANISH VISA - LEAD MAGNET PDF CHECKLISTS
+Generated: 2026-04-13
+================================================================================
+
+COMPLETED DELIVERABLES
+================================================================================
+
+Three professional, branded PDF checklists have been created for My Spanish 
+Visa (www.myspanishvisa.com):
+
+1. nlv-document-checklist.pdf (7.3 KB, 5 pages)
+   - Non-Lucrative Visa Document Checklist 2026
+   - Comprehensive checklist for NLV applicants
+   - Covers: pre-application docs, financial requirements, post-approval steps
+   - Includes: IPREM calculations, family adjustments, important reminders
+
+2. dnv-document-checklist.pdf (7.5 KB, 5 pages)
+   - Digital Nomad Visa Document Checklist 2026
+   - Complete checklist for DNV applicants
+   - Covers: employment documentation, personal documents, after-approval
+   - Includes: Beckham Law information, income requirements, pro tips
+
+3. moving-to-spain-checklist.pdf (7.8 KB, 5 pages)
+   - Moving to Spain Checklist 2026
+   - Step-by-step relocation guide
+   - Timeline-based: 3-6 months, 1-3 months, first 30 days, ongoing
+   - Includes: visa research, logistics, post-arrival setup, yearly reminders
+
+DESIGN FEATURES
+================================================================================
+
+✓ Professional, premium layout with generous whitespace
+✓ MSV brand colors: Navy (#0c1930), Red (#be0011), Cream (#f8f7f4)
+✓ Navy header bar on each page with red underline
+✓ Clean typography: Helvetica font family
+✓ Checkbox squares (☐) before each item
+✓ Red-underlined section headers
+✓ Footer on all pages: "www.myspanishvisa.com | © 2026 My Spanish Visa"
+✓ Page numbers on all pages
+✓ A4 page size, 5 pages each (meets 3-5 page requirement)
+✓ Well-organized sections with subsection headings
+✓ Color-coded text: Navy headings, Black body, Muted grey secondary
+
+CONTENT COVERAGE
+================================================================================
+
+NLV Checklist:
+  • Valid passport and passport photos
+  • Visa application form and accommodation proof
+  • Health insurance and criminal records
+  • Medical certificate and financial documentation
+  • Post-approval: visa collection, TIE card, padrón registration, bank setup
+
+DNV Checklist:
+  • Employment contracts and proof of freelance activity
+  • Income verification (€33,150/year minimum)
+  • Personal documentation (health insurance, accommodation, etc.)
+  • Post-approval: TIE, padrón, Social Security registration
+  • Beckham Law eligibility and application timing
+
+Moving Checklist:
+  • 3-6 months before: visa research, health insurance, document preparation
+  • 1-3 months before: accommodation, shipping, bank setup, utilities
+  • First 30 days: padrón, TIE card, bank account, health registration
+  • Ongoing: Beckham Law, tax registration, visa renewal reminders
+
+TECHNICAL DETAILS
+================================================================================
+
+Generated using Python + ReportLab
+File: generate_pdfs.py
+
+The Python script creates professional layouts with:
+  • SimpleDocTemplate for A4 page structure
+  • Custom ParagraphStyles for typography hierarchy
+  • Table-based layouts for checklists and structure
+  • Page number and footer callbacks
+  • Color-coded HTML text within paragraphs
+  • Professional spacing and padding throughout
+
+All PDFs are valid PDF 1.4 documents, fully readable and printable.
+
+FILES LOCATION
+================================================================================
+/sessions/optimistic-youthful-johnson/mnt/My Spanish Visa/
+  ├── nlv-document-checklist.pdf
+  ├── dnv-document-checklist.pdf
+  ├── moving-to-spain-checklist.pdf
+  └── generate_pdfs.py (script used to create PDFs)
+
+These PDFs are ready to deploy as lead magnets on www.myspanishvisa.com
+================================================================================
