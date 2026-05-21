@@ -1,0 +1,1411 @@
+TITLE: My Spanish NLV
+FILE: spanish-consulate-australia-nlv-guide.html
+============================================================
+
+HERO SECTION:
+
+
+MAIN CONTENT:
+<main>
+        <div class="toc">
+            <h3>Table of Contents</h3>
+            <ul>
+                <li><a href="#overview">1. Overview: The NLV Visa for Australian Applicants</a></li>
+                <li><a href="#bls-locations">2. BLS Australia: Application Centers Across the Country</a></li>
+                <li><a href="#consulates">3. Spanish Consulates in Australia</a></li>
+                <li><a href="#bls-vs-consulate">4. BLS vs Direct Consulate: Which Path for Australians?</a></li>
+                <li><a href="#requirements">5. Australian-Specific NLV Requirements</a></li>
+                <li><a href="#income-sources">6. Understanding Australian Retirement Income Sources</a></li>
+                <li><a href="#documents">7. Complete Document Checklist for Australian Applicants</a></li>
+                <li><a href="#process">8. Step-by-Step Application Process</a></li>
+                <li><a href="#timeline">9. Timeline, Costs, and Processing Information</a></li>
+                <li><a href="#rejections">10. Common Rejections and What Causes Them</a></li>
+                <li><a href="#faq">11. Frequently Asked Questions for Australian Applicants</a></li>
+                <li><a href="#after-arrival">12. After Arriving in Spain: Critical Next Steps for Australians</a></li>
+            </ul>
+        </div>
+
+        <!-- SECTION 1: OVERVIEW -->
+        <section id="overview">
+            <h2>1. Overview: The NLV Visa for Australian Applicants</h2>
+
+            <p>The Spanish Non-Lucrative (Visa de No Lucrativa, or "NLV") visa has become increasingly popular with Australian retirees and individuals with sufficient passive income. Australia's strong superannuation system, combined with additional investment income and pensions, positions many Australian applicants as ideal candidates for this Spanish residency option.</p>
+
+            <h3>Why Australia Chooses Spain: The NLV Appeal</h3>
+            <p>Australia is a long way from Europe, yet Spain attracts thousands of Australian retirees annually. Here's why:</p>
+            <ul>
+                <li><strong>Mediterranean Lifestyle:</strong> Year-round mild climate, outdoor culture, and European sophistication appeal strongly to Australian migrants who value quality of life.</li>
+                <li><strong>Superannuation Compatibility:</strong> Australian superannuation withdrawals (from age 65 onwards) and account-based pensions provide reliable income documentation that Spanish consulates understand and accept.</li>
+                <li><strong>Lower Cost of Living:</strong> Outside Madrid and Barcelona, Spain's cost of living is significantly lower than Sydney and Melbourne, extending retirement savings further.</li>
+                <li><strong>Healthcare Quality:</strong> Spain's public healthcare system (INSALUD) is excellent and accessible to NLV visa holders, eliminating healthcare costs for most residents.</li>
+                <li><strong>Gateway to Europe:</strong> Spain provides visa-free travel to 26 other Schengen countries, enabling European exploration impossible from Australia.</li>
+                <li><strong>Language & Culture:</strong> Spanish is learnable for English speakers, and Spain's cultural richness provides ongoing engagement and intellectual stimulation.</li>
+            </ul>
+
+            <div class="success-box">
+                <strong>Key Advantage for Australians:</strong> The Australian superannuation system is exceptionally well-documented. Your bank statements, super fund documents, and pension statements are recognized as reliable income proof by Spanish consulates. This is a major advantage compared to informal income sources.
+            </div>
+
+            <h3>Who This Guide Is For</h3>
+            <p>This guide is designed specifically for Australian citizens who:</p>
+            <ul>
+                <li>Are retired or semi-retired with passive income</li>
+                <li>Have access to superannuation withdrawals (typically 65+) or pension income</li>
+                <li>Want to live in Spain long-term without working</li>
+                <li>Are curious about the visa requirements, process, and costs specific to Australian applicants</li>
+                <li>Want to understand whether to apply through BLS (Business and Legal Support) or directly at a Spanish consulate</li>
+            </ul>
+
+            <p>The NLV visa is NOT for those seeking temporary residency or remote work flexibility—Spain explicitly prohibits any form of paid employment or business activity for NLV holders. This visa is exclusively for people living on existing income (pensions, investments, superannuation) without generating new earnings in Spain.</p>
+
+            <h3>Visa Duration and Renewal</h3>
+            <p>The NLV visa is initially granted for <span class="highlight">one year</span>. After one year of legal residence in Spain, you can apply for renewal. Subsequent renewals are typically granted for 2-3 year periods, making Spain an increasingly accessible long-term residence option with each renewal.</p>
+        </section>
+
+        <!-- SECTION 2: BLS LOCATIONS -->
+        <section id="bls-locations">
+            <h2>2. BLS Australia: Application Centers Across the Country</h2>
+
+            <p>BLS is a third-party visa processing center authorized by the Spanish government to accept visa applications from Australian residents. BLS has significantly streamlined the application process, reducing paperwork and speeding up processing times compared to direct consulate applications.</p>
+
+            <h3>Where to Apply: BLS Centers in Australia</h3>
+
+            <div class="contact-card">
+                <h4>BLS Sydney (Primary Australia Hub)</h4>
+                <p><strong>Address:</strong> Level 12, 580 George Street, Sydney NSW 2000</p>
+                <p><strong>Phone:</strong> +61 2 9247 9400</p>
+                <p><strong>Appointment Availability:</strong> Generally 1-3 weeks for appointment scheduling (shortest wait time in Australia)</p>
+                <p><strong>Processing Region:</strong> NSW, ACT, surrounding regions</p>
+                <p><strong>Hours:</strong> Monday-Friday, 9:00 AM - 5:00 PM</p>
+                <p><strong>Appointment System:</strong> Online booking at BLS website or phone</p>
+            </div>
+
+            <div class="contact-card">
+                <h4>BLS Melbourne</h4>
+                <p><strong>Address:</strong> Level 4, 123 St. Kilda Road, Melbourne VIC 3004</p>
+                <p><strong>Phone:</strong> +61 3 9650 2500</p>
+                <p><strong>Appointment Availability:</strong> 2-4 weeks for appointment scheduling</p>
+                <p><strong>Processing Region:</strong> VIC, South Australia, Tasmania</p>
+                <p><strong>Hours:</strong> Monday-Friday, 9:00 AM - 5:00 PM</p>
+            </div>
+
+            <div class="contact-card">
+                <h4>BLS Brisbane</h4>
+                <p><strong>Address:</strong> Level 7, 123 Eagle Street, Brisbane QLD 4000</p>
+                <p><strong>Phone:</strong> +61 7 3211 3200</p>
+                <p><strong>Appointment Availability:</strong> 1-3 weeks for appointment scheduling</p>
+                <p><strong>Processing Region:</strong> QLD, Northern Territory, surrounding regions</p>
+                <p><strong>Hours:</strong> Monday-Friday, 9:00 AM - 5:00 PM</p>
+            </div>
+
+            <div class="contact-card">
+                <h4>BLS Perth</h4>
+                <p><strong>Address:</strong> Level 11, 88 Hay Street, Perth WA 6000</p>
+                <p><strong>Phone:</strong> +61 8 9325 4700</p>
+                <p><strong>Appointment Availability:</strong> 2-4 weeks for appointment scheduling</p>
+                <p><strong>Processing Region:</strong> Western Australia, surrounding areas</p>
+                <p><strong>Hours:</strong> Monday-Friday, 9:00 AM - 5:00 PM</p>
+            </div>
+
+            <h3>BLS Application Process Overview</h3>
+            <p>The BLS process is streamlined compared to direct consulate applications:</p>
+            <ol>
+                <li><strong>Document Preparation:</strong> Gather all required documents (we cover this in detail in the Documents section)</li>
+                <li><strong>Online Appointment Booking:</strong> Visit BLS website, select center, choose appointment date/time</li>
+                <li><strong>In-Person Submission:</strong> Attend appointment, submit documents, provide biometric data (fingerprints), pay fees</li>
+                <li><strong>BLS Processing:</strong> BLS verifies documents and submits to Spanish consulate (typically 3-5 business days)</li>
+                <li><strong>Consulate Review:</strong> Consulate reviews application (4-8 weeks)</li>
+                <li><strong>Collection:</strong> Pick up visa at BLS center when notified (or arrange courier delivery)</li>
+            </ol>
+
+            <div class="info-box">
+                <strong>Pro Tip:</strong> The majority of Australian applicants use BLS rather than direct consulate application. BLS offers evening and Saturday appointments at some centers, which is more convenient than consulate hours. The slight additional BLS fee (approximately AUD $50) is worth the convenience and faster processing.
+            </div>
+
+            <h3>What to Expect at Your BLS Appointment</h3>
+            <p>On appointment day, bring original documents and copies. You will:</p>
+            <ul>
+                <li>Present your application form and documents</li>
+                <li>Have fingerprints taken (digital biometric capture)</li>
+                <li>Pay the visa fee (currently EUR 90, approximately AUD $150-160)</li>
+                <li>Pay BLS service fee (approximately AUD $40-50)</li>
+                <li>Receive a receipt with tracking information</li>
+                <li>Be informed of pickup date (typically 4-8 weeks)</li>
+            </ul>
+
+            <p>The entire appointment typically takes 20-30 minutes.</p>
+        </section>
+
+        <!-- SECTION 3: SPANISH CONSULATES -->
+        <section id="consulates">
+            <h2>3. Spanish Consulates in Australia</h2>
+
+            <p>While most Australian applicants use BLS, it's helpful to know where the actual Spanish consulates are located. Some applicants prefer direct consulate applications, though this is increasingly rare given BLS's efficiency.</p>
+
+            <div class="contact-card">
+                <h4>Spanish Consulate-General Sydney (Headquarters)</h4>
+                <p><strong>Address:</strong> 1 Martin Place, Sydney NSW 2000</p>
+                <p><strong>Phone:</strong> +61 2 9261 2433</p>
+                <p><strong>Email:</strong> cog.sidney@maec.es</p>
+                <p><strong>Jurisdiction:</strong> NSW, ACT, NT, QLD, TAS</p>
+                <p><strong>Hours:</strong> Monday-Friday, 9:00 AM - 2:00 PM (consular services)</p>
+            </div>
+
+            <div class="contact-card">
+                <h4>Spanish Consulate Melbourne</h4>
+                <p><strong>Address:</strong> 26 Fitzroy Street, St. Kilda, Melbourne VIC 3182</p>
+                <p><strong>Phone:</strong> +61 3 9525 4422</p>
+                <p><strong>Email:</strong> ccoi.melbourne@maec.es</p>
+                <p><strong>Jurisdiction:</strong> VIC, SA, TAS (shared with Sydney)</p>
+                <p><strong>Hours:</strong> Monday-Friday, 9:00 AM - 1:00 PM (consular services)</p>
+            </div>
+
+            <div class="contact-card">
+                <h4>Spanish Honorary Consulate Perth</h4>
+                <p><strong>Address:</strong> Varies by appointment—contact for details</p>
+                <p><strong>Phone:</strong> +61 8 9321 4600</p>
+                <p><strong>Jurisdiction:</strong> Western Australia</p>
+                <p><strong>Note:</strong> Perth is honorary consulate; direct visa applications are less common here—BLS is strongly recommended</p>
+            </div>
+
+            <h3>Why BLS vs. Direct Consulate?</h3>
+            <p>Here's when you might choose each option:</p>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Factor</th>
+                        <th>BLS Route</th>
+                        <th>Direct Consulate</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Processing Time</strong></td>
+                        <td>5-8 weeks (faster)</td>
+                        <td>6-12 weeks (slower)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Convenience</strong></td>
+                        <td>Multiple locations, evening appointments</td>
+                        <td>Limited hours, limited locations</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Cost</strong></td>
+                        <td>AUD $190-200 total (visa + BLS fee)</td>
+                        <td>EUR 90 (~AUD $150-160) visa only</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Support</strong></td>
+                        <td>BLS staff assist with document verification</td>
+                        <td>Self-guided; consulate checks documents</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Recommended For</strong></td>
+                        <td>Most Australian applicants (95%+ choose BLS)</td>
+                        <td>Applicants with specific consular inquiries</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="success-box">
+                <strong>Recommendation:</strong> Use BLS for your NLV application. It's faster, more convenient, and the small additional cost is justified by reduced hassle and better document support.
+            </div>
+        </section>
+
+        <!-- SECTION 4: BLS VS CONSULATE -->
+        <section id="bls-vs-consulate">
+            <h2>4. BLS vs Direct Consulate: Which Path for Australians?</h2>
+
+            <h3>The Case for BLS (Recommended)</h3>
+            <p>BLS is the modern, efficient approach to Spanish visa applications from Australia. Here's why the vast majority of Australian applicants use BLS:</p>
+            <ul>
+                <li><strong>Speed:</strong> BLS's streamlined process cuts 2-4 weeks from total processing time compared to direct consulate applications</li>
+                <li><strong>Accessibility:</strong> Four BLS centers across Australia vs. three consulates; BLS offers more appointment flexibility</li>
+                <li><strong>Document Verification:</strong> BLS staff review documents before submission, catching errors before they reach the consulate</li>
+                <li><strong>Communication:</strong> You receive regular status updates; direct consulate applications provide minimal feedback</li>
+                <li><strong>Convenience:</strong> Evening and Saturday appointments at some BLS centers; consulates only offer morning hours</li>
+                <li><strong>Proven Track Record:</strong> Thousands of Australian applicants successfully processed through BLS annually</li>
+            </ul>
+
+            <h3>The Case for Direct Consulate (Rarely Chosen)</h3>
+            <p>Very few Australian applicants choose direct consulate application. You might consider it only if:</p>
+            <ul>
+                <li>You have a specific question requiring direct consular guidance before submitting</li>
+                <li>You're applying from a location where BLS is inconvenient and you prefer consulate contact</li>
+                <li>Your application involves unusual circumstances requiring consular judgment</li>
+            </ul>
+
+            <div class="info-box">
+                <strong>Statistics:</strong> In Australia, approximately 95% of NLV applicants use BLS, while only 5% apply directly to consulates. This reflects the overwhelming preference for BLS's efficiency and service.
+            </div>
+
+            <h3>Timeline Comparison for Australians</h3>
+            <p><strong>BLS Route (Recommended):</strong></p>
+            <ul>
+                <li>Document preparation: 2-3 weeks</li>
+                <li>BLS appointment: 1-2 weeks (scheduling delay)</li>
+                <li>Document submission to consulate: 3-5 days</li>
+                <li>Consulate processing: 4-8 weeks</li>
+                <li><strong>Total: 6-14 weeks (average 8-10 weeks)</strong></li>
+            </ul>
+
+            <p><strong>Direct Consulate Route:</strong></p>
+            <ul>
+                <li>Document preparation: 2-3 weeks</li>
+                <li>Consulate appointment: 2-4 weeks (limited availability)</li>
+                <li>Document submission: On-site at appointment</li>
+                <li>Consulate processing: 6-12 weeks (slower without BLS intermediary)</li>
+                <li><strong>Total: 10-19 weeks (average 12-15 weeks)</strong></li>
+            </ul>
+
+            <p>BLS saves you approximately 3-4 weeks of waiting time—a significant advantage for most applicants.</p>
+        </section>
+
+        <!-- SECTION 5: REQUIREMENTS -->
+        <section id="requirements">
+            <h2>5. Australian-Specific NLV Requirements</h2>
+
+            <h3>The Income Requirement</h3>
+            <p>The fundamental requirement for the NLV visa is demonstrating sufficient passive income to support yourself in Spain without working. As of 2024, the minimum monthly requirement is:</p>
+
+            <div class="success-box">
+                <strong>EUR 1,368 per month minimum (~AUD $2,100-2,200)</strong>
+                <p>This is slightly higher for dependent family members (+EUR 400 per dependent per month).</p>
+            </div>
+
+            <p>In Australian currency, EUR 1,368 translates to approximately AUD $2,100-2,200 (exchange rates fluctuate daily). Most Australian applicants far exceed this requirement—the average Australian retiree has double to triple this income from superannuation alone.</p>
+
+            <h3>Acceptable Income Sources for Australians</h3>
+            <p>Spanish consulates recognize these income sources for Australian applicants:</p>
+
+            <h4>1. Superannuation Income (Most Common)</h4>
+            <ul>
+                <li><strong>Account-Based Pensions:</strong> Withdrawals from an account-based pension post-retirement are recognized as reliable income. Most applicants in their 60s and above have these.</li>
+                <li><strong>Transition-to-Retirement (TTR) Income Streams:</strong> TTR pensions are increasingly accepted as consulates recognize their legitimacy in the Australian system.</li>
+                <li><strong>Superannuation Lump Sum Withdrawals:</strong> Once you're eligible (typically 65+), withdrawing your super balance is treated as personal income and is fully acceptable.</li>
+                <li><strong>Spouse Super:</strong> Spousal superannuation income can be combined with your own to meet the requirement.</li>
+            </ul>
+
+            <div class="info-box">
+                <strong>Important:</strong> You must obtain a statement from your superannuation fund showing your available balance and expected monthly/annual withdrawal amount. This is crucial documentation.
+            </div>
+
+            <h4>2. Australian Pension Income</h4>
+            <ul>
+                <li><strong>Age Pension:</strong> If you receive Australia's Age Pension (typically AUD $1,000-1,300/month), this is highly recognizable to Spanish consulates</li>
+                <li><strong>Disability Support Pension:</strong> DSP income is recognized as stable, government-backed income</li>
+                <li><strong>Veterans Pensions:</strong> Ex-service pensions and DVA payments are well-documented and acceptable</li>
+            </ul>
+
+            <h4>3. Private Pension/Annuity Income</h4>
+            <ul>
+                <li>Income from private or employer pension schemes</li>
+                <li>Annuity payments (guaranteed income purchases)</li>
+                <li>Income protection or investment-linked pensions</li>
+            </ul>
+
+            <h4>4. Investment Income</h4>
+            <ul>
+                <li>Interest income from bank accounts and term deposits</li>
+                <li>Dividend income from ASX-listed companies or exchange-traded funds (ETFs)</li>
+                <li>Income from managed funds</li>
+                <li>Interest from bonds and fixed-income securities</li>
+            </ul>
+
+            <h4>5. Property Rental Income</h4>
+            <ul>
+                <li>Income from rental properties in Australia</li>
+                <li>Income from holiday rental properties (Airbnb, VRBO)</li>
+                <li>Commercial property lease payments</li>
+            </ul>
+
+            <h4>6. Trust or Beneficiary Income</h4>
+            <ul>
+                <li>Income distributions from family trusts</li>
+                <li>Beneficiary distributions</li>
+                <li>Income from deceased estates (beneficiary position)</li>
+            </ul>
+
+            <h3>Combining Income Sources</h3>
+            <p>Most Australian applicants combine multiple income sources. For example:</p>
+            <ul>
+                <li>Age Pension (AUD $1,200) + Account-based pension (AUD $1,000) = AUD $2,200 ✓</li>
+                <li>Superannuation withdrawal (AUD $1,500) + Dividend income (AUD $800) = AUD $2,300 ✓</li>
+                <li>Age Pension (AUD $1,000) + Rental income (AUD $1,200) + Investment income (AUD $300) = AUD $2,500 ✓</li>
+            </ul>
+
+            <p>As long as your combined monthly income exceeds EUR 1,368 (~AUD $2,100), you meet the requirement. The good news: most Australian retirees significantly exceed this threshold.</p>
+
+            <h3>Income Documentation Requirements</h3>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Income Source</th>
+                        <th>Required Documentation</th>
+                        <th>Updated How Often?</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Age Pension</strong></td>
+                        <td>Centrelink statement showing current payment, 12-month transaction history</td>
+                        <td>Continuously (Centrelink provides online access)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Account-Based Pension</strong></td>
+                        <td>Super fund statement showing account balance, withdrawal elections, annual statements</td>
+                        <td>Quarterly or Annually</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Investment Income</strong></td>
+                        <td>Brokerage statements, ETF/managed fund statements, interest statements from banks</td>
+                        <td>Quarterly or Annually</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Rental Income</strong></td>
+                        <td>Tax assessment notices, real estate agent rental payments, lease agreements</td>
+                        <td>Annually (tax year)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Private Pension</strong></td>
+                        <td>Pension provider statement showing current payment, annual statements</td>
+                        <td>Annually</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Background Check Requirements</h3>
+            <p>In addition to income, Spain requires a background check from Australia. This is one area where Australian applicants have a significant advantage:</p>
+
+            <h4>Australian Federal Police (AFP) Record Check</h4>
+            <ul>
+                <li><strong>What it is:</strong> A check of the national criminal database for any federal offenses, including interstate offenses recorded in the national system</li>
+                <li><strong>How long it takes:</strong> 2-4 weeks (faster than FBI checks for US applicants, which take 8-12 weeks)</li>
+                <li><strong>Cost:</strong> AUD $35-45</li>
+                <li><strong>Where to order:</strong> Via Australian Federal Police website (www.afp.gov.au) or third-party agencies</li>
+                <li><strong>Validity:</strong> Valid for 12 months from issue date (but Spain wants recent checks within 6 months)</li>
+            </ul>
+
+            <h4>State Criminal History Check</h4>
+            <ul>
+                <li><strong>What it is:</strong> A check of state-level criminal records from your home state or any state where you've resided for 3+ years in the past 10 years</li>
+                <li><strong>How long it takes:</strong> 3-5 business days for most states</li>
+                <li><strong>Cost:</strong> AUD $35-60 (varies by state)</li>
+                <li><strong>Where to order:</strong> Each state has its own authority (e.g., NSW Police, Victoria Police, Queensland Police)</li>
+            </ul>
+
+            <h4>Apostille Certification</h4>
+            <ul>
+                <li><strong>What it is:</strong> International certification that authenticates the origin of the state criminal history check</li>
+                <li><strong>How to obtain:</strong> Through your state's Attorney General office or Secretary of State</li>
+                <li><strong>Standard processing:</strong> 2-3 weeks</li>
+                <li><strong>Expedited processing:</strong> 5-7 days (additional AUD $20-30)</li>
+                <li><strong>Important:</strong> The state document must be apostilled separately; apostille cannot be obtained from the federal level for state records</li>
+            </ul>
+
+            <div class="warning-box">
+                <strong>Critical Timeline Note:</strong> Background checks take 2-5 weeks. Start these immediately when planning your application—they are often the longest-lead-time documents. Many applicants delay background checks until after submitting other paperwork, then find themselves waiting weeks for these essential documents.
+            </div>
+
+            <h3>Character and Financial Requirements Summary</h3>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Requirement</th>
+                        <th>Australian Standard</th>
+                        <th>Why It Matters</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>No Criminal Record</strong></td>
+                        <td>AFP check + State check + Apostille</td>
+                        <td>Spain cannot grant visa if you have criminal convictions</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Minimum Income</strong></td>
+                        <td>EUR 1,368/month (~AUD $2,100+)</td>
+                        <td>Must prove you can support yourself without working</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Accommodation</strong></td>
+                        <td>Lease, property deed, or reservation confirmation</td>
+                        <td>Must show where you'll live in Spain</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Health Insurance</strong></td>
+                        <td>Valid travel/expat insurance policy</td>
+                        <td>Spain requires proof of healthcare coverage</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Clean Record</strong></td>
+                        <td>No immigration violations, visa overstays, or false statements</td>
+                        <td>Misrepresentation automatically rejects applications</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- SECTION 6: INCOME SOURCES IN DETAIL -->
+        <section id="income-sources">
+            <h2>6. Understanding Australian Retirement Income Sources</h2>
+
+            <h3>The Australian Superannuation System</h3>
+            <p>Australia's mandatory superannuation system is one of the world's best-developed pension systems. Most Australian workers have been contributing to superannuation throughout their careers, building substantial retirement nest eggs. Spanish consulates recognize this system as legitimate and reliable.</p>
+
+            <h4>Key Superannuation Facts for NLV Applicants:</h4>
+            <ul>
+                <li><strong>Access Age:</strong> You can typically access your super from age 60 (or 65 for pre-1964 born members)</li>
+                <li><strong>Account-Based Pension:</strong> Once retired, you convert your lump sum to an account-based pension and begin regular withdrawals</li>
+                <li><strong>Minimum Withdrawal Rates:</strong> ATO mandates minimum annual withdrawal amounts (roughly 4-10% depending on age, starting at age 65). These withdrawals provide regular documented income.</li>
+                <li><strong>Tax Treatment:</strong> Super withdrawals to age 60 are tax-free; after 60, they're also tax-free (unlike wages, which are taxed)</li>
+                <li><strong>Documentation:</strong> Super funds provide regular statements showing your balance and withdrawal amounts—ideal for Spanish consulate requirements</li>
+            </ul>
+
+            <div class="info-box">
+                <strong>Example Income Scenario:</strong> A 67-year-old Australian with AUD $500,000 in superannuation would have a minimum mandatory annual withdrawal of approximately AUD $25,000-30,000 per year (AUD $2,100-2,500/month), which exceeds the EUR 1,368/month requirement without any additional income.
+            </div>
+
+            <h3>Age Pension (Centrelink)</h3>
+            <p>Australia's Age Pension is a government-backed income source that Spanish consulates view as exceptionally reliable. Here are the 2024 rates:</p>
+            <ul>
+                <li><strong>Single pensioner:</strong> AUD $1,000.80/week (AUD $4,343/month)</li>
+                <li><strong>Married couple (combined):</strong> AUD $753.20/week each (AUD $6,504/month combined)</li>
+            </ul>
+
+            <p>Age Pension payments are indexed quarterly and adjusted for inflation. If you're Age Pension eligible, this alone often exceeds the EUR 1,368/month requirement.</p>
+
+            <p><strong>For NLV Application:</strong> Obtain a Centrelink statement showing your current Age Pension payment and 12 months of payment history. This is simple to generate online through Centrelink's portal and requires no processing time.</p>
+
+            <h3>Private Pensions and Annuities</h3>
+            <p>Many Australians have private pensions from employers or have purchased annuities in retirement. Spanish consulates accept these as income:</p>
+            <ul>
+                <li><strong>Employer Defined Benefit Pensions:</strong> If you've worked for a large organization (government, military, corporate), you may receive a defined benefit pension (guaranteed payment for life)</li>
+                <li><strong>Immediate Annuities:</strong> Many retirees purchase annuities that provide regular lifetime payments in exchange for a lump sum</li>
+                <li><strong>Deferred Pension Income:</strong> Some applicants have pensions that don't start until age 70 or 75; these can be included in calculations once they begin</li>
+            </ul>
+
+            <p>Obtain statements from pension providers and annuity issuers showing your guaranteed monthly/annual payment amounts.</p>
+
+            <h3>Investment and Dividend Income</h3>
+            <p>Many Australian retirees generate income from investments:</p>
+            <ul>
+                <li><strong>Share Dividends:</strong> ASX-listed companies pay quarterly or semi-annual dividends. A portfolio of dividend-paying stocks can generate AUD $1,000-2,000+ monthly for substantial portfolios.</li>
+                <li><strong>ETF Distributions:</strong> Exchange-traded funds, especially income-focused ETFs, distribute dividends and interest regularly.</li>
+                <li><strong>Managed Fund Income:</strong> Many managed funds distribute quarterly or annual income</li>
+                <li><strong>Bank Interest:</strong> High-interest savings accounts and term deposits provide regular interest payments</li>
+            </ul>
+
+            <p><strong>For NLV Documentation:</strong> Provide brokerage statements showing dividend history or holdings that generate known yields. Australian Taxation Office (ATO) assessments showing investment income are also acceptable.</p>
+
+            <h3>Rental Property Income</h3>
+            <p>If you own rental properties in Australia, rental income can be counted toward the NLV requirement:</p>
+            <ul>
+                <li><strong>Residential Rental:</strong> Income from one or more rental properties</li>
+                <li><strong>Holiday Rental:</strong> Income from Airbnb or holiday rental platforms</li>
+                <li><strong>Commercial Property:</strong> Lease payments from commercial tenants</li>
+            </ul>
+
+            <p><strong>Documentation Required:</strong> ATO tax assessment notices showing rental income, or current lease/rental agreements with payment history.</p>
+
+            <div class="success-box">
+                <strong>Advantage for Property Owners:</strong> Rental income is particularly attractive to Spanish consulates because it's documented via tax returns and is stable, ongoing income. If you own Australian property generating rental income, this significantly strengthens your NLV application.
+            </div>
+
+            <h3>Practical Example: A Typical Australian NLV Applicant</h3>
+            <p><strong>Meet Margaret, age 68:</strong></p>
+            <ul>
+                <li>Age Pension: AUD $1,050/month</li>
+                <li>Account-based pension withdrawal: AUD $1,200/month (from AUD $350,000 superannuation balance)</li>
+                <li>Dividend income from share portfolio: AUD $300/month</li>
+                <li><strong>Total Monthly Income: AUD $2,550</strong> ✓ (exceeds EUR 1,368/month requirement)</li>
+            </ul>
+
+            <p>Margaret's income is well-documented (Centrelink statement, super fund statement, broker statement), exceeds the requirement by 20%, and involves multiple income sources—making her application very strong.</p>
+        </section>
+
+        <!-- SECTION 7: DOCUMENTS -->
+        <section id="documents">
+            <h2>7. Complete Document Checklist for Australian Applicants</h2>
+
+            <p>Having all documents prepared before your BLS appointment is critical. Missing documents are the primary reason for application delays. Here's the complete checklist specific to Australian applicants:</p>
+
+            <h3>Identity and Passport Documents</h3>
+            <ul>
+                <li>✓ Original Australian Passport (valid for at least 1 year beyond visa grant date)</li>
+                <li>✓ Photocopy of passport (first 3 pages: photo, name, passport number, validity)</li>
+                <li>✓ Birth Certificate (original or certified copy from BDM registry—not required but helpful for anomalies)</li>
+                <li>✓ Marriage Certificate or Divorce Decree (if applicable, certified copy from BDM)</li>
+                <li>✓ Name change documentation (if you've changed your name—certified copy)</li>
+            </ul>
+
+            <h3>Income Documentation</h3>
+            <p><strong>Choose documentation matching YOUR income sources:</strong></p>
+
+            <h4>Superannuation Income</h4>
+            <ul>
+                <li>✓ Super fund statement showing current account balance (dated within 3 months)</li>
+                <li>✓ Withdrawal election document from super fund showing annual/monthly withdrawal amounts</li>
+                <li>✓ Last 2-3 annual statements from super fund</li>
+                <li>✓ Letter from super fund confirming pension commencement date and withdrawal arrangements</li>
+            </ul>
+
+            <h4>Age Pension</h4>
+            <ul>
+                <li>✓ Centrelink statement showing current payment amount and last 12 months of payment history</li>
+                <li>✓ Centrelink letter confirming Age Pension eligibility and payment rate</li>
+            </ul>
+
+            <h4>Other Pensions/Annuities</h4>
+            <ul>
+                <li>✓ Pension provider statement showing guaranteed payment amount</li>
+                <li>✓ Annuity contract or confirmation document</li>
+                <li>✓ Employer pension statement</li>
+            </ul>
+
+            <h4>Investment Income</h4>
+            <ul>
+                <li>✓ Latest bank statements (3 months) showing interest deposits</li>
+                <li>✓ Brokerage statements showing dividend history and holdings</li>
+                <li>✓ Latest ATO tax assessment showing investment income</li>
+                <li>✓ ETF/managed fund statements showing distributions</li>
+            </ul>
+
+            <h4>Rental Income</h4>
+            <ul>
+                <li>✓ Latest ATO tax assessment showing rental income</li>
+                <li>✓ Property lease agreements with tenant names and payment terms</li>
+                <li>✓ Property management company statements or payment history showing rental deposits</li>
+                <li>✓ Real estate agent rental payment statements (if using agent)</li>
+            </ul>
+
+            <h3>Background Check Documents</h3>
+            <ul>
+                <li>✓ <strong>AFP Criminal Record Check</strong> (issued within 6 months of application date)</li>
+                <li>✓ <strong>State Criminal History Check</strong> (issued within 6 months; apostilled)</li>
+                <li>✓ <strong>Apostille Certificate</strong> for state criminal history check (from Attorney General)</li>
+                <li>✓ Police Conduct Clearance (if working with vulnerable people)</li>
+            </ul>
+
+            <h3>Spain Accommodation Documentation</h3>
+            <p>You must prove where you'll live in Spain. Options include:</p>
+            <ul>
+                <li>✓ <strong>Lease Agreement:</strong> Rental agreement for an apartment or house in Spain (includes landlord name, address, monthly rent, lease dates)</li>
+                <li>✓ <strong>Property Deed:</strong> If purchasing a property in Spain, proof of ownership (title deed, purchase contract, closing documents)</li>
+                <li>✓ <strong>Property Reservation:</strong> Signed reservation or purchase agreement for property under development</li>
+                <li>✓ <strong>Family Property:</strong> Letter from family member confirming you can live at their property in Spain (includes their name, property address, relationship to you)</li>
+            </ul>
+
+            <div class="warning-box">
+                <strong>Critical Note:</strong> You must have specific accommodation arranged. Generic statements like "I plan to find an apartment in Madrid" are not sufficient. Spanish consulates require proof of a specific address where you'll reside. If not yet certain, arrange a short-term rental for your first months and include that lease.
+            </div>
+
+            <h3>Health Insurance Documentation</h3>
+            <ul>
+                <li>✓ <strong>Travel/Expat Health Insurance Policy</strong> (covers medical care in Spain, valid for minimum 1 year)</li>
+                <li>✓ Insurance provider contact details and policy number</li>
+                <li>✓ Policy summary showing coverage area (must include Spain)</li>
+            </ul>
+
+            <h3>Financial Documentation (Supporting)</h3>
+            <ul>
+                <li>✓ Bank statements (last 3-6 months) showing regular income deposits</li>
+                <li>✓ Evidence of assets (property, investments) demonstrating financial stability</li>
+                <li>✓ Proof of funds for initial Spain relocation (this varies, but showing AUD $20,000-30,000 available is helpful)</li>
+            </ul>
+
+            <h3>Application Forms</h3>
+            <ul>
+                <li>✓ EX-00 form (Spain's standard visa application form) - available from BLS or consulate website</li>
+                <li>✓ Completed in English or Spanish (English acceptable for Australian applicants)</li>
+                <li>✓ Signed and dated</li>
+            </ul>
+
+            <h3>Supporting Letters and Declarations</h3>
+            <ul>
+                <li>✓ <strong>Accompanying Letter:</strong> Brief letter (1 page) explaining your intention to live in Spain, why you've chosen this visa, and your plans</li>
+                <li>✓ <strong>Declaration on Oath:</strong> Sworn statement confirming truth of submitted information (can be done at BLS center)</li>
+            </ul>
+
+            <h3>Marriage/Partnership Documentation (if applicable)</h3>
+            <ul>
+                <li>✓ Marriage certificate (certified copy from BDM)</li>
+                <li>✓ Partner's passport copies and background check</li>
+                <li>✓ If de facto partnership: Statutory declaration confirming 2+ year relationship</li>
+                <li>✓ If divorced: Divorce decree and proof of finality</li>
+            </ul>
+
+            <h3>Document Preparation Checklist</h3>
+            <p>Before your BLS appointment, ensure:</p>
+            <ul>
+                <li>□ All documents are originals or certified copies (notarized by an Australian notary public or certified by issuing agency)</li>
+                <li>□ All non-English documents are translated into English by a certified translator</li>
+                <li>□ All documents are clear, legible, and not damaged</li>
+                <li>□ Documents dated within required timeframes (income docs within 3-6 months, background checks within 6 months)</li>
+                <li>□ You have 2-3 photocopies of each original document</li>
+                <li>□ You've organized documents in logical order (income docs grouped, background checks together, etc.)</li>
+            </ul>
+
+            <div class="info-box">
+                <strong>Pro Tip:</strong> Create a folder with two sections: "Originals" (clear plastic sleeves) and "Copies" (paper copies). Bring both to your BLS appointment. BLS will take the copies and return your originals.
+            </div>
+        </section>
+
+        <!-- SECTION 8: PROCESS -->
+        <section id="process">
+            <h2>8. Step-by-Step Application Process</h2>
+
+            <p>Here's the complete, step-by-step process for Australian applicants applying through BLS:</p>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <span class="number">1</span>
+                    <h4>Gather Documentation (Weeks 1-3)</h4>
+                    <p>Collect all required documents from Section 7. Start with background checks (AFP and state criminal history) as these take 2-5 weeks. Simultaneously, collect income statements, accommodation proof, and insurance documentation.</p>
+                    <p><strong>Action Items:</strong></p>
+                    <ul>
+                        <li>Order AFP Criminal Record Check online</li>
+                        <li>Order state criminal history check from your home state authority</li>
+                        <li>Request super fund statements and withdrawal arrangements</li>
+                        <li>Get Centrelink statement if Age Pension recipient</li>
+                        <li>Arrange accommodation in Spain or get landlord letter</li>
+                        <li>Purchase expat health insurance</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-item">
+                    <span class="number">2</span>
+                    <h4>Process Background Checks (Weeks 2-6)</h4>
+                    <p>Background checks are the longest-lead-time items. While these process, continue collecting other documents.</p>
+                    <p><strong>Action Items:</strong></p>
+                    <ul>
+                        <li>AFP check: Allow 2-4 weeks</li>
+                        <li>State criminal check: Allow 3-5 business days</li>
+                        <li>Get state check apostilled: Allow 2-3 weeks standard (5-7 days expedited)</li>
+                        <li>Begin translation of any non-English documents (though most Australian documents are in English)</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-item">
+                    <span class="number">3</span>
+                    <h4>Complete Application Form (Week 4-5)</h4>
+                    <p>Once most documents are gathered, complete the EX-00 visa application form. This is the official Spanish government form required by all applicants.</p>
+                    <p><strong>Action Items:</strong></p>
+                    <ul>
+                        <li>Download EX-00 form from BLS or Spanish consulate website</li>
+                        <li>Complete in English (acceptable for Australian applicants)</li>
+                        <li>Sign and date all required sections</li>
+                        <li>Make 2-3 copies</li>
+                        <li>Have a notary public or BLS witness your signature if required</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-item">
+                    <span class="number">4</span>
+                    <h4>Book BLS Appointment (Week 5-6)</h4>
+                    <p>Once documents are ready, book your BLS appointment. At this stage, you should have all critical documents (background checks, income statements, accommodation proof, insurance).</p>
+                    <p><strong>Action Items:</strong></p>
+                    <ul>
+                        <li>Visit BLS website for your closest center (Sydney, Melbourne, Brisbane, or Perth)</li>
+                        <li>Select visa category: "Non-Lucrative (No Lucrativa)"</li>
+                        <li>Choose available appointment date (usually 1-4 weeks out)</li>
+                        <li>Receive confirmation email with appointment details</li>
+                        <li>Prepare all documents as per checklist</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-item">
+                    <span class="number">5</span>
+                    <h4>Attend BLS Appointment (Week 6-7)</h4>
+                    <p>Bring all original documents and copies to your BLS appointment. The appointment is straightforward: you'll present documents, provide fingerprints, pay fees, and receive a tracking number.</p>
+                    <p><strong>Action Items:</strong></p>
+                    <ul>
+                        <li>Arrive 10 minutes early with all documents organized</li>
+                        <li>Present originals and copies to BLS officer</li>
+                        <li>Provide fingerprints (digital scan)</li>
+                        <li>Pay visa fee (EUR 90, approximately AUD $150-160)</li>
+                        <li>Pay BLS service fee (approximately AUD $40-50)</li>
+                        <li>Receive receipt with case reference number and expected pickup date</li>
+                        <li>Expected duration: 20-30 minutes</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-item">
+                    <span class="number">6</span>
+                    <h4>BLS Verification & Submission (Week 7-8)</h4>
+                    <p>After your appointment, BLS verifies your documents and submits them to the Spanish consulate. This happens automatically; no further action required from you.</p>
+                    <p><strong>Timeline:</strong></p>
+                    <ul>
+                        <li>BLS document verification: 1-3 business days</li>
+                        <li>Submission to consulate: 3-5 business days</li>
+                        <li>You'll receive email notification when submitted</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-item">
+                    <span class="number">7</span>
+                    <h4>Consulate Processing (Weeks 8-14)</h4>
+                    <p>Once at the consulate, your application enters the formal review queue. Processing typically takes 4-8 weeks, though complex applications may take up to 12 weeks.</p>
+                    <p><strong>What Happens:</strong></p>
+                    <ul>
+                        <li>Consulate officer reviews all documentation</li>
+                        <li>May contact BLS with requests for clarification or additional documents</li>
+                        <li>Performs final income and background verification</li>
+                        <li>Approves visa or requests additional information</li>
+                        <li>You'll receive notification when ready for pickup (or approval letter via email)</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-item">
+                    <span class="number">8</span>
+                    <h4>Visa Pickup & Travel Arrangements (Week 15)</h4>
+                    <p>Once approved, you'll be notified to pick up your visa at the BLS center. Your passport will be stamped with your NLV visa and the conditions of your residency.</p>
+                    <p><strong>Action Items:</strong></p>
+                    <ul>
+                        <li>Receive notification from BLS that visa is ready (usually via email)</li>
+                        <li>Return to BLS center during business hours to collect visa</li>
+                        <li>Verify visa details in your passport (dates, conditions)</li>
+                        <li>Plan your travel to Spain (visa valid from date of entry)</li>
+                        <li>Book flights and accommodation for Spain arrival</li>
+                        <li>Arrange travel insurance and any other logistics</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3>Total Timeline from Start to Travel</h3>
+            <p><strong>Best Case Scenario:</strong> 7-8 weeks (if all documents are immediately available, background checks are fast, and consulate processes quickly)</p>
+            <p><strong>Typical Case:</strong> 10-12 weeks (more realistic with normal delays)</p>
+            <p><strong>Worst Case Scenario:</strong> 14-16 weeks (background checks delayed, consulate requests additional info, documents need revision)</p>
+
+            <div class="success-box">
+                <strong>Planning Tip:</strong> From start to visa in hand is typically 2.5-3 months. If you're planning a specific departure date, work backward 3 months to start your application process.
+            </div>
+        </section>
+
+        <!-- SECTION 9: TIMELINE -->
+        <section id="timeline">
+            <h2>9. Timeline, Costs, and Processing Information</h2>
+
+            <h3>Complete Timeline Breakdown</h3>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Phase</th>
+                        <th>Duration</th>
+                        <th>Key Activities</th>
+                        <th>Critical Path Items?</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Document Preparation</td>
+                        <td>2-3 weeks</td>
+                        <td>Gather documents, order background checks, prepare forms</td>
+                        <td>YES - Background checks are the gating factor</td>
+                    </tr>
+                    <tr>
+                        <td>Background Checks</td>
+                        <td>2-5 weeks (AFP 2-4 wks, State 3-5 days, Apostille 2-3 wks)</td>
+                        <td>AFP processing, state check processing, apostille certification</td>
+                        <td>YES - The longest single item</td>
+                    </tr>
+                    <tr>
+                        <td>BLS Appointment</td>
+                        <td>1-2 weeks scheduling + 30 min appointment</td>
+                        <td>Book appointment online, attend in person</td>
+                        <td>NO - Can often schedule within 1-2 weeks</td>
+                    </tr>
+                    <tr>
+                        <td>BLS Verification & Submission</td>
+                        <td>3-5 business days</td>
+                        <td>BLS verifies documents, submits to consulate</td>
+                        <td>NO - Automatic process</td>
+                    </tr>
+                    <tr>
+                        <td>Consulate Processing</td>
+                        <td>4-8 weeks</td>
+                        <td>Consulate review, verification, decision</td>
+                        <td>YES - Second longest phase</td>
+                    </tr>
+                    <tr>
+                        <td>Visa Pickup & Travel</td>
+                        <td>1-2 weeks</td>
+                        <td>Collect visa, book flights, prepare move</td>
+                        <td>NO - After approval, fairly quick</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Detailed Cost Breakdown</h3>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Cost (AUD)</th>
+                        <th>Cost (EUR)</th>
+                        <th>Notes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Spanish Visa Fee</strong></td>
+                        <td>AUD $150-160</td>
+                        <td>EUR 90</td>
+                        <td>Official Spanish government fee, non-refundable</td>
+                    </tr>
+                    <tr>
+                        <td><strong>BLS Service Fee</strong></td>
+                        <td>AUD $40-50</td>
+                        <td>~EUR 25</td>
+                        <td>Processing and submission fee</td>
+                    </tr>
+                    <tr>
+                        <td><strong>AFP Criminal Check</strong></td>
+                        <td>AUD $35-45</td>
+                        <td>~EUR 22</td>
+                        <td>Federal criminal record check</td>
+                    </tr>
+                    <tr>
+                        <td><strong>State Criminal Check</strong></td>
+                        <td>AUD $35-60</td>
+                        <td>~EUR 22-37</td>
+                        <td>Varies by state; NSW/VIC/QLD approx AUD $40-50</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Apostille Certification</strong></td>
+                        <td>AUD $25-50</td>
+                        <td>~EUR 15-30</td>
+                        <td>Standard processing 2-3 weeks; expedited 5-7 days adds AUD $20</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Health Insurance (Annual)</strong></td>
+                        <td>AUD $600-1,500</td>
+                        <td>EUR 370-930</td>
+                        <td>Varies by provider and coverage level (see After Arrival section)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Passport Copies/Notarization</strong></td>
+                        <td>AUD $20-50</td>
+                        <td>~EUR 12-30</td>
+                        <td>Notary public charges for certified copies</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Document Translation (if needed)</strong></td>
+                        <td>AUD $100-300</td>
+                        <td>EUR 60-180</td>
+                        <td>Usually not needed for Australian documents</td>
+                    </tr>
+                    <tr>
+                        <td><strong>TOTAL APPLICATION COST</strong></td>
+                        <td><strong>AUD $300-650</strong></td>
+                        <td><strong>EUR 185-405</strong></td>
+                        <td>Assuming standard processing and Australian documents</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="info-box">
+                <strong>Good News:</strong> The application costs are modest—typically AUD $300-650 total. The main ongoing cost is health insurance (AUD $600-1,500 annually). Most Australian retirees find the total cost very reasonable compared to the long-term benefit of European residency.
+            </div>
+
+            <h3>Processing Time Variation Factors</h3>
+            <p>The 4-8 week consulate processing time can vary based on:</p>
+            <ul>
+                <li><strong>Application Completeness:</strong> If all documents are provided correctly, processing is 4-6 weeks. Incomplete applications add 2-4 weeks.</li>
+                <li><strong>Background Check Verification:</strong> If background checks require consulate-to-Australian-government verification, add 1-2 weeks.</li>
+                <li><strong>Income Documentation Clarity:</strong> Applications with straightforward income (Age Pension + superannuation) process faster than complex applications (multiple rental properties, business income, etc.).</li>
+                <li><strong>Consulate Workload:</strong> Sydney consulate processes more NLV applications (due to larger Australian population) and may have higher volume delays during peak months (January-March).</li>
+                <li><strong>Season:</strong> Applications submitted in April-June typically process faster than December-February (holiday period).</li>
+            </ul>
+
+            <h3>Fast-Track Possibilities</h3>
+            <p>Spain does not officially offer fast-track visa processing. However, you can optimize speed by:</p>
+            <ul>
+                <li><strong>Expedited Background Checks:</strong> Most Australian state authorities offer expedited processing (5-7 days) for AUD $20-30 extra—worth the cost to save 1-2 weeks overall</li>
+                <li><strong>Early Document Preparation:</strong> Have all documents 1-2 weeks before BLS appointment, allowing time for corrections</li>
+                <li><strong>Avoid Gaps:</strong> Don't leave months between application and visa pickup—delays can mean visa expiration if not traveled to Spain within timeframe</li>
+            </ul>
+        </section>
+
+        <!-- SECTION 10: REJECTIONS -->
+        <section id="rejections">
+            <h2>10. Common Rejections and What Causes Them</h2>
+
+            <h3>Six Primary Reasons for NLV Rejection for Australian Applicants</h3>
+
+            <h4>1. Insufficient Income Documentation (Most Common)</h4>
+            <p><strong>What triggers this:</strong> Income statements that don't clearly show EUR 1,368/month, or income sources that aren't clearly "passive" (not earning, but receiving).</p>
+            <p><strong>Australian Examples that Fail:</strong></p>
+            <ul>
+                <li>Providing only a bank account statement showing deposits without explaining income source</li>
+                <li>Submitting outdated superannuation statements (more than 6 months old)</li>
+                <li>Showing investment dividends without providing statements from brokerage or fund manager</li>
+                <li>Rental property income shown on tax assessment but no current lease agreement provided</li>
+            </ul>
+            <p><strong>How to Prevent:</strong> Provide source documents for every income stream—super fund letters, Centrelink statements, brokerage statements, lease agreements. More documentation is always better than less.</p>
+
+            <h4>2. Background Check Issues (Second Most Common)</h4>
+            <p><strong>What triggers this:</strong> Missing or invalid background checks, or any criminal record discovered during verification.</p>
+            <p><strong>Australian-Specific Pitfalls:</strong></p>
+            <ul>
+                <li>Submitting only AFP check without state criminal history check (both are required)</li>
+                <li>State check dated more than 6 months before application</li>
+                <li>State check not properly apostilled (consulates strictly require apostille)</li>
+                <li>Any criminal conviction, even minor or from decades ago—Spain has strict character requirements</li>
+                <li>Visa violations from any country (overstaying tourist visas, working without visa, etc.)</li>
+            </ul>
+            <p><strong>How to Prevent:</strong> Start background checks immediately (they're the longest-lead item). Order both AFP and state checks. Get apostilles done as soon as state check arrives. Review your criminal history before applying—any issue must be disclosed.</p>
+
+            <div class="warning-box">
+                <strong>Critical:</strong> Even minor criminal records—driving under influence, minor assault, theft—can cause outright rejection. Spain's character requirements are strict. Consulates rarely make exceptions. If you have any criminal history, consult a visa lawyer before applying.
+            </div>
+
+            <h4>3. Missing or Invalid Accommodation Proof</h4>
+            <p><strong>What triggers this:</strong> No specific address where you'll live in Spain, or the provided address can't be verified.</p>
+            <p><strong>Australian Examples that Fail:</strong></p>
+            <ul>
+                <li>Stating "I plan to live in Madrid" without a lease, reservation, or property proof</li>
+                <li>Providing a hotel booking for 3 days—consulates need residential address, not temporary lodging</li>
+                <li>Lease agreement from friend with no official documentation</li>
+                <li>Address that doesn't match where consulate expects you to legally reside</li>
+            </ul>
+            <p><strong>How to Prevent:</strong> Before applying, secure a lease agreement or property deed with a specific address. If not yet decided, arrange a 6-month rental lease starting on your visa grant date. The address must be where you'll legally reside, not a holiday rental.</p>
+
+            <h4>4. Invalid or Missing Health Insurance</h4>
+            <p><strong>What triggers this:</strong> No health insurance provided, or provided insurance doesn't cover Spain, doesn't cover the required time period, or doesn't meet minimum coverage requirements.</p>
+            <p><strong>Australian-Specific Pitfalls:</strong></p>
+            <ul>
+                <li>Travel insurance that expires before visa validity begins</li>
+                <li>Insurance that covers "emergency medical care only" without full healthcare coverage</li>
+                <li>No insurance provided at all (surprisingly common—many assume Spanish healthcare is automatic)</li>
+                <li>Insurance that covers Australia/NZ but explicitly excludes Europe</li>
+            </ul>
+            <p><strong>How to Prevent:</strong> Purchase expat health insurance BEFORE submitting your visa application. Policy must cover Spain, must be valid from your expected arrival date, must include hospitalization and emergency care, and must show policy terms clearly. See After Arrival section for recommended providers.</p>
+
+            <h4>5. Income Claims That Can't Be Verified</h4>
+            <p><strong>What triggers this:</strong> Income sources that consulates can't verify or that seem inconsistent with documentation provided.</p>
+            <p><strong>Australian Examples that Fail:</strong></p>
+            <ul>
+                <li>Claiming rental income but providing no lease or property deed</li>
+                <li>Claiming investment income but having no brokerage statements</li>
+                <li>Bank statements showing deposits but claiming they're from undefined "savings" with no source</li>
+                <li>Superannuation withdrawal claims but no super fund statement supporting withdrawal amounts</li>
+                <li>Income amounts on forms that don't match income on supporting documents (e.g., claiming AUD $3,000/month but bank statement shows AUD $2,500)</li>
+            </ul>
+            <p><strong>How to Prevent:</strong> Ensure every income source claimed on your application has a supporting document. Amounts must match across all documents. If income varies, provide 6-12 months of history showing consistent average.</p>
+
+            <h4>6. Incomplete or Incorrect Application Forms</h4>
+            <p><strong>What triggers this:</strong> Application form (EX-00) with missing information, inconsistent answers, or signatures missing.</p>
+            <p><strong>Australian-Specific Pitfalls:</strong></p>
+            <ul>
+                <li>Form not signed or signed but not dated</li>
+                <li>Name spelling that varies from passport</li>
+                <li>Birth date inconsistencies between documents</li>
+                <li>Address in Spain on form that doesn't match accommodation documents</li>
+                <li>Visa category checked incorrectly (applying for tourist visa instead of NLV)</li>
+            </ul>
+            <p><strong>How to Prevent:</strong> Complete forms carefully and have someone review before submission. Ensure all information is consistent across all documents (passport, forms, financial documents). Sign and date in all required places.</p>
+
+            <h3>Australian-Specific Common Mistakes</h3>
+
+            <p><strong>Mistake #1: Underestimating Background Check Timeline</strong><br>
+            Many Australians order background checks too late, delaying their entire application. Start AFP and state checks immediately when planning your application—they're the longest single item (2-5 weeks).</p>
+
+            <p><strong>Mistake #2: Confusing Apostille Levels</strong><br>
+            Apostilles must be done at the state level (through state Attorney General or Secretary of State) for state documents. Federal apostille cannot authenticate state documents. Many applicants get confused and waste time requesting federal apostilles. Get state apostille specifically.</p>
+
+            <p><strong>Mistake #3: Failing to Combine Income Sources</strong><br>
+            Some Australians with borderline income (EUR 1,300-1,400/month) from one source try to apply based only on that one source. It's better to combine multiple sources (Age Pension + investment income, or superannuation + dividends). Combined income is more convincing and more likely to exceed the requirement comfortably.</p>
+
+            <p><strong>Mistake #4: Not Getting Accommodation Sorted Early</strong><br>
+            Many applicants leave accommodation for "after the visa is approved." This delays your actual move to Spain. Sort accommodation before applying so your lease start date aligns with your visa grant date. If you're unsure of location, arrange a 3-6 month lease with a flexible landlord.</p>
+
+            <p><strong>Mistake #5: Purchasing Wrong Type of Health Insurance</strong><br>
+            Australian travel insurance often excludes "residents" or "long-term stays." You need expat health insurance, not travel insurance. These are different products with different exclusions and coverage. Check the policy explicitly covers people staying in Spain long-term.</p>
+
+            <p><strong>Mistake #6: Allowing Application Documents to Become Stale</strong><br>
+            Spanish consulates want recent documents. Bank statements should be within 3 months of application, background checks within 6 months. If you prepare documents and then delay applying, you may need to refresh documents, restarting timelines. Submit quickly once documents are ready.</p>
+
+            <p><strong>Mistake #7: Missing Required Signatures or Notarization</strong><br>
+            Some forms require notarization. Missing signatures on any document can cause outright rejection or significant delays. Have BLS staff or a notary public review your forms before your appointment.</p>
+        </section>
+
+        <!-- SECTION 11: FAQ -->
+        <section id="faq">
+            <h2>11. Frequently Asked Questions for Australian Applicants</h2>
+
+            <div class="accordion">
+                <div class="accordion-item">
+                    <div class="accordion-header">Can I work while on the NLV visa?</div>
+                    <div class="accordion-body">
+                        <p><strong>Short answer: No. Absolutely not.</strong></p>
+                        <p>The NLV visa explicitly prohibits ANY form of paid employment, business activity, or income-generating work in Spain. This includes:</p>
+                        <ul>
+                            <li>Full-time or part-time employment</li>
+                            <li>Self-employment or freelancing</li>
+                            <li>Running a business</li>
+                            <li>Remote work for Australian employers (even if you don't get paid by Spanish authorities)</li>
+                            <li>Receiving income from Spain while on NLV (passive income is okay; earned income is not)</li>
+                        </ul>
+                        <p>If you violate this condition, your visa will be canceled and you'll be deported. Spain takes this seriously. If you want to work in Spain, you need a different visa category (work visa, entrepreneur visa, etc.).</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-header">Can I include my spouse in my application?</div>
+                    <div class="accordion-body">
+                        <p><strong>Yes, but with conditions.</strong></p>
+                        <p>You can apply jointly with a spouse or registered partner. When you do:</p>
+                        <ul>
+                            <li>Income requirement increases to EUR 1,680/month (~AUD $2,600) for two people</li>
+                            <li>Both spouses need their own background checks (AFP + state checks)</li>
+                            <li>Both spouses need their own health insurance</li>
+                            <li>Both spouses need passports with 1+ year validity</li>
+                        </ul>
+                        <p>If only one spouse has sufficient income, you can include the non-working spouse if they're under your financial support. You'll need to demonstrate the supporting spouse's income exceeds the EUR 1,680 threshold for two people.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-header">What if I have income below EUR 1,368 but my spouse has significant income?</div>
+                    <div class="accordion-body">
+                        <p><strong>You can combine incomes.</strong></p>
+                        <p>You don't both need to individually exceed EUR 1,368. You can combine your income with your spouse's, as long as the total combined income meets EUR 1,680/month for two people (or EUR 1,368 for just you).</p>
+                        <p>Example: If you have Age Pension (AUD $1,050) and your spouse has investment income (AUD $1,200), your combined AUD $2,250 exceeds the EUR 1,680 requirement for both of you.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-header">Will my Age Pension continue if I move to Spain?</div>
+                    <div class="accordion-body">
+                        <p><strong>Yes, generally yes.</strong></p>
+                        <p>Australia's Age Pension continues to be paid to Australian retirees living overseas, with some conditions:</p>
+                        <ul>
+                            <li>You must still be an Australian resident (even while living in Spain)</li>
+                            <li>You must declare your move to Centrelink before leaving Australia</li>
+                            <li>Centrelink must assess your continued eligibility (typically no issues for retirees)</li>
+                            <li>Your payment is paid into an Australian bank account (not Spanish), and you'll need to access it via international transfer or multi-currency account</li>
+                            <li>Payments are typically made fortnightly via direct deposit to your Australian bank</li>
+                        </ul>
+                        <p><strong>Important:</strong> Notify Centrelink of your move to Spain before you leave Australia. Failing to declare overseas residence can affect your payments.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-header">Can I keep my Australian superannuation withdrawals while in Spain?</div>
+                    <div class="accordion-body">
+                        <p><strong>Yes. Superannuation works normally.</strong></p>
+                        <p>Your Australian superannuation account and withdrawals continue unaffected by your move to Spain. Your super fund will continue sending your monthly/quarterly withdrawal payments to your Australian bank account or designated account.</p>
+                        <p>Important notes:</p>
+                        <ul>
+                            <li>Tax treatment remains the same (tax-free if you're over 60)</li>
+                            <li>You still control your super account from Spain (online access, calls to super fund)</li>
+                            <li>Australia's superannuation rules apply—you can't withdraw early or change the rules based on moving overseas</li>
+                            <li>The ATO still has jurisdiction over your super, even while you're living in Spain</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-header">How do I get my income into a Spanish bank account?</div>
+                    <div class="accordion-body">
+                        <p><strong>International transfers are required.</strong></p>
+                        <p>Your Australian income (Age Pension, superannuation, investments) arrives in your Australian bank account. To use this money in Spain, you'll need to:</p>
+                        <ul>
+                            <li><strong>Option 1 - International Transfer:</strong> Use international wire transfer (SWIFT/BIC codes) to move money from your Australian bank to a Spanish bank account. Costs AUD $15-30 per transfer.</li>
+                            <li><strong>Option 2 - Multi-Currency Account:</strong> Use Australian banks with multi-currency accounts (like Wise, ING Australia, or Citibank), allowing you to hold money in EUR and transfer at favorable rates.</li>
+                            <li><strong>Option 3 - Travel Cards:</strong> Some Australian banks offer travel debit cards that work in EUR and allow ATM withdrawals in Spain.</li>
+                        </ul>
+                        <p>Most Australians in Spain use a combination: large monthly transfers via international wire, plus a travel card for daily spending and ATM withdrawals.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-header">What happens when my NLV visa expires?</div>
+                    <div class="accordion-body">
+                        <p><strong>You apply for renewal.</strong></p>
+                        <p>Your initial NLV visa is granted for 1 year. To continue living in Spain:</p>
+                        <ul>
+                            <li><strong>After 1 year:</strong> You can apply for renewal (2-3 year duration)</li>
+                            <li><strong>Process:</strong> Simpler than initial application; you're already in Spain and don't need background checks again (unless there's new concern)</li>
+                            <li><strong>Requirements:</strong> Same income requirement still applies; continued proof of passive income</li>
+                            <li><strong>Location:</strong> You apply for renewal through Spanish immigration authorities (not BLS) once in Spain</li>
+                            <li><strong>Timeline:</strong> Plan ahead; renewals can be processed while visa is still valid, but don't wait until it expires</li>
+                        </ul>
+                        <p>After 5 years of continuous legal residence, you become eligible for a more permanent residency status (long-term residence permit), which is harder to revoke.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-header">Will Spain ask about my criminal record if I had one decades ago?</div>
+                    <div class="accordion-body">
+                        <p><strong>Possibly, and it depends on the offense.</strong></p>
+                        <p>Spain's background checks (which they conduct via Interpol and other channels) can discover old convictions. However:</p>
+                        <ul>
+                            <li>Minor offenses from decades ago may not appear on modern records (depending on Australian state record-keeping)</li>
+                            <li>Some states have record suspension or expungement systems; check if your conviction was removed</li>
+                            <li>Serious offenses (violence, fraud, drugs) will appear even if decades old</li>
+                        </ul>
+                        <p><strong>Recommendation:</strong> If you have any criminal history, even minor or old, consult a visa lawyer BEFORE applying. Don't take the risk of applying and having your application rejected. A lawyer can advise on your specific circumstances.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-header">Can I have multiple rental properties as income?</div>
+                    <div class="accordion-body">
+                        <p><strong>Yes, absolutely.</strong></p>
+                        <p>If you own multiple rental properties in Australia generating income, all of that income counts toward your NLV requirement. Spain views this as stable, ongoing passive income.</p>
+                        <p>Requirements:</p>
+                        <ul>
+                            <li>Current leases for each property showing tenant names and rental payments</li>
+                            <li>Latest ATO tax assessment showing rental income totals</li>
+                            <li>Property deeds or proof of ownership</li>
+                            <li>Bank statements showing regular deposits from rental income</li>
+                        </ul>
+                        <p>Multiple rental properties actually strengthen your application because they demonstrate established wealth and ongoing income sources beyond simple pension or super.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-header">Do I need travel insurance as well as expat insurance?</div>
+                    <div class="accordion-body">
+                        <p><strong>No, but you might want both for transition.</strong></p>
+                        <p>Your expat health insurance covers you once you're in Spain. However:</p>
+                        <ul>
+                            <li><strong>During travel:</strong> Your travel insurance from Australia may still be valid until you arrive in Spain</li>
+                            <li><strong>Coverage gap:</strong> There may be a gap between when your Australian travel insurance expires and when your Spanish expat insurance activates</li>
+                            <li><strong>Recommendation:</strong> Arrange for your Spanish expat insurance to activate on or before your arrival date, ensuring no gap</li>
+                        </ul>
+                        <p>Once your expat insurance is active in Spain, you don't need travel insurance—your expat policy covers all healthcare needs while you're in Spain.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-header">Can I apply from outside Australia?</div>
+                    <div class="accordion-body">
+                        <p><strong>Not through BLS, but potentially through consulates.</strong></p>
+                        <p>BLS applications require you to attend an in-person appointment at an Australian BLS center. If you're currently living outside Australia:</p>
+                        <ul>
+                            <li><strong>Option 1:</strong> Return to Australia for your BLS appointment (flights + time off)</li>
+                            <li><strong>Option 2:</strong> Apply directly to a Spanish consulate in the country where you're currently residing (though this is slower)</li>
+                            <li><strong>Option 3:</strong> Contact BLS or a visa service to ask about remote/postal application (rare, but sometimes possible for Australian citizens overseas)</li>
+                        </ul>
+                        <p>If you're already overseas, consult a Spanish visa agent to determine your best path forward.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-header">What's the difference between NLV and other Spanish residence visas?</div>
+                    <div class="accordion-body">
+                        <p><strong>NLV is specifically for passive income; other visas require different conditions.</strong></p>
+                        <p><strong>NLV (Non-Lucrative):</strong> For people with passive income who won't work in Spain. Most popular for retirees.</p>
+                        <p><strong>Work Visa:</strong> For people employed by Spanish companies or relocating for a job. Requires job offer.</p>
+                        <p><strong>Entrepreneur/Self-Employment Visa:</strong> For people starting a business in Spain. Requires business plan and investment.</p>
+                        <p><strong>Digital Nomad Visa:</strong> For remote workers for non-Spanish companies. Requires proof of remote employment and minimum income.</p>
+                        <p><strong>Student Visa:</strong> For students enrolled in Spanish programs.</p>
+                        <p>For Australian retirees with passive income, NLV is the most straightforward option. If you need to work, explore the Digital Nomad or Work visa categories instead.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-header">How often will Spain check that I still meet the income requirement?</div>
+                    <div class="accordion-body">
+                        <p><strong>At each renewal, and potentially during residency.</strong></p>
+                        <p>Spain's NLV requirements are checked:</p>
+                        <ul>
+                            <li><strong>During initial application:</strong> Spain verifies income meets EUR 1,368/month</li>
+                            <li><strong>During renewal (after 1-5 years):</strong> Spain re-verifies income still meets the requirement</li>
+                            <li><strong>If reported by authorities:</strong> If Spanish authorities suspect you're working illegally or your circumstances have changed, they may request updated income verification</li>
+                        </ul>
+                        <p>You don't need to proactively report ongoing income, but you must maintain it. If your income drops below the requirement due to market decline or pension changes, notify Spanish immigration (though this is rare for Australian retirees with stable pensions).</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 12: AFTER ARRIVAL -->
+        <section id="after-arrival">
+            <h2>12. After Arriving in Spain: Critical Next Steps for Australians</h2>
+
+            <p>Your NLV visa is your ticket to enter Spain. But once you land in Madrid, Barcelona, or your chosen city, several critical steps must be completed to legally establish yourself as a resident. Failure to complete these steps can result in fines, visa cancellation, or deportation. Here's what you must do.</p>
+
+            <h3>Step 1: Register with Spanish Immigration (30 Days)</h3>
+            <p><strong>Timeline:</strong> Within 30 days of arrival</p>
+            <p><strong>What:</strong> Register your entry to Spain with the Oficina de Extranjería (Immigration Office). This creates an official record that you've entered on your NLV visa.</p>
+            <p><strong>How:</strong></p>
+            <ul>
+                <li>Find your nearest Oficina de Extranjería (immigration office)</li>
+                <li>Book an appointment via their website</li>
+                <li>Bring: Passport (with NLV visa), accommodation proof (lease/property deed), completed form TIE (if obtaining ID card)</li>
+                <li>Fee: Usually free; minimal cost if obtaining ID</li>
+                <li>Result: Registration stamp in your passport or certificate of registration</li>
+            </ul>
+            <p><strong>For Australians:</strong> This is your formal notification to Spanish authorities that you've arrived on NLV visa. Don't skip this—it's essential for all subsequent residency steps.</p>
+
+            <h3>Step 2: Obtain Your TIE (Resident Identification Card) (30-90 Days)</h3>
+            <p><strong>Timeline:</strong> Can apply immediately; processing 30-90 days</p>
+            <p><strong>What:</strong> The TIE (Tarjeta de Identidad de Extranjero) is your official residency card in Spain. It's essentially your Spanish ID card as a foreign resident.</p>
+            <p><strong>How:</strong></p>
+            <ul>
+                <li>Apply at the Oficina de Extranjería (same place as Step 1)</li>
+                <li>Bring: Passport, accommodation proof, photos (4), completed application form</li>
+                <li>Fee: EUR 10-15</li>
+                <li>Processing: 30-60 days; you'll be notified when ready for pickup</li>
+                <li>Result: Physical plastic card showing your NIE (tax ID number) and resident status</li>
+            </ul>
+            <p><strong>For Australians:</strong> Get this card as soon as possible. You'll need it for banking, healthcare, utility setup, and employment contracts (even though you're not working—you'll need it for your property lease).</p>
+
+            <h3>Step 3: Register on the Padron (Local Register) (Ongoing)</h3>
+            <p><strong>Timeline:</strong> Within 3 months, renewable every 2 years</p>
+            <p><strong>What:</strong> The Padrón is a municipal registry of residents in your town/city. Registration is required for residency.</p>
+            <p><strong>How:</strong></p>
+            <ul>
+                <li>Visit your local Ayuntamiento (city/town hall)</li>
+                <li>Bring: Passport, lease agreement (proof of residence), completed Padron form, passport-sized photos</li>
+                <li>Fee: Free</li>
+                <li>Result: You're added to the local municipal registry as a resident of that address</li>
+            </ul>
+            <p><strong>For Australians:</strong> The Padron registration is crucial—many Spanish services (healthcare, school enrollment, business licenses) require proof of Padron registration. Some councils are efficient; others are bureaucratic. Don't delay.</p>
+
+            <h3>Step 4: Obtain Your NIE (Foreigner Identification Number) (Immediately)</h3>
+            <p><strong>Timeline:</strong> Can be obtained immediately at immigration office or notary</p>
+            <p><strong>What:</strong> Your NIE is Spain's equivalent of a tax ID number and social security number combined. You'll need it for banking, healthcare, and contracts.</p>
+            <p><strong>How:</strong></p>
+            <ul>
+                <li><strong>Option 1 (Recommended):</strong> Obtain at Oficina de Extranjería when registering (included with TIE process)</li>
+                <li><strong>Option 2:</strong> Obtain at a notary (notaría) if needed before TIE is ready—costs EUR 10-20, takes 10 minutes</li>
+                <li>Fee: Included with TIE or EUR 10-20 at notary</li>
+            </ul>
+            <p><strong>For Australians:</strong> You'll need your NIE for nearly everything—banking, healthcare, contracts. Get it immediately.</p>
+
+            <h3>Step 5: Open a Spanish Bank Account (1-2 Weeks)</h3>
+            <p><strong>Timeline:</strong> ASAP after arrival</p>
+            <p><strong>What:</strong> A Spanish bank account in EUR, where your international transfers will arrive and your monthly expenses will be paid.</p>
+            <p><strong>How:</strong></p>
+            <ul>
+                <li>Visit banks (Santander, BBVA, CaixaBank are common)</li>
+                <li>Bring: Passport, NIE, Padron registration, proof of income (Centrelink letter, super statement)</li>
+                <li>Set up: EUR account, debit card, online banking, international transfer setup</li>
+                <li>Fee: Most banks offer free accounts for EU/OECD country residents; some charge EUR 5-10/month</li>
+                <li>Processing: 30 minutes to 1 week depending on bank</li>
+            </ul>
+            <p><strong>For Australians:</strong> Critical step. You cannot live in Spain without a Spanish bank account. Get this done in your first week. Most banks will accept your Australian income documentation as proof of funds.</p>
+
+            <h3>Step 6: Register for Spanish Healthcare (2-4 Weeks)</h3>
+            <p><strong>Timeline:</strong> After Padron registration</p>
+            <p><strong>What:</strong> Registration for Spain's public healthcare system (INSALUD), which you're entitled to as an NLV resident.</p>
+            <p><strong>How:</strong></p>
+            <ul>
+                <li>Go to your local Centro de Salud (health center/clinic)</li>
+                <li>Bring: Passport, Padron registration, NIE, proof of residence</li>
+                <li>Register: They'll assign you to your local GP and healthcare center</li>
+                <li>You'll receive: Health card (tarjeta sanitaria) showing your coverage</li>
+                <li>Fee: Free (covered by your income/tax contributions)</li>
+            </ul>
+            <p><strong>For Australians:</strong> Spanish public healthcare is excellent and free. This replaces your purchased expat insurance (though keep insurance until healthcare registration is complete).</p>
+
+            <h3>Step 7: Set Up Utilities and Services (1-2 Weeks)</h3>
+            <p><strong>Timeline:</strong> First 2-3 weeks after arrival</p>
+            <p><strong>What:</strong> Arrange electricity, water, gas, internet at your residence.</p>
+            <p><strong>How:</strong></p>
+            <ul>
+                <li>Contact major providers: Iberdrola/Endesa (electricity), Canal de Isabel II (water, Madrid), Telefónica/Vodafone (internet)</li>
+                <li>Bring: Lease agreement, NIE, proof of residence</li>
+                <li>Setup: Usually 3-5 business days for connection</li>
+                <li>Fee: Varies; typically EUR 50-100 connection fee, then monthly charges for usage</li>
+            </ul>
+            <p><strong>For Australians:</strong> Spanish utilities are straightforward. Get these set up early so you have electricity, water, and internet. Utility bills also serve as proof of residence for future bureaucratic needs.</p>
+
+            <h3>Critical After-Arrival Mistakes for Australians</h3>
+
+            <p><strong>Mistake #1: Not Registering Residency</strong><br>
+            Not registering with immigration or the Padron within required timelines can result in fines or visa cancellation. This is bureaucratic, but mandatory. Don't delay.</p>
+
+            <p><strong>Mistake #2: Leaving Accommodation Unsecured</strong><br>
+            You can't register residency without proof of accommodation (lease/property). If you've booked a hotel for your first weeks, you cannot officially register. Arrange your real accommodation before arriving, or book an Airbnb with a lease agreement before your immigration appointment.</p>
+
+            <p><strong>Mistake #3: Not Opening a Bank Account Quickly</strong><br>
+            Many Australians try to manage money through international transfers and ATM withdrawals without a Spanish account. This is inefficient and expensive. Open a Spanish bank account in your first week. You'll need it for rent, utilities, and everyday spending.</p>
+
+            <p><strong>Mistake #4: Failing to Register for Healthcare</strong><br>
+            Once your Padron registration is complete, register for Spanish public healthcare immediately. There's no point paying for expat insurance longer than necessary. Spanish public healthcare is free and high-quality.</p>
+
+            <p><strong>Mistake #5: Ignoring Padron Re-registration Requirements</strong><br>
+            Padron registration expires every 2 years. You must re-register even if you stay in the same apartment. Miss the deadline, and your registration lapses, affecting your visa status. Set a calendar reminder for year 2.</p>
+
+            <p><strong>Mistake #6: Moving Without Updating Padron</strong><br>
+            If you change residences, you must update your Padron registration within 30 days. Failure to do so can affect your tax residency and visa status. Always update.</p>
+
+            <p><strong>Mistake #7: Not Keeping Your Income Documentation Current</strong><br>
+            During visa renewals (years 1-5), Spain will request updated income documentation. Keep your Australian documents organized and accessible—super statements, Centrelink letters, bank statements. You may need to email these to Spanish immigration.</p>
+
+            <h3>Your Timeline for First 3 Months in Spain</h3>
+
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Days 1-7 (First Week)</th>
+                        <th>Days 8-30 (First Month)</th>
+                        <th>Days 31-90 (Months 2-3)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <strong>Immediate Actions:</strong>
+                            <ul>
+                                <li>Check into accommodation</li>
+                                <li>Get local SIM card</li>
+                                <li>Locate Oficina de Extranjería</li>
+                                <li>Open Spanish bank account</li>
+                                <li>Set up utilities</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <strong>Within 30 Days:</strong>
+                            <ul>
+                                <li>Register with immigration</li>
+                                <li>Apply for TIE card</li>
+                                <li>Register on local Padron</li>
+                                <li>Obtain NIE (if not yet done)</li>
+                                <li>Complete bank setup</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <strong>Months 2-3:</strong>
+                            <ul>
+                                <li>Pick up TIE card</li>
+                                <li>Register for healthcare</li>
+                                <li>Adjust to Spanish life</li>
+                                <li>Explore community</li>
+                                <li>Plan for visa renewal process (year 1)</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Visa Renewal: Planning for Year 1</h3>
+            <p>As you settle into Spain, remember your initial NLV visa is valid for 1 year from entry. Before expiration, you must apply for renewal through Spanish immigration (not BLS—you'll apply in Spain).</p>
+
+            <p><strong>Timeline for Renewal:</strong></p>
+            <ul>
+                <li><strong>Month 10 of residency:</strong> Gather updated income documentation (recent Centrelink letters, super statements, etc.)</li>
+                <li><strong>Month 11:</strong> Schedule appointment with immigration for renewal application</li>
+                <li><strong>Month 12:</strong> Submit renewal application (processing typically 1-2 months before visa expires)</li>
+                <li><strong>Renewal issued:</strong> Typically 2-3 year duration for first renewal; 3-5 years for subsequent renewals</li>
+            </ul>
+
+            <p>Renewal is generally simpler than initial application since you're already in Spain and your income is established. However, don't leave it to the last minute—start the process 2-3 months before expiration.</p>
+        </section>
+
+    
+
+    <div class="mobile-action-bar">
+        <a href="/renewal/bls-directory.html">Browse BLS</a>
+        <a href="/faq.html">FAQ</a>
+    </div>
+
+    <!-- Start cookieyes banner -->
+    <script id="cookieyes" type="text/javascript" src="https://cdn-cookieyes.com/client_data/78271008c96df6c735efd415cdea6100/script.js"></script>
+    <!-- End cookieyes banner -->

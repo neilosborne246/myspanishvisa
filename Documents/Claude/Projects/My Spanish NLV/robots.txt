@@ -1,0 +1,18 @@
+User-agent: *
+Allow: /
+
+# Disallow dashboard redirects (not public content)
+Disallow: /dashboard/
+
+# Allow all major crawlers explicit access
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+# Sitemap location
+Sitemap: https://myspanishnlv.com/sitemap.xml

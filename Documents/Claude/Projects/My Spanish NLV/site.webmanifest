@@ -1,0 +1,29 @@
+{
+  "name": "My Spanish NLV",
+  "short_name": "MySpanishNLV",
+  "description": "Spain Non-Lucrative Visa application and renewal specialists — powered by Platinum Legal Spain.",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#0c1930",
+  "theme_color": "#0c1930",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "/favicon-32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ],
+  "categories": ["finance", "travel", "lifestyle"],
+  "lang": "en-GB",
+  "dir": "ltr"
+}

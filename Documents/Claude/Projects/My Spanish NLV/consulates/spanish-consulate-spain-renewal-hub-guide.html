@@ -1,0 +1,1668 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K0X9M61S63"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-K0X9M61S63');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>My Spanish NLV</title>
+    <meta name="description" content="Spain's Non-Lucrative Visa guide and application support.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --navy: #0c1930;
+            --navy-mid: #1a3a5c;
+            --red: #be0011;
+            --yellow: #facf39;
+            --cream: #f8f7f4;
+            --white: #ffffff;
+            --grey-100: #f0eff0;
+            --grey-300: #c8c8cc;
+            --grey-600: #6b6b72;
+            --ff-display: 'Bricolage Grotesque', sans-serif;
+            --ff-body: 'Inter', sans-serif;
+            --r-sm: 6px;
+            --r-md: 12px;
+            --r-lg: 20px;
+            --r-pill: 40px;
+            --shadow-sm: 0 2px 8px rgba(0,0,0,.08);
+            --max-w: 1140px;
+            --nav-h: 90px;
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+    html, body { overflow-x: hidden; }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--ff-body);
+            background: var(--white);
+            color: var(--navy);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            padding-top: 90px;
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 900;
+            height: 90px;
+            background: rgba(12, 25, 48, .95);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, .08);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.75rem 2rem;
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: .8rem;
+            text-decoration: none;
+            flex-shrink: 0;
+        }
+
+        .nav-logo img {
+            height: 40px;
+            width: auto;
+            display: block;
+        }
+
+        .nav-logo-text {
+            font-family: var(--ff-display);
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: #fff;
+            letter-spacing: 0.04em;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-size: .82rem;
+            font-weight: 400;
+            letter-spacing: .06em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, .82);
+            transition: color .2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--yellow);
+        }
+
+        .nav-cta {
+            background: var(--red) !important;
+            color: var(--white) !important;
+            padding: .55rem 1.3rem !important;
+            border-radius: var(--r-pill) !important;
+            font-weight: 600 !important;
+            letter-spacing: .04em !important;
+            font-size: .85rem !important;
+        }
+
+        .nav-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 4px;
+            background: none;
+            border: none;
+        }
+
+        .nav-toggle span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: var(--white);
+            border-radius: 2px;
+        }
+
+        /* Mobile Menu */
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #0c1930;
+            z-index: 10000;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            padding-top: 4.5rem;
+            overflow-y: auto;
+        }
+
+        .mobile-menu.open {
+            display: flex;
+        }
+
+        .mobile-menu-close {
+            position: absolute;
+            top: 1.1rem;
+            right: 1.5rem;
+            background: none;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: var(--white);
+            font-size: 1.3rem;
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .mobile-menu > a {
+            display: block;
+            width: 100%;
+            text-align: center;
+            padding: 1.3rem 2rem;
+            color: var(--white);
+            text-decoration: none;
+            font-size: 1.15rem;
+            font-weight: 400;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .mobile-menu > a:first-of-type {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .mobile-menu > a:hover {
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        /* Hero Section */
+        .page-hero {
+            background: var(--navy);
+            padding: 7rem 4rem 4rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .page-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(250, 207, 57, .08) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .page-hero-inner {
+            max-width: 820px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .page-hero-badge {
+            display: inline-block;
+            background: rgba(250, 207, 57, .15);
+            color: var(--yellow);
+            border: 1px solid rgba(250, 207, 57, .3);
+            border-radius: var(--r-pill);
+            padding: .35rem 1rem;
+            font-size: .8rem;
+            font-weight: 600;
+            letter-spacing: .06em;
+            text-transform: uppercase;
+            margin-bottom: 1.2rem;
+        }
+
+        .page-hero h1 {
+            font-family: var(--ff-display);
+            font-size: clamp(2rem, 4.5vw, 3.2rem);
+            font-weight: 700;
+            color: var(--white);
+            line-height: 1.15;
+            margin-bottom: 1.2rem;
+        }
+
+        .page-hero h1 em {
+            color: var(--yellow);
+            font-style: normal;
+        }
+
+        .page-hero p {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, .78);
+            max-width: 640px;
+            margin: 0 auto 2rem;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: var(--red);
+            color: var(--white);
+            padding: .85rem 2rem;
+            border-radius: var(--r-pill);
+            font-weight: 700;
+            font-size: 1rem;
+            transition: background .2s, transform .15s;
+            display: inline-block;
+        }
+
+        .btn-primary:hover {
+            background: #9a000e;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            border: 2px solid rgba(255, 255, 255, .35);
+            color: var(--white);
+            padding: .85rem 2rem;
+            border-radius: var(--r-pill);
+            font-weight: 600;
+            font-size: 1rem;
+            display: inline-block;
+        }
+
+        .btn-outline:hover {
+            border-color: var(--yellow);
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            display: none;
+            font-size: .82rem;
+            color: var(--grey-600);
+            padding: 1.2rem 2rem;
+            max-width: var(--max-w);
+            margin: 0 auto;
+        }
+
+        .breadcrumb a {
+            color: var(--navy-mid);
+        }
+
+        .breadcrumb span {
+            margin: 0 .4rem;
+        }
+
+        /* Blog Grid */
+        .blog-grid {
+            display: grid;
+            grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+            gap: 3rem;
+            align-items: start;
+        }
+
+        .blog-body {
+            max-width: 760px;
+        }
+
+        .blog-body h2 {
+            font-family: var(--ff-display);
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 2.5rem 0 .75rem;
+            color: var(--navy);
+        }
+
+        .blog-body h3 {
+            font-family: var(--ff-display);
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin: 1.75rem 0 .5rem;
+            color: var(--navy);
+        }
+
+        .blog-body p {
+            font-size: 1rem;
+            color: var(--grey-600);
+            line-height: 1.85;
+            margin-bottom: 1.1rem;
+        }
+
+        .blog-body ul, .blog-body ol {
+            margin-bottom: 1.1rem;
+            padding-left: 1.6rem;
+        }
+
+        .blog-body li {
+            font-size: 1rem;
+            color: var(--grey-600);
+            line-height: 1.75;
+            margin-bottom: .4rem;
+        }
+
+        .blog-body strong {
+            color: var(--navy);
+            font-weight: 600;
+        }
+
+        .blog-body a {
+            color: var(--red);
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            position: sticky;
+            top: calc(90px + 2rem);
+        }
+
+        .sidebar-card {
+            background: var(--cream);
+            border-radius: var(--r-md);
+            padding: 1.5rem;
+            margin-bottom: 1.2rem;
+        }
+
+        .sidebar-card h4 {
+            font-family: var(--ff-display);
+            font-size: .95rem;
+            font-weight: 700;
+            margin-bottom: .9rem;
+        }
+
+        .sidebar-card ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            gap: .5rem;
+        }
+
+        .sidebar-card ul li a {
+            font-size: .88rem;
+            color: var(--navy-mid);
+            display: flex;
+            align-items: center;
+            gap: .4rem;
+        }
+
+        .sidebar-card ul li a::before {
+            content: "\2192";
+            color: var(--red);
+            flex-shrink: 0;
+        }
+
+        .sidebar-cta {
+            background: var(--red);
+            border-radius: var(--r-md);
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .sidebar-cta h4 {
+            font-family: var(--ff-display);
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: .6rem;
+        }
+
+        .sidebar-cta p {
+            font-size: .85rem;
+            color: rgba(255, 255, 255, .82);
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        .sidebar-cta a {
+            display: block;
+            background: var(--white);
+            color: var(--red);
+            padding: .7rem 1.2rem;
+            border-radius: var(--r-pill);
+            font-weight: 700;
+            font-size: .9rem;
+        }
+
+        /* FAQ */
+        .section {
+            padding: 5rem 2rem;
+        }
+
+        .section-inner {
+            max-width: var(--max-w);
+            margin: 0 auto;
+        }
+
+        .section--cream {
+            background: var(--cream);
+        }
+
+        .section-title {
+            font-family: var(--ff-display);
+            font-size: clamp(1.6rem, 3vw, 2.4rem);
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 2rem;
+        }
+
+        .faq-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .faq-item {
+            border: 1px solid var(--grey-300);
+            border-radius: var(--r-md);
+            overflow: hidden;
+        }
+
+        .faq-q {
+            width: 100%;
+            background: var(--white);
+            border: none;
+            cursor: pointer;
+            padding: 1.2rem 1.4rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+            text-align: left;
+        }
+
+        .faq-q span {
+            font-family: var(--ff-display);
+            font-weight: 600;
+            font-size: .97rem;
+            color: var(--navy);
+        }
+
+        .faq-q svg {
+            flex-shrink: 0;
+            transition: transform .3s;
+            color: var(--red);
+        }
+
+        .faq-item.open .faq-q svg {
+            transform: rotate(45deg);
+        }
+
+        .faq-a {
+            display: none;
+            padding: 0 1.4rem 1.2rem;
+            font-size: .93rem;
+            color: var(--grey-600);
+            line-height: 1.7;
+        }
+
+        .faq-item.open .faq-a {
+            display: block;
+        }
+
+        /* CTA Banner */
+        .cta-banner {
+            background: var(--red);
+            border-radius: var(--r-lg);
+            padding: 3rem 2.5rem;
+            text-align: center;
+            margin: 3rem 0;
+        }
+
+        .cta-banner h2 {
+            font-family: var(--ff-display);
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: .75rem;
+        }
+
+        .cta-banner p {
+            color: rgba(255, 255, 255, .85);
+            margin-bottom: 1.8rem;
+            font-size: 1.05rem;
+        }
+
+        .btn-white {
+            background: var(--white);
+            color: var(--red);
+            padding: .85rem 2.2rem;
+            border-radius: var(--r-pill);
+            font-weight: 700;
+            font-size: 1rem;
+            display: inline-block;
+            transition: transform .15s;
+        }
+
+        .btn-white:hover {
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--navy);
+            border-top: 1px solid rgba(255, 255, 255, .08);
+            padding: 4rem 2rem 2rem;
+        }
+
+        .footer-grid {
+            max-width: var(--max-w);
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: .6rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-logo img {
+            height: 40px;
+            width: auto;
+        }
+
+        .footer-logo-text {
+            font-family: var(--ff-display);
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--white);
+        }
+
+        .footer-tagline {
+            font-size: .88rem;
+            color: #8a9bb0;
+            line-height: 1.6;
+            margin-bottom: 1.25rem;
+        }
+
+        .footer-email a {
+            color: var(--yellow);
+            text-decoration: none;
+            font-size: .9rem;
+            font-weight: 500;
+            transition: color .2s;
+        }
+
+        .footer-email a:hover {
+            color: var(--white);
+        }
+
+        .footer-heading {
+            font-size: .7rem;
+            letter-spacing: .15em;
+            text-transform: uppercase;
+            color: var(--yellow);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .footer-list {
+            list-style: none;
+        }
+
+        .footer-list li {
+            margin-bottom: .6rem;
+        }
+
+        .footer-list a {
+            color: #8a9bb0;
+            text-decoration: none;
+            font-size: .85rem;
+            transition: color .2s;
+        }
+
+        .footer-list a:hover {
+            color: var(--white);
+        }
+
+        .footer-bottom {
+            max-width: var(--max-w);
+            margin: 2.5rem auto 0;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, .08);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-copy {
+            font-size: .78rem;
+            color: #8a9bb0;
+        }
+
+        .footer-legal {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-legal a {
+            color: #8a9bb0;
+            text-decoration: none;
+            font-size: .78rem;
+            transition: color .2s;
+        }
+
+        .footer-legal a:hover {
+            color: var(--white);
+        }
+
+        /* Mobile Bar */
+        .mobile-bar {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            background: var(--navy);
+            border-top: 1px solid rgba(255, 255, 255, .1);
+            padding: 0.75rem 1rem;
+            gap: 0.5rem;
+        }
+
+        .mobile-bar a {
+            flex: 1;
+            text-align: center;
+            padding: 0.75rem 0.5rem;
+            border-radius: var(--r-pill);
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .mobile-bar .bar-apply {
+            background: var(--red);
+            color: var(--white);
+        }
+
+        .mobile-bar .bar-contact {
+            background: transparent;
+            border: 1px solid var(--cream);
+            color: var(--cream);
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+      .nav-logo img { height: 80px !important; width: auto !important; }
+      body { padding-top: 98px; }
+            body {
+                padding-top: calc(90px + 2rem);
+            }
+
+            .nav-links {
+                display: none !important;
+            }
+
+            .nav-toggle {
+                display: flex !important;
+            }
+
+            .mobile-bar {
+                display: flex !important;
+            }
+
+            .blog-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .sidebar {
+                position: static;
+            }
+
+            .page-hero {
+                padding: 5rem 2rem 3rem;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .section {
+                padding: 3.5rem 1.5rem;
+            }
+        }
+
+        @media (max-width: 700px) {
+            nav {
+                padding: 0.6rem 1rem;
+            }
+
+            body {
+                padding-top: 75px;
+            }
+
+            .page-hero {
+                padding: 4rem 1.5rem 2rem;
+            }
+
+            .page-hero h1 {
+                font-size: 1.75rem;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero-actions {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .btn-primary, .btn-outline {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+    <script id="cookieyes" type="text/javascript" src="https://cdn-cookieyes.com/client_data/78271008c96df6c735efd415cdea6100/script.js"></script>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav>
+        <a href="https://myspanishnlv.com" class="nav-logo">
+            <img src="https://myspanishnlv.com/assets/logo-horizontal-light.png" alt="My Spanish NLV">
+            <span class="nav-logo-text">My Spanish NLV</span>
+        </a>
+        <button class="nav-toggle" id="hamburger" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links">
+            <li><a href="https://myspanishnlv.com">Home</a></li>
+            <li><a href="https://myspanishnlv.com/blog">Blog</a></li>
+            <li><a href="https://myspanishnlv.com/services">Services</a></li>
+            <li><a href="https://myspanishnlv.com/about">About</a></li>
+            <li><a href="https://myspanishnlv.com/faq">FAQs</a></li>
+            <li><a href="https://myspanishnlv.com/guides">Guides</a></li>
+        </ul>
+        <a href="https://myspanishnlv.com/contact" class="nav-cta">Get Started</a>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Close menu">✕</button>
+        <a href="https://myspanishnlv.com">Home</a>
+        <a href="https://myspanishnlv.com/blog">Blog</a>
+        <a href="https://myspanishnlv.com/services">Services</a>
+        <a href="https://myspanishnlv.com/about">About</a>
+        <a href="https://myspanishnlv.com/faq">FAQs</a>
+        <a href="https://myspanishnlv.com/guides">Guides</a>
+        <a href="https://myspanishnlv.com/contact">Get Started</a>
+    </div>
+
+<header>
+        <h1>Spain NLV Renewal Hub</h1>
+        <p>Your Complete Guide to Renewing the Spanish Non-Lucrative Visa While Residing in Spain</p>
+    </header>
+
+    <nav style="display: flex; flex-direction: column;">
+        <div style="display: flex; gap: 2rem; padding: 1rem 1.5rem; background-color: var(--color-navy); border-bottom: 1px solid rgba(255,255,255,0.1);">
+            <a href="/" style="color: var(--color-cream); text-decoration: none; font-weight: 600;">Home</a>
+            <a href="/consulates/" style="color: var(--color-cream); text-decoration: none; font-weight: 600;">Guides</a>
+            <a href="/faq.html" style="color: var(--color-cream); text-decoration: none; font-weight: 600;">FAQ</a>
+            <a href="/renewal/" style="color: var(--color-cream); text-decoration: none; font-weight: 600;">Renewals</a>
+        </div>
+        <ul>
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#renewal-process">Renewal Process</a></li>
+            <li><a href="#consulates-spain">Consulates in Spain</a></li>
+            <li><a href="#income-renewal">Income Documentation</a></li>
+            <li><a href="#timeline">Timeline</a></li>
+            <li><a href="#faqs">FAQs</a></li>
+            <li><a href="#after-renewal">After Renewal</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <section id="overview">
+            <h2>Overview: Renewing Your Spanish Non-Lucrative Visa</h2>
+
+            <p>Unlike initial NLV applications, which typically require you to apply from your home country at a Spanish consulate abroad, visa renewals for existing NLV holders can be completed entirely within Spain. This is one of the most significant advantages of Spain's immigration system—once you have your first NLV stamp in your passport, you can handle all future renewals through your local provincial immigration office or at designated consulates across Spain.</p>
+
+            <p>The Non-Lucrative Visa is typically granted for one year initially, with the possibility of renewal for multi-year periods. Many NLV holders renew annually during their first few years, then transition to longer-term renewals (2-3 years) as they demonstrate established residency and proven income streams.</p>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="number">1 Year</div>
+                    <div class="label">Initial Visa Duration</div>
+                </div>
+                <div class="stat-card">
+                    <div class="number">∞</div>
+                    <div class="label">Renewable Indefinitely</div>
+                </div>
+                <div class="stat-card">
+                    <div class="number">Simpler</div>
+                    <div class="label">Than Initial Application</div>
+                </div>
+            </div>
+
+            <h3>Why Renew in Spain?</h3>
+            <p>Once you're established in Spain with an NLV visa, renewing locally offers several distinct advantages:</p>
+            <ul>
+                <li><strong>No travel required.</strong> You can complete the entire renewal process from your Spanish address without returning to your home country.</li>
+                <li><strong>Faster processing.</strong> Provincial immigration offices often process renewals more quickly than consulates abroad, especially during peak application seasons.</li>
+                <li><strong>Easier documentation.</strong> You can gather Spanish bank statements, utility bills, and other proof of residency with minimal effort, as you're already living in Spain.</li>
+                <li><strong>Less strict requirements.</strong> Once you've demonstrated you can live on your income for a year (or more), renewals typically require less comprehensive documentation than the initial application.</li>
+                <li><strong>Flexibility with timing.</strong> You can renew within a reasonable window before expiration without the rigid timelines required for initial applications.</li>
+            </ul>
+
+            <div class="success-box">
+                <strong>Key Advantage</strong>
+                Most NLV renewals can be handled locally in Spain without requiring travel back to your home country or interaction with Spanish consulates abroad. This is a major convenience factor for long-term NLV holders.
+            </div>
+        </section>
+
+        <section id="renewal-process">
+            <h2>The Renewal Process: Step by Step</h2>
+
+            <h3>Where to Renew: Provincial Offices vs. Consulates</h3>
+            <p>As an existing NLV holder residing in Spain, you have multiple options for renewing your visa:</p>
+
+            <h4>Option 1: Provincial Immigration Office (Delegación Provincial de la Policía Nacional)</h4>
+            <p>This is the most common and recommended approach for most NLV holders. Each province in Spain has a provincial immigration office that handles visa renewals for foreigners already residing in that province. The process is straightforward, local, and typically faster than going through a consulate.</p>
+
+            <p><strong>Advantages:</strong></p>
+            <ul>
+                <li>No travel required (just visit your local office)</li>
+                <li>Faster processing times than consulates</li>
+                <li>Staff familiar with NLV renewals</li>
+                <li>Can often submit documents in person</li>
+            </ul>
+
+            <h4>Option 2: National Police Headquarters (Dirección General de la Policía)</h4>
+            <p>Some NLV holders prefer working with Spain's national police directorate directly, though this typically requires travel to Madrid or coordination via mail/courier services.</p>
+
+            <h4>Option 3: Spanish Consulate in Your Home Country</h4>
+            <p>If you return to your home country before renewal expiration, you can renew through the Spanish consulate there. This is less common for established NLV holders but remains an option if you plan an extended visit abroad.</p>
+
+            <div class="info-box">
+                <strong>Recommendation</strong>
+                For most NLV holders, renewing at your provincial immigration office is the easiest, fastest, and most reliable option. This can typically be done entirely in person with minimal travel hassle.
+            </div>
+
+            <h3>Documentation Required for Renewal</h3>
+            <p>Renewal documentation is generally simpler than initial application requirements, as you're no longer required to prove that you *can* live on your income—you've already demonstrated this over your first visa period. However, you must still prove that your income remains stable.</p>
+
+            <h4>Essential Documents</h4>
+            <ul>
+                <li><strong>Passport and current NLV visa.</strong> Original passport with valid NLV stamp/visa page.</li>
+                <li><strong>Renewal application form.</strong> The official form (varies by province; your immigration office will provide it).</li>
+                <li><strong>Proof of income (last 3-6 months).</strong> Bank statements, investment account statements, pension confirmations, or rental income documentation. This is much simpler than initial application—you're showing continuity, not a large lump sum.</li>
+                <li><strong>Proof of residency.</strong> Recent utility bill, rental contract, property deed, or empadronamiento certificate showing your Spanish address.</li>
+                <li><strong>Health insurance proof.</strong> Copy of valid Spanish or European health insurance. For many renewals, your initial insurance documentation may suffice if still valid.</li>
+                <li><strong>Background check (if required).</strong> Some provinces request a new background check every 3-5 years. Confirm with your immigration office whether this is needed for your renewal.</li>
+                <li><strong>TIE number (if obtained).</strong> If you have a TIE (Spanish foreigner identification number), you'll need it. If not yet obtained, the renewal office can guide you through getting one simultaneously with your renewal.</li>
+            </ul>
+
+            <h4>Optional/Supporting Documents</h4>
+            <ul>
+                <li>Updated CV or professional summary (if your income source is employment)</li>
+                <li>Proof of paid taxes in Spain (if you have Spanish tax residency)</li>
+                <li>Letters from your financial institution confirming account stability</li>
+                <li>Evidence of integration in Spain (language course certificates, volunteer work, community involvement)</li>
+            </ul>
+
+            <div class="warning-box">
+                <strong>Important Note on Income Documentation</strong>
+                For renewals, you don't need to prove you have the initial large income amount in a single account. Instead, you need to show consistent, regular income that covers your living expenses. This can be demonstrated through monthly bank deposits, pension payments, or investment dividends—whatever shows the income is ongoing and reliable.
+            </div>
+
+            <h3>The Application Timeline</h3>
+            <p>Renewal timelines are typically quite quick compared to initial applications:</p>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h4>Month 1-2 Before Expiration</h4>
+                    <p>Begin gathering documentation. Contact your provincial immigration office to confirm any specific requirements or changes in procedure. Some offices prefer applications submitted 60 days before expiration; others accept applications up to 90 days in advance.</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>Week Before Submission</h4>
+                    <p>Request appointment at provincial immigration office (some offices operate by appointment only; some allow walk-ins). Prepare all documents and make copies. Verify that your health insurance remains valid.</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>Submission Day</h4>
+                    <p>Submit application and documents. Office will provide you with a receipt/application number. Most offices process renewals within 1-4 weeks. You'll typically be notified when your renewal is approved.</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>Collection of Renewed Visa</h4>
+                    <p>Once approved, you'll typically be notified to collect your passport with the renewed visa stamp. This may be done in person or—for some provinces—by mail. Collect your passport and verify that the visa dates are correct.</p>
+                </div>
+            </div>
+
+            <h3>Processing Times by Region</h3>
+            <p>Processing times vary significantly by province. Here's what to expect:</p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Province</th>
+                        <th>Processing Time</th>
+                        <th>Special Notes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Madrid</strong></td>
+                        <td>2-4 weeks</td>
+                        <td>High volume; appointment system typically required</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Barcelona</strong></td>
+                        <td>2-3 weeks</td>
+                        <td>Consulate processes some renewals; provincial office also available</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Valencia</strong></td>
+                        <td>2-3 weeks</td>
+                        <td>Relatively efficient; walk-ins sometimes accepted</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Málaga/Andalusia</strong></td>
+                        <td>3-4 weeks</td>
+                        <td>Popular destination; expect higher volume during winter months</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Alicante</strong></td>
+                        <td>2-4 weeks</td>
+                        <td>Seasonal variation; slower in summer peak tourism</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Smaller Provinces</strong></td>
+                        <td>1-2 weeks</td>
+                        <td>Faster processing; often more personalized service</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="info-box">
+                <strong>Pro Tip</strong>
+                Smaller provinces (such as Cuenca, Soria, or Jaén) often have significantly faster processing times than major cities. If you're flexible about where you conduct your renewal and have connections in a smaller province, this can speed up the process considerably.
+            </div>
+        </section>
+
+        <section id="consulates-spain">
+            <h2>Spanish Consulates and Immigration Offices in Spain</h2>
+
+            <p>While provincial immigration offices are recommended for renewals, it's helpful to know the locations of Spain's major consulates, as some NLV holders prefer working with consulate staff for complex renewals or have specific circumstances requiring consulate-level handling.</p>
+
+            <h3>Major Spanish Consulates in Spain</h3>
+
+            <p><strong>Note:</strong> Spain also has numerous provincial delegations (Delegaciones Provinciales) of the National Police throughout all 50 provinces. Your nearest provincial capital will have an office capable of handling NLV renewals. The following consulates are international offices that handle renewals for some foreign residents:</p>
+
+            <div class="contact-card">
+                <h4>Consulate General in Madrid</h4>
+                <p><strong>Address:</strong> Calle de Príncipe de Vergara, 36, 28001 Madrid</p>
+                <p><strong>Phone:</strong> +34 91 423 8900</p>
+                <p><strong>Services:</strong> Can handle complex renewals; typically by appointment only</p>
+                <p><strong>Coverage:</strong> Primary consulate for Spain's central region</p>
+            </div>
+
+            <div class="contact-card">
+                <h4>Consulate General in Barcelona</h4>
+                <p><strong>Address:</strong> Paseo de la Bonanova, 35, 08017 Barcelona</p>
+                <p><strong>Phone:</strong> +34 93 240 6000</p>
+                <p><strong>Services:</strong> Visa renewals, complicated cases</p>
+                <p><strong>Coverage:</strong> Catalonia and surrounding regions</p>
+            </div>
+
+            <div class="contact-card">
+                <h4>Consulate General in Málaga</h4>
+                <p><strong>Address:</strong> Avenida de Colón, 27, 29001 Málaga</p>
+                <p><strong>Phone:</strong> +34 95 217 0600</p>
+                <p><strong>Services:</strong> Visa renewals for residents of southern Spain</p>
+                <p><strong>Coverage:</strong> Andalusia and surrounding regions</p>
+            </div>
+
+            <div class="contact-card">
+                <h4>Consulate General in Valencia</h4>
+                <p><strong>Address:</strong> Calle Gobernador Vieja, 5, 46003 Valencia</p>
+                <p><strong>Phone:</strong> +34 96 351 1700</p>
+                <p><strong>Services:</strong> Regional visa processing</p>
+                <p><strong>Coverage:</strong> Valencia region and eastern coastal areas</p>
+            </div>
+
+            <h3>Provincial Immigration Offices (Recommended for Renewals)</h3>
+
+            <p>Every provincial capital in Spain has a <strong>Delegación Provincial de la Policía Nacional</strong> with an immigration department. These are the preferred locations for NLV renewals. To find your nearest office:</p>
+
+            <ul>
+                <li>Visit the Spanish National Police website (www.policia.es) and search "Extranjería" (Foreigners)</li>
+                <li>Call the provincial capital police headquarters and ask for the Sección de Extranjería (Foreigners Section)</li>
+                <li>Contact your local town hall (Ayuntamiento); they can provide the exact address and contact info for your provincial office</li>
+                <li>Ask at your local empadronamiento office (Civil Registry) where to submit renewal applications</li>
+            </ul>
+
+            <div class="success-box">
+                <strong>Best Approach</strong>
+                For your renewal, start by visiting or calling the provincial immigration office in the province where you're registered (empadronado). This is almost always faster and easier than working with a consulate. The staff are accustomed to handling NLV renewals and can typically guide you through any province-specific requirements.
+            </div>
+        </section>
+
+        <section id="income-renewal">
+            <h2>Income Documentation for Renewal: What's Different</h2>
+
+            <h3>The Fundamental Shift: From Proving Sufficiency to Proving Continuity</h3>
+
+            <p>The most important thing to understand about renewal documentation is that it's <em>far simpler</em> than initial application documentation. Your initial NLV application required you to prove you had sufficient income to live in Spain independently. For renewal, immigration officials already know you've lived in Spain on this income for the past year (or more). Your renewal documentation simply needs to show that your income remains stable and unchanged.</p>
+
+            <h3>Income Documentation by Source Type</h3>
+
+            <h4>Pension Income (Most Common for NLV Holders)</h4>
+            <p>If your primary income is a pension:</p>
+            <ul>
+                <li><strong>Provide:</strong> Recent pension statements covering the last 3-6 months, showing consistent monthly deposits to your Spanish bank account.</li>
+                <li><strong>Change in amount:</strong> If your pension amount increased, include documentation of the increase (pension statement letter from your home country). Increases are actually beneficial for renewal.</li>
+                <li><strong>Currency fluctuations:</strong> If your pension is in foreign currency, show your most recent statements. Immigration officials understand exchange rate variations.</li>
+                <li><strong>Tax documentation:</strong> If you've filed Spanish taxes during your first year (many NLV holders do), include a copy of your tax return as proof of declared income.</li>
+            </ul>
+
+            <h4>Investment Income or Interest</h4>
+            <p>For renewable NLV holders living on investment returns:</p>
+            <ul>
+                <li><strong>Provide:</strong> Quarterly or monthly investment account statements showing balance and interest/dividend deposits.</li>
+                <li><strong>Consistency:</strong> Show that your deposits are regular (even if amounts vary seasonally).</li>
+                <li><strong>Account documentation:</strong> Include a letter from your financial institution confirming that the account is active, verified, and in good standing.</li>
+                <li><strong>No withdrawal requirement:</strong> Unlike initial applications (which required full documentation of investment sources), renewals simply need to show ongoing investment income without requiring detailed source verification.</li>
+            </ul>
+
+            <h4>Rental Income</h4>
+            <p>If you're renting out property in your home country and using that income to support your Spanish residence:</p>
+            <ul>
+                <li><strong>Provide:</strong> Rental income deposits to your Spanish bank account (3-6 months of statements).</li>
+                <li><strong>Lease documentation:</strong> A copy of your current property lease agreement.</li>
+                <li><strong>Tax documentation:</strong> If you report rental income to tax authorities in your home country, include a summary of your tax return showing rental income declared.</li>
+                <li><strong>Simplification:</strong> You don't need to provide detailed property valuations or proof of property ownership for renewals—just evidence of consistent deposits.</li>
+            </ul>
+
+            <h4>Employment Income (For Those Who Obtained Work Permission)</h4>
+            <p>Some NLV holders transition to employment or self-employment in Spain:</p>
+            <ul>
+                <li><strong>Provide:</strong> Last 3-6 months of payroll stubs or bank deposits from employment.</li>
+                <li><strong>Self-employed:</strong> If you've registered as self-employed (autónomo), provide your registration certificate and recent monthly bank statements showing income deposits.</li>
+                <li><strong>Spanish taxes:</strong> Include your Spanish income tax return if filed.</li>
+                <li><strong>Note:</strong> Employment or self-employment actually strengthens your renewal case, as it shows economic integration in Spain.</li>
+            </ul>
+
+            <h4>Mixed Income Sources</h4>
+            <p>Many NLV holders have multiple income streams (e.g., pension + rental income + investment returns):</p>
+            <ul>
+                <li><strong>Provide:</strong> Bank statements showing all deposits combined, which clearly demonstrate total monthly income exceeds the €28,800 annual requirement (€2,400/month).</li>
+                <li><strong>Beneficial:</strong> Multiple income sources actually strengthen your renewal, as it shows economic security and diversification.</li>
+            </ul>
+
+            <h3>Bank Statements: The Core Document</h3>
+
+            <p>Your Spanish bank statements are your most important renewal document. Immigration officials will examine them to verify:</p>
+
+            <ul>
+                <li><strong>Consistency:</strong> Income deposits appear regularly (monthly or as expected for your income type)</li>
+                <li><strong>Sufficiency:</strong> Monthly deposits average above the €2,400/month minimum requirement</li>
+                <li><strong>Stability:</strong> No unusual or inexplicable large withdrawals</li>
+                <li><strong>Legitimacy:</strong> Deposits come from legitimate sources (pension systems, investment accounts, employers)</li>
+            </ul>
+
+            <div class="info-box">
+                <strong>Pro Tip</strong>
+                Request "official bank statements" (extractos bancarios oficiales) from your Spanish bank. These are more formal than online printouts and carry more weight with immigration officials. Most banks will provide these for free or a small fee if you request them in person or online.
+            </div>
+
+            <h3>Health Insurance: Renewal Considerations</h3>
+
+            <p>Your health insurance is still required for renewal, but the documentation requirements are simpler than initial application:</p>
+
+            <ul>
+                <li><strong>Ongoing coverage:</strong> If your health insurance from your initial application is still valid, you typically just need to provide proof that it remains in force (a simple certificate from your insurer).</li>
+                <li><strong>Policy changes:</strong> If you've changed insurance providers, provide documentation of your new policy and confirmation that coverage is active and uninterrupted.</li>
+                <li><strong>Spanish public insurance:</strong> If you've registered with Spain's public health system (Seguridad Social), a simple printout from your registration will suffice.</li>
+                <li><strong>No medical examination:</strong> Renewals typically don't require new medical examinations.</li>
+            </ul>
+
+            <h3>Background Checks for Renewal</h3>
+
+            <p>Background check requirements for renewal vary by province and your individual circumstances:</p>
+
+            <h4>Standard Scenario: No New Background Check Required</h4>
+            <p>For most NLV renewals, especially first or second renewals, no new background check is required. Your initial background check from your first NLV application is typically considered sufficient.</p>
+
+            <h4>Extended Renewals (3+ Years): Possible Background Check</h4>
+            <p>If you're renewing after 3-5 years, some provinces may request an updated background check to confirm no criminal activity during your residence in Spain. This is a formality in most cases but varies by province.</p>
+
+            <h4>How to Obtain Updated Background Check</h4>
+            <p>If required, you'll typically need:</p>
+            <ul>
+                <li><strong>From your home country:</strong> An updated police background check (apostilled). Contact your home country's police or equivalent authority and request a fresh background check/police certificate.</li>
+                <li><strong>From Spain:</strong> Proof of no criminal record in Spain, obtained from the National Police or local police station (typically a simple administrative request).</li>
+                <li><strong>Processing time:</strong> These checks are much faster than initial background checks (often 1-2 weeks) since you're simply verifying no new issues have arisen.</li>
+            </ul>
+
+            <div class="warning-box">
+                <strong>Proactive Recommendation</strong>
+                Before submitting your renewal, ask your provincial immigration office if a new background check is required. If required, obtain it early to avoid delays. Most offices will tell you immediately whether one is needed.
+            </div>
+        </section>
+
+        <section id="timeline">
+            <h2>Renewal Timeline: When to Start</h2>
+
+            <h3>Critical Dates to Remember</h3>
+
+            <p>Understanding the timeline is crucial for a smooth renewal process. Missing important dates can result in complications, though Spain is generally forgiving with grace periods for renewals.</p>
+
+            <h4>Your NLV Visa Expiration Date</h4>
+            <p>Your passport will show the exact expiration date of your current NLV visa. This is your key reference point. Mark this date clearly and set reminders.</p>
+
+            <h4>When to Begin Renewal Process</h4>
+            <ul>
+                <li><strong>60-90 days before expiration:</strong> Contact your provincial immigration office to confirm renewal procedures and required documentation.</li>
+                <li><strong>60 days before expiration:</strong> Begin gathering all documentation.</li>
+                <li><strong>45-60 days before expiration:</strong> Aim to have your application submitted. This ensures processing is completed before your current visa expires.</li>
+                <li><strong>At expiration:</strong> If you've submitted your application and are awaiting processing, you'll typically be issued a temporary document (resguardo) confirming your renewal is in progress. This protects your legal status while processing continues.</li>
+            </ul>
+
+            <h3>Grace Periods and Extensions</h3>
+
+            <p><strong>Important:</strong> If your NLV visa expires before your renewal is processed, you're not immediately illegal. Spain recognizes a grace period for renewals:</p>
+
+            <ul>
+                <li><strong>Submitted application = legal status:</strong> Once you've submitted your renewal application and received a receipt, your legal status is protected even if your visa has expired.</li>
+                <li><strong>Grace period:</strong> You're typically allowed to remain in Spain while your renewal is being processed (usually 1-4 weeks after submission).</li>
+                <li><strong>Travel implications:</strong> Do <em>not</em> travel outside Spain with an expired visa, even if your renewal is pending. Exit Spain before expiration if you plan to leave during processing.</li>
+            </ul>
+
+            <div class="success-box">
+                <strong>Best Practice</strong>
+                Aim to submit your renewal application at least 30 days before expiration. This ensures your new visa will be issued before your current one expires, eliminating any potential complications or the need to rely on grace periods.
+            </div>
+
+            <h3>Multi-Year Renewals</h3>
+
+            <p>After your first renewal (or sometimes after 2-3 renewals), you may be eligible for a multi-year renewal:</p>
+
+            <ul>
+                <li><strong>After 2 years of residence:</strong> Many provinces allow 2-year renewals</li>
+                <li><strong>After 5 years of residence:</strong> You may qualify for longer periods between renewals</li>
+                <li><strong>Request advantages:</strong> Multi-year renewals reduce paperwork frequency and provide greater security of long-term residency</li>
+                <li><strong>How to request:</strong> Simply indicate on your renewal application that you'd like a multi-year renewal if eligible. Immigration officials will either grant it or explain why you don't yet qualify.</li>
+            </ul>
+
+            <h3>Typical Renewal Schedule</h3>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Year(s) of Residency</th>
+                        <th>Typical Renewal Period</th>
+                        <th>Notes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Year 1</td>
+                        <td>1 year renewal</td>
+                        <td>Initial visa; first renewal is typically annual</td>
+                    </tr>
+                    <tr>
+                        <td>Year 2-3</td>
+                        <td>1-2 year renewals</td>
+                        <td>2-year renewals often become available after first renewal</td>
+                    </tr>
+                    <tr>
+                        <td>Year 4-5</td>
+                        <td>2-3 year renewals</td>
+                        <td>Many provinces grant longer periods after stable residence</td>
+                    </tr>
+                    <tr>
+                        <td>Year 5+</td>
+                        <td>3-5 year renewals</td>
+                        <td>Long-term renewals possible; some provinces allow indefinite renewals</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="faqs">
+            <h2>Frequently Asked Questions About NLV Renewal</h2>
+
+            <div class="accordion">
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <span>Can I renew my NLV visa before it expires?</span>
+                        <span class="accordion-toggle">▼</span>
+                    </div>
+                    <div class="accordion-content">
+                        <p>Yes. You can submit your renewal application up to 90 days (sometimes 120 days) before your current visa expires. Most immigration offices prefer you apply 60-90 days in advance. This allows processing to be completed and your new visa issued before expiration.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <span>What if I'm outside Spain when my NLV visa expires?</span>
+                        <span class="accordion-toggle">▼</span>
+                    </div>
+                    <div class="accordion-content">
+                        <p>If you're outside Spain when your visa expires, you'll need to return to Spain or renew it through a Spanish consulate in your current location. It's generally not recommended to let your visa expire while outside Spain, as re-entry could be complicated. Plan your travel to ensure your visa remains valid while you're abroad.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <span>Do I need an appointment for renewal, or can I walk in?</span>
+                        <span class="accordion-toggle">▼</span>
+                    </div>
+                    <div class="accordion-content">
+                        <p>This varies by province. Larger provinces (Madrid, Barcelona, Málaga) typically require appointments, which can be booked online or by phone. Smaller provinces often allow walk-ins or have less formal appointment systems. Check with your specific provincial office.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <span>Can my income source change between renewals?</span>
+                        <span class="accordion-toggle">▼</span>
+                    </div>
+                    <div class="accordion-content">
+                        <p>Yes, absolutely. If you've taken employment, started a business, or changed from pension income to investment income, you can renew based on your new income source—as long as it meets the minimum €28,800/year (€2,400/month) requirement. Document your new income source with appropriate bank statements and supporting documents.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <span>What if my income is slightly below the minimum requirement?</span>
+                        <span class="accordion-toggle">▼</span>
+                    </div>
+                    <div class="accordion-content">
+                        <p>Technically, your income must meet the minimum. However, immigration officials understand fluctuations and are generally lenient during renewals if you've been living in Spain on your declared income. A 5-10% shortfall might be overlooked if your income has been stable. If you're concerned, discuss it with immigration office staff before submitting your application.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <span>Can I renew with my TIE number instead of my passport?</span>
+                        <span class="accordion-toggle">▼</span>
+                    </div>
+                    <div class="accordion-content">
+                        <p>You'll still need your passport for the official renewal, but if you have a TIE (Spanish foreigner ID card), it will be updated with your new visa expiration date simultaneously. Some provinces may allow you to renew using your TIE, but your passport must ultimately be stamped with the new visa.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <span>How much does renewal cost?</span>
+                        <span class="accordion-toggle">▼</span>
+                    </div>
+                    <div class="accordion-content">
+                        <p>NLV renewal fees are minimal in Spain—typically €10-50 for the visa stamp itself. However, you may incur ancillary costs such as: obtaining updated documents (€10-50), notarization if required (€20-50), courier services if mailing documents (€10-30), or obtaining a background check if required (€0-100 depending on your country). Most renewals cost €50-150 total.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <span>What's the difference between renewal and getting a TIE?</span>
+                        <span class="accordion-toggle">▼</span>
+                    </div>
+                    <div class="accordion-content">
+                        <p>A TIE (Tarjeta de Identidad de Extranjero) is a physical ID card for foreigners residing in Spain. Your visa renewal is the immigration status extension. You can obtain a TIE at any time during your first year (it's optional), and it will be renewed/updated whenever your visa is renewed. They're complementary but separate processes.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <span>Can someone else submit my renewal application on my behalf?</span>
+                        <span class="accordion-toggle">▼</span>
+                    </div>
+                    <div class="accordion-content">
+                        <p>Most provinces require you to appear in person to submit your renewal application. Some offices allow a spouse or authorized representative to submit documents, but verification of your identity and presence is typically necessary. Check with your specific immigration office about their policy.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <span>What if my renewal is denied?</span>
+                        <span class="accordion-toggle">▼</span>
+                    </div>
+                    <div class="accordion-content">
+                        <p>Denials are extremely rare for renewals if you've been living in Spain stably on your declared income. If your renewal is denied, you'll receive a formal explanation. Common reasons include: insufficient income documentation, failure to update health insurance, or criminal activity in Spain. You can appeal within a specified period (usually 30 days) by providing additional documentation or challenging the decision.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <span>Can I renew for 3 or 5 years immediately, or must I start with annual renewals?</span>
+                        <span class="accordion-toggle">▼</span>
+                    </div>
+                    <div class="accordion-content">
+                        <p>Most provinces begin with 1-year renewals and extend to longer periods after you've demonstrated stable residence. However, some offices may grant 2-year renewals from your first renewal if you have strong documentation and established Spanish ties. You can always request a longer renewal period—the worst they'll say is no and issue you 1 year instead.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="after-renewal">
+            <h2>After Your Renewal: Next Steps and Important Considerations</h2>
+
+            <h3>Collecting Your Renewed Visa</h3>
+
+            <p>Once your renewal is approved, you'll be notified (typically by phone call or mail). You'll need to collect your passport with the new visa stamp. Ensure:</p>
+
+            <ul>
+                <li><strong>Verify dates:</strong> Check that the new visa expiration date is correctly stamped in your passport. Common errors include incorrect dates—catch these before leaving the immigration office.</li>
+                <li><strong>Request receipt:</strong> Ask for an official receipt or certificate confirming your renewal, which can be useful for administrative purposes.</li>
+                <li><strong>TIE update:</strong> If you have a TIE, confirm whether it's been automatically updated or if you need to schedule an appointment to update it separately.</li>
+            </ul>
+
+            <h3>Padron (Census) Verification</h3>
+
+            <p>While technically not part of the renewal process, it's a good time to verify your empadronamiento (registration on your town's census) is current:</p>
+
+            <ul>
+                <li>Visit your local town hall (Ayuntamiento) and confirm you're listed at your current address</li>
+                <li>If you've moved, update your empadronamiento at your new municipality</li>
+                <li>This registration is important for tax purposes, healthcare access, and future administrative matters</li>
+            </ul>
+
+            <h3>Health Insurance Verification</h3>
+
+            <p>With your renewed visa, confirm your health insurance status:</p>
+
+            <ul>
+                <li><strong>If using public system:</strong> Your coverage continues automatically. No action needed.</li>
+                <li><strong>If using private insurance:</strong> Confirm your policy remains active and your coverage dates align with your new visa dates.</li>
+                <li><strong>Transitioning to public system:</strong> If you've been on private insurance and now qualify for Spain's public system, this is a good time to transition (can save significant costs).</li>
+            </ul>
+
+            <h3>Tax Residency Confirmation</h3>
+
+            <p>After your renewal, ensure your tax residency status is clear:</p>
+
+            <ul>
+                <li><strong>Spanish tax residency:</strong> After 183 days in a calendar year (or having your habitual residence in Spain), you're typically considered a Spanish tax resident.</li>
+                <li><strong>Declaration of tax residency:</strong> Complete the necessary tax forms in both Spain and your home country to avoid double taxation.</li>
+                <li><strong>Income declaration:</strong> File Spanish taxes on any income earned in Spain or worldwide income if you're a Spanish resident.</li>
+            </ul>
+
+            <h3>Planning for Your Next Renewal</h3>
+
+            <p>Now that you've successfully renewed once, future renewals will be easier. Consider:</p>
+
+            <ul>
+                <li><strong>Renewal frequency:</strong> Request a multi-year renewal in your next application to reduce paperwork frequency.</li>
+                <li><strong>Financial stability:</strong> Continue maintaining clear documentation of your income sources. This makes future renewals straightforward.</li>
+                <li><strong>Residency ties:</strong> Building stronger ties to Spain (employment, property ownership, community involvement) makes long-term residence more secure.</li>
+                <li><strong>Path to long-term residency:</strong> After 5 years, explore options for permanent residency (Residencia Permanente), which offers greater security than renewable visas.</li>
+            </ul>
+
+            <h3>Long-Term Considerations: Beyond Renewal</h3>
+
+            <h4>Five-Year Mark: Permanent Residency</h4>
+            <p>After 5 consecutive years of NLV residency in Spain, you become eligible for Permanent Residency (Residencia Permanente or Larga Duración). This is not an automatic status; you must apply for it, but it offers indefinite right to reside in Spain without needing further renewals (though you may wish to periodically update documents for administrative purposes).</p>
+
+            <h4>Eventual Citizenship Path</h4>
+            <p>After 10 years of legal residency in Spain, you may become eligible for Spanish citizenship. However, this requires integration efforts, Spanish language proficiency, and renunciation of your home country citizenship (most Spanish law requires this). Many NLV holders choose to remain permanent residents rather than pursue citizenship, as it allows maintaining their original nationality while enjoying indefinite Spanish residency.</p>
+
+            <div class="success-box">
+                <strong>Congratulations</strong>
+                Successfully renewing your NLV is a major milestone. You've now demonstrated that you can sustain residency in Spain under your chosen lifestyle. Future renewals will only get easier as your financial documentation becomes more established and your ties to Spain deepen.
+            </div>
+        </section>
+    <p class="site-disclaimer" style="font-size:.75rem;color:rgba(255,255,255,.45);text-align:center;padding:1.5rem 1rem 0;line-height:1.6;">The information on this page is for general guidance only and does not constitute legal or financial advice. Visa rules, consulate requirements, and processing times change frequently — always verify details with the relevant Spanish consulate or a qualified immigration specialist before submitting your application.</p>
+</main>
+
+    <footer>
+        <p>&copy; 2026 My Spanish NLV | Your Guide to Spanish Non-Lucrative Visa Applications & Renewals</p>
+        <p>This guide is for informational purposes. Consult official Spanish immigration authorities for current procedures.</p>
+        <script>
+            document.querySelectorAll('.accordion-header').forEach(header => {
+                header.addEventListener('click', () => {
+                    const isActive = header.classList.contains('active');
+                    document.querySelectorAll('.accordion-header').forEach(h => h.classList.remove('active'));
+                    document.querySelectorAll('.accordion-content').forEach(c => c.classList.remove('active'));
+                    if (!isActive) {
+                        header.classList.add('active');
+                        header.nextElementSibling.classList.add('active');
+                    }
+                });
+            });
+        </script>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-grid">
+            <div>
+                <div class="footer-logo">
+                    <img src="https://myspanishnlv.com/assets/logo-horizontal-light.png" alt="My Spanish NLV" class="footer-logo-img">
+                    <span class="footer-logo-text">My Spanish NLV</span>
+                </div>
+                <p class="footer-tagline">Spain's NLV visa guide. Apply online with our immigration specialists.</p>
+                <p class="footer-email"><a href="mailto:hello@myspanishnlv.com">hello@myspanishnlv.com</a></p>
+            </div>
+            <div>
+                <p class="footer-heading">Visa Guide</p>
+                <ul class="footer-list">
+                    <li><a href="https://myspanishnlv.com">Home</a></li>
+                    <li><a href="https://myspanishnlv.com/blog">Blog</a></li>
+                    <li><a href="https://myspanishnlv.com/services">Services</a></li>
+                    <li><a href="https://myspanishnlv.com/about">About</a></li>
+                </ul>
+            </div>
+            <div>
+                <p class="footer-heading">Resources</p>
+                <ul class="footer-list">
+                    <li><a href="https://myspanishnlv.com/faq">FAQs</a></li>
+                    <li><a href="https://myspanishnlv.com/guides">Guides</a></li>
+                    <li><a href="https://myspanishnlv.com">Requirements</a></li>
+                    <li><a href="https://myspanishnlv.com/contact">Support</a></li>
+                </ul>
+            </div>
+            <div>
+                <p class="footer-heading">Legal</p>
+                <ul class="footer-list">
+                    <li><a href="https://myspanishnlv.com/privacy">Privacy Policy</a></li>
+                    <li><a href="https://myspanishnlv.com/terms">Terms of Service</a></li>
+                    <li><a href="https://myspanishnlv.com/cookies">Cookie Policy</a></li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p class="footer-copy">&copy; 2026 My Spanish NLV. All rights reserved. | Retail Consulting UK Ltd.</p>
+            <div class="footer-legal">
+                <a href="https://myspanishnlv.com/privacy">Privacy Policy</a>
+                <a href="https://myspanishnlv.com/terms">Terms</a>
+                <a href="https://myspanishnlv.com/cookies">Cookies</a>
+            </div>
+        </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-grid">
+            <div>
+                <div class="footer-logo">
+                    <img src="https://myspanishnlv.com/assets/logo-horizontal-light.png" alt="My Spanish NLV" class="footer-logo-img">
+                    <span class="footer-logo-text">My Spanish NLV</span>
+                </div>
+                <p class="footer-tagline">Spain's NLV visa guide. Apply online with our immigration specialists.</p>
+                <p class="footer-email"><a href="mailto:hello@myspanishnlv.com">hello@myspanishnlv.com</a></p>
+            </div>
+            <div>
+                <p class="footer-heading">Visa Guide</p>
+                <ul class="footer-list">
+                    <li><a href="https://myspanishnlv.com">Home</a></li>
+                    <li><a href="https://myspanishnlv.com/blog">Blog</a></li>
+                    <li><a href="https://myspanishnlv.com/services">Services</a></li>
+                    <li><a href="https://myspanishnlv.com/about">About</a></li>
+                </ul>
+            </div>
+            <div>
+                <p class="footer-heading">Resources</p>
+                <ul class="footer-list">
+                    <li><a href="https://myspanishnlv.com/faq">FAQs</a></li>
+                    <li><a href="https://myspanishnlv.com/guides">Guides</a></li>
+                    <li><a href="https://myspanishnlv.com">Requirements</a></li>
+                    <li><a href="https://myspanishnlv.com/contact">Support</a></li>
+                </ul>
+            </div>
+            <div>
+                <p class="footer-heading">Legal</p>
+                <ul class="footer-list">
+                    <li><a href="https://myspanishnlv.com/privacy">Privacy Policy</a></li>
+                    <li><a href="https://myspanishnlv.com/terms">Terms of Service</a></li>
+                    <li><a href="https://myspanishnlv.com/cookies">Cookie Policy</a></li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p class="footer-copy">&copy; 2026 My Spanish NLV. All rights reserved. | Retail Consulting UK Ltd.</p>
+            <div class="footer-legal">
+                <a href="https://myspanishnlv.com/privacy">Privacy Policy</a>
+                <a href="https://myspanishnlv.com/terms">Terms</a>
+                <a href="https://myspanishnlv.com/cookies">Cookies</a>
+            </div>
+        </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-grid">
+            <div>
+                <div class="footer-logo">
+                    <img src="https://myspanishnlv.com/assets/logo-horizontal-light.png" alt="My Spanish NLV" class="footer-logo-img">
+                    <span class="footer-logo-text">My Spanish NLV</span>
+                </div>
+                <p class="footer-tagline">Spain's NLV visa guide. Apply online with our immigration specialists.</p>
+                <p class="footer-email"><a href="mailto:hello@myspanishnlv.com">hello@myspanishnlv.com</a></p>
+            </div>
+            <div>
+                <p class="footer-heading">Visa Guide</p>
+                <ul class="footer-list">
+                    <li><a href="https://myspanishnlv.com">Home</a></li>
+                    <li><a href="https://myspanishnlv.com/blog">Blog</a></li>
+                    <li><a href="https://myspanishnlv.com/services">Services</a></li>
+                    <li><a href="https://myspanishnlv.com/about">About</a></li>
+                </ul>
+            </div>
+            <div>
+                <p class="footer-heading">Resources</p>
+                <ul class="footer-list">
+                    <li><a href="https://myspanishnlv.com/faq">FAQs</a></li>
+                    <li><a href="https://myspanishnlv.com/guides">Guides</a></li>
+                    <li><a href="https://myspanishnlv.com">Requirements</a></li>
+                    <li><a href="https://myspanishnlv.com/contact">Support</a></li>
+                </ul>
+            </div>
+            <div>
+                <p class="footer-heading">Legal</p>
+                <ul class="footer-list">
+                    <li><a href="https://myspanishnlv.com/privacy">Privacy Policy</a></li>
+                    <li><a href="https://myspanishnlv.com/terms">Terms of Service</a></li>
+                    <li><a href="https://myspanishnlv.com/cookies">Cookie Policy</a></li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p class="footer-copy">&copy; 2026 My Spanish NLV. All rights reserved. | Retail Consulting UK Ltd.</p>
+            <div class="footer-legal">
+                <a href="https://myspanishnlv.com/privacy">Privacy Policy</a>
+                <a href="https://myspanishnlv.com/terms">Terms</a>
+                <a href="https://myspanishnlv.com/cookies">Cookies</a>
+            </div>
+</footer>
+
+    <!-- Mobile CTA Bar -->
+    <div class="mobile-bar">
+        <a href="https://myspanishnlv.com/contact" class="bar-apply">Get Help →</a>
+        <a href="mailto:hello@myspanishnlv.com" class="bar-contact">Email</a>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        // Mobile Menu Toggle
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const closeBtn = document.getElementById('mobileMenuClose');
+
+        hamburger.addEventListener('click', () => {
+            mobileMenu.classList.toggle('open');
+        });
+
+        closeBtn.addEventListener('click', () => {
+            mobileMenu.classList.remove('open');
+        });
+
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('open');
+            });
+        });
+
+        // FAQ Accordion
+        const faqItems = document.querySelectorAll('.faq-q');
+        faqItems.forEach(item => {
+            item.addEventListener('click', () => {
+                const faqItem = item.closest('.faq-item');
+                const isOpen = faqItem.classList.contains('open');
+
+                document.querySelectorAll('.faq-item').forEach(i => {
+                    i.classList.remove('open');
+                    i.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
+                });
+
+                if (!isOpen) {
+                    faqItem.classList.add('open');
+                    item.setAttribute('aria-expanded', 'true');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K0X9M61S63"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-K0X9M61S63');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="description" content="Interactive NLV renewal checklist and timeline. Track your progress through each stage of the renewal process with key dates and milestones.">
+    <meta name="keywords" content="NLV renewal checklist, timeline, progress tracker, renewal process">
+    <title>NLV Renewal Checklist & Timeline | My Spanish NLV</title>
+
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "NLV Renewal Checklist & Timeline",
+        "description": "Interactive checklist and timeline tool to track your NLV renewal progress",
+        "url": "https://www.myspanishnlv.com/renewal/renewal-checklist.html",
+        "publisher": {
+            "@type": "Organization",
+            "name": "My Spanish NLV",
+            "logo": "https://www.myspanishnlv.com/logo.png"
+        }
+    }
+    </script>
+
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+    <link rel="canonical" href="https://myspanishnlv.com/renewal/renewal-checklist/">
+    <link rel="alternate" hreflang="en" href="https://myspanishnlv.com/renewal/renewal-checklist/">
+    <link rel="alternate" hreflang="x-default" href="https://myspanishnlv.com/renewal/renewal-checklist/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="My Spanish NLV">
+    <meta property="og:url" content="https://myspanishnlv.com/renewal/renewal-checklist/">
+    <meta property="og:title" content="NLV Renewal Checklist & Timeline | My Spanish NLV">
+    <meta property="og:description" content="Interactive NLV renewal checklist and timeline. Track your progress through each stage of the renewal process with key dates and milestones.">
+    <meta property="og:image" content="https://myspanishnlv.com/assets/og-default.jpg">
+    <meta property="og:locale" content="en_GB">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="NLV Renewal Checklist & Timeline | My Spanish NLV">
+    <meta name="twitter:description" content="Interactive NLV renewal checklist and timeline. Track your progress through each stage of the renewal process with key dates and milestones.">
+    <meta name="twitter:image" content="https://myspanishnlv.com/assets/og-default.jpg">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --navy: #0c1930;
+            --red: #be0011;
+            --cream: #f8f7f4;
+            --yellow: #facf39;
+            --light-gray: #e8e6e0;
+            --dark-gray: #4a4a4a;
+            --border-radius: 8px;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            color: var(--navy);
+            background-color: var(--cream);
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: var(--navy);
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        nav a {
+            color: var(--cream);
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+            margin-right: 2rem;
+        }
+
+        nav a:hover {
+            color: var(--yellow);
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, var(--navy) 0%, var(--red) 100%);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .header-subtitle {
+            font-size: 1.1rem;
+            opacity: 0.95;
+        }
+
+        /* Main container */
+        main {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+
+        /* Timeline overview */
+        .timeline-overview {
+            background: white;
+            border-left: 4px solid var(--red);
+            padding: 2rem;
+            margin-bottom: 3rem;
+            border-radius: var(--border-radius);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        .timeline-overview h2 {
+            color: var(--navy);
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+        }
+
+        .timeline-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, var(--navy) 0%, var(--red) 100%);
+            color: white;
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.95;
+        }
+
+        /* Checklist sections */
+        .checklist-section {
+            background: white;
+            margin-bottom: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            overflow: hidden;
+        }
+
+        .section-header {
+            background-color: var(--navy);
+            color: white;
+            padding: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .section-number {
+            background-color: var(--yellow);
+            color: var(--navy);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .section-title {
+            font-size: 1.3rem;
+        }
+
+        .section-content {
+            padding: 2rem;
+        }
+
+        .timeline-date {
+            color: var(--red);
+            font-weight: 600;
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
+
+        /* Checklist items */
+        .checklist-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            padding: 1rem;
+            margin-bottom: 0.75rem;
+            background-color: #f9f8f6;
+            border-radius: 6px;
+            transition: background-color 0.3s ease;
+        }
+
+        .checklist-item:hover {
+            background-color: #f0ede8;
+        }
+
+        .checklist-item.completed {
+            background-color: #e8f5e9;
+        }
+
+        .checklist-item input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            margin-top: 3px;
+            cursor: pointer;
+            accent-color: var(--red);
+        }
+
+        .checklist-item label {
+            cursor: pointer;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
+        }
+
+        .item-title {
+            font-weight: 500;
+            color: var(--navy);
+        }
+
+        .item-description {
+            font-size: 0.9rem;
+            color: var(--dark-gray);
+        }
+
+        .checklist-item.completed .item-title {
+            text-decoration: line-through;
+            color: #666;
+        }
+
+        /* Progress bar */
+        .progress-container {
+            margin-bottom: 2rem;
+        }
+
+        .progress-label {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 10px;
+            background-color: var(--light-gray);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--navy) 0%, var(--red) 100%);
+            transition: width 0.3s ease;
+        }
+
+        /* Info boxes */
+        .info-box {
+            background-color: #e3f2fd;
+            border-left: 4px solid #2196F3;
+            padding: 1.5rem;
+            margin-top: 1.5rem;
+            border-radius: var(--border-radius);
+        }
+
+        .info-box.warning {
+            background-color: #fff3e0;
+            border-left-color: #ff9800;
+        }
+
+        .info-box h4 {
+            margin-bottom: 0.5rem;
+            color: var(--navy);
+        }
+
+        .info-box p {
+            margin: 0.5rem 0;
+            font-size: 0.95rem;
+            color: var(--dark-gray);
+        }
+
+        /* Action buttons */
+        .action-buttons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: var(--border-radius);
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 0.95rem;
+        }
+
+        .btn-primary {
+            background-color: var(--red);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: #a00010;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(190, 0, 17, 0.3);
+        }
+
+        .btn-secondary {
+            background-color: var(--navy);
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background-color: #05111f;
+        }
+
+        .btn-reset {
+            background-color: var(--light-gray);
+            color: var(--navy);
+        }
+
+        .btn-reset:hover {
+            background-color: #dddad0;
+        }
+
+        /* Footer navigation */
+        .footer-nav {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 2px solid var(--light-gray);
+        }
+
+        .footer-nav h3 {
+            color: var(--navy);
+            margin-bottom: 1rem;
+            font-size: 1rem;
+        }
+
+        .footer-nav a {
+            display: block;
+            color: var(--navy);
+            text-decoration: none;
+            margin-bottom: 0.75rem;
+            font-size: 0.95rem;
+        }
+
+        .footer-nav a:hover {
+            color: var(--red);
+        }
+
+        /* Mobile responsive */
+        @media (max-width: 900px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .timeline-stats {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            main {
+                padding: 0 1.5rem;
+            }
+
+            nav a {
+                margin-right: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header {
+                padding: 2rem 1rem;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            .header-subtitle {
+                font-size: 1rem;
+            }
+
+            .timeline-stats {
+                grid-template-columns: 1fr;
+            }
+
+            .section-header {
+                padding: 1rem;
+            }
+
+            .section-content {
+                padding: 1.5rem 1rem;
+            }
+
+            .action-buttons {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="https://dashboard.platinumlegalspain.com/nlv-renewal">Dashboard</a>
+        <a href="/renewal/">Renewal Hub</a>
+        <a href="/renewal/how-to-renew-nlv.html">How to Renew</a>
+    </nav>
+
+    <header>
+        <h1>NLV Renewal Checklist</h1>
+        <p class="header-subtitle">Track your progress through each stage of the renewal process</p>
+    </header>
+
+    <main>
+        <!-- Timeline Overview -->
+        <section class="timeline-overview">
+            <h2>Renewal Timeline Overview</h2>
+            <div class="timeline-stats">
+                <div class="stat-card">
+                    <div class="stat-number">4-8</div>
+                    <div class="stat-label">Weeks Processing Time</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">€699</div>
+                    <div class="stat-label">Total Service Fee</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">3-4</div>
+                    <div class="stat-label">Months Advance Preparation</div>
+                </div>
+            </div>
+            <div class="info-box">
+                <h4>Key Recommendation</h4>
+                <p>Start your renewal 3-4 months before your NLV expiration date. This gives you time to gather documents, complete payment stages, and submit without rushing.</p>
+            </div>
+        </section>
+
+        <!-- Progress Tracker -->
+        <section class="checklist-section">
+            <div class="section-header">
+                <div class="section-number">0</div>
+                <h2 class="section-title">Overall Progress</h2>
+            </div>
+            <div class="section-content">
+                <div class="progress-container">
+                    <div class="progress-label">
+                        <span>Completion</span>
+                        <span id="progressPercent">0%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill" style="width: 0%"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stage 1: Preparation (3-4 months before) -->
+        <section class="checklist-section">
+            <div class="section-header">
+                <div class="section-number">1</div>
+                <h2 class="section-title">Preparation Stage</h2>
+            </div>
+            <div class="section-content">
+                <div class="timeline-date">Timeline: 3-4 months before expiration</div>
+
+                <div class="checklist-item">
+                    <input type="checkbox" id="item-1" onchange="updateProgress()">
+                    <label for="item-1">
+                        <span class="item-title">Check NLV expiration date</span>
+                        <span class="item-description">Know exactly when your visa expires to plan accordingly</span>
+                    </label>
+                </div>
+
+                <div class="checklist-item">
+                    <input type="checkbox" id="item-2" onchange="updateProgress()">
+                    <label for="item-2">
+                        <span class="item-title">Verify income requirements</span>
+                        <span class="item-description">Ensure you meet minimum €1,080/month for individual or family requirement</span>
+                    </label>
+                </div>
+
+                <div class="checklist-item">
+                    <input type="checkbox" id="item-3" onchange="updateProgress()">
+                    <label for="item-3">
+                        <span class="item-title">Gather bank statements (12 months)</span>
+                        <span class="item-description">Collect statements showing consistent income over past 12 months</span>
+                    </label>
+                </div>
+
+                <div class="checklist-item">
+                    <input type="checkbox" id="item-4" onchange="updateProgress()">
+                    <label for="item-4">
+                        <span class="item-title">Collect employment/pension documentation</span>
+                        <span class="item-description">If working: employment contract or letter. If pensioner: pension statement</span>
+                    </label>
+                </div>
+
+                <div class="checklist-item">
+                    <input type="checkbox" id="item-5" onchange="updateProgress()">
+                    <label for="item-5">
+                        <span class="item-title">Update passport if nearing expiration</span>
+                        <span class="item-description">Your passport must be valid for duration of renewal processing</span>
+                    </label>
+                </div>
+
+                <div class="checklist-item">
+                    <input type="checkbox" id="item-6" onchange="updateProgress()">
+                    <label for="item-6">
+                        <span class="item-title">Book medical examination (if required)</span>
+                        <span class="item-description">Schedule at least 1-2 months in advance; some areas have long waiting lists</span>
+                    </label>
+                </div>
+
+                <div class="info-box warning">
+                    <h4>Important</h4>
+                    <p>Do not submit your renewal application more than 1 month early. Consulates may reject early submissions.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stage 2: Documentation (2 months before) -->
+        <section class="checklist-section">
+            <div class="section-header">
+                <div class="section-number">2</div>
+                <h2 class="section-title">Documentation & Payments</h2>
+            </div>
+            <div class="section-content">
+                <div class="timeline-date">Timeline: 2 months before expiration</div>
+
+                <div class="checklist-item">
+                    <input type="checkbox" id="item-7" onchange="updateProgress()">
+                    <label for="item-7">
+                        <span class="item-title">Complete Stage 1 payment (€300)</span>
+                        <span class="item-description">Initial service fee to begin renewal processing</span>
+                    </label>
+                </div>
+
+                <div class="checklist-item">
+                    <input type="checkbox" id="item-8" onchange="updateProgress()">
+                    <label for="item-8">
+                        <span class="item-title">Prepare supporting documents</span>
+                        <span class="item-description">Have all documents ready: NIE certificate, proof of residence, health insurance</span>
+                    </label>
+                </div>
+
+                <div class="checklist-item">
+                    <input type="checkbox" id="item-9" onchange="updateProgress()">
+                    <label for="item-9">
+                        <span class="item-title">Book consulate appointment</span>
+                        <span class="item-description">Schedule through consulate's website or contact them directly</span>
+                    </label>
+                </div>
+
+                <div class="checklist-item">
+                    <input type="checkbox" id="item-10" onchange="updateProgress()">
+                    <label for="item-10">
+                        <span class="item-title">Get medical certificate (if required)</span>
+                        <span class="item-description">Obtain from approved physician; valid for 3 months</span>
+                    </label>
+                </div>
+
+                <div class="checklist-item">
+                    <input type="checkbox" id="item-11" onchange="updateProgress()">
+                    <label for="item-11">
+                        <span class="item-title">Organize documents in folder</span>
+                        <span class="item-description">Create organized copies: originals and certified copies where required</span>
+                    </label>
+                </div>
+
+                <div class="info-box">
+                    <h4>Stage 1 Payment</h4>
+                    <p>The €300 Stage 1 fee covers initial processing, document review, and consulate liaison. You'll pay Stage 2 (€399) after approval.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stage 3: Submission (1 month before) -->
+        <section class="checklist-section">
+            <div class="section-header">
+                <div class="section-number">3</div>
+                <h2 class="section-title">Application Submission</h2>
+            </div>
+            <div class="section-content">
+                <div class="timeline-date">Timeline: 1 month before expiration</div>
+
+                <div class="checklist-item">
+                    <input type="checkbox" id="item-12" onchange="updateProgress()">
+                    <label for="item-12">
+                        <span class="item-title">Submit application to consulate</span>
+                        <span class="item-description">Either in-person at appointment or via post (if consulate accepts)</span>
+                    </label>
+                </div>
+
+                <div class="checklist-item">
+                    <input type="checkbox" id="item-13" onchange="updateProgress()">
+                    <label for="item-13">
+                        <span class="item-title">Keep submission receipt/reference number</span>
+                        <span class="item-description">Save for tracking and follow-ups</span>
+                    </label>
+                </div>
+
+                <div class="checklist-item">
+                    <input type="checkbox" id="item-14" onchange="updateProgress()">
+                    <label for="item-14">
+                        <span class="item-title">Confirm consulate received documents</span>
+                        <span class="item-description">Follow up within 1 week to ensure all documents arrived</span>
+                    </label>
+                </div>
+
+                <div class="info-box">
+                    <h4>Processing Time</h4>
+                    <p>After submission, expect 4-8 weeks for processing. Consulates may request additional documents or information during this period.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stage 4: Processing & Approval (4-8 weeks) -->
+        <section class="checklist-section">
+            <div class="section-header">
+                <div class="section-number">4</div>
+                <h2 class="section-title">Processing & Follow-up</h2>
+            </div>
+            <div class="section-content">
+                <div class="timeline-date">Timeline: 4-8 weeks after submission</div>
+
+                <div class="checklist-item">
+                    <input type="checkbox" id="item-15" onchange="updateProgress()">
+                    <label for="item-15">
+                        <span class="item-title">Monitor email for consulate requests</span>
+                        <span class="item-description">Respond promptly to any document or information requests</span>
+                    </label>
+                </div>
+
+                <div class="checklist-item">
+                    <input type="checkbox" id="item-16" onchange="updateProgress()">
+                    <label for="item-16">
+                        <span class="item-title">Contact consulate if hearing nothing after 6 weeks</span>
+                        <span class="item-description">Politely inquire about status and expected timeline</span>
+                    </label>
+                </div>
+
+                <div class="checklist-item">
+                    <input type="checkbox" id="item-17" onchange="updateProgress()">
+                    <label for="item-17">
+                        <span class="item-title">Complete Stage 2 payment when notified</span>
+                        <span class="item-description">Pay €399 after approval notification (before physical visa issued)</span>
+                    </label>
+                </div>
+
+                <div class="checklist-item">
+                    <input type="checkbox" id="item-18" onchange="updateProgress()">
+                    <label for="item-18">
+                        <span class="item-title">Receive new visa document</span>
+                        <span class="item-description">Collect in person or receive by post depending on consulate</span>
+                    </label>
+                </div>
+
+                <div class="info-box">
+                    <h4>Important Dates</h4>
+                    <p>Your new NLV will be dated from when you submit the application, not when you receive it. You can legally continue living in Spain after submission, even if processing extends past your old visa expiration date.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stage 5: Post-Approval (1-2 weeks) -->
+        <section class="checklist-section">
+            <div class="section-header">
+                <div class="section-number">5</div>
+                <h2 class="section-title">Final Steps</h2>
+            </div>
+            <div class="section-content">
+                <div class="timeline-date">Timeline: After approval</div>
+
+                <div class="checklist-item">
+                    <input type="checkbox" id="item-19" onchange="updateProgress()">
+                    <label for="item-19">
+                        <span class="item-title">Verify visa details</span>
+                        <span class="item-description">Check dates, spelling, and all information are correct on your new visa</span>
+                    </label>
+                </div>
+
+                <div class="checklist-item">
+                    <input type="checkbox" id="item-20" onchange="updateProgress()">
+                    <label for="item-20">
+                        <span class="item-title">Update residency card (TIE) if needed</span>
+                        <span class="item-description">Some cases require updated physical TIE card after renewal</span>
+                    </label>
+                </div>
+
+                <div class="checklist-item">
+                    <input type="checkbox" id="item-21" onchange="updateProgress()">
+                    <label for="item-21">
+                        <span class="item-title">Notify relevant institutions</span>
+                        <span class="item-description">Update employer, bank, insurance with new visa expiration date</span>
+                    </label>
+                </div>
+
+                <div class="checklist-item">
+                    <input type="checkbox" id="item-22" onchange="updateProgress()">
+                    <label for="item-22">
+                        <span class="item-title">Save new visa copy in secure location</span>
+                        <span class="item-description">Digital and physical copies for your records</span>
+                    </label>
+                </div>
+
+                <div class="checklist-item">
+                    <input type="checkbox" id="item-23" onchange="updateProgress()">
+                    <label for="item-23">
+                        <span class="item-title">Mark next renewal date in calendar</span>
+                        <span class="item-description">Set reminder for 3 months before next expiration</span>
+                    </label>
+                </div>
+            </div>
+        </section>
+
+        <!-- Action Buttons -->
+        <section style="text-align: center; margin-top: 3rem;">
+            <div class="action-buttons">
+                <button class="btn btn-primary" onclick="window.location.href='https://dashboard.platinumlegalspain.com/nlv-renewal'">Get Started on Dashboard</button>
+                <button class="btn btn-secondary" onclick="window.location.href='/renewal/cost-calculator.html'">Calculate Your Costs</button>
+                <button class="btn btn-reset" onclick="resetChecklist()">Reset Checklist</button>
+            </div>
+        </section>
+
+        <!-- Related Guides -->
+        <section style="margin-top: 4rem; padding-top: 2rem; border-top: 2px solid var(--light-gray);">
+            <h2 style="color: var(--navy); margin-bottom: 2rem; font-size: 1.5rem;">Related Guides</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+                <div style="background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: transform 0.3s ease;">
+                    <h3 style="color: var(--red); margin-bottom: 0.5rem; font-size: 1rem;">How to Renew Your NLV</h3>
+                    <p style="color: var(--dark-gray); margin-bottom: 1rem; font-size: 0.95rem;">Step-by-step guide to the complete renewal process from start to finish.</p>
+                    <a href="/renewal/how-to-renew-nlv.html" style="color: var(--navy); font-weight: 600; text-decoration: none;">Read Guide →</a>
+                </div>
+                <div style="background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: transform 0.3s ease;">
+                    <h3 style="color: var(--red); margin-bottom: 0.5rem; font-size: 1rem;">Renewal Requirements</h3>
+                    <p style="color: var(--dark-gray); margin-bottom: 1rem; font-size: 0.95rem;">Complete list of all documents and requirements needed for your renewal.</p>
+                    <a href="/renewal/renewal-requirements.html" style="color: var(--navy); font-weight: 600; text-decoration: none;">Check Requirements →</a>
+                </div>
+                <div style="background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: transform 0.3s ease;">
+                    <h3 style="color: var(--red); margin-bottom: 0.5rem; font-size: 1rem;">Cost Calculator</h3>
+                    <p style="color: var(--dark-gray); margin-bottom: 1rem; font-size: 0.95rem;">Calculate your exact renewal costs based on your family size and circumstances.</p>
+                    <a href="/renewal/cost-calculator.html" style="color: var(--navy); font-weight: 600; text-decoration: none;">Calculate Costs →</a>
+                </div>
+                <div style="background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: transform 0.3s ease;">
+                    <h3 style="color: var(--red); margin-bottom: 0.5rem; font-size: 1rem;">Processing Time</h3>
+                    <p style="color: var(--dark-gray); margin-bottom: 1rem; font-size: 0.95rem;">Understand how long your renewal will take and what to expect during processing.</p>
+                    <a href="/renewal/renewal-processing-time.html" style="color: var(--navy); font-weight: 600; text-decoration: none;">Learn Timeline →</a>
+                </div>
+                <div style="background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: transform 0.3s ease;">
+                    <h3 style="color: var(--red); margin-bottom: 0.5rem; font-size: 1rem;">First vs. Second Renewal</h3>
+                    <p style="color: var(--dark-gray); margin-bottom: 1rem; font-size: 0.95rem;">What changes and what stays the same when renewing for the second time.</p>
+                    <a href="/renewal/first-vs-second-renewal.html" style="color: var(--navy); font-weight: 600; text-decoration: none;">Compare Renewals →</a>
+                </div>
+                <div style="background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: transform 0.3s ease;">
+                    <h3 style="color: var(--red); margin-bottom: 0.5rem; font-size: 1rem;">What If Your NLV Expires?</h3>
+                    <p style="color: var(--dark-gray); margin-bottom: 1rem; font-size: 0.95rem;">Critical guide on what happens if your visa expires during the renewal process.</p>
+                    <a href="/renewal/what-if-nlv-expires.html" style="color: var(--navy); font-weight: 600; text-decoration: none;">Read Guide →</a>
+                </div>
+                <div style="background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: transform 0.3s ease;">
+                    <h3 style="color: var(--red); margin-bottom: 0.5rem; font-size: 1rem;">FAQ Master Index</h3>
+                    <p style="color: var(--dark-gray); margin-bottom: 1rem; font-size: 0.95rem;">144+ FAQs across 6 categories covering timelines, requirements, costs, and special cases.</p>
+                    <a href="/renewal/faq-master-index.html" style="color: var(--navy); font-weight: 600; text-decoration: none;">Search FAQs →</a>
+                </div>
+                <div style="background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: transform 0.3s ease;">
+                    <h3 style="color: var(--red); margin-bottom: 0.5rem; font-size: 1rem;">Glossary</h3>
+                    <p style="color: var(--dark-gray); margin-bottom: 1rem; font-size: 0.95rem;">Spanish legal and bureaucratic terms explained with contextual examples.</p>
+                    <a href="/renewal/glossary.html" style="color: var(--navy); font-weight: 600; text-decoration: none;">Browse Terms →</a>
+                </div>
+                <div style="background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: transform 0.3s ease;">
+                    <h3 style="color: var(--red); margin-bottom: 0.5rem; font-size: 1rem;">Consulate Directory</h3>
+                    <p style="color: var(--dark-gray); margin-bottom: 1rem; font-size: 0.95rem;">Contact information for Spanish consulates worldwide organized by region.</p>
+                    <a href="/renewal/consulate-directory.html" style="color: var(--navy); font-weight: 600; text-decoration: none;">Find Your Consulate →</a>
+                </div>
+                <div style="background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: transform 0.3s ease;">
+                    <h3 style="color: var(--red); margin-bottom: 0.5rem; font-size: 1rem;">Visa Comparison</h3>
+                    <p style="color: var(--dark-gray); margin-bottom: 1rem; font-size: 0.95rem;">Compare NLV renewal with other Spanish visa types to ensure the right path for you.</p>
+                    <a href="/renewal/visa-comparison.html" style="color: var(--navy); font-weight: 600; text-decoration: none;">Compare Visas →</a>
+                </div>
+                <div style="background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: transform 0.3s ease;">
+                    <h3 style="color: var(--red); margin-bottom: 0.5rem; font-size: 1rem;">Success Stories</h3>
+                    <p style="color: var(--dark-gray); margin-bottom: 1rem; font-size: 0.95rem;">Read real success stories from clients who successfully renewed their visa.</p>
+                    <a href="/renewal/success-stories.html" style="color: var(--navy); font-weight: 600; text-decoration: none;">Read Stories →</a>
+                </div>
+                <div style="background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: transform 0.3s ease;">
+                    <h3 style="color: var(--red); margin-bottom: 0.5rem; font-size: 1rem;">Contact & Support</h3>
+                    <p style="color: var(--dark-gray); margin-bottom: 1rem; font-size: 0.95rem;">Have questions? Contact our team or schedule a personalized consultation.</p>
+                    <a href="/renewal/contact-support.html" style="color: var(--navy); font-weight: 600; text-decoration: none;">Get Support →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer Navigation -->
+        <footer class="footer-nav">
+            <nav>
+                <h3>Renewal Guides</h3>
+                <a href="/renewal/how-to-renew-nlv.html">How to Renew</a>
+                <a href="/renewal/renewal-requirements.html">Requirements</a>
+                <a href="/renewal/cost-calculator.html">Cost Calculator</a>
+                <a href="/renewal/what-if-nlv-expires.html">NLV Expiration Guide</a>
+                <a href="/renewal/first-vs-second-renewal.html">First vs Second Renewal</a>
+            </nav>
+            <nav>
+                <h3>Resources</h3>
+                <a href="https://dashboard.platinumlegalspain.com/nlv-renewal">Dashboard</a>
+                <a href="/renewal/">Renewal Hub</a>
+                <a href="https://www.myspanishnlv.com/blog">Blog</a>
+            </nav>
+        </footer>
+    </main>
+
+    <!-- CookieYes Banner -->
+    <script id="cookieyes" type="text/javascript" src="https://cdn-cookieyes.com/client_data/78271008c96df6c735efd415cdea6100/script.js"></script>
+
+    <script>
+        // Update progress based on checked items
+        function updateProgress() {
+            const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            const checked = Array.from(checkboxes).filter(cb => cb.checked).length;
+            const total = checkboxes.length;
+            const percentage = Math.round((checked / total) * 100);
+
+            // Update progress bar
+            document.getElementById('progressFill').style.width = percentage + '%';
+            document.getElementById('progressPercent').textContent = percentage + '%';
+
+            // Update checklist item styling
+            document.querySelectorAll('.checklist-item').forEach((item, index) => {
+                const checkbox = item.querySelector('input[type="checkbox"]');
+                if (checkbox.checked) {
+                    item.classList.add('completed');
+                } else {
+                    item.classList.remove('completed');
+                }
+            });
+
+            // Save progress to localStorage
+            saveProgress();
+        }
+
+        // Save progress to browser storage
+        function saveProgress() {
+            const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            const state = {};
+            checkboxes.forEach((cb, index) => {
+                state['item-' + (index + 1)] = cb.checked;
+            });
+            localStorage.setItem('renewalChecklistProgress', JSON.stringify(state));
+        }
+
+        // Load saved progress
+        function loadProgress() {
+            const saved = localStorage.getItem('renewalChecklistProgress');
+            if (saved) {
+                const state = JSON.parse(saved);
+                Object.keys(state).forEach(key => {
+                    const checkbox = document.getElementById(key);
+                    if (checkbox) {
+                        checkbox.checked = state[key];
+                    }
+                });
+                updateProgress();
+            }
+        }
+
+        // Reset all checkboxes
+        function resetChecklist() {
+            if (confirm('Are you sure you want to reset your checklist? This cannot be undone.')) {
+                document.querySelectorAll('input[type="checkbox"]').forEach(cb => cb.checked = false);
+                localStorage.removeItem('renewalChecklistProgress');
+                updateProgress();
+            }
+        }
+
+        // Load progress on page load
+        document.addEventListener('DOMContentLoaded', loadProgress);
+    </script>
+    <!-- Start cookieyes banner -->
+    <script id="cookieyes" type="text/javascript" src="https://cdn-cookieyes.com/client_data/78271008c96df6c735efd415cdea6100/script.js"></script>
+    <!-- End cookieyes banner -->
+</body>
+</html>

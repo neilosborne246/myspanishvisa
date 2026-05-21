@@ -1,0 +1,394 @@
+TITLE: My Spanish NLV
+FILE: spain-nlv-couples-joint-income.html
+============================================================
+
+HERO SECTION:
+<section class="page-hero">
+        <div class="page-hero-inner">
+            <span class="page-hero-badge">Healthcare</span>
+            <h1>Spain NLV for Couples: Joint Income, Joint Application — or Both? | My Spanish NLV</h1>
+            <p>When and how to consult with insurance specialists about your healthcare coverage in Spain.</p>
+            <div class="hero-actions">
+                <a class="btn-primary" href="https://myspanishnlv.com/contact">Get Help</a>
+                <a class="btn-outline" href="https://myspanishnlv.com/blog">Back to Blog</a>
+            </div>
+        </div>
+    </section>
+
+MAIN CONTENT:
+<!-- Breadcrumb -->
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="https://myspanishnlv.com">Home</a>
+        <span>›</span>
+        <a href="https://myspanishnlv.com/blog">Blog</a>
+        <span>›</span>
+        <span>Health Insurance Specialist Advice</span>
+    </nav>
+
+    <!-- Main Content -->
+    <section class="section">
+        <div class="section-inner">
+            <div class="blog-grid">
+                <article class="blog-body">
+
+<h2>The Spain NLV for Couples: Joint Income Requirements, Application Strategy, and Common Pitfalls</h2>
+
+<p>Many couples relocate to Spain together on the NLV, but the visa rules for couples present unique challenges and opportunities. Do both partners need to meet the €2,300 income requirement separately, or can they combine income? Can one partner apply while the other depends on shared income? How are applications processed for couples? This comprehensive guide addresses couples-specific NLV rules, documentation requirements, application strategy, and addresses common misconceptions that lead to rejected applications.</p>
+
+<h2>The Core Rule: Individual Income Requirements</h2>
+
+<p>Spanish immigration law treats each person as an individual for NLV purposes. The requirement is that each person who obtains an NLV must demonstrate €2,300+ monthly in passive income. The rule does NOT allow a couple to combine incomes to meet one shared requirement. Each partner must individually document sufficient income.</p>
+
+<p><strong>Key Principle:</strong> If both partners are applying for the NLV (which is the most common scenario), both must independently show €2,300/month in qualifying income. A couple cannot pool their income and say "we have €4,600 together, so we both qualify."</p>
+
+<p><strong>Exception—Dependency and Family Rights:</strong> In some limited situations, a partner with lower income may be approved based on family dependency rights (marriage, civil partnership, or common-law partnership with a higher-income partner). However, this is complicated, varies by consulate, and is not guaranteed. Most couples assume both must qualify independently, which is the safe approach.</p>
+
+<h2>Application Strategies for Couples</h2>
+
+<p><strong>Strategy 1: Both Partners Apply Independently (Most Common):</strong></p>
+
+<p>Each partner submits an NLV application showing:</p>
+
+<ul>
+<li>Individual passport and documentation</li>
+<li>Individually documented passive income of €2,300+/month</li>
+<li>Separate bank accounts showing individual income deposits (though joint accounts are possible)</li>
+<li>Individual financial documents (pension statements, investment statements, proof of property ownership or rental income)</li>
+</ul>
+
+<p>This is the standard approach and has the highest approval rate. Both partners are approved as independent NLV holders with equal status.</p>
+
+<p><strong>Strategy 2: Primary Applicant + Dependent (Less Common):</strong></p>
+
+<p>One partner (primary applicant) applies for the NLV with full income documentation. The spouse applies as a "family member" or "dependent" based on the relationship. This requires:</p>
+
+<ul>
+<li>Proof of legal marriage or civil partnership (certified copies of marriage certificate)</li>
+<li>Evidence of shared household (joint property deed, joint tenancy agreement, utility bills in both names)</li>
+<li>Immigration authority approval of the dependent status (not automatic)</li>
+</ul>
+
+<p>Advantages: The lower-income partner doesn't need to individually document €2,300. Disadvantages: The dependent partner's residency depends on the primary applicant's visa—if the primary applicant's visa is cancelled, the dependent's visa may be affected. Dependency-based approvals are less common and less secure.</p>
+
+<p><strong>Strategy 3: Combined Pension or Income Documentation:</strong></p>
+
+<p>Some couples have pension arrangements that document shared income (e.g., a married couple with a joint pension from a spouse's retirement). In these cases, documentation may show joint income, but the couple must demonstrate how this income is split between partners or accessed individually. This requires careful explanation to consulates.</p>
+
+<h2>Joint vs. Individual Income: Documentation Requirements</h2>
+
+<p><strong>For Joint Income (Pensions, Investment Accounts):</strong></p>
+
+<p>If you have joint accounts or joint income sources, you must clarify how income is split between partners:</p>
+
+<ul>
+<li>Joint pension: Provide the pension statement and explain how the monthly payment is divided (e.g., "€4,600 joint pension, €2,300 to each partner")</li>
+<li>Joint investment account: Provide account statements and written documentation (account agreement, custodian letter) confirming how income distributions are allocated</li>
+<li>Joint rental property: Provide the rental agreement and bank statements showing how rental income is distributed to each partner</li>
+</ul>
+
+<p>Simply saying "we have joint income" is insufficient. Consulates need documentation showing each partner's individual share of the income.</p>
+
+<p><strong>For Individual Income (Separate Accounts):</strong></p>
+
+<p>If each partner has separate income sources (individual pensions, individual property, individual investments), documentation is simpler:</p>
+
+<ul>
+<li>Provide each partner's individual pension statements</li>
+<li>Provide each partner's individual investment or property documentation</li>
+<li>Provide each partner's individual bank statements showing income deposits</li>
+</ul>
+
+<p>This is the clearest documentation path and avoids questions about income allocation.</p>
+
+<h2>Common Scenarios for Couples Applying Together</h2>
+
+<p><strong>Scenario 1: Both Retire from the Same Country</strong> A British couple both receiving UK pensions. Partner A receives £1,800/month (€2,100) and Partner B receives £1,600/month (€1,867). Partner A clearly qualifies. Partner B is slightly below threshold. Options: (1) Include investment income to supplement B's pension to €2,300+, or (2) Apply through dependency route if authorities allow it.</p>
+
+<p><strong>Scenario 2: Partners from Different Countries with Different Pensions</strong> One Australian partner with AU superannuation (generates €1,900/month) and one UK partner with UK pension (generates €2,500/month). The UK partner clearly qualifies. The Australian partner is below threshold. Solution: Combine with supplementary income (investments, rental income, or spousal support if dependency is approved).</p>
+
+<p><strong>Scenario 3: One Partner Retired, One Still Working</strong> One partner qualifies for NLV through pension income. The other partner is still working and plans to transition to passive income. The working partner may need to either (1) retire and demonstrate passive income before applying, or (2) apply under a different visa category (work permit or self-employment) and transition to NLV once retired. Timing matters—applying for the NLV while actively employed is problematic.</p>
+
+<p><strong>Scenario 4: Young Couple with Investment Income</strong> A FIRE couple (age 45-50) with large investment portfolios generated through previous employment. Both need to restructure portfolios to generate documented passive income. Each partner's portfolio must independently generate €2,300+/month, or they must combine into joint investment accounts with clear income allocation.</p>
+
+<h2>Practical Application Approach for Couples</h2>
+
+<p><strong>Pre-Application (3-6 months before):</strong></p>
+
+<ul>
+<li>Decide whether both will apply independently or one will apply with dependent status</li>
+<li>Document each partner's individual passive income sources</li>
+<li>If income is joint, create documentation showing allocation to each partner</li>
+<li>Ensure both partners have at least 6-12 months of documented income history</li>
+<li>Gather all documentation in organized files</li>
+</ul>
+
+<p><strong>Application Submission:</strong></p>
+
+<ul>
+<li>Submit two separate applications (one per partner) with complete individual documentation</li>
+<li>OR submit one primary application with dependent documentation and spouse documentation</li>
+<li>Ensure consistency between applications (same contact information, shared property addresses, corroborating documents)</li>
+<li>Include marriage certificate and proof of relationship if applying under dependency</li>
+</ul>
+
+<p><strong>Processing and Approval:</strong></p>
+
+<ul>
+<li>Expect processing time of 6-12 weeks</li>
+<li>Both partners receive separate appointment notifications</li>
+<li>Both partners attend appointments (or one if dependent route)</li>
+<li>Both receive separate NLV cards upon approval (or one if dependent)</li>
+</ul>
+
+<h2>Common Mistakes Couples Make</h2>
+
+<p><strong>Mistake 1: Assuming Joint Income Counts as Individual Income</strong> A couple has €4,600 joint monthly pension and assumes both qualify with €2,300 each. Consulates don't automatically accept this allocation. They require clear documentation of how income is split between partners.</p>
+
+<p><strong>Mistake 2: One Partner Documenting Income the Other Can't Access</strong> A property is owned solely by Partner A and generates rental income only in A's bank account. Partner B assumes they share this income but documentation shows it belongs to A. Partner B must have separate income sources or formal arrangements documenting access to shared property income.</p>
+
+<p><strong>Mistake 3: Failing to Coordinate Application Timing</strong> One partner's visa expires in 6 months. Both apply at the same time, but Partner A's approval takes 3 months and Partner B's takes 4 months. If Partner A's visa expires during processing of Partner B's application, timing complications arise. Coordinate renewal timing.</p>
+
+<p><strong>Mistake 4: Relying on Dependency Without Formalization</strong> A couple assumes spousal dependency will be approved without formally requesting it or providing required documentation (marriage certificate, proof of joint residence, formal dependency documentation). Dependency approvals are uncertain—it's safer to apply with both partners independently qualifying.</p>
+
+<p><strong>Mistake 5: Not Discussing Income Allocation Before Applying</strong> A couple has joint income but never formally discussed who gets what. When the consulate asks how income is allocated, they give conflicting answers or vague responses. This raises red flags. Discuss and document income allocation before applying.</p>
+
+<h2>Special Considerations for Couples</h2>
+
+<p><strong>Marriage, Civil Partnership, or Common-Law Partnerships:</strong> Most consulates require formal marriage or civil partnership for spousal recognition. Common-law partnerships (unmarried couples living together) are increasingly accepted, but documentation requirements are stricter. Some consulates require notarized cohabitation agreements or declarations of stable partnerships.</p>
+
+<p><strong>Same-Sex Couples:</strong> Spanish law recognizes same-sex marriage and civil partnerships equally. All rules for heterosexual couples apply. Documentation requirements are identical. Consulates cannot discriminate based on sexual orientation (though individual consulate staff may have personal views—if discrimination occurs, escalate to higher authorities).</p>
+
+<p><strong>Prenuptial or Separation Agreements:</strong> If a couple has a prenuptial agreement or is in the process of separating, income may not be jointly accessible. These situations complicate NLV applications. Each partner must be able to independently access and document their income share. Consult lawyers in both countries if complex marital arrangements exist.</p>
+
+
+<div class="internal-links"><h4>Related Posts</h4><ul><li><a href="https://myspanishnlv.com/blog/can-you-use-savings-instead-of-income-nlv">Can You Use Savings Instead of Income for the S...</a></li><li><a href="https://myspanishnlv.com/blog/dividend-income-spain-nlv">Dividend Income and the Spanish NLV — What You ...</a></li><li><a href="https://myspanishnlv.com/blog/dividend-tax-spain-nlv-holders">Dividend Income and Spanish Tax: A Guide for NL...</a></li><li><a href="https://myspanishnlv.com/blog/fire-spain-move-on-investment-income">FIRE in Spain — How to Move to Spain on Investm...</a></li><li><a href="https://myspanishnlv.com/blog/foreign-currency-income-spain-nlv">Converting Foreign Currency Income for the Spai...</a></li><li><a href="https://myspanishnlv.com/blog/how-much-income-for-spain-nlv">How Much Income Do You Need for Spain's Non-Luc...</a></li></ul></div>
+
+## Professional Services and Comprehensive Guidance
+
+Understanding the Non-Lucrative Visa application and managing your residency in Spain often requires professional assistance. Knowing when and how to seek help can make the difference between smooth approval and complications that delay or prevent your move. Immigration lawyers in Spain specialize in visa categories and can provide invaluable guidance specific to your situation. Many Spanish immigration lawyers offer initial consultations at no charge and can review your documentation before you submit your application. A lawyer can identify weaknesses in your documentation, suggest improvements, and represent you if problems arise. The cost typically ranges from €500-2,000 depending on case complexity, which is reasonable insurance for a process that significantly impacts your life.
+
+Gestores (asesor fiscal) are registered professional advisors in Spain who handle tax, accounting, and administrative matters. They're essential for managing Spanish tax obligations, filing tax returns, handling payroll (if you employ anyone), and managing business matters. Most expat residents find a gestor within their first months in Spain. A gestor typically charges €50-150 per month for basic services. Having a gestor handles the complexity of Spanish tax requirements and ensures you remain compliant with Spanish law. They can also help with healthcare registration, municipal administration, and other bureaucratic matters.
+
+## Banking, Finances, and Tax Compliance
+
+Financial matters form the foundation of your NLV status and your comfortable living in Spain. Understanding Spanish banking, tax obligations, and financial management is essential for maintaining both your visa status and your financial security. Opening a Spanish bank account is typically one of your first actions after receiving your NIE number. You'll need your passport, proof of Spanish address, and your NIE number. Most Spanish banks offer accounts specifically for expat residents, often with English-speaking staff in international branches. Monthly fees are usually minimal or non-existent for basic accounts.
+
+If your income is in a currency other than euros, managing currency conversion wisely can significantly impact your available funds. Exchange rates fluctuate daily, sometimes by 2-3%, which on annual income amounts to substantial differences. Some banking apps allow you to hold money in multiple currencies and convert when rates are favorable. Specialized currency exchange services often offer better rates than banks for large transfers. Many expats use platforms like Wise (formerly TransferWise) or OFX for international transfers, as they offer better rates than traditional banks.
+
+## Healthcare Planning and Medical Considerations
+
+Healthcare is a major concern when moving to any country, and Spain's excellent healthcare system is one of the NLV's significant advantages. Understanding your healthcare options and how to access care is essential for your wellbeing and your visa compliance. Spain's public healthcare (Sistema Nacional de Salud) is among Europe's best, providing comprehensive coverage at minimal cost once you're a registered resident. Initial registration involves visiting your local health center (centro de salud) with your residency proof and NIE. Once registered, you receive a health insurance card and select a primary care physician.
+
+Many expats supplement public healthcare with private insurance, particularly if they're accustomed to private healthcare in their home country. Private insurance typically costs €30-150 monthly depending on age and coverage level. Major providers include Sanitas, Axa, Mapfre, and others. Private healthcare offers faster access to specialists and shorter waiting times, though basic care costs may be higher. Prescription medications in Spain are affordable, with a tiered co-payment system based on your income. Many common medications cost just €1-3 per prescription once co-payments are met.
+
+## Long-Term Planning and Future Considerations
+
+Successfully obtaining your NLV is the beginning of your Spanish journey, not the end of planning. Your initial NLV is valid for one year, renewable as long as you meet requirements. Most renewals are routine if you've maintained compliance. Planning your first renewal appointment should begin 60 days before expiration. Gather updated income documentation, healthcare verification, and accommodation proof. After holding various valid residence permits for legally required periods (varies by region, typically 5 years), you may become eligible for long-term resident status. Long-term residency provides greater stability and rights than the annual NLV.
+
+## Professional Services and Comprehensive Guidance
+
+Understanding the Non-Lucrative Visa application and managing your residency in Spain often requires professional assistance. Knowing when and how to seek help can make the difference between smooth approval and complications that delay or prevent your move.
+
+### Immigration Lawyers and Visa Specialists
+
+Immigration lawyers in Spain specialize in visa categories and can provide invaluable guidance specific to your situation. Many Spanish immigration lawyers offer initial consultations at no charge and can review your documentation before you submit your application. A lawyer can identify weaknesses in your documentation, suggest improvements, and represent you if problems arise. The cost typically ranges from €500-2,000 depending on case complexity, which is reasonable insurance for a process that significantly impacts your life. Some lawyers specialize in Non-Lucrative Visas and understand the specific requirements and common pitfalls.
+
+### Gestores and Tax Advisors
+
+Gestores (asesor fiscal) are registered professional advisors in Spain who handle tax, accounting, and administrative matters. They're essential for managing Spanish tax obligations, filing tax returns, handling payroll (if you employ anyone), and managing business matters. Most expat residents find a gestor within their first months in Spain. A gestor typically charges €50-150 per month for basic services. Having a gestor handles the complexity of Spanish tax requirements and ensures you remain compliant with Spanish law. They can also help with healthcare registration, municipal administration, and other bureaucratic matters.
+
+### Document Translation and Legalization Services
+
+Many documents require official translation into Spanish and apostille certification for the consulate. Professional translation services specialized in legal documents ensure accuracy and official recognition. Prices typically range from €20-50 per page depending on document complexity. Apostille services can be obtained from your home country's appropriate authority—some countries have dedicated services (like the UK's FCDO), while others handle apostilles through courts or government agencies. Planning several months ahead for document legalization prevents last-minute rushing and ensures all documents meet consulate requirements.
+
+### Online Communities and Peer Support
+
+Expat communities provide peer support and practical knowledge from people who've recently gone through your exact situation. Most major Spanish cities have active English-speaking expat groups, often meeting regularly for social events, information sharing, and networking. Online forums and Facebook groups dedicated to Spain expat living and NLV topics offer 24/7 access to experienced community members. These communities are invaluable for learning about local variations, recent policy changes, and practical tips for settling into Spain. Many successful NLV holders credit their expat networks with helping them navigate initial challenges and building fulfilling social lives.
+
+## Banking, Finances, and Tax Compliance
+
+Financial matters form the foundation of your NLV status and your comfortable living in Spain. Understanding Spanish banking, tax obligations, and financial management is essential for maintaining both your visa status and your financial security.
+
+### Opening a Spanish Bank Account
+
+Opening a Spanish bank account is typically one of your first actions after receiving your NIE number. You'll need your passport, proof of Spanish address, and your NIE number. Most Spanish banks offer accounts specifically for expat residents, often with English-speaking staff in international branches. Monthly fees are usually minimal or non-existent for basic accounts. Having a Spanish bank account is essential for receiving pension transfers, paying utilities, and conducting daily financial transactions. It also makes paying Spanish taxes straightforward through automatic transfers. Consider opening your account before you move if possible—some banks allow account opening from abroad with documentation. Compare banks' offerings—some provide better exchange rates for international transfers, valuable if you receive income in foreign currencies. Most banks offer online banking in English, making account management convenient.
+
+### Currency Conversion and Exchange Strategies
+
+If your income is in a currency other than euros, managing currency conversion wisely can significantly impact your available funds. Exchange rates fluctuate daily, sometimes by 2-3%, which on annual income amounts to substantial differences. Some banking apps allow you to hold money in multiple currencies and convert when rates are favorable. Specialized currency exchange services often offer better rates than banks for large transfers. Timing major conversions for favorable exchange rate windows saves money. Many expats use platforms like Wise (formerly TransferWise) or OFX for international transfers, as they offer better rates than traditional banks. Understanding whether your bank or external service is used affects both the exchange rate and fees you'll pay.
+
+## Healthcare Planning and Medical Considerations
+
+Healthcare is a major concern when moving to any country, and Spain's excellent healthcare system is one of the NLV's significant advantages. Understanding your healthcare options and how to access care is essential for your wellbeing and your visa compliance.
+
+### Public Healthcare System Details
+
+Spain's public healthcare (Sistema Nacional de Salud) is among Europe's best, providing comprehensive coverage at minimal cost once you're a registered resident. Initial registration involves visiting your local health center (centro de salud) with your residency proof and NIE. Once registered, you receive a health insurance card and select a primary care physician. The system covers everything from preventive care to hospitalization, though waiting times for non-emergency specialties can be longer in summer months when staff take vacation. The Mediterranean diet common in Spain, emphasis on exercise and outdoor activity, and the relaxed lifestyle generally support good health outcomes. Preventive care is encouraged, with regular health checks available through your primary care physician.
+
+### Private Healthcare Alternatives
+
+Many expats supplement public healthcare with private insurance, particularly if they're accustomed to private healthcare in their home country. Private insurance typically costs €30-150 monthly depending on age and coverage level. Major providers include Sanitas, Axa, Mapfre, and others. Private healthcare offers faster access to specialists and shorter waiting times, though basic care costs may be higher. Some people use private care for specialist visits while relying on public healthcare for routine matters. Having both public and private coverage provides maximum flexibility.
+
+### Prescription Medications and Costs
+
+Prescription medications in Spain are affordable, with a tiered co-payment system based on your income. Medications range from 0% to 60% cost-sharing depending on the drug type and your income level. Many common medications cost just €1-3 per prescription once co-payments are met. Maintaining current prescriptions and medication records is important, especially if you take regular medications in your home country. Some medications available by prescription in Spain require over-the-counter purchase in other countries, potentially reducing your pharmacy costs. Pharmacists in Spain are highly trained and often can make medication recommendations for minor ailments without requiring a doctor's visit.
+
+## Long-Term Planning and Future Considerations
+
+Successfully obtaining your NLV is the beginning of your Spanish journey, not the end of planning. Thinking about your long-term goals and how they fit with life on the NLV helps you make informed decisions during your time in Spain.
+
+### Renewal Strategy and Timeline
+
+Your initial NLV is valid for one year, renewable as long as you meet requirements. Most renewals are routine if you've maintained compliance. Planning your first renewal appointment should begin 60 days before expiration. Gather updated income documentation, healthcare verification, and accommodation proof. The renewal process is identical to the initial application but usually faster since they already have your history. Most residents find renewals straightforward, though occasional requests for additional documentation may occur. Planning to apply early ensures adequate time if the immigration office requests additional documentation.
+
+### Upgrading to Long-Term Residency
+
+After holding various valid residence permits for legally required periods (varies by region, typically 5 years), you may become eligible for long-term resident status. Long-term residency provides greater stability and rights than the annual NLV. You can pursue long-term residency while maintaining your NLV, planning this transition as part of your long-term Spain strategy. Long-term residents have enhanced work rights and enjoy greater legal security regarding their residency status.
+
+### Building a Life Beyond the Visa
+
+While your visa status is important, your daily life in Spain involves much more—building community, maintaining health, developing interests and hobbies, and creating a social network. Many successful NLV residents report that their first year involved significant adjustment but that patience and openness to new experiences resulted in rich, fulfilling lives. Learning Spanish, even conversationally, dramatically improves your experience and opens doors to deeper community connections. Exploring different neighborhoods and regions during your first year helps you determine if your initial choice of location is optimal. Many residents refine their location at their first renewal after getting to know Spain better.
+</article>
+
+                <!-- Sidebar -->
+                <aside class="sidebar">
+                    <div class="sidebar-card">
+                        <h4>Related Articles</h4>
+                        <ul>
+                            <li><a href="#">NLV Health Insurance Basics</a></li>
+                            <li><a href="#">Private vs. Public Healthcare in Spain</a></li>
+                            <li><a href="#">NLV Visa Requirements Checklist</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-card">
+                        <h4>Key Information</h4>
+                        <ul style="list-style-position: inside; margin-left: 0;">
+                            <li style="list-style: none;"><a href="#">Insurance is mandatory for NLV approval</a></li>
+                            <li style="list-style: none;"><a href="#">Minimum €30,000 coverage required</a></li>
+                            <li style="list-style: none;"><a href="#">Annual cost €600–€2,500</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-cta">
+                        <h4>Need Help?</h4>
+                        <p>Our visa specialists can guide you through every step of the process.</p>
+                        <a href="https://myspanishnlv.com/contact">Get Expert Help</a>
+                    </div>
+                </aside>
+            </div>
+
+            <!-- FAQ Section -->
+            <div style="margin-top: 4rem;">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <div class="faq-list"><div class="faq-item">
+                        <button class="faq-q" aria-expanded="false">
+                            <span>How much does insurance typically cost for NLV applicants?</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
+                            </svg>
+                        </button>
+                        <div class="faq-a">Costs vary widely depending on age, coverage level, and provider. Expect €600–€2,500 annually. Younger applicants and those choosing basic plans pay less; older applicants and comprehensive plans cost more. Many insurers offer discounts for annual payment or online enrollment.</div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-q" aria-expanded="false">
+                            <span>Can I use travel insurance instead of health insurance for my NLV visa?</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
+                            </svg>
+                        </button>
+                        <div class="faq-a">No. Travel insurance and health insurance are distinct. Consulates require a health insurance policy (seguro de salud) that covers your entire stay in Spain. Travel insurance does not meet NLV requirements and will not be accepted.</div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-q" aria-expanded="false">
+                            <span>What if I have a pre-existing condition?</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
+                            </svg>
+                        </button>
+                        <div class="faq-a">Many Spanish insurers do not exclude pre-existing conditions, or cover them after a waiting period (typically 12 months). An insurance broker can identify plans that suit your medical history and ensure your condition is covered from day one if possible.</div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-q" aria-expanded="false">
+                            <span>Do I need a broker, or can I arrange insurance myself?</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
+                            </svg>
+                        </button>
+                        <div class="faq-a">You can arrange insurance independently, but brokers add significant value. They navigate the complexity, compare multiple providers, ensure compliance with consulate requirements, and often negotiate better rates. For complex health situations, broker assistance is worth the investment.</div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-q" aria-expanded="false">
+                            <span>What happens to my insurance when I renew my NLV?</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
+                            </svg>
+                        </button>
+                        <div class="faq-a">You must renew your insurance policy when you renew your NLV. Plan ahead so there are no gaps in coverage. Most insurers offer easy annual renewal, often with loyalty discounts. Build renewal into your visa renewal timeline at least 2-3 months in advance.</div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-q" aria-expanded="false">
+                            <span>Can I switch insurance providers if I'm unhappy?</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
+                            </svg>
+                        </button>
+                        <div class="faq-a">Yes, you can switch providers, but timing matters. Confirm that any new policy meets consulate requirements and arrange overlap coverage so there are no gaps. Your broker can handle the transition smoothly and ensure continuous compliance.</div>
+                    </div>
+                <div class="faq-item">
+                        <button class="faq-q" aria-expanded="false">
+                            <span>How is monthly income calculated for NLV purposes?</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
+                            </svg>
+                        </button>
+                        <div class="faq-a">Monthly income is typically calculated as the average annual passive income divided by 12. This includes pensions, rental income, investment returns, and interest. Your income documentation must demonstrate this amount consistently over the past 12 months using official statements from banks or pension providers.</div>
+                    </div>
+<div class="faq-item">
+                        <button class="faq-q" aria-expanded="false">
+                            <span>Can I combine multiple income sources to meet the requirement?</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
+                            </svg>
+                        </button>
+                        <div class="faq-a">Yes, you can combine multiple passive income sources—pensions, investments, rental income, annuities—to meet the threshold. Each source must be documented separately with official proof, but the total can come from various streams. Ensure all sources are legitimate and verifiable.</div>
+                    </div>
+<div class="faq-item">
+                        <button class="faq-q" aria-expanded="false">
+                            <span>What happens if my income fluctuates?</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
+                            </svg>
+                        </button>
+                        <div class="faq-a">Consulates typically want to see consistent income over 12 months. Fluctuations are acceptable if the average meets requirements, but extreme variation raises concerns. Provide 12 months of statements to demonstrate reliability. If income is volatile, maintaining a safety margin above the minimum is prudent.</div>
+                    </div>
+<div class="faq-item">
+                        <button class="faq-q" aria-expanded="false">
+                            <span>Do I need to demonstrate ongoing income or just historical?</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
+                            </svg>
+                        </button>
+                        <div class="faq-a">You need to demonstrate both: historical proof (12 months of statements) showing you've had this income, and documentation that it will continue. For pensions and investments, this is straightforward. For rental or business income, you may need lease agreements or contracts proving future income.</div>
+                    </div>
+<div class="faq-item">
+                        <button class="faq-q" aria-expanded="false">
+                            <span>How do currency fluctuations affect my income threshold?</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
+                            </svg>
+                        </button>
+                        <div class="faq-a">If your income is in foreign currency, convert it to EUR using the exchange rate from the date you submit your application. Consulates typically accept the official rate on that date. Document your conversion method. If converting regularly (monthly pension), use rates from the statement dates provided by your bank.</div>
+                    </div>
+<div class="faq-item">
+                        <button class="faq-q" aria-expanded="false">
+                            <span>Is the income requirement adjusted for inflation yearly?</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
+                            </svg>
+                        </button>
+                        <div class="faq-a">The Spanish government adjusts the IPREM (Indicador Público de Renta de Efectos Múltiples) annually each January, and the income requirement is linked to IPREM multiples. Check your consulate's current requirement, as it may have changed since your research began. Always verify the current year's threshold before applying.</div>
+                    </div>
+</div></section>
+
+    <!-- Footer -->

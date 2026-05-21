@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K0X9M61S63"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-K0X9M61S63');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="description" content="Complete directory of Spanish consulates with contact information, locations, and services for NLV renewal.">
+    <meta name="keywords" content="Spanish consulates, consulate directory, consulate contact, visa renewal contacts, Spanish embassy">
+    <title>Spanish Consulate Directory | My Spanish NLV</title>
+
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Spanish Consulate Directory",
+        "description": "Directory of Spanish consulates worldwide with contact information",
+        "url": "https://www.myspanishnlv.com/renewal/consulate-directory.html"
+    }
+    </script>
+
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+    <link rel="canonical" href="https://myspanishnlv.com/renewal/consulate-directory/">
+    <link rel="alternate" hreflang="en" href="https://myspanishnlv.com/renewal/consulate-directory/">
+    <link rel="alternate" hreflang="x-default" href="https://myspanishnlv.com/renewal/consulate-directory/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="My Spanish NLV">
+    <meta property="og:url" content="https://myspanishnlv.com/renewal/consulate-directory/">
+    <meta property="og:title" content="Spanish Consulate Directory | My Spanish NLV">
+    <meta property="og:description" content="Complete directory of Spanish consulates with contact information, locations, and services for NLV renewal.">
+    <meta property="og:image" content="https://myspanishnlv.com/assets/og-default.jpg">
+    <meta property="og:locale" content="en_GB">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Spanish Consulate Directory | My Spanish NLV">
+    <meta name="twitter:description" content="Complete directory of Spanish consulates with contact information, locations, and services for NLV renewal.">
+    <meta name="twitter:image" content="https://myspanishnlv.com/assets/og-default.jpg">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --navy: #0c1930;
+            --red: #be0011;
+            --cream: #f8f7f4;
+            --yellow: #facf39;
+            --light-gray: #e8e6e0;
+            --dark-gray: #4a4a4a;
+            --border-radius: 8px;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            color: var(--navy);
+            background-color: var(--cream);
+            line-height: 1.6;
+        }
+
+        nav {
+            background-color: var(--navy);
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        nav a {
+            color: var(--cream);
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+            margin-right: 2rem;
+        }
+
+        nav a:hover {
+            color: var(--yellow);
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--navy) 0%, var(--red) 100%);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .header-subtitle {
+            font-size: 1.1rem;
+            opacity: 0.95;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+
+        /* Info box */
+        .info-box {
+            background: white;
+            border-left: 4px solid var(--red);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        .info-box h2 {
+            color: var(--navy);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .info-box p {
+            margin-bottom: 0.75rem;
+            color: var(--dark-gray);
+        }
+
+        /* Search and filter */
+        .search-container {
+            background: white;
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        #consulateSearch {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 2px solid var(--light-gray);
+            border-radius: var(--border-radius);
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+            margin-bottom: 1rem;
+        }
+
+        #consulateSearch:focus {
+            outline: none;
+            border-color: var(--red);
+        }
+
+        .region-filter {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+        }
+
+        .region-btn {
+            padding: 0.5rem 1rem;
+            background-color: var(--light-gray);
+            border: 2px solid transparent;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .region-btn:hover {
+            background-color: var(--navy);
+            color: white;
+        }
+
+        .region-btn.active {
+            background-color: var(--red);
+            color: white;
+        }
+
+        /* Consulate cards */
+        .consulates-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .consulate-card {
+            background: white;
+            border-radius: var(--border-radius);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .consulate-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+        }
+
+        .card-header {
+            background: linear-gradient(135deg, var(--navy) 0%, var(--red) 100%);
+            color: white;
+            padding: 1.5rem;
+        }
+
+        .consulate-name {
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin-bottom: 0.25rem;
+        }
+
+        .consulate-location {
+            font-size: 0.95rem;
+            opacity: 0.9;
+        }
+
+        .card-content {
+            padding: 1.5rem;
+        }
+
+        .contact-item {
+            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        .contact-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .contact-label {
+            font-weight: 600;
+            color: var(--red);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            margin-bottom: 0.25rem;
+        }
+
+        .contact-value {
+            color: var(--navy);
+            word-break: break-word;
+        }
+
+        .contact-value a {
+            color: var(--navy);
+            text-decoration: none;
+            border-bottom: 2px solid var(--yellow);
+        }
+
+        .contact-value a:hover {
+            color: var(--red);
+        }
+
+        .hours {
+            background-color: #f0ede8;
+            padding: 1rem;
+            border-radius: 4px;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .hours-label {
+            font-weight: 600;
+            color: var(--navy);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Region sections */
+        .region-section {
+            margin-bottom: 3rem;
+        }
+
+        .region-title {
+            color: var(--navy);
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid var(--light-gray);
+        }
+
+        /* No results */
+        .no-results {
+            text-align: center;
+            padding: 3rem;
+            color: var(--dark-gray);
+        }
+
+        .no-results p {
+            font-size: 1.1rem;
+        }
+
+        /* Related guides */
+        .related-guides {
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 2px solid var(--light-gray);
+        }
+
+        .related-guides h2 {
+            color: var(--navy);
+            margin-bottom: 2rem;
+            font-size: 1.5rem;
+        }
+
+        .guides-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .guide-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        .guide-card h3 {
+            color: var(--red);
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+        }
+
+        .guide-card p {
+            color: var(--dark-gray);
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
+
+        .guide-card a {
+            color: var(--navy);
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        @media (max-width: 900px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            main {
+                padding: 0 1.5rem;
+            }
+
+            .consulates-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .region-filter {
+                grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+                gap: 0.75rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header {
+                padding: 2rem 1rem;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            .search-container {
+                padding: 1.5rem;
+            }
+
+            .card-header {
+                padding: 1rem;
+            }
+
+            .consulate-name {
+                font-size: 1.1rem;
+            }
+
+            .card-content {
+                padding: 1rem;
+            }
+
+            .region-filter {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="https://dashboard.platinumlegalspain.com/nlv-renewal">Dashboard</a>
+        <a href="/renewal/">Renewal Hub</a>
+        <a href="/renewal/how-to-renew-nlv.html">How to Renew</a>
+    </nav>
+
+    <header>
+        <h1>Spanish Consulate Directory</h1>
+        <p class="header-subtitle">Find contact information and hours for Spanish consulates worldwide</p>
+    </header>
+
+    <main>
+        <!-- Important Info -->
+        <section class="info-box">
+            <h2>Before You Contact</h2>
+            <p><strong>Most consulates require appointments.</strong> Many countries now require online appointment bookings through their website or dedicated system. Calling without an appointment may not get results.</p>
+            <p><strong>Limited hours.</strong> Consulates typically operate limited hours, often mornings only. Always check their website for current hours before visiting.</p>
+            <p><strong>Website is your first stop.</strong> For current procedures, appointment systems, and specific requirements, visit your consulate's official website first.</p>
+        </section>
+
+        <!-- Search & Filter -->
+        <section class="search-container">
+            <input type="text" id="consulateSearch" placeholder="Search consulate... (e.g., 'London', 'New York', 'Toronto')">
+            <label style="font-weight: 600; margin-bottom: 0.5rem; display: block;">Filter by Region:</label>
+            <div class="region-filter">
+                <button class="region-btn active" onclick="filterRegion('all')">All Regions</button>
+                <button class="region-btn" onclick="filterRegion('europe')">Europe</button>
+                <button class="region-btn" onclick="filterRegion('americas')">Americas</button>
+                <button class="region-btn" onclick="filterRegion('asia')">Asia</button>
+                <button class="region-btn" onclick="filterRegion('middle-east')">Middle East</button>
+            </div>
+        </section>
+
+        <!-- Europe Region -->
+        <section class="region-section" data-region="europe">
+            <h2 class="region-title">🇪🇺 Europe</h2>
+            <div class="consulates-grid" id="europe-consulates">
+                <div class="consulate-card" data-consulate="united-kingdom">
+                    <div class="card-header">
+                        <div class="consulate-name">United Kingdom</div>
+                        <div class="consulate-location">London, Manchester, Edinburgh</div>
+                    </div>
+                    <div class="card-content">
+                        <div class="contact-item">
+                            <div class="contact-label">London Embassy</div>
+                            <div class="contact-value">39 Chesham Place, London SW1X 8SB</div>
+                            <div class="contact-value">+44 (0)20 7589 8989</div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-label">Website</div>
+                            <div class="contact-value"><a href="https://www.exteriores.gob.es/Consulados/Londres/es/Paginas/index.aspx" target="_blank">Visit Consulate Website</a></div>
+                        </div>
+                        <div class="hours">
+                            <div class="hours-label">Consulate Hours</div>
+                            Mon-Fri: 9:00 AM - 2:00 PM (by appointment)
+                        </div>
+                    </div>
+                </div>
+
+                <div class="consulate-card" data-consulate="france">
+                    <div class="card-header">
+                        <div class="consulate-name">France</div>
+                        <div class="consulate-location">Paris, Lyon, Marseille</div>
+                    </div>
+                    <div class="card-content">
+                        <div class="contact-item">
+                            <div class="contact-label">Paris Embassy</div>
+                            <div class="contact-value">22 Avenue Marceau, 75008 Paris</div>
+                            <div class="contact-value">+33 (0)1 44 43 17 00</div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-label">Website</div>
+                            <div class="contact-value"><a href="https://www.exteriores.gob.es/Consulados/Paris/es/Paginas/index.aspx" target="_blank">Visit Consulate Website</a></div>
+                        </div>
+                        <div class="hours">
+                            <div class="hours-label">Consulate Hours</div>
+                            Mon-Fri: 9:00 AM - 1:00 PM (by appointment)
+                        </div>
+                    </div>
+                </div>
+
+                <div class="consulate-card" data-consulate="germany">
+                    <div class="card-header">
+                        <div class="consulate-name">Germany</div>
+                        <div class="consulate-location">Berlin, Munich, Hamburg</div>
+                    </div>
+                    <div class="card-content">
+                        <div class="contact-item">
+                            <div class="contact-label">Berlin Embassy</div>
+                            <div class="contact-value">Lichtensteinallee 1, 10787 Berlin</div>
+                            <div class="contact-value">+49 (0)30 25 45 04</div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-label">Website</div>
+                            <div class="contact-value"><a href="https://www.exteriores.gob.es/Consulados/Berlin/es/Paginas/index.aspx" target="_blank">Visit Consulate Website</a></div>
+                        </div>
+                        <div class="hours">
+                            <div class="hours-label">Consulate Hours</div>
+                            Mon-Fri: 9:00 AM - 1:00 PM (by appointment)
+                        </div>
+                    </div>
+                </div>
+
+                <div class="consulate-card" data-consulate="netherlands">
+                    <div class="card-header">
+                        <div class="consulate-name">Netherlands</div>
+                        <div class="consulate-location">Amsterdam, Rotterdam</div>
+                    </div>
+                    <div class="card-content">
+                        <div class="contact-item">
+                            <div class="contact-label">Amsterdam Consulate</div>
+                            <div class="contact-value">Frederiksplein 34, 1017 XN Amsterdam</div>
+                            <div class="contact-value">+31 (0)20 530 4200</div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-label">Website</div>
+                            <div class="contact-value"><a href="https://www.exteriores.gob.es/Consulados/Amsterdam/es/Paginas/index.aspx" target="_blank">Visit Consulate Website</a></div>
+                        </div>
+                        <div class="hours">
+                            <div class="hours-label">Consulate Hours</div>
+                            Mon-Fri: 9:00 AM - 1:00 PM (by appointment)
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Americas Region -->
+        <section class="region-section" data-region="americas">
+            <h2 class="region-title">🌎 Americas</h2>
+            <div class="consulates-grid" id="americas-consulates">
+                <div class="consulate-card" data-consulate="united-states">
+                    <div class="card-header">
+                        <div class="consulate-name">United States</div>
+                        <div class="consulate-location">Washington, New York, Los Angeles, Miami</div>
+                    </div>
+                    <div class="card-content">
+                        <div class="contact-item">
+                            <div class="contact-label">Washington DC Embassy</div>
+                            <div class="contact-value">2375 Pennsylvania Ave NW, Washington, DC</div>
+                            <div class="contact-value">+1 (202) 728-2330</div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-label">New York Consulate</div>
+                            <div class="contact-value">150 East 58th Street, New York, NY 10155</div>
+                            <div class="contact-value">+1 (212) 355-4080</div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-label">Website</div>
+                            <div class="contact-value"><a href="https://www.exteriores.gob.es/Consulados/NuevaYork/en/Paginas/index.aspx" target="_blank">Visit Consulate Website</a></div>
+                        </div>
+                        <div class="hours">
+                            <div class="hours-label">Consulate Hours</div>
+                            Mon-Fri: 9:00 AM - 1:00 PM (by appointment)
+                        </div>
+                    </div>
+                </div>
+
+                <div class="consulate-card" data-consulate="canada">
+                    <div class="card-header">
+                        <div class="consulate-name">Canada</div>
+                        <div class="consulate-location">Ottawa, Toronto, Vancouver, Montreal</div>
+                    </div>
+                    <div class="card-content">
+                        <div class="contact-item">
+                            <div class="contact-label">Ottawa Embassy</div>
+                            <div class="contact-value">74 Stanley Avenue, Ottawa, ON K1M 1P4</div>
+                            <div class="contact-value">+1 (613) 747-2252</div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-label">Toronto Consulate</div>
+                            <div class="contact-value">200 King Street West, Suite 1500, Toronto</div>
+                            <div class="contact-value">+1 (416) 977-1661</div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-label">Website</div>
+                            <div class="contact-value"><a href="https://www.exteriores.gob.es/Consulados/Toronto/en/Paginas/index.aspx" target="_blank">Visit Consulate Website</a></div>
+                        </div>
+                        <div class="hours">
+                            <div class="hours-label">Consulate Hours</div>
+                            Mon-Fri: 9:00 AM - 1:00 PM (by appointment)
+                        </div>
+                    </div>
+                </div>
+
+                <div class="consulate-card" data-consulate="mexico">
+                    <div class="card-header">
+                        <div class="consulate-name">Mexico</div>
+                        <div class="consulate-location">Mexico City, Monterrey</div>
+                    </div>
+                    <div class="card-content">
+                        <div class="contact-item">
+                            <div class="contact-label">Mexico City Embassy</div>
+                            <div class="contact-value">Avenida Paseo de la Reforma 505, Piso 10</div>
+                            <div class="contact-value">+52 (55) 5228-2860</div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-label">Website</div>
+                            <div class="contact-value"><a href="https://www.exteriores.gob.es/Consulados/MexicoDF/es/Paginas/index.aspx" target="_blank">Visit Consulate Website</a></div>
+                        </div>
+                        <div class="hours">
+                            <div class="hours-label">Consulate Hours</div>
+                            Mon-Fri: 9:00 AM - 1:00 PM (by appointment)
+                        </div>
+                    </div>
+                </div>
+
+                <div class="consulate-card" data-consulate="brazil">
+                    <div class="card-header">
+                        <div class="consulate-name">Brazil</div>
+                        <div class="consulate-location">Brasília, São Paulo, Rio de Janeiro</div>
+                    </div>
+                    <div class="card-content">
+                        <div class="contact-item">
+                            <div class="contact-label">Brasília Embassy</div>
+                            <div class="contact-value">SES, Avenida das Nações, Lote 38</div>
+                            <div class="contact-value">+55 (61) 3322-3000</div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-label">Website</div>
+                            <div class="contact-value"><a href="https://www.exteriores.gob.es/Consulados/Brasilia/es/Paginas/index.aspx" target="_blank">Visit Consulate Website</a></div>
+                        </div>
+                        <div class="hours">
+                            <div class="hours-label">Consulate Hours</div>
+                            Mon-Fri: 9:00 AM - 1:00 PM (by appointment)
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Asia Region -->
+        <section class="region-section" data-region="asia">
+            <h2 class="region-title">🌏 Asia</h2>
+            <div class="consulates-grid" id="asia-consulates">
+                <div class="consulate-card" data-consulate="japan">
+                    <div class="card-header">
+                        <div class="consulate-name">Japan</div>
+                        <div class="consulate-location">Tokyo, Osaka</div>
+                    </div>
+                    <div class="card-content">
+                        <div class="contact-item">
+                            <div class="contact-label">Tokyo Embassy</div>
+                            <div class="contact-value">1-3-29 Roppongi, Minato-ku, Tokyo 106-0032</div>
+                            <div class="contact-value">+81 (3) 5798-3000</div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-label">Website</div>
+                            <div class="contact-value"><a href="https://www.exteriores.gob.es/Consulados/Tokyo/es/Paginas/index.aspx" target="_blank">Visit Consulate Website</a></div>
+                        </div>
+                        <div class="hours">
+                            <div class="hours-label">Consulate Hours</div>
+                            Mon-Fri: 9:00 AM - 1:00 PM (by appointment)
+                        </div>
+                    </div>
+                </div>
+
+                <div class="consulate-card" data-consulate="china">
+                    <div class="card-header">
+                        <div class="consulate-name">China</div>
+                        <div class="consulate-location">Beijing, Shanghai, Guangzhou</div>
+                    </div>
+                    <div class="card-content">
+                        <div class="contact-item">
+                            <div class="contact-label">Beijing Embassy</div>
+                            <div class="contact-value">Rua do Limoeiro 8-A, Beijing</div>
+                            <div class="contact-value">+86 (10) 6532-0250</div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-label">Website</div>
+                            <div class="contact-value"><a href="https://www.exteriores.gob.es/Consulados/Pekin/es/Paginas/index.aspx" target="_blank">Visit Consulate Website</a></div>
+                        </div>
+                        <div class="hours">
+                            <div class="hours-label">Consulate Hours</div>
+                            Mon-Fri: 9:00 AM - 1:00 PM (by appointment)
+                        </div>
+                    </div>
+                </div>
+
+                <div class="consulate-card" data-consulate="thailand">
+                    <div class="card-header">
+                        <div class="consulate-name">Thailand</div>
+                        <div class="consulate-location">Bangkok</div>
+                    </div>
+                    <div class="card-content">
+                        <div class="contact-item">
+                            <div class="contact-label">Bangkok Embassy</div>
+                            <div class="contact-value">159 Wireless Road (Soi Mahatun), Bangkok 10110</div>
+                            <div class="contact-value">+66 (2) 204-7700</div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-label">Website</div>
+                            <div class="contact-value"><a href="https://www.exteriores.gob.es/Consulados/Bangkok/es/Paginas/index.aspx" target="_blank">Visit Consulate Website</a></div>
+                        </div>
+                        <div class="hours">
+                            <div class="hours-label">Consulate Hours</div>
+                            Mon-Fri: 9:00 AM - 1:00 PM (by appointment)
+                        </div>
+                    </div>
+                </div>
+
+                <div class="consulate-card" data-consulate="australia">
+                    <div class="card-header">
+                        <div class="consulate-name">Australia</div>
+                        <div class="consulate-location">Canberra, Sydney, Melbourne</div>
+                    </div>
+                    <div class="card-content">
+                        <div class="contact-item">
+                            <div class="contact-label">Canberra Embassy</div>
+                            <div class="contact-value">15 Arkana Street, Yarralumla ACT 2600</div>
+                            <div class="contact-value">+61 (2) 6273-3555</div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-label">Website</div>
+                            <div class="contact-value"><a href="https://www.exteriores.gob.es/Consulados/Canberra/es/Paginas/index.aspx" target="_blank">Visit Consulate Website</a></div>
+                        </div>
+                        <div class="hours">
+                            <div class="hours-label">Consulate Hours</div>
+                            Mon-Fri: 9:00 AM - 1:00 PM (by appointment)
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Related Guides -->
+        <section class="related-guides">
+            <h2>Related Guides</h2>
+            <div class="guides-grid">
+                <div class="guide-card">
+                    <h3>How to Renew Your NLV</h3>
+                    <p>Step-by-step guide to the complete renewal process.</p>
+                    <a href="/renewal/how-to-renew-nlv.html">Read Guide →</a>
+                </div>
+                <div class="guide-card">
+                    <h3>Glossary</h3>
+                    <p>Spanish legal terms explained for your renewal.</p>
+                    <a href="/renewal/glossary.html">View Glossary →</a>
+                </div>
+                <div class="guide-card">
+                    <h3>FAQ Master Index</h3>
+                    <p>Search 144+ answers to common renewal questions.</p>
+                    <a href="/renewal/faq-master-index.html">Read FAQs →</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Start cookieyes banner -->
+    <script id="cookieyes" type="text/javascript" src="https://cdn-cookieyes.com/client_data/78271008c96df6c735efd415cdea6100/script.js"></script>
+    <!-- End cookieyes banner -->
+
+    <script>
+        // Search functionality
+        document.getElementById('consulateSearch').addEventListener('keyup', function(e) {
+            const searchTerm = e.target.value.toLowerCase();
+            const cards = document.querySelectorAll('.consulate-card');
+
+            cards.forEach(card => {
+                const text = card.textContent.toLowerCase();
+                card.style.display = text.includes(searchTerm) || searchTerm === '' ? 'block' : 'none';
+            });
+        });
+
+        // Filter by region
+        function filterRegion(region) {
+            const sections = document.querySelectorAll('.region-section');
+            const buttons = document.querySelectorAll('.region-btn');
+
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+
+            sections.forEach(section => {
+                if (region === 'all') {
+                    section.style.display = 'block';
+                } else {
+                    section.style.display = section.dataset.region === region ? 'block' : 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>

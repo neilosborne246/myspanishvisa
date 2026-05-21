@@ -1,0 +1,313 @@
+TITLE: My Spanish NLV
+FILE: work-while-on-spain-nlv.html
+============================================================
+
+HERO SECTION:
+<section class="page-hero">
+        <div class="page-hero-inner">
+            <span class="page-hero-badge">Healthcare</span>
+            <h1>What Happens If You Work While on the Spain NLV? | My Spanish NLV</h1>
+            <p>When and how to consult with insurance specialists about your healthcare coverage in Spain.</p>
+            <div class="hero-actions">
+                <a class="btn-primary" href="https://myspanishnlv.com/contact">Get Help</a>
+                <a class="btn-outline" href="https://myspanishnlv.com/blog">Back to Blog</a>
+            </div>
+        </div>
+    </section>
+
+MAIN CONTENT:
+<!-- Breadcrumb -->
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="https://myspanishnlv.com">Home</a>
+        <span>›</span>
+        <a href="https://myspanishnlv.com/blog">Blog</a>
+        <span>›</span>
+        <span>Health Insurance Specialist Advice</span>
+    </nav>
+
+    <!-- Main Content -->
+    <section class="section">
+        <div class="section-inner">
+            <div class="blog-grid">
+                <article class="blog-body">
+<h2>The Clear Rule: The NLV Explicitly Prohibits Employment</h2>
+<p>Let's be direct: the Spain Non-Lucrative Visa (NLV) explicitly prohibits employment. This is not a gray area. It's a bright-line rule written into Spanish law. The entire purpose of the NLV is to allow people with passive income to live in Spain without working.</p>
+<p>Your NLV approval letter includes a condition that you "will not carry out any activity that constitutes work, profession, business, or self-employment." This is binding. Violating this condition can result in visa cancellation and deportation.</p>
+<p>That said, there are important nuances worth understanding.</p>
+
+<h2>What Counts as "Work" Under NLV Rules?</h2>
+<p><strong>Clearly Prohibited:</strong></p>
+<ul>
+<li><strong>Employment:</strong> Being an employee of a Spanish company. Having a Spanish boss, signing an employment contract, receiving a Spanish salary or tax ID — all prohibited.</li>
+<li><strong>Self-Employment:</strong> Operating a business in Spain, even as a freelancer. Having a Spanish tax ID (impuesto sobre actividades económicas — IAE), invoicing Spanish clients, maintaining a Spanish business address — all prohibited.</li>
+<li><strong>Professional Services:</strong> Working as a consultant, lawyer, accountant, doctor, or any professional service provider in Spain. Your professional qualifications don't matter; the activity is prohibited.</li>
+<li><strong>Teaching:</strong> Even if you're a qualified English teacher, formal teaching jobs in Spain are employment and are prohibited. This includes private language schools and tutoring centers that issue official contracts.</li>
+<li><strong>Running a Business:</strong> Starting a bar, restaurant, shop, or any business in Spain is prohibited. Even if you partner with a Spanish citizen, you cannot legally work.</li>
+</ul>
+<p><strong>Gray Areas:</strong></p>
+<p><strong>Remote Work for Foreign Employers:</strong> This is the contentious issue. Many NLV holders work remotely for UK-based companies, US companies, or international clients. Technically, this may violate your visa conditions. Spanish law is ambiguous on whether remote work counts as "work" in Spain if your employer is abroad and you're not physically working in a Spanish office.</p>
+<p>The situation is: many people do it, enforcement is inconsistent, and the risk exists but isn't always realized. Some consulates have been more lenient, understanding that remote work is increasingly common and difficult to enforce. However, other consulates are stricter. If caught, you could face visa cancellation.</p>
+<p><strong>Passive Income and Investment Management:</strong> This is allowed. If you make investment decisions, buy and sell stocks, manage your rental properties, review your pension — these aren't "work" in the employment sense. They're managing your own assets. However, if you become a financial advisor professionally, that's prohibited. The distinction is personal management vs. professional services.</p>
+<p><strong>Occasional Consultation:</strong> If you provide one-off consultation or advisory work for a foreign company without formal employment or ongoing income, this exists in a gray area. But if it becomes regular income that you depend on, you're essentially working as a consultant, which is prohibited.</p>
+
+<h2>Why Is Work Prohibited on the NLV?</h2>
+<p>Understanding the rationale helps explain the rule:</p>
+<p>Spain created the NLV to attract people with independent means — retirees, investors, people with passive income. It's not a work visa. Spain has separate visas for workers (work visas, entrepreneur visas, etc.). The NLV specifically targets people who don't need to work.</p>
+<p>By restricting work, Spain protects its domestic job market. It's saying: "We'll welcome foreign retirees and people with investment income, but we won't allow you to take jobs that Spanish workers might fill."</p>
+<p>Additionally, restricting work ensures that NLV holders genuinely have the income they claimed. If you could work, the income requirement becomes less meaningful — anyone could move to Spain and find employment there, regardless of their passive income. The income requirement verifies financial security.</p>
+
+<h2>Realistic Enforcement: How Strictly Is This Enforced?</h2>
+<p>Here's the uncomfortable truth: enforcement is inconsistent.</p>
+<p><strong>Scenarios where enforcement is likely:</strong></p>
+<ul>
+<li>If you register for a Spanish tax ID (impuesto sobre actividades económicas — IAE) as self-employed, you're openly declaring you're working. This is likely to trigger action.</li>
+<li>If you work as an employee of a Spanish company with an employment contract, Spanish payroll taxes, and a Spanish employer reporting you to authorities, this will be discovered.</li>
+<li>If someone reports you — a disgruntled business partner, a former employer, someone you've angered — authorities may investigate.</li>
+<li>If your income sources suddenly change and you're paying taxes on employment income rather than passive income, this can trigger questions during renewal or tax audits.</li>
+</ul>
+<p><strong>Scenarios where enforcement is unlikely:</strong></p>
+<ul>
+<li>If you work remotely for a foreign employer, and no one reports you, and you don't change your tax status or income sources, authorities won't discover this unless they specifically investigate.</li>
+<li>If you do occasional unpaid volunteer work, this isn't "work" in the employment sense — it's community involvement.</li>
+<li>If you manage your own investments and rental properties, this isn't employment — it's passive income management.</li>
+</ul>
+<p>The reality: Many NLV holders work remotely. Some get away with it indefinitely. Some get caught during renewal when consulates ask detailed questions about income sources. Some face no consequences because enforcement is inconsistent and depends on whether someone reports them.</p>
+<p>However, understanding that enforcement is inconsistent is not the same as saying the rule doesn't matter. It exists, violations carry real penalties, and you're taking a risk if you violate it.</p>
+
+<h2>What Happens If You're Caught Working?</h2>
+<p><strong>Best Case:</strong> You're warned and told to stop. Your next renewal might be denied, but you're not immediately deported.</p>
+<p><strong>More Likely:</strong> Your visa is cancelled. You're required to leave Spain. You may face deportation proceedings and be banned from re-entering Spain for a period.</p>
+<p><strong>Worst Case:</strong> You're prosecuted for fraud (if you misrepresented your income on your application), deported, and banned from Spain indefinitely.</p>
+<p>The consequences are serious. This isn't a small fine; this is loss of your residency and ability to live in Spain.</p>
+
+<h2>If You Need or Want to Work: What Are Your Options?</h2>
+<p><strong>Option 1: Get a Different Visa</strong></p>
+<p>If you need to work in Spain, apply for a work visa instead. Spain has several:</p>
+<ul>
+<li><strong>Work Visa:</strong> For employment by a Spanish employer. Your employer must sponsor you.</li>
+<li><strong>Entrepreneur Visa:</strong> For starting a business in Spain. You must show business plan, financial investment, and job creation.</li>
+<li><strong>Digital Nomad Visa:</strong> Some regions (e.g., Lisbon, Barcelona area companies) are experimenting with digital nomad visas for remote workers. These are still developing, but they may legalize what many NLV holders currently do in a gray area.</li>
+<li><strong>Freelancer Visa:</strong> For self-employed professionals in certain regulated fields.</li>
+</ul>
+<p>These visas have different requirements and complexity, but they're the legal path if you want to work.</p>
+<p><strong>Option 2: Work Remotely for Foreign Employers (The Gray Area)</strong></p>
+<p>Many NLV holders do this. You accept the risk, keep a low profile, don't register for Spanish tax ID as self-employed, and don't change your tax status. Whether this is advisable depends on your risk tolerance and how dependent you are on this income.</p>
+<p><strong>Option 3: Live on Your Declared Income</strong></p>
+<p>If you have passive income meeting the NLV threshold, you're supposed to live on this. It's not always adequate for the lifestyle you want, but it's legal and secure.</p>
+<p><strong>Option 4: Return to Your Home Country Periodically for Work</strong></p>
+<p>If you have flexibility, you could spend part of the year in Spain on your NLV, and part of the year in your home country or elsewhere working. This keeps your NLV compliant while allowing you to earn more income. It requires flexibility in lifestyle, though.</p>
+
+<h2>Tax Implications of Working on the NLV (If You Do)</h2>
+<p>If you work remotely, you have tax obligations:</p>
+<p><strong>In Spain:</strong> If you're a Spanish tax resident (183+ days/year in Spain), you must report worldwide income to Spanish authorities. Working remotely for a foreign employer creates income you must declare. Failure to declare is tax evasion — a separate offense from visa violations.</p>
+<p><strong>In Your Home Country:</strong> If you're a UK citizen, you're not a UK tax resident once you're non-resident in Spain. However, UK-source income might be taxable in the UK. Complex double-taxation considerations apply.</p>
+<p>Many people who work remotely on an NLV don't properly file taxes — another risk alongside the visa violation.</p>
+
+<h2>The Honest Answer to "Can I Work on the NLV?"</h2>
+<p>The legal answer: No, absolutely not. The visa explicitly prohibits it.</p>
+<p>The practical answer: Many people do remote work anyway, enforcement is inconsistent, and you might get away with it. But you're accepting risk: visa cancellation, deportation, and tax penalties.</p>
+<p>The recommendation: If you need to work, get a work visa. If you're considering the NLV despite needing some income, think carefully about whether this is sustainable. Remote work is a gray area that works for some people for years, and others get caught during visa renewal.</p>
+<p>The safest path: Live on your declared passive income and don't work. It's compliant, secure, and you won't lose your residency. If your passive income isn't sufficient, reconsider whether the NLV is the right visa for you.</p>
+<div class="internal-links"><h4>Related Posts</h4><ul><li><a href="https://myspanishnlv.com/blog/183-day-rule-spain-tax-status">The 183-Day Rule in Spain — How It Affects Your...</a></li><li><a href="https://myspanishnlv.com/blog/183-day-rule-spain-tax">Spain 183-Day Rule: Tax Residency for Expats & ...</a></li><li><a href="https://myspanishnlv.com/blog/absences-from-spain-nlv-residency-rules">Absences From Spain — How They Affect Your NLV ...</a></li><li><a href="https://myspanishnlv.com/blog/access-superannuation-before-moving-to-spain">Can You Access Your Superannuation Before Movin...</a></li><li><a href="https://myspanishnlv.com/blog/american-expats-nlv-us-citizens-guide">American Expats in Spain: A Complete NLV Guide ...</a></li><li><a href="https://myspanishnlv.com/blog/beginners-guide-to-spain-nlv-2026">The Complete Beginner's Guide to Spain's NLV in...</a></li></ul></div>
+
+## Professional Services and Comprehensive Guidance
+
+Understanding the Non-Lucrative Visa application and managing your residency in Spain often requires professional assistance. Knowing when and how to seek help can make the difference between smooth approval and complications that delay or prevent your move.
+
+### Immigration Lawyers and Visa Specialists
+
+Immigration lawyers in Spain specialize in visa categories and can provide invaluable guidance specific to your situation. Many Spanish immigration lawyers offer initial consultations at no charge and can review your documentation before you submit your application. A lawyer can identify weaknesses in your documentation, suggest improvements, and represent you if problems arise. The cost typically ranges from €500-2,000 depending on case complexity, which is reasonable insurance for a process that significantly impacts your life. Some lawyers specialize in Non-Lucrative Visas and understand the specific requirements and common pitfalls. If your situation is complex—perhaps you have a criminal record, problematic medical history, or unusual income sources—professional legal guidance is highly recommended.
+
+### Gestores and Tax Advisors
+
+Gestores (asesor fiscal) are registered professional advisors in Spain who handle tax, accounting, and administrative matters. They're essential for managing Spanish tax obligations, filing tax returns, handling payroll (if you employ anyone), and managing business matters. Most expat residents find a gestor within their first months in Spain. A gestor typically charges €50-150 per month for basic services. Having a gestor handles the complexity of Spanish tax requirements and ensures you remain compliant with Spanish law. They can also help with healthcare registration, municipal administration, and other bureaucratic matters.
+
+### Document Translation and Legalization Services
+
+Many documents require official translation into Spanish and apostille certification for the consulate. Professional translation services specialized in legal documents ensure accuracy and official recognition. Prices typically range from €20-50 per page depending on document complexity. Apostille services can be obtained from your home country's appropriate authority—some countries have dedicated services (like the UK's FCDO), while others handle apostilles through courts or government agencies. Planning several months ahead for document legalization prevents last-minute rushing and ensures all documents meet consulate requirements.
+
+### Online Communities and Peer Support
+
+Expat communities provide peer support and practical knowledge from people who've recently gone through your exact situation. Most major Spanish cities have active English-speaking expat groups, often meeting regularly for social events, information sharing, and networking. Online forums and Facebook groups dedicated to Spain expat living and NLV topics offer 24/7 access to experienced community members. These communities are invaluable for learning about local variations, recent policy changes, and practical tips for settling into Spain. Many successful NLV holders credit their expat networks with helping them navigate initial challenges and building fulfilling social lives.
+
+## Banking, Finances, and Tax Compliance
+
+Financial matters form the foundation of your NLV status and your comfortable living in Spain. Understanding Spanish banking, tax obligations, and financial management is essential for maintaining both your visa status and your financial security.
+
+### Opening a Spanish Bank Account
+
+Opening a Spanish bank account is typically one of your first actions after receiving your NIE number. You'll need your passport, proof of Spanish address, and your NIE number. Most Spanish banks offer accounts specifically for expat residents, often with English-speaking staff in international branches. Monthly fees are usually minimal or non-existent for basic accounts. Having a Spanish bank account is essential for receiving pension transfers, paying utilities, and conducting daily financial transactions. It also makes paying Spanish taxes straightforward through automatic transfers. Consider opening your account before you move if possible—some banks allow account opening from abroad with documentation. Compare banks' offerings—some provide better exchange rates for international transfers, valuable if you receive income in foreign currencies. Most banks offer online banking in English, making account management convenient.
+
+### Currency Conversion and Exchange Strategies
+
+If your income is in a currency other than euros, managing currency conversion wisely can significantly impact your available funds. Exchange rates fluctuate daily, sometimes by 2-3%, which on annual income amounts to substantial differences. Some banking apps allow you to hold money in multiple currencies and convert when rates are favorable. Specialized currency exchange services often offer better rates than banks for large transfers. Timing major conversions for favorable exchange rate windows saves money. Many expats use platforms like Wise (formerly TransferWise) or OFX for international transfers, as they offer better rates than traditional banks. Understanding whether your bank or external service is used affects both the exchange rate and fees you'll pay.
+
+## Healthcare Planning and Medical Considerations
+
+Healthcare is a major concern when moving to any country, and Spain's excellent healthcare system is one of the NLV's significant advantages. Understanding your healthcare options and how to access care is essential for your wellbeing and your visa compliance.
+
+### Public Healthcare System Details
+
+Spain's public healthcare (Sistema Nacional de Salud) is among Europe's best, providing comprehensive coverage at minimal cost once you're a registered resident. Initial registration involves visiting your local health center (centro de salud) with your residency proof and NIE. Once registered, you receive a health insurance card and select a primary care physician. The system covers everything from preventive care to hospitalization, though waiting times for non-emergency specialties can be longer in summer months when staff take vacation. The Mediterranean diet common in Spain, emphasis on exercise and outdoor activity, and the relaxed lifestyle generally support good health outcomes. Preventive care is encouraged, with regular health checks available through your primary care physician.
+
+### Private Healthcare Alternatives
+
+Many expats supplement public healthcare with private insurance, particularly if they're accustomed to private healthcare in their home country. Private insurance typically costs €30-150 monthly depending on age and coverage level. Major providers include Sanitas, Axa, Mapfre, and others. Private healthcare offers faster access to specialists and shorter waiting times, though basic care costs may be higher. Some people use private care for specialist visits while relying on public healthcare for routine matters. Having both public and private coverage provides maximum flexibility.
+
+### Prescription Medications and Costs
+
+Prescription medications in Spain are affordable, with a tiered co-payment system based on your income. Medications range from 0% to 60% cost-sharing depending on the drug type and your income level. Many common medications cost just €1-3 per prescription once co-payments are met. Maintaining current prescriptions and medication records is important, especially if you take regular medications in your home country. Some medications available by prescription in Spain require over-the-counter purchase in other countries, potentially reducing your pharmacy costs. Pharmacists in Spain are highly trained and often can make medication recommendations for minor ailments without requiring a doctor's visit.
+
+## Long-Term Planning and Future Considerations
+
+Successfully obtaining your NLV is the beginning of your Spanish journey, not the end of planning. Thinking about your long-term goals and how they fit with life on the NLV helps you make informed decisions during your time in Spain. Your initial NLV is valid for one year, renewable as long as you meet requirements. Most renewals are routine if you've maintained compliance. Planning your first renewal appointment should begin 60 days before expiration. Gather updated income documentation, healthcare verification, and accommodation proof. The renewal process is identical to the initial application but usually faster since they already have your history.
+
+After holding various valid residence permits for legally required periods (varies by region, typically 5 years), you may become eligible for long-term resident status. Long-term residency provides greater stability and rights than the annual NLV. You can pursue long-term residency while maintaining your NLV, planning this transition as part of your long-term Spain strategy. Long-term residents have enhanced work rights and enjoy greater legal security regarding their residency status.
+
+### Building a Life Beyond the Visa
+
+While your visa status is important, your daily life in Spain involves much more—building community, maintaining health, developing interests and hobbies, and creating a social network. Many successful NLV residents report that their first year involved significant adjustment but that patience and openness to new experiences resulted in rich, fulfilling lives. Learning Spanish, even conversationally, dramatically improves your experience and opens doors to deeper community connections. Exploring different neighborhoods and regions during your first year helps you determine if your initial choice of location is optimal. Many residents refine their location at their first renewal after getting to know Spain better.
+</article>
+
+                <!-- Sidebar -->
+                <aside class="sidebar">
+                    <div class="sidebar-card">
+                        <h4>Related Articles</h4>
+                        <ul>
+                            <li><a href="#">NLV Health Insurance Basics</a></li>
+                            <li><a href="#">Private vs. Public Healthcare in Spain</a></li>
+                            <li><a href="#">NLV Visa Requirements Checklist</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-card">
+                        <h4>Key Information</h4>
+                        <ul style="list-style-position: inside; margin-left: 0;">
+                            <li style="list-style: none;"><a href="#">Insurance is mandatory for NLV approval</a></li>
+                            <li style="list-style: none;"><a href="#">Minimum €30,000 coverage required</a></li>
+                            <li style="list-style: none;"><a href="#">Annual cost €600–€2,500</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-cta">
+                        <h4>Need Help?</h4>
+                        <p>Our visa specialists can guide you through every step of the process.</p>
+                        <a href="https://myspanishnlv.com/contact">Get Expert Help</a>
+                    </div>
+                </aside>
+            </div>
+
+            <!-- FAQ Section -->
+            <div style="margin-top: 4rem;">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <div class="faq-list"><div class="faq-item">
+                        <button class="faq-q" aria-expanded="false">
+                            <span>How much does insurance typically cost for NLV applicants?</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
+                            </svg>
+                        </button>
+                        <div class="faq-a">Costs vary widely depending on age, coverage level, and provider. Expect €600–€2,500 annually. Younger applicants and those choosing basic plans pay less; older applicants and comprehensive plans cost more. Many insurers offer discounts for annual payment or online enrollment.</div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-q" aria-expanded="false">
+                            <span>Can I use travel insurance instead of health insurance for my NLV visa?</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
+                            </svg>
+                        </button>
+                        <div class="faq-a">No. Travel insurance and health insurance are distinct. Consulates require a health insurance policy (seguro de salud) that covers your entire stay in Spain. Travel insurance does not meet NLV requirements and will not be accepted.</div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-q" aria-expanded="false">
+                            <span>What if I have a pre-existing condition?</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
+                            </svg>
+                        </button>
+                        <div class="faq-a">Many Spanish insurers do not exclude pre-existing conditions, or cover them after a waiting period (typically 12 months). An insurance broker can identify plans that suit your medical history and ensure your condition is covered from day one if possible.</div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-q" aria-expanded="false">
+                            <span>Do I need a broker, or can I arrange insurance myself?</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
+                            </svg>
+                        </button>
+                        <div class="faq-a">You can arrange insurance independently, but brokers add significant value. They navigate the complexity, compare multiple providers, ensure compliance with consulate requirements, and often negotiate better rates. For complex health situations, broker assistance is worth the investment.</div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-q" aria-expanded="false">
+                            <span>What happens to my insurance when I renew my NLV?</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
+                            </svg>
+                        </button>
+                        <div class="faq-a">You must renew your insurance policy when you renew your NLV. Plan ahead so there are no gaps in coverage. Most insurers offer easy annual renewal, often with loyalty discounts. Build renewal into your visa renewal timeline at least 2-3 months in advance.</div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-q" aria-expanded="false">
+                            <span>Can I switch insurance providers if I'm unhappy?</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
+                            </svg>
+                        </button>
+                        <div class="faq-a">Yes, you can switch providers, but timing matters. Confirm that any new policy meets consulate requirements and arrange overlap coverage so there are no gaps. Your broker can handle the transition smoothly and ensure continuous compliance.</div>
+                    </div>
+                <div class="faq-item">
+                        <button class="faq-q" aria-expanded="false">
+                            <span>How does this aspect affect my NLV application timeline?</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
+                            </svg>
+                        </button>
+                        <div class="faq-a">This is one of multiple requirements that run in parallel. While you're gathering income documentation, arrange health insurance. While awaiting consulate appointment, finalize accommodation. Understanding how each component fits into the overall 3–5 month timeline prevents bottlenecks and ensures efficient progress toward your visa approval.</div>
+                    </div>
+<div class="faq-item">
+                        <button class="faq-q" aria-expanded="false">
+                            <span>What documentation do I need to prove this requirement?</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
+                            </svg>
+                        </button>
+                        <div class="faq-a">Consulates require official, recent documentation from authoritative sources—government offices, financial institutions, medical providers. Avoid informal proofs (emails, casual statements). Use official letterheads, certifications, and translations. Budget 2–4 weeks for obtaining certified documents and apostilles.</div>
+                    </div>
+<div class="faq-item">
+                        <button class="faq-q" aria-expanded="false">
+                            <span>Should I use professional help for this part of the application?</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
+                            </svg>
+                        </button>
+                        <div class="faq-a">For straightforward situations, self-preparation is feasible. For complex circumstances—unusual income sources, health issues, incomplete documentation—professional guidance (£800–£3,000) prevents costly errors and rejections. Weigh the cost against the risk of delay or denial.</div>
+                    </div>
+<div class="faq-item">
+                        <button class="faq-q" aria-expanded="false">
+                            <span>How do I verify what my specific consulate requires?</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
+                            </svg>
+                        </button>
+                        <div class="faq-a">Always check your consulate's official website first for their specific requirements and processes. Requirements vary by consulate. If unclear, email or call them directly—most respond within 2–5 business days. Never assume based on other consulates' approaches; get clarification specific to yours.</div>
+                    </div>
+<div class="faq-item">
+                        <button class="faq-q" aria-expanded="false">
+                            <span>What's the most common mistake people make with this requirement?</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
+                            </svg>
+                        </button>
+                        <div class="faq-a">Underestimating complexity and timelines is most common. What seems straightforward—gathering documents, arranging insurance—often takes 2–3x longer than expected due to delays, corrections, translations, and certifications. Build in generous buffers. Missing deadlines or submitting incomplete materials leads to rejection.</div>
+                    </div>
+<div class="faq-item">
+                        <button class="faq-q" aria-expanded="false">
+                            <span>How should I document my preparation for this requirement?</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
+                            </svg>
+                        </button>
+                        <div class="faq-a">Create a checklist of what's required, gather each document, get copies certified/translated as needed, and organize everything in a single folder by requirement. Document every step: dates obtained, certifications received, consulate contacts. This organization prevents last-minute scrambling and provides evidence of compliance if questioned.</div>
+                    </div>
+</div></section>
+
+    <!-- Footer -->
