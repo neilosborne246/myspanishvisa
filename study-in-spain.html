@@ -1,0 +1,1336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="dns-prefetch" href="https://js-eu1.hsforms.net">
+  <link rel="dns-prefetch" href="https://dashboard.platinumlegalspain.com">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- ═══════════════════════════════════════════════════════════════════
+       PAGE-SPECIFIC HEAD — replace block below per page:
+       <title>Study In Spain | My Spanish Visa</title>
+       <meta name="description" content="…">
+       <meta property="og:title" content="…">
+       <meta property="og:description" content="…">
+       <meta property="og:url" content="https://www.myspanishvisa.com/…">
+       <meta property="og:image" content="…">
+       <link rel="canonical" href="https://www.myspanishvisa.com/study-in-spain/">>
+       <script type="application/ld+json">…</script>
+       ═══════════════════════════════════════════════════════════════════ -->
+  <title>Study in Spain: The Complete Guide for International Students | My Spanish Visa</title>
+  <meta name="description" content="Study in Spain: The Complete Guide for International Students. Expert guidance for English-speaking foreigners navigating Spain visas and residency.">
+  <link rel="canonical" href="https://www.myspanishvisa.com/study-in-spain/">
+
+  <!-- Shared Open Graph defaults -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="My Spanish Visa">
+  <meta property="og:image" content="https://www.myspanishvisa.com/assets/images/og/og-myspanishvisa-default.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@myspanishvisa">
+
+  <style>
+/* ═══════════════════════════════════════════════════════════════
+   GLOBAL SHELL — nav + footer only.
+   Page-specific CSS lives inside each fragment's own <style> block.
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── iOS overflow safety ── */
+html, body { max-width: 100%; overflow-x: clip; margin: 0; padding: 0; }
+*, *::before, *::after { box-sizing: border-box; }
+
+/* ── Brand tokens (root-level so all fragments inherit) ── */
+:root {
+  --navy:      #0c1930;
+  --navy-mid:  #1a3a5c;
+  --red:       #be0011;
+  --red-deep:  #8c000d;
+  --yellow:    #facf39;
+  --cream:     #f8f7f4;
+  --white:     #ffffff;
+  --black:     #1a1a1a;
+  --muted:     #5a6478;
+  --border:    #dce3ed;
+  --shadow-sm: 0 2px 8px rgba(12,25,48,0.08);
+  --shadow-md: 0 6px 24px rgba(12,25,48,0.13);
+}
+
+body {
+  font-family: 'Inter', 'Segoe UI', system-ui, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.75;
+  color: var(--black);
+  background: #fff;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   SITE NAV
+   ───────────────────────────────────────────────────────────── */
+.msv-nav {
+  position: sticky;
+  top: 0;
+  z-index: 9000;
+  background: var(--navy);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 2px 12px rgba(12,25,48,0.22);
+}
+.msv-nav__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 90px;
+  gap: 1.5rem;
+}
+
+/* Logo */
+.msv-nav__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+.msv-nav__logo-flag {
+  font-size: 1.3rem;
+  line-height: 1;
+}
+.msv-nav__logo-text {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+.msv-nav__logo-text span {
+  color: var(--yellow);
+}
+
+/* Links */
+.msv-nav__links {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.msv-nav__links > li {
+  position: relative;
+}
+.msv-nav__links > li > a,
+.msv-nav__links > li > button {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.5rem 0.9rem;
+  font-size: 0.87rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.85);
+  text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: color 0.15s, background 0.15s;
+  white-space: nowrap;
+  height: 90px;
+}
+.msv-nav__links > li > a:hover,
+.msv-nav__links > li > button:hover,
+.msv-nav__links > li:focus-within > a,
+.msv-nav__links > li:focus-within > button {
+  color: #fff;
+  background: rgba(255,255,255,0.08);
+}
+.msv-nav__chevron {
+  font-size: 0.65rem;
+  opacity: 0.7;
+  transition: transform 0.2s;
+}
+.msv-nav__links > li:focus-within .msv-nav__chevron,
+.msv-nav__links > li:hover .msv-nav__chevron {
+  transform: rotate(180deg);
+}
+
+/* Dropdown */
+.msv-nav__dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 230px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  box-shadow: var(--shadow-md);
+  padding: 0.5rem 0;
+  z-index: 200;
+}
+.msv-nav__links > li:hover .msv-nav__dropdown,
+.msv-nav__links > li:focus-within .msv-nav__dropdown {
+  display: block;
+}
+.msv-nav__dropdown a {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.6rem 1.1rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--navy);
+  text-decoration: none;
+  transition: background 0.12s;
+}
+.msv-nav__dropdown a:hover {
+  background: var(--cream);
+  color: var(--red);
+}
+.msv-nav__dropdown-icon {
+  width: 24px;
+  height: 24px;
+  background: var(--cream);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+.msv-nav__dropdown-divider {
+  height: 1px;
+  background: var(--border);
+  margin: 0.4rem 0;
+}
+
+/* CTA button */
+.msv-nav__cta {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.55rem 1.2rem;
+  background: var(--red);
+  color: #fff !important;
+  font-size: 0.85rem;
+  font-weight: 700;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.15s, box-shadow 0.15s;
+  white-space: nowrap;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(190,0,17,0.3);
+}
+.msv-nav__cta:hover {
+  background: var(--red-deep);
+  box-shadow: 0 4px 14px rgba(190,0,17,0.4);
+  text-decoration: none;
+}
+
+/* Hamburger */
+.msv-nav__burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.4rem;
+  border-radius: 5px;
+}
+.msv-nav__burger span {
+  width: 22px;
+  height: 2px;
+  background: #fff;
+  border-radius: 2px;
+  transition: transform 0.2s, opacity 0.2s;
+  display: block;
+}
+
+/* Mobile nav */
+.msv-nav__mobile {
+  display: none;
+  flex-direction: column;
+  background: var(--navy-mid);
+  padding: 1rem 1.5rem 1.5rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+.msv-nav__mobile.open { display: flex; }
+.msv-nav__mobile a {
+  padding: 0.65rem 0;
+  color: rgba(255,255,255,0.9);
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+.msv-nav__mobile a:hover { color: var(--yellow); }
+.msv-nav__mobile .msv-nav__mobile-sub {
+  padding-left: 1rem;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: rgba(255,255,255,0.7);
+}
+.msv-nav__mobile-cta {
+  margin-top: 1rem;
+  background: var(--red);
+  color: #fff !important;
+  border-radius: 6px;
+  text-align: center;
+  padding: 0.75rem 1rem !important;
+  border-bottom: none !important;
+}
+
+@media (max-width: 900px) {
+  .msv-nav__links { display: none; }
+  .msv-nav__cta { display: none; }
+  .msv-nav__burger { display: flex; }
+}
+@media (max-width: 480px) {
+  .msv-nav__inner { padding: 0 1rem; }
+}
+
+/* ─────────────────────────────────────────────────────────────
+   SITE FOOTER
+   ───────────────────────────────────────────────────────────── */
+.msv-footer {
+  background: var(--navy);
+  color: rgba(255,255,255,0.75);
+  overflow-x: clip;
+}
+.msv-footer__top {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem 3rem;
+  display: grid;
+  grid-template-columns: 280px 1fr 1fr 1fr;
+  gap: 3rem;
+}
+@media (max-width: 900px) {
+  .msv-footer__top { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
+}
+@media (max-width: 560px) {
+  .msv-footer__top { grid-template-columns: 1fr; gap: 2rem; padding: 3rem 1.2rem 2rem; }
+}
+
+.msv-footer__brand {}
+.msv-footer__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  margin-bottom: 1rem;
+}
+.msv-footer__logo-flag { font-size: 1.3rem; }
+.msv-footer__logo-text {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -0.01em;
+}
+.msv-footer__logo-text span { color: var(--yellow); }
+.msv-footer__tagline {
+  font-size: 0.83rem;
+  color: rgba(255,255,255,0.55);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+.msv-footer__trust {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+.msv-footer__trust-item {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.65);
+}
+.msv-footer__trust-item::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  background: var(--yellow);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.msv-footer__col-title {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.4);
+  margin-bottom: 1rem;
+}
+.msv-footer__links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.msv-footer__links a {
+  font-size: 0.87rem;
+  color: rgba(255,255,255,0.68);
+  text-decoration: none;
+  transition: color 0.15s;
+  display: inline-block;
+}
+.msv-footer__links a:hover {
+  color: var(--yellow);
+  text-decoration: none;
+}
+
+.msv-footer__bottom {
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+.msv-footer__bottom-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 1rem;
+  justify-content: space-between;
+}
+.msv-footer__disclaimer {
+  font-size: 0.73rem;
+  color: rgba(255,255,255,0.35);
+  line-height: 1.65;
+  max-width: 720px;
+}
+.msv-footer__copyright {
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.35);
+  white-space: nowrap;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   MAIN CONTENT AREA
+   ───────────────────────────────────────────────────────────── */
+main {
+  /* Fragments are self-contained; this wrapper just provides flow context */
+  position: relative;
+}
+  </style>
+<style>.msv-bc,.msv__breadcrumb,nav.breadcrumb,[aria-label="breadcrumb"],[aria-label="Breadcrumb"]{display:none!important}</style>
+  <link rel="icon" type="image/png" href="/assets/images/msv-favicon.png">
+  <link rel="apple-touch-icon" href="/assets/images/msv-favicon.png">
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════
+     SITE NAVIGATION
+     ═══════════════════════════════════════════════════ -->
+<header class="msv-nav" role="banner">
+  <div class="msv-nav__inner">
+    <a href="/" class="msv-nav__logo" aria-label="My Spanish Visa — Home"><img src="/assets/images/msv-logo-white.png" alt="My Spanish Visa" height="72" style="display:block;"></a>
+    <nav aria-label="Main navigation">
+      <ul class="msv-nav__links">
+        <li>
+          <button class="msv-nav__dropdown-trigger" aria-haspopup="true" aria-expanded="false">Visas <span class="msv-nav__chevron">▾</span></button>
+          <div class="msv-nav__dropdown" role="menu">
+            <a href="/non-lucrative-visa-spain.html" role="menuitem"><span class="msv-nav__dropdown-icon">🏖️</span>Non-Lucrative Visa</a>
+            <a href="/digital-nomad-visa-spain.html" role="menuitem"><span class="msv-nav__dropdown-icon">💻</span>Digital Nomad Visa</a>
+            <a href="/student-visa-spain.html" role="menuitem"><span class="msv-nav__dropdown-icon">🎓</span>Student Visa</a>
+            <div class="msv-nav__dropdown-divider"></div>
+            <a href="/spain-visa-renewal.html" role="menuitem"><span class="msv-nav__dropdown-icon">🔄</span>Visa Renewals</a>
+            <a href="/best-visa-move-to-spain.html" role="menuitem"><span class="msv-nav__dropdown-icon">⚖️</span>Compare All Visas</a>
+          </div>
+        </li>
+        <li>
+          <button aria-haspopup="true" aria-expanded="false">Resources <span class="msv-nav__chevron">▾</span></button>
+          <div class="msv-nav__dropdown" role="menu">
+            <a href="/blog-index.html" role="menuitem"><span class="msv-nav__dropdown-icon">📝</span>Blog &amp; Guides</a>
+            <a href="/blog-spain-visa-document-checklist-2026.html" role="menuitem"><span class="msv-nav__dropdown-icon">✅</span>Document Checklists</a>
+            <a href="/move-to-spain.html" role="menuitem"><span class="msv-nav__dropdown-icon">🏠</span>Move to Spain Guide</a>
+            <a href="/book-consultation.html" role="menuitem"><span class="msv-nav__dropdown-icon">🧭</span>Eligibility Quiz</a>
+          </div>
+        </li>
+        <li><a href="/about-us.html">About Us</a></li>
+        <li><a href="/contact-us.html">Contact</a></li>
+      </ul>
+    </nav>
+    <a href="/book-consultation.html" class="msv-nav__cta">Start My Application →</a>
+    <button class="msv-nav__burger" aria-label="Open menu" aria-expanded="false" onclick="var m=document.querySelector('.msv-nav__mobile');var open=m.classList.toggle('open');this.setAttribute('aria-expanded',open);">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <nav class="msv-nav__mobile" aria-label="Mobile navigation">
+    <a href="/non-lucrative-visa-spain.html" class="msv-nav__mobile-sub">Non-Lucrative Visa</a>
+    <a href="/digital-nomad-visa-spain.html" class="msv-nav__mobile-sub">Digital Nomad Visa</a>
+    <a href="/student-visa-spain.html" class="msv-nav__mobile-sub">Student Visa</a>
+    <a href="/spain-visa-renewal.html">Visa Renewals</a>
+    <a href="/best-visa-move-to-spain.html">Compare All Visas</a>
+    <a href="/blog-index.html">Blog &amp; Guides</a>
+    <a href="/about-us.html">About Us</a>    <a href="/contact-us.html">Contact</a>
+    <a href="/book-consultation.html" class="msv-nav__mobile-cta">Start My Application →</a>
+  </nav>
+</header>
+
+<!-- ═══════════════════════════════════════════════════
+     PAGE CONTENT (fragment injected here)
+     ═══════════════════════════════════════════════════ -->
+<main>
+<!-- FRAGMENT_START -->
+<!-- ============================================================
+     MY SPANISH VISA — Study in Spain: Complete Guide
+     Elementor Full-Width HTML Widget · April 2026
+     Parent page: /study-in-spain/ · Slug: /study-in-spain/
+     ============================================================ -->
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.myspanishvisa.com/study-in-spain/#webpage",
+      "url": "https://www.myspanishvisa.com/study-in-spain/",
+      "name": "Study in Spain 2026 — Complete Guide for Foreign Students | My Spanish Visa",
+      "description": "Everything foreigners need to know about studying in Spain — universities, language schools, student visa, costs, living in Spain, and how to make the move. Full guide for 2026.",
+      "inLanguage": "en",
+      "isPartOf": { "@id": "https://www.myspanishvisa.com/#website" },
+      "breadcrumb": { "@id": "https://www.myspanishvisa.com/study-in-spain/#breadcrumb" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.myspanishvisa.com/study-in-spain/#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.myspanishvisa.com" },
+        { "@type": "ListItem", "position": 2, "name": "Student Visa Spain", "item": "https://www.myspanishvisa.com/student-visa-spain/" },
+        { "@type": "ListItem", "position": 3, "name": "Study in Spain", "item": "https://www.myspanishvisa.com/study-in-spain/" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Can I study in Spain in English?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Many universities offer bachelor's and master's degrees taught in English, especially at larger institutions like IE University, ESADE, and Universidad Autónoma de Madrid. Additionally, hundreds of accredited language schools across Spain offer intensive Spanish courses for foreigners. The choice depends on your goals — English-taught programmes for degree studies, or Spanish-intensive courses to learn the language."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does it cost to study in Spain?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "University costs vary: public university degrees cost €1,000–€3,000/year for EU students, and €3,500–€15,000/year for non-EU students. Private universities are more expensive (€8,000–€30,000+/year). Language schools typically charge €400–€2,000/month depending on intensity and location. Living costs average €800–€1,500/month depending on the city. Overall, Spain is significantly cheaper than the UK or US for higher education."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need a visa to study in Spain?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "EU/EEA citizens do not need a visa. Non-EU/EEA nationals need a student visa if the course is 90 days or longer. For courses under 90 days, you may be able to enter Spain on a tourist visa. The student visa is renewable as long as you're enrolled and meet the requirements. Our full student visa guide covers eligibility, documentation, and application steps."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I work while studying in Spain?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, with restrictions. Student visa holders are typically permitted to work up to 20 hours per week during term time, and full-time during official breaks. You need authorisation from your institution and must register with Spanish tax authorities (Agencia Tributaria). Most students find part-time work in hospitality, tutoring, or administration. Earnings are modest but sufficient to cover living costs."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens after I finish studying in Spain?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "After graduation, non-EU/EEA graduates can apply for a job seeker visa (valid 12 months) to remain in Spain and find employment. If offered a work contract, you can transition to a work visa. Alternatively, if you've lived in Spain long enough and meet residency requirements, you may be eligible for the Non-Lucrative Visa (DNV/NLV) or long-term residency. Many students transition directly into employment or postgraduate studies."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Spain expensive to live in as a student?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Spain is one of Europe's most affordable countries to live in. A student budget of €800–€1,200/month covers accommodation, food, transport, and leisure in most cities. Larger cities like Madrid and Barcelona are costlier (€1,200–€1,500/month), while smaller cities like Granada or Salamanca are significantly cheaper (€700–€900/month). Student discounts are widely available on transport, museums, and entertainment."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Spain a good country to study in for international students?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Spain consistently ranks as one of the most popular study destinations in Europe. Key attractions: affordable tuition compared to the UK or US, excellent quality of life, warm climate, rich culture, widespread Spanish language (the world's second most spoken), strong university rankings in certain fields, and access to Europe."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does it cost to live in Spain as an international student?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Monthly living costs for a student in Spain range from approximately €700-1,200 depending on the city. Madrid and Barcelona are the most expensive. Cities like Valencia, Seville, Granada, and Salamanca are significantly cheaper. This includes accommodation, food, transport, and basic entertainment."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are the top Spanish universities for international students?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Spanish universities with strong international reputations and good English-language provision include: Universidad Autónoma de Madrid, Universitat Pompeu Fabra (Barcelona), Universidad de Barcelona, IE Business School, ESADE, and several others. Rankings vary by field. Business schools in Spain (IE, ESADE) are internationally well-regarded."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I stay in Spain to work after graduating?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "After completing your studies, you can apply to change your student visa to a work permit (if you have a job offer from a Spanish employer) or the Digital Nomad Visa (if working remotely). Planning this transition before your student visa expires is essential."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<!-- Open Graph / Social -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.myspanishvisa.com/study-in-spain/">
+<meta property="og:title" content="My Spanish Visa">
+<meta property="og:description" content="Expert Spain visa guidance for English-speaking expats.">
+<meta property="og:image" content="https://www.myspanishvisa.com/assets/images/og/og-student-visa-spain.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="My Spanish Visa">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@myspanishvisa">
+<meta name="twitter:title" content="My Spanish Visa">
+<meta name="twitter:description" content="Expert Spain visa guidance for English-speaking expats.">
+<meta name="twitter:image" content="https://www.myspanishvisa.com/assets/images/og/og-student-visa-spain.jpg">
+
+<style>
+/* ── iOS Safari pinch-zoom overflow safety ─────────────────────────── */
+/* Prevents horizontal overflow when users pinch-zoom on iPhone/iPad.   */
+/* Top-level (also paste into theme Custom CSS / Elementor Site Settings) */
+html, body { max-width: 100%; overflow-x: clip; }
+/* Scoped wrapper safety */
+.msv, .msv-nav, .msv-topbar, .msv-footer, .msv-footer-cta,
+.pls-header, .pls-body, .pls-nlv, .pls-dnv, .pls-student {
+  max-width: 100%;
+  overflow-x: clip;
+  position: relative;
+}
+/* Cap all media inside the wrapper */
+.msv img, .msv video, .msv iframe,
+.msv-footer img, .msv-footer video, .msv-footer iframe {
+  max-width: 100%;
+  height: auto;
+}
+/* Never use 100vw — use 100% instead (dev reminder) */
+
+
+/* ── Reset & scope ─────────────────────────────────────────────────── */
+.msv *, .msv *::before, .msv *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* ── Tokens ──────────────────────────────────────────────────────── */
+.msv {
+  --navy: #0c1930; --navy-mid: #1a3a5c; --red: #be0011; --red-deep: #8c000d;
+  --yellow: #facf39; --cream: #f8f7f4; --white: #ffffff; --black: #1a1a1a;
+  --muted: #5a6478; --border: #dce3ed;
+  --shadow-sm: 0 2px 8px rgba(12,25,48,0.08); --shadow-md: 0 6px 24px rgba(12,25,48,0.13);
+  font-family: 'Inter', 'Segoe UI', system-ui, Arial, sans-serif;
+  font-size: 16px; line-height: 1.75; color: var(--black); width: 100%;
+}
+.msv__container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+.msv__container--narrow { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+@media (max-width: 640px) { .msv__container, .msv__container--narrow { padding: 0 1.2rem; } }
+
+/* ── Typography ──────────────────────────────────────────────────── */
+.msv h1 { font-size: clamp(2rem, 4.5vw, 3rem); font-weight: 800; line-height: 1.12; color: var(--white); letter-spacing: -0.025em; margin-bottom: 1.2rem; }
+.msv h2 { font-size: clamp(1.3rem, 2.5vw, 1.75rem); font-weight: 700; color: var(--navy); letter-spacing: -0.01em; margin-bottom: 0.5rem; position: relative; display: inline-block; padding-bottom: 0.5rem; }
+.msv h2::after { content: ''; position: absolute; bottom: 0; left: 0; width: 44px; height: 3px; background: linear-gradient(90deg, var(--red), var(--red-deep)); border-radius: 2px; }
+.msv h3 { font-size: 1.05rem; font-weight: 700; color: var(--navy); margin-bottom: 0.4rem; }
+.msv p { color: var(--black); margin-bottom: 1rem; font-size: 0.97rem; }
+.msv a { color: var(--red); text-decoration: none; }
+.msv a:hover { text-decoration: underline; }
+.msv ul { list-style: none; padding: 0; margin: 0 0 1rem; }
+.msv ul li { padding: 0.35rem 0 0.35rem 1.4rem; position: relative; font-size: 0.95rem; color: var(--black); }
+.msv ul li::before { content: ''; position: absolute; left: 0; top: 0.75rem; width: 7px; height: 7px; background: linear-gradient(135deg, var(--red), var(--red-deep)); border-radius: 50%; }
+
+/* ── Sections ─────────────────────────────────────────────────── */
+.msv__section { padding: 5rem 0; background: var(--white); }
+.msv__section--cream { padding: 5rem 0; background: linear-gradient(180deg, #f8f7f4 0%, #f2f4f8 100%); }
+.msv__section--dark { padding: 5rem 0; background: linear-gradient(135deg, var(--navy) 0%, #0d2240 55%, #0a1d38 100%); }
+.msv__section--dark h2 { color: var(--white) !important; }
+.msv__section--dark h2::after { background: linear-gradient(90deg, var(--yellow), #e8b820); }
+.msv__section--dark h3 { color: rgba(255,255,255,0.9) !important; }
+.msv .msv__section--dark p, .msv .msv__section--dark li { color: rgba(255,255,255,0.82); }
+.msv__section--dark ul li::before { background: linear-gradient(135deg, var(--yellow), #e8b820); }
+@media (max-width: 640px) { .msv__section, .msv__section--cream, .msv__section--dark { padding: 3.5rem 0; } }
+.msv__section-hd { margin-bottom: 3rem; }
+.msv__section-hd p { color: var(--muted); font-size: 1rem; margin-top: 0.75rem; line-height: 1.7; max-width: 600px; }
+
+/* ── Animations ──────────────────────────────────────────────────── */
+@keyframes msv-fade-up { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes msv-shimmer {
+  0%   { background-position: -400px 0; }
+  100% { background-position: 400px 0; }
+}
+.msv__shimmer {
+  background: linear-gradient(90deg, var(--yellow) 0%, #e8b820 25%, var(--red) 50%, #e8b820 75%, var(--yellow) 100%);
+  background-size: 400px 100%;
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: msv-shimmer 3.5s linear infinite;
+  display: inline;
+}
+
+/* ── Hero ─────────────────────────────────────────────────────── */
+.msv__hero { background: linear-gradient(135deg, #0c1930 0%, #0f2540 40%, #162d50 70%, #1a3560 100%); padding: 5.5rem 0 5rem; position: relative; overflow: hidden; }
+.msv__hero::before { content: ''; position: absolute; top: -30%; right: -5%; width: 700px; height: 700px; background: radial-gradient(circle, rgba(190,0,17,0.1) 0%, transparent 65%); pointer-events: none; }
+.msv__hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, rgba(250,207,57,0.4), transparent); }
+.msv__hero-inner { max-width: 780px; animation: msv-fade-up 0.7s ease-out both; }
+.msv__eyebrow { display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(190,0,17,0.15); border: 1px solid rgba(190,0,17,0.4); color: #ff6b7a; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.35rem 0.9rem; border-radius: 100px; margin-bottom: 1.5rem; }
+.msv__eyebrow::before { content: ''; width: 6px; height: 6px; background: var(--red); border-radius: 50%; box-shadow: 0 0 6px var(--red); }
+.msv__hero p { color: rgba(255,255,255,0.78) !important; font-size: clamp(1rem, 2.2vw, 1.15rem); max-width: 640px; margin-bottom: 2.2rem; line-height: 1.75; }
+
+/* ── Breadcrumb ───────────────────────────────────────────────– */
+.msv__breadcrumb { padding: 0.85rem 0; border-bottom: 1px solid var(--border); background: var(--white); }
+.msv__breadcrumb-inner { display: flex; align-items: center; gap: 0.5rem; font-size: 0.8rem; color: var(--muted); flex-wrap: wrap; }
+.msv__breadcrumb-inner a { color: var(--red); text-decoration: none; }
+.msv__breadcrumb-inner a:hover { text-decoration: underline; }
+.msv__breadcrumb-inner span { color: var(--muted); }
+
+/* ── Buttons ─────────────────────────────────────────────────– */
+.msv__btn-group { display: flex; flex-wrap: wrap; gap: 0.85rem; }
+.msv__btn { display: inline-block; padding: 0.85rem 2rem; font-size: 0.92rem; font-weight: 700; border-radius: 6px; text-decoration: none !important; transition: transform 0.15s, box-shadow 0.15s; }
+.msv__btn:hover { transform: translateY(-1px); text-decoration: none !important; }
+.msv .msv__btn--primary { background: linear-gradient(135deg, var(--red) 0%, var(--red-deep) 100%); color: #ffffff !important; box-shadow: 0 4px 16px rgba(190,0,17,0.38); }
+.msv .msv__btn--primary:hover { box-shadow: 0 6px 22px rgba(190,0,17,0.48); color: #ffffff !important; }
+.msv .msv__btn--outline-white { background: transparent; color: #ffffff !important; border: 1.5px solid rgba(255,255,255,0.5); }
+.msv .msv__btn--outline-white:hover { background: rgba(255,255,255,0.1); color: #ffffff !important; }
+
+/* ── Trust bar ──────────────────────────────────────────────– */
+.msv__trust-bar { background: var(--white); border-bottom: 1px solid var(--border); padding: 1rem 0; box-shadow: var(--shadow-sm); }
+.msv__trust-bar-inner { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.75rem; }
+.msv__trust-item { display: flex; align-items: center; gap: 0.5rem; font-size: 0.82rem; font-weight: 600; color: var(--navy); white-space: nowrap; }
+.msv__trust-item::before { content: '✓'; color: var(--red); font-weight: 900; }
+
+/* ── Cards grid (4 col) ──────────────────────────────────────– */
+.msv__card-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; }
+@media (max-width: 860px) { .msv__card-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 420px) { .msv__card-grid { grid-template-columns: 1fr; } }
+.msv__card { background: var(--white); border: 1px solid var(--border); border-radius: 10px; padding: 1.5rem; text-decoration: none !important; transition: box-shadow 0.2s, transform 0.2s; display: flex; flex-direction: column; }
+.msv__card:hover { box-shadow: var(--shadow-md); transform: translateY(-3px); text-decoration: none !important; }
+.msv__card h3 { font-size: 1rem; font-weight: 700; color: var(--navy); margin-bottom: 0.6rem; }
+.msv__card p { font-size: 0.9rem; color: var(--muted); margin: 0; line-height: 1.65; flex-grow: 1; }
+.msv__card-link { font-size: 0.85rem; font-weight: 700; color: var(--red); margin-top: 1rem; text-decoration: none; }
+
+/* ── Key facts strip ─────────────────────────────────────────– */
+.msv__facts { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; padding: 2.5rem 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+@media (max-width: 640px) { .msv__facts { grid-template-columns: 1fr 1fr; gap: 1.2rem; } }
+.msv__fact { text-align: center; }
+.msv__fact-value { font-size: clamp(1.3rem, 3vw, 1.8rem); font-weight: 800; color: var(--navy); line-height: 1.1; }
+.msv__fact-label { font-size: 0.85rem; color: var(--muted); margin-top: 0.4rem; line-height: 1.5; font-weight: 500; }
+
+/* ── Decision tree ───────────────────────────────────────────– */
+.msv__tree { background: var(--cream); border-radius: 12px; padding: 2rem; }
+.msv__tree h3 { color: var(--navy); margin-bottom: 1rem; }
+.msv__tree-branch { margin-bottom: 1.5rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border); }
+.msv__tree-branch:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+.msv__tree-branch-q { font-size: 0.95rem; font-weight: 700; color: var(--navy); margin-bottom: 0.75rem; }
+.msv__tree-branch-a { font-size: 0.9rem; color: var(--muted); line-height: 1.7; }
+
+/* ── City cards ──────────────────────────────────────────────– */
+.msv__city-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+@media (max-width: 860px) { .msv__city-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 420px) { .msv__city-grid { grid-template-columns: 1fr; } }
+.msv__city-card { background: var(--white); border: 1px solid var(--border); border-radius: 10px; padding: 1.5rem; }
+.msv__city-card h3 { font-size: 1.05rem; font-weight: 800; color: var(--navy); margin-bottom: 0.6rem; }
+.msv__city-card p { font-size: 0.9rem; color: var(--muted); margin: 0; line-height: 1.7; }
+
+/* ── Alert box ───────────────────────────────────────────────– */
+.msv__alert { border-radius: 10px; padding: 1.3rem 1.5rem; display: flex; gap: 1rem; align-items: flex-start; margin-bottom: 2rem; }
+.msv__alert--warn { background: #fffbea; border: 1px solid #f0d060; }
+.msv__alert--info { background: #eef4ff; border: 1px solid #a0bfff; }
+.msv__alert-icon { font-size: 1.4rem; flex-shrink: 0; margin-top: 0.1rem; }
+.msv__alert p { font-size: 0.9rem; color: var(--black); margin: 0; line-height: 1.65; }
+.msv__alert strong { color: var(--navy); }
+
+/* ── FAQs ────────────────────────────────────────────────────– */
+.msv__faq-list { display: flex; flex-direction: column; gap: 0; border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+.msv__faq-list details { border-bottom: 1px solid var(--border); background: var(--white); }
+.msv__faq-list details:last-child { border-bottom: none; }
+.msv__faq-list summary { padding: 1.2rem 1.5rem; font-size: 0.97rem; font-weight: 700; color: var(--navy); cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+.msv__faq-list summary::-webkit-details-marker { display: none; }
+.msv__faq-list summary::after { content: '+'; font-size: 1.3rem; font-weight: 400; color: var(--red); flex-shrink: 0; transition: transform 0.2s; }
+.msv__faq-list details[open] summary::after { transform: rotate(45deg); }
+.msv__faq-list details[open] summary { color: var(--red); }
+.msv__faq-answer { padding: 0 1.5rem 1.3rem; font-size: 0.92rem; color: var(--muted); line-height: 1.75; }
+.msv__faq-answer p { color: var(--muted); font-size: 0.92rem; margin-bottom: 0.75rem; }
+.msv__faq-answer p:last-child { margin-bottom: 0; }
+
+/* ── CTA band ────────────────────────────────────────────────– */
+.msv__cta-band { background: linear-gradient(135deg, var(--navy) 0%, #0d2240 60%, #0a1d38 100%); padding: 5rem 0; text-align: center; }
+.msv__cta-band h2 { color: var(--white) !important; display: block; }
+.msv__cta-band h2::after { left: 50%; transform: translateX(-50%); background: linear-gradient(90deg, var(--yellow), #e8b820); }
+.msv__cta-band p { color: rgba(255,255,255,0.75) !important; max-width: 560px; margin: 1rem auto 2.2rem; font-size: 1rem; }
+.msv__cta-band .msv__btn-group { justify-content: center; }
+
+/* ── Related guides ──────────────────────────────────────────– */
+.msv__related { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; }
+@media (max-width: 860px) { .msv__related { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 420px) { .msv__related { grid-template-columns: 1fr; } }
+.msv__related-card { background: var(--white); border: 1px solid var(--border); border-radius: 10px; padding: 1.3rem 1.25rem; text-decoration: none !important; transition: box-shadow 0.2s, transform 0.2s; display: block; }
+.msv__related-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); text-decoration: none !important; }
+.msv__related-icon { font-size: 1.5rem; display: block; margin-bottom: 0.6rem; }
+.msv__related-title { font-size: 0.88rem; font-weight: 700; color: var(--navy); display: block; margin-bottom: 0.3rem; }
+.msv__related-desc { font-size: 0.8rem; color: var(--muted); line-height: 1.55; }
+
+/* ── Disclaimer ──────────────────────────────────────────────– */
+.msv__disclaimer { background: var(--cream); border-top: 1px solid var(--border); padding: 2rem 0; }
+.msv__disclaimer p { font-size: 0.78rem; color: var(--muted); margin: 0; line-height: 1.65; }
+</style>
+
+<div class="msv">
+
+  <!-- Breadcrumb -->
+  <nav class="msv__breadcrumb">
+    <div class="msv__container">
+      <div class="msv__breadcrumb-inner">
+        <a href="https://www.myspanishvisa.com">Home</a>
+        <span>→</span>
+        <a href="https://www.myspanishvisa.com/student-visa-spain/">Student Visa Spain</a>
+        <span>→</span>
+        <span>Study in Spain</span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="msv__hero">
+    <div class="msv__container">
+      <div class="msv__hero-inner">
+        <div class="msv__eyebrow">Study in Spain</div>
+        <h1>Study in Spain: The Complete Guide for International Students</h1>
+        <p>Everything you need to know about studying in Spain as a foreigner—from choosing where to study, to getting your visa, to settling in.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Bar -->
+  <div class="msv__trust-bar">
+    <div class="msv__container">
+      <div class="msv__trust-bar-inner">
+        <div class="msv__trust-item">World-class universities</div>
+        <div class="msv__trust-item">Affordable compared to UK/US</div>
+        <div class="msv__trust-item">Student visa available</div>
+        <div class="msv__trust-item">English & Spanish programmes</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Key Facts -->
+  <section class="msv__section">
+    <div class="msv__container">
+      <div class="msv__facts">
+        <div class="msv__fact">
+          <div class="msv__fact-value">80+</div>
+          <div class="msv__fact-label">Public universities</div>
+        </div>
+        <div class="msv__fact">
+          <div class="msv__fact-value">100s</div>
+          <div class="msv__fact-label">Accredited language schools</div>
+        </div>
+        <div class="msv__fact">
+          <div class="msv__fact-value">€800–1,500</div>
+          <div class="msv__fact-label">Monthly living costs</div>
+        </div>
+        <div class="msv__fact">
+          <div class="msv__fact-value">90+ days</div>
+          <div class="msv__fact-label">Student visa required</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Study in Spain -->
+  <section class="msv__section--cream">
+    <div class="msv__container">
+      <div class="msv__section-hd">
+        <h2>Why Study in Spain?</h2>
+        <p>Spain offers more than just education—it's a life-changing experience.</p>
+      </div>
+      <div class="msv__card-grid">
+        <div class="msv__card">
+          <h3>Quality of Education</h3>
+          <p>Spanish universities consistently rank among Europe's best. Degrees are internationally recognised and employers worldwide value a Spanish education.</p>
+        </div>
+        <div class="msv__card">
+          <h3>Affordability</h3>
+          <p>Tuition and living costs are significantly lower than the UK, US, or Northern Europe—making Spain an excellent value proposition for international students.</p>
+        </div>
+        <div class="msv__card">
+          <h3>Quality of Life</h3>
+          <p>Mediterranean climate, vibrant culture, excellent food, and a relaxed pace of life. Spain consistently ranks high in quality-of-life indices.</p>
+        </div>
+        <div class="msv__card">
+          <h3>Gateway to Europe</h3>
+          <p>Schengen membership means you can travel freely across Europe during breaks. Direct flights connect Spain to most major cities.</p>
+        </div>
+        <div class="msv__card">
+          <h3>Cultural Richness</h3>
+          <p>Art, history, architecture, festivals—studying in Spain immerses you in one of Europe's most culturally dynamic countries.</p>
+        </div>
+        <div class="msv__card">
+          <h3>Spanish Language</h3>
+          <p>Spanish is the world's 4th most spoken language. Studying in Spain means learning or improving your Spanish in an immersive environment.</p>
+        </div>
+        <div class="msv__card">
+          <h3>International Community</h3>
+          <p>Spanish universities attract students from around the world. You'll build a truly global network while studying.</p>
+        </div>
+        <div class="msv__card">
+          <h3>Post-Study Options</h3>
+          <p>Work authorisation, residency pathways, and job seeker visas make it possible to transition from study to work and stay long-term.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Types of Study -->
+  <section class="msv__section">
+    <div class="msv__container">
+      <div class="msv__section-hd">
+        <h2>Types of Study in Spain</h2>
+        <p>Different pathways depending on your goals and timeline.</p>
+      </div>
+      <div class="msv__card-grid">
+        <a href="https://www.myspanishvisa.com/student-visa-spain-university/" class="msv__card">
+          <h3>University Degrees</h3>
+          <p>Bachelor's (Grado), master's (Máster), and doctoral (Doctorado) programmes. Many universities offer English-taught options. Duration: 3–4 years for bachelor's, 1–2 for master's.</p>
+          <span class="msv__card-link">View guide →</span>
+        </a>
+        <a href="https://www.myspanishvisa.com/student-visa-spain-language-school/" class="msv__card">
+          <h3>Language Schools</h3>
+          <p>Intensive Spanish courses for all levels. From short-term (2–4 weeks) to semester-long programmes. Taught by native instructors in small groups.</p>
+          <span class="msv__card-link">View guide →</span>
+        </a>
+        <div class="msv__card">
+          <h3>Vocational Training</h3>
+          <p>Professional courses and certifications (FP). Practical skills training in fields like hospitality, IT, healthcare, and skilled trades. 1–2 year programmes.</p>
+        </div>
+        <div class="msv__card">
+          <h3>Semester Abroad</h3>
+          <p>Exchange programmes (Erasmus+) allowing you to spend 1–2 semesters at a Spanish university while enrolled at your home institution.</p>
+        </div>
+        <div class="msv__card">
+          <h3>Postgraduate Research</h3>
+          <p>Research degrees and doctoral programmes. Ideal for academic careers. Often funded through scholarships and research grants.</p>
+        </div>
+        <div class="msv__card">
+          <h3>Summer Schools</h3>
+          <p>Short, intensive programmes (2–6 weeks) during summer. Ideal for students wanting to experience Spanish education without long-term commitment.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Do You Need a Visa? -->
+  <section class="msv__section--dark">
+    <div class="msv__container">
+      <div class="msv__section-hd">
+        <h2>Do You Need a Visa to Study in Spain?</h2>
+        <p>Your visa requirements depend on your nationality and course length.</p>
+      </div>
+      <div class="msv__tree">
+        <div class="msv__tree-branch">
+          <div class="msv__tree-branch-q">Are you an EU/EEA citizen?</div>
+          <div class="msv__tree-branch-a">No visa needed. You can live and study in Spain freely using your national ID card or passport. You may need to register with local authorities, but no visa application is required.</div>
+        </div>
+        <div class="msv__tree-branch">
+          <div class="msv__tree-branch-q">Are you a non-EU/EEA citizen with a course 90+ days long?</div>
+          <div class="msv__tree-branch-a">Student visa required. You must apply for a Spanish student visa before travelling. Applications are submitted to the Spanish consulate in your home country. <a href="https://www.myspanishvisa.com/student-visa-spain/">View full visa guide</a>.</div>
+        </div>
+        <div class="msv__tree-branch">
+          <div class="msv__tree-branch-q">Are you a non-EU/EEA citizen with a course under 90 days?</div>
+          <div class="msv__tree-branch-a">Tourist entry may be possible. You may be able to enter Spain on a standard tourist visa or visa waiver (depending on your nationality) and study a short course. However, a formal student visa is more secure—consult with your consulate.</div>
+        </div>
+      </div>
+      <p style="margin-top: 2rem; color: rgba(255,255,255,0.82);"><strong>Pro tip:</strong> If you're unsure about visa requirements, <a href="https://www.myspanishvisa.com/eligibility-check/" style="color: var(--yellow);">use our eligibility check</a> or book a consultation to confirm your specific circumstances.</p>
+    </div>
+  </section>
+
+  <!-- Cost of Studying in Spain -->
+  <section class="msv__section">
+    <div class="msv__container">
+      <div class="msv__section-hd">
+        <h2>How Much Does It Cost to Study in Spain?</h2>
+        <p>Breakdown of tuition fees, living costs, and visa expenses.</p>
+      </div>
+
+      <h3 style="margin: 2rem 0 1rem; color: var(--navy);">Tuition Fees</h3>
+      <ul style="margin-bottom: 2rem;">
+        <li><strong>Public universities (EU students):</strong> €1,000–€3,000/year for undergraduate; €1,500–€4,000/year for master's</li>
+        <li><strong>Public universities (non-EU students):</strong> €3,500–€15,000/year for undergraduate; €5,000–€20,000/year for master's (varies by region and programme)</li>
+        <li><strong>Private universities:</strong> €8,000–€30,000+/year depending on institution and programme</li>
+        <li><strong>Language schools:</strong> €400–€2,000/month depending on course intensity and location</li>
+      </ul>
+
+      <h3 style="margin: 2rem 0 1rem; color: var(--navy);">Living Costs</h3>
+      <ul style="margin-bottom: 2rem;">
+        <li><strong>Budget cities (Granada, Salamanca, Malaga):</strong> €700–€900/month</li>
+        <li><strong>Mid-range cities (Seville, Valencia):</strong> €900–€1,200/month</li>
+        <li><strong>Expensive cities (Madrid, Barcelona):</strong> €1,200–€1,500+/month</li>
+        <li><strong>Typical breakdown:</strong> Accommodation €400–€700, food €150–€250, transport €20–€50, leisure €100–€200</li>
+      </ul>
+
+      <h3 style="margin: 2rem 0 1rem; color: var(--navy);">Visa & Administrative Costs</h3>
+      <ul style="margin-bottom: 2rem;">
+        <li><strong>Student visa application:</strong> €80–€160 (consulate fee)</li>
+        <li><strong>Residence permit (TIE):</strong> €10–€20 (issued in Spain after arrival)</li>
+        <li><strong>Health insurance:</strong> €500–€1,500/year (may be included in tuition or offered by universities)</li>
+      </ul>
+
+      <div class="msv__alert msv__alert--info">
+        <span class="msv__alert-icon">💡</span>
+        <p><strong>Financial support:</strong> Spanish universities and language schools offer scholarships to international students. EU students may also qualify for Erasmus+ grants. Check with individual institutions.</p>
+      </div>
+
+      <p><a href="https://www.myspanishvisa.com/student-visa-spain-cost/">View detailed cost breakdown</a></p>
+    </div>
+  </section>
+
+  <!-- Where to Study in Spain -->
+  <section class="msv__section--cream">
+    <div class="msv__container">
+      <div class="msv__section-hd">
+        <h2>Where to Study in Spain?</h2>
+        <p>Spain's major university cities, each with distinct character and advantages.</p>
+      </div>
+      <div class="msv__city-grid">
+        <div class="msv__city-card">
+          <h3>Madrid</h3>
+          <p>Spain's capital. Home to Universidad Autónoma, Complutense, and IE University. Most expensive but largest student population and job market. Vibrant nightlife, museums, endless entertainment.</p>
+        </div>
+        <div class="msv__city-card">
+          <h3>Barcelona</h3>
+          <p>Mediterranean coastal city. ESADE, UB, UAB are world-ranked. High cost of living but excellent quality of life. Beaches, architecture, tech scene. Catalan culture adds unique dimension.</p>
+        </div>
+        <div class="msv__city-card">
+          <h3>Valencia</h3>
+          <p>East coast, Mediterranean climate. Universidad de Valencia and Universitat Politècnica. More affordable than Madrid/Barcelona. Modern City of Arts and Sciences, great beaches.</p>
+        </div>
+        <div class="msv__city-card">
+          <h3>Seville</h3>
+          <p>Andalusian charm, rich history. Universidad de Sevilla. More relaxed pace, lower cost of living. Flamenco culture, historic architecture. Hot summers, mild winters.</p>
+        </div>
+        <div class="msv__city-card">
+          <h3>Granada</h3>
+          <p>University city in Andalusia. Universidad de Granada. Very affordable, vibrant student community. Stunning Alhambra, close to Sierra Nevada mountains. Popular with Spanish language students.</p>
+        </div>
+        <div class="msv__city-card">
+          <h3>Salamanca</h3>
+          <p>Historic university town. Universidad de Salamanca (founded 1218). Excellent for Spanish language study. Small, intimate atmosphere. Very affordable. Golden sandstone architecture.</p>
+        </div>
+        <div class="msv__city-card">
+          <h3>Malaga</h3>
+          <p>Coastal Andalusian city. Universidad de Málaga. Modern facilities, good weather year-round. Growing tech and creative sectors. Lower cost of living, beach lifestyle.</p>
+        </div>
+        <div class="msv__city-card">
+          <h3>Bilbao</h3>
+          <p>Basque Country, northern coast. Universidad del País Vasco. Modern, progressive city. Excellent museums and cultural scene. Higher cost than southern cities.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Working While Studying -->
+  <section class="msv__section">
+    <div class="msv__container">
+      <div class="msv__section-hd">
+        <h2>Can You Work While Studying in Spain?</h2>
+        <p>Yes—with restrictions and authorisation.</p>
+      </div>
+      <p>Student visa holders are typically permitted to work <strong>up to 20 hours per week during term time</strong> and full-time during official university breaks (summer, Christmas, Easter). Some contracts offer flexibility during exam periods.</p>
+      <p><strong>How to work:</strong></p>
+      <ul>
+        <li>Obtain work authorisation from your university's International Office</li>
+        <li>Register with the Spanish Tax Agency (Agencia Tributaria) and obtain a tax identification number (NIF)</li>
+        <li>Most students work in hospitality, tutoring, freelance work, or administrative roles</li>
+        <li>Wages: €6–€12/hour depending on sector and experience. Enough to cover basic living costs</li>
+      </ul>
+      <div class="msv__alert msv__alert--warn">
+        <span class="msv__alert-icon">⚠️</span>
+        <p><strong>Important:</strong> Work must be authorised and declared to tax authorities. Undeclared work can jeopardise your student visa status and residency. Always register properly.</p>
+      </div>
+      <p><a href="https://www.myspanishvisa.com/student-visa-spain-work-rights/">Learn more about work rights for students</a></p>
+    </div>
+  </section>
+
+  <!-- After Your Studies -->
+  <section class="msv__section--dark">
+    <div class="msv__container">
+      <div class="msv__section-hd">
+        <h2>What Happens After You Finish Studying?</h2>
+        <p>Several pathways for graduates to stay and work in Spain.</p>
+      </div>
+      <div class="msv__card-grid" style="grid-template-columns: 1fr 1fr; max-width: 800px;">
+        <div class="msv__card" style="background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.2);">
+          <h3 style="color: var(--white);">Job Seeker Visa</h3>
+          <p style="color: rgba(255,255,255,0.82);">Stay in Spain for 12 months to search for employment and apply for work permits. Available to non-EU graduates. <a href="https://www.myspanishvisa.com/job-seeker-visa-spain-after-studies/" style="color: var(--yellow);">Learn more</a></p>
+        </div>
+        <div class="msv__card" style="background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.2);">
+          <h3 style="color: var(--white);">Work Visa</h3>
+          <p style="color: rgba(255,255,255,0.82);">Transition directly to employment if you secure a job offer. Employers sponsor your work visa. Most common pathway for graduates.</p>
+        </div>
+        <div class="msv__card" style="background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.2);">
+          <h3 style="color: var(--white);">Residency Pathways</h3>
+          <p style="color: rgba(255,255,255,0.82);">Long-term residency (residence card) available after 5 years of continuous legal residence. Gateway to permanent residency. <a href="https://www.myspanishvisa.com/student-visa-to-residency-spain/" style="color: var(--yellow);">Explore options</a></p>
+        </div>
+        <div class="msv__card" style="background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.2);">
+          <h3 style="color: var(--white);">Further Study</h3>
+          <p style="color: rgba(255,255,255,0.82);">Progress to a master's or doctoral programme. Many students choose to deepen their expertise with postgraduate degrees.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How My Spanish Visa Helps -->
+  <section class="msv__section">
+    <div class="msv__container">
+      <div class="msv__section-hd">
+        <h2>How My Spanish Visa Helps You Study in Spain</h2>
+        <p>We guide you through every step of your student journey.</p>
+      </div>
+      <div class="msv__card-grid">
+        <div class="msv__card">
+          <h3>Eligibility Assessment</h3>
+          <p>We verify your eligibility for a student visa and identify any potential issues before you apply, saving time and stress.</p>
+        </div>
+        <div class="msv__card">
+          <h3>Documentation Support</h3>
+          <p>Guidance on gathering, translating, and certifying all required documents (degree transcripts, acceptance letters, financial proof, health records).</p>
+        </div>
+        <div class="msv__card">
+          <h3>Visa Application</h3>
+          <p>We prepare and submit your student visa application to the Spanish consulate, tracking progress and liaising with officials on your behalf.</p>
+        </div>
+        <div class="msv__card">
+          <h3>Residency Permit (TIE)</h3>
+          <p>After you arrive, we guide you through obtaining your residence permit (Tarjeta de Identificación de Extranjero) from Spanish authorities.</p>
+        </div>
+        <div class="msv__card">
+          <h3>Settling In</h3>
+          <p>From opening a bank account to registering with healthcare and getting a tax ID (NIF), we help you establish yourself administratively in Spain.</p>
+        </div>
+        <div class="msv__card">
+          <h3>Post-Graduation Planning</h3>
+          <p>As graduation approaches, we advise on next steps—job seeker visa, work visa, residency pathways, or further study.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Band -->
+  <section class="msv__cta-band">
+    <div class="msv__container">
+      <h2>Ready to Study in Spain?</h2>
+      <p>Start your journey with a free eligibility check and personalised consultation. We'll guide you from application to arrival.</p>
+    </div>
+  </section>
+
+  <!-- FAQs -->
+  <section class="msv__section">
+    <div class="msv__container">
+      <div class="msv__section-hd">
+        <h2>Frequently Asked Questions</h2>
+      </div>
+      <details class="msv__faq-list">
+        <summary>Can I study in Spain in English?</summary>
+        <div class="msv__faq-answer">
+          <p>Yes. Many universities offer bachelor's and master's degrees taught in English, especially at larger institutions like IE University, ESADE, and Universidad Autónoma de Madrid. Additionally, hundreds of accredited language schools across Spain offer intensive Spanish courses for foreigners. The choice depends on your goals—English-taught programmes for degree studies, or Spanish-intensive courses to learn the language.</p>
+        </div>
+      </details>
+      <details class="msv__faq-list">
+        <summary>How much does it cost to study in Spain?</summary>
+        <div class="msv__faq-answer">
+          <p>University costs vary: public university degrees cost €1,000–€3,000/year for EU students, and €3,500–€15,000/year for non-EU students. Private universities are more expensive (€8,000–€30,000+/year). Language schools typically charge €400–€2,000/month depending on intensity and location. Living costs average €800–€1,500/month depending on the city. Overall, Spain is significantly cheaper than the UK or US for higher education.</p>
+        </div>
+      </details>
+      <details class="msv__faq-list">
+        <summary>Do I need a visa to study in Spain?</summary>
+        <div class="msv__faq-answer">
+          <p>EU/EEA citizens do not need a visa. Non-EU/EEA nationals need a student visa if the course is 90 days or longer. For courses under 90 days, you may be able to enter Spain on a tourist visa. The student visa is renewable as long as you're enrolled and meet the requirements. Our <a href="https://www.myspanishvisa.com/student-visa-spain/">full student visa guide</a> covers eligibility, documentation, and application steps.</p>
+        </div>
+      </details>
+      <details class="msv__faq-list">
+        <summary>Can I work while studying in Spain?</summary>
+        <div class="msv__faq-answer">
+          <p>Yes, with restrictions. Student visa holders are typically permitted to work up to 20 hours per week during term time, and full-time during official breaks. You need authorisation from your institution and must register with Spanish tax authorities (Agencia Tributaria). Most students find part-time work in hospitality, tutoring, or administration. Earnings are modest but sufficient to cover living costs.</p>
+        </div>
+      </details>
+      <details class="msv__faq-list">
+        <summary>What happens after I finish studying in Spain?</summary>
+        <div class="msv__faq-answer">
+          <p>After graduation, non-EU/EEA graduates can apply for a job seeker visa (valid 12 months) to remain in Spain and find employment. If offered a work contract, you can transition to a work visa. Alternatively, if you've lived in Spain long enough and meet residency requirements, you may be eligible for long-term residency. Many students transition directly into employment or postgraduate studies.</p>
+        </div>
+      </details>
+      <details class="msv__faq-list">
+        <summary>Is Spain expensive to live in as a student?</summary>
+        <div class="msv__faq-answer">
+          <p>No. Spain is one of Europe's most affordable countries to live in. A student budget of €800–€1,200/month covers accommodation, food, transport, and leisure in most cities. Larger cities like Madrid and Barcelona are costlier (€1,200–€1,500/month), while smaller cities like Granada or Salamanca are significantly cheaper (€700–€900/month). Student discounts are widely available on transport, museums, and entertainment.</p>
+        </div>
+      </details>
+        <details>
+          <summary>Is Spain a good country to study in for international students?</summary>
+          <div class="msv__faq-answer">
+            <p>Spain consistently ranks as one of the most popular study destinations in Europe. Key attractions: affordable tuition compared to the UK or US, excellent quality of life, warm climate, rich culture, widespread Spanish language (the world's second most spoken), strong university rankings in certain fields, and access to Europe.</p>
+          </div>
+        </details>
+        <details>
+          <summary>How much does it cost to live in Spain as an international student?</summary>
+          <div class="msv__faq-answer">
+            <p>Monthly living costs for a student in Spain range from approximately €700-1,200 depending on the city. Madrid and Barcelona are the most expensive. Cities like Valencia, Seville, Granada, and Salamanca are significantly cheaper. This includes accommodation, food, transport, and basic entertainment.</p>
+          </div>
+        </details>
+        <details>
+          <summary>What are the top Spanish universities for international students?</summary>
+          <div class="msv__faq-answer">
+            <p>Spanish universities with strong international reputations and good English-language provision include: Universidad Autónoma de Madrid, Universitat Pompeu Fabra (Barcelona), Universidad de Barcelona, IE Business School, ESADE, and several others. Rankings vary by field. Business schools in Spain (IE, ESADE) are internationally well-regarded.</p>
+          </div>
+        </details>
+        <details>
+          <summary>Can I stay in Spain to work after graduating?</summary>
+          <div class="msv__faq-answer">
+            <p>After completing your studies, you can apply to change your student visa to a work permit (if you have a job offer from a Spanish employer) or the Digital Nomad Visa (if working remotely). Planning this transition before your student visa expires is essential.</p>
+          </div>
+        </details>
+    </div>
+  </section>
+
+  <!-- Related Guides -->
+  <section class="msv__section--cream">
+    <div class="msv__container">
+      <div class="msv__section-hd">
+        <h2>Related Guides & Resources</h2>
+      </div>
+      <div class="msv__related">
+        <a href="https://www.myspanishvisa.com/student-visa-spain/" class="msv__related-card">
+          <span class="msv__related-icon">📋</span>
+          <span class="msv__related-title">Student Visa Spain</span>
+          <span class="msv__related-desc">Full guide to applying for a Spanish student visa—requirements, documents, timelines.</span>
+        </a>
+        <a href="https://www.myspanishvisa.com/student-visa-spain-university/" class="msv__related-card">
+          <span class="msv__related-icon">🎓</span>
+          <span class="msv__related-title">University Degrees</span>
+          <span class="msv__related-desc">Bachelor's, master's, and doctoral programmes in Spain—types, costs, and visa requirements.</span>
+        </a>
+        <a href="https://www.myspanishvisa.com/student-visa-spain-language-school/" class="msv__related-card">
+          <span class="msv__related-icon">🌍</span>
+          <span class="msv__related-title">Language Schools</span>
+          <span class="msv__related-desc">Intensive Spanish courses, visa requirements, and how to choose the right school.</span>
+        </a>
+        <a href="https://www.myspanishvisa.com/student-visa-spain-cost/" class="msv__related-card">
+          <span class="msv__related-icon">💷</span>
+          <span class="msv__related-title">Cost Breakdown</span>
+          <span class="msv__related-desc">Detailed costs for tuition, living expenses, and visa fees by city and programme type.</span>
+        </a>
+        <a href="https://www.myspanishvisa.com/student-visa-spain-work-rights/" class="msv__related-card">
+          <span class="msv__related-icon">💼</span>
+          <span class="msv__related-title">Working as a Student</span>
+          <span class="msv__related-desc">Work rights, hourly wages, tax registration, and finding part-time jobs in Spain.</span>
+        </a>
+        <a href="https://www.myspanishvisa.com/job-seeker-visa-spain-after-studies/" class="msv__related-card">
+          <span class="msv__related-icon">🔍</span>
+          <span class="msv__related-title">Job Seeker Visa</span>
+          <span class="msv__related-desc">Post-graduation: search for jobs and transition to work authorisation.</span>
+        </a>
+        <a href="https://www.myspanishvisa.com/student-visa-to-residency-spain/" class="msv__related-card">
+          <span class="msv__related-icon">🏡</span>
+          <span class="msv__related-title">From Study to Residency</span>
+          <span class="msv__related-desc">Long-term residency pathways after graduation and studying in Spain.</span>
+        </a>
+        <a href="https://www.myspanishvisa.com/eligibility-check/" class="msv__related-card">
+          <span class="msv__related-icon">✅</span>
+          <span class="msv__related-title">Eligibility Check</span>
+          <span class="msv__related-desc">Start here: free assessment of your visa eligibility and next steps.</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Disclaimer -->
+  </section>
+
+</div>
+
+<!-- FRAGMENT_END -->
+</main>
+
+
+<!-- ═══════════════════════════════════════════════════
+     SITE FOOTER
+     ═══════════════════════════════════════════════════ -->
+<footer class="msv-footer" role="contentinfo">
+  <div class="msv-footer__top">
+    <div class="msv-footer__brand">
+      <a href="/" class="msv-footer__logo" aria-label="My Spanish Visa"><img src="/assets/images/msv-logo-white.png" alt="My Spanish Visa" height="72" style="display:block;"></a>
+      <p class="msv-footer__tagline">Specialist Spain visa &amp; residency guidance for English-speaking foreigners. A service of Platinum Legal Spain.</p>
+      <div class="msv-footer__trust">
+        <span class="msv-footer__trust-item">All English. No barriers.</span>
+        <span class="msv-footer__trust-item">Solicitors &amp; immigration specialists</span>
+        <span class="msv-footer__trust-item">100% online process</span>
+      </div>
+    </div>
+    <div>
+      <div class="msv-footer__col-title">Visas</div>
+      <ul class="msv-footer__links">
+        <li><a href="/non-lucrative-visa-spain.html">Non-Lucrative Visa</a></li>
+        <li><a href="/digital-nomad-visa-spain.html">Digital Nomad Visa</a></li>
+        <li><a href="/student-visa-spain.html">Student Visa</a></li>
+        <li><a href="/spain-visa-renewal.html">Visa Renewals</a></li>
+        <li><a href="/best-visa-move-to-spain.html">Compare All Visas</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/nlv">Apply: NLV</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/dnv">Apply: DNV</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/student-visa">Apply: Student Visa</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="msv-footer__col-title">Resources</div>
+      <ul class="msv-footer__links">
+        <li><a href="/blog-index.html">Blog &amp; Guides</a></li>
+        <li><a href="/move-to-spain.html">Move to Spain Guide</a></li>
+        <li><a href="/book-consultation.html">Which Visa Is Right for Me?</a></li>
+        <li><a href="/blog-spain-visa-document-checklist-2026.html">Document Checklists</a></li>
+        <li><a href="/spain-visa-options.html">Visa Requirements</a></li>
+        <li><a href="/nie-number-spain.html">NIE Number Guide</a></li>
+        <li><a href="/tie-card-spain.html">TIE Card Guide</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="msv-footer__col-title">Company</div>
+      <ul class="msv-footer__links">
+        <li><a href="/about-us.html">About Us</a></li>
+        <li><a href="/contact-us.html">Contact</a></li>
+        <li><a href="https://www.platinumlegalspain.com" rel="noopener">Platinum Legal Spain</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/nlv">Client Portal</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="msv-footer__bottom">
+    <div class="msv-footer__bottom-inner">
+      <p class="msv-footer__disclaimer"><strong style="color:rgba(255,255,255,0.5);">Disclaimer:</strong> My Spanish Visa provides visa processing support and is not a law firm. Content on this site is for informational purposes only and does not constitute legal advice. Immigration rules change frequently — always verify requirements with official sources or a qualified specialist. My Spanish Visa is a trading name of Platinum Legal Spain.</p>
+      <span class="msv-footer__copyright">© 2026 My Spanish Visa. All rights reserved.</span>
+    </div>
+  </div>
+</footer>
+
+
+</body>
+</html>

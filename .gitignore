@@ -1,0 +1,7 @@
+.fuse_hidden*
+.DS_Store
+.Spotlight-V100
+.Trashes
+*.tmp
+*.swp
+Thumbs.db
