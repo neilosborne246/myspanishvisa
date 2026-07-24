@@ -7,428 +7,90 @@
   <link rel="dns-prefetch" href="https://js-eu1.hsforms.net">
   <link rel="dns-prefetch" href="https://dashboard.platinumlegalspain.com">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- ═══════════════════════════════════════════════════════════════════
-       PAGE-SPECIFIC HEAD — replace block below per page:
-       <title>Blog Moving To Spain From Usa | My Spanish Visa</title>
-       <meta name="description" content="…">
-       <meta property="og:title" content="…">
-       <meta property="og:description" content="…">
-       <meta property="og:url" content="https://www.myspanishvisa.com/…">
-       <meta property="og:image" content="…">
-       <link rel="canonical" href="https://www.myspanishvisa.com/blog/moving-to-spain-from-usa/">>
-       <script type="application/ld+json">…</script>
-       ═══════════════════════════════════════════════════════════════════ -->
-  <title>Moving to Spain from the USA: Visa Options, Taxes, and Complete Guide | My Spanish Visa</title>
-  <meta name="description" content="Moving to Spain from the USA: Visa Options, Taxes, and Complete Guide. Practical advice for English-speaking foreigners moving to Spain.">
+  <title>Moving to Spain from the USA: Complete 2026 Guide | My Spanish Visa</title>
+  <meta name="description" content="Everything US citizens need to know about moving to Spain in 2026 — visa options, FATCA and FBAR obligations, tax treaty rules, and a practical relocation checklist.">
   <link rel="canonical" href="https://www.myspanishvisa.com/blog/moving-to-spain-from-usa/">
-
-  <!-- Shared Open Graph defaults -->
-  <meta property="og:type" content="website">
+  <meta property="og:type" content="article">
   <meta property="og:site_name" content="My Spanish Visa">
-  <meta property="og:image" content="https://www.myspanishvisa.com/assets/images/og/og-myspanishvisa-default.jpg">
+  <meta property="og:url" content="https://www.myspanishvisa.com/blog/moving-to-spain-from-usa/">
+  <meta property="og:title" content="Moving to Spain from the USA: Complete 2026 Guide | My Spanish Visa">
+  <meta property="og:description" content="Everything US citizens need to know about moving to Spain in 2026 — visa options, FATCA and FBAR obligations, tax treaty rules, and a practical relocation checklist.">
+  <meta property="og:image" content="https://www.myspanishvisa.com/assets/images/og/og-blog-myspanishvisa.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@myspanishvisa">
-
+  <meta name="twitter:title" content="Moving to Spain from the USA: Complete 2026 Guide | My Spanish Visa">
+  <meta name="twitter:description" content="Everything US citizens need to know about moving to Spain in 2026 — visa options, FATCA and FBAR obligations, tax treaty rules, and a practical relocation checklist.">
+  <meta name="twitter:image" content="https://www.myspanishvisa.com/assets/images/og/og-blog-myspanishvisa.jpg">
   <style>
-/* ═══════════════════════════════════════════════════════════════
-   GLOBAL SHELL — nav + footer only.
-   Page-specific CSS lives inside each fragment's own <style> block.
-   ═══════════════════════════════════════════════════════════════ */
-
-/* ── iOS overflow safety ── */
 html, body { max-width: 100%; overflow-x: clip; margin: 0; padding: 0; }
 *, *::before, *::after { box-sizing: border-box; }
-
-/* ── Brand tokens (root-level so all fragments inherit) ── */
 :root {
-  --navy:      #0c1930;
-  --navy-mid:  #1a3a5c;
-  --red:       #be0011;
-  --red-deep:  #8c000d;
-  --yellow:    #facf39;
-  --cream:     #f8f7f4;
-  --white:     #ffffff;
-  --black:     #1a1a1a;
-  --muted:     #5a6478;
-  --border:    #dce3ed;
-  --shadow-sm: 0 2px 8px rgba(12,25,48,0.08);
-  --shadow-md: 0 6px 24px rgba(12,25,48,0.13);
+  --navy: #0c1930; --navy-mid: #1a3a5c; --red: #be0011; --red-deep: #8c000d;
+  --yellow: #facf39; --cream: #f8f7f4; --white: #ffffff; --black: #1a1a1a;
+  --muted: #5a6478; --border: #dce3ed;
+  --shadow-sm: 0 2px 8px rgba(12,25,48,0.08); --shadow-md: 0 6px 24px rgba(12,25,48,0.13);
 }
-
-body {
-  font-family: 'Inter', 'Segoe UI', system-ui, Arial, sans-serif;
-  font-size: 16px;
-  line-height: 1.75;
-  color: var(--black);
-  background: #fff;
-}
-
-/* ─────────────────────────────────────────────────────────────
-   SITE NAV
-   ───────────────────────────────────────────────────────────── */
-.msv-nav {
-  position: sticky;
-  top: 0;
-  z-index: 9000;
-  background: var(--navy);
-  border-bottom: 1px solid rgba(255,255,255,0.08);
-  box-shadow: 0 2px 12px rgba(12,25,48,0.22);
-}
-.msv-nav__inner {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 90px;
-  gap: 1.5rem;
-}
-
-/* Logo */
-.msv-nav__logo {
-  display: flex;
-  align-items: center;
-  gap: 0.55rem;
-  text-decoration: none;
-  flex-shrink: 0;
-}
-.msv-nav__logo-flag {
-  font-size: 1.3rem;
-  line-height: 1;
-}
-.msv-nav__logo-text {
-  font-size: 1rem;
-  font-weight: 800;
-  color: #fff;
-  letter-spacing: -0.01em;
-  line-height: 1.2;
-}
-.msv-nav__logo-text span {
-  color: var(--yellow);
-}
-
-/* Links */
-.msv-nav__links {
-  display: flex;
-  align-items: center;
-  gap: 0;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-.msv-nav__links > li {
-  position: relative;
-}
-.msv-nav__links > li > a,
-.msv-nav__links > li > button {
-  display: flex;
-  align-items: center;
-  gap: 0.3rem;
-  padding: 0.5rem 0.9rem;
-  font-size: 0.87rem;
-  font-weight: 600;
-  color: rgba(255,255,255,0.85);
-  text-decoration: none;
-  background: none;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-  transition: color 0.15s, background 0.15s;
-  white-space: nowrap;
-  height: 90px;
-}
-.msv-nav__links > li > a:hover,
-.msv-nav__links > li > button:hover,
-.msv-nav__links > li:focus-within > a,
-.msv-nav__links > li:focus-within > button {
-  color: #fff;
-  background: rgba(255,255,255,0.08);
-}
-.msv-nav__chevron {
-  font-size: 0.65rem;
-  opacity: 0.7;
-  transition: transform 0.2s;
-}
-.msv-nav__links > li:focus-within .msv-nav__chevron,
-.msv-nav__links > li:hover .msv-nav__chevron {
-  transform: rotate(180deg);
-}
-
-/* Dropdown */
-.msv-nav__dropdown {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  min-width: 230px;
-  background: #fff;
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  box-shadow: var(--shadow-md);
-  padding: 0.5rem 0;
-  z-index: 200;
-}
-.msv-nav__links > li:hover .msv-nav__dropdown,
-.msv-nav__links > li:focus-within .msv-nav__dropdown {
-  display: block;
-}
-.msv-nav__dropdown a {
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-  padding: 0.6rem 1.1rem;
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: var(--navy);
-  text-decoration: none;
-  transition: background 0.12s;
-}
-.msv-nav__dropdown a:hover {
-  background: var(--cream);
-  color: var(--red);
-}
-.msv-nav__dropdown-icon {
-  width: 24px;
-  height: 24px;
-  background: var(--cream);
-  border-radius: 5px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.85rem;
-  flex-shrink: 0;
-}
-.msv-nav__dropdown-divider {
-  height: 1px;
-  background: var(--border);
-  margin: 0.4rem 0;
-}
-
-/* CTA button */
-.msv-nav__cta {
-  display: inline-flex;
-  align-items: center;
-  padding: 0.55rem 1.2rem;
-  background: var(--red);
-  color: #fff !important;
-  font-size: 0.85rem;
-  font-weight: 700;
-  border-radius: 6px;
-  text-decoration: none;
-  transition: background 0.15s, box-shadow 0.15s;
-  white-space: nowrap;
-  flex-shrink: 0;
-  box-shadow: 0 2px 8px rgba(190,0,17,0.3);
-}
-.msv-nav__cta:hover {
-  background: var(--red-deep);
-  box-shadow: 0 4px 14px rgba(190,0,17,0.4);
-  text-decoration: none;
-}
-
-/* Hamburger */
-.msv-nav__burger {
-  display: none;
-  flex-direction: column;
-  gap: 5px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0.4rem;
-  border-radius: 5px;
-}
-.msv-nav__burger span {
-  width: 22px;
-  height: 2px;
-  background: #fff;
-  border-radius: 2px;
-  transition: transform 0.2s, opacity 0.2s;
-  display: block;
-}
-
-/* Mobile nav */
-.msv-nav__mobile {
-  display: none;
-  flex-direction: column;
-  background: var(--navy-mid);
-  padding: 1rem 1.5rem 1.5rem;
-  border-top: 1px solid rgba(255,255,255,0.1);
-}
+body { font-family: 'Inter', 'Segoe UI', system-ui, Arial, sans-serif; font-size: 16px; line-height: 1.75; color: var(--black); background: #fff; }
+.msv-nav { position: sticky; top: 0; z-index: 9000; background: var(--navy); border-bottom: 1px solid rgba(255,255,255,0.08); box-shadow: 0 2px 12px rgba(12,25,48,0.22); }
+.msv-nav__inner { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; display: flex; align-items: center; justify-content: space-between; height: 90px; gap: 1.5rem; }
+.msv-nav__logo { display: flex; align-items: center; gap: 0.55rem; text-decoration: none; flex-shrink: 0; }
+.msv-nav__logo-flag { font-size: 1.3rem; line-height: 1; }
+.msv-nav__logo-text { font-size: 1rem; font-weight: 800; color: #fff; letter-spacing: -0.01em; line-height: 1.2; }
+.msv-nav__logo-text span { color: var(--yellow); }
+.msv-nav__links { display: flex; align-items: center; gap: 0; list-style: none; margin: 0; padding: 0; }
+.msv-nav__links > li { position: relative; }
+.msv-nav__links > li > a, .msv-nav__links > li > button { display: flex; align-items: center; gap: 0.3rem; padding: 0.5rem 0.9rem; font-size: 0.87rem; font-weight: 600; color: rgba(255,255,255,0.85); text-decoration: none; background: none; border: none; cursor: pointer; border-radius: 5px; transition: color 0.15s, background 0.15s; white-space: nowrap; height: 90px; }
+.msv-nav__links > li > a:hover, .msv-nav__links > li > button:hover, .msv-nav__links > li:focus-within > a, .msv-nav__links > li:focus-within > button { color: #fff; background: rgba(255,255,255,0.08); }
+.msv-nav__chevron { font-size: 0.65rem; opacity: 0.7; transition: transform 0.2s; }
+.msv-nav__links > li:focus-within .msv-nav__chevron, .msv-nav__links > li:hover .msv-nav__chevron { transform: rotate(180deg); }
+.msv-nav__dropdown { display: none; position: absolute; top: 100%; left: 0; min-width: 230px; background: #fff; border: 1px solid var(--border); border-radius: 10px; box-shadow: var(--shadow-md); padding: 0.5rem 0; z-index: 200; }
+.msv-nav__links > li:hover .msv-nav__dropdown, .msv-nav__links > li:focus-within .msv-nav__dropdown { display: block; }
+.msv-nav__dropdown a { display: flex; align-items: center; gap: 0.6rem; padding: 0.6rem 1.1rem; font-size: 0.85rem; font-weight: 600; color: var(--navy); text-decoration: none; transition: background 0.12s; }
+.msv-nav__dropdown a:hover { background: var(--cream); color: var(--red); }
+.msv-nav__dropdown-icon { width: 24px; height: 24px; background: var(--cream); border-radius: 5px; display: flex; align-items: center; justify-content: center; font-size: 0.85rem; flex-shrink: 0; }
+.msv-nav__dropdown-divider { height: 1px; background: var(--border); margin: 0.4rem 0; }
+.msv-nav__cta { display: inline-flex; align-items: center; padding: 0.55rem 1.2rem; background: var(--red); color: #fff !important; font-size: 0.85rem; font-weight: 700; border-radius: 6px; text-decoration: none; transition: background 0.15s, box-shadow 0.15s; white-space: nowrap; flex-shrink: 0; box-shadow: 0 2px 8px rgba(190,0,17,0.3); }
+.msv-nav__cta:hover { background: var(--red-deep); box-shadow: 0 4px 14px rgba(190,0,17,0.4); text-decoration: none; }
+.msv-nav__burger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 0.4rem; border-radius: 5px; }
+.msv-nav__burger span { width: 22px; height: 2px; background: #fff; border-radius: 2px; transition: transform 0.2s, opacity 0.2s; display: block; }
+.msv-nav__mobile { display: none; flex-direction: column; background: var(--navy-mid); padding: 1rem 1.5rem 1.5rem; border-top: 1px solid rgba(255,255,255,0.1); }
 .msv-nav__mobile.open { display: flex; }
-.msv-nav__mobile a {
-  padding: 0.65rem 0;
-  color: rgba(255,255,255,0.9);
-  font-size: 0.95rem;
-  font-weight: 600;
-  text-decoration: none;
-  border-bottom: 1px solid rgba(255,255,255,0.07);
-}
+.msv-nav__mobile a { padding: 0.65rem 0; color: rgba(255,255,255,0.9); font-size: 0.95rem; font-weight: 600; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.07); }
 .msv-nav__mobile a:hover { color: var(--yellow); }
-.msv-nav__mobile .msv-nav__mobile-sub {
-  padding-left: 1rem;
-  font-size: 0.88rem;
-  font-weight: 500;
-  color: rgba(255,255,255,0.7);
-}
-.msv-nav__mobile-cta {
-  margin-top: 1rem;
-  background: var(--red);
-  color: #fff !important;
-  border-radius: 6px;
-  text-align: center;
-  padding: 0.75rem 1rem !important;
-  border-bottom: none !important;
-}
-
-@media (max-width: 900px) {
-  .msv-nav__links { display: none; }
-  .msv-nav__cta { display: none; }
-  .msv-nav__burger { display: flex; }
-}
-@media (max-width: 480px) {
-  .msv-nav__inner { padding: 0 1rem; }
-}
-
-/* ─────────────────────────────────────────────────────────────
-   SITE FOOTER
-   ───────────────────────────────────────────────────────────── */
-.msv-footer {
-  background: var(--navy);
-  color: rgba(255,255,255,0.75);
-  overflow-x: clip;
-}
-.msv-footer__top {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 4rem 1.5rem 3rem;
-  display: grid;
-  grid-template-columns: 280px 1fr 1fr 1fr;
-  gap: 3rem;
-}
-@media (max-width: 900px) {
-  .msv-footer__top { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
-}
-@media (max-width: 560px) {
-  .msv-footer__top { grid-template-columns: 1fr; gap: 2rem; padding: 3rem 1.2rem 2rem; }
-}
-
-.msv-footer__brand {}
-.msv-footer__logo {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  text-decoration: none;
-  margin-bottom: 1rem;
-}
+.msv-nav__mobile .msv-nav__mobile-sub { padding-left: 1rem; font-size: 0.88rem; font-weight: 500; color: rgba(255,255,255,0.7); }
+.msv-nav__mobile-cta { margin-top: 1rem; background: var(--red); color: #fff !important; border-radius: 6px; text-align: center; padding: 0.75rem 1rem !important; border-bottom: none !important; }
+@media (max-width: 900px) { .msv-nav__links { display: none; } .msv-nav__cta { display: none; } .msv-nav__burger { display: flex; } }
+@media (max-width: 480px) { .msv-nav__inner { padding: 0 1rem; } }
+.msv-footer { background: var(--navy); color: rgba(255,255,255,0.75); overflow-x: clip; }
+.msv-footer__top { max-width: 1200px; margin: 0 auto; padding: 4rem 1.5rem 3rem; display: grid; grid-template-columns: 280px 1fr 1fr 1fr; gap: 3rem; }
+@media (max-width: 900px) { .msv-footer__top { grid-template-columns: 1fr 1fr; gap: 2.5rem; } }
+@media (max-width: 560px) { .msv-footer__top { grid-template-columns: 1fr; gap: 2rem; padding: 3rem 1.2rem 2rem; } }
+.msv-footer__logo { display: flex; align-items: center; gap: 0.5rem; text-decoration: none; margin-bottom: 1rem; }
 .msv-footer__logo-flag { font-size: 1.3rem; }
-.msv-footer__logo-text {
-  font-size: 1rem;
-  font-weight: 800;
-  color: #fff;
-  letter-spacing: -0.01em;
-}
+.msv-footer__logo-text { font-size: 1rem; font-weight: 800; color: #fff; letter-spacing: -0.01em; }
 .msv-footer__logo-text span { color: var(--yellow); }
-.msv-footer__tagline {
-  font-size: 0.83rem;
-  color: rgba(255,255,255,0.55);
-  line-height: 1.6;
-  margin-bottom: 1.5rem;
-}
-.msv-footer__trust {
-  display: flex;
-  flex-direction: column;
-  gap: 0.45rem;
-}
-.msv-footer__trust-item {
-  display: flex;
-  align-items: center;
-  gap: 0.45rem;
-  font-size: 0.78rem;
-  font-weight: 600;
-  color: rgba(255,255,255,0.65);
-}
-.msv-footer__trust-item::before {
-  content: '';
-  width: 6px;
-  height: 6px;
-  background: var(--yellow);
-  border-radius: 50%;
-  flex-shrink: 0;
-}
-
-.msv-footer__col-title {
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: rgba(255,255,255,0.4);
-  margin-bottom: 1rem;
-}
-.msv-footer__links {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-.msv-footer__links a {
-  font-size: 0.87rem;
-  color: rgba(255,255,255,0.68);
-  text-decoration: none;
-  transition: color 0.15s;
-  display: inline-block;
-}
-.msv-footer__links a:hover {
-  color: var(--yellow);
-  text-decoration: none;
-}
-
-.msv-footer__bottom {
-  border-top: 1px solid rgba(255,255,255,0.08);
-}
-.msv-footer__bottom-inner {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 1.5rem 1.5rem;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  gap: 1rem;
-  justify-content: space-between;
-}
-.msv-footer__disclaimer {
-  font-size: 0.73rem;
-  color: rgba(255,255,255,0.35);
-  line-height: 1.65;
-  max-width: 720px;
-}
-.msv-footer__copyright {
-  font-size: 0.78rem;
-  color: rgba(255,255,255,0.35);
-  white-space: nowrap;
-}
-
-/* ─────────────────────────────────────────────────────────────
-   MAIN CONTENT AREA
-   ───────────────────────────────────────────────────────────── */
-main {
-  /* Fragments are self-contained; this wrapper just provides flow context */
-  position: relative;
-}
+.msv-footer__tagline { font-size: 0.83rem; color: rgba(255,255,255,0.55); line-height: 1.6; margin-bottom: 1.5rem; }
+.msv-footer__trust { display: flex; flex-direction: column; gap: 0.45rem; }
+.msv-footer__trust-item { display: flex; align-items: center; gap: 0.45rem; font-size: 0.78rem; font-weight: 600; color: rgba(255,255,255,0.65); }
+.msv-footer__trust-item::before { content: ''; width: 6px; height: 6px; background: var(--yellow); border-radius: 50%; flex-shrink: 0; }
+.msv-footer__col-title { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-bottom: 1rem; }
+.msv-footer__links { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.5rem; }
+.msv-footer__links a { font-size: 0.87rem; color: rgba(255,255,255,0.68); text-decoration: none; transition: color 0.15s; display: inline-block; }
+.msv-footer__links a:hover { color: var(--yellow); text-decoration: none; }
+.msv-footer__bottom { border-top: 1px solid rgba(255,255,255,0.08); }
+.msv-footer__bottom-inner { max-width: 1200px; margin: 0 auto; padding: 1.5rem 1.5rem; display: flex; flex-wrap: wrap; align-items: flex-start; gap: 1rem; justify-content: space-between; }
+.msv-footer__disclaimer { font-size: 0.73rem; color: rgba(255,255,255,0.35); line-height: 1.65; max-width: 720px; }
+.msv-footer__copyright { font-size: 0.78rem; color: rgba(255,255,255,0.35); white-space: nowrap; }
+main { position: relative; }
   </style>
-<style>.msv-bc,.msv__breadcrumb,nav.breadcrumb,[aria-label="breadcrumb"],[aria-label="Breadcrumb"]{display:none!important}</style>
+  <style>.msv-bc,.msv__breadcrumb,nav.breadcrumb,[aria-label="breadcrumb"],[aria-label="Breadcrumb"]{display:none!important}</style>
   <link rel="icon" type="image/png" href="/assets/images/msv-favicon.png">
   <link rel="apple-touch-icon" href="/assets/images/msv-favicon.png">
 </head>
 <body>
 
-<!-- ═══════════════════════════════════════════════════
-     SITE NAVIGATION
-     ═══════════════════════════════════════════════════ -->
 <header class="msv-nav" role="banner">
   <div class="msv-nav__inner">
     <a href="/" class="msv-nav__logo" aria-label="My Spanish Visa — Home"><img src="/assets/images/msv-logo-white.png" alt="My Spanish Visa" height="72" style="display:block;"></a>
@@ -459,9 +121,7 @@ main {
       </ul>
     </nav>
     <a href="/book-consultation.html" class="msv-nav__cta">Start My Application →</a>
-    <button class="msv-nav__burger" aria-label="Open menu" aria-expanded="false" onclick="var m=document.querySelector('.msv-nav__mobile');var open=m.classList.toggle('open');this.setAttribute('aria-expanded',open);">
-      <span></span><span></span><span></span>
-    </button>
+    <button class="msv-nav__burger" aria-label="Open menu" aria-expanded="false" onclick="var m=document.querySelector('.msv-nav__mobile');var open=m.classList.toggle('open');this.setAttribute('aria-expanded',open);"><span></span><span></span><span></span></button>
   </div>
   <nav class="msv-nav__mobile" aria-label="Mobile navigation">
     <a href="/non-lucrative-visa-spain.html" class="msv-nav__mobile-sub">Non-Lucrative Visa</a>
@@ -470,14 +130,12 @@ main {
     <a href="/spain-visa-renewal.html">Visa Renewals</a>
     <a href="/best-visa-move-to-spain.html">Compare All Visas</a>
     <a href="/blog-index.html">Blog &amp; Guides</a>
-    <a href="/about-us.html">About Us</a>    <a href="/contact-us.html">Contact</a>
+    <a href="/about-us.html">About Us</a>
+    <a href="/contact-us.html">Contact</a>
     <a href="/book-consultation.html" class="msv-nav__mobile-cta">Start My Application →</a>
   </nav>
 </header>
 
-<!-- ═══════════════════════════════════════════════════
-     PAGE CONTENT (fragment injected here)
-     ═══════════════════════════════════════════════════ -->
 <main>
 <!-- FRAGMENT_START -->
 <script type="application/ld+json">
@@ -487,11 +145,11 @@ main {
     {
       "@type": "BlogPosting",
       "@id": "https://www.myspanishvisa.com/blog/moving-to-spain-from-usa/#blogpost",
-      "headline": "Moving to Spain from the USA: Visa Options and How to Start",
-      "description": "Complete guide for Americans moving to Spain. Visa options, requirements, taxes, healthcare, and how to start your move.",
+      "headline": "Moving to Spain from the USA: Complete 2026 Guide",
+      "description": "Everything US citizens need to know about moving to Spain in 2026 — visa options, FATCA and FBAR obligations, tax treaty rules, and a practical relocation checklist.",
       "url": "https://www.myspanishvisa.com/blog/moving-to-spain-from-usa/",
-      "datePublished": "2026-04-13",
-      "dateModified": "2026-04-13",
+      "datePublished": "2026-07-24",
+      "dateModified": "2026-07-24",
       "inLanguage": "en",
       "author": {"@type": "Organization", "name": "My Spanish Visa"},
       "publisher": {
@@ -507,7 +165,7 @@ main {
       "itemListElement": [
         {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.myspanishvisa.com"},
         {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.myspanishvisa.com/blog/"},
-        {"@type": "ListItem", "position": 3, "name": "Moving to Spain from the USA: Visa Options and How to Start", "item": "https://www.myspanishvisa.com/blog/moving-to-spain-from-usa/"}
+        {"@type": "ListItem", "position": 3, "name": "Moving to Spain from the USA: Complete 2026 Guide", "item": "https://www.myspanishvisa.com/blog/moving-to-spain-from-usa/"}
       ]
     },
     {
@@ -515,54 +173,43 @@ main {
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "Do I still owe US taxes living in Spain?",
-          "acceptedAnswer": {"@type": "Answer", "text": "Yes, US citizens must file US returns annually even abroad. Foreign Earned Income Exclusion covers first ~$126K of earned income. Use the US\u2013Spain tax treaty to avoid double-tax. You likely still owe, but treaty relief reduces it."}
+          "name": "Do US citizens need a visa to move to Spain?",
+          "acceptedAnswer": {"@type": "Answer", "text": "US citizens can enter Spain visa-free for up to 90 days in any 180-day period under the Schengen Agreement. For stays longer than 90 days, you must apply for a long-stay visa — such as the Non-Lucrative Visa or Digital Nomad Visa — before leaving the United States. You cannot apply from within Spain on a tourist entry."}
         },
         {
           "@type": "Question",
-          "name": "Which visa is easiest for Americans?",
-          "acceptedAnswer": {"@type": "Answer", "text": "Digital Nomad Visa if you earn \u20ac2,300+/month remotely. Non-Lucrative Visa if you have passive income of \u20ac27,792+/year. Both process in 4\u20136 weeks."}
+          "name": "Do Americans still have to file US taxes when living in Spain?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Yes. The United States taxes citizens on worldwide income regardless of where they live. However, the US-Spain tax treaty, the Foreign Tax Credit, and the Foreign Earned Income Exclusion can reduce or eliminate double taxation. You must also file FBAR annually if your foreign account balances exceed $10,000 in aggregate."}
         },
         {
           "@type": "Question",
-          "name": "Is healthcare really better/cheaper in Spain?",
-          "acceptedAnswer": {"@type": "Answer", "text": "Most Americans report yes on both counts. Spanish healthcare is excellent, and out-of-pocket costs are far lower. Public system is free; private is \u20ac100\u2013300/month."}
+          "name": "What is FBAR and does it apply to Americans in Spain?",
+          "acceptedAnswer": {"@type": "Answer", "text": "FBAR stands for Foreign Bank Account Report (FinCEN Form 114). If you are a US person and the combined value of your foreign financial accounts exceeds $10,000 at any point in the calendar year, you must file electronically by April 15. Most Americans living in Spain who open a Spanish bank account will trigger this requirement."}
         },
         {
           "@type": "Question",
-          "name": "Can I collect Social Security while living in Spain?",
-          "acceptedAnswer": {"@type": "Answer", "text": "Yes, Social Security is paid directly to your Spanish bank. Coordinate with Spanish tax obligations. No income limit on benefits."}
+          "name": "Where do Americans apply for a Spanish visa?",
+          "acceptedAnswer": {"@type": "Answer", "text": "You must apply at the Spanish Consulate or Consulate General with jurisdiction over your US state of residence. Spain has consulates in New York, Los Angeles, Chicago, Miami, Houston, San Francisco, and Boston, among others. You cannot apply at a consulate outside your jurisdiction."}
+        },
+        {
+          "@type": "Question",
+          "name": "What income do I need for the Non-Lucrative Visa as an American?",
+          "acceptedAnswer": {"@type": "Answer", "text": "For 2026, the Non-Lucrative Visa requires approximately €28,800 per year for the main applicant, plus around €7,200 per year for each additional dependent. This must be demonstrated through bank statements, pension records, or investment income documentation."}
+        },
+        {
+          "@type": "Question",
+          "name": "Can I work remotely for a US company while living in Spain?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Yes — the Digital Nomad Visa is designed for exactly this scenario. It allows you to live in Spain while continuing to work remotely for companies or clients based outside Spain. The visa lasts one year initially and can be renewed for up to five years in total."}
         }
       ]
     }
   ]
 }
 </script>
-<!-- Open Graph / Social -->
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://www.myspanishvisa.com/blog/moving-to-spain-from-usa/">
-<meta property="og:title" content="My Spanish Visa">
-<meta property="og:description" content="Expert Spain visa guidance for English-speaking expats.">
-<meta property="og:image" content="https://www.myspanishvisa.com/assets/images/og/og-blog-myspanishvisa.jpg">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:site_name" content="My Spanish Visa">
-<!-- Twitter Card -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:site" content="@myspanishvisa">
-<meta name="twitter:title" content="My Spanish Visa">
-<meta name="twitter:description" content="Expert Spain visa guidance for English-speaking expats.">
-<meta name="twitter:image" content="https://www.myspanishvisa.com/assets/images/og/og-blog-myspanishvisa.jpg">
 <style>
-
 html, body { max-width: 100%; overflow-x: clip; }
-.msv, .msv-nav, .msv-topbar, .msv-footer, .msv-footer-cta,
-.pls-header, .pls-body, .pls-nlv, .pls-dnv, .pls-student {
-  max-width: 100%; overflow-x: clip; position: relative;
-}
-.msv img, .msv video, .msv iframe,
-.msv-footer img, .msv-footer video, .msv-footer iframe { max-width: 100%; height: auto; }
-
+.msv, .msv-nav, .msv-topbar, .msv-footer, .msv-footer-cta { max-width: 100%; overflow-x: clip; position: relative; }
+.msv img, .msv video, .msv iframe, .msv-footer img, .msv-footer video, .msv-footer iframe { max-width: 100%; height: auto; }
 .msv *, .msv *::before, .msv *::after { box-sizing: border-box; margin: 0; padding: 0; }
 .msv {
   --navy: #0c1930; --navy-mid: #1a3a5c; --red: #be0011; --red-deep: #8c000d;
@@ -586,19 +233,9 @@ html, body { max-width: 100%; overflow-x: clip; }
 .msv ul li::before { content: ''; position: absolute; left: 0; top: 0.75rem; width: 7px; height: 7px; background: linear-gradient(135deg, var(--red), #8c000d); border-radius: 50%; }
 .msv__section { padding: 4rem 0; background: var(--white); }
 .msv__section--cream { padding: 4rem 0; background: linear-gradient(180deg, #f8f7f4 0%, #f2f4f8 100%); }
-.msv__section--dark { padding: 4rem 0; background: linear-gradient(135deg, var(--navy) 0%, #0d2240 60%, #0a1d38 100%); }
-.msv .msv__section--dark p, .msv .msv__section--dark li { color: rgba(255,255,255,0.8); }
-.msv .msv__section--dark h2 { color: var(--white); }
 .msv__hero { background: linear-gradient(135deg, #0c1930 0%, #0f2540 40%, #162d50 70%, #1a3560 100%); padding: 5rem 0 4.5rem; position: relative; }
 .msv__hero p { color: rgba(255,255,255,0.78) !important; font-size: clamp(1rem, 2.2vw, 1.15rem); max-width: 640px; margin-bottom: 2rem; }
 .msv__eyebrow { display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(190,0,17,0.15); border: 1px solid rgba(190,0,17,0.4); color: #ff6b7a; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.35rem 0.9rem; border-radius: 100px; margin-bottom: 1.5rem; }
-.msv__shimmer { background: linear-gradient(90deg, #facf39 0%, #e8b820 25%, #be0011 50%, #e8b820 75%, #facf39 100%); background-size: 400px 100%; -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-.msv__alert { border-radius: 10px; padding: 1.2rem 1.4rem; display: flex; gap: 1rem; align-items: flex-start; margin-bottom: 2rem; }
-.msv__alert--yellow { background: #fffaed; border: 1px solid #fcd34d; }
-.msv__alert--red { background: #fef2f2; border: 1px solid #fca5a5; }
-.msv__alert p { font-size: 0.9rem; color: var(--black); margin: 0; }
-.msv__cta-box { background: #f0f4f8; border: 2px solid var(--red); border-radius: 12px; padding: 1.8rem 2rem; margin: 2rem 0; }
-.msv__cta-box h3 { margin-top: 0; color: var(--navy); }
 .msv__cta-band { background: linear-gradient(135deg, var(--navy) 0%, #0d2240 60%, #0a1d38 100%); padding: 4.5rem 0; text-align: center; }
 .msv__cta-band h2 { color: var(--white) !important; display: block; }
 .msv__cta-band p { color: rgba(255,255,255,0.75) !important; max-width: 560px; margin: 1rem auto 2rem; }
@@ -606,8 +243,6 @@ html, body { max-width: 100%; overflow-x: clip; }
 .msv__btn { display: inline-block; padding: 0.85rem 2rem; font-size: 0.92rem; font-weight: 700; border-radius: 6px; text-decoration: none !important; cursor: pointer; }
 .msv .msv__btn--primary { background: linear-gradient(135deg, var(--red) 0%, #8c000d 100%); color: #ffffff !important; }
 .msv .msv__btn--outline-white { background: transparent; color: #ffffff !important; border: 1.5px solid rgba(255,255,255,0.5); }
-.msv__disclaimer { background: var(--cream); border-top: 1px solid var(--border); padding: 2rem 0; }
-.msv__disclaimer p { font-size: 0.78rem; color: var(--muted); margin: 0; }
 .msv__faq-item { border-bottom: 1px solid var(--border); padding: 1.4rem 0; }
 .msv__faq-item:last-child { border-bottom: none; }
 .msv__faq-q { font-weight: 700; color: var(--navy); font-size: 0.95rem; margin-bottom: 0.65rem; }
@@ -616,113 +251,174 @@ html, body { max-width: 100%; overflow-x: clip; }
 .msv__trust-bar-inner { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem; }
 .msv__trust-item { display: flex; align-items: center; gap: 0.45rem; font-size: 0.8rem; font-weight: 600; color: var(--navy); }
 .msv__trust-item::before { content: '✓'; color: var(--red); font-weight: 800; }
-.msv__related { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
-@media (max-width: 768px) { .msv__related { grid-template-columns: 1fr 1fr; } }
-@media (max-width: 480px) { .msv__related { grid-template-columns: 1fr; } }
-.msv__related-card { background: var(--white); border: 1px solid var(--border); border-radius: 10px; padding: 1.2rem; text-decoration: none !important; display: block; transition: box-shadow 0.2s; }
-.msv__related-card:hover { box-shadow: var(--shadow-md); }
-.msv__related-title { font-size: 0.88rem; font-weight: 700; color: var(--navy); margin-bottom: 0.25rem; }
-.msv__related-url { font-size: 0.78rem; color: var(--muted); }
 .msv__breadcrumb { padding: 0.75rem 0; font-size: 0.8rem; color: var(--muted); }
 .msv__breadcrumb a { color: var(--red); text-decoration: none; }
 .msv__content { margin-bottom: 2rem; }
 .msv__content h2 { margin-top: 2.5rem; margin-bottom: 1rem; }
 .msv__content h3 { margin-top: 1.8rem; }
-
 </style>
 <div class="msv">
 
   <section class="msv__hero">
     <div class="msv__container--narrow">
-      <div class="msv__eyebrow">EXPAT GUIDE</div>
-      <h1>Moving to Spain from the USA: Visa Options, Taxes, and Complete Guide</h1>
-      <p>Complete guide for Americans moving to Spain. Visa options, requirements, taxes, healthcare, and how to start your move.</p>
+      <div class="msv__eyebrow">MOVING GUIDE</div>
+      <h1>Moving to Spain from the USA: Complete 2026 Guide</h1>
+      <p>A practical guide for Americans planning to relocate to Spain — the right visa for your situation, the documents you need, the US tax obligations that follow you abroad, and what to do once you land.</p>
     </div>
   </section>
 
   <div class="msv__trust-bar">
     <div class="msv__trust-bar-inner">
-      <div class="msv__trust-item">Updated April 2026</div><div class="msv__trust-item">Expert reviewed</div><div class="msv__trust-item">English-speaking specialists</div><div class="msv__trust-item">Specialist guidance</div>
+      <div class="msv__trust-item">Updated July 2026</div>
+      <div class="msv__trust-item">Expert reviewed</div>
+      <div class="msv__trust-item">English-speaking specialists</div>
+      <div class="msv__trust-item">Specialist guidance</div>
     </div>
   </div>
 
   <section class="msv__section">
     <div class="msv__container--narrow">
       <div class="msv__breadcrumb">
-        <a href="/">Home</a> / <a href="/blog-index.html">Blog</a> / Moving to Spain from the USA: Visa Options and How to Start
+        <a href="/">Home</a> / <a href="/blog-index.html">Blog</a> / Moving to Spain from the USA: Complete 2026 Guide
       </div>
       <div class="msv__content">
-        <p>The USA has one of the largest expat communities in Spain. Americans are attracted by affordable living, Mediterranean lifestyle, cultural richness, and a friendly international community. However, moving to Spain as a US citizen involves specific considerations: visa requirements, US tax obligations abroad, healthcare transitions, and understanding how US status affects your Spanish residency. This guide covers everything American expats need to know.</p>
-<h2>Visa Options for US Citizens</h2>
-<p>Non-Lucrative Visa (Most Common)</p>
-<p>Popular among Americans with retirement income, investment returns, or pensions. Requires €27,792 annual passive income. No employment allowed. Indefinite renewable residency.</p>
-<p>Digital Nomad Visa</p>
-<p>Perfect for remote workers. Requires €2,300 monthly income from non-Spanish clients. One-year renewable. Many American tech workers choose this option.</p>
-<p>Work Visa</p>
-<p>If you have a job offer from a Spanish company or plan self-employment (freelancing, consulting, starting a business), the Work Visa applies. Requirements depend on employment type.</p>
-<p>Investor/Entrepreneur Visa</p>
-<p>For those starting a business or making significant investment. Less common but viable for entrepreneurs.</p>
-<h2>Critical: US Tax Obligations for American Expats</h2>
-<p>US citizenship is permanent tax liability. Even living abroad, US citizens must file US income tax returns annually on worldwide income. Key points:</p>
-<ul><li>FBAR (Foreign Bank Account Report): Required if you have &gt;$10,000 in foreign accounts combined. Failure to file carries serious penalties.
-• FATCA: Spain reports US citizens&#x27; accounts to the IRS.
-• Foreign Earned Income Exclusion: Up to $126,500 (2024) of earned income is excluded from US taxation.
-• Tax treaty: US–Spain treaty prevents double taxation on same income.
-• Spanish taxes: You&#x27;ll pay Spanish income tax if you&#x27;re a resident. Use treaty relief to avoid double-tax.
-• CONSULT A TAX ADVISOR: Essential for Americans. This is complex and mistakes are costly.</li></ul>
-<h2>Healthcare Transition</h2>
-<p>Americans lose US Medicare and health insurance when living abroad long-term. Options:
 
-1. Enroll in Spanish healthcare system (free/minimal cost with residency)
-2. Purchase private international health insurance (€100–300/month)
-3. Combination: Spanish public + private supplemental cover
+        <p>Spain is one of the top destinations for American expats — and understandably so. Lower cost of living, a Mediterranean climate, outstanding food and culture, and a pace of life that most Americans find genuinely restorative. But moving to Spain as a US citizen involves legal steps that matter, and there is one complication unique to Americans that deserves upfront attention: the United States continues to tax its citizens on worldwide income, regardless of where you live. Getting your head around that before you move is as important as choosing the right visa.</p>
 
-Spanish healthcare is excellent, and many Americans find it better than US care at a fraction of the cost. Registration with the Spanish system is straightforward once you&#x27;re a resident.</p>
-<h2>Banking and Social Security</h2>
-<p>US Social Security: Payable to Spain. Eligible Americans can collect while residing abroad. Coordinate with Spanish tax obligations.
+        <h2>Which Visa Do Americans Need to Move to Spain?</h2>
 
-Banking: Spanish banks are increasingly challenging for Americans due to FATCA compliance burden. Use international banks (Wise, Revolut) or traditional expat-friendly banks. Declare all accounts to Spanish authorities and US IRS.
+        <p>US citizens can enter Spain for up to 90 days in any 180-day rolling period without a visa under the Schengen Agreement. For any longer stay — retirement, remote work, full relocation, or study — you must obtain a long-stay Type D visa before leaving the US. There is no path to long-term status that starts after you arrive on a tourist entry. You cannot "sort it out once you are there."</p>
 
-Consider hiring a gestoría (Spanish tax/accounting firm specializing in foreigners) to handle Spanish compliance.</p>
-<h2>Why Americans Choose Spain</h2>
-<p>Cost of living (30–50% cheaper than US), healthcare quality (comparable to US but cheaper), lifestyle and culture, proximity to Europe for travel, strong American expat communities (especially Barcelona, Madrid, Valencia). Most Americans report improved quality of life on the same income.</p>
-<h2>Practical Steps for Moving</h2>
-<p>1. Determine your visa option based on income/employment
-2. Gather documents and apply through Spanish consulate in your home state
-3. Secure housing (rent first, buy later)
-4. Apply for NIE upon arrival
-5. Register as resident (empadronamiento)
-6. Register with Spanish healthcare
-7. Hire a gestoría for tax/Spanish compliance
-8. File US tax return with FBAR and address changes
-9. Notify US institutions (SSA, banks, insurance) of address change</p>
-<p>Ready to Move to Spain?</p>
-<p>Our visa specialists can guide your visa application and connect you with expat-focused tax advisors to handle your US obligations.</p>
-<p>[Start Your USA to Spain Visa Application]</p>
+        <h3>Non-Lucrative Visa (NLV)</h3>
+        <p>The NLV is the primary route for Americans who want to live in Spain without working for Spanish clients or employers. It is popular with retirees, people drawing investment income, and anyone with sufficient passive resources. For 2026, the income threshold stands at approximately €28,800 per year for the primary applicant, plus around €7,200 per year for each dependent. You must also hold comprehensive private health insurance in Spain and have a clean criminal record (FBI background check). The NLV does not permit employment with Spanish entities, though the Digital Nomad Visa now addresses remote work from abroad more cleanly.</p>
+
+        <h3>Digital Nomad Visa (DNV)</h3>
+        <p>Introduced under Spain's Startup Act, the Digital Nomad Visa is built for remote workers and freelancers earning income from companies or clients outside Spain. If you work for a US employer or serve US clients, this is worth examining closely. The visa lasts one year initially, is renewable up to five years, and gives access to the Beckham Law flat-rate tax regime — a meaningful benefit for higher earners in the first period of Spanish residency.</p>
+
+        <h3>Student Visa</h3>
+        <p>If you are enrolling at an accredited Spanish university, language school, or vocational programme, the Student Visa covers you for the duration of your studies. Limited part-time work is permitted; full-time employment is not.</p>
+
+        <h3>Work Visa</h3>
+        <p>If you have a confirmed job offer from a Spanish employer, a work permit is possible — but the employer must demonstrate that the role could not be filled by an EU national. This route is generally available only in specialised fields or where the hiring company actively pursues international recruitment.</p>
+
+        <h2>Where Americans Apply: Spanish Consulates in the US</h2>
+
+        <p>All long-stay visa applications must be submitted in person at the Spanish Consulate or Consulate General covering your US state of legal residence. You must use the consulate with jurisdiction over where you actually live — you cannot choose freely. Spain has consular offices in New York, Los Angeles, Chicago, Miami, Houston, San Francisco, and Boston, among others. Processing times typically run one to three months, so build this into your timeline well ahead of your intended move date.</p>
+
+        <h2>Document Checklist for American Applicants</h2>
+
+        <p>Requirements vary by visa type, but most US applicants need the following:</p>
+
+        <ul>
+          <li>Valid US passport — at least six months of validity beyond your intended entry date into Spain</li>
+          <li>FBI Identity History Summary (federal background check) — must be apostilled via the US Department of State and accompanied by a certified Spanish translation for most consulates</li>
+          <li>Medical certificate from a licensed physician confirming no contagious diseases, issued within 90 days of application and apostilled</li>
+          <li>Proof of financial means — typically 12 months of bank statements, pension statements, or investment account records showing income or savings above the minimum threshold</li>
+          <li>Comprehensive private health insurance policy valid in Spain — no copayments, no exclusions for pre-existing conditions (verify exact requirements with your consulate)</li>
+          <li>Proof of accommodation in Spain — a signed rental contract, property purchase deed, or similar</li>
+          <li>Completed visa application form and passport photographs meeting Spanish specifications</li>
+        </ul>
+
+        <p>All US-issued documents must carry the Hague Apostille before submission. For most documents, this comes from the Secretary of State in the issuing state; for federal documents like the FBI background check, it comes from the US State Department Authentication Office. Start document preparation early — apostille requests, certified translations, and gathering supporting records typically take four to six weeks in total.</p>
+
+        <h2>US Tax Obligations for Americans Living in Spain</h2>
+
+        <p>This is where Americans differ from every other nationality. The United States taxes its citizens on worldwide income — and moving to Spain changes nothing about that obligation. Here is what you need to understand before you go.</p>
+
+        <h3>The US-Spain Tax Treaty</h3>
+        <p>The United States and Spain have a bilateral tax treaty that allocates taxing rights between the two countries across different income types — salaries, pensions, investment returns, business profits, and so on. The treaty prevents the same income from being fully taxed twice, but it does not eliminate your US filing obligation. Once you become a Spanish tax resident (which generally happens when you spend more than 183 days in Spain in a calendar year), you will typically need to file both a US federal return (Form 1040) and a Spanish income tax return (Modelo 100).</p>
+
+        <h3>Foreign Earned Income Exclusion (FEIE)</h3>
+        <p>If you physically work in Spain and earn employment income from that work, you may be able to exclude a significant portion of it from US taxation using the Foreign Earned Income Exclusion (Form 2555). The exclusion amount is indexed to inflation — for 2026, it covers a substantial portion of most salaries. Passive income — dividends, interest, rental income — does not qualify for the FEIE.</p>
+
+        <h3>Foreign Tax Credit (FTC)</h3>
+        <p>The Foreign Tax Credit (Form 1116) lets you offset US tax liability with income taxes already paid to Spain. For income that does not qualify for the FEIE, the FTC is usually more useful. Many Americans in Spain use a combination of both mechanisms, depending on their income mix.</p>
+
+        <h3>FBAR — Foreign Bank Account Reporting</h3>
+        <p>Once you open a Spanish bank account — which you will need to do — you will almost certainly trigger the FBAR reporting requirement. If the combined value of all your foreign financial accounts exceeds $10,000 at any point during the calendar year, you must file FinCEN Form 114 electronically by April 15 each year (extensions available to October 15). This is a disclosure form, not a tax form, but the penalties for non-compliance are severe. Most Americans living in Spain file it annually.</p>
+
+        <h3>FATCA — Foreign Account Tax Compliance Act</h3>
+        <p>Under FATCA, US persons with foreign financial assets above certain thresholds must also report on Form 8938 alongside their federal return. Spanish banks are required under an intergovernmental agreement to report accounts held by US persons to the IRS. There is no practical way to be invisible to this system — the correct approach is proper reporting and the use of treaty relief to manage your liability.</p>
+
+        <h3>US Social Security in Spain</h3>
+        <p>US Social Security benefits can be received in Spain without reduction. The US-Spain tax treaty contains specific provisions on how Social Security payments are taxed between the two countries. If you draw 401(k) distributions or a private pension, the treaty provisions determine where that income is primarily taxed. Get specialist cross-border tax advice on your specific pension structure before you move — the answers depend on the type of plan and your individual circumstances.</p>
+
+        <h2>After You Arrive: Establishing Spanish Residency</h2>
+
+        <p>Your visa is the key to getting in; these in-country steps are what make your residency legally complete.</p>
+
+        <h3>Apply for Your TIE Within 30 Days</h3>
+        <p>The TIE (Tarjeta de Identidad de Extranjero) is the physical residence card that proves your legal status in Spain. You must apply within 30 days of arrival at the Oficina de Extranjeros or local police station. You will need your visa, passport, proof of Spanish address, completed application forms, and payment of the government fee (Modelo 790 code 012). A fingerprinting appointment is required.</p>
+
+        <h3>Register at Your Town Hall (Empadronamiento)</h3>
+        <p>Registering your address with the local Ayuntamiento gives you a padrón certificate — your official address record in Spain. You need it for the TIE application, healthcare access, school enrolment for children, and a wide range of administrative procedures. Bring your passport, visa, and proof of address (rental contract or property deed).</p>
+
+        <h3>Obtain Your NIE</h3>
+        <p>Your NIE (Número de Identificación de Extranjero) is your personal identification number in Spain, required for virtually every financial and legal transaction — opening a bank account, signing a lease, filing taxes, buying property. In most cases the NIE is assigned as part of your visa and TIE process, but confirm this with your consulate before departure.</p>
+
+        <h3>Open a Spanish Bank Account</h3>
+        <p>You will need a Spanish bank account for rent, utilities, and everyday life. Major banks including Santander, BBVA, and CaixaBank offer English-language services in cities with significant expat populations. Bring your passport, NIE, and proof of address. Once opened, remember: this account must be included in your annual FBAR if the balance crosses the $10,000 threshold.</p>
+
+        <h2>Common Mistakes Americans Make When Moving to Spain</h2>
+
+        <ul>
+          <li>Entering Spain on a tourist entry and attempting to obtain residency from within the country — this is not permitted and results in an overstay</li>
+          <li>Applying at the wrong consulate — jurisdiction is determined by your US state of legal residence, not your preference</li>
+          <li>Submitting documents without the Hague Apostille or without certified Spanish translations</li>
+          <li>Assuming the move eliminates US tax obligations — it does not; FBAR, FATCA, and federal returns continue</li>
+          <li>Missing the 30-day window to apply for the TIE card after arrival</li>
+          <li>Purchasing health insurance with copayments or coverage exclusions — many consulates reject these policies</li>
+          <li>Not consulting a cross-border US-Spain tax specialist before moving</li>
+        </ul>
+
+        <h2>Practical Checklist: Moving to Spain from the USA</h2>
+
+        <ul>
+          <li>Research and select the correct visa (NLV, DNV, or other)</li>
+          <li>Request your FBI Identity History Summary and apostille it through the US State Department</li>
+          <li>Obtain a medical certificate and apostille it</li>
+          <li>Gather 12 months of bank or investment statements evidencing required income</li>
+          <li>Purchase comprehensive private health insurance valid in Spain</li>
+          <li>Secure proof of Spanish accommodation</li>
+          <li>Book your consulate appointment well in advance — waiting times can be several weeks</li>
+          <li>Notify the IRS of your change of address (Form 8822) and update Social Security records</li>
+          <li>Engage a US-Spain cross-border tax specialist before you move</li>
+          <li>Within 30 days of arrival: register at your Ayuntamiento and book your TIE fingerprint appointment</li>
+          <li>Open a Spanish bank account once your NIE is confirmed</li>
+          <li>Set up your annual FBAR filing process — this is an ongoing obligation</li>
+        </ul>
+
       </div>
     </div>
   </section>
-
 
   <section class="msv__section--cream">
     <div class="msv__container--narrow">
       <h2>Frequently Asked Questions</h2>
       <div style="margin-top:2rem;">
         <div class="msv__faq-item">
-          <div class="msv__faq-q">Do I still owe US taxes living in Spain?</div>
-          <div class="msv__faq-a">Yes, US citizens must file US returns annually even abroad. Foreign Earned Income Exclusion covers first ~$126K of earned income. Use the US–Spain tax treaty to avoid double-tax. You likely still owe, but treaty relief reduces it.</div>
+          <div class="msv__faq-q">Do US citizens need a visa to move to Spain?</div>
+          <div class="msv__faq-a">US citizens can enter Spain visa-free for up to 90 days in any 180-day period under the Schengen Agreement. For stays longer than 90 days, you must apply for a long-stay visa — such as the Non-Lucrative Visa or Digital Nomad Visa — before leaving the United States. You cannot apply from within Spain on a tourist entry.</div>
         </div>
         <div class="msv__faq-item">
-          <div class="msv__faq-q">Which visa is easiest for Americans?</div>
-          <div class="msv__faq-a">Digital Nomad Visa if you earn €2,300+/month remotely. Non-Lucrative Visa if you have passive income of €27,792+/year. Both process in 4–6 weeks.</div>
+          <div class="msv__faq-q">Do Americans still have to file US taxes when living in Spain?</div>
+          <div class="msv__faq-a">Yes. The United States taxes citizens on worldwide income regardless of where they live. The US-Spain tax treaty, the Foreign Tax Credit, and the Foreign Earned Income Exclusion can significantly reduce or eliminate double taxation, but US filing obligations continue. You must also file FBAR annually if your foreign account balances exceed $10,000 in aggregate at any point during the year.</div>
         </div>
         <div class="msv__faq-item">
-          <div class="msv__faq-q">Is healthcare really better/cheaper in Spain?</div>
-          <div class="msv__faq-a">Most Americans report yes on both counts. Spanish healthcare is excellent, and out-of-pocket costs are far lower. Public system is free; private is €100–300/month.</div>
+          <div class="msv__faq-q">What is FBAR and does it apply to Americans living in Spain?</div>
+          <div class="msv__faq-a">FBAR stands for Foreign Bank Account Report (FinCEN Form 114). If you are a US person and the combined value of your foreign financial accounts exceeds $10,000 at any point during the calendar year, you must file electronically by April 15 each year. Most Americans in Spain who open a Spanish bank account will trigger this requirement. Non-filing penalties are severe.</div>
         </div>
         <div class="msv__faq-item">
-          <div class="msv__faq-q">Can I collect Social Security while living in Spain?</div>
-          <div class="msv__faq-a">Yes, Social Security is paid directly to your Spanish bank. Coordinate with Spanish tax obligations. No income limit on benefits.</div>
+          <div class="msv__faq-q">Where do Americans apply for a Spanish visa?</div>
+          <div class="msv__faq-a">You must apply at the Spanish Consulate or Consulate General with jurisdiction over your US state of legal residence. Consulates are located in New York, Los Angeles, Chicago, Miami, Houston, San Francisco, and Boston among other cities. You must use the consulate that covers the state where you actually reside — you cannot choose based on convenience.</div>
+        </div>
+        <div class="msv__faq-item">
+          <div class="msv__faq-q">What income do I need for the Non-Lucrative Visa as an American?</div>
+          <div class="msv__faq-a">For 2026, the Non-Lucrative Visa requires approximately €28,800 per year for the main applicant, plus around €7,200 per year for each dependent. This must be evidenced through bank statements, pension records, investment account statements, or similar documentation showing passive income or savings above that threshold.</div>
+        </div>
+        <div class="msv__faq-item">
+          <div class="msv__faq-q">Can I work remotely for a US company while living in Spain?</div>
+          <div class="msv__faq-a">Yes — the Digital Nomad Visa is designed for exactly this. It allows you to live in Spain while continuing to work remotely for companies or clients based outside Spain. The visa lasts one year initially and is renewable for up to five years in total. It also grants access to the Beckham Law flat-rate tax option during the first years of Spanish residency.</div>
         </div>
       </div>
     </div>
@@ -730,25 +426,20 @@ Consider hiring a gestoría (Spanish tax/accounting firm specializing in foreign
 
   <section class="msv__cta-band">
     <div class="msv__container--narrow">
-        <h2>Planning to Move to Spain?</h2>
-        <p>Our specialists guide you through the right visa from start to finish — managed entirely online, in English.</p>
-        <div class="msv__btn-group" style="justify-content:center;">
-            <a href="https://dashboard.platinumlegalspain.com/nlv" class="msv__btn msv__btn--primary">Non-Lucrative Visa</a>
-            <a href="https://dashboard.platinumlegalspain.com/dnv" class="msv__btn msv__btn--outline-white">Digital Nomad Visa</a>
-            <a href="https://dashboard.platinumlegalspain.com/student-visa" class="msv__btn msv__btn--outline-white">Student Visa</a>
-        </div>
+      <h2>Ready to Check Your Spain Visa Eligibility?</h2>
+      <p>Our English-speaking specialists guide US citizens through the right visa, documents, and application — fully online, from start to finish.</p>
+      <div class="msv__btn-group" style="justify-content:center;">
+        <a href="https://dashboard.platinumlegalspain.com/nlv" class="msv__btn msv__btn--primary">Non-Lucrative Visa</a>
+        <a href="https://dashboard.platinumlegalspain.com/dnv" class="msv__btn msv__btn--outline-white">Digital Nomad Visa</a>
+        <a href="https://dashboard.platinumlegalspain.com/student-visa" class="msv__btn msv__btn--outline-white">Student Visa</a>
+      </div>
     </div>
-</section>
   </section>
 
 </div>
 <!-- FRAGMENT_END -->
 </main>
 
-
-<!-- ═══════════════════════════════════════════════════
-     SITE FOOTER
-     ═══════════════════════════════════════════════════ -->
 <footer class="msv-footer" role="contentinfo">
   <div class="msv-footer__top">
     <div class="msv-footer__brand">
@@ -802,7 +493,6 @@ Consider hiring a gestoría (Spanish tax/accounting firm specializing in foreign
     </div>
   </div>
 </footer>
-
 
 </body>
 </html>

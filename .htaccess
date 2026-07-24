@@ -24,28 +24,22 @@ RewriteCond %{REQUEST_URI} ^/(.+)/$
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.+)/$ /$1 [R=301,L]
 
-# ── Legacy WordPress URL redirects ───────────────────────────
-Redirect 301 /non-lucrative-visa-spain/ /non-lucrative-visa-spain.html
-Redirect 301 /digital-nomad-visa-spain/ /digital-nomad-visa-spain.html
-Redirect 301 /student-visa-spain/ /student-visa-spain.html
-Redirect 301 /spain-visa-renewal/ /spain-visa-renewal.html
-Redirect 301 /blog/ /blog-index.html
-Redirect 301 /about-us/ /about-us.html
-Redirect 301 /testimonials/ /testimonials.html
-Redirect 301 /why-choose-us/ /why-choose-us.html
-Redirect 301 /contact-us/ /contact-us.html
-Redirect 301 /move-to-spain/ /move-to-spain.html
-Redirect 301 /faq/ /faq.html
-Redirect 301 /services/ /services.html
-Redirect 301 /nie-number-spain/ /nie-number-spain.html
-Redirect 301 /spain-nie-number/ /nie-number-spain.html
-Redirect 301 /tie-card-spain/ /tie-card-spain.html
-Redirect 301 /spain-tie-card/ /tie-card-spain.html
-Redirect 301 /compare-spain-visas/ /best-visa-move-to-spain.html
-Redirect 301 /spain-visa-requirements/ /spain-visa-options.html
-Redirect 301 /non-lucrative-visa-uk/ /nlv-uk.html
-Redirect 301 /digital-nomad-visa-uk/ /dnv-uk.html
-Redirect 301 /how-long-does-nlv-take/ /blog-how-long-does-nlv-take.html
+# Blog clean URLs: /blog/slug or /blog/slug/ → blog-slug.html
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^blog/([a-zA-Z0-9_-]+)/?$ blog-$1.html [L]
+
+# ── Legacy URL redirects ──────────────────────────────────────
+# Blog index — exact match only so /blog/slug/ routes fall through to the rewrite below
+RedirectMatch 301 ^/blog(/?)$               /blog-index
+# URL aliases (old or alternative slugs → canonical clean URL)
+Redirect 301 /spain-nie-number/             /nie-number-spain
+Redirect 301 /spain-tie-card/               /tie-card-spain
+Redirect 301 /compare-spain-visas/          /best-visa-move-to-spain
+Redirect 301 /spain-visa-requirements/      /spain-visa-options
+Redirect 301 /non-lucrative-visa-uk/        /nlv-uk
+Redirect 301 /digital-nomad-visa-uk/        /dnv-uk
+Redirect 301 /how-long-does-nlv-take/       /blog-how-long-does-nlv-take
 
 # ── Caching ──────────────────────────────────────────────────
 <IfModule mod_expires.c>
