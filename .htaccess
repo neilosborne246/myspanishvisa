@@ -27,7 +27,7 @@ RewriteRule ^(.+)/$ /$1 [R=301,L]
 # Blog clean URLs: /blog/slug or /blog/slug/ → blog-slug.html
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^blog/([a-zA-Z0-9_-]+)/?$ blog-$1.html [L]
+RewriteRule ^blog/([a-zA-Z0-9_-]+)/?$ /blog-$1.html [L]
 
 # ── Legacy URL redirects ──────────────────────────────────────
 # Blog index — exact match only so /blog/slug/ routes fall through to the rewrite below
