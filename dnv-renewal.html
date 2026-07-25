@@ -670,6 +670,51 @@ html, body { max-width: 100%; overflow-x: clip; }
   <link rel="apple-touch-icon" href="/assets/images/msv-favicon.png">
 </head>
 <body>
+<header class="msv-nav" role="banner">
+  <div class="msv-nav__inner">
+    <a href="/" class="msv-nav__logo" aria-label="My Spanish Visa — Home"><img src="/assets/images/msv-logo-white.png" alt="My Spanish Visa" height="72" style="display:block;"></a>
+    <nav aria-label="Main navigation">
+      <ul class="msv-nav__links">
+        <li>
+          <button class="msv-nav__dropdown-trigger" aria-haspopup="true" aria-expanded="false">Visas <span class="msv-nav__chevron">▾</span></button>
+          <div class="msv-nav__dropdown" role="menu">
+            <a href="/non-lucrative-visa-spain.html" role="menuitem"><span class="msv-nav__dropdown-icon">🏖️</span>Non-Lucrative Visa</a>
+            <a href="/digital-nomad-visa-spain.html" role="menuitem"><span class="msv-nav__dropdown-icon">💻</span>Digital Nomad Visa</a>
+            <a href="/student-visa-spain.html" role="menuitem"><span class="msv-nav__dropdown-icon">🎓</span>Student Visa</a>
+            <div class="msv-nav__dropdown-divider"></div>
+            <a href="/spain-visa-renewal.html" role="menuitem"><span class="msv-nav__dropdown-icon">🔄</span>Visa Renewals</a>
+            <a href="/best-visa-move-to-spain.html" role="menuitem"><span class="msv-nav__dropdown-icon">⚖️</span>Compare All Visas</a>
+          </div>
+        </li>
+        <li>
+          <button aria-haspopup="true" aria-expanded="false">Resources <span class="msv-nav__chevron">▾</span></button>
+          <div class="msv-nav__dropdown" role="menu">
+            <a href="/blog-index.html" role="menuitem"><span class="msv-nav__dropdown-icon">📝</span>Blog &amp; Guides</a>
+            <a href="/blog-spain-visa-document-checklist-2026.html" role="menuitem"><span class="msv-nav__dropdown-icon">✅</span>Document Checklists</a>
+            <a href="/move-to-spain.html" role="menuitem"><span class="msv-nav__dropdown-icon">🏠</span>Move to Spain Guide</a>
+            <a href="/book-consultation.html" role="menuitem"><span class="msv-nav__dropdown-icon">🧭</span>Eligibility Quiz</a>
+          </div>
+        </li>
+        <li><a href="/about-us.html">About Us</a></li>
+        <li><a href="/contact-us.html">Contact</a></li>
+      </ul>
+    </nav>
+    <a href="/book-consultation.html" class="msv-nav__cta">Start My Application →</a>
+    <button class="msv-nav__burger" aria-label="Open menu" aria-expanded="false" onclick="var m=document.querySelector('.msv-nav__mobile');var open=m.classList.toggle('open');this.setAttribute('aria-expanded',open);">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <nav class="msv-nav__mobile" aria-label="Mobile navigation">
+    <a href="/non-lucrative-visa-spain.html" class="msv-nav__mobile-sub">Non-Lucrative Visa</a>
+    <a href="/digital-nomad-visa-spain.html" class="msv-nav__mobile-sub">Digital Nomad Visa</a>
+    <a href="/student-visa-spain.html" class="msv-nav__mobile-sub">Student Visa</a>
+    <a href="/spain-visa-renewal.html">Visa Renewals</a>
+    <a href="/best-visa-move-to-spain.html">Compare All Visas</a>
+    <a href="/blog-index.html">Blog &amp; Guides</a>
+    <a href="/about-us.html">About Us</a>    <a href="/contact-us.html">Contact</a>
+    <a href="/book-consultation.html" class="msv-nav__mobile-cta">Start My Application →</a>
+  </nav>
+</header>
 
 <div class="msv">
 
@@ -1339,5 +1384,58 @@ html, body { max-width: 100%; overflow-x: clip; }
 }
 </script>
 
+<footer class="msv-footer" role="contentinfo">
+  <div class="msv-footer__top">
+    <div class="msv-footer__brand">
+      <a href="/" class="msv-footer__logo" aria-label="My Spanish Visa"><img src="/assets/images/msv-logo-white.png" alt="My Spanish Visa" height="72" style="display:block;"></a>
+      <p class="msv-footer__tagline">Specialist Spain visa &amp; residency guidance for English-speaking foreigners. A service of Platinum Legal Spain.</p>
+      <div class="msv-footer__trust">
+        <span class="msv-footer__trust-item">All English. No barriers.</span>
+        <span class="msv-footer__trust-item">Solicitors &amp; immigration specialists</span>
+        <span class="msv-footer__trust-item">100% online process</span>
+      </div>
+    </div>
+    <div>
+      <div class="msv-footer__col-title">Visas</div>
+      <ul class="msv-footer__links">
+        <li><a href="/non-lucrative-visa-spain.html">Non-Lucrative Visa</a></li>
+        <li><a href="/digital-nomad-visa-spain.html">Digital Nomad Visa</a></li>
+        <li><a href="/student-visa-spain.html">Student Visa</a></li>
+        <li><a href="/spain-visa-renewal.html">Visa Renewals</a></li>
+        <li><a href="/best-visa-move-to-spain.html">Compare All Visas</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/nlv">Apply: NLV</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/dnv">Apply: DNV</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/student-visa">Apply: Student Visa</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="msv-footer__col-title">Resources</div>
+      <ul class="msv-footer__links">
+        <li><a href="/blog-index.html">Blog &amp; Guides</a></li>
+        <li><a href="/move-to-spain.html">Move to Spain Guide</a></li>
+        <li><a href="/book-consultation.html">Which Visa Is Right for Me?</a></li>
+        <li><a href="/blog-spain-visa-document-checklist-2026.html">Document Checklists</a></li>
+        <li><a href="/spain-visa-options.html">Visa Requirements</a></li>
+        <li><a href="/nie-number-spain.html">NIE Number Guide</a></li>
+        <li><a href="/tie-card-spain.html">TIE Card Guide</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="msv-footer__col-title">Company</div>
+      <ul class="msv-footer__links">
+        <li><a href="/about-us.html">About Us</a></li>
+        <li><a href="/contact-us.html">Contact</a></li>
+        <li><a href="https://www.platinumlegalspain.com" rel="noopener">Platinum Legal Spain</a></li>
+        <li><a href="https://dashboard.platinumlegalspain.com/nlv">Client Portal</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="msv-footer__bottom">
+    <div class="msv-footer__bottom-inner">
+      <p class="msv-footer__disclaimer"><strong style="color:rgba(255,255,255,0.5);">Disclaimer:</strong> My Spanish Visa provides visa processing support and is not a law firm. Content on this site is for informational purposes only and does not constitute legal advice. Immigration rules change frequently — always verify requirements with official sources or a qualified specialist. My Spanish Visa is a trading name of Platinum Legal Spain.</p>
+      <span class="msv-footer__copyright">© 2026 My Spanish Visa. All rights reserved.</span>
+    </div>
+  </div>
+</footer>
 </body>
 </html>
