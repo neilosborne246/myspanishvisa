@@ -46,9 +46,16 @@ Redirect 301 /digital-nomad-visa-uk/        /dnv-uk
 Redirect 301 /how-long-does-nlv-take/       /blog-how-long-does-nlv-take
 
 # ── Caching ──────────────────────────────────────────────────
+# HTML: never cache — changes must appear instantly
+<FilesMatch "\.(html|htm)$">
+  Header set Cache-Control "no-cache, no-store, must-revalidate"
+  Header set Pragma "no-cache"
+  Header set Expires "0"
+</FilesMatch>
+
+# Static assets: cache aggressively (CSS/JS/images have versioned URLs or change rarely)
 <IfModule mod_expires.c>
   ExpiresActive On
-  ExpiresByType text/html "access plus 1 hour"
   ExpiresByType text/css "access plus 1 year"
   ExpiresByType application/javascript "access plus 1 year"
   ExpiresByType image/png "access plus 1 year"
