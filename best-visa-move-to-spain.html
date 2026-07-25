@@ -29,7 +29,21 @@
 /* ── iOS Safari pinch-zoom overflow safety ─────────────────────────── */
 /* Prevents horizontal overflow when users pinch-zoom on iPhone/iPad.   */
 /* Top-level (also paste into theme Custom CSS / Elementor Site Settings) */
-html, body { max-width: 100%; overflow-x: clip; background: #0c1930; }
+html, body { margin: 0; padding: 0; max-width: 100%; overflow-x: clip; background: #0c1930; }
+:root {
+  --navy: #0c1930;
+  --navy-mid: #1a3a5c;
+  --red: #be0011;
+  --red-deep: #8c000d;
+  --yellow: #facf39;
+  --cream: #f8f7f4;
+  --white: #ffffff;
+  --black: #1a1a1a;
+  --muted: #5a6478;
+  --border: #dce3ed;
+  --shadow-sm: 0 2px 8px rgba(12,25,48,0.08);
+  --shadow-md: 0 6px 24px rgba(12,25,48,0.13);
+}
 /* Scoped wrapper safety */
 .msv, .msv-nav, .msv-topbar, .msv-footer, .msv-footer-cta,
 .pls-header, .pls-body, .pls-nlv, .pls-dnv, .pls-student {
@@ -289,7 +303,7 @@ html, body { max-width: 100%; overflow-x: clip; background: #0c1930; }
   <link rel="icon" type="image/png" href="/assets/images/msv-favicon.png">
   <link rel="apple-touch-icon" href="/assets/images/msv-favicon.png">
 </head>
-<body class="msv">
+<body>
 <header class="msv-nav" role="banner">
   <div class="msv-nav__inner">
     <a href="/" class="msv-nav__logo" aria-label="My Spanish Visa — Home"><img src="/assets/images/msv-logo-white.png" alt="My Spanish Visa" height="72" style="display:block;"></a>
@@ -335,6 +349,7 @@ html, body { max-width: 100%; overflow-x: clip; background: #0c1930; }
     <a href="/book-consultation.html" class="msv-nav__mobile-cta">Start My Application →</a>
   </nav>
 </header>
+<div class="msv">
 
     <!-- Breadcrumb -->
     <div class="msv__breadcrumb">
@@ -963,8 +978,7 @@ html, body { max-width: 100%; overflow-x: clip; background: #0c1930; }
         </div>
     </section>
 
-    <!-- Disclaimer -->
-    </div>
+</div><!-- /msv -->
 
     <!-- JSON-LD Schema -->
     <script type="application/ld+json">
@@ -1064,13 +1078,13 @@ html, body { max-width: 100%; overflow-x: clip; background: #0c1930; }
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://example.com"
+          "item": "https://www.myspanishvisa.com/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "Best Visa to Move to Spain",
-          "item": "https://example.com/best-visa-move-to-spain/"
+          "item": "https://www.myspanishvisa.com/best-visa-move-to-spain/"
         }
       ]
     }
