@@ -458,7 +458,7 @@ main {
             <a href="/blog-index.html" role="menuitem"><span class="msv-nav__dropdown-icon">📝</span>Blog &amp; Guides</a>
             <a href="/blog-spain-visa-document-checklist-2026.html" role="menuitem"><span class="msv-nav__dropdown-icon">✅</span>Document Checklists</a>
             <a href="/move-to-spain.html" role="menuitem"><span class="msv-nav__dropdown-icon">🏠</span>Move to Spain Guide</a>
-            <a href="/book-consultation.html" role="menuitem"><span class="msv-nav__dropdown-icon">🧭</span>Eligibility Quiz</a>
+            <a href="/visa-eligibility-quiz" role="menuitem"><span class="msv-nav__dropdown-icon">🧭</span>Eligibility Quiz</a>
           </div>
         </li>
         <li><a href="/about-us.html">About Us</a></li>
@@ -557,7 +557,7 @@ main {
           "name": "What is the Non-Lucrative Visa and who can apply?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The Non-Lucrative Visa (Visa de No Lucrativa) is designed for people with passive income (pensions, investments, property rental). You typically need to prove monthly income of €1,260+, have private health insurance, and show no intention to work in Spain."
+            "text": "The Non-Lucrative Visa (Visa de No Lucrativa) is designed for people with passive income (pensions, investments, property rental). In 2026 you need passive income or savings of at least €2,400 a month for one person (400% of IPREM), plus €600 for each dependant, private health insurance, and no work in Spain."
           }
         },
         {
@@ -565,7 +565,7 @@ main {
           "name": "What is the Digital Nomad Visa for Spain?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The Digital Nomad Visa (Visa de Nómada Digital) lets remote workers live in Spain while employed by non-Spanish companies. It requires proof of income (usually €2,300+/month), a valid employment contract, and private health insurance."
+            "text": "The Digital Nomad Visa (Visa de Nómada Digital) lets remote workers live in Spain while employed by non-Spanish companies. In 2026 it requires income of at least €2,442 a month (200% of the monthly minimum wage), plus €916 for the first family member and €305 for each additional one, and proof of your remote work."
           }
         },
         {
@@ -581,7 +581,7 @@ main {
           "name": "Can I work in Spain on a Non-Lucrative Visa?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The Non-Lucrative Visa restricts employment in Spain. You cannot work for a Spanish employer or be self-employed in Spain. However, remote work for a non-Spanish company may be permitted in some cases. For clarification, consult an immigration lawyer."
+            "text": "No. The Non-Lucrative Visa is granted on condition that you do not carry out work or professional activity in Spain, and that includes remote work. If you want to work remotely, look at the Digital Nomad Visa."
           }
         },
         {
@@ -1108,13 +1108,13 @@ html, body { max-width: 100%; overflow-x: clip; }
         <details>
           <summary>What is the Non-Lucrative Visa and who can apply?</summary>
           <div class="msv__faq-answer">
-            <p>The Non-Lucrative Visa (Visa de No Lucrativa) is designed for people with passive income (pensions, investments, property rental). You typically need to prove monthly income of €1,260+, have private health insurance, and show no intention to work in Spain.</p>
+            <p>The Non-Lucrative Visa (Visa de No Lucrativa) is designed for people with passive income (pensions, investments, property rental). In 2026 you need passive income or savings of at least €2,400 a month for one person (400% of IPREM), plus €600 for each dependant, private health insurance, and no work in Spain.</p>
           </div>
         </details>
         <details>
           <summary>What is the Digital Nomad Visa for Spain?</summary>
           <div class="msv__faq-answer">
-            <p>The Digital Nomad Visa (Visa de Nómada Digital) lets remote workers live in Spain while employed by non-Spanish companies. It requires proof of income (usually €2,300+/month), a valid employment contract, and private health insurance.</p>
+            <p>The Digital Nomad Visa (Visa de Nómada Digital) lets remote workers live in Spain while employed by non-Spanish companies. In 2026 it requires income of at least €2,442 a month (200% of the monthly minimum wage), plus €916 for the first family member and €305 for each additional one, and proof of your remote work.</p>
           </div>
         </details>
         <details>
@@ -1126,7 +1126,7 @@ html, body { max-width: 100%; overflow-x: clip; }
         <details>
           <summary>Can I work in Spain on a Non-Lucrative Visa?</summary>
           <div class="msv__faq-answer">
-            <p>The Non-Lucrative Visa restricts employment in Spain. You cannot work for a Spanish employer or be self-employed in Spain. However, remote work for a non-Spanish company may be permitted in some cases. For clarification, consult an immigration lawyer.</p>
+            <p>No. The Non-Lucrative Visa is granted on condition that you do not carry out work or professional activity in Spain, and that includes remote work. If you want to work remotely, look at the Digital Nomad Visa.</p>
           </div>
         </details>
         <details>
@@ -1145,7 +1145,7 @@ html, body { max-width: 100%; overflow-x: clip; }
       <h2>Ready to Move to Spain?</h2>
       <p>Book a free consultation with one of our immigration experts. We'll review your specific situation and guide you through every step of the visa application process.</p>
       <div class="msv__btn-group">
-        <a href="https://dashboard.platinumlegalspain.com/nlv" class="msv__btn msv__btn--primary">Book Free Consultation</a>
+        <a href="/contact-us" class="msv__btn msv__btn--primary">Speak to Our Team — Free</a>
         <a href="/compare-spain-visas.html" class="msv__btn msv__btn--outline-white">Compare All Visas</a>
       </div>
     </div>
@@ -1338,125 +1338,93 @@ const quizApp = {
   },
 
   showResults() {
-    const nationality = this.answers.step1;
+    // 2026 bases (checked 17 Oct 2026): IPREM €600/month; SMI €1,221/month (RD 126/2026).
+    // NLV  (RD 1155/2024 art. 62.1): 400% IPREM + 100% per dependant.
+    // DNV  (consular guidance): 200% SMI + 75% first family member + 25% each further member.
+    // Student (RD 1155/2024 art. 35): 100% IPREM + 75% first family member + 50% each further member.
     const purpose = this.answers.step2;
     const step3 = this.answers.step3;
     const income = this.answers.step4;
-    const timeline = this.answers.step5;
     const family = this.answers.step6;
-
+    const extra = family === 'spouse' ? 1 : family === 'spouse-kids' ? 3 : family === 'kids-only' ? 2 : 0;
+    const eur = n => '€' + Math.round(n).toLocaleString('en-GB');
+    const nlvMin = 2400 + 600 * extra;
+    const dnvMin = 2442 + (extra > 0 ? 916 + 305 * (extra - 1) : 0);
+    const stuMin = 600 + (extra > 0 ? 450 + 300 * (extra - 1) : 0);
+    const bandTop = { 'under-1000': 1000, '1000-2000': 2000, '2000-3500': 3500, '3500-5000': 5000, 'over-5000': Infinity }[income];
+    const bandLow = { 'under-1000': 0, '1000-2000': 1000, '2000-3500': 2000, '3500-5000': 3500, 'over-5000': 5000 }[income];
+    const household = extra === 0 ? 'for one person' : 'for your household (' + (extra + 1) + ' people, as an estimate)';
+    const incomeNote = (min) => bandTop < min
+      ? 'Initial indication: the income band you selected may be below the 2026 guide of ' + eur(min) + '/month ' + household + '. Savings, other income or other details can change this, so ask our team for a specialist review.'
+      : (bandLow < min ? 'Initial indication: your income band is close to the 2026 guide of ' + eur(min) + '/month ' + household + '. Our team can review the details with you.'
+                       : 'Initial indication: your income band appears to meet the 2026 guide of ' + eur(min) + '/month ' + household + '.');
     let primaryVisa = null;
     let alternatives = [];
 
-    if (purpose === 'retire') {
+    if (purpose === 'retire' || purpose === 'property') {
       primaryVisa = {
         name: 'Non-Lucrative Visa',
         icon: '💰',
-        desc: 'Perfect for retirees and those with passive income living off pensions or investments.',
-        requirements: ['Monthly income of €1,260+', 'Private health insurance', 'Clean criminal record', 'Proof of accommodation'],
-        timeline: '30-40 days',
-        financial: '€1,260/month minimum',
-        link: '/non-lucrative-visa-spain/'
+        desc: (purpose === 'property' ? 'Buying property does not by itself give you residency. ' : '') +
+              'The Non-Lucrative Visa is for people living on pensions, savings, investments or rental income, without working. ' + incomeNote(nlvMin),
+        requirements: ['Passive income or savings (400% of IPREM, plus 100% per dependant)', 'Private health insurance', 'Criminal record certificate', 'Medical certificate'],
+        timeline: 'Consulates decide within 1 month of a complete application',
+        financial: eur(nlvMin) + '/month ' + household + ', or savings covering the year',
+        link: '/non-lucrative-visa-spain',
+        apply: 'https://dashboard.platinumlegalspain.com/nlv'
       };
     } else if (purpose === 'remote') {
-      if (step3 === 'employed') {
-        if (income === 'over-5000' || income === '3500-5000') {
-          primaryVisa = {
-            name: 'Digital Nomad Visa',
-            icon: '💻',
-            desc: 'Ideal for remote workers employed by non-Spanish companies with solid income.',
-            requirements: ['€2,300+/month income', 'Employment contract', 'Private health insurance', 'Background check'],
-            timeline: '15-30 days',
-            financial: '€2,300/month',
-            link: '/digital-nomad-visa-spain/'
-          };
-          alternatives.push({
-            name: 'Non-Lucrative Visa',
-            icon: '💰',
-            desc: 'Alternative if income qualifies.',
-            link: '/non-lucrative-visa-spain/'
-          });
-        } else {
-          primaryVisa = {
-            name: 'Non-Lucrative Visa',
-            icon: '💰',
-            desc: 'Best option for remote workers with lower income levels.',
-            requirements: ['Monthly income of €1,260+', 'Private health insurance', 'Clean criminal record'],
-            timeline: '30-40 days',
-            financial: '€1,260/month minimum',
-            link: '/non-lucrative-visa-spain/'
-          };
-          alternatives.push({
-            name: 'Digital Nomad Visa',
-            icon: '💻',
-            desc: 'Consider if you can increase income to €2,300+/month.',
-            link: '/digital-nomad-visa-spain/'
-          });
-        }
-      } else {
-        primaryVisa = {
-          name: 'Non-Lucrative Visa',
-          icon: '💰',
-          desc: 'Best option for self-employed remote workers.',
-          requirements: ['Monthly income of €1,260+', 'Private health insurance', 'Business registration'],
-          timeline: '30-40 days',
-          financial: '€1,260/month minimum',
-          link: '/non-lucrative-visa-spain/'
-        };
-      }
+      primaryVisa = {
+        name: 'Digital Nomad Visa',
+        icon: '💻',
+        desc: (step3 === 'self-employed'
+               ? 'For freelancers working mainly for clients outside Spain (at least 3 months with your clients; Spanish clients up to 20% of your work). '
+               : 'For employees working remotely for a company outside Spain (at least 3 months with your employer). ') + incomeNote(dnvMin),
+        requirements: ['Income of 200% of the monthly SMI, plus family amounts', 'Degree or 3+ years’ professional experience', 'Employer letter or client contracts', 'Health cover'],
+        timeline: 'In Spain (UGE): about 20 working days; consulates vary',
+        financial: eur(dnvMin) + '/month ' + household,
+        link: '/digital-nomad-visa-spain',
+        apply: 'https://dashboard.platinumlegalspain.com/dnv'
+      };
+      alternatives.push({
+        name: 'Why not the Non-Lucrative Visa?',
+        icon: 'ℹ️',
+        desc: 'The Non-Lucrative Visa does not allow work or professional activity in Spain, including remote work.',
+        link: '/dnv-vs-nlv'
+      });
     } else if (purpose === 'study') {
       primaryVisa = {
         name: 'Student Visa',
         icon: '🎓',
-        desc: 'For students accepted to Spanish universities and education institutions.',
-        requirements: ['Acceptance letter from Spanish institution', 'Proof of funds', 'Health insurance', 'Accommodation proof'],
-        timeline: '20-35 days',
-        financial: 'Varies by institution',
-        link: '/student-visa-spain/'
+        desc: 'For students accepted on a course at an authorised Spanish institution.' + (step3 === 'accepted' ? '' : ' You will need your acceptance letter before you apply.'),
+        requirements: ['Acceptance letter from an authorised institution', 'Proof of funds (100% of IPREM, plus family amounts)', 'Health insurance', 'Criminal record certificate if 18+'],
+        timeline: 'Varies by consulate — apply well before your course starts',
+        financial: eur(stuMin) + '/month ' + household + ' (prepaid accommodation can count)',
+        link: '/student-visa-spain',
+        apply: 'https://dashboard.platinumlegalspain.com/student-visa'
       };
     } else if (purpose === 'work') {
       primaryVisa = {
         name: 'Work Permit (Autorización de Trabajo)',
         icon: '💼',
-        desc: 'For employment in Spain. Usually sponsored by a Spanish employer.',
-        requirements: ['Job offer from Spanish employer', 'Labour market test approval', 'Qualification verification'],
-        timeline: '40-60 days',
-        financial: 'Employer-dependent',
-        link: '/eligibility-check/'
+        desc: 'For employment with a Spanish employer, who usually applies for the authorisation.',
+        requirements: ['Job offer from a Spanish employer', 'Employer-led application', 'Qualifications where required'],
+        timeline: 'Varies by procedure',
+        financial: 'Set by the job offer',
+        link: '/eligibility-check'
       };
-      alternatives.push({
-        name: 'Professional consultation recommended',
-        icon: '📋',
-        desc: 'Work permits have complex requirements. Book a consultation.',
-        link: '/book-consultation/'
-      });
     } else if (purpose === 'family') {
       primaryVisa = {
-        name: 'Family Reunification Visa',
+        name: 'Family Reunification',
         icon: '👨‍👩‍👧',
-        desc: 'To join family members already legally residing in Spain.',
-        requirements: ['Family member in Spain with residency', 'Financial support proof', 'Accommodation proof', 'Health insurance'],
-        timeline: '45-90 days',
-        financial: 'Sponsor-dependent',
-        link: '/eligibility-check/'
-      };
-      alternatives.push({
-        name: 'Professional consultation recommended',
-        icon: '📋',
-        desc: 'Family visa requirements vary. Get expert guidance.',
-        link: '/book-consultation/'
-      });
-    } else if (purpose === 'property') {
-      primaryVisa = {
-        name: 'Non-Lucrative Visa',
-        icon: '💰',
-        desc: 'Buying property alone doesn\'t grant residency, but the Non-Lucrative Visa is ideal for property owners.',
-        requirements: ['Monthly income of €1,260+', 'Private health insurance', 'Property ownership proof'],
-        timeline: '30-40 days',
-        financial: '€1,260/month minimum',
-        link: '/non-lucrative-visa-spain/'
+        desc: 'To join a family member who already lives legally in Spain.',
+        requirements: ['Family member with residence in Spain', 'Their financial means', 'Suitable housing', 'Health cover'],
+        timeline: 'Varies by procedure',
+        financial: 'Depends on your family member in Spain',
+        link: '/eligibility-check'
       };
     }
+    if (!primaryVisa) { primaryVisa = { name: 'Speak to our team', icon: '📋', desc: 'Tell us about your plans and we will explain your options.', requirements: [], timeline: '—', financial: '—', link: '/contact-us' }; }
 
     this.displayResults(primaryVisa, alternatives);
   },
@@ -1481,8 +1449,8 @@ const quizApp = {
 
     resultsContent.innerHTML = `
       <div class="msv__results-header">
-        <h2 class="msv__results-title">Your Recommended Visa</h2>
-        <p class="msv__results-subtitle">Based on your answers, here's the visa path that best suits your situation.</p>
+        <h2 class="msv__results-title">Your Initial Indication</h2>
+        <p class="msv__results-subtitle">Based on your answers, here's an initial indication of the visa route that may suit you. It is not a legal assessment — our specialists review borderline or complex situations, including savings, other income and family circumstances.</p>
       </div>
 
       <div class="msv__visa-cards">
@@ -1501,7 +1469,7 @@ const quizApp = {
               <span class="msv__visa-detail-value">${primary.timeline}</span>
             </div>
             <div class="msv__visa-detail-item">
-              <span class="msv__visa-detail-label">Financial Minimum:</span>
+              <span class="msv__visa-detail-label">2026 minimum:</span>
               <span class="msv__visa-detail-value">${primary.financial}</a>
             </div>
           </div>
@@ -1518,8 +1486,8 @@ const quizApp = {
         <h3>What's Next?</h3>
         <p>Now that you know which visa suits you best, take the next steps to start your Spanish adventure.</p>
         <div class="msv__result-actions">
-          <a href="https://dashboard.platinumlegalspain.com/nlv" class="msv__btn msv__btn--primary">Start Full Eligibility Check</a>
-          <a href="https://dashboard.platinumlegalspain.com/nlv" class="msv__btn msv__btn--outline-white">Book Free Consultation</a>
+          <a href="/contact-us" class="msv__btn msv__btn--primary">Speak to Our Team — Free</a>
+          ${primary.apply ? `<a href="${primary.apply}" class="msv__btn msv__btn--outline-white">Start Your Application</a>` : ''}
         </div>
         <button class="msv__quiz-reset" onclick="quizApp.reset()" style="margin-top: 1rem;">Take Quiz Again</button>
       </div>
