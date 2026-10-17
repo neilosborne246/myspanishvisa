@@ -1147,6 +1147,53 @@ html, body { max-width: 100%; overflow-x: clip; }
   </section>
 
   <!-- CTA BAND -->
+  <!-- ═══════════════════════════════════════════
+       OUR FEES — RENEWAL PRICING (all routes)
+  ═══════════════════════════════════════════ -->
+  <style>
+/* ── Pricing section ──────────────────────────────────────────── */
+.msv__pricing { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin: 2rem 0; }
+@media (max-width: 680px) { .msv__pricing { grid-template-columns: 1fr; } }
+.msv__price-card { border-radius: 14px; border: 2px solid var(--border); overflow: hidden; box-shadow: var(--shadow-sm); transition: box-shadow 0.2s, transform 0.2s; background: var(--white); }
+.msv__price-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+.msv__price-card--featured { border-color: var(--red); }
+.msv__price-header { padding: 1.5rem 1.75rem 1rem; background: linear-gradient(135deg, var(--navy), #1a3a5c); }
+.msv__price-header--featured { background: linear-gradient(135deg, var(--red), var(--red-deep)); }
+.msv__price-label { font-size: 0.72rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(255,255,255,0.78); margin-bottom: 0.4rem; }
+.msv__price-amount { font-size: 2.4rem; font-weight: 900; color: #ffffff !important; letter-spacing: -0.03em; line-height: 1; }
+.msv__price-sub { font-size: 0.8rem; color: rgba(255,255,255,0.7); margin-top: 0.4rem; }
+.msv__price-body { padding: 1.4rem 1.75rem 1.75rem; background: var(--white); }
+.msv__price-instalment { display: flex; justify-content: space-between; align-items: center; padding: 0.55rem 0; border-bottom: 1px solid var(--border); font-size: 0.88rem; }
+.msv__price-instalment:last-of-type { border-bottom: none; margin-bottom: 1rem; }
+.msv__price-instalment-label { color: var(--muted); }
+.msv__price-instalment-amount { font-weight: 700; color: var(--navy); }
+.msv__price-includes-title { font-size: 0.72rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; color: var(--navy); margin: 1rem 0 0.6rem; }
+.msv__price-includes { list-style: none; padding: 0; margin: 0; }
+.msv__price-includes li { font-size: 0.85rem; color: var(--muted); padding: 0.25rem 0; display: flex; gap: 0.55rem; align-items: flex-start; }
+.msv__price-includes li::before { content: '✓'; color: #27ae60; font-weight: 800; font-size: 0.85rem; flex-shrink: 0; margin-top: 0.05rem; }
+.msv__price-body .msv__btn { display: block; width: 100%; text-align: center; margin-top: 1.25rem; }
+.msv__btn--navy { background: linear-gradient(135deg, var(--navy) 0%, #0d2240 100%); color: #ffffff !important; }
+.msv__btn--navy:hover { box-shadow: 0 6px 22px rgba(12,25,48,0.4); color: #ffffff !important; }
+</style>
+  <section class="msv__section--cream" id="renewal-pricing">
+    <div class="msv__container">
+      <div class="msv__section-hd">
+        <h2>Our Renewal Fees</h2>
+        <p>Fixed prices per adult, split into 2 payments. Family discounts available. Student visas are not renewed — a student stay is extended instead.</p>
+      </div>
+      <div class="msv__pricing" style="grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));">
+        <div class="msv__price-card">
+          <div class="msv__price-header"><div class="msv__price-label">Non-Lucrative Visa — Renewal</div><div class="msv__price-amount">€699</div><div class="msv__price-sub">€300 to start · €399 on approval</div></div>
+          <div class="msv__price-body"><ul class="msv__price-includes"><li>All associated government fees included</li><li>Free appeal if rejected or administrative silence</li></ul><a href="/nlv-renewal" class="msv__btn msv__btn--navy">NLV renewal details →</a></div>
+        </div>
+        <div class="msv__price-card">
+          <div class="msv__price-header"><div class="msv__price-label">Digital Nomad Visa — Renewal</div><div class="msv__price-amount">€999</div><div class="msv__price-sub">€400 to start · €599 on approval</div></div>
+          <div class="msv__price-body"><ul class="msv__price-includes"><li><span><strong>Official Translations</strong> — All documents will be translated by a Spanish government-approved translator, with a maximum cost of €150 per person.</span></li><li>All associated government fees included</li></ul><a href="/dnv-renewal" class="msv__btn msv__btn--navy">DNV renewal details →</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="msv__cta-band">
     <div class="msv__container">
       <h2>Need Help With Your Renewal?</h2>
