@@ -534,7 +534,7 @@ main {
           "name": "What is the income requirement for Spain's Digital Nomad Visa?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The DNV requires annual income of 200% of Spain's Minimum Interpersonal Salary (SMI). For 2026, this is approximately €33,150 annually (€2,763/month gross). This requirement increases by 75% of the SMI (€12,400/year) for each additional family member."
+            "text": "The DNV requires annual income of 200% of Spain's Minimum Interprofessional Salary (SMI). For 2026, this is €2,442/month gross (€29,304 a year). This requirement increases by 75% of the SMI (€916/month) for the first family member and 25% (€305/month) for each further member."
           }
         },
         {
@@ -942,14 +942,14 @@ html, body { max-width: 100%; overflow-x: clip; }
 
       <div style="max-width: 750px;">
         <h3>The Income Threshold Explained</h3>
-        <p>The DNV income requirement is set at <strong>200% of Spain's Minimum Interpersonal Salary (SMI)</strong>. For 2026, the SMI is approximately €1,184 per month, making the requirement around €2,763/month or €33,150 annually.</p>
-        <p>For each additional family member applying alongside you, you must add <strong>75% of the SMI (approximately €12,400 annually or €1,033 monthly)</strong> to your household requirement.</p>
+        <p>The DNV income requirement is set at <strong>200% of Spain's Minimum Interprofessional Salary (SMI)</strong>. For 2026, the SMI is €1,221 per month (paid 14 times a year), making the requirement €2,442/month.</p>
+        <p>For each additional family member applying alongside you, you must add <strong>75% of the SMI (approximately €12,400 annually or €916 monthly)</strong> to your household requirement.</p>
 
         <h3 style="margin-top: 2rem;">Example Household Income Needs</h3>
         <ul>
-          <li><strong>Single applicant:</strong> €33,150/year (€2,763/month)</li>
-          <li><strong>Applicant + spouse:</strong> €45,550/year (€3,796/month)</li>
-          <li><strong>Applicant + spouse + child:</strong> €57,950/year (€4,829/month)</li>
+          <li><strong>Single applicant:</strong> €29,304/year (€2,442/month)</li>
+          <li><strong>Applicant + spouse:</strong> €40,293/year (€3,358/month)</li>
+          <li><strong>Applicant + spouse + child:</strong> €43,956/year (€3,663/month)</li>
         </ul>
 
         <p style="margin-top: 2rem; padding: 1.2rem; background: #f0f7ff; border-left: 3px solid var(--red); border-radius: 6px;"><strong>Note:</strong> Family members don't necessarily need to have independent income—they rely on the primary applicant's income to meet the household requirement. However, each person increases the total threshold.</p>
@@ -1061,7 +1061,7 @@ html, body { max-width: 100%; overflow-x: clip; }
         <details>
           <summary>What is the income requirement for Spain's Digital Nomad Visa?</summary>
           <div class="msv__faq-answer">
-            <p>The DNV requires annual income of 200% of Spain's Minimum Interpersonal Salary (SMI). For 2026, this is approximately €33,150 annually (€2,763/month gross). This requirement increases by 75% of the SMI (€12,400/year) for each additional family member.</p>
+            <p>The DNV requires annual income of 200% of Spain's Minimum Interprofessional Salary (SMI). For 2026, this is €2,442/month gross (€29,304 a year). This requirement increases by 75% of the SMI (€916/month) for the first family member and 25% (€305/month) for each further member.</p>
           </div>
         </details>
         <details>
@@ -1178,9 +1178,10 @@ const exchangeRates = {
   'CHF': 0.94
 };
 
-const smiMonthly = 1184;
+const smiMonthly = 1221; // RD 126/2026: €1,221/month in 14 payments
 const primaryRequirement = smiMonthly * 12 * 2; // 200% of SMI
-const familyRequirement = smiMonthly * 12 * 0.75; // 75% of SMI
+const familyRequirement = smiMonthly * 12 * 0.75; // 75% of SMI, first family member
+const furtherRequirement = smiMonthly * 12 * 0.25; // 25% of SMI, each further member
 
 const beckhamToggle = document.getElementById('dnv-beckham');
 beckhamToggle.addEventListener('click', function() {
@@ -1206,7 +1207,7 @@ function calculateDNV() {
   const monthlyIncomeEUR = monthlyIncome / exchangeRate;
   const annualIncomeEUR = monthlyIncomeEUR * 12;
 
-  const totalRequirementEUR = primaryRequirement + (familyRequirement * (applicants - 1));
+  const totalRequirementEUR = primaryRequirement + (applicants > 1 ? familyRequirement + furtherRequirement * (applicants - 2) : 0);
   const monthlyRequirementEUR = totalRequirementEUR / 12;
 
   const qualifies = annualIncomeEUR >= totalRequirementEUR;
@@ -1216,7 +1217,7 @@ function calculateDNV() {
   resultsDiv.classList.add('show');
 
   document.getElementById('dnv-result-icon').textContent = qualifies ? '✅' : '⚠️';
-  document.getElementById('dnv-result-title').textContent = qualifies ? 'You Qualify!' : 'Income Below Requirement';
+  document.getElementById('dnv-result-title').textContent = qualifies ? 'Meets the 2026 guide' : 'Below the 2026 guide — ask us to review';
   document.getElementById('dnv-required-eur').textContent = formatCurrency(totalRequirementEUR, 'EUR');
   document.getElementById('dnv-your-income').textContent = formatCurrency(annualIncomeEUR, 'EUR');
   document.getElementById('dnv-your-income-currency').textContent = currency;
