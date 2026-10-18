@@ -1576,7 +1576,61 @@ html, body { margin: 0; padding: 0; max-width: 100%; overflow-x: clip; backgroun
   ═══════════════════════════════════════════ -->
   <section class="msv__section msv__section--cream">
     <div class="msv__container">
-      <div class="msv__section-hd">
+      
+<div class="msvg msvg--strip">
+<style>
+.msv .msvg{margin:0 0 2.2rem;font-family:inherit}
+.msv .msvg .msvg__panel{background:var(--navy,#0c1930);color:#fff;border-radius:14px;padding:1.6rem 1.6rem 1.4rem;box-shadow:0 6px 24px rgba(12,25,48,.13)}
+.msv .msvg .msvg__panel p{color:rgba(255,255,255,.88);margin:0 0 .9rem;line-height:1.6}
+.msv .msvg p.msvg__title{color:#fff;font-weight:700;font-size:1.35rem;line-height:1.3;margin:0 0 .5rem}
+.msv .msvg .msvg__price{font-size:1.9rem;font-weight:700;color:var(--yellow,#facf39);margin:.2rem 0 .5rem;line-height:1.2}
+.msv .msvg .msvg__price span{font-size:1rem;font-weight:400;color:rgba(255,255,255,.85);line-height:1.4;display:inline-block}
+.msv .msvg .msvg__table--income th{width:58%}
+.msv .msvg .msvg__table td.msvg__num{white-space:nowrap}
+.msv .msvg ul.msvg__ticks{list-style:none;margin:0 0 1.1rem;padding:0;display:grid;gap:.35rem}
+.msv .msvg ul.msvg__ticks li{padding:0 0 0 1.5rem;position:relative;line-height:1.5;color:#fff;font-size:.97rem;margin:0}
+.msv .msvg ul.msvg__ticks li::before{content:"\2713";position:absolute;left:0;top:0;width:auto;height:auto;background:none;border-radius:0;color:var(--yellow,#facf39);font-weight:700}
+.msv .msvg .msvg__btns{display:flex;flex-wrap:wrap;gap:.6rem}
+.msv .msvg a.msvg__btn{display:inline-block;padding:.8rem 1.25rem;border-radius:8px;font-weight:700;text-decoration:none;text-align:center;line-height:1.3;border:2px solid transparent}
+.msv .msvg a.msvg__btn--red{background:var(--red,#be0011);color:#fff}
+.msv .msvg a.msvg__btn--red:hover{background:var(--red-deep,#8c000d);color:#fff}
+.msv .msvg a.msvg__btn--line{border-color:#fff;color:#fff;background:transparent}
+.msv .msvg a.msvg__btn--line:hover{background:#fff;color:var(--navy,#0c1930)}
+.msv .msvg a.msvg__btn--navy{background:var(--navy,#0c1930);color:#fff}
+.msv .msvg a.msvg__btn--navy:hover{background:var(--navy-mid,#1a3a5c);color:#fff}
+.msv .msvg .msvg__panel p.msvg__note{font-size:.85rem;color:rgba(255,255,255,.78);margin:.9rem 0 0}
+.msv .msvg .msvg__panel p.msvg__note a{color:#fff;text-decoration:underline}
+.msv .msvg .msvg__block{background:#fff;border:1px solid var(--border,#dce3ed);border-radius:14px;padding:1.5rem;margin:0 0 1.4rem}
+.msv .msvg .msvg__block h2{font-size:1.45rem;margin:0 0 .4rem;color:var(--navy,#0c1930)}
+.msv .msvg .msvg__block h3{font-size:1.1rem;margin:1.3rem 0 .6rem;color:var(--navy,#0c1930)}
+.msv .msvg .msvg__block p{line-height:1.65;margin:0 0 .8rem;color:var(--black,#1a1a1a);font-weight:400}
+.msv .msvg table.msvg__table{width:100%;border-collapse:collapse;font-size:.95rem;margin:.4rem 0 1rem;display:table}
+.msv .msvg .msvg__table th,.msv .msvg .msvg__table td{text-align:left;vertical-align:top;padding:.65rem .7rem;border-bottom:1px solid var(--border,#dce3ed);color:var(--black,#1a1a1a);background:none;font-weight:400}
+.msv .msvg .msvg__table th{width:38%;color:var(--navy,#0c1930);font-weight:700}
+.msv .msvg ul.msvg__check li{color:var(--black,#1a1a1a);line-height:1.6;font-weight:400}
+.msv .msvg ul.msvg__links{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:.6rem;list-style:none;padding:0;margin:.4rem 0 0}
+.msv .msvg ul.msvg__links li{padding:0;margin:0}
+.msv .msvg ul.msvg__links li::before{display:none}
+.msv .msvg ul.msvg__links a{display:block;padding:.75rem .9rem;border:1px solid var(--border,#dce3ed);border-radius:8px;text-decoration:none;color:var(--navy,#0c1930);font-weight:600;background:var(--cream,#f8f7f4)}
+.msv .msvg ul.msvg__links a:hover{border-color:var(--red,#be0011)}
+.msv .msvg p.msvg__small{font-size:.85rem;color:var(--muted,#5a6478)}
+@media (max-width:600px){.msv .msvg .msvg__panel,.msv .msvg .msvg__block{padding:1.2rem}.msv .msvg a.msvg__btn{width:100%}.msv .msvg .msvg__table th{width:44%}}
+.msv .msvg .msvg__cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:.8rem;margin:.4rem 0 1rem}
+.msv .msvg .msvg__card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.2);border-radius:10px;padding:1rem}
+.msv .msvg .msvg__card p{margin:0 0 .6rem}
+.msv .msvg .msvg__block .msvg__card{background:var(--cream,#f8f7f4);border-color:var(--border,#dce3ed)}
+.msv .msvg ol.msvg__steps{margin:.3rem 0 1rem;padding-left:1.3rem;line-height:1.6}
+.msv .msvg ol.msvg__steps li{margin:0 0 .5rem;color:var(--black,#1a1a1a);font-weight:400;padding:0}
+.msv .msvg ol.msvg__steps li::before{display:none}
+.msv .msvg .msvg__strip{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.8rem;background:var(--cream,#f8f7f4);border:1px solid var(--border,#dce3ed);border-left:4px solid var(--red,#be0011);border-radius:10px;padding:1rem 1.2rem}
+.msv .msvg .msvg__table--cmp{table-layout:fixed}
+.msv .msvg .msvg__table--cmp th{width:auto}
+.msv .msvg .msvg__table--cmp tbody th{width:22%}
+.msv .msvg .msvg__strip p{margin:0;flex:1 1 280px;color:var(--black,#1a1a1a);line-height:1.55}
+</style><div class="msvg__strip"><p><strong>DNV health insurance:</strong> the UGE does not accept travel insurance, refund-only policies, co-payments or waiting periods. Get a compliant Sanitas quote before you apply.</p>
+<div class="msvg__btns"><a href="https://spanish-healthinsurance.com/get-a-quote/?utm_source=myspanishvisa&amp;utm_medium=referral&amp;utm_campaign=visa_health_insurance&amp;utm_content=digital-nomad-visa-spain" class="msvg__btn msvg__btn--red">Get a Sanitas Quote</a><a href="/spain-visa-health-insurance" class="msvg__btn msvg__btn--navy">Compare Requirements</a></div></div>
+</div>
+<div class="msv__section-hd">
         <h2>Frequently Asked Questions</h2>
         <p>The most common questions about the Spain Digital Nomad Visa</p>
       </div>

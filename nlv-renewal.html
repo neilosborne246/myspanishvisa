@@ -868,7 +868,69 @@ html, body { max-width: 100%; overflow-x: clip; }
   <!-- ============ HOW NLV RENEWAL WORKS ============ -->
   <section class="msv__section">
     <div class="msv__container--narrow">
-      <div class="msv__section-hd">
+      
+<div class="msvg msvg--offer">
+<style>
+.msv .msvg{margin:0 0 2.2rem;font-family:inherit}
+.msv .msvg .msvg__panel{background:var(--navy,#0c1930);color:#fff;border-radius:14px;padding:1.6rem 1.6rem 1.4rem;box-shadow:0 6px 24px rgba(12,25,48,.13)}
+.msv .msvg .msvg__panel p{color:rgba(255,255,255,.88);margin:0 0 .9rem;line-height:1.6}
+.msv .msvg p.msvg__title{color:#fff;font-weight:700;font-size:1.35rem;line-height:1.3;margin:0 0 .5rem}
+.msv .msvg .msvg__price{font-size:1.9rem;font-weight:700;color:var(--yellow,#facf39);margin:.2rem 0 .5rem;line-height:1.2}
+.msv .msvg .msvg__price span{font-size:1rem;font-weight:400;color:rgba(255,255,255,.85);line-height:1.4;display:inline-block}
+.msv .msvg .msvg__table--income th{width:58%}
+.msv .msvg .msvg__table td.msvg__num{white-space:nowrap}
+.msv .msvg ul.msvg__ticks{list-style:none;margin:0 0 1.1rem;padding:0;display:grid;gap:.35rem}
+.msv .msvg ul.msvg__ticks li{padding:0 0 0 1.5rem;position:relative;line-height:1.5;color:#fff;font-size:.97rem;margin:0}
+.msv .msvg ul.msvg__ticks li::before{content:"\2713";position:absolute;left:0;top:0;width:auto;height:auto;background:none;border-radius:0;color:var(--yellow,#facf39);font-weight:700}
+.msv .msvg .msvg__btns{display:flex;flex-wrap:wrap;gap:.6rem}
+.msv .msvg a.msvg__btn{display:inline-block;padding:.8rem 1.25rem;border-radius:8px;font-weight:700;text-decoration:none;text-align:center;line-height:1.3;border:2px solid transparent}
+.msv .msvg a.msvg__btn--red{background:var(--red,#be0011);color:#fff}
+.msv .msvg a.msvg__btn--red:hover{background:var(--red-deep,#8c000d);color:#fff}
+.msv .msvg a.msvg__btn--line{border-color:#fff;color:#fff;background:transparent}
+.msv .msvg a.msvg__btn--line:hover{background:#fff;color:var(--navy,#0c1930)}
+.msv .msvg a.msvg__btn--navy{background:var(--navy,#0c1930);color:#fff}
+.msv .msvg a.msvg__btn--navy:hover{background:var(--navy-mid,#1a3a5c);color:#fff}
+.msv .msvg .msvg__panel p.msvg__note{font-size:.85rem;color:rgba(255,255,255,.78);margin:.9rem 0 0}
+.msv .msvg .msvg__panel p.msvg__note a{color:#fff;text-decoration:underline}
+.msv .msvg .msvg__block{background:#fff;border:1px solid var(--border,#dce3ed);border-radius:14px;padding:1.5rem;margin:0 0 1.4rem}
+.msv .msvg .msvg__block h2{font-size:1.45rem;margin:0 0 .4rem;color:var(--navy,#0c1930)}
+.msv .msvg .msvg__block h3{font-size:1.1rem;margin:1.3rem 0 .6rem;color:var(--navy,#0c1930)}
+.msv .msvg .msvg__block p{line-height:1.65;margin:0 0 .8rem;color:var(--black,#1a1a1a);font-weight:400}
+.msv .msvg table.msvg__table{width:100%;border-collapse:collapse;font-size:.95rem;margin:.4rem 0 1rem;display:table}
+.msv .msvg .msvg__table th,.msv .msvg .msvg__table td{text-align:left;vertical-align:top;padding:.65rem .7rem;border-bottom:1px solid var(--border,#dce3ed);color:var(--black,#1a1a1a);background:none;font-weight:400}
+.msv .msvg .msvg__table th{width:38%;color:var(--navy,#0c1930);font-weight:700}
+.msv .msvg ul.msvg__check li{color:var(--black,#1a1a1a);line-height:1.6;font-weight:400}
+.msv .msvg ul.msvg__links{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:.6rem;list-style:none;padding:0;margin:.4rem 0 0}
+.msv .msvg ul.msvg__links li{padding:0;margin:0}
+.msv .msvg ul.msvg__links li::before{display:none}
+.msv .msvg ul.msvg__links a{display:block;padding:.75rem .9rem;border:1px solid var(--border,#dce3ed);border-radius:8px;text-decoration:none;color:var(--navy,#0c1930);font-weight:600;background:var(--cream,#f8f7f4)}
+.msv .msvg ul.msvg__links a:hover{border-color:var(--red,#be0011)}
+.msv .msvg p.msvg__small{font-size:.85rem;color:var(--muted,#5a6478)}
+@media (max-width:600px){.msv .msvg .msvg__panel,.msv .msvg .msvg__block{padding:1.2rem}.msv .msvg a.msvg__btn{width:100%}.msv .msvg .msvg__table th{width:44%}}
+.msv .msvg .msvg__cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:.8rem;margin:.4rem 0 1rem}
+.msv .msvg .msvg__card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.2);border-radius:10px;padding:1rem}
+.msv .msvg .msvg__card p{margin:0 0 .6rem}
+.msv .msvg .msvg__block .msvg__card{background:var(--cream,#f8f7f4);border-color:var(--border,#dce3ed)}
+.msv .msvg ol.msvg__steps{margin:.3rem 0 1rem;padding-left:1.3rem;line-height:1.6}
+.msv .msvg ol.msvg__steps li{margin:0 0 .5rem;color:var(--black,#1a1a1a);font-weight:400;padding:0}
+.msv .msvg ol.msvg__steps li::before{display:none}
+.msv .msvg .msvg__strip{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.8rem;background:var(--cream,#f8f7f4);border:1px solid var(--border,#dce3ed);border-left:4px solid var(--red,#be0011);border-radius:10px;padding:1rem 1.2rem}
+.msv .msvg .msvg__table--cmp{table-layout:fixed}
+.msv .msvg .msvg__table--cmp th{width:auto}
+.msv .msvg .msvg__table--cmp tbody th{width:22%}
+.msv .msvg .msvg__strip p{margin:0;flex:1 1 280px;color:var(--black,#1a1a1a);line-height:1.55}
+</style>
+<div class="msvg__panel">
+<p class="msvg__title">Non-Lucrative Visa renewal: we prepare and file it with you</p>
+<div class="msvg__price">€699 <span>for one adult, paid in stages</span></div>
+<p>€300 to get started and €399 only when your renewal is approved.</p>
+<ul class="msvg__ticks"><li>Renewal checklist matched to your permit and household</li><li>Income evidence checked against the 2026 figures before you file</li><li>Health insurance certificate checked before submission</li><li>We prepare, review and file your renewal with you</li></ul>
+<div class="msvg__btns"><a href="https://dashboard.platinumlegalspain.com/nlv-renewal" class="msvg__btn msvg__btn--red">Start My NLV Renewal</a><a href="https://spanish-healthinsurance.com/get-a-quote/?utm_source=myspanishvisa&amp;utm_medium=referral&amp;utm_campaign=visa_health_insurance&amp;utm_content=nlv-renewal" class="msvg__btn msvg__btn--line">Get a Sanitas Quote for My Renewal</a></div>
+<p class="msvg__note">You only need a new policy if your current one no longer qualifies. Health insurance quotes come from Spanish Health Insurance, an exclusive Sanitas insurance agent. <a href="/nlv-pricing">See full NLV pricing</a>.</p>
+<p class="msvg__note">Renewing as a couple or with children? We give each family a personalised quote — <a href="/contact-us">speak to our team</a>.</p>
+</div>
+</div>
+<div class="msv__section-hd">
         <h2>How NLV Renewal Works</h2>
         <p>The NLV renewal process is fundamentally different from your initial application. Here's what changes and why it matters.</p>
       </div>
@@ -1475,7 +1537,25 @@ html, body { max-width: 100%; overflow-x: clip; }
   <!-- ============ FAQ ACCORDION ============ -->
   <section class="msv__section">
     <div class="msv__container--narrow">
-      <div class="msv__section-hd">
+      
+<div class="msvg msvg--costs">
+<div class="msvg__block">
+<h2>NLV renewal checklist, fees and health cover</h2>
+<p>What you pay, what you need to file and whether your health insurance needs to change. Your immigration office can ask for more, so we check your file against its requirements before submission.</p>
+<h3>What it costs</h3>
+<table class="msvg__table"><tbody><tr><th scope="row">Our NLV renewal service</th><td>€699 for one adult — €300 to get started and €399 only when your renewal is approved</td></tr><tr><th scope="row">Spouse, partner and children</th><td>Personalised family quote — <a href="/contact-us">ask our team</a></td></tr><tr><th scope="row">Government renewal fee</th><td>Paid to the authorities with your renewal (Modelo 790, código 052); we confirm the amount when you file</td></tr><tr><th scope="row">Health insurance</th><td>Keep your current policy if it still qualifies; otherwise priced on a personalised Sanitas quote</td></tr></tbody></table>
+<h3>Renewal checklist</h3>
+<ul class="msvg__check"><li>Renewal application form, your passport and your current TIE card</li><li>Proof of income for the renewal: at least €2,400 a month (€28,800 a year) for you, plus €600 a month for each family member</li><li>Health insurance in force for the new period — full cover, no co-payments, no waiting periods — usually your existing policy with an updated certificate</li><li>Proof that children of compulsory school age are enrolled at school</li><li>Evidence that you are up to date with Spanish tax obligations, where they apply to you</li><li>Renewal fee form (Modelo 790, código 052)</li></ul>
+<p class="msvg__small">Apply in the 60 days before your permit expires. You can still apply up to 90 days after it expires, but a late application can lead to a fine, so we start your file well before the deadline.</p>
+<h3>Health insurance at renewal: do you need a new policy?</h3>
+<p>Usually not. If your current policy runs through the new permit period and still has full cover in Spain, no co-payments and no waiting periods, renew it with your insurer and ask for an updated certificate that names everyone on the renewal. You need a new quote if your policy has lapsed or ends too early, includes co-payments, does not match the certificate wording, or you are adding a family member.</p>
+<div class="msvg__btns"><a href="https://dashboard.platinumlegalspain.com/nlv-renewal" class="msvg__btn msvg__btn--red">Start My NLV Renewal</a><a href="https://spanish-healthinsurance.com/get-a-quote/?utm_source=myspanishvisa&amp;utm_medium=referral&amp;utm_campaign=visa_health_insurance&amp;utm_content=nlv-renewal" class="msvg__btn msvg__btn--navy">Get a Sanitas Quote for My Renewal</a></div>
+<p class="msvg__small">Health insurance quotes come from Spanish Health Insurance, an exclusive Sanitas insurance agent.</p>
+<h3>Useful next steps</h3>
+<ul class="msvg__links"><li><a href="/nlv-renewal-income-requirements">NLV renewal income</a></li><li><a href="/nlv-renewal-health-insurance">NLV renewal health insurance</a></li><li><a href="/nlv-pricing">NLV service pricing</a></li><li><a href="/spain-visa-renewal">All residence renewals</a></li><li><a href="/spain-visa-health-insurance">Health insurance for Spain visas</a></li><li><a href="/contact-us">Speak to our team</a></li></ul>
+</div>
+</div>
+<div class="msv__section-hd">
         <h2>Renewal FAQs</h2>
         <p>Quick answers to the questions we hear most often from NLV holders preparing to renew.</p>
       </div>

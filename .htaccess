@@ -35,6 +35,9 @@ RewriteRule ^(?:[^/]+\.(?:md|py|sh|docx)|_headers|_redirects|\.DS_Store)$ - [R=4
 
 # 5) PDFs (dnv-document-checklist, moving-to-spain-checklist, nlv-document-checklist) are kept and still served.
 
+# Student "renewal" is an extension of stay: one page owns the intent
+RewriteRule ^student-visa-spain-renewal(?:\.html)?/?$ https://www.myspanishvisa.com/student-visa-spain-extension [R=301,L]
+
 # Redirect .html extension URLs to clean URL (must come before clean-URL serve rule)
 RewriteCond %{THE_REQUEST} ^[A-Z]+\s/([^?\s]+)\.html[\s?]
 RewriteRule ^ /%1 [R=301,L]
