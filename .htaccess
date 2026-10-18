@@ -14,6 +14,27 @@ RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 RewriteCond %{HTTP_HOST} !^www\. [NC]
 RewriteRule ^ https://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
+# ── Removed non-site files (archived on branch archive/served-copies-20261017) ──
+# 1) Copied myspanishnlv.com pages → their live originals, path for path (301). All 378 verified live (titles match).
+#    Two originals redirect on their own site, so point straight at the final URL.
+RewriteRule ^Documents/Claude/Projects/My\ Spanish\ NLV/blog/183-day-rule-spain-tax(?:\.html)?$ https://myspanishnlv.com/blog/183-day-rule-spain-tax-status.html [R=301,L]
+RewriteRule ^Documents/Claude/Projects/My\ Spanish\ NLV/blog/nlv-renewal-documents-2026-checklist(?:\.html)?$ https://myspanishnlv.com/blog/nlv-renewal-documents-2026.html [R=301,L]
+#    One original has an accented slug; send it percent-encoded.
+RewriteRule ^Documents/Claude/Projects/My\ Spanish\ NLV/blog/spain-nlv-padr.+n-registration-requirements(?:\.html)?$ https://myspanishnlv.com/blog/spain-nlv-padr\%C3\%B3n-registration-requirements.html [R=301,L,NE]
+#    Page URLs = .html or no extension; content-recovery/ is excluded (no originals) and falls through to 410.
+RewriteRule ^Documents/Claude/Projects/My\ Spanish\ NLV/(?!content-recovery/)((?:[^/]+/)*[^/.]+)(?:\.html)?$ https://myspanishnlv.com/$1.html [R=301,L,NE]
+
+# 2) Copied myspanishdnv.com homepage → the original (its own canonical).
+RewriteRule ^Documents/Claude/Projects/My\ Spanish\ DNV/index(?:\.html)?$ https://myspanishdnv.com/ [R=301,L]
+
+# 3) Everything else in the copied/draft folders: 410 Gone.
+RewriteRule ^(?:Documents|Blog\ Posts|Social\ Posts)(?:/|$) - [G,L]
+
+# 4) Internal working files at the root: 404 (never meant to be public).
+RewriteRule ^(?:[^/]+\.(?:md|py|sh|docx)|_headers|_redirects|\.DS_Store)$ - [R=404,L]
+
+# 5) PDFs (dnv-document-checklist, moving-to-spain-checklist, nlv-document-checklist) are kept and still served.
+
 # Redirect .html extension URLs to clean URL (must come before clean-URL serve rule)
 RewriteCond %{THE_REQUEST} ^[A-Z]+\s/([^?\s]+)\.html[\s?]
 RewriteRule ^ /%1 [R=301,L]
