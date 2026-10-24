@@ -313,7 +313,7 @@ body {
   margin: 0 auto;
   padding: 4rem 1.5rem 3rem;
   display: grid;
-  grid-template-columns: 280px 1fr 1fr 1fr;
+  grid-template-columns: 260px repeat(4, 1fr);
   gap: 3rem;
 }
 @media (max-width: 900px) {
@@ -431,6 +431,7 @@ main {
 <style>.msv-bc,.msv__breadcrumb,nav.breadcrumb,[aria-label="breadcrumb"],[aria-label="Breadcrumb"]{display:none!important}</style>
   <link rel="icon" type="image/png" href="/assets/images/msv-favicon.png">
   <link rel="apple-touch-icon" href="/assets/images/msv-favicon.png">
+<style>/* Health Insurance menu: compact spacing between 900 and 1100px; keep page list styles out of header/footer */@media (max-width:1100px){.msv-nav__links > li > a,.msv-nav__links > li > button{padding:.5rem .4rem}.msv-nav__cta{padding-left:.85rem;padding-right:.85rem}}.msv .msv-nav ul li,.msv .msv-footer ul li{padding:0;margin:0;font-size:inherit;color:inherit}.msv .msv-nav ul li::before,.msv .msv-footer ul li::before{content:none;display:none}</style>
 </head>
 <body>
 
@@ -451,6 +452,23 @@ main {
             <div class="msv-nav__dropdown-divider"></div>
             <a href="/spain-visa-renewal.html" role="menuitem"><span class="msv-nav__dropdown-icon">🔄</span>Visa Renewals</a>
             <a href="/best-visa-move-to-spain.html" role="menuitem"><span class="msv-nav__dropdown-icon">⚖️</span>Compare All Visas</a>
+          </div>
+        </li>
+        <li>
+          <button aria-haspopup="true" aria-expanded="false">Health Insurance <span class="msv-nav__chevron">▾</span></button>
+          <div class="msv-nav__dropdown" role="menu" style="min-width:300px">
+            <div class="msv-nav__dropdown-label" style="padding:.55rem 1rem .25rem;font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#7a8499">Private health insurance</div>
+            <a href="/private-health-insurance-spain" role="menuitem"><span class="msv-nav__dropdown-icon">🩺</span>Private Health Insurance in Spain</a>
+            <a href="/health-insurance-eu-citizens-spain" role="menuitem"><span class="msv-nav__dropdown-icon">🇪🇺</span>EU Citizens</a>
+            <a href="/blog/family-health-insurance-spain/" role="menuitem"><span class="msv-nav__dropdown-icon">👨‍👩‍👧</span>Families &amp; Couples</a>
+            <a href="/blog/health-insurance-spain-for-retirees/" role="menuitem"><span class="msv-nav__dropdown-icon">🌅</span>Retirees</a>
+            <div class="msv-nav__dropdown-divider"></div>
+            <div class="msv-nav__dropdown-label" style="padding:.55rem 1rem .25rem;font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#7a8499">Visa health insurance</div>
+            <a href="/spain-visa-health-insurance" role="menuitem"><span class="msv-nav__dropdown-icon">🛂</span>All Visas: Requirements</a>
+            <a href="/nlv-health-insurance" role="menuitem"><span class="msv-nav__dropdown-icon">🏖️</span>Non-Lucrative Visa</a>
+            <a href="/dnv-health-insurance" role="menuitem"><span class="msv-nav__dropdown-icon">💻</span>Digital Nomad Visa</a>
+            <a href="/student-visa-spain-health-insurance" role="menuitem"><span class="msv-nav__dropdown-icon">🎓</span>Student Visa</a>
+            <a href="/health-insurance-quote" role="menuitem" style="margin:.4rem .6rem .5rem;justify-content:center;background:#be0011;color:#fff;border-radius:6px;font-weight:700">Get a Health Insurance Quote →</a>
           </div>
         </li>
         <li>
@@ -475,6 +493,13 @@ main {
     <a href="/non-lucrative-visa-spain.html" class="msv-nav__mobile-sub">Non-Lucrative Visa</a>
     <a href="/digital-nomad-visa-spain.html" class="msv-nav__mobile-sub">Digital Nomad Visa</a>
     <a href="/student-visa-spain.html" class="msv-nav__mobile-sub">Student Visa</a>
+    <a href="/private-health-insurance-spain">Health Insurance</a>
+    <a href="/private-health-insurance-spain" class="msv-nav__mobile-sub">Private Health Insurance in Spain</a>
+    <a href="/health-insurance-eu-citizens-spain" class="msv-nav__mobile-sub">EU Citizens</a>
+    <a href="/blog/family-health-insurance-spain/" class="msv-nav__mobile-sub">Families &amp; Couples</a>
+    <a href="/blog/health-insurance-spain-for-retirees/" class="msv-nav__mobile-sub">Retirees</a>
+    <a href="/spain-visa-health-insurance" class="msv-nav__mobile-sub">Visa Health Insurance</a>
+    <a href="/health-insurance-quote" class="msv-nav__mobile-sub" style="color:var(--yellow,#facf39);font-weight:700">Get a Health Insurance Quote →</a>
     <a href="/spain-visa-renewal.html">Visa Renewals</a>
     <a href="/best-visa-move-to-spain.html">Compare All Visas</a>
     <a href="/blog-index.html">Blog &amp; Guides</a>
@@ -1309,6 +1334,17 @@ html, body { max-width: 100%; overflow-x: clip; }
         <li><a href="https://dashboard.platinumlegalspain.com/nlv">Apply: NLV</a></li>
         <li><a href="https://dashboard.platinumlegalspain.com/dnv">Apply: DNV</a></li>
         <li><a href="https://dashboard.platinumlegalspain.com/student-visa">Apply: Student Visa</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="msv-footer__col-title">Health Insurance</div>
+      <ul class="msv-footer__links">
+        <li><a href="/private-health-insurance-spain">Private Health Insurance</a></li>
+        <li><a href="/health-insurance-eu-citizens-spain">EU Citizens</a></li>
+        <li><a href="/blog/family-health-insurance-spain/">Families &amp; Couples</a></li>
+        <li><a href="/blog/health-insurance-spain-for-retirees/">Retirees</a></li>
+        <li><a href="/spain-visa-health-insurance">Visa Health Insurance</a></li>
+        <li><a href="/health-insurance-quote">Get a Quote</a></li>
       </ul>
     </div>
     <div>
