@@ -590,7 +590,7 @@ main {
           "name": "What is the Digital Nomad Visa for Spain?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The Digital Nomad Visa (Visa de Nómada Digital) lets remote workers live in Spain while employed by non-Spanish companies. In 2026 it requires income of at least €2,442 a month (200% of the monthly minimum wage), plus €916 for the first family member and €305 for each additional one, and proof of your remote work."
+            "text": "The Digital Nomad Visa (Visa de Nómada Digital) lets remote workers live in Spain while employed by non-Spanish companies. For 2026, plan on at least €2,849 a month for one applicant, with a higher amount if family members apply with you; you also need proof of your remote work."
           }
         },
         {
@@ -1139,7 +1139,7 @@ html, body { max-width: 100%; overflow-x: clip; }
         <details>
           <summary>What is the Digital Nomad Visa for Spain?</summary>
           <div class="msv__faq-answer">
-            <p>The Digital Nomad Visa (Visa de Nómada Digital) lets remote workers live in Spain while employed by non-Spanish companies. In 2026 it requires income of at least €2,442 a month (200% of the monthly minimum wage), plus €916 for the first family member and €305 for each additional one, and proof of your remote work.</p>
+            <p>The Digital Nomad Visa (Visa de Nómada Digital) lets remote workers live in Spain while employed by non-Spanish companies. For 2026, plan on at least €2,849 a month for one applicant, with a higher amount if family members apply with you; you also need proof of your remote work.</p>
           </div>
         </details>
         <details>
@@ -1374,7 +1374,7 @@ const quizApp = {
     const extra = family === 'spouse' ? 1 : family === 'spouse-kids' ? 3 : family === 'kids-only' ? 2 : 0;
     const eur = n => '€' + Math.round(n).toLocaleString('en-GB');
     const nlvMin = 2400 + 600 * extra;
-    const dnvMin = 2442 + (extra > 0 ? 916 + 305 * (extra - 1) : 0);
+    const dnvMin = Math.ceil((34188 + (extra > 0 ? 12820.5 + 4273.5 * (extra - 1) : 0)) / 12); // 2026 planning basis: 200% of the annual SMI (€17,094) over 12 months
     const stuMin = 600 + (extra > 0 ? 450 + 300 * (extra - 1) : 0);
     const bandTop = { 'under-1000': 1000, '1000-2000': 2000, '2000-3500': 3500, '3500-5000': 5000, 'over-5000': Infinity }[income];
     const bandLow = { 'under-1000': 0, '1000-2000': 1000, '2000-3500': 2000, '3500-5000': 3500, 'over-5000': 5000 }[income];
@@ -1383,6 +1383,11 @@ const quizApp = {
       ? 'Initial indication: the income band you selected may be below the 2026 guide of ' + eur(min) + '/month ' + household + '. Savings, other income or other details can change this, so ask our team for a specialist review.'
       : (bandLow < min ? 'Initial indication: your income band is close to the 2026 guide of ' + eur(min) + '/month ' + household + '. Our team can review the details with you.'
                        : 'Initial indication: your income band appears to meet the 2026 guide of ' + eur(min) + '/month ' + household + '.');
+    const dnvNote = (min) => (bandTop < min
+      ? 'Initial indication: below the planning figure. The income band you selected may be below our 2026 planning figure of ' + eur(min) + '/month ' + household + '. Other documented work income or details can change this, so ask our team for a specialist review.'
+      : (bandLow < min ? 'Initial indication: close to the planning figure of ' + eur(min) + '/month ' + household + '. Our team can review the details with you.'
+                       : 'Initial indication: meets the planning figure of ' + eur(min) + '/month ' + household + '.'))
+      + ' The threshold that applies depends on your filing route (the UGE and consulates cite €2,442 a month for one person), so confirm it with us before you apply.';
     let primaryVisa = null;
     let alternatives = [];
 
@@ -1404,10 +1409,11 @@ const quizApp = {
         icon: '💻',
         desc: (step3 === 'self-employed'
                ? 'For freelancers working mainly for clients outside Spain (at least 3 months with your clients; Spanish clients up to 20% of your work). '
-               : 'For employees working remotely for a company outside Spain (at least 3 months with your employer). ') + incomeNote(dnvMin),
-        requirements: ['Income of 200% of the monthly SMI, plus family amounts', 'Degree or 3+ years’ professional experience', 'Employer letter or client contracts', 'Health cover'],
+               : 'For employees working remotely for a company outside Spain (at least 3 months with your employer). ') + dnvNote(dnvMin),
+        requirements: ['Income of 200% of the minimum wage (plan on €2,849+ a month in 2026), plus family amounts', 'Degree or 3+ years’ professional experience', 'Employer letter or client contracts', 'Health cover'],
         timeline: 'In Spain (UGE): about 20 working days; consulates vary',
-        financial: eur(dnvMin) + '/month ' + household,
+        financialLabel: '2026 planning figure:',
+        financial: eur(dnvMin) + '/month ' + household + ' (confirm the threshold for your filing route)',
         link: '/digital-nomad-visa-spain',
         apply: 'https://dashboard.platinumlegalspain.com/dnv'
       };
@@ -1494,8 +1500,8 @@ const quizApp = {
               <span class="msv__visa-detail-value">${primary.timeline}</span>
             </div>
             <div class="msv__visa-detail-item">
-              <span class="msv__visa-detail-label">2026 minimum:</span>
-              <span class="msv__visa-detail-value">${primary.financial}</a>
+              <span class="msv__visa-detail-label">${primary.financialLabel || '2026 minimum:'}</span>
+              <span class="msv__visa-detail-value">${primary.financial}</span>
             </div>
           </div>
 

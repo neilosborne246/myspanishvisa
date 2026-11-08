@@ -559,7 +559,7 @@ main {
           "name": "What is the income requirement for Spain's Digital Nomad Visa?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The DNV requires annual income of 200% of Spain's Minimum Interprofessional Salary (SMI). For 2026, this is €2,442/month gross (€29,304 a year). This requirement increases by 75% of the SMI (€916/month) for the first family member and 25% (€305/month) for each further member."
+            "text": "The DNV requires annual income of 200% of Spain's Minimum Interprofessional Salary (SMI). For 2026, plan on at least €2,849 a month for one applicant, with a higher amount if family members apply with you. This is our planning figure: €34,188 a year spread over 12 months, matching the consulate in Buenos Aires's description of €2,442 a month over 14 payments. The UGE and consulates cite €2,442 a month, so confirm the threshold for your filing route. The first family member adds 75% of the minimum wage (about €1,068 a month on this basis) and each further member 25% (about €356)."
           }
         },
         {
@@ -591,7 +591,7 @@ main {
           "name": "How does the calculator handle multiple family members?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Enter the total number of applicants (1-6) in the dropdown. The calculator automatically adds €12,400 annually for each additional family member beyond the primary applicant. The results show the total requirement and breakdown per person."
+            "text": "Enter the total number of applicants (1-6) in the dropdown. The calculator adds 75% of the annual minimum wage (€12,820.50) for the first family member and 25% (€4,273.50) for each further member. The results show the total requirement and the breakdown."
           }
         },
         {
@@ -900,10 +900,11 @@ html, body { max-width: 100%; overflow-x: clip; }
               <div class="dnv-result-title" id="dnv-result-title"></div>
             </div>
           </div>
+          <p class="dnv-route-note" style="font-size:.85rem;color:var(--muted);margin:.75rem 0 0;">This compares your income with our 2026 planning figure. The threshold that applies depends on your filing route: the UGE and consulates cite €2,442 a month for one applicant (200% of the €1,221 monthly minimum wage), so confirm the figure for your route with us before you apply.</p>
 
           <div class="dnv-result-grid">
             <div class="dnv-result-item">
-              <div class="dnv-result-label">Required Annual Income</div>
+              <div class="dnv-result-label">Planning Figure (Annual)</div>
               <div class="dnv-result-value"><span id="dnv-required-eur"></span></div>
               <div class="dnv-result-currency">EUR</div>
             </div>
@@ -913,18 +914,18 @@ html, body { max-width: 100%; overflow-x: clip; }
               <div class="dnv-result-currency" id="dnv-your-income-currency">EUR</div>
             </div>
             <div class="dnv-result-item">
-              <div class="dnv-result-label">Required Monthly (Gross)</div>
+              <div class="dnv-result-label">Planning Figure (Monthly, Gross)</div>
               <div class="dnv-result-value"><span id="dnv-required-monthly"></span></div>
               <div class="dnv-result-currency">EUR</div>
             </div>
             <div class="dnv-result-item">
-              <div class="dnv-result-label">Requirement Status</div>
+              <div class="dnv-result-label">Against the Planning Figure</div>
               <div class="dnv-result-value" id="dnv-status-badge"></div>
             </div>
           </div>
 
           <div>
-            <label style="font-size: 0.85rem; color: var(--muted); text-transform: uppercase; font-weight: 600; display: block; margin-bottom: 0.8rem;">Progress to Qualification</label>
+            <label style="font-size: 0.85rem; color: var(--muted); text-transform: uppercase; font-weight: 600; display: block; margin-bottom: 0.8rem;">Progress to the Planning Figure</label>
             <div class="dnv-progress-bar">
               <div class="dnv-progress-fill" id="dnv-progress-fill" style="width: 0%"></div>
             </div>
@@ -967,14 +968,14 @@ html, body { max-width: 100%; overflow-x: clip; }
 
       <div style="max-width: 750px;">
         <h3>The Income Threshold Explained</h3>
-        <p>The DNV income requirement is set at <strong>200% of Spain's Minimum Interprofessional Salary (SMI)</strong>. For 2026, the SMI is €1,221 per month (paid 14 times a year), making the requirement €2,442/month.</p>
-        <p>For each additional family member applying alongside you, you must add <strong>75% of the SMI (approximately €12,400 annually or €916 monthly)</strong> to your household requirement.</p>
+        <p>The DNV income requirement is set at <strong>200% of Spain's Minimum Interprofessional Salary (SMI)</strong>. For 2026, the SMI is €1,221 per month, paid 14 times a year (€17,094 a year). The UGE and consulates cite €2,442 a month. The consulate in Buenos Aires describes this as €2,442 over 14 payments (€34,188 a year), which is €2,849 a month over 12 payments. This calculator uses that 12-month figure as our planning figure; confirm the threshold that applies to your filing route.</p>
+        <p>The first family member applying with you adds <strong>75% of the SMI</strong> (€12,820.50 a year, about €1,068 a month on the 12-month basis), and each further member adds <strong>25%</strong> (€4,273.50 a year, about €356 a month).</p>
 
         <h3 style="margin-top: 2rem;">Example Household Income Needs</h3>
         <ul>
-          <li><strong>Single applicant:</strong> €29,304/year (€2,442/month)</li>
-          <li><strong>Applicant + spouse:</strong> €40,293/year (€3,358/month)</li>
-          <li><strong>Applicant + spouse + child:</strong> €43,956/year (€3,663/month)</li>
+          <li><strong>Single applicant:</strong> €34,188/year (€2,849/month)</li>
+          <li><strong>Applicant + spouse:</strong> €47,009/year (€3,918/month)</li>
+          <li><strong>Applicant + spouse + child:</strong> €51,282/year (€4,274/month)</li>
         </ul>
 
         <p style="margin-top: 2rem; padding: 1.2rem; background: #f0f7ff; border-left: 3px solid var(--red); border-radius: 6px;"><strong>Note:</strong> Family members don't necessarily need to have independent income—they rely on the primary applicant's income to meet the household requirement. However, each person increases the total threshold.</p>
@@ -1086,7 +1087,7 @@ html, body { max-width: 100%; overflow-x: clip; }
         <details>
           <summary>What is the income requirement for Spain's Digital Nomad Visa?</summary>
           <div class="msv__faq-answer">
-            <p>The DNV requires annual income of 200% of Spain's Minimum Interprofessional Salary (SMI). For 2026, this is €2,442/month gross (€29,304 a year). This requirement increases by 75% of the SMI (€916/month) for the first family member and 25% (€305/month) for each further member.</p>
+            <p>The DNV requires annual income of 200% of Spain's Minimum Interprofessional Salary (SMI). For 2026, plan on at least €2,849 a month for one applicant, with a higher amount if family members apply with you. This is our planning figure: €34,188 a year spread over 12 months, matching the consulate in Buenos Aires's description of €2,442 a month over 14 payments. The UGE and consulates cite €2,442 a month, so confirm the threshold for your filing route. The first family member adds 75% of the minimum wage (about €1,068 a month on this basis) and each further member 25% (about €356).</p>
           </div>
         </details>
         <details>
@@ -1110,7 +1111,7 @@ html, body { max-width: 100%; overflow-x: clip; }
         <details>
           <summary>How does the calculator handle multiple family members?</summary>
           <div class="msv__faq-answer">
-            <p>Enter the total number of applicants (1-6) in the dropdown. The calculator automatically adds €12,400 annually for each additional family member beyond the primary applicant. The results show the total requirement and breakdown per person.</p>
+            <p>Enter the total number of applicants (1-6) in the dropdown. The calculator adds 75% of the annual minimum wage (€12,820.50) for the first family member and 25% (€4,273.50) for each further member. The results show the total requirement and the breakdown.</p>
           </div>
         </details>
         <details>
@@ -1204,9 +1205,10 @@ const exchangeRates = {
 };
 
 const smiMonthly = 1221; // RD 126/2026: €1,221/month in 14 payments
-const primaryRequirement = smiMonthly * 12 * 2; // 200% of SMI
-const familyRequirement = smiMonthly * 12 * 0.75; // 75% of SMI, first family member
-const furtherRequirement = smiMonthly * 12 * 0.25; // 25% of SMI, each further member
+const smiAnnual = smiMonthly * 14; // 14 payments = €17,094
+const primaryRequirement = smiAnnual * 2; // 200% of the annual SMI = €34,188 (€2,849/month over 12)
+const familyRequirement = smiAnnual * 0.75; // 75%, first family member
+const furtherRequirement = smiAnnual * 0.25; // 25%, each further member
 
 const beckhamToggle = document.getElementById('dnv-beckham');
 beckhamToggle.addEventListener('click', function() {
@@ -1233,7 +1235,7 @@ function calculateDNV() {
   const annualIncomeEUR = monthlyIncomeEUR * 12;
 
   const totalRequirementEUR = primaryRequirement + (applicants > 1 ? familyRequirement + furtherRequirement * (applicants - 2) : 0);
-  const monthlyRequirementEUR = totalRequirementEUR / 12;
+  const monthlyRequirementEUR = Math.ceil(totalRequirementEUR / 12);
 
   const qualifies = annualIncomeEUR >= totalRequirementEUR;
   const progressPercent = Math.min((annualIncomeEUR / totalRequirementEUR) * 100, 100);
@@ -1242,19 +1244,19 @@ function calculateDNV() {
   resultsDiv.classList.add('show');
 
   document.getElementById('dnv-result-icon').textContent = qualifies ? '✅' : '⚠️';
-  document.getElementById('dnv-result-title').textContent = qualifies ? 'Meets the 2026 guide' : 'Below the 2026 guide — ask us to review';
+  document.getElementById('dnv-result-title').textContent = qualifies ? 'Meets the planning figure' : 'Below the planning figure';
   document.getElementById('dnv-required-eur').textContent = formatCurrency(totalRequirementEUR, 'EUR');
   document.getElementById('dnv-your-income').textContent = formatCurrency(annualIncomeEUR, 'EUR');
   document.getElementById('dnv-your-income-currency').textContent = currency;
   document.getElementById('dnv-required-monthly').textContent = formatCurrency(monthlyRequirementEUR, 'EUR');
-  document.getElementById('dnv-status-badge').textContent = qualifies ? '✅ Qualifies' : '⚠️ Below';
+  document.getElementById('dnv-status-badge').textContent = qualifies ? '✅ Meets the planning figure' : '⚠️ Below the planning figure';
   document.getElementById('dnv-status-badge').style.color = qualifies ? '#22c55e' : '#ef4444';
 
   document.getElementById('dnv-progress-fill').style.width = progressPercent + '%';
   document.getElementById('dnv-progress-fill').textContent = Math.round(progressPercent) + '%';
 
   document.getElementById('dnv-primary-req').textContent = formatCurrency(primaryRequirement, 'EUR');
-  document.getElementById('dnv-family-req').textContent = applicants > 1 ? formatCurrency(familyRequirement * (applicants - 1), 'EUR') : '€0';
+  document.getElementById('dnv-family-req').textContent = applicants > 1 ? formatCurrency(familyRequirement + furtherRequirement * (applicants - 2), 'EUR') : '€0';
   document.getElementById('dnv-total-req').textContent = formatCurrency(totalRequirementEUR, 'EUR');
 
   document.getElementById('dnv-annual-converted').textContent = formatCurrency(annualIncomeEUR, 'EUR');
