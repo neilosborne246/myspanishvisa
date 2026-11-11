@@ -151,6 +151,7 @@ body{font-family:'Inter','Segoe UI',system-ui,Arial,sans-serif;font-size:16px;li
 .msv__trust-bar-inner{display:flex;flex-wrap:wrap;justify-content:center;gap:1.75rem}
 .msv__trust-item{display:flex;align-items:center;gap:0.5rem;font-size:0.82rem;font-weight:600;color:var(--navy);white-space:nowrap}
 .msv__trust-item::before{content:'';width:7px;height:7px;background:linear-gradient(135deg,var(--red),var(--red-deep));border-radius:50%;flex-shrink:0}
+.msv__trust-item--wrap{white-space:normal;max-width:30rem;text-align:left}
 /* Visa cards */
 .msv__visa-paths{display:grid;grid-template-columns:repeat(3,1fr);gap:1.75rem}
 @media(max-width:860px){.msv__visa-paths{grid-template-columns:1fr}}
@@ -327,9 +328,8 @@ body{font-family:'Inter','Segoe UI',system-ui,Arial,sans-serif;font-size:16px;li
   <div class="msv__trust-bar">
     <div class="msv__container">
       <div class="msv__trust-bar-inner">
-        <div class="msv__trust-item">Bar-registered Spain solicitors</div>
-        <div class="msv__trust-item">100% online &mdash; no office visits</div>
-        <div class="msv__trust-item">English-language support throughout</div>
+        <div class="msv__trust-item msv__trust-item--wrap">Online preparation. Some routes require an in-person appointment.</div>
+        <div class="msv__trust-item">Support in English</div>
         <div class="msv__trust-item">Free eligibility check included</div>
       </div>
     </div>
@@ -468,7 +468,7 @@ body{font-family:'Inter','Segoe UI',system-ui,Arial,sans-serif;font-size:16px;li
       <div class="msv__included-grid">
         <div class="msv__included-item"><span class="msv__included-icon">&#9989;</span><div class="msv__included-title">Free Eligibility Check</div><p class="msv__included-desc">We confirm whether you qualify &mdash; income, nationality, documentation &mdash; before you pay anything.</p></div>
         <div class="msv__included-item"><span class="msv__included-icon">&#128196;</span><div class="msv__included-title">Official Sworn Translations</div><p class="msv__included-desc">Official Spanish translations by a government-approved translator. NLV application translations: up to &euro;80 per person included. DNV application translations: up to &euro;150 per person included. DNV renewal translations: up to &euro;75 per person included. Student application translations: up to &euro;50 per person included. NLV renewals do not include translations.</p></div>
-        <div class="msv__included-item"><span class="msv__included-icon">&#128100;</span><div class="msv__included-title">Personal Case Manager</div><p class="msv__included-desc">One specialist handles your case end to end via your 24/7 online dashboard. One contact, clear updates at every milestone.</p></div>
+        <div class="msv__included-item"><span class="msv__included-icon">&#128100;</span><div class="msv__included-title">Personal Case Manager</div><p class="msv__included-desc">One specialist handles your case end to end. Your online dashboard lets you check progress and upload documents. One contact, clear updates at every milestone.</p></div>
         <div class="msv__included-item"><span class="msv__included-icon">&#127973;</span><div class="msv__included-title">Health Insurance Arranged</div><p class="msv__included-desc">We connect you with the correct visa-compliant private health policy. Wrong insurance is the #1 reason NLV applications are rejected &mdash; we make sure yours is right.</p></div>
         <div class="msv__included-item"><span class="msv__included-icon">&#128203;</span><div class="msv__included-title">Full Application Preparation</div><p class="msv__included-desc">Personalised document checklist, employer and client letters drafted (DNV), apostille coordination, and completed application forms ready for submission.</p></div>
         <div class="msv__included-item"><span class="msv__included-icon">&#128241;</span><div class="msv__included-title">Staged, Milestone Payments</div><p class="msv__included-desc">You never pay the full amount upfront. Fees are split across 2&ndash;3 clear milestones tied to real progress on your application.</p></div>
