@@ -41,6 +41,18 @@ RewriteRule ^(?:[^/]+\.(?:md|py|sh|docx)|_headers|_redirects|\.DS_Store)$ - [R=4
 # 4b) Working files removed in the Nov 2026 public-file cleanup: 410 Gone (both the .html and extensionless draft URL).
 RewriteRule ^(?:MSV_AboutUs_SEO_Schema(?:\.html)?|_cta_fix_log\.txt|_wrap_log\.txt)$ - [G,L]
 
+# 4b2) Old duplicate home page (homepage.html, no canonical, no known references or search use) -> the home page.
+RewriteRule ^homepage(?:\.html)?/?$ / [R=301,L]
+
+# 4c) Build partials, templates and schema working files: never public pages. 410 Gone (extensionless and .html).
+#     Files stay in the repo; no page or script loads them at runtime (checked 23 Nov 2026).
+RewriteRule ^(?:msv-menu|msv-footer|msv-navigation-menu|_template|MSV_ContactUs_SEO_Schema|MSV_MoveToSpain_SEO_Schema|MSV_SpainVisaOptions_SEO_Schema|MSV_TIE_Guides_SEO|MSV_JSON_LD_Schema_All_Pages)(?:\.html)?$ - [G,L]
+
+# 4d) The error page itself answers 404 when requested directly (/404, /404.html).
+#     REDIRECT_STATUS is empty only for direct requests, so ErrorDocument 404 /404.html keeps working.
+RewriteCond %{ENV:REDIRECT_STATUS} ^$
+RewriteRule ^404(?:\.html)?$ - [R=404,L]
+
 # 5) PDFs (dnv-document-checklist, moving-to-spain-checklist, nlv-document-checklist) are kept and still served.
 
 # Student "renewal" is an extension of stay: one page owns the intent
