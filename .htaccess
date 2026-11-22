@@ -48,11 +48,6 @@ RewriteRule ^homepage(?:\.html)?/?$ / [R=301,L]
 #     Files stay in the repo; no page or script loads them at runtime (checked 23 Nov 2026).
 RewriteRule ^(?:msv-menu|msv-footer|msv-navigation-menu|_template|MSV_ContactUs_SEO_Schema|MSV_MoveToSpain_SEO_Schema|MSV_SpainVisaOptions_SEO_Schema|MSV_TIE_Guides_SEO|MSV_JSON_LD_Schema_All_Pages)(?:\.html)?$ - [G,L]
 
-# 4d) The error page itself answers 404 when requested directly (/404, /404.html).
-#     REDIRECT_STATUS is empty only for direct requests, so ErrorDocument 404 /404.html keeps working.
-RewriteCond %{ENV:REDIRECT_STATUS} ^$
-RewriteRule ^404(?:\.html)?$ - [R=404,L]
-
 # 5) PDFs (dnv-document-checklist, moving-to-spain-checklist, nlv-document-checklist) are kept and still served.
 
 # Student "renewal" is an extension of stay: one page owns the intent
